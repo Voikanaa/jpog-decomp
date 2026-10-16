@@ -28,6 +28,11 @@ git config core.hooksPath .githooks   # enable the pre-commit hygiene check
    structure, tools or workflow changed.
 6. Commit.
 
+## Issues
+Every piece of work has a GitHub issue, grouped by the milestones in `docs/plan.md` and labelled
+by area. Reference the issue in commits (`Refs #12`, or `Fixes #12` to close it), and open new
+issues for work discovered along the way.
+
 ## Commits
 - Keep commits small and logical, and make each one build.
 - Subject line: imperative and at most about 72 characters, optionally prefixed with an area
