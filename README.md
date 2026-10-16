@@ -121,6 +121,7 @@ tools\build.bat x64-debug        :: native x64 build + tests  ->  build\x64-debu
 |---|---|
 | `tools/build.bat` | Configure, build and test a CMake preset |
 | `tools/ghidra_export.py` | Headless Ghidra decompilation of the original modules into `analysis/` (gitignored) |
+| `tools/resolve_imports.py` | Annotate the game's decompilation with the names of the engine functions it calls |
 | `tools/decomp_show.py` | Look up decompiled functions by name or address |
 | `tools/dump_exports.py` | Regenerate `symbols/` from the original binaries |
 | `tools/coverage.py` | Measure reimplementation coverage; regenerates [docs/progress.md](docs/progress.md) and the README badge |
