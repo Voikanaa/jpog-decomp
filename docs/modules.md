@@ -25,19 +25,23 @@ its C++ API by mangled name. Full tables, regenerated with `python tools/dump_ex
 | fmod.dll (FMOD 3, UPX), binkw32.dll (Bink 1), libmmd.dll (Intel libm) | – | third-party | – |
 
 ## Copy protection
+The retail `SimJP.exe` is protected by SecuROM (the `.cms_t`/`.cms_d` sections and encrypted parts
+of the game code) and needs the original physical disc. A mounted ISO is rejected and the process
+exits silently.
 
 This project does not contain, document or distribute any way of circumventing the protection.
-Analysis is static, plus differential tests against the unprotected engine DLLs. For in-game
-testing the owner uses a privately obtained runnable copy that is not part of this repository.
-The final reimplementation does not use the original executable at all.
+Analysis is static, plus differential tests against the unprotected engine DLLs. In-game
+testing of the original needs the physical disc. The final reimplementation does not use the
+original executable at all.
 
 Facts relevant to the reimplementation:
 - The game's own import table (IAT) is at `0x739000` in `.rdata`.
-- The runnable copy imports `dsound.dll` and `winmm.dll` directly; these are the candidates for
-  hook-DLL injection via a proxy DLL.
 
 ## Game startup (WinMain, 0x484330)
 - Creates the mutex "JPOPERATIONGENESIS" and exits if another instance is running.
+- Calls a disc check (`0x4844A0`). It looks for a CD-ROM volume labelled "JPOG" and stores its root
+  path; nothing else in `.text` reads that result. On failure it shows "Please insert game
+  CDROM!" / "Game Disc Not Found" and exits. The reimplementation omits this check.
 - Parses `-fullscreen` (clears byte `0x83D700`) and `-nonexclusiveinput` (clears byte
   `0x83D704`), then calls `TApplication::Create(ecx=0x8B8580, "Jurassic Park: Operation Genesis -
   (c) Blue Tongue Software", argc, argv)`.

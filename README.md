@@ -62,8 +62,8 @@ flowchart LR
 | Milestone | Description | |
 |---|---|:-:|
 | Foundations | Symbols, build system, CI, analysis tooling | ✅ |
-| Runnable original | A runnable original for in-game A/B testing (kept outside the repo) | 🚧 |
-| **M1** | Game boots with the hook DLL | ⏳ |
+| Runnable original | Retail exe for in-game A/B testing (needs the physical disc) | ⛔ |
+| **M1** | Game boots with the hook DLL (deferred: needs a runnable original) | ⏸️ |
 | **M2** | Toshi kernel fully reimplemented (`TMath` done) | 🚧 |
 | **M3** | A mission loads through our renderer and resource code | ⏳ |
 | **M4** | Full game playable on hooks | ⏳ |
