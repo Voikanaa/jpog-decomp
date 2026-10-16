@@ -6,14 +6,18 @@
 
 **A clean-room reimplementation of *Jurassic Park: Operation Genesis* (2003) as a native Windows x64 game**
 
-![Platform](https://img.shields.io/badge/platform-Windows%20x64-0078D6?style=flat-square&logo=windows&logoColor=white)
-![Language](https://img.shields.io/badge/C%2B%2B-20-00599C?style=flat-square&logo=cplusplus&logoColor=white)
-![Build](https://img.shields.io/badge/build-CMake%20%2B%20Ninja-064F8C?style=flat-square&logo=cmake&logoColor=white)
-![Renderer](https://img.shields.io/badge/renderer-Direct3D%2011-5C2D91?style=flat-square)
-![Analysis](https://img.shields.io/badge/analysis-Ghidra-C21325?style=flat-square)
-![License](https://img.shields.io/badge/license-GPL--3.0--or--later-blue?style=flat-square)
-![Status](https://img.shields.io/badge/status-early%20development-orange?style=flat-square)
-<!-- coverage-badge:begin -->![Coverage](https://img.shields.io/badge/reimplemented-0.3%25-red?style=flat-square)<!-- coverage-badge:end -->
+<p>
+<a href="https://github.com/Voikanaa/jpog-decomp/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/Voikanaa/jpog-decomp/actions/workflows/ci.yml/badge.svg"></a>
+<a href="docs/progress.md"><!-- coverage-badge:begin --><img alt="Reimplemented" src="https://img.shields.io/badge/reimplemented-0.3%25-red?style=flat-square"><!-- coverage-badge:end --></a>
+<a href="LICENSE"><img alt="License: GPL-3.0-or-later" src="https://img.shields.io/badge/license-GPL--3.0--or--later-blue?style=flat-square"></a>
+<img alt="Status: early development" src="https://img.shields.io/badge/status-early%20development-orange?style=flat-square">
+<br>
+<img alt="Platform: Windows x64" src="https://img.shields.io/badge/platform-Windows%20x64-0078D6?style=flat-square">
+<img alt="C++20" src="https://img.shields.io/badge/C%2B%2B-20-00599C?style=flat-square&logo=cplusplus&logoColor=white">
+<img alt="CMake + Ninja" src="https://img.shields.io/badge/build-CMake%20%2B%20Ninja-064F8C?style=flat-square&logo=cmake&logoColor=white">
+<img alt="Direct3D 11" src="https://img.shields.io/badge/renderer-Direct3D%2011-5C2D91?style=flat-square">
+<img alt="Ghidra" src="https://img.shields.io/badge/analysis-Ghidra-C21325?style=flat-square">
+</p>
 
 [Roadmap](docs/plan.md) · [Binary map](docs/modules.md) · [Progress](docs/progress.md) · [Issues](https://github.com/Voikanaa/jpog-decomp/issues) · [Milestones](https://github.com/Voikanaa/jpog-decomp/milestones) · [Contributing](CONTRIBUTING.md)
 
