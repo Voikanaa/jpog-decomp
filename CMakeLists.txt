@@ -10,8 +10,9 @@ else()
   set(JPOG_X86 OFF)
 endif()
 
-# JPOG_HOOK: build the reimplementation as a DLL injected into the original 32-bit game.
-option(JPOG_HOOK "Build the x86 hook DLL instead of the standalone game" ${JPOG_X86})
+# x86 builds produce jpog.exe linked against the original engine DLLs (hybrid), plus the
+# differential tests. JPOG_HOOK additionally builds the (deferred) hook DLL for the original exe.
+option(JPOG_HOOK "Also build the x86 hook DLL for the original game" OFF)
 if(JPOG_HOOK AND NOT JPOG_X86)
   message(FATAL_ERROR "JPOG_HOOK requires an x86 (32-bit) build")
 endif()
@@ -22,15 +23,24 @@ option(JPOG_BUILD_TESTS "Build the unit and differential tests" ON)
 # (overridable at run time with the JPOG_ORIGINAL_DIR environment variable); they are skipped
 # when it is missing, e.g. in CI.
 set(JPOG_ORIGINAL_DIR "${CMAKE_SOURCE_DIR}/JPOG" CACHE PATH "Original game install directory")
+# Local working copy of the game; jpog.exe is copied here after each build (x86).
+set(JPOG_GAME_DIR "${CMAKE_SOURCE_DIR}/game" CACHE PATH "Local game working directory")
 
 add_compile_options(/W4 /permissive- /utf-8 /Zc:__cplusplus)
-add_compile_definitions(WIN32_LEAN_AND_MEAN NOMINMAX $<$<BOOL:${JPOG_HOOK}>:JPOG_HOOK=1>)
+add_compile_definitions(WIN32_LEAN_AND_MEAN NOMINMAX)
 
 add_library(jpog_common INTERFACE)
 target_include_directories(jpog_common INTERFACE src)
 
 add_subdirectory(third_party)
 add_subdirectory(src/toshi/kernel)
+
+if(JPOG_X86)
+  include(cmake/OriginalModules.cmake)
+  jpog_original_module(TKernelInterface)
+  jpog_original_module(TApplication)
+  add_subdirectory(src/game)
+endif()
 
 if(JPOG_HOOK)
   add_subdirectory(src/hook)

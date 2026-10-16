@@ -1,6 +1,6 @@
 """Measure reimplementation coverage and update docs/progress.md and the README badge.
 
-Usage: python tools/coverage.py [--build build/x86-hook-debug] [--check]
+Usage: python tools/coverage.py [--build build/x86-debug] [--check]
 
 On x86, our reimplemented functions have the same signatures and calling conventions as the
 originals, so MSVC mangles them to the same names. Coverage is therefore the set of original
@@ -86,7 +86,7 @@ def measure(build_dir):
         if lib:
             lib_path = os.path.join(build_dir, lib)
             if not os.path.exists(lib_path):
-                sys.exit(f"{lib_path} not found; build the x86-hook-debug preset first")
+                sys.exit(f"{lib_path} not found; build the x86-debug preset first")
             ours = defined_symbols(lib_path)
             implemented = len(functions & ours)
             exports = original_exports(module)
@@ -114,7 +114,7 @@ def replace_between(text, markers, content):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("--build", default=os.path.join(ROOT, "build", "x86-hook-debug"))
+    parser.add_argument("--build", default=os.path.join(ROOT, "build", "x86-debug"))
     parser.add_argument("--check", action="store_true", help="fail if the generated sections are out of date")
     args = parser.parse_args()
 

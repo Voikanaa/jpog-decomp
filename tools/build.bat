@@ -1,11 +1,11 @@
 @echo off
 rem Configure, build and test a CMake preset with the MSVC environment.
-rem Usage: tools\build.bat [preset]   presets: x86-hook-debug (default), x64-debug, x64-release
+rem Usage: tools\build.bat [preset]   presets: x86-debug (default), x64-debug, x64-release
 rem Visual Studio is located with vswhere, so any VS 2022+ install with the C++ x86/x64 tools works.
 setlocal
 
 set "PRESET=%~1"
-if "%PRESET%"=="" set "PRESET=x86-hook-debug"
+if "%PRESET%"=="" set "PRESET=x86-debug"
 
 set "ARCH=x64"
 if /I "%PRESET:~0,3%"=="x86" set "ARCH=x64_x86"

@@ -70,7 +70,7 @@ MIT, BSD, zlib, or LGPL linked dynamically.
 - `docs/` — `plan.md` (living roadmap: decisions, phases, status), `modules.md` (binary map +
   protection notes), `progress.md` (coverage + log), later `formats/`, `classes/`
 - `README.md`, `CONTRIBUTING.md` (workflow, commit and style conventions)
-- `.github/workflows/ci.yml`: CI on windows-latest. It builds the `x86-hook-debug` and `x64-debug`
+- `.github/workflows/ci.yml`: CI on windows-latest. It builds the `x86-debug` and `x64-debug`
   presets, then runs `check_repo.py`, a Python compile check and a clang-format check.
 - `.githooks/pre-commit`: runs `check_repo.py --staged` and `format.py --check`. Enable it with
   `git config core.hooksPath .githooks` (already set in this clone).
@@ -98,7 +98,15 @@ MIT, BSD, zlib, or LGPL linked dynamically.
   indirect imports; identify them from context (neighbouring identical sequences, arguments).
 - `tools/` — `setup_mcp.py` (writes `.mcp.json` for this clone), `check_repo.py` (hygiene: no game files or files over 5 MB), `msvc.py` (finds VS/MSVC tools via vswhere; no hardcoded paths), `dump_exports.py`, `build.bat <preset>` (finds VS via vswhere, sets up the MSVC env per-process, then runs CMake + Ninja)
 - `src/` — reimplementation: `common/` (`abi.h` TSTDCALL, `layout.h`), `toshi/kernel/` (static lib
-  `toshi_kernel`: TMath, TVector2, TVector3 so far), `game/`, `platform/`, `hook/` (x86 DLL)
+  `toshi_kernel`: TMath, TVector2, TVector3 implemented; TCString/TObject/TClass/TKernelInterface
+  declared only), `toshi/application/` and `toshi/render/` (declarations only), `game/` (**jpog.exe**:
+  WinMain, `AApplication`, `CrashHandler`), `hook/` (x86 DLL, deferred, `JPOG_HOOK=ON` only)
+- **Hybrid launch (x86):** `jpog.exe` links against the original, unprotected engine DLLs through
+  import libs generated from `symbols/` (`tools/make_import_lib.py`, `cmake/OriginalModules.cmake`,
+  `jpog_original_module(Name)` -> `original::Name`). Declarations in `src/toshi/` must match the
+  original signatures and vtable order (`symbols/vtables.csv`). The post-build step copies
+  `jpog.exe` into `game/`, and it must run from there. On a crash it writes `game/jpog_crash.log`
+  (exception, module+offset, stack).
 - `tests/` — doctest (`third_party/doctest`, v2.4.11) suite `jpog_tests`, run by ctest from
   `tools/build.bat`. `support/OriginalModule` loads the original DLLs from `JPOG_ORIGINAL_DIR`
   (CMake cache var or env var; default `<root>/JPOG`) for **differential tests** (x86 only;
@@ -107,7 +115,7 @@ MIT, BSD, zlib, or LGPL linked dynamically.
   `Method<R, Args...>` (`OriginalModule.h`), which goes via `__fastcall` with `this` in ECX; for
   members returning a class by value, the hidden result pointer is the first argument.
 - `third_party/` — vendored, pinned deps with versions, licenses and hashes in `third_party/README.md`
-- `CMakeLists.txt`, `CMakePresets.json` — presets `x86-hook-debug`, `x64-debug`, `x64-release` → `build/<preset>/`
+- `CMakeLists.txt`, `CMakePresets.json` — presets `x86-debug`, `x64-debug`, `x64-release` → `build/<preset>/`
 - `toolchain/` — project-local tools
   - `ghidra/` — Ghidra 12.1.4 (launch via `toolchain/ghidra/ghidraRun.bat`)
   - `clang-format/` — clang-format 20.1.8 (exe from the official PyPI wheel, SHA-256 verified;
@@ -146,6 +154,12 @@ MIT, BSD, zlib, or LGPL linked dynamically.
   at 24-bit precision. Implement float code as plain float ops; transcendentals and CRT calls go
   through double with one rounding. Differential tests wrap the original in `GamePrecisionScope`
   (`tests/support/OriginalModule.h`) and use 0-ULP tolerance.
+- 2026-10-17 **Launch 1 reached:** our `jpog.exe` opens the 640x480 `TRenderD3DInterface` window with
+  a D3D8 device through the original DLLs and runs the frame loop. Open problem (issue): crash on
+  exit. The renderer's `DestroyDisplay` calls through a broken object at `this+0xF0` (a texture
+  made from system resource 18, `TextureFactory`, in `CreateDisplay`). The shader DLLs *are*
+  loaded, so the cause is still open; compare with the game's full init (ARootTask::OnCreate:
+  ARenderer, material libraries, ...).
 - 2026-10-17: Phase 2 started. TMath scalar functions are done (55 functions; differential tests
   are exact). All modules are decompiled to `analysis/decomp/` (~27k functions).
 - 2026-10-17 Phase 0: game copied to `game/`; symbols dumped (923 classes); CMake skeleton builds

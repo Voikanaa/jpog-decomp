@@ -62,6 +62,7 @@ flowchart LR
 | Milestone | Description | |
 |---|---|:-:|
 | Foundations | Symbols, build system, CI, analysis tooling | ✅ |
+| **Launch 1** | Our `jpog.exe` opens the game window via the original engine DLLs | ✅ |
 | Runnable original | Retail exe for in-game A/B testing (needs the physical disc) | ⛔ |
 | **M1** | Game boots with the hook DLL (deferred: needs a runnable original) | ⏸️ |
 | **M2** | Toshi kernel fully reimplemented (`TMath`, `TVector2`, `TVector3` done) | 🚧 |
@@ -95,7 +96,8 @@ python tools\setup_mcp.py                 :: optional: REA/Ghidra MCP config for
 
 ### Build
 ```bat
-tools\build.bat x86-hook-debug   :: 32-bit hook DLL + tests  ->  build\x86-hook-debug\
+tools\build.bat x86-debug   :: jpog.exe (32-bit, uses the original engine DLLs) + tests
+                                :: jpog.exe is copied into game\ and runs from there
 tools\build.bat x64-debug        :: native x64 build + tests  ->  build\x64-debug\
 ```
 
@@ -127,6 +129,7 @@ tools\build.bat x64-debug        :: native x64 build + tests  ->  build\x64-debu
 | `tools/dump_exports.py` | Regenerate `symbols/` from the original binaries |
 | `tools/coverage.py` | Measure reimplementation coverage; regenerates [docs/progress.md](docs/progress.md) and the README badge |
 | `tools/format.py` | Format all C++ with the pinned clang-format 20.1.8 (`--check` in CI and pre-commit) |
+| `tools/make_import_lib.py` | Generate import libraries for the original engine DLLs from `symbols/` (used by CMake) |
 | `tools/check_repo.py` | Hygiene check: no game files, nothing over 5 MB (CI + pre-commit) |
 | `tools/setup_mcp.py` | Generate the machine-specific `.mcp.json` for the REA MCP server |
 
