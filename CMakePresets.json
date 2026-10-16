@@ -1,0 +1,31 @@
+{
+  "version": 6,
+  "configurePresets": [
+    {
+      "name": "base",
+      "hidden": true,
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/${presetName}"
+    },
+    {
+      "name": "x86-hook-debug",
+      "inherits": "base",
+      "cacheVariables": { "CMAKE_BUILD_TYPE": "Debug", "JPOG_HOOK": "ON" }
+    },
+    {
+      "name": "x64-debug",
+      "inherits": "base",
+      "cacheVariables": { "CMAKE_BUILD_TYPE": "Debug", "JPOG_HOOK": "OFF" }
+    },
+    {
+      "name": "x64-release",
+      "inherits": "base",
+      "cacheVariables": { "CMAKE_BUILD_TYPE": "RelWithDebInfo", "JPOG_HOOK": "OFF" }
+    }
+  ],
+  "buildPresets": [
+    { "name": "x86-hook-debug", "configurePreset": "x86-hook-debug" },
+    { "name": "x64-debug", "configurePreset": "x64-debug" },
+    { "name": "x64-release", "configurePreset": "x64-release" }
+  ]
+}
