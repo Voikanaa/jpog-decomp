@@ -1,0 +1,26 @@
+* text=auto
+
+*.bat  text eol=crlf
+*.cmd  text eol=crlf
+
+*.py   text eol=lf
+*.md   text eol=lf
+*.json text eol=lf
+*.csv  text eol=lf
+*.cpp  text eol=lf
+*.h    text eol=lf
+*.txt  text eol=lf
+CMakeLists.txt text eol=lf
+
+*.exe binary
+*.dll binary
+*.iso binary
+*.bik binary
+*.dds binary
+*.tga binary
+*.png binary
+*.wav binary
+*.ogg binary
+*.tmd binary
+*.tml binary
+*.tkl binary

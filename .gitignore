@@ -1,0 +1,17 @@
+# Original game + working copy (copyrighted, never commit)
+/JPOG/
+/game/
+# Third-party reference projects (cloned, read-only)
+/references/
+# Tools and caches
+/toolchain/
+/.rea-tmp/
+/build/
+/out/
+__pycache__/
+*.pyc
+/rea-ghidra-*/
+# Per-machine settings and artefacts
+/.claude/settings.local.json
+*.orig
+*.log
