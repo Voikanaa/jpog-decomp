@@ -18,7 +18,8 @@ Direct3D 11, Raw Input, miniaudio, and FFmpeg for Bink video.
 - Visual Studio Build Tools 2026 (MSVC x86 + x64, bundled CMake/Ninja, Windows SDK)
 - Python 3
 - Ghidra 12.1.4 in `toolchain/ghidra/` (gitignored), plus a JDK 21+
-- Optional: the REA MCP server (configured in `.mcp.json`) for Ghidra-backed analysis from Claude Code
+- Optional: the REA MCP server for Ghidra-backed analysis from Claude Code. Run
+  `python tools/setup_mcp.py` to generate the machine-specific `.mcp.json` from `.mcp.json.example`.
 
 ## Build
 ```

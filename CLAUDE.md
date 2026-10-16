@@ -20,7 +20,7 @@ Reverse engineering / decompilation of *Jurassic Park: Operation Genesis* (2003,
 - Full plan: `docs/plan.md`.
 
 ## Ground rules (from the user — always follow)
-1. **Never modify the system.** Only create/modify/delete files inside `<repo>`.
+1. **Never modify the system.** Only create/modify/delete files inside the project root (this repo's folder).
    No global installs (pip/npm/choco/winget -g etc.), no registry/env-var/PATH changes,
    no writes to user profile or system directories. Session scratch/temp files are the only exception.
    Exception: files that tools write on their own while running (Ghidra settings in `%APPDATA%`,
@@ -33,7 +33,7 @@ Reverse engineering / decompilation of *Jurassic Park: Operation Genesis* (2003,
 - Remote: `git@github.com:Voikanaa/jpog-decomp.git` (private, SSH key authenticates as
   Voikanaa). Branch `main`.
 - **Never commit** game binaries or data (`JPOG/`, `game/`, the ISO, any `.exe`/`.dll`/assets),
-  `toolchain/`, `build/`, `.rea-tmp/`, `rea-ghidra-*/`, or `.claude/settings.local.json`.
+  `toolchain/`, `build/`, `.rea-tmp/`, `rea-ghidra-*/`, `.claude/settings.local.json` or `.mcp.json` (machine-specific).
   `.gitignore` covers these; run `git add -A --dry-run` before larger commits to double-check.
 - Commit in small, logical units with descriptive messages. `symbols/` is committed (regenerate
   it with `tools/dump_exports.py`).
@@ -67,7 +67,8 @@ Reverse engineering / decompilation of *Jurassic Park: Operation Genesis* (2003,
 - `CMakeLists.txt`, `CMakePresets.json` — presets `x86-hook-debug`, `x64-debug`, `x64-release` → `build/<preset>/`
 - `toolchain/` — project-local tools
   - `ghidra/` — Ghidra 12.1.4 (launch via `toolchain/ghidra/ghidraRun.bat`)
-- `.mcp.json` — project-scoped REA MCP registration (see below)
+- `.mcp.json` — project-scoped REA MCP registration, machine-specific and gitignored. Generate it
+  from `.mcp.json.example` with `python tools/setup_mcp.py`, then restart Claude Code.
 - `.rea-tmp/` — REA/Ghidra temp projects + npm cache (disposable)
 - `.claude/settings.local.json` — enables the project `.mcp.json` server (`enabledMcpjsonServers: ["rea"]`)
 
@@ -83,7 +84,7 @@ Reverse engineering / decompilation of *Jurassic Park: Operation Genesis* (2003,
     - `npm_config_cache` → `.rea-tmp\npm-cache` so npx doesn't write to the user profile
   - Ghidra provider on Windows: native x86 PE exe/DLL analysis (decompile, xrefs, strings, etc.);
     database annotation/renaming is NOT supported on Windows ("P0"), so keep names/notes in project files.
-  - Usage: `open_binary` with absolute path (e.g. `<repo>\JPOG\SimJP.exe`), then
+  - Usage: `open_binary` with absolute path (e.g. `<project root>\JPOG\SimJP.exe`), then
     `binary_overview`, `search_procedures`, `analyze_function`, `procedure_pseudo_code`… `close_binary` when done.
 
 ## Status / notes
