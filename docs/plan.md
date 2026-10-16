@@ -28,6 +28,10 @@ Each third-party library is added only after the user approves it.
   pointers).
 - In the x86 hook build, `static_assert` class layouts against the original
   (`src/common/layout.h`).
+- **Float precision:** the original's x87 code runs at 53-bit precision and rounds to float only
+  on store or return. Compute float expressions with `double` intermediates and round once; this
+  reproduces the original bit for bit, as the differential tests confirm.
+- Every reimplemented function gets a differential test against the original export (x86).
 - Write clean, readable C++, not Ghidra transliteration. Cite the original symbol or address only
   where it helps re-verification.
 
@@ -36,7 +40,7 @@ Each third-party library is added only after the user approves it.
 |---|---|---|---|
 | 0 | Foundations: symbols, build skeleton, repo/CI | Symbols dumped, skeleton builds in CI | **Done** |
 | 1 | Hook framework (x86) | **M1:** the game boots with the hook DLL and zero hooks | Not started |
-| 2 | TKernelInterface (memory → strings → math → RTTI → containers → files → events → scheduler → timers → lexer) | **M2:** the game boots with the kernel fully replaced | Not started |
+| 2 | TKernelInterface (memory → strings → math → RTTI → containers → files → events → scheduler → timers → lexer) | **M2:** the game boots with the kernel fully replaced | In progress: TMath scalar functions done, verified bit-exact |
 | 3 | File formats (tmd/tml/tkl, fsm/inx/nwt, ttx/tto, gui, strpool, saves) | Parsers load every file of each type in `Data/` | Not started |
 | 4 | Remaining engine modules (render, property parser, GUI, input, terrain, PGUI, SimJPTerrain, Units) | **M3:** a mission loads through our render and resource code | Not started |
 | 5 | Game code (SimJP.exe), subsystem by subsystem | **M4:** the full game is playable on hooks | Not started |

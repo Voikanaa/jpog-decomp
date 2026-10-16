@@ -12,6 +12,7 @@
 ![Renderer](https://img.shields.io/badge/renderer-Direct3D%2011-5C2D91?style=flat-square)
 ![Analysis](https://img.shields.io/badge/analysis-Ghidra-C21325?style=flat-square)
 ![Status](https://img.shields.io/badge/status-early%20development-orange?style=flat-square)
+<!-- coverage-badge:begin -->![Coverage](https://img.shields.io/badge/reimplemented-0.3%25-red?style=flat-square)<!-- coverage-badge:end -->
 
 [Roadmap](docs/plan.md) · [Binary map](docs/modules.md) · [Progress](docs/progress.md) · [Contributing](CONTRIBUTING.md)
 
@@ -57,7 +58,7 @@ flowchart LR
 |---|---|:-:|
 | Foundations | Symbols, build system, CI, analysis tooling | ✅ |
 | **M1** | Game boots with the hook DLL | ⏳ |
-| **M2** | Toshi kernel fully reimplemented | 🚧 |
+| **M2** | Toshi kernel fully reimplemented (`TMath` done) | 🚧 |
 | **M3** | A mission loads through our renderer and resource code | ⏳ |
 | **M4** | Full game playable on hooks | ⏳ |
 | **M5** | Native x64 build reaches the main menu | ⏳ |
@@ -113,6 +114,7 @@ tools\build.bat x64-debug        :: native x64 build + tests  ->  build\x64-debu
 | `tools/ghidra_export.py` | Headless Ghidra decompilation of the original modules into `analysis/` (gitignored) |
 | `tools/decomp_show.py` | Look up decompiled functions by name or address |
 | `tools/dump_exports.py` | Regenerate `symbols/` from the original binaries |
+| `tools/coverage.py` | Measure reimplementation coverage; regenerates [docs/progress.md](docs/progress.md) and the README badge |
 | `tools/check_repo.py` | Hygiene check: no game files, nothing over 5 MB (CI + pre-commit) |
 | `tools/setup_mcp.py` | Generate the machine-specific `.mcp.json` for the REA MCP server |
 
