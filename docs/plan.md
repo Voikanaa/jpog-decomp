@@ -42,7 +42,7 @@ Each milestone has a matching GitHub milestone, with an issue for every work ite
 |---|---|---|---|
 | 0 | Foundations: symbols, build skeleton, repo/CI | Symbols dumped, skeleton builds in CI | **Done** |
 | 0b | A runnable original for in-game testing | The retail exe runs with the physical disc | Blocked: no physical disc available; not required for engine work |
-| 1 | Hook framework (x86) | **M1:** the game boots with the hook DLL and zero hooks | Not started |
+| 1 | Hook framework (x86) | **M1:** the game boots with the hook DLL and zero hooks | Deferred: needs a legitimately runnable original (0b) |
 | 2 | TKernelInterface (memory → strings → math → RTTI → containers → files → events → scheduler → timers → lexer) | **M2:** the game boots with the kernel fully replaced | In progress: TMath scalar functions done, verified bit-exact |
 | 3 | File formats (tmd/tml/tkl, fsm/inx/nwt, ttx/tto, gui, strpool, saves) | Parsers load every file of each type in `Data/` | Not started |
 | 4 | Remaining engine modules (render, property parser, GUI, input, terrain, PGUI, SimJPTerrain, Units) | **M3:** a mission loads through our render and resource code | Not started |
