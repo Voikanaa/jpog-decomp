@@ -1,5 +1,5 @@
 @echo off
-rem Configure and build a CMake preset with the MSVC environment.
+rem Configure, build and test a CMake preset with the MSVC environment.
 rem Usage: tools\build.bat [preset]   presets: x86-hook-debug (default), x64-debug, x64-release
 rem Visual Studio is located with vswhere, so any VS 2022+ install with the C++ x86/x64 tools works.
 setlocal
@@ -26,3 +26,4 @@ call "%VSDIR%\VC\Auxiliary\Build\vcvarsall.bat" %ARCH% >nul || exit /b 1
 cd /d "%~dp0.." || exit /b 1
 cmake --preset "%PRESET%" || exit /b 1
 cmake --build --preset "%PRESET%" || exit /b 1
+ctest --test-dir "build\%PRESET%" --output-on-failure || exit /b 1
