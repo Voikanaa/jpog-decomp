@@ -36,7 +36,9 @@ git config core.hooksPath .githooks   # enable the pre-commit hygiene check
   reproduced on purpose.
 
 ## Code style
-- C++20, formatted by `.clang-format` (tabs, Allman braces, 120 columns). CI checks formatting.
+- C++20, formatted by `.clang-format` (tabs, Allman braces, 120 columns). Run
+  `python tools/format.py` before committing; it uses the pinned clang-format 20.1.8, and CI and
+  the pre-commit hook reject unformatted code.
 - Names follow the original symbols (`Toshi::TCString`, `AUnitDinosaur::...`), and member
   variables keep the original's `m_` prefix where known.
 - Code must stay portable to x64 (see "Code rules" in `docs/plan.md`).

@@ -2,10 +2,9 @@
 
 #if JPOG_HAS_ORIGINAL_MODULES
 
-#include <windows.h>
-
 #include <cstdlib>
 #include <filesystem>
+#include <windows.h>
 
 namespace jpog::test
 {

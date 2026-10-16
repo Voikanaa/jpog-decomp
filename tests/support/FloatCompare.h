@@ -12,7 +12,8 @@ namespace jpog::test
 // a non-zero tolerance needs a comment explaining why.
 inline int64_t UlpDistance(float a, float b)
 {
-	auto ordered = [](float value) {
+	auto ordered = [](float value)
+	{
 		const int32_t bits = std::bit_cast<int32_t>(value);
 		return bits < 0 ? static_cast<int64_t>(INT32_MIN) - bits : static_cast<int64_t>(bits);
 	};
@@ -46,10 +47,7 @@ public:
 		return min + (max - min) * unit;
 	}
 
-	int NextInt(int min, int max)
-	{
-		return min + static_cast<int>(NextU32() % static_cast<uint32_t>(max - min + 1));
-	}
+	int NextInt(int min, int max) { return min + static_cast<int>(NextU32() % static_cast<uint32_t>(max - min + 1)); }
 
 private:
 	uint32_t m_state;

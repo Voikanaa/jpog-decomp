@@ -274,8 +274,8 @@ float TSTDCALL TMath::Pow(float base, float exponent)
 float TSTDCALL TMath::ApproxPow(float base, float exponent)
 {
 	constexpr double ONE_BITS = 1065353216.0; // std::bit_cast<int32_t>(1.0f)
-	const double bits = std::bit_cast<int32_t>(base) * static_cast<double>(exponent) +
-		(1.0 - static_cast<double>(exponent)) * ONE_BITS;
+	const double bits =
+	    std::bit_cast<int32_t>(base) * static_cast<double>(exponent) + (1.0 - static_cast<double>(exponent)) * ONE_BITS;
 	return std::bit_cast<float>(static_cast<int32_t>(bits));
 }
 
@@ -373,14 +373,13 @@ float TSTDCALL TMath::Gain(float gain, float t)
 float TSTDCALL TMath::Gain075(float t)
 {
 	// log(1 - 0.75) / log(0.5), cached in floats like the original.
-	static const float s_exponent =
-		static_cast<float>(std::log(0.25)) * static_cast<float>(1.0 / std::log(0.5));
+	static const float s_exponent = static_cast<float>(std::log(0.25)) * static_cast<float>(1.0 / std::log(0.5));
 
 	if (t < 0.5f)
 		return static_cast<float>(0.5 * std::pow(static_cast<double>(t + t), static_cast<double>(s_exponent)));
 
-	return static_cast<float>(
-		-0.5 * std::pow(static_cast<double>(2.0f - (t + t)), static_cast<double>(s_exponent)) + 1.0);
+	return static_cast<float>(-0.5 * std::pow(static_cast<double>(2.0f - (t + t)), static_cast<double>(s_exponent)) +
+	                          1.0);
 }
 
 } // namespace Toshi

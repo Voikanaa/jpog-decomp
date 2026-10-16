@@ -2,10 +2,9 @@
 #include "support/OriginalModule.h"
 #include "toshi/kernel/TMath.h"
 
-#include <doctest/doctest.h>
-
 #include <bit>
 #include <cmath>
+#include <doctest/doctest.h>
 #include <limits>
 #include <vector>
 
@@ -141,8 +140,8 @@ using IntToFloatFn = float(__stdcall*)(int);
 using Float2ToFloat = float(__stdcall*)(float, float);
 using Float3ToFloat = float(__stdcall*)(float, float, float);
 
-void CompareUnary(const char* name, FloatToFloat original, float(TSTDCALL* ours)(float), const std::vector<float>& inputs,
-	int64_t maxUlps)
+void CompareUnary(const char* name, FloatToFloat original, float(TSTDCALL* ours)(float),
+                  const std::vector<float>& inputs, int64_t maxUlps)
 {
 	for (float x : inputs)
 	{
@@ -165,12 +164,12 @@ TEST_SUITE("TMath differential" * doctest::skip(KernelMissing()))
 			const char* name;
 			int(TSTDCALL* ours)(float);
 		} cases[] = {
-			{"?FloorToInt@TMath@Toshi@@SGHM@Z", &TMath::FloorToInt},
-			{"?CeilToInt@TMath@Toshi@@SGHM@Z", &TMath::CeilToInt},
-			{"?TruncToInt@TMath@Toshi@@SGHM@Z", &TMath::TruncToInt},
-			{"?RoundToInt@TMath@Toshi@@SGHM@Z", &TMath::RoundToInt},
-			{"?FloatToInt@TMath@Toshi@@SGHM@Z", &TMath::FloatToInt},
-			{"?FloatToIntRaw@TMath@Toshi@@SGHM@Z", &TMath::FloatToIntRaw},
+		    {"?FloorToInt@TMath@Toshi@@SGHM@Z", &TMath::FloorToInt},
+		    {"?CeilToInt@TMath@Toshi@@SGHM@Z", &TMath::CeilToInt},
+		    {"?TruncToInt@TMath@Toshi@@SGHM@Z", &TMath::TruncToInt},
+		    {"?RoundToInt@TMath@Toshi@@SGHM@Z", &TMath::RoundToInt},
+		    {"?FloatToInt@TMath@Toshi@@SGHM@Z", &TMath::FloatToInt},
+		    {"?FloatToIntRaw@TMath@Toshi@@SGHM@Z", &TMath::FloatToIntRaw},
 		};
 		for (const auto& c : cases)
 		{
@@ -191,11 +190,11 @@ TEST_SUITE("TMath differential" * doctest::skip(KernelMissing()))
 		CompareUnary("Trunc", Original<FloatToFloat>("?Trunc@TMath@Toshi@@SGMM@Z"), &TMath::Trunc, inputs, 0);
 		CompareUnary("Round", Original<FloatToFloat>("?Round@TMath@Toshi@@SGMM@Z"), &TMath::Round, inputs, 0);
 		CompareUnary("ShrinkFloat", Original<FloatToFloat>("?ShrinkFloat@TMath@Toshi@@SGMM@Z"), &TMath::ShrinkFloat,
-			FloatInputs(0.001f, 1.0e6f), 0);
+		             FloatInputs(0.001f, 1.0e6f), 0);
 		CompareUnary("Abs", Original<FloatToFloat>("?Abs@TMath@Toshi@@SGMM@Z"),
-			static_cast<float(TSTDCALL*)(float)>(&TMath::Abs), inputs, 0);
+		             static_cast<float(TSTDCALL*)(float)>(&TMath::Abs), inputs, 0);
 		CompareUnary("Sign", Original<FloatToFloat>("?Sign@TMath@Toshi@@SGMM@Z"),
-			static_cast<float(TSTDCALL*)(float)>(&TMath::Sign), inputs, 0);
+		             static_cast<float(TSTDCALL*)(float)>(&TMath::Sign), inputs, 0);
 	}
 
 	TEST_CASE("integer helpers match exactly")
@@ -207,12 +206,12 @@ TEST_SUITE("TMath differential" * doctest::skip(KernelMissing()))
 			int min;
 			int max;
 		} cases[] = {
-			{"?Abs@TMath@Toshi@@SGHH@Z", static_cast<int(TSTDCALL*)(int)>(&TMath::Abs), -1000000, 1000000},
-			{"?Sign@TMath@Toshi@@SGHH@Z", static_cast<int(TSTDCALL*)(int)>(&TMath::Sign), -1000000, 1000000},
-			{"?IntLog2@TMath@Toshi@@SGHH@Z", &TMath::IntLog2, 1, 1 << 30},
-			{"?IntLog2Up@TMath@Toshi@@SGHH@Z", &TMath::IntLog2Up, 1, 1 << 29},
-			{"?RoundDownPow2@TMath@Toshi@@SGHH@Z", &TMath::RoundDownPow2, 1, 1 << 30},
-			{"?RoundUpPow2@TMath@Toshi@@SGHH@Z", &TMath::RoundUpPow2, 1, 1 << 29},
+		    {"?Abs@TMath@Toshi@@SGHH@Z", static_cast<int(TSTDCALL*)(int)>(&TMath::Abs), -1000000, 1000000},
+		    {"?Sign@TMath@Toshi@@SGHH@Z", static_cast<int(TSTDCALL*)(int)>(&TMath::Sign), -1000000, 1000000},
+		    {"?IntLog2@TMath@Toshi@@SGHH@Z", &TMath::IntLog2, 1, 1 << 30},
+		    {"?IntLog2Up@TMath@Toshi@@SGHH@Z", &TMath::IntLog2Up, 1, 1 << 29},
+		    {"?RoundDownPow2@TMath@Toshi@@SGHH@Z", &TMath::RoundDownPow2, 1, 1 << 30},
+		    {"?RoundUpPow2@TMath@Toshi@@SGHH@Z", &TMath::RoundUpPow2, 1, 1 << 29},
 		};
 		for (const auto& c : cases)
 		{
@@ -287,16 +286,18 @@ TEST_SUITE("TMath differential" * doctest::skip(KernelMissing()))
 		CompareUnary("RSqrt", Original<FloatToFloat>("?RSqrt@TMath@Toshi@@SGMM@Z"), &TMath::RSqrt, positive, 0);
 		CompareUnary("Sin", Original<FloatToFloat>("?Sin@TMath@Toshi@@SGMM@Z"), &TMath::Sin, angles, 0);
 		CompareUnary("Cos", Original<FloatToFloat>("?Cos@TMath@Toshi@@SGMM@Z"), &TMath::Cos, angles, 0);
-		CompareUnary("Tan", Original<FloatToFloat>("?Tan@TMath@Toshi@@SGMM@Z"), &TMath::Tan, FloatInputs(-1.5f, 1.5f), 0);
+		CompareUnary("Tan", Original<FloatToFloat>("?Tan@TMath@Toshi@@SGMM@Z"), &TMath::Tan, FloatInputs(-1.5f, 1.5f),
+		             0);
 		CompareUnary("ATan", Original<FloatToFloat>("?ATan@TMath@Toshi@@SGMM@Z"), &TMath::ATan, angles, 0);
 		CompareUnary("ASin", Original<FloatToFloat>("?ASin@TMath@Toshi@@SGMM@Z"), &TMath::ASin, unit, 0);
 		CompareUnary("ACos", Original<FloatToFloat>("?ACos@TMath@Toshi@@SGMM@Z"), &TMath::ACos, unit, 0);
-		CompareUnary("Exp", Original<FloatToFloat>("?Exp@TMath@Toshi@@SGMM@Z"), &TMath::Exp, FloatInputs(-50.0f, 50.0f), 0);
+		CompareUnary("Exp", Original<FloatToFloat>("?Exp@TMath@Toshi@@SGMM@Z"), &TMath::Exp, FloatInputs(-50.0f, 50.0f),
+		             0);
 		CompareUnary("Log", Original<FloatToFloat>("?Log@TMath@Toshi@@SGMM@Z"), &TMath::Log, positive, 0);
 		CompareUnary("DegToRad", Original<FloatToFloat>("?DegToRad@TMath@Toshi@@SGMM@Z"), &TMath::DegToRad, angles, 0);
 		CompareUnary("RadToDeg", Original<FloatToFloat>("?RadToDeg@TMath@Toshi@@SGMM@Z"), &TMath::RadToDeg, angles, 0);
 		CompareUnary("Gain075", Original<FloatToFloat>("?Gain075@TMath@Toshi@@SGMM@Z"), &TMath::Gain075,
-			FloatInputs(0.0f, 1.0f), 0);
+		             FloatInputs(0.0f, 1.0f), 0);
 
 		const auto sinCos = Original<void(__stdcall*)(float, float&, float&)>("?SinCos@TMath@Toshi@@SGXMAAM0@Z");
 		for (float x : angles)
@@ -336,7 +337,7 @@ TEST_SUITE("TMath differential" * doctest::skip(KernelMissing()))
 		const auto normalise = Original<void(__stdcall*)(float&)>("?NormaliseAngle@TMath@Toshi@@SGXAAM@Z");
 		const auto difference = Original<Float2ToFloat>("?GetAngleDifference@TMath@Toshi@@SGMMM@Z");
 		const auto directed =
-			Original<float(__stdcall*)(float, float, bool)>("?GetDirectedAngleDifference@TMath@Toshi@@SGMMM_N@Z");
+		    Original<float(__stdcall*)(float, float, bool)>("?GetDirectedAngleDifference@TMath@Toshi@@SGMMM_N@Z");
 		const auto lerpAngle = Original<Float3ToFloat>("?LERPAngle@TMath@Toshi@@SGMMMM@Z");
 
 		InputGenerator gen;
@@ -364,9 +365,14 @@ TEST_SUITE("TMath differential" * doctest::skip(KernelMissing()))
 	{
 		const auto isNaN = Original<bool(__stdcall*)(float)>("?IsNaN@TMath@Toshi@@SG_NM@Z");
 		const auto isFinite = Original<bool(__stdcall*)(float)>("?IsFinite@TMath@Toshi@@SG_NM@Z");
-		const float values[] = {0.0f, 1.0f, -1.0f, std::numeric_limits<float>::infinity(),
-			-std::numeric_limits<float>::infinity(), std::numeric_limits<float>::quiet_NaN(), TMath::MAXFLOAT,
-			TMath::MINFLOAT};
+		const float values[] = {0.0f,
+		                        1.0f,
+		                        -1.0f,
+		                        std::numeric_limits<float>::infinity(),
+		                        -std::numeric_limits<float>::infinity(),
+		                        std::numeric_limits<float>::quiet_NaN(),
+		                        TMath::MAXFLOAT,
+		                        TMath::MINFLOAT};
 		for (float v : values)
 		{
 			CHECK(isNaN(v) == TMath::IsNaN(v));
