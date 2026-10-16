@@ -17,10 +17,16 @@ git config core.hooksPath .githooks   # enable the pre-commit hygiene check
 1. Analyse the function or format in Ghidra (directly, or through REA). Record findings in
    `docs/`: `modules.md` for binary-level facts, `docs/formats/<ext>.md` for file formats.
 2. Implement clean C++ under `src/`, in the module directory that matches the original DLL.
-3. Verify it: toggle the hook in `game/`, and add a differential test where practical.
-4. Update `docs/progress.md`, plus `docs/plan.md` if a phase or decision changed, and `CLAUDE.md`
-   if the structure, tools or workflow changed.
-5. Commit.
+3. Verify it with a differential test in `tests/` that calls the original export
+   (`OriginalModule::Kernel().Get<Fn>("<mangled name>")`) and our function on the same inputs.
+   Floats must match exactly unless a comment justifies a tolerance. Once the hook framework
+   lands, also toggle the hook in `game/`.
+4. Run `python tools/coverage.py`, which regenerates the coverage table in `docs/progress.md`
+   and the README badge (CI checks both are current).
+5. Keep the docs current in the same commit: the log in `docs/progress.md`, `docs/plan.md` if a
+   phase or decision changed, `README.md` (status, tools, layout, setup) and `CLAUDE.md` if the
+   structure, tools or workflow changed.
+6. Commit.
 
 ## Commits
 - Keep commits small and logical, and make each one build.

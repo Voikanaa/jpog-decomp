@@ -38,6 +38,8 @@ Reverse engineering / decompilation of *Jurassic Park: Operation Genesis* (2003,
 - Commit in small, logical units with descriptive messages. `symbols/` is committed (regenerate
   it with `tools/dump_exports.py`).
 - Line endings are set in `.gitattributes`: LF for source, docs and CSV; CRLF for `.bat`.
+- **Keep README.md up to date** (user instruction): status table, tools table, layout and setup
+  must reflect reality in the same commit that changes them.
 - **Commit frequently** (user instruction): commit each logical unit as soon as it works and is
   verified, then push to `origin/main`. Update CLAUDE.md in the same commit whenever structure,
   tools, findings or workflow change.
@@ -69,7 +71,18 @@ Reverse engineering / decompilation of *Jurassic Park: Operation Genesis* (2003,
   `analysis/ghidra/`. `analysis/` is gitignored because it is derived from the binaries. **Prefer
   grepping these exports over REA for bulk work** (REA's JSON responses are large); use REA for
   targeted queries (xrefs, bytes, single functions).
-- `src/` — reimplementation: `common/` (layout.h), `toshi/`, `game/`, `platform/`, `hook/` (x86 DLL)
+- `tools/coverage.py` — coverage = original exported functions ∩ symbols defined in our x86 libs
+  (identical mangling). It regenerates the table in `docs/progress.md` and the README badge;
+  `--check` runs in CI. Map new libraries to modules in its `MODULES` list.
+- `tools/decomp_show.py <Module> <regex>` — print functions from `analysis/decomp/`.
+- `src/` — reimplementation: `common/` (`abi.h` TSTDCALL, `layout.h`), `toshi/kernel/` (static lib
+  `toshi_kernel`: TMath so far), `game/`, `platform/`, `hook/` (x86 DLL)
+- `tests/` — doctest (`third_party/doctest`, v2.4.11) suite `jpog_tests`, run by ctest from
+  `tools/build.bat`. `support/OriginalModule` loads the original DLLs from `JPOG_ORIGINAL_DIR`
+  (CMake cache var or env var; default `<root>/JPOG`) for **differential tests** (x86 only;
+  skipped when the game is absent, e.g. in CI). `support/FloatCompare.h` provides the ULP
+  comparison and a deterministic input generator.
+- `third_party/` — vendored, pinned deps with versions, licenses and hashes in `third_party/README.md`
 - `CMakeLists.txt`, `CMakePresets.json` — presets `x86-hook-debug`, `x64-debug`, `x64-release` → `build/<preset>/`
 - `toolchain/` — project-local tools
   - `ghidra/` — Ghidra 12.1.4 (launch via `toolchain/ghidra/ghidraRun.bat`)
@@ -99,6 +112,11 @@ Reverse engineering / decompilation of *Jurassic Park: Operation Genesis* (2003,
   candidate should not say "GHIDRA_INSTALL_DIR is not set".
 - 2026-10-17: verified — `binary_session` reports Ghidra provider `available` (12.1.4, JDK 25.0.4,
   headless + native decompiler checks all OK).
+- **Key finding (precision):** the original x87 float code runs at 53-bit precision. Using
+  `double` intermediates with one final rounding matches it bit for bit, so differential tests use
+  0-ULP tolerance.
+- 2026-10-17: Phase 2 started. TMath scalar functions are done (55 functions; differential tests
+  are exact). All modules are decompiled to `analysis/decomp/` (~27k functions).
 - 2026-10-17 Phase 0: game copied to `game/`; symbols dumped (923 classes); CMake skeleton builds
   `jpog_hook.dll` (x86) OK. Binary map + protection notes are in `docs/modules.md`.
 - **Clean-room policy (user decision, 2026-10-17):** the code is derived ONLY from our own analysis

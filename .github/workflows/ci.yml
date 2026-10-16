@@ -21,6 +21,9 @@ jobs:
       - name: Configure and build
         shell: cmd
         run: tools\build.bat ${{ matrix.preset }}
+      - name: Coverage table is up to date
+        if: matrix.preset == 'x86-hook-debug'
+        run: python tools/coverage.py --check
 
   checks:
     name: Repository checks
