@@ -29,6 +29,17 @@ Reverse engineering / decompilation of *Jurassic Park: Operation Genesis* (2003,
    Approved tools live under `toolchain/`.
 3. **Keep this CLAUDE.md up to date.** Whenever structure, tools, findings, or workflows change, update this file in the same step.
 
+## Version control
+- Remote: `git@github.com:Voikanaa/jpog-decomp.git` (private, SSH key authenticates as
+  Voikanaa). Branch `main`.
+- **Never commit** game binaries or data (`JPOG/`, `game/`, the ISO, any `.exe`/`.dll`/assets),
+  `toolchain/`, `build/`, `.rea-tmp/`, `rea-ghidra-*/`, or `.claude/settings.local.json`.
+  `.gitignore` covers these; run `git add -A --dry-run` before larger commits to double-check.
+- Commit in small, logical units with descriptive messages. `symbols/` is committed (regenerate
+  it with `tools/dump_exports.py`).
+- Line endings are set in `.gitattributes`: LF for source, docs and CSV; CRLF for `.bat`.
+- Commit or push only when the user asks.
+
 ## Layout
 - `JPOG/` — original game install (treat as read-only reference; do not modify originals)
   - `SimJP.exe` — main executable
