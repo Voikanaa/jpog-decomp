@@ -85,7 +85,9 @@ def measure(build_dir):
 
 def badge(percent):
     color = "red" if percent < 10 else "orange" if percent < 50 else "yellow" if percent < 90 else "brightgreen"
-    return f"![Coverage](https://img.shields.io/badge/reimplemented-{percent:.1f}%25-{color}?style=flat-square)"
+    # Raw HTML rather than markdown image syntax: the README badge block is an HTML <p>.
+    url = f"https://img.shields.io/badge/reimplemented-{percent:.1f}%25-{color}?style=flat-square"
+    return f'<img alt="Reimplemented" src="{url}">'
 
 
 def replace_between(text, markers, content):
