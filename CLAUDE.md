@@ -89,6 +89,9 @@ MIT, BSD, zlib, or LGPL linked dynamically.
 - `tools/format.py [--check]` — formats tracked C++ in `src/` and `tests/` with the pinned
   clang-format (version-checked). Runs in CI and in the pre-commit hook. **Run it before committing C++.**
 - `tools/decomp_show.py <Module> <regex>` — print functions from `analysis/decomp/`.
+- `tools/dump_vtables.py` — writes `symbols/vtables.csv`: the virtual method order of all 704
+  exported vtables (entries resolved per module, including import thunks and `_purecall`).
+  **Our class declarations must reproduce this order.**
 - `tools/resolve_imports.py` — writes `analysis/decomp/SimJP.resolved.c`, the SimJP decompilation
   with calls through the game's own IAT (0x739000) annotated with import names (about 21k sites).
   **Use `SimJP.resolved` when reading game code.** The remaining `(*DAT_00d8cec0)(...)` calls are
