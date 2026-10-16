@@ -1,5 +1,9 @@
 # Contributing
 
+## License
+By contributing you agree that your contribution is licensed under the project license,
+GPL-3.0-or-later (see `LICENSE`).
+
 ## Ground rules
 - **Clean room.** Derive everything from your own analysis of the shipped binaries and data.
   Do not read, copy or port code from other decompilation projects.

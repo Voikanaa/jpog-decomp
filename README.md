@@ -11,6 +11,7 @@
 ![Build](https://img.shields.io/badge/build-CMake%20%2B%20Ninja-064F8C?style=flat-square&logo=cmake&logoColor=white)
 ![Renderer](https://img.shields.io/badge/renderer-Direct3D%2011-5C2D91?style=flat-square)
 ![Analysis](https://img.shields.io/badge/analysis-Ghidra-C21325?style=flat-square)
+![License](https://img.shields.io/badge/license-GPL--3.0--or--later-blue?style=flat-square)
 ![Status](https://img.shields.io/badge/status-early%20development-orange?style=flat-square)
 <!-- coverage-badge:begin -->![Coverage](https://img.shields.io/badge/reimplemented-0.3%25-red?style=flat-square)<!-- coverage-badge:end -->
 
@@ -123,6 +124,13 @@ tools\build.bat x64-debug        :: native x64 build + tests  ->  build\x64-debu
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for the clean-room rules, workflow, commit conventions and
 code style.
+
+## License
+
+The project's own code, tools and documentation are licensed under the
+[GNU General Public License v3.0 or later](LICENSE). Vendored third-party code keeps its own
+license (see [third_party/README.md](third_party/README.md)). The license does not cover the
+game, its assets, or the *Jurassic Park* names and logo (`docs/jpog_logo.png`); see below.
 
 ## Legal
 
