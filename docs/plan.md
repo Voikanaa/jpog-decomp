@@ -28,9 +28,12 @@ Each third-party library is added only after the user approves it.
   pointers).
 - In the x86 hook build, `static_assert` class layouts against the original
   (`src/common/layout.h`).
-- **Float precision:** the original's x87 code runs at 53-bit precision and rounds to float only
-  on store or return. Compute float expressions with `double` intermediates and round once; this
-  reproduces the original bit for bit, as the differential tests confirm.
+- **Float precision (gameplay):** the renderer creates its D3D8 device without
+  `D3DCREATE_FPU_PRESERVE`, so during gameplay the x87 FPU runs at 24-bit precision and every
+  `+ - * /` and `sqrt` rounds to float. Use plain `float` arithmetic, in the same operation order.
+  The exceptions are the x87 transcendentals (fsin/fcos/fptan/fpatan) and CRT calls
+  (pow/log/exp/...): compute those in `double` and round once. Differential tests run the
+  original inside `GamePrecisionScope` and must match bit for bit.
 - Every reimplemented function gets a differential test against the original export (x86).
 - Write clean, readable C++, not Ghidra transliteration. Cite the original symbol or address only
   where it helps re-verification.

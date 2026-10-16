@@ -14,6 +14,7 @@ namespace
 
 std::filesystem::path OriginalDirectory()
 {
+#pragma warning(suppress : 4996) // getenv is fine here: read-only, single-threaded test setup
 	if (const char* overrideDir = std::getenv("JPOG_ORIGINAL_DIR"); overrideDir && *overrideDir)
 		return overrideDir;
 	return JPOG_ORIGINAL_DIR;
