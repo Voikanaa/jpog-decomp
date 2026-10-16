@@ -31,6 +31,8 @@ After cloning, enable the repository's git hooks once: `git config core.hooksPat
 See [CONTRIBUTING.md](CONTRIBUTING.md) for the workflow.
 
 ## Tools
+- `tools/ghidra_export.py`: headless Ghidra decompilation of the original modules into
+  `analysis/decomp/` (gitignored)
 - `tools/dump_exports.py`: regenerates `symbols/` (demangled exports and imports of every
   original module, plus `classes.csv`)
 - `tools/check_repo.py`: repository hygiene check (no game files, nothing over 5 MB); runs in CI

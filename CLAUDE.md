@@ -63,6 +63,12 @@ Reverse engineering / decompilation of *Jurassic Park: Operation Genesis* (2003,
   `git config core.hooksPath .githooks` (already set in this clone).
 - `.editorconfig`, `.clang-format` (tabs, Allman braces, 120 columns), `.gitattributes`
   (LF everywhere except `.bat`)
+- `tools/ghidra_export.py <module.dll>|--all` + `tools/ghidra/ExportDecompilation.java`: headless
+  Ghidra decompilation of every function into `analysis/decomp/<Module>.c` (one
+  `// ==== <addr> <name>` block per function) and `.tsv` (index). Ghidra projects are kept in
+  `analysis/ghidra/`. `analysis/` is gitignored because it is derived from the binaries. **Prefer
+  grepping these exports over REA for bulk work** (REA's JSON responses are large); use REA for
+  targeted queries (xrefs, bytes, single functions).
 - `src/` — reimplementation: `common/` (layout.h), `toshi/`, `game/`, `platform/`, `hook/` (x86 DLL)
 - `CMakeLists.txt`, `CMakePresets.json` — presets `x86-hook-debug`, `x64-debug`, `x64-release` → `build/<preset>/`
 - `toolchain/` — project-local tools

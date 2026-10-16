@@ -16,3 +16,5 @@ __pycache__/
 *.orig
 *.log
 /.mcp.json
+# Ghidra projects and decompilation exports (derived from the binaries)
+/analysis/
