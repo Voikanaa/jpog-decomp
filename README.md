@@ -26,6 +26,18 @@ tools\build.bat x86-hook-debug   # 32-bit hook DLL -> build/x86-hook-debug/
 tools\build.bat x64-debug        # standalone x64 build (later)
 ```
 
+After cloning, enable the repository's git hooks once: `git config core.hooksPath .githooks`.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the workflow.
+
 ## Tools
 - `tools/dump_exports.py`: regenerates `symbols/` (demangled exports and imports of every
   original module, plus `classes.csv`)
+- `tools/check_repo.py`: repository hygiene check (no game files, nothing over 5 MB); runs in CI
+  and in the pre-commit hook
+- `tools/msvc.py`: finds MSVC tools through vswhere (shared helper)
+
+## Legal
+*Jurassic Park: Operation Genesis* and the Toshi engine are the property of their respective
+rights holders. This repository contains no game code or assets: only original reimplementation
+code, tools and documentation, plus symbol names extracted from the binaries for
+interoperability. You need your own legally obtained copy of the game to use it.
