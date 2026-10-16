@@ -6,11 +6,39 @@
 
 #if defined(_M_IX86)
 
+#include <cstddef>
 #include <float.h>
 #include <string>
+#include <type_traits>
 
 namespace jpog::test
 {
+
+// Callable wrapper for an original __thiscall member function: R Class::fn(Args...).
+// MSVC does not allow __thiscall on plain function pointer types, so the call goes through
+// __fastcall, which passes the first argument in ECX (`this`) and the second in EDX (unused);
+// both conventions pass the rest on the stack and have the callee clean it up. Members that
+// return a class by value take the hidden result pointer as their first stack argument.
+template <typename R, typename... Args> struct Method
+{
+	void* address = nullptr;
+
+	explicit operator bool() const { return address != nullptr; }
+	bool operator==(std::nullptr_t) const { return address == nullptr; }
+
+	R operator()(const void* self, Args... args) const
+	{
+		using Fn = R(__fastcall*)(const void*, void*, Args...);
+		return reinterpret_cast<Fn>(address)(self, nullptr, args...);
+	}
+};
+
+template <typename T> struct IsMethod : std::false_type
+{
+};
+template <typename R, typename... Args> struct IsMethod<Method<R, Args...>> : std::true_type
+{
+};
 
 class OriginalModule
 {
@@ -27,7 +55,13 @@ public:
 	void* Find(const char* mangledName) const;
 
 	// Typed lookup; the function pointer type must match the original calling convention.
-	template <typename Fn> Fn Get(const char* mangledName) const { return reinterpret_cast<Fn>(Find(mangledName)); }
+	template <typename Fn> Fn Get(const char* mangledName) const
+	{
+		if constexpr (IsMethod<Fn>::value)
+			return Fn{Find(mangledName)};
+		else
+			return reinterpret_cast<Fn>(Find(mangledName));
+	}
 
 	static OriginalModule& Kernel();
 

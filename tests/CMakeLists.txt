@@ -4,6 +4,7 @@ add_executable(jpog_tests
   support/OriginalModule.cpp
   support/OriginalModule.h
   kernel/TMathTests.cpp
+  kernel/TVectorTests.cpp
 )
 target_include_directories(jpog_tests PRIVATE .)
 target_link_libraries(jpog_tests PRIVATE toshi_kernel doctest)

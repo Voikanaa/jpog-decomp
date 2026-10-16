@@ -7,7 +7,11 @@ originals, so MSVC mangles them to the same names. Coverage is therefore the set
 exported functions (symbols/<Module>.exports.csv) that are also defined in our static library
 for that module. Requires an up-to-date x86 build.
 
---check exits non-zero if either file is out of date (used in CI).
+It also reports "unmatched" symbols: Toshi:: symbols we define that match no original export.
+These usually mean a signature drifted from the original (e.g. `const float*` vs
+`const float* const`, which MSVC mangles differently); --check fails on them.
+
+--check exits non-zero if either file is out of date or a symbol is unmatched (used in CI).
 """
 import argparse
 import csv
@@ -51,6 +55,13 @@ MODULES = [
 DEFINED_SYMBOL = re.compile(r"\bSECT[0-9A-F]+\s.*External\s+\|\s+(\S+)")
 
 
+def original_exports(module):
+    """All exported mangled names (functions and data)."""
+    path = os.path.join(ROOT, "symbols", f"{module}.exports.csv")
+    with open(path, newline="", encoding="utf-8") as f:
+        return {row["name"] for row in csv.DictReader(f)}
+
+
 def original_functions(module):
     """Mangled names of exported functions (data symbols such as vtables are excluded)."""
     path = os.path.join(ROOT, "symbols", f"{module}.exports.csv")
@@ -65,9 +76,10 @@ def defined_symbols(lib_path):
 
 
 def measure(build_dir):
-    """Returns the markdown table and the overall percentage."""
+    """Returns the markdown table, the overall percentage and the unmatched symbols."""
     rows = ["| Module | Functions | Reimplemented | Coverage |", "|---|---:|---:|---:|"]
     total = done = 0
+    unmatched = []
     for module, lib in MODULES:
         functions = original_functions(module)
         implemented = 0
@@ -75,12 +87,16 @@ def measure(build_dir):
             lib_path = os.path.join(build_dir, lib)
             if not os.path.exists(lib_path):
                 sys.exit(f"{lib_path} not found; build the x86-hook-debug preset first")
-            implemented = len(functions & defined_symbols(lib_path))
+            ours = defined_symbols(lib_path)
+            implemented = len(functions & ours)
+            exports = original_exports(module)
+            unmatched += [f"{module}: {s}" for s in sorted(ours)
+                          if "@Toshi@@" in s and "?A0x" not in s and s not in exports]
         total += len(functions)
         done += implemented
         rows.append(f"| {module} | {len(functions)} | {implemented} | {implemented / len(functions):.1%} |")
     rows.append(f"| **Total** | **{total}** | **{done}** | **{done / total:.1%}** |")
-    return "\n".join(rows), 100.0 * done / total
+    return "\n".join(rows), 100.0 * done / total, unmatched
 
 
 def badge(percent):
@@ -102,7 +118,9 @@ def main():
     parser.add_argument("--check", action="store_true", help="fail if the generated sections are out of date")
     args = parser.parse_args()
 
-    table, percent = measure(args.build)
+    table, percent, unmatched = measure(args.build)
+    for symbol in unmatched:
+        print(f"unmatched: {symbol}", file=sys.stderr)
     targets = [
         (PROGRESS, TABLE_MARKERS, "\n" + table + "\n"),
         (README, BADGE_MARKERS, badge(percent)),
@@ -123,6 +141,8 @@ def main():
     if args.check:
         if stale:
             sys.exit(f"out of date: {', '.join(stale)}; run python tools/coverage.py")
+        if unmatched:
+            sys.exit(f"{len(unmatched)} symbol(s) match no original export (signature mismatch?)")
         return
     print(table)
 

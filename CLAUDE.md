@@ -84,18 +84,21 @@ MIT, BSD, zlib, or LGPL linked dynamically.
   targeted queries (xrefs, bytes, single functions).
 - `tools/coverage.py` — coverage = original exported functions ∩ symbols defined in our x86 libs
   (identical mangling). It regenerates the table in `docs/progress.md` and the README badge;
-  `--check` runs in CI. Map new libraries to modules in its `MODULES` list.
+  `--check` runs in CI and also fails on *unmatched* symbols (our `Toshi::` symbols with no
+  original export), which catches signature drift. Map new libraries to modules in its `MODULES` list.
 - `tools/format.py [--check]` — formats tracked C++ in `src/` and `tests/` with the pinned
   clang-format (version-checked). Runs in CI and in the pre-commit hook. **Run it before committing C++.**
 - `tools/decomp_show.py <Module> <regex>` — print functions from `analysis/decomp/`.
 - `tools/` — `setup_mcp.py` (writes `.mcp.json` for this clone), `check_repo.py` (hygiene: no game files or files over 5 MB), `msvc.py` (finds VS/MSVC tools via vswhere; no hardcoded paths), `dump_exports.py`, `build.bat <preset>` (finds VS via vswhere, sets up the MSVC env per-process, then runs CMake + Ninja)
 - `src/` — reimplementation: `common/` (`abi.h` TSTDCALL, `layout.h`), `toshi/kernel/` (static lib
-  `toshi_kernel`: TMath so far), `game/`, `platform/`, `hook/` (x86 DLL)
+  `toshi_kernel`: TMath, TVector2, TVector3 so far), `game/`, `platform/`, `hook/` (x86 DLL)
 - `tests/` — doctest (`third_party/doctest`, v2.4.11) suite `jpog_tests`, run by ctest from
   `tools/build.bat`. `support/OriginalModule` loads the original DLLs from `JPOG_ORIGINAL_DIR`
   (CMake cache var or env var; default `<root>/JPOG`) for **differential tests** (x86 only;
   skipped when the game is absent, e.g. in CI). `support/FloatCompare.h` provides the ULP
-  comparison and a deterministic input generator.
+  comparison and a deterministic input generator. Call original `__thiscall` members through
+  `Method<R, Args...>` (`OriginalModule.h`), which goes via `__fastcall` with `this` in ECX; for
+  members returning a class by value, the hidden result pointer is the first argument.
 - `third_party/` — vendored, pinned deps with versions, licenses and hashes in `third_party/README.md`
 - `CMakeLists.txt`, `CMakePresets.json` — presets `x86-hook-debug`, `x64-debug`, `x64-release` → `build/<preset>/`
 - `toolchain/` — project-local tools

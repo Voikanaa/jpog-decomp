@@ -51,6 +51,11 @@ issues for work discovered along the way.
   the pre-commit hook reject unformatted code.
 - Names follow the original symbols (`Toshi::TCString`, `AUnitDinosaur::...`), and member
   variables keep the original's `m_` prefix where known.
+- Signatures must match the original exports exactly, including quirks such as non-const
+  parameters or `const float* const` (MSVC mangles top-level pointer `const`).
+  `tools/coverage.py --check` fails on any `Toshi::` symbol that matches no original export.
+- Define members out of line (not inline in the header), so every function exists as a symbol
+  that coverage can count and the hook framework can install.
 - Code must stay portable to x64 (see "Code rules" in `docs/plan.md`).
 - Python tools target Python 3.10+ with PEP 8 style and a 120-column limit. Use only the standard
   library unless a dependency is approved.
