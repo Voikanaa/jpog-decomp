@@ -86,6 +86,9 @@ Reverse engineering / decompilation of *Jurassic Park: Operation Genesis* (2003,
 - `CMakeLists.txt`, `CMakePresets.json` — presets `x86-hook-debug`, `x64-debug`, `x64-release` → `build/<preset>/`
 - `toolchain/` — project-local tools
   - `ghidra/` — Ghidra 12.1.4 (launch via `toolchain/ghidra/ghidraRun.bat`)
+  - `gh/` — GitHub CLI 2.102.0 (official portable zip, SHA-256 verified), used for issues,
+    milestones, labels and CI status: `toolchain/gh/bin/gh.exe`. The user logs in once
+    (`gh auth login`); gh stores its token in `%APPDATA%\GitHub CLI`.
 - `.mcp.json` — project-scoped REA MCP registration, machine-specific and gitignored. Generate it
   from `.mcp.json.example` with `python tools/setup_mcp.py`, then restart Claude Code.
 - `.rea-tmp/` — REA/Ghidra temp projects + npm cache (disposable)
