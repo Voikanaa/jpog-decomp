@@ -38,6 +38,11 @@ Reverse engineering / decompilation of *Jurassic Park: Operation Genesis* (2003,
 - Commit in small, logical units with descriptive messages. `symbols/` is committed (regenerate
   it with `tools/dump_exports.py`).
 - Line endings are set in `.gitattributes`: LF for source, docs and CSV; CRLF for `.bat`.
+- **Issues** (user instruction: keep them current). Use `toolchain/gh/bin/gh.exe -R Voikanaa/jpog-decomp`.
+  Milestones M0b to M6 mirror `docs/plan.md`; labels are `area: *`, `type: research` and `needs: owner decision`.
+  Every work item has an issue. Reference it in commits (`Refs #n`; `Fixes #n` closes it), tick
+  checklists as work lands, open new issues for discovered work, and close finished ones with
+  the commit hash. Templates are in `.github/ISSUE_TEMPLATE/`.
 - **Keep README.md up to date** (user instruction): status table, tools table, layout and setup
   must reflect reality in the same commit that changes them.
 - **Commit frequently** (user instruction): commit each logical unit as soon as it works and is

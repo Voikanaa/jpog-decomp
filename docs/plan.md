@@ -36,6 +36,8 @@ Each third-party library is added only after the user approves it.
   where it helps re-verification.
 
 ## Phases and milestones
+Each milestone has a matching GitHub milestone, with an issue for every work item.
+
 | # | Phase | Exit criterion | Status |
 |---|---|---|---|
 | 0 | Foundations: symbols, build skeleton, repo/CI | Symbols dumped, skeleton builds in CI | **Done** |

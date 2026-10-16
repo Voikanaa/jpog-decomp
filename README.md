@@ -14,7 +14,7 @@
 ![Status](https://img.shields.io/badge/status-early%20development-orange?style=flat-square)
 <!-- coverage-badge:begin -->![Coverage](https://img.shields.io/badge/reimplemented-0.3%25-red?style=flat-square)<!-- coverage-badge:end -->
 
-[Roadmap](docs/plan.md) · [Binary map](docs/modules.md) · [Progress](docs/progress.md) · [Contributing](CONTRIBUTING.md)
+[Roadmap](docs/plan.md) · [Binary map](docs/modules.md) · [Progress](docs/progress.md) · [Issues](https://github.com/Voikanaa/jpog-decomp/issues) · [Milestones](https://github.com/Voikanaa/jpog-decomp/milestones) · [Contributing](CONTRIBUTING.md)
 
 </div>
 
