@@ -6,6 +6,7 @@
 
 #if defined(_M_IX86)
 
+#include <float.h>
 #include <string>
 
 namespace jpog::test
@@ -32,6 +33,31 @@ public:
 
 private:
 	void* m_handle = nullptr;
+};
+
+// Puts the x87 FPU into the state it has during gameplay: 24-bit precision, because the game
+// creates its Direct3D 8 device without D3DCREATE_FPU_PRESERVE. Differential tests call the
+// original code inside this scope; our SSE float code is unaffected by it.
+class GamePrecisionScope
+{
+public:
+	GamePrecisionScope()
+	{
+		_controlfp_s(&m_saved, 0, 0);
+		unsigned int ignored;
+		_controlfp_s(&ignored, _PC_24, _MCW_PC);
+	}
+	~GamePrecisionScope()
+	{
+		unsigned int ignored;
+		_controlfp_s(&ignored, m_saved & _MCW_PC, _MCW_PC);
+	}
+
+	GamePrecisionScope(const GamePrecisionScope&) = delete;
+	GamePrecisionScope& operator=(const GamePrecisionScope&) = delete;
+
+private:
+	unsigned int m_saved = 0;
 };
 
 } // namespace jpog::test

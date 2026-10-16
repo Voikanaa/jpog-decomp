@@ -158,6 +158,7 @@ TEST_SUITE("TMath differential" * doctest::skip(KernelMissing()))
 {
 	TEST_CASE("float to int conversions match exactly")
 	{
+		GamePrecisionScope precision;
 		const auto inputs = FloatInputs(-1.0e6f, 1.0e6f);
 		const struct
 		{
@@ -184,6 +185,7 @@ TEST_SUITE("TMath differential" * doctest::skip(KernelMissing()))
 
 	TEST_CASE("float rounding functions match exactly")
 	{
+		GamePrecisionScope precision;
 		const auto inputs = FloatInputs(-1.0e6f, 1.0e6f);
 		CompareUnary("Floor", Original<FloatToFloat>("?Floor@TMath@Toshi@@SGMM@Z"), &TMath::Floor, inputs, 0);
 		CompareUnary("Ceil", Original<FloatToFloat>("?Ceil@TMath@Toshi@@SGMM@Z"), &TMath::Ceil, inputs, 0);
@@ -199,6 +201,7 @@ TEST_SUITE("TMath differential" * doctest::skip(KernelMissing()))
 
 	TEST_CASE("integer helpers match exactly")
 	{
+		GamePrecisionScope precision;
 		const struct
 		{
 			const char* name;
@@ -245,6 +248,7 @@ TEST_SUITE("TMath differential" * doctest::skip(KernelMissing()))
 
 	TEST_CASE("clip, lerp and increments")
 	{
+		GamePrecisionScope precision;
 		const auto clipInt = Original<void(__stdcall*)(int&, int, int)>("?Clip@TMath@Toshi@@SGXAAHHH@Z");
 		const auto clipFloat = Original<void(__stdcall*)(float&, float, float)>("?Clip@TMath@Toshi@@SGXAAMMM@Z");
 		const auto lerp = Original<Float3ToFloat>("?LERP@TMath@Toshi@@SGMMMM@Z");
@@ -278,6 +282,7 @@ TEST_SUITE("TMath differential" * doctest::skip(KernelMissing()))
 
 	TEST_CASE("transcendental functions")
 	{
+		GamePrecisionScope precision;
 		const auto angles = FloatInputs(-100.0f, 100.0f);
 		const auto unit = FloatInputs(-1.0f, 1.0f);
 		const auto positive = FloatInputs(0.001f, 1000.0f);
@@ -334,6 +339,7 @@ TEST_SUITE("TMath differential" * doctest::skip(KernelMissing()))
 
 	TEST_CASE("angle helpers")
 	{
+		GamePrecisionScope precision;
 		const auto normalise = Original<void(__stdcall*)(float&)>("?NormaliseAngle@TMath@Toshi@@SGXAAM@Z");
 		const auto difference = Original<Float2ToFloat>("?GetAngleDifference@TMath@Toshi@@SGMMM@Z");
 		const auto directed =
@@ -363,6 +369,7 @@ TEST_SUITE("TMath differential" * doctest::skip(KernelMissing()))
 
 	TEST_CASE("classification")
 	{
+		GamePrecisionScope precision;
 		const auto isNaN = Original<bool(__stdcall*)(float)>("?IsNaN@TMath@Toshi@@SG_NM@Z");
 		const auto isFinite = Original<bool(__stdcall*)(float)>("?IsFinite@TMath@Toshi@@SG_NM@Z");
 		const float values[] = {0.0f,

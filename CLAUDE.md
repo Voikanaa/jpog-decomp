@@ -131,9 +131,11 @@ MIT, BSD, zlib, or LGPL linked dynamically.
   candidate should not say "GHIDRA_INSTALL_DIR is not set".
 - 2026-10-17: verified — `binary_session` reports Ghidra provider `available` (12.1.4, JDK 25.0.4,
   headless + native decompiler checks all OK).
-- **Key finding (precision):** the original x87 float code runs at 53-bit precision. Using
-  `double` intermediates with one final rounding matches it bit for bit, so differential tests use
-  0-ULP tolerance.
+- **Key finding (precision):** JPOG creates its D3D8 device without `D3DCREATE_FPU_PRESERVE`
+  (behaviour flags are only 0x20/0x40/0x80, set in TRenderD3DInterface), so gameplay runs the x87
+  at 24-bit precision. Implement float code as plain float ops; transcendentals and CRT calls go
+  through double with one rounding. Differential tests wrap the original in `GamePrecisionScope`
+  (`tests/support/OriginalModule.h`) and use 0-ULP tolerance.
 - 2026-10-17: Phase 2 started. TMath scalar functions are done (55 functions; differential tests
   are exact). All modules are decompiled to `analysis/decomp/` (~27k functions).
 - 2026-10-17 Phase 0: game copied to `game/`; symbols dumped (923 classes); CMake skeleton builds

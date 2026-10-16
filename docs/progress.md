@@ -37,7 +37,7 @@ justifies a tolerance.
 
 ## Log
 - 2026-10-17: Phase 0 complete (symbols, build skeleton, repo, CI).
-- 2026-10-17: `Toshi::TMath` scalar functions reimplemented. Differential tests run against the
-  original `TKernelInterface.dll`, and all results match bit for bit. Finding: the original's x87
-  code runs at 53-bit precision, so computing float expressions with double intermediates and
-  rounding once reproduces it exactly.
+- 2026-10-17: `Toshi::TMath` scalar functions reimplemented and verified bit for bit against
+  the original `TKernelInterface.dll` at gameplay precision. Finding: D3D8 is created without
+  FPU_PRESERVE, so the game's x87 math runs at 24-bit precision; plain float arithmetic
+  reproduces it exactly.

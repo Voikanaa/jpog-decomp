@@ -7,9 +7,9 @@
 namespace jpog::test
 {
 
-// Distance between two floats in units in the last place. Implementations that mirror the
-// original's x87 precision (double intermediates, one final rounding) should match at 0 ULPs;
-// a non-zero tolerance needs a comment explaining why.
+// Distance between two floats in units in the last place. Implementations that follow the
+// gameplay precision rules (docs/plan.md) match the original at 0 ULPs; a non-zero tolerance
+// needs a comment explaining why.
 inline int64_t UlpDistance(float a, float b)
 {
 	auto ordered = [](float value)
