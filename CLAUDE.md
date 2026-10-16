@@ -29,6 +29,12 @@ Reverse engineering / decompilation of *Jurassic Park: Operation Genesis* (2003,
    Approved tools live under `toolchain/`.
 3. **Keep this CLAUDE.md up to date.** Whenever structure, tools, findings, or workflows change, update this file in the same step.
 
+## License
+GPL-3.0-or-later (`LICENSE`, the official GNU text), chosen 2026-10-17. It covers our code, tools
+and docs only: not the game, its assets, the *Jurassic Park* trademarks or logo, or vendored
+third-party code (which keeps its own license). New dependencies must be GPLv3-compatible:
+MIT, BSD, zlib, or LGPL linked dynamically.
+
 ## Version control
 - Remote: `git@github.com:Voikanaa/jpog-decomp.git` (private, SSH key authenticates as
   Voikanaa). Branch `main`.
