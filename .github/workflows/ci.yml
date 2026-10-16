@@ -17,7 +17,7 @@ jobs:
       matrix:
         preset: [x86-hook-debug, x64-debug]
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Configure and build
         shell: cmd
         run: tools\build.bat ${{ matrix.preset }}
@@ -29,7 +29,7 @@ jobs:
     name: Repository checks
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: No game binaries or oversized files
         run: python tools/check_repo.py
       - name: Python tools compile
