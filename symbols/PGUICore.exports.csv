@@ -1,0 +1,939 @@
+ordinal,rva,va,name,demangled
+1,0x3a30,0x10003a30,??0PGUIButton@@IAE@ABV0@@Z,protected: __thiscall PGUIButton::PGUIButton(class PGUIButton const &)
+2,0x3ac0,0x10003ac0,??0PGUIButton@@QAE@XZ,public: __thiscall PGUIButton::PGUIButton(void)
+3,0x4ce0,0x10004ce0,??0PGUIDialog@@IAE@ABV0@@Z,protected: __thiscall PGUIDialog::PGUIDialog(class PGUIDialog const &)
+4,0x4db0,0x10004db0,??0PGUIDialog@@QAE@XZ,public: __thiscall PGUIDialog::PGUIDialog(void)
+5,0x1f840,0x1001f840,??0PGUIDiscLayout@@IAE@ABV0@@Z,protected: __thiscall PGUIDiscLayout::PGUIDiscLayout(class PGUIDiscLayout const &)
+6,0x1f290,0x1001f290,??0PGUIDiscLayout@@QAE@XZ,public: __thiscall PGUIDiscLayout::PGUIDiscLayout(void)
+7,0x5a20,0x10005a20,??0PGUIDiscMenuDialog@@IAE@ABV0@@Z,protected: __thiscall PGUIDiscMenuDialog::PGUIDiscMenuDialog(class PGUIDiscMenuDialog const &)
+8,0x5b80,0x10005b80,??0PGUIDiscMenuDialog@@QAE@XZ,public: __thiscall PGUIDiscMenuDialog::PGUIDiscMenuDialog(void)
+9,0x21b90,0x10021b90,??0PGUIGridLayout@@IAE@ABV0@@Z,protected: __thiscall PGUIGridLayout::PGUIGridLayout(class PGUIGridLayout const &)
+10,0x21c90,0x10021c90,??0PGUIGridLayout@@QAE@XZ,public: __thiscall PGUIGridLayout::PGUIGridLayout(void)
+11,0x7230,0x10007230,??0PGUIHorizontalSplit@@IAE@ABV0@@Z,protected: __thiscall PGUIHorizontalSplit::PGUIHorizontalSplit(class PGUIHorizontalSplit const &)
+12,0x7390,0x10007390,??0PGUIHorizontalSplit@@QAE@XZ,public: __thiscall PGUIHorizontalSplit::PGUIHorizontalSplit(void)
+13,0x61b0,0x100061b0,??0PGUIItemData@@IAE@ABV0@@Z,protected: __thiscall PGUIItemData::PGUIItemData(class PGUIItemData const &)
+14,0x6250,0x10006250,??0PGUIItemData@@QAE@ABVPPropertyValue@@I@Z,"public: __thiscall PGUIItemData::PGUIItemData(class PPropertyValue const &,unsigned int)"
+15,0x61e0,0x100061e0,??0PGUIItemData@@QAE@HI@Z,"public: __thiscall PGUIItemData::PGUIItemData(int,unsigned int)"
+16,0x8510,0x10008510,??0PGUILabel@@IAE@ABV0@@Z,protected: __thiscall PGUILabel::PGUILabel(class PGUILabel const &)
+17,0x85b0,0x100085b0,??0PGUILabel@@QAE@XZ,public: __thiscall PGUILabel::PGUILabel(void)
+18,0x23130,0x10023130,??0PGUILayoutManager@Toshi@@IAE@ABV01@@Z,protected: __thiscall Toshi::PGUILayoutManager::PGUILayoutManager(class Toshi::PGUILayoutManager const &)
+19,0x23070,0x10023070,??0PGUILayoutManager@Toshi@@QAE@XZ,public: __thiscall Toshi::PGUILayoutManager::PGUILayoutManager(void)
+20,0xacf0,0x1000acf0,??0PGUIListBox@@IAE@ABV0@@Z,protected: __thiscall PGUIListBox::PGUIListBox(class PGUIListBox const &)
+21,0x9be0,0x10009be0,??0PGUIListBox@@QAE@XZ,public: __thiscall PGUIListBox::PGUIListBox(void)
+22,0xd0a0,0x1000d0a0,??0PGUIListItem@@IAE@ABV0@@Z,protected: __thiscall PGUIListItem::PGUIListItem(class PGUIListItem const &)
+23,0xd140,0x1000d140,??0PGUIListItem@@QAE@XZ,public: __thiscall PGUIListItem::PGUIListItem(void)
+24,0xd9a0,0x1000d9a0,??0PGUIMenuBar@@IAE@ABV0@@Z,protected: __thiscall PGUIMenuBar::PGUIMenuBar(class PGUIMenuBar const &)
+25,0xd6d0,0x1000d6d0,??0PGUIMenuBar@@QAE@XZ,public: __thiscall PGUIMenuBar::PGUIMenuBar(void)
+26,0xecc0,0x1000ecc0,??0PGUIMenuDialog@@IAE@ABV0@@Z,protected: __thiscall PGUIMenuDialog::PGUIMenuDialog(class PGUIMenuDialog const &)
+27,0xe5a0,0x1000e5a0,??0PGUIMenuDialog@@QAE@XZ,public: __thiscall PGUIMenuDialog::PGUIMenuDialog(void)
+28,0x11770,0x10011770,??0PGUIMenuTree@@IAE@ABV0@@Z,protected: __thiscall PGUIMenuTree::PGUIMenuTree(class PGUIMenuTree const &)
+29,0xff50,0x1000ff50,??0PGUIMenuTree@@QAE@XZ,public: __thiscall PGUIMenuTree::PGUIMenuTree(void)
+30,0xfcc0,0x1000fcc0,??0PGUIMenuTreeItem@@IAE@ABV0@@Z,protected: __thiscall PGUIMenuTreeItem::PGUIMenuTreeItem(class PGUIMenuTreeItem const &)
+31,0xf960,0x1000f960,??0PGUIMenuTreeItem@@QAE@PAVPGUIMenuTreeItemStyle@@ABVTLString@Toshi@@@Z,"public: __thiscall PGUIMenuTreeItem::PGUIMenuTreeItem(class PGUIMenuTreeItemStyle *,class Toshi::TLString const &)"
+32,0xf8d0,0x1000f8d0,??0PGUIMenuTreeItem@@QAE@PAVPGUIMenuTreeItemStyle@@HI@Z,"public: __thiscall PGUIMenuTreeItem::PGUIMenuTreeItem(class PGUIMenuTreeItemStyle *,int,unsigned int)"
+33,0x5f70,0x10005f70,??0PGUIMenuTreeItemStyle@@QAE@PAVTGUIStyle@Toshi@@00PAVTGUIWidget@2@11@Z,"public: __thiscall PGUIMenuTreeItemStyle::PGUIMenuTreeItemStyle(class Toshi::TGUIStyle *,class Toshi::TGUIStyle *,class Toshi::TGUIStyle *,class Toshi::TGUIWidget *,class Toshi::TGUIWidget *,class Toshi::TGUIWidget *)"
+34,0x24d00,0x10024d00,??0PGUIOverlayLayout@@IAE@ABV0@@Z,protected: __thiscall PGUIOverlayLayout::PGUIOverlayLayout(class PGUIOverlayLayout const &)
+35,0x24760,0x10024760,??0PGUIOverlayLayout@@QAE@XZ,public: __thiscall PGUIOverlayLayout::PGUIOverlayLayout(void)
+36,0x12460,0x10012460,??0PGUIOwnerDraw@@IAE@ABV0@@Z,protected: __thiscall PGUIOwnerDraw::PGUIOwnerDraw(class PGUIOwnerDraw const &)
+37,0x12590,0x10012590,??0PGUIOwnerDraw@@QAE@XZ,public: __thiscall PGUIOwnerDraw::PGUIOwnerDraw(void)
+38,0x12d70,0x10012d70,??0PGUIPanel@@IAE@ABV0@@Z,protected: __thiscall PGUIPanel::PGUIPanel(class PGUIPanel const &)
+39,0x12e10,0x10012e10,??0PGUIPanel@@QAE@XZ,public: __thiscall PGUIPanel::PGUIPanel(void)
+40,0x62c0,0x100062c0,??0PGUIPropertyValueFactory@@QAE@ABV0@@Z,public: __thiscall PGUIPropertyValueFactory::PGUIPropertyValueFactory(class PGUIPropertyValueFactory const &)
+41,0x79f0,0x100079f0,??0PGUIPropertyValueFactory@@QAE@XZ,public: __thiscall PGUIPropertyValueFactory::PGUIPropertyValueFactory(void)
+42,0x13780,0x10013780,??0PGUIPushButton@@IAE@ABV0@@Z,protected: __thiscall PGUIPushButton::PGUIPushButton(class PGUIPushButton const &)
+43,0x13840,0x10013840,??0PGUIPushButton@@QAE@XZ,public: __thiscall PGUIPushButton::PGUIPushButton(void)
+44,0x60a0,0x100060a0,??0PGUIRowData@@IAE@ABV0@@Z,protected: __thiscall PGUIRowData::PGUIRowData(class PGUIRowData const &)
+45,0x7830,0x10007830,??0PGUIRowData@@QAE@HQBHI@Z,"public: __thiscall PGUIRowData::PGUIRowData(int,int const * const,unsigned int)"
+46,0x16c20,0x10016c20,??0PGUISliderBar@@IAE@ABV0@@Z,protected: __thiscall PGUISliderBar::PGUISliderBar(class PGUISliderBar const &)
+47,0x15260,0x10015260,??0PGUISliderBar@@QAE@XZ,public: __thiscall PGUISliderBar::PGUISliderBar(void)
+48,0x26790,0x10026790,??0PGUIStackLayout@@IAE@ABV0@@Z,protected: __thiscall PGUIStackLayout::PGUIStackLayout(class PGUIStackLayout const &)
+49,0x26b60,0x10026b60,??0PGUIStackLayout@@QAE@XZ,public: __thiscall PGUIStackLayout::PGUIStackLayout(void)
+50,0x199c0,0x100199c0,??0PGUITableBox@@IAE@ABV0@@Z,protected: __thiscall PGUITableBox::PGUITableBox(class PGUITableBox const &)
+51,0x18d90,0x10018d90,??0PGUITableBox@@QAE@XZ,public: __thiscall PGUITableBox::PGUITableBox(void)
+52,0x1c1d0,0x1001c1d0,??0PGUIToggleButton@@IAE@ABV0@@Z,protected: __thiscall PGUIToggleButton::PGUIToggleButton(class PGUIToggleButton const &)
+53,0x1c2d0,0x1001c2d0,??0PGUIToggleButton@@QAE@XZ,public: __thiscall PGUIToggleButton::PGUIToggleButton(void)
+54,0x1d2b0,0x1001d2b0,??0PGUIVerticalSplit@@IAE@ABV0@@Z,protected: __thiscall PGUIVerticalSplit::PGUIVerticalSplit(class PGUIVerticalSplit const &)
+55,0x1d400,0x1001d400,??0PGUIVerticalSplit@@QAE@XZ,public: __thiscall PGUIVerticalSplit::PGUIVerticalSplit(void)
+56,0x3aa0,0x10003aa0,??1PGUIButton@@UAE@XZ,public: virtual __thiscall PGUIButton::~PGUIButton(void)
+57,0x4da0,0x10004da0,??1PGUIDialog@@UAE@XZ,public: virtual __thiscall PGUIDialog::~PGUIDialog(void)
+58,0x20400,0x10020400,??1PGUIDiscLayout@@UAE@XZ,public: virtual __thiscall PGUIDiscLayout::~PGUIDiscLayout(void)
+59,0x5b70,0x10005b70,??1PGUIDiscMenuDialog@@UAE@XZ,public: virtual __thiscall PGUIDiscMenuDialog::~PGUIDiscMenuDialog(void)
+60,0x21c80,0x10021c80,??1PGUIGridLayout@@UAE@XZ,public: virtual __thiscall PGUIGridLayout::~PGUIGridLayout(void)
+61,0x7380,0x10007380,??1PGUIHorizontalSplit@@UAE@XZ,public: virtual __thiscall PGUIHorizontalSplit::~PGUIHorizontalSplit(void)
+62,0x7760,0x10007760,??1PGUIItemData@@UAE@XZ,public: virtual __thiscall PGUIItemData::~PGUIItemData(void)
+63,0x85a0,0x100085a0,??1PGUILabel@@UAE@XZ,public: virtual __thiscall PGUILabel::~PGUILabel(void)
+64,0x233f0,0x100233f0,??1PGUILayoutManager@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::PGUILayoutManager::~PGUILayoutManager(void)
+65,0x9cb0,0x10009cb0,??1PGUIListBox@@UAE@XZ,public: virtual __thiscall PGUIListBox::~PGUIListBox(void)
+66,0xd130,0x1000d130,??1PGUIListItem@@UAE@XZ,public: virtual __thiscall PGUIListItem::~PGUIListItem(void)
+67,0xde30,0x1000de30,??1PGUIMenuBar@@UAE@XZ,public: virtual __thiscall PGUIMenuBar::~PGUIMenuBar(void)
+68,0xf600,0x1000f600,??1PGUIMenuDialog@@UAE@XZ,public: virtual __thiscall PGUIMenuDialog::~PGUIMenuDialog(void)
+69,0x10030,0x10010030,??1PGUIMenuTree@@UAE@XZ,public: virtual __thiscall PGUIMenuTree::~PGUIMenuTree(void)
+70,0x11cf0,0x10011cf0,??1PGUIMenuTreeItem@@UAE@XZ,public: virtual __thiscall PGUIMenuTreeItem::~PGUIMenuTreeItem(void)
+71,0x5ef0,0x10005ef0,??1PGUIMenuTreeItemStyle@@QAE@XZ,public: __thiscall PGUIMenuTreeItemStyle::~PGUIMenuTreeItemStyle(void)
+72,0x25050,0x10025050,??1PGUIOverlayLayout@@UAE@XZ,public: virtual __thiscall PGUIOverlayLayout::~PGUIOverlayLayout(void)
+73,0x12580,0x10012580,??1PGUIOwnerDraw@@UAE@XZ,public: virtual __thiscall PGUIOwnerDraw::~PGUIOwnerDraw(void)
+74,0x12e00,0x10012e00,??1PGUIPanel@@UAE@XZ,public: virtual __thiscall PGUIPanel::~PGUIPanel(void)
+75,0x79e0,0x100079e0,??1PGUIPropertyValueFactory@@UAE@XZ,public: virtual __thiscall PGUIPropertyValueFactory::~PGUIPropertyValueFactory(void)
+76,0x13830,0x10013830,??1PGUIPushButton@@UAE@XZ,public: virtual __thiscall PGUIPushButton::~PGUIPushButton(void)
+77,0x78c0,0x100078c0,??1PGUIRowData@@UAE@XZ,public: virtual __thiscall PGUIRowData::~PGUIRowData(void)
+78,0x17df0,0x10017df0,??1PGUISliderBar@@UAE@XZ,public: virtual __thiscall PGUISliderBar::~PGUISliderBar(void)
+79,0x26b50,0x10026b50,??1PGUIStackLayout@@UAE@XZ,public: virtual __thiscall PGUIStackLayout::~PGUIStackLayout(void)
+80,0x18e40,0x10018e40,??1PGUITableBox@@UAE@XZ,public: virtual __thiscall PGUITableBox::~PGUITableBox(void)
+81,0x1c2c0,0x1001c2c0,??1PGUIToggleButton@@UAE@XZ,public: virtual __thiscall PGUIToggleButton::~PGUIToggleButton(void)
+82,0x1d3f0,0x1001d3f0,??1PGUIVerticalSplit@@UAE@XZ,public: virtual __thiscall PGUIVerticalSplit::~PGUIVerticalSplit(void)
+83,0x5eb0,0x10005eb0,??4PGUIMenuTreeItemStyle@@QAEAAV0@ABV0@@Z,public: class PGUIMenuTreeItemStyle & __thiscall PGUIMenuTreeItemStyle::operator=(class PGUIMenuTreeItemStyle const &)
+84,0x3c000,0x1003c000,??_7PGUIButton@@6B@,const PGUIButton::`vftable'
+85,0x3c1a0,0x1003c1a0,??_7PGUIDialog@@6B@,const PGUIDialog::`vftable'
+86,0x3de80,0x1003de80,??_7PGUIDiscLayout@@6B@,const PGUIDiscLayout::`vftable'
+87,0x3c360,0x1003c360,??_7PGUIDiscMenuDialog@@6B@,const PGUIDiscMenuDialog::`vftable'
+88,0x3e0e0,0x1003e0e0,??_7PGUIGridLayout@@6B@,const PGUIGridLayout::`vftable'
+89,0x3c4e0,0x1003c4e0,??_7PGUIHorizontalSplit@@6B@,const PGUIHorizontalSplit::`vftable'
+90,0x3c320,0x1003c320,??_7PGUIItemData@@6B@,const PGUIItemData::`vftable'
+91,0x3c6e0,0x1003c6e0,??_7PGUILabel@@6B@,const PGUILabel::`vftable'
+92,0x3e1c0,0x1003e1c0,??_7PGUILayoutManager@Toshi@@6B@,const Toshi::PGUILayoutManager::`vftable'
+93,0x3c820,0x1003c820,??_7PGUIListBox@@6B@,const PGUIListBox::`vftable'
+94,0x3cc00,0x1003cc00,??_7PGUIListItem@@6B@,const PGUIListItem::`vftable'
+95,0x3cd00,0x1003cd00,??_7PGUIMenuBar@@6B@,const PGUIMenuBar::`vftable'
+96,0x3ce20,0x1003ce20,??_7PGUIMenuDialog@@6B@,const PGUIMenuDialog::`vftable'
+97,0x3d000,0x1003d000,??_7PGUIMenuTree@@6BTGUIDeserialisable@Toshi@@@,const PGUIMenuTree::`vftable'{for `Toshi::TGUIDeserialisable'}
+98,0x3d040,0x1003d040,??_7PGUIMenuTree@@6BTGUIInputManager@Toshi@@@,const PGUIMenuTree::`vftable'{for `Toshi::TGUIInputManager'}
+99,0x3cfe0,0x1003cfe0,??_7PGUIMenuTreeItem@@6B@,const PGUIMenuTreeItem::`vftable'
+100,0x3e2c0,0x1003e2c0,??_7PGUIOverlayLayout@@6B@,const PGUIOverlayLayout::`vftable'
+101,0x3d140,0x1003d140,??_7PGUIOwnerDraw@@6B@,const PGUIOwnerDraw::`vftable'
+102,0x3d240,0x1003d240,??_7PGUIPanel@@6B@,const PGUIPanel::`vftable'
+103,0x3c300,0x1003c300,??_7PGUIPropertyValueFactory@@6B@,const PGUIPropertyValueFactory::`vftable'
+104,0x3d340,0x1003d340,??_7PGUIPushButton@@6B@,const PGUIPushButton::`vftable'
+105,0x3c340,0x1003c340,??_7PGUIRowData@@6B@,const PGUIRowData::`vftable'
+106,0x3d4a0,0x1003d4a0,??_7PGUISliderBar@@6B@,const PGUISliderBar::`vftable'
+107,0x3e480,0x1003e480,??_7PGUIStackLayout@@6B@,const PGUIStackLayout::`vftable'
+108,0x3d900,0x1003d900,??_7PGUITableBox@@6B@,const PGUITableBox::`vftable'
+109,0x3daa0,0x1003daa0,??_7PGUIToggleButton@@6B@,const PGUIToggleButton::`vftable'
+110,0x3dc60,0x1003dc60,??_7PGUIVerticalSplit@@6B@,const PGUIVerticalSplit::`vftable'
+111,0x43f0,0x100043f0,?AcceptsFocus@PGUIButton@@UBE_NXZ,public: virtual bool __thiscall PGUIButton::AcceptsFocus(void)const 
+112,0xc800,0x1000c800,?AcceptsFocus@PGUIListBox@@UBE_NXZ,public: virtual bool __thiscall PGUIListBox::AcceptsFocus(void)const 
+113,0xc860,0x1000c860,?AcceptsFocus@PGUIListItem@@UBE_NXZ,public: virtual bool __thiscall PGUIListItem::AcceptsFocus(void)const 
+114,0x5da0,0x10005da0,?AcceptsFocus@PGUIMenuDialog@@UBE_NXZ,public: virtual bool __thiscall PGUIMenuDialog::AcceptsFocus(void)const 
+115,0x7d00,0x10007d00,?AcceptsFocus@PGUISliderBar@@UBE_NXZ,public: virtual bool __thiscall PGUISliderBar::AcceptsFocus(void)const 
+116,0x1b4b0,0x1001b4b0,?AcceptsFocus@PGUITableBox@@UBE_NXZ,public: virtual bool __thiscall PGUITableBox::AcceptsFocus(void)const 
+117,0xc6e0,0x1000c6e0,?AddItem@PGUIListBox@@QAEXPAVPGUIItemData@@@Z,public: void __thiscall PGUIListBox::AddItem(class PGUIItemData *)
+118,0xfa10,0x1000fa10,?AddItem@PGUIMenuTreeItem@@QAEPAV1@ABVTLString@Toshi@@I@Z,"public: class PGUIMenuTreeItem * __thiscall PGUIMenuTreeItem::AddItem(class Toshi::TLString const &,unsigned int)"
+119,0x11c90,0x10011c90,?AddItem@PGUIMenuTreeItem@@QAEXPAV1@@Z,public: void __thiscall PGUIMenuTreeItem::AddItem(class PGUIMenuTreeItem *)
+120,0x1b3d0,0x1001b3d0,?AddItem@PGUITableBox@@QAEXPAVPGUIRowData@@@Z,public: void __thiscall PGUITableBox::AddItem(class PGUIRowData *)
+121,0xbef0,0x1000bef0,?AddItemImpl@PGUIListBox@@IAEXPAVPGUIItemData@@@Z,protected: void __thiscall PGUIListBox::AddItemImpl(class PGUIItemData *)
+122,0x1a990,0x1001a990,?AddItemImpl@PGUITableBox@@IAEXPAVPGUIRowData@@@Z,protected: void __thiscall PGUITableBox::AddItemImpl(class PGUIRowData *)
+123,0x11880,0x10011880,?AddMenus@PGUIMenuTree@@IAEXXZ,protected: void __thiscall PGUIMenuTree::AddMenus(void)
+124,0x6130,0x10006130,?AddState@PGUIItemData@@QAEXI@Z,public: void __thiscall PGUIItemData::AddState(unsigned int)
+125,0x5fe0,0x10005fe0,?AddState@PGUIRowData@@QAEXHI@Z,"public: void __thiscall PGUIRowData::AddState(int,unsigned int)"
+126,0x7950,0x10007950,?AddState@PGUIRowData@@QAEXI@Z,public: void __thiscall PGUIRowData::AddState(unsigned int)
+127,0x76b0,0x100076b0,?AllocateRowData@PGUIPropertyValueFactory@@QAEXQBHHAAPAPAVPPropertyValue@@AAPAI@Z,"public: void __thiscall PGUIPropertyValueFactory::AllocateRowData(int const * const,int,class PPropertyValue * * &,unsigned int * &)"
+128,0x7600,0x10007600,?AllocateValueArray@PGUIPropertyValueFactory@@QAEPAPAVPPropertyValue@@QBHH@Z,"public: class PPropertyValue * * __thiscall PGUIPropertyValueFactory::AllocateValueArray(int const * const,int)"
+129,0x7590,0x10007590,?AllocateValueArray@PGUIPropertyValueFactory@@QAEPAVPPropertyValue@@H@Z,public: class PPropertyValue * __thiscall PGUIPropertyValueFactory::AllocateValueArray(int)
+130,0x4e90,0x10004e90,?AllowsChildren@PGUIDialog@@UBE_NXZ,public: virtual bool __thiscall PGUIDialog::AllowsChildren(void)const 
+131,0x74f0,0x100074f0,?AllowsChildren@PGUIPanel@@UBE_NXZ,public: virtual bool __thiscall PGUIPanel::AllowsChildren(void)const 
+132,0xc550,0x1000c550,?AllowsFocus@PGUIListBox@@UAEPAVTGUIWidget@Toshi@@PAV23@@Z,public: virtual class Toshi::TGUIWidget * __thiscall PGUIListBox::AllowsFocus(class Toshi::TGUIWidget *)
+133,0x10e70,0x10010e70,?AscendMenu@PGUIMenuTree@@QAEXXZ,public: void __thiscall PGUIMenuTree::AscendMenu(void)
+134,0x10fb0,0x10010fb0,?BackMenu@PGUIMenuTree@@QAEXXZ,public: void __thiscall PGUIMenuTree::BackMenu(void)
+135,0x1f8b0,0x1001f8b0,?CalculateLayoutSizes@PGUIDiscLayout@@IBEXPAVTGUIWidget@Toshi@@AAVTGUIRectangle@3@AAH22@Z,"protected: void __thiscall PGUIDiscLayout::CalculateLayoutSizes(class Toshi::TGUIWidget *,class Toshi::TGUIRectangle &,int &,int &,int &)const "
+136,0x267d0,0x100267d0,?CalculateLayoutSizes@PGUIStackLayout@@MBEXPAVTGUIWidget@Toshi@@_NAAH22222222@Z,"protected: virtual void __thiscall PGUIStackLayout::CalculateLayoutSizes(class Toshi::TGUIWidget *,bool,int &,int &,int &,int &,int &,int &,int &,int &,int &)const "
+137,0x60d0,0x100060d0,?CanSelect@PGUIItemData@@QBE_NXZ,public: bool __thiscall PGUIItemData::CanSelect(void)const 
+138,0x11aa0,0x10011aa0,?CancelMenu@PGUIMenuTree@@QAEXXZ,public: void __thiscall PGUIMenuTree::CancelMenu(void)
+139,0xfbf0,0x1000fbf0,?ChooseChildItem@PGUIMenuTreeItem@@QAEPAV1@XZ,public: class PGUIMenuTreeItem * __thiscall PGUIMenuTreeItem::ChooseChildItem(void)
+140,0xfb70,0x1000fb70,?ChooseNextItem@PGUIMenuTreeItem@@QAEPAV1@H@Z,public: class PGUIMenuTreeItem * __thiscall PGUIMenuTreeItem::ChooseNextItem(int)
+141,0x4d70,0x10004d70,?Clone@PGUIDialog@@UBEPAV1@XZ,public: virtual class PGUIDialog * __thiscall PGUIDialog::Clone(void)const 
+142,0x203d0,0x100203d0,?Clone@PGUIDiscLayout@@UBEPAV1@XZ,public: virtual class PGUIDiscLayout * __thiscall PGUIDiscLayout::Clone(void)const 
+143,0x5b40,0x10005b40,?Clone@PGUIDiscMenuDialog@@UBEPAV1@XZ,public: virtual class PGUIDiscMenuDialog * __thiscall PGUIDiscMenuDialog::Clone(void)const 
+144,0x21c50,0x10021c50,?Clone@PGUIGridLayout@@UBEPAV1@XZ,public: virtual class PGUIGridLayout * __thiscall PGUIGridLayout::Clone(void)const 
+145,0x7350,0x10007350,?Clone@PGUIHorizontalSplit@@UBEPAV1@XZ,public: virtual class PGUIHorizontalSplit * __thiscall PGUIHorizontalSplit::Clone(void)const 
+146,0x6170,0x10006170,?Clone@PGUIItemData@@UBEPAV1@XZ,public: virtual class PGUIItemData * __thiscall PGUIItemData::Clone(void)const 
+147,0x8570,0x10008570,?Clone@PGUILabel@@UBEPAV1@XZ,public: virtual class PGUILabel * __thiscall PGUILabel::Clone(void)const 
+148,0xc580,0x1000c580,?Clone@PGUIListBox@@UBEPAV1@XZ,public: virtual class PGUIListBox * __thiscall PGUIListBox::Clone(void)const 
+149,0xd100,0x1000d100,?Clone@PGUIListItem@@UBEPAV1@XZ,public: virtual class PGUIListItem * __thiscall PGUIListItem::Clone(void)const 
+150,0xde00,0x1000de00,?Clone@PGUIMenuBar@@UBEPAV1@XZ,public: virtual class PGUIMenuBar * __thiscall PGUIMenuBar::Clone(void)const 
+151,0xf5d0,0x1000f5d0,?Clone@PGUIMenuDialog@@UBEPAV1@XZ,public: virtual class PGUIMenuDialog * __thiscall PGUIMenuDialog::Clone(void)const 
+152,0x11b70,0x10011b70,?Clone@PGUIMenuTree@@UBEPAV1@XZ,public: virtual class PGUIMenuTree * __thiscall PGUIMenuTree::Clone(void)const 
+153,0x11cc0,0x10011cc0,?Clone@PGUIMenuTreeItem@@UBEPAV1@XZ,public: virtual class PGUIMenuTreeItem * __thiscall PGUIMenuTreeItem::Clone(void)const 
+154,0x25020,0x10025020,?Clone@PGUIOverlayLayout@@UBEPAV1@XZ,public: virtual class PGUIOverlayLayout * __thiscall PGUIOverlayLayout::Clone(void)const 
+155,0x12550,0x10012550,?Clone@PGUIOwnerDraw@@UBEPAV1@XZ,public: virtual class PGUIOwnerDraw * __thiscall PGUIOwnerDraw::Clone(void)const 
+156,0x12dd0,0x10012dd0,?Clone@PGUIPanel@@UBEPAV1@XZ,public: virtual class PGUIPanel * __thiscall PGUIPanel::Clone(void)const 
+157,0x13800,0x10013800,?Clone@PGUIPushButton@@UBEPAV1@XZ,public: virtual class PGUIPushButton * __thiscall PGUIPushButton::Clone(void)const 
+158,0x6060,0x10006060,?Clone@PGUIRowData@@UBEPAV1@XZ,public: virtual class PGUIRowData * __thiscall PGUIRowData::Clone(void)const 
+159,0x17dc0,0x10017dc0,?Clone@PGUISliderBar@@UBEPAV1@XZ,public: virtual class PGUISliderBar * __thiscall PGUISliderBar::Clone(void)const 
+160,0x26b20,0x10026b20,?Clone@PGUIStackLayout@@UBEPAV1@XZ,public: virtual class PGUIStackLayout * __thiscall PGUIStackLayout::Clone(void)const 
+161,0x1b0d0,0x1001b0d0,?Clone@PGUITableBox@@UBEPAV1@XZ,public: virtual class PGUITableBox * __thiscall PGUITableBox::Clone(void)const 
+162,0x1c290,0x1001c290,?Clone@PGUIToggleButton@@UBEPAV1@XZ,public: virtual class PGUIToggleButton * __thiscall PGUIToggleButton::Clone(void)const 
+163,0x1d3c0,0x1001d3c0,?Clone@PGUIVerticalSplit@@UBEPAV1@XZ,public: virtual class PGUIVerticalSplit * __thiscall PGUIVerticalSplit::Clone(void)const 
+164,0x10240,0x10010240,?CreateItemStyleGroup@PGUIMenuTree@@QAEPAVPGUIMenuTreeItemStyle@@PBD00@Z,"public: class PGUIMenuTreeItemStyle * __thiscall PGUIMenuTree::CreateItemStyleGroup(char const *,char const *,char const *)"
+165,0x10380,0x10010380,?CreateMenuStyleGroup@PGUIMenuTree@@QAEPAVPGUIMenuTreeItemStyle@@PBD00000@Z,"public: class PGUIMenuTreeItemStyle * __thiscall PGUIMenuTree::CreateMenuStyleGroup(char const *,char const *,char const *,char const *,char const *,char const *)"
+166,0x3b20,0x10003b20,?CreateObject@PGUIButton@@CGPAVTObject@Toshi@@XZ,private: static class Toshi::TObject * __stdcall PGUIButton::CreateObject(void)
+167,0x4e20,0x10004e20,?CreateObject@PGUIDialog@@CGPAVTObject@Toshi@@XZ,private: static class Toshi::TObject * __stdcall PGUIDialog::CreateObject(void)
+168,0x20450,0x10020450,?CreateObject@PGUIDiscLayout@@CGPAVTObject@Toshi@@XZ,private: static class Toshi::TObject * __stdcall PGUIDiscLayout::CreateObject(void)
+169,0x5bf0,0x10005bf0,?CreateObject@PGUIDiscMenuDialog@@CGPAVTObject@Toshi@@XZ,private: static class Toshi::TObject * __stdcall PGUIDiscMenuDialog::CreateObject(void)
+170,0x21d00,0x10021d00,?CreateObject@PGUIGridLayout@@CGPAVTObject@Toshi@@XZ,private: static class Toshi::TObject * __stdcall PGUIGridLayout::CreateObject(void)
+171,0x7410,0x10007410,?CreateObject@PGUIHorizontalSplit@@CGPAVTObject@Toshi@@XZ,private: static class Toshi::TObject * __stdcall PGUIHorizontalSplit::CreateObject(void)
+172,0x8610,0x10008610,?CreateObject@PGUILabel@@CGPAVTObject@Toshi@@XZ,private: static class Toshi::TObject * __stdcall PGUILabel::CreateObject(void)
+173,0x23430,0x10023430,?CreateObject@PGUILayoutManager@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::PGUILayoutManager::CreateObject(void)
+174,0xc5f0,0x1000c5f0,?CreateObject@PGUIListBox@@CGPAVTObject@Toshi@@XZ,private: static class Toshi::TObject * __stdcall PGUIListBox::CreateObject(void)
+175,0xd1a0,0x1000d1a0,?CreateObject@PGUIListItem@@CGPAVTObject@Toshi@@XZ,private: static class Toshi::TObject * __stdcall PGUIListItem::CreateObject(void)
+176,0xdf50,0x1000df50,?CreateObject@PGUIMenuBar@@CGPAVTObject@Toshi@@XZ,private: static class Toshi::TObject * __stdcall PGUIMenuBar::CreateObject(void)
+177,0xf720,0x1000f720,?CreateObject@PGUIMenuDialog@@CGPAVTObject@Toshi@@XZ,private: static class Toshi::TObject * __stdcall PGUIMenuDialog::CreateObject(void)
+178,0x11be0,0x10011be0,?CreateObject@PGUIMenuTree@@CGPAVTObject@Toshi@@XZ,private: static class Toshi::TObject * __stdcall PGUIMenuTree::CreateObject(void)
+179,0x250a0,0x100250a0,?CreateObject@PGUIOverlayLayout@@CGPAVTObject@Toshi@@XZ,private: static class Toshi::TObject * __stdcall PGUIOverlayLayout::CreateObject(void)
+180,0x12600,0x10012600,?CreateObject@PGUIOwnerDraw@@CGPAVTObject@Toshi@@XZ,private: static class Toshi::TObject * __stdcall PGUIOwnerDraw::CreateObject(void)
+181,0x12e70,0x10012e70,?CreateObject@PGUIPanel@@CGPAVTObject@Toshi@@XZ,private: static class Toshi::TObject * __stdcall PGUIPanel::CreateObject(void)
+182,0x138a0,0x100138a0,?CreateObject@PGUIPushButton@@CGPAVTObject@Toshi@@XZ,private: static class Toshi::TObject * __stdcall PGUIPushButton::CreateObject(void)
+183,0x17e50,0x10017e50,?CreateObject@PGUISliderBar@@CGPAVTObject@Toshi@@XZ,private: static class Toshi::TObject * __stdcall PGUISliderBar::CreateObject(void)
+184,0x26bd0,0x10026bd0,?CreateObject@PGUIStackLayout@@CGPAVTObject@Toshi@@XZ,private: static class Toshi::TObject * __stdcall PGUIStackLayout::CreateObject(void)
+185,0x1b140,0x1001b140,?CreateObject@PGUITableBox@@CGPAVTObject@Toshi@@XZ,private: static class Toshi::TObject * __stdcall PGUITableBox::CreateObject(void)
+186,0x1c330,0x1001c330,?CreateObject@PGUIToggleButton@@CGPAVTObject@Toshi@@XZ,private: static class Toshi::TObject * __stdcall PGUIToggleButton::CreateObject(void)
+187,0x1d480,0x1001d480,?CreateObject@PGUIVerticalSplit@@CGPAVTObject@Toshi@@XZ,private: static class Toshi::TObject * __stdcall PGUIVerticalSplit::CreateObject(void)
+188,0x3b10,0x10003b10,?CreateObjectInPlace@PGUIButton@@CGPAVTObject@Toshi@@PAX@Z,private: static class Toshi::TObject * __stdcall PGUIButton::CreateObjectInPlace(void *)
+189,0x4e00,0x10004e00,?CreateObjectInPlace@PGUIDialog@@CGPAVTObject@Toshi@@PAX@Z,private: static class Toshi::TObject * __stdcall PGUIDialog::CreateObjectInPlace(void *)
+190,0x20430,0x10020430,?CreateObjectInPlace@PGUIDiscLayout@@CGPAVTObject@Toshi@@PAX@Z,private: static class Toshi::TObject * __stdcall PGUIDiscLayout::CreateObjectInPlace(void *)
+191,0x5bd0,0x10005bd0,?CreateObjectInPlace@PGUIDiscMenuDialog@@CGPAVTObject@Toshi@@PAX@Z,private: static class Toshi::TObject * __stdcall PGUIDiscMenuDialog::CreateObjectInPlace(void *)
+192,0x21ce0,0x10021ce0,?CreateObjectInPlace@PGUIGridLayout@@CGPAVTObject@Toshi@@PAX@Z,private: static class Toshi::TObject * __stdcall PGUIGridLayout::CreateObjectInPlace(void *)
+193,0x73f0,0x100073f0,?CreateObjectInPlace@PGUIHorizontalSplit@@CGPAVTObject@Toshi@@PAX@Z,private: static class Toshi::TObject * __stdcall PGUIHorizontalSplit::CreateObjectInPlace(void *)
+194,0x85f0,0x100085f0,?CreateObjectInPlace@PGUILabel@@CGPAVTObject@Toshi@@PAX@Z,private: static class Toshi::TObject * __stdcall PGUILabel::CreateObjectInPlace(void *)
+195,0x23420,0x10023420,?CreateObjectInPlace@PGUILayoutManager@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::PGUILayoutManager::CreateObjectInPlace(void *)
+196,0xc5d0,0x1000c5d0,?CreateObjectInPlace@PGUIListBox@@CGPAVTObject@Toshi@@PAX@Z,private: static class Toshi::TObject * __stdcall PGUIListBox::CreateObjectInPlace(void *)
+197,0xd180,0x1000d180,?CreateObjectInPlace@PGUIListItem@@CGPAVTObject@Toshi@@PAX@Z,private: static class Toshi::TObject * __stdcall PGUIListItem::CreateObjectInPlace(void *)
+198,0xdf30,0x1000df30,?CreateObjectInPlace@PGUIMenuBar@@CGPAVTObject@Toshi@@PAX@Z,private: static class Toshi::TObject * __stdcall PGUIMenuBar::CreateObjectInPlace(void *)
+199,0xf700,0x1000f700,?CreateObjectInPlace@PGUIMenuDialog@@CGPAVTObject@Toshi@@PAX@Z,private: static class Toshi::TObject * __stdcall PGUIMenuDialog::CreateObjectInPlace(void *)
+200,0x11bc0,0x10011bc0,?CreateObjectInPlace@PGUIMenuTree@@CGPAVTObject@Toshi@@PAX@Z,private: static class Toshi::TObject * __stdcall PGUIMenuTree::CreateObjectInPlace(void *)
+201,0x25080,0x10025080,?CreateObjectInPlace@PGUIOverlayLayout@@CGPAVTObject@Toshi@@PAX@Z,private: static class Toshi::TObject * __stdcall PGUIOverlayLayout::CreateObjectInPlace(void *)
+202,0x125e0,0x100125e0,?CreateObjectInPlace@PGUIOwnerDraw@@CGPAVTObject@Toshi@@PAX@Z,private: static class Toshi::TObject * __stdcall PGUIOwnerDraw::CreateObjectInPlace(void *)
+203,0x12e50,0x10012e50,?CreateObjectInPlace@PGUIPanel@@CGPAVTObject@Toshi@@PAX@Z,private: static class Toshi::TObject * __stdcall PGUIPanel::CreateObjectInPlace(void *)
+204,0x13880,0x10013880,?CreateObjectInPlace@PGUIPushButton@@CGPAVTObject@Toshi@@PAX@Z,private: static class Toshi::TObject * __stdcall PGUIPushButton::CreateObjectInPlace(void *)
+205,0x17e30,0x10017e30,?CreateObjectInPlace@PGUISliderBar@@CGPAVTObject@Toshi@@PAX@Z,private: static class Toshi::TObject * __stdcall PGUISliderBar::CreateObjectInPlace(void *)
+206,0x26bb0,0x10026bb0,?CreateObjectInPlace@PGUIStackLayout@@CGPAVTObject@Toshi@@PAX@Z,private: static class Toshi::TObject * __stdcall PGUIStackLayout::CreateObjectInPlace(void *)
+207,0x1b120,0x1001b120,?CreateObjectInPlace@PGUITableBox@@CGPAVTObject@Toshi@@PAX@Z,private: static class Toshi::TObject * __stdcall PGUITableBox::CreateObjectInPlace(void *)
+208,0x1c310,0x1001c310,?CreateObjectInPlace@PGUIToggleButton@@CGPAVTObject@Toshi@@PAX@Z,private: static class Toshi::TObject * __stdcall PGUIToggleButton::CreateObjectInPlace(void *)
+209,0x1d460,0x1001d460,?CreateObjectInPlace@PGUIVerticalSplit@@CGPAVTObject@Toshi@@PAX@Z,private: static class Toshi::TObject * __stdcall PGUIVerticalSplit::CreateObjectInPlace(void *)
+210,0x79a0,0x100079a0,?DeallocateRowData@PGUIPropertyValueFactory@@QAEXHPAPAVPPropertyValue@@PAI@Z,"public: void __thiscall PGUIPropertyValueFactory::DeallocateRowData(int,class PPropertyValue * *,unsigned int *)"
+211,0x76f0,0x100076f0,?DeallocateValueArray@PGUIPropertyValueFactory@@QAEXHPAPAVPPropertyValue@@@Z,"public: void __thiscall PGUIPropertyValueFactory::DeallocateValueArray(int,class PPropertyValue * *)"
+212,0x79c0,0x100079c0,?DeallocateValueArray@PGUIPropertyValueFactory@@QAEXPAVPPropertyValue@@@Z,public: void __thiscall PGUIPropertyValueFactory::DeallocateValueArray(class PPropertyValue *)
+213,0x3440,0x10003440,?DeinitialiseStatic@PGUIButton@@CGXXZ,private: static void __stdcall PGUIButton::DeinitialiseStatic(void)
+214,0x4940,0x10004940,?DeinitialiseStatic@PGUIDialog@@CGXXZ,private: static void __stdcall PGUIDialog::DeinitialiseStatic(void)
+215,0x1f1d0,0x1001f1d0,?DeinitialiseStatic@PGUIDiscLayout@@CGXXZ,private: static void __stdcall PGUIDiscLayout::DeinitialiseStatic(void)
+216,0x53d0,0x100053d0,?DeinitialiseStatic@PGUIDiscMenuDialog@@CGXXZ,private: static void __stdcall PGUIDiscMenuDialog::DeinitialiseStatic(void)
+217,0x20c90,0x10020c90,?DeinitialiseStatic@PGUIGridLayout@@CGXXZ,private: static void __stdcall PGUIGridLayout::DeinitialiseStatic(void)
+218,0x6c30,0x10006c30,?DeinitialiseStatic@PGUIHorizontalSplit@@CGXXZ,private: static void __stdcall PGUIHorizontalSplit::DeinitialiseStatic(void)
+219,0x81a0,0x100081a0,?DeinitialiseStatic@PGUILabel@@CGXXZ,private: static void __stdcall PGUILabel::DeinitialiseStatic(void)
+220,0x22fb0,0x10022fb0,?DeinitialiseStatic@PGUILayoutManager@Toshi@@CGXXZ,private: static void __stdcall Toshi::PGUILayoutManager::DeinitialiseStatic(void)
+221,0x9b20,0x10009b20,?DeinitialiseStatic@PGUIListBox@@CGXXZ,private: static void __stdcall PGUIListBox::DeinitialiseStatic(void)
+222,0xcd80,0x1000cd80,?DeinitialiseStatic@PGUIListItem@@CGXXZ,private: static void __stdcall PGUIListItem::DeinitialiseStatic(void)
+223,0xd610,0x1000d610,?DeinitialiseStatic@PGUIMenuBar@@CGXXZ,private: static void __stdcall PGUIMenuBar::DeinitialiseStatic(void)
+224,0xe4e0,0x1000e4e0,?DeinitialiseStatic@PGUIMenuDialog@@CGXXZ,private: static void __stdcall PGUIMenuDialog::DeinitialiseStatic(void)
+225,0xfea0,0x1000fea0,?DeinitialiseStatic@PGUIMenuTree@@CGXXZ,private: static void __stdcall PGUIMenuTree::DeinitialiseStatic(void)
+226,0x246a0,0x100246a0,?DeinitialiseStatic@PGUIOverlayLayout@@CGXXZ,private: static void __stdcall PGUIOverlayLayout::DeinitialiseStatic(void)
+227,0x122c0,0x100122c0,?DeinitialiseStatic@PGUIOwnerDraw@@CGXXZ,private: static void __stdcall PGUIOwnerDraw::DeinitialiseStatic(void)
+228,0x12aa0,0x10012aa0,?DeinitialiseStatic@PGUIPanel@@CGXXZ,private: static void __stdcall PGUIPanel::DeinitialiseStatic(void)
+229,0x133e0,0x100133e0,?DeinitialiseStatic@PGUIPushButton@@CGXXZ,private: static void __stdcall PGUIPushButton::DeinitialiseStatic(void)
+230,0x151a0,0x100151a0,?DeinitialiseStatic@PGUISliderBar@@CGXXZ,private: static void __stdcall PGUISliderBar::DeinitialiseStatic(void)
+231,0x25c20,0x10025c20,?DeinitialiseStatic@PGUIStackLayout@@CGXXZ,private: static void __stdcall PGUIStackLayout::DeinitialiseStatic(void)
+232,0x18cd0,0x10018cd0,?DeinitialiseStatic@PGUITableBox@@CGXXZ,private: static void __stdcall PGUITableBox::DeinitialiseStatic(void)
+233,0x1bd90,0x1001bd90,?DeinitialiseStatic@PGUIToggleButton@@CGXXZ,private: static void __stdcall PGUIToggleButton::DeinitialiseStatic(void)
+234,0x1cd10,0x1001cd10,?DeinitialiseStatic@PGUIVerticalSplit@@CGXXZ,private: static void __stdcall PGUIVerticalSplit::DeinitialiseStatic(void)
+235,0x11c20,0x10011c20,?DeleteItem@PGUIMenuTreeItem@@QAEXPAV1@@Z,public: void __thiscall PGUIMenuTreeItem::DeleteItem(class PGUIMenuTreeItem *)
+236,0xac70,0x1000ac70,?DeleteItemList@PGUIListBox@@QAEXXZ,public: void __thiscall PGUIListBox::DeleteItemList(void)
+237,0x10cf0,0x10010cf0,?DescendMenu@PGUIMenuTree@@QAEXXZ,public: void __thiscall PGUIMenuTree::DescendMenu(void)
+238,0x11220,0x10011220,?DeselectMenu@PGUIMenuTree@@QAEXXZ,public: void __thiscall PGUIMenuTree::DeselectMenu(void)
+239,0x3a80,0x10003a80,?Deserialise@PGUIButton@@UAE_NPBVPProperties@@@Z,public: virtual bool __thiscall PGUIButton::Deserialise(class PProperties const *)
+240,0x4d30,0x10004d30,?Deserialise@PGUIDialog@@UAE_NPBVPProperties@@@Z,public: virtual bool __thiscall PGUIDialog::Deserialise(class PProperties const *)
+241,0x203b0,0x100203b0,?Deserialise@PGUIDiscLayout@@UAE_NPBVPProperties@@@Z,public: virtual bool __thiscall PGUIDiscLayout::Deserialise(class PProperties const *)
+242,0x5b10,0x10005b10,?Deserialise@PGUIDiscMenuDialog@@UAE_NPBVPProperties@@@Z,public: virtual bool __thiscall PGUIDiscMenuDialog::Deserialise(class PProperties const *)
+243,0x21c30,0x10021c30,?Deserialise@PGUIGridLayout@@UAE_NPBVPProperties@@@Z,public: virtual bool __thiscall PGUIGridLayout::Deserialise(class PProperties const *)
+244,0x7320,0x10007320,?Deserialise@PGUIHorizontalSplit@@UAE_NPBVPProperties@@@Z,public: virtual bool __thiscall PGUIHorizontalSplit::Deserialise(class PProperties const *)
+245,0x8550,0x10008550,?Deserialise@PGUILabel@@UAE_NPBVPProperties@@@Z,public: virtual bool __thiscall PGUILabel::Deserialise(class PProperties const *)
+246,0x9de0,0x10009de0,?Deserialise@PGUIListBox@@UAE_NPBVPProperties@@@Z,public: virtual bool __thiscall PGUIListBox::Deserialise(class PProperties const *)
+247,0xd0e0,0x1000d0e0,?Deserialise@PGUIListItem@@UAE_NPBVPProperties@@@Z,public: virtual bool __thiscall PGUIListItem::Deserialise(class PProperties const *)
+248,0xddd0,0x1000ddd0,?Deserialise@PGUIMenuBar@@UAE_NPBVPProperties@@@Z,public: virtual bool __thiscall PGUIMenuBar::Deserialise(class PProperties const *)
+249,0xf5a0,0x1000f5a0,?Deserialise@PGUIMenuDialog@@UAE_NPBVPProperties@@@Z,public: virtual bool __thiscall PGUIMenuDialog::Deserialise(class PProperties const *)
+250,0x11b50,0x10011b50,?Deserialise@PGUIMenuTree@@UAE_NPBVPProperties@@@Z,public: virtual bool __thiscall PGUIMenuTree::Deserialise(class PProperties const *)
+251,0x25000,0x10025000,?Deserialise@PGUIOverlayLayout@@UAE_NPBVPProperties@@@Z,public: virtual bool __thiscall PGUIOverlayLayout::Deserialise(class PProperties const *)
+252,0x12520,0x10012520,?Deserialise@PGUIOwnerDraw@@UAE_NPBVPProperties@@@Z,public: virtual bool __thiscall PGUIOwnerDraw::Deserialise(class PProperties const *)
+253,0x12db0,0x10012db0,?Deserialise@PGUIPanel@@UAE_NPBVPProperties@@@Z,public: virtual bool __thiscall PGUIPanel::Deserialise(class PProperties const *)
+254,0x137d0,0x100137d0,?Deserialise@PGUIPushButton@@UAE_NPBVPProperties@@@Z,public: virtual bool __thiscall PGUIPushButton::Deserialise(class PProperties const *)
+255,0x17da0,0x10017da0,?Deserialise@PGUISliderBar@@UAE_NPBVPProperties@@@Z,public: virtual bool __thiscall PGUISliderBar::Deserialise(class PProperties const *)
+256,0x26b00,0x10026b00,?Deserialise@PGUIStackLayout@@UAE_NPBVPProperties@@@Z,public: virtual bool __thiscall PGUIStackLayout::Deserialise(class PProperties const *)
+257,0x1b0a0,0x1001b0a0,?Deserialise@PGUITableBox@@UAE_NPBVPProperties@@@Z,public: virtual bool __thiscall PGUITableBox::Deserialise(class PProperties const *)
+258,0x1c260,0x1001c260,?Deserialise@PGUIToggleButton@@UAE_NPBVPProperties@@@Z,public: virtual bool __thiscall PGUIToggleButton::Deserialise(class PProperties const *)
+259,0x1d3a0,0x1001d3a0,?Deserialise@PGUIVerticalSplit@@UAE_NPBVPProperties@@@Z,public: virtual bool __thiscall PGUIVerticalSplit::Deserialise(class PProperties const *)
+260,0xc3d0,0x1000c3d0,?DeserialiseChildren@PGUIListBox@@MAE_NPBVPProperties@@@Z,protected: virtual bool __thiscall PGUIListBox::DeserialiseChildren(class PProperties const *)
+261,0xda90,0x1000da90,?DiscardButton@PGUIMenuBar@@AAEXPAVTGUIWidget@Toshi@@@Z,private: void __thiscall PGUIMenuBar::DiscardButton(class Toshi::TGUIWidget *)
+262,0xf260,0x1000f260,?DiscardButton@PGUIMenuDialog@@AAEXPAVTGUIWidget@Toshi@@@Z,private: void __thiscall PGUIMenuDialog::DiscardButton(class Toshi::TGUIWidget *)
+263,0x118e0,0x100118e0,?DiscardDialog@PGUIMenuTree@@AAEXPAVPGUIMenuDialog@@@Z,private: void __thiscall PGUIMenuTree::DiscardDialog(class PGUIMenuDialog *)
+264,0x11590,0x10011590,?DoAxisMove@PGUIMenuTree@@UAE_NPAVInputEvent@TInputInterface@Toshi@@H@Z,"public: virtual bool __thiscall PGUIMenuTree::DoAxisMove(class Toshi::TInputInterface::InputEvent *,int)"
+265,0x13760,0x10013760,?DoButtonAction@PGUIPushButton@@MAEXXZ,protected: virtual void __thiscall PGUIPushButton::DoButtonAction(void)
+266,0x1c090,0x1001c090,?DoButtonAction@PGUIToggleButton@@MAEXXZ,protected: virtual void __thiscall PGUIToggleButton::DoButtonAction(void)
+267,0xb240,0x1000b240,?DoButtonEvent@PGUIListBox@@IAE_NPAVInputEvent@TInputInterface@Toshi@@H@Z,"protected: bool __thiscall PGUIListBox::DoButtonEvent(class Toshi::TInputInterface::InputEvent *,int)"
+268,0x19fe0,0x10019fe0,?DoButtonEvent@PGUITableBox@@IAE_NPAVInputEvent@TInputInterface@Toshi@@H@Z,"protected: bool __thiscall PGUITableBox::DoButtonEvent(class Toshi::TInputInterface::InputEvent *,int)"
+269,0x113b0,0x100113b0,?DoButtonPress@PGUIMenuTree@@UAE_NPAVInputEvent@TInputInterface@Toshi@@H@Z,"public: virtual bool __thiscall PGUIMenuTree::DoButtonPress(class Toshi::TInputInterface::InputEvent *,int)"
+270,0x11560,0x10011560,?DoButtonRelease@PGUIMenuTree@@UAE_NPAVInputEvent@TInputInterface@Toshi@@H@Z,"public: virtual bool __thiscall PGUIMenuTree::DoButtonRelease(class Toshi::TInputInterface::InputEvent *,int)"
+271,0x11530,0x10011530,?DoButtonRepeat@PGUIMenuTree@@UAE_NPAVInputEvent@TInputInterface@Toshi@@H@Z,"public: virtual bool __thiscall PGUIMenuTree::DoButtonRepeat(class Toshi::TInputInterface::InputEvent *,int)"
+272,0x1f2e0,0x1001f2e0,?DoLayout@PGUIDiscLayout@@UBEXPAVTGUIWidget@Toshi@@AAH1@Z,"public: virtual void __thiscall PGUIDiscLayout::DoLayout(class Toshi::TGUIWidget *,int &,int &)const "
+273,0x20d50,0x10020d50,?DoLayout@PGUIGridLayout@@UBEXPAVTGUIWidget@Toshi@@AAH1@Z,"public: virtual void __thiscall PGUIGridLayout::DoLayout(class Toshi::TGUIWidget *,int &,int &)const "
+274,0x247a0,0x100247a0,?DoLayout@PGUIOverlayLayout@@UBEXPAVTGUIWidget@Toshi@@AAH1@Z,"public: virtual void __thiscall PGUIOverlayLayout::DoLayout(class Toshi::TGUIWidget *,int &,int &)const "
+275,0x25ce0,0x10025ce0,?DoLayout@PGUIStackLayout@@UBEXPAVTGUIWidget@Toshi@@AAH1@Z,"public: virtual void __thiscall PGUIStackLayout::DoLayout(class Toshi::TGUIWidget *,int &,int &)const "
+276,0x1f360,0x1001f360,?DoPack@PGUIDiscLayout@@UBEXPAVTGUIWidget@Toshi@@@Z,public: virtual void __thiscall PGUIDiscLayout::DoPack(class Toshi::TGUIWidget *)const 
+277,0x210a0,0x100210a0,?DoPack@PGUIGridLayout@@UBEXPAVTGUIWidget@Toshi@@@Z,public: virtual void __thiscall PGUIGridLayout::DoPack(class Toshi::TGUIWidget *)const 
+278,0x24940,0x10024940,?DoPack@PGUIOverlayLayout@@UBEXPAVTGUIWidget@Toshi@@@Z,public: virtual void __thiscall PGUIOverlayLayout::DoPack(class Toshi::TGUIWidget *)const 
+279,0x25f10,0x10025f10,?DoPack@PGUIStackLayout@@UBEXPAVTGUIWidget@Toshi@@@Z,public: virtual void __thiscall PGUIStackLayout::DoPack(class Toshi::TGUIWidget *)const 
+280,0x11a70,0x10011a70,?DoPointerMove@PGUIMenuTree@@UAE_NPAVInputEvent@TInputInterface@Toshi@@H@Z,"public: virtual bool __thiscall PGUIMenuTree::DoPointerMove(class Toshi::TInputInterface::InputEvent *,int)"
+281,0x115c0,0x100115c0,?DoRolloverUpdate@PGUIMenuTree@@UAEXXZ,public: virtual void __thiscall PGUIMenuTree::DoRolloverUpdate(void)
+282,0xc670,0x1000c670,?EnsureVisible@PGUIListBox@@QAEXPAVPGUIItemData@@@Z,public: void __thiscall PGUIListBox::EnsureVisible(class PGUIItemData *)
+283,0x1b350,0x1001b350,?EnsureVisible@PGUITableBox@@QAEXPAVPGUIRowData@@@Z,public: void __thiscall PGUITableBox::EnsureVisible(class PGUIRowData *)
+284,0xc160,0x1000c160,?EnsureVisibleImpl@PGUIListBox@@IAEXPAVPGUIItemData@@@Z,protected: void __thiscall PGUIListBox::EnsureVisibleImpl(class PGUIItemData *)
+285,0x1abc0,0x1001abc0,?EnsureVisibleImpl@PGUITableBox@@IAEXPAVPGUIRowData@@@Z,protected: void __thiscall PGUITableBox::EnsureVisibleImpl(class PGUIRowData *)
+286,0xfad0,0x1000fad0,?FindChildItem@PGUIMenuTreeItem@@QAEPAV1@ABVTLString@Toshi@@_N@Z,"public: class PGUIMenuTreeItem * __thiscall PGUIMenuTreeItem::FindChildItem(class Toshi::TLString const &,bool)"
+287,0xfa80,0x1000fa80,?FindChildItem@PGUIMenuTreeItem@@QAEPAV1@H@Z,public: class PGUIMenuTreeItem * __thiscall PGUIMenuTreeItem::FindChildItem(int)
+288,0x196c0,0x100196c0,?FindItemAtPoint@PGUITableBox@@QAE_NHHAAPAVPGUIRowData@@AAH@Z,"public: bool __thiscall PGUITableBox::FindItemAtPoint(int,int,class PGUIRowData * &,int &)"
+289,0xd940,0x1000d940,?FindItemData@PGUIMenuBar@@UAEPAVPGUIMenuTreeItem@@PAVTGUIWidget@Toshi@@@Z,public: virtual class PGUIMenuTreeItem * __thiscall PGUIMenuBar::FindItemData(class Toshi::TGUIWidget *)
+290,0xec60,0x1000ec60,?FindItemData@PGUIMenuDialog@@UAEPAVPGUIMenuTreeItem@@PAVTGUIWidget@Toshi@@@Z,public: virtual class PGUIMenuTreeItem * __thiscall PGUIMenuDialog::FindItemData(class Toshi::TGUIWidget *)
+291,0xbe40,0x1000be40,?FindItemWidget@PGUIListBox@@IAEPAVPGUIListItem@@PAVPGUIItemData@@@Z,protected: class PGUIListItem * __thiscall PGUIListBox::FindItemWidget(class PGUIItemData *)
+292,0xbe90,0x1000be90,?FindWidgetItem@PGUIListBox@@IAEPAVPGUIItemData@@PAVPGUIListItem@@@Z,protected: class PGUIItemData * __thiscall PGUIListBox::FindWidgetItem(class PGUIListItem *)
+293,0x19440,0x10019440,?Flush@PGUITableBox@@UAEXXZ,public: virtual void __thiscall PGUITableBox::Flush(void)
+294,0x116b0,0x100116b0,?FlushOldDialogs@PGUIMenuTree@@QAEXXZ,public: void __thiscall PGUIMenuTree::FlushOldDialogs(void)
+295,0xba50,0x1000ba50,?GenerateItemList@PGUIListBox@@IAEXXZ,protected: void __thiscall PGUIListBox::GenerateItemList(void)
+296,0xc740,0x1000c740,?GetBlankItem@PGUIListBox@@QAEPAVPGUIItemData@@XZ,public: class PGUIItemData * __thiscall PGUIListBox::GetBlankItem(void)
+297,0x7480,0x10007480,?GetBottomWidget@PGUIHorizontalSplit@@QBEPAVTGUIWidget@Toshi@@XZ,public: class Toshi::TGUIWidget * __thiscall PGUIHorizontalSplit::GetBottomWidget(void)const 
+298,0x12670,0x10012670,?GetCallBack@PGUIOwnerDraw@@QAEPAVCallBack@1@XZ,public: class PGUIOwnerDraw::CallBack * __thiscall PGUIOwnerDraw::GetCallBack(void)
+299,0x5ea0,0x10005ea0,?GetChildren@PGUIMenuTreeItem@@QBEABV?$TNodeList@VPGUIItemData@@@Toshi@@XZ,public: class Toshi::TNodeList<class PGUIItemData> const & __thiscall PGUIMenuTreeItem::GetChildren(void)const 
+300,0x3b30,0x10003b30,?GetClass@PGUIButton@@UBEAAVTClass@Toshi@@XZ,public: virtual class Toshi::TClass & __thiscall PGUIButton::GetClass(void)const 
+301,0x4e50,0x10004e50,?GetClass@PGUIDialog@@UBEAAVTClass@Toshi@@XZ,public: virtual class Toshi::TClass & __thiscall PGUIDialog::GetClass(void)const 
+302,0x20480,0x10020480,?GetClass@PGUIDiscLayout@@UBEAAVTClass@Toshi@@XZ,public: virtual class Toshi::TClass & __thiscall PGUIDiscLayout::GetClass(void)const 
+303,0x5c20,0x10005c20,?GetClass@PGUIDiscMenuDialog@@UBEAAVTClass@Toshi@@XZ,public: virtual class Toshi::TClass & __thiscall PGUIDiscMenuDialog::GetClass(void)const 
+304,0x21d30,0x10021d30,?GetClass@PGUIGridLayout@@UBEAAVTClass@Toshi@@XZ,public: virtual class Toshi::TClass & __thiscall PGUIGridLayout::GetClass(void)const 
+305,0x7440,0x10007440,?GetClass@PGUIHorizontalSplit@@UBEAAVTClass@Toshi@@XZ,public: virtual class Toshi::TClass & __thiscall PGUIHorizontalSplit::GetClass(void)const 
+306,0x8640,0x10008640,?GetClass@PGUILabel@@UBEAAVTClass@Toshi@@XZ,public: virtual class Toshi::TClass & __thiscall PGUILabel::GetClass(void)const 
+307,0x23440,0x10023440,?GetClass@PGUILayoutManager@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::PGUILayoutManager::GetClass(void)const 
+308,0xc620,0x1000c620,?GetClass@PGUIListBox@@UBEAAVTClass@Toshi@@XZ,public: virtual class Toshi::TClass & __thiscall PGUIListBox::GetClass(void)const 
+309,0xd1d0,0x1000d1d0,?GetClass@PGUIListItem@@UBEAAVTClass@Toshi@@XZ,public: virtual class Toshi::TClass & __thiscall PGUIListItem::GetClass(void)const 
+310,0xdf80,0x1000df80,?GetClass@PGUIMenuBar@@UBEAAVTClass@Toshi@@XZ,public: virtual class Toshi::TClass & __thiscall PGUIMenuBar::GetClass(void)const 
+311,0xf750,0x1000f750,?GetClass@PGUIMenuDialog@@UBEAAVTClass@Toshi@@XZ,public: virtual class Toshi::TClass & __thiscall PGUIMenuDialog::GetClass(void)const 
+312,0x11c10,0x10011c10,?GetClass@PGUIMenuTree@@UBEAAVTClass@Toshi@@XZ,public: virtual class Toshi::TClass & __thiscall PGUIMenuTree::GetClass(void)const 
+313,0x250d0,0x100250d0,?GetClass@PGUIOverlayLayout@@UBEAAVTClass@Toshi@@XZ,public: virtual class Toshi::TClass & __thiscall PGUIOverlayLayout::GetClass(void)const 
+314,0x12630,0x10012630,?GetClass@PGUIOwnerDraw@@UBEAAVTClass@Toshi@@XZ,public: virtual class Toshi::TClass & __thiscall PGUIOwnerDraw::GetClass(void)const 
+315,0x12ea0,0x10012ea0,?GetClass@PGUIPanel@@UBEAAVTClass@Toshi@@XZ,public: virtual class Toshi::TClass & __thiscall PGUIPanel::GetClass(void)const 
+316,0x138d0,0x100138d0,?GetClass@PGUIPushButton@@UBEAAVTClass@Toshi@@XZ,public: virtual class Toshi::TClass & __thiscall PGUIPushButton::GetClass(void)const 
+317,0x17e80,0x10017e80,?GetClass@PGUISliderBar@@UBEAAVTClass@Toshi@@XZ,public: virtual class Toshi::TClass & __thiscall PGUISliderBar::GetClass(void)const 
+318,0x26c00,0x10026c00,?GetClass@PGUIStackLayout@@UBEAAVTClass@Toshi@@XZ,public: virtual class Toshi::TClass & __thiscall PGUIStackLayout::GetClass(void)const 
+319,0x1b170,0x1001b170,?GetClass@PGUITableBox@@UBEAAVTClass@Toshi@@XZ,public: virtual class Toshi::TClass & __thiscall PGUITableBox::GetClass(void)const 
+320,0x1c360,0x1001c360,?GetClass@PGUIToggleButton@@UBEAAVTClass@Toshi@@XZ,public: virtual class Toshi::TClass & __thiscall PGUIToggleButton::GetClass(void)const 
+321,0x1d4b0,0x1001d4b0,?GetClass@PGUIVerticalSplit@@UBEAAVTClass@Toshi@@XZ,public: virtual class Toshi::TClass & __thiscall PGUIVerticalSplit::GetClass(void)const 
+322,0x6050,0x10006050,?GetColumnCount@PGUIRowData@@QBEHXZ,public: int __thiscall PGUIRowData::GetColumnCount(void)const 
+323,0x1b410,0x1001b410,?GetColumnCount@PGUITableBox@@QBEHXZ,public: int __thiscall PGUITableBox::GetColumnCount(void)const 
+324,0x5f50,0x10005f50,?GetCurrentItemSelectedStyle@PGUIMenuTreeItemStyle@@QBEPAVTGUIStyle@Toshi@@XZ,public: class Toshi::TGUIStyle * __thiscall PGUIMenuTreeItemStyle::GetCurrentItemSelectedStyle(void)const 
+325,0x5f60,0x10005f60,?GetCurrentItemStyle@PGUIMenuTreeItemStyle@@QBEPAVTGUIStyle@Toshi@@XZ,public: class Toshi::TGUIStyle * __thiscall PGUIMenuTreeItemStyle::GetCurrentItemStyle(void)const 
+326,0x101b0,0x100101b0,?GetCurrentMenu@PGUIMenuTree@@QAEPAVPGUIMenuDialog@@XZ,public: class PGUIMenuDialog * __thiscall PGUIMenuTree::GetCurrentMenu(void)
+327,0x5f20,0x10005f20,?GetCurrentMenuTemplate@PGUIMenuTreeItemStyle@@QBEPAVTGUIWidget@Toshi@@XZ,public: class Toshi::TGUIWidget * __thiscall PGUIMenuTreeItemStyle::GetCurrentMenuTemplate(void)const 
+328,0x7be0,0x10007be0,?GetCurrentValue@PGUISliderBar@@QBEMXZ,public: float __thiscall PGUISliderBar::GetCurrentValue(void)const 
+329,0xa8e0,0x1000a8e0,?GetFirstItemWidget@PGUIListBox@@QAEPAVPGUIListItem@@XZ,public: class PGUIListItem * __thiscall PGUIListBox::GetFirstItemWidget(void)
+330,0x5c60,0x10005c60,?GetFlowDirection@PGUIDiscLayout@@QBE?AW4FlowDirection@1@XZ,public: enum PGUIDiscLayout::FlowDirection __thiscall PGUIDiscLayout::GetFlowDirection(void)const 
+331,0x11e40,0x10011e40,?GetFlowDirection@PGUIStackLayout@@QBE?AW4FlowDirection@1@XZ,public: enum PGUIStackLayout::FlowDirection __thiscall PGUIStackLayout::GetFlowDirection(void)const 
+332,0x5cb0,0x10005cb0,?GetForceSameHeight@PGUIDiscLayout@@QBE_NXZ,public: bool __thiscall PGUIDiscLayout::GetForceSameHeight(void)const 
+333,0x11da0,0x10011da0,?GetForceSameHeight@PGUILayoutManager@Toshi@@QBE_NXZ,public: bool __thiscall Toshi::PGUILayoutManager::GetForceSameHeight(void)const 
+334,0x25100,0x10025100,?GetForceSameHeight@PGUIOverlayLayout@@QBE_NXZ,public: bool __thiscall PGUIOverlayLayout::GetForceSameHeight(void)const 
+335,0x5cc0,0x10005cc0,?GetForceSameWidth@PGUIDiscLayout@@QBE_NXZ,public: bool __thiscall PGUIDiscLayout::GetForceSameWidth(void)const 
+336,0x11db0,0x10011db0,?GetForceSameWidth@PGUILayoutManager@Toshi@@QBE_NXZ,public: bool __thiscall Toshi::PGUILayoutManager::GetForceSameWidth(void)const 
+337,0x25110,0x10025110,?GetForceSameWidth@PGUIOverlayLayout@@QBE_NXZ,public: bool __thiscall PGUIOverlayLayout::GetForceSameWidth(void)const 
+338,0xc710,0x1000c710,?GetHoverSelectMode@PGUIListBox@@QBE_NXZ,public: bool __thiscall PGUIListBox::GetHoverSelectMode(void)const 
+339,0x1b400,0x1001b400,?GetHoverSelectMode@PGUITableBox@@QBE_NXZ,public: bool __thiscall PGUITableBox::GetHoverSelectMode(void)const 
+340,0xc840,0x1000c840,?GetIndex@PGUIListItem@@QBEHXZ,public: int __thiscall PGUIListItem::GetIndex(void)const 
+341,0x5e40,0x10005e40,?GetInterface@PGUIMenuTree@@UBEPAVTGUIInterface@Toshi@@XZ,public: virtual class Toshi::TGUIInterface * __thiscall PGUIMenuTree::GetInterface(void)const 
+342,0xec10,0x1000ec10,?GetItemAtIndex@PGUIMenuDialog@@QBEPAVPGUIMenuTreeItem@@H@Z,public: class PGUIMenuTreeItem * __thiscall PGUIMenuDialog::GetItemAtIndex(int)const 
+343,0xc650,0x1000c650,?GetItemData@PGUIListBox@@QAEPAV?$TNodeList@VPGUIItemData@@@Toshi@@XZ,public: class Toshi::TNodeList<class PGUIItemData> * __thiscall PGUIListBox::GetItemData(void)
+344,0x1b330,0x1001b330,?GetItemData@PGUITableBox@@QAEPAV?$TNodeList@VPGUIRowData@@@Toshi@@XZ,public: class Toshi::TNodeList<class PGUIRowData> * __thiscall PGUITableBox::GetItemData(void)
+345,0xf880,0x1000f880,?GetItemStyle@PGUIMenuTreeItemStyle@@QBEPAVTGUIStyle@Toshi@@W4DisplayLevel@1@@Z,public: class Toshi::TGUIStyle * __thiscall PGUIMenuTreeItemStyle::GetItemStyle(enum PGUIMenuTreeItemStyle::DisplayLevel)const 
+346,0x250f0,0x100250f0,?GetJustifyHoriz@PGUIOverlayLayout@@QBE?AW4Alignment@TGUILayoutManager@Toshi@@XZ,public: enum Toshi::TGUILayoutManager::Alignment __thiscall PGUIOverlayLayout::GetJustifyHoriz(void)const 
+347,0x11e60,0x10011e60,?GetJustifyHoriz@PGUIStackLayout@@QBE?AW4Alignment@TGUILayoutManager@Toshi@@XZ,public: enum Toshi::TGUILayoutManager::Alignment __thiscall PGUIStackLayout::GetJustifyHoriz(void)const 
+348,0x250e0,0x100250e0,?GetJustifyVert@PGUIOverlayLayout@@QBE?AW4Alignment@TGUILayoutManager@Toshi@@XZ,public: enum Toshi::TGUILayoutManager::Alignment __thiscall PGUIOverlayLayout::GetJustifyVert(void)const 
+349,0x11e50,0x10011e50,?GetJustifyVert@PGUIStackLayout@@QBE?AW4Alignment@TGUILayoutManager@Toshi@@XZ,public: enum Toshi::TGUILayoutManager::Alignment __thiscall PGUIStackLayout::GetJustifyVert(void)const 
+350,0x1d510,0x1001d510,?GetLeftWidget@PGUIVerticalSplit@@QBEPAVTGUIWidget@Toshi@@XZ,public: class Toshi::TGUIWidget * __thiscall PGUIVerticalSplit::GetLeftWidget(void)const 
+351,0xc730,0x1000c730,?GetListItemStyle@PGUIListBox@@QBEPAVTGUIStyle@Toshi@@XZ,public: class Toshi::TGUIStyle * __thiscall PGUIListBox::GetListItemStyle(void)const 
+352,0x7bc0,0x10007bc0,?GetMaximumValue@PGUISliderBar@@QBEMXZ,public: float __thiscall PGUISliderBar::GetMaximumValue(void)const 
+353,0xe020,0x1000e020,?GetMenuTree@PGUIMenuBar@@QBEPAVPGUIMenuTree@@XZ,public: class PGUIMenuTree * __thiscall PGUIMenuBar::GetMenuTree(void)const 
+354,0x7bd0,0x10007bd0,?GetMinimumValue@PGUISliderBar@@QBEMXZ,public: float __thiscall PGUISliderBar::GetMinimumValue(void)const 
+355,0x5f40,0x10005f40,?GetNextItemStyle@PGUIMenuTreeItemStyle@@QBEPAVTGUIStyle@Toshi@@XZ,public: class Toshi::TGUIStyle * __thiscall PGUIMenuTreeItemStyle::GetNextItemStyle(void)const 
+356,0x5f10,0x10005f10,?GetNextMenuTemplate@PGUIMenuTreeItemStyle@@QBEPAVTGUIWidget@Toshi@@XZ,public: class Toshi::TGUIWidget * __thiscall PGUIMenuTreeItemStyle::GetNextMenuTemplate(void)const 
+357,0x21d40,0x10021d40,?GetNumCOls@PGUIGridLayout@@QBEHXZ,public: int __thiscall PGUIGridLayout::GetNumCOls(void)const 
+358,0x21d50,0x10021d50,?GetNumRows@PGUIGridLayout@@QBEHXZ,public: int __thiscall PGUIGridLayout::GetNumRows(void)const 
+359,0x5c80,0x10005c80,?GetOffsetAngle@PGUIDiscLayout@@QBEMXZ,public: float __thiscall PGUIDiscLayout::GetOffsetAngle(void)const 
+360,0x11dd0,0x10011dd0,?GetPadX@PGUILayoutManager@Toshi@@QBEHXZ,public: int __thiscall Toshi::PGUILayoutManager::GetPadX(void)const 
+361,0x11dc0,0x10011dc0,?GetPadY@PGUILayoutManager@Toshi@@QBEHXZ,public: int __thiscall Toshi::PGUILayoutManager::GetPadY(void)const 
+362,0x5f00,0x10005f00,?GetParameterCount@PGUIMenuTreeItemStyle@@QBEHXZ,public: int __thiscall PGUIMenuTreeItemStyle::GetParameterCount(void)const 
+363,0x6160,0x10006160,?GetParameterValues@PGUIItemData@@QAEPAVPPropertyValue@@XZ,public: class PPropertyValue * __thiscall PGUIItemData::GetParameterValues(void)
+364,0x6040,0x10006040,?GetParameterValues@PGUIRowData@@QAEPAPAVPPropertyValue@@XZ,public: class PPropertyValue * * __thiscall PGUIRowData::GetParameterValues(void)
+365,0x6030,0x10006030,?GetParameterValues@PGUIRowData@@QAEPAVPPropertyValue@@H@Z,public: class PPropertyValue * __thiscall PGUIRowData::GetParameterValues(int)
+366,0x5e70,0x10005e70,?GetParent@PGUIMenuTreeItem@@QBEPAV1@XZ,public: class PGUIMenuTreeItem * __thiscall PGUIMenuTreeItem::GetParent(void)const 
+367,0x5f30,0x10005f30,?GetPreviousMenuTemplate@PGUIMenuTreeItemStyle@@QBEPAVTGUIWidget@Toshi@@XZ,public: class Toshi::TGUIWidget * __thiscall PGUIMenuTreeItemStyle::GetPreviousMenuTemplate(void)const 
+368,0x3af0,0x10003af0,?GetPropertyInfoOrderedSet@PGUIButton@@MBEPBV?$TSortedArray@PAVTGUIPropertySpec@Toshi@@UComparator@12@@Toshi@@XZ,"protected: virtual class Toshi::TSortedArray<class Toshi::TGUIPropertySpec *,struct Toshi::TGUIPropertySpec::Comparator> const * __thiscall PGUIButton::GetPropertyInfoOrderedSet(void)const "
+369,0x4de0,0x10004de0,?GetPropertyInfoOrderedSet@PGUIDialog@@MBEPBV?$TSortedArray@PAVTGUIPropertySpec@Toshi@@UComparator@12@@Toshi@@XZ,"protected: virtual class Toshi::TSortedArray<class Toshi::TGUIPropertySpec *,struct Toshi::TGUIPropertySpec::Comparator> const * __thiscall PGUIDialog::GetPropertyInfoOrderedSet(void)const "
+370,0x20410,0x10020410,?GetPropertyInfoOrderedSet@PGUIDiscLayout@@MBEPBV?$TSortedArray@PAVTGUIPropertySpec@Toshi@@UComparator@12@@Toshi@@XZ,"protected: virtual class Toshi::TSortedArray<class Toshi::TGUIPropertySpec *,struct Toshi::TGUIPropertySpec::Comparator> const * __thiscall PGUIDiscLayout::GetPropertyInfoOrderedSet(void)const "
+371,0x5bb0,0x10005bb0,?GetPropertyInfoOrderedSet@PGUIDiscMenuDialog@@MBEPBV?$TSortedArray@PAVTGUIPropertySpec@Toshi@@UComparator@12@@Toshi@@XZ,"protected: virtual class Toshi::TSortedArray<class Toshi::TGUIPropertySpec *,struct Toshi::TGUIPropertySpec::Comparator> const * __thiscall PGUIDiscMenuDialog::GetPropertyInfoOrderedSet(void)const "
+372,0x21cc0,0x10021cc0,?GetPropertyInfoOrderedSet@PGUIGridLayout@@MBEPBV?$TSortedArray@PAVTGUIPropertySpec@Toshi@@UComparator@12@@Toshi@@XZ,"protected: virtual class Toshi::TSortedArray<class Toshi::TGUIPropertySpec *,struct Toshi::TGUIPropertySpec::Comparator> const * __thiscall PGUIGridLayout::GetPropertyInfoOrderedSet(void)const "
+373,0x73d0,0x100073d0,?GetPropertyInfoOrderedSet@PGUIHorizontalSplit@@MBEPBV?$TSortedArray@PAVTGUIPropertySpec@Toshi@@UComparator@12@@Toshi@@XZ,"protected: virtual class Toshi::TSortedArray<class Toshi::TGUIPropertySpec *,struct Toshi::TGUIPropertySpec::Comparator> const * __thiscall PGUIHorizontalSplit::GetPropertyInfoOrderedSet(void)const "
+374,0x85d0,0x100085d0,?GetPropertyInfoOrderedSet@PGUILabel@@MBEPBV?$TSortedArray@PAVTGUIPropertySpec@Toshi@@UComparator@12@@Toshi@@XZ,"protected: virtual class Toshi::TSortedArray<class Toshi::TGUIPropertySpec *,struct Toshi::TGUIPropertySpec::Comparator> const * __thiscall PGUILabel::GetPropertyInfoOrderedSet(void)const "
+375,0x23400,0x10023400,?GetPropertyInfoOrderedSet@PGUILayoutManager@Toshi@@MBEPBV?$TSortedArray@PAVTGUIPropertySpec@Toshi@@UComparator@12@@2@XZ,"protected: virtual class Toshi::TSortedArray<class Toshi::TGUIPropertySpec *,struct Toshi::TGUIPropertySpec::Comparator> const * __thiscall Toshi::PGUILayoutManager::GetPropertyInfoOrderedSet(void)const "
+376,0xc5b0,0x1000c5b0,?GetPropertyInfoOrderedSet@PGUIListBox@@MBEPBV?$TSortedArray@PAVTGUIPropertySpec@Toshi@@UComparator@12@@Toshi@@XZ,"protected: virtual class Toshi::TSortedArray<class Toshi::TGUIPropertySpec *,struct Toshi::TGUIPropertySpec::Comparator> const * __thiscall PGUIListBox::GetPropertyInfoOrderedSet(void)const "
+377,0xd160,0x1000d160,?GetPropertyInfoOrderedSet@PGUIListItem@@MBEPBV?$TSortedArray@PAVTGUIPropertySpec@Toshi@@UComparator@12@@Toshi@@XZ,"protected: virtual class Toshi::TSortedArray<class Toshi::TGUIPropertySpec *,struct Toshi::TGUIPropertySpec::Comparator> const * __thiscall PGUIListItem::GetPropertyInfoOrderedSet(void)const "
+378,0xdf10,0x1000df10,?GetPropertyInfoOrderedSet@PGUIMenuBar@@MBEPBV?$TSortedArray@PAVTGUIPropertySpec@Toshi@@UComparator@12@@Toshi@@XZ,"protected: virtual class Toshi::TSortedArray<class Toshi::TGUIPropertySpec *,struct Toshi::TGUIPropertySpec::Comparator> const * __thiscall PGUIMenuBar::GetPropertyInfoOrderedSet(void)const "
+379,0xf6e0,0x1000f6e0,?GetPropertyInfoOrderedSet@PGUIMenuDialog@@MBEPBV?$TSortedArray@PAVTGUIPropertySpec@Toshi@@UComparator@12@@Toshi@@XZ,"protected: virtual class Toshi::TSortedArray<class Toshi::TGUIPropertySpec *,struct Toshi::TGUIPropertySpec::Comparator> const * __thiscall PGUIMenuDialog::GetPropertyInfoOrderedSet(void)const "
+380,0x11ba0,0x10011ba0,?GetPropertyInfoOrderedSet@PGUIMenuTree@@MBEPBV?$TSortedArray@PAVTGUIPropertySpec@Toshi@@UComparator@12@@Toshi@@XZ,"protected: virtual class Toshi::TSortedArray<class Toshi::TGUIPropertySpec *,struct Toshi::TGUIPropertySpec::Comparator> const * __thiscall PGUIMenuTree::GetPropertyInfoOrderedSet(void)const "
+381,0x25060,0x10025060,?GetPropertyInfoOrderedSet@PGUIOverlayLayout@@MBEPBV?$TSortedArray@PAVTGUIPropertySpec@Toshi@@UComparator@12@@Toshi@@XZ,"protected: virtual class Toshi::TSortedArray<class Toshi::TGUIPropertySpec *,struct Toshi::TGUIPropertySpec::Comparator> const * __thiscall PGUIOverlayLayout::GetPropertyInfoOrderedSet(void)const "
+382,0x125c0,0x100125c0,?GetPropertyInfoOrderedSet@PGUIOwnerDraw@@MBEPBV?$TSortedArray@PAVTGUIPropertySpec@Toshi@@UComparator@12@@Toshi@@XZ,"protected: virtual class Toshi::TSortedArray<class Toshi::TGUIPropertySpec *,struct Toshi::TGUIPropertySpec::Comparator> const * __thiscall PGUIOwnerDraw::GetPropertyInfoOrderedSet(void)const "
+383,0x12e30,0x10012e30,?GetPropertyInfoOrderedSet@PGUIPanel@@MBEPBV?$TSortedArray@PAVTGUIPropertySpec@Toshi@@UComparator@12@@Toshi@@XZ,"protected: virtual class Toshi::TSortedArray<class Toshi::TGUIPropertySpec *,struct Toshi::TGUIPropertySpec::Comparator> const * __thiscall PGUIPanel::GetPropertyInfoOrderedSet(void)const "
+384,0x13860,0x10013860,?GetPropertyInfoOrderedSet@PGUIPushButton@@MBEPBV?$TSortedArray@PAVTGUIPropertySpec@Toshi@@UComparator@12@@Toshi@@XZ,"protected: virtual class Toshi::TSortedArray<class Toshi::TGUIPropertySpec *,struct Toshi::TGUIPropertySpec::Comparator> const * __thiscall PGUIPushButton::GetPropertyInfoOrderedSet(void)const "
+385,0x17e10,0x10017e10,?GetPropertyInfoOrderedSet@PGUISliderBar@@MBEPBV?$TSortedArray@PAVTGUIPropertySpec@Toshi@@UComparator@12@@Toshi@@XZ,"protected: virtual class Toshi::TSortedArray<class Toshi::TGUIPropertySpec *,struct Toshi::TGUIPropertySpec::Comparator> const * __thiscall PGUISliderBar::GetPropertyInfoOrderedSet(void)const "
+386,0x26b90,0x10026b90,?GetPropertyInfoOrderedSet@PGUIStackLayout@@MBEPBV?$TSortedArray@PAVTGUIPropertySpec@Toshi@@UComparator@12@@Toshi@@XZ,"protected: virtual class Toshi::TSortedArray<class Toshi::TGUIPropertySpec *,struct Toshi::TGUIPropertySpec::Comparator> const * __thiscall PGUIStackLayout::GetPropertyInfoOrderedSet(void)const "
+387,0x1b100,0x1001b100,?GetPropertyInfoOrderedSet@PGUITableBox@@MBEPBV?$TSortedArray@PAVTGUIPropertySpec@Toshi@@UComparator@12@@Toshi@@XZ,"protected: virtual class Toshi::TSortedArray<class Toshi::TGUIPropertySpec *,struct Toshi::TGUIPropertySpec::Comparator> const * __thiscall PGUITableBox::GetPropertyInfoOrderedSet(void)const "
+388,0x1c2f0,0x1001c2f0,?GetPropertyInfoOrderedSet@PGUIToggleButton@@MBEPBV?$TSortedArray@PAVTGUIPropertySpec@Toshi@@UComparator@12@@Toshi@@XZ,"protected: virtual class Toshi::TSortedArray<class Toshi::TGUIPropertySpec *,struct Toshi::TGUIPropertySpec::Comparator> const * __thiscall PGUIToggleButton::GetPropertyInfoOrderedSet(void)const "
+389,0x1d440,0x1001d440,?GetPropertyInfoOrderedSet@PGUIVerticalSplit@@MBEPBV?$TSortedArray@PAVTGUIPropertySpec@Toshi@@UComparator@12@@Toshi@@XZ,"protected: virtual class Toshi::TSortedArray<class Toshi::TGUIPropertySpec *,struct Toshi::TGUIPropertySpec::Comparator> const * __thiscall PGUIVerticalSplit::GetPropertyInfoOrderedSet(void)const "
+390,0x3b00,0x10003b00,?GetPropertyInfoSet@PGUIButton@@MBEPBV?$TArray@PAVTGUIPropertySpec@Toshi@@@Toshi@@XZ,protected: virtual class Toshi::TArray<class Toshi::TGUIPropertySpec *> const * __thiscall PGUIButton::GetPropertyInfoSet(void)const 
+391,0x4df0,0x10004df0,?GetPropertyInfoSet@PGUIDialog@@MBEPBV?$TArray@PAVTGUIPropertySpec@Toshi@@@Toshi@@XZ,protected: virtual class Toshi::TArray<class Toshi::TGUIPropertySpec *> const * __thiscall PGUIDialog::GetPropertyInfoSet(void)const 
+392,0x20420,0x10020420,?GetPropertyInfoSet@PGUIDiscLayout@@MBEPBV?$TArray@PAVTGUIPropertySpec@Toshi@@@Toshi@@XZ,protected: virtual class Toshi::TArray<class Toshi::TGUIPropertySpec *> const * __thiscall PGUIDiscLayout::GetPropertyInfoSet(void)const 
+393,0x5bc0,0x10005bc0,?GetPropertyInfoSet@PGUIDiscMenuDialog@@MBEPBV?$TArray@PAVTGUIPropertySpec@Toshi@@@Toshi@@XZ,protected: virtual class Toshi::TArray<class Toshi::TGUIPropertySpec *> const * __thiscall PGUIDiscMenuDialog::GetPropertyInfoSet(void)const 
+394,0x21cd0,0x10021cd0,?GetPropertyInfoSet@PGUIGridLayout@@MBEPBV?$TArray@PAVTGUIPropertySpec@Toshi@@@Toshi@@XZ,protected: virtual class Toshi::TArray<class Toshi::TGUIPropertySpec *> const * __thiscall PGUIGridLayout::GetPropertyInfoSet(void)const 
+395,0x73e0,0x100073e0,?GetPropertyInfoSet@PGUIHorizontalSplit@@MBEPBV?$TArray@PAVTGUIPropertySpec@Toshi@@@Toshi@@XZ,protected: virtual class Toshi::TArray<class Toshi::TGUIPropertySpec *> const * __thiscall PGUIHorizontalSplit::GetPropertyInfoSet(void)const 
+396,0x85e0,0x100085e0,?GetPropertyInfoSet@PGUILabel@@MBEPBV?$TArray@PAVTGUIPropertySpec@Toshi@@@Toshi@@XZ,protected: virtual class Toshi::TArray<class Toshi::TGUIPropertySpec *> const * __thiscall PGUILabel::GetPropertyInfoSet(void)const 
+397,0x23410,0x10023410,?GetPropertyInfoSet@PGUILayoutManager@Toshi@@MBEPBV?$TArray@PAVTGUIPropertySpec@Toshi@@@2@XZ,protected: virtual class Toshi::TArray<class Toshi::TGUIPropertySpec *> const * __thiscall Toshi::PGUILayoutManager::GetPropertyInfoSet(void)const 
+398,0xc5c0,0x1000c5c0,?GetPropertyInfoSet@PGUIListBox@@MBEPBV?$TArray@PAVTGUIPropertySpec@Toshi@@@Toshi@@XZ,protected: virtual class Toshi::TArray<class Toshi::TGUIPropertySpec *> const * __thiscall PGUIListBox::GetPropertyInfoSet(void)const 
+399,0xd170,0x1000d170,?GetPropertyInfoSet@PGUIListItem@@MBEPBV?$TArray@PAVTGUIPropertySpec@Toshi@@@Toshi@@XZ,protected: virtual class Toshi::TArray<class Toshi::TGUIPropertySpec *> const * __thiscall PGUIListItem::GetPropertyInfoSet(void)const 
+400,0xdf20,0x1000df20,?GetPropertyInfoSet@PGUIMenuBar@@MBEPBV?$TArray@PAVTGUIPropertySpec@Toshi@@@Toshi@@XZ,protected: virtual class Toshi::TArray<class Toshi::TGUIPropertySpec *> const * __thiscall PGUIMenuBar::GetPropertyInfoSet(void)const 
+401,0xf6f0,0x1000f6f0,?GetPropertyInfoSet@PGUIMenuDialog@@MBEPBV?$TArray@PAVTGUIPropertySpec@Toshi@@@Toshi@@XZ,protected: virtual class Toshi::TArray<class Toshi::TGUIPropertySpec *> const * __thiscall PGUIMenuDialog::GetPropertyInfoSet(void)const 
+402,0x11bb0,0x10011bb0,?GetPropertyInfoSet@PGUIMenuTree@@MBEPBV?$TArray@PAVTGUIPropertySpec@Toshi@@@Toshi@@XZ,protected: virtual class Toshi::TArray<class Toshi::TGUIPropertySpec *> const * __thiscall PGUIMenuTree::GetPropertyInfoSet(void)const 
+403,0x25070,0x10025070,?GetPropertyInfoSet@PGUIOverlayLayout@@MBEPBV?$TArray@PAVTGUIPropertySpec@Toshi@@@Toshi@@XZ,protected: virtual class Toshi::TArray<class Toshi::TGUIPropertySpec *> const * __thiscall PGUIOverlayLayout::GetPropertyInfoSet(void)const 
+404,0x125d0,0x100125d0,?GetPropertyInfoSet@PGUIOwnerDraw@@MBEPBV?$TArray@PAVTGUIPropertySpec@Toshi@@@Toshi@@XZ,protected: virtual class Toshi::TArray<class Toshi::TGUIPropertySpec *> const * __thiscall PGUIOwnerDraw::GetPropertyInfoSet(void)const 
+405,0x12e40,0x10012e40,?GetPropertyInfoSet@PGUIPanel@@MBEPBV?$TArray@PAVTGUIPropertySpec@Toshi@@@Toshi@@XZ,protected: virtual class Toshi::TArray<class Toshi::TGUIPropertySpec *> const * __thiscall PGUIPanel::GetPropertyInfoSet(void)const 
+406,0x13870,0x10013870,?GetPropertyInfoSet@PGUIPushButton@@MBEPBV?$TArray@PAVTGUIPropertySpec@Toshi@@@Toshi@@XZ,protected: virtual class Toshi::TArray<class Toshi::TGUIPropertySpec *> const * __thiscall PGUIPushButton::GetPropertyInfoSet(void)const 
+407,0x17e20,0x10017e20,?GetPropertyInfoSet@PGUISliderBar@@MBEPBV?$TArray@PAVTGUIPropertySpec@Toshi@@@Toshi@@XZ,protected: virtual class Toshi::TArray<class Toshi::TGUIPropertySpec *> const * __thiscall PGUISliderBar::GetPropertyInfoSet(void)const 
+408,0x26ba0,0x10026ba0,?GetPropertyInfoSet@PGUIStackLayout@@MBEPBV?$TArray@PAVTGUIPropertySpec@Toshi@@@Toshi@@XZ,protected: virtual class Toshi::TArray<class Toshi::TGUIPropertySpec *> const * __thiscall PGUIStackLayout::GetPropertyInfoSet(void)const 
+409,0x1b110,0x1001b110,?GetPropertyInfoSet@PGUITableBox@@MBEPBV?$TArray@PAVTGUIPropertySpec@Toshi@@@Toshi@@XZ,protected: virtual class Toshi::TArray<class Toshi::TGUIPropertySpec *> const * __thiscall PGUITableBox::GetPropertyInfoSet(void)const 
+410,0x1c300,0x1001c300,?GetPropertyInfoSet@PGUIToggleButton@@MBEPBV?$TArray@PAVTGUIPropertySpec@Toshi@@@Toshi@@XZ,protected: virtual class Toshi::TArray<class Toshi::TGUIPropertySpec *> const * __thiscall PGUIToggleButton::GetPropertyInfoSet(void)const 
+411,0x1d450,0x1001d450,?GetPropertyInfoSet@PGUIVerticalSplit@@MBEPBV?$TArray@PAVTGUIPropertySpec@Toshi@@@Toshi@@XZ,protected: virtual class Toshi::TArray<class Toshi::TGUIPropertySpec *> const * __thiscall PGUIVerticalSplit::GetPropertyInfoSet(void)const 
+412,0x5ca0,0x10005ca0,?GetRadiusX@PGUIDiscLayout@@QBEMXZ,public: float __thiscall PGUIDiscLayout::GetRadiusX(void)const 
+413,0x5c90,0x10005c90,?GetRadiusY@PGUIDiscLayout@@QBEMXZ,public: float __thiscall PGUIDiscLayout::GetRadiusY(void)const 
+414,0x1d4f0,0x1001d4f0,?GetRightWidget@PGUIVerticalSplit@@QBEPAVTGUIWidget@Toshi@@XZ,public: class Toshi::TGUIWidget * __thiscall PGUIVerticalSplit::GetRightWidget(void)const 
+415,0xe010,0x1000e010,?GetRootItem@PGUIMenuBar@@QBEPAVPGUIMenuTreeItem@@XZ,public: class PGUIMenuTreeItem * __thiscall PGUIMenuBar::GetRootItem(void)const 
+416,0x5d60,0x10005d60,?GetRootItem@PGUIMenuDialog@@QBEPAVPGUIMenuTreeItem@@XZ,public: class PGUIMenuTreeItem * __thiscall PGUIMenuDialog::GetRootItem(void)const 
+417,0x5dd0,0x10005dd0,?GetRootItem@PGUIMenuTree@@QAEPAVPGUIMenuTreeItem@@XZ,public: class PGUIMenuTreeItem * __thiscall PGUIMenuTree::GetRootItem(void)
+418,0x5e30,0x10005e30,?GetScreen@PGUIMenuTree@@QBEPAVTGUIScreen@Toshi@@XZ,public: class Toshi::TGUIScreen * __thiscall PGUIMenuTree::GetScreen(void)const 
+419,0x5df0,0x10005df0,?GetScreenMarginBottom@PGUIMenuTree@@QBEHXZ,public: int __thiscall PGUIMenuTree::GetScreenMarginBottom(void)const 
+420,0x5e20,0x10005e20,?GetScreenMarginLeft@PGUIMenuTree@@QBEHXZ,public: int __thiscall PGUIMenuTree::GetScreenMarginLeft(void)const 
+421,0x5e10,0x10005e10,?GetScreenMarginRight@PGUIMenuTree@@QBEHXZ,public: int __thiscall PGUIMenuTree::GetScreenMarginRight(void)const 
+422,0x5e00,0x10005e00,?GetScreenMarginTop@PGUIMenuTree@@QBEHXZ,public: int __thiscall PGUIMenuTree::GetScreenMarginTop(void)const 
+423,0xc3f0,0x1000c3f0,?GetScrollBar@PGUIListBox@@QAEPAVPGUISliderBar@@XZ,public: class PGUISliderBar * __thiscall PGUIListBox::GetScrollBar(void)
+424,0xc720,0x1000c720,?GetScrollBarStyle@PGUIListBox@@QBEPAVTGUIStyle@Toshi@@XZ,public: class Toshi::TGUIStyle * __thiscall PGUIListBox::GetScrollBarStyle(void)const 
+425,0xe000,0x1000e000,?GetSelectedButton@PGUIMenuBar@@QAEPAVTGUIWidget@Toshi@@XZ,public: class Toshi::TGUIWidget * __thiscall PGUIMenuBar::GetSelectedButton(void)
+426,0x5d70,0x10005d70,?GetSelectedButton@PGUIMenuDialog@@QAEPAVTGUIWidget@Toshi@@XZ,public: class Toshi::TGUIWidget * __thiscall PGUIMenuDialog::GetSelectedButton(void)
+427,0xc660,0x1000c660,?GetSelectedItem@PGUIListBox@@QAEPAVPGUIItemData@@XZ,public: class PGUIItemData * __thiscall PGUIListBox::GetSelectedItem(void)
+428,0x5dc0,0x10005dc0,?GetSelectedItem@PGUIMenuTree@@QBEPAVPGUIMenuTreeItem@@XZ,public: class PGUIMenuTreeItem * __thiscall PGUIMenuTree::GetSelectedItem(void)const 
+429,0x1b340,0x1001b340,?GetSelectedItem@PGUITableBox@@QAEPAVPGUIRowData@@XZ,public: class PGUIRowData * __thiscall PGUITableBox::GetSelectedItem(void)
+430,0xf8b0,0x1000f8b0,?GetSelectedItemStyle@PGUIMenuTreeItemStyle@@QBEPAVTGUIStyle@Toshi@@W4DisplayLevel@1@@Z,public: class Toshi::TGUIStyle * __thiscall PGUIMenuTreeItemStyle::GetSelectedItemStyle(enum PGUIMenuTreeItemStyle::DisplayLevel)const 
+431,0xc700,0x1000c700,?GetSelectionMode@PGUIListBox@@QBE?AW4SelectionMode@1@XZ,public: enum PGUIListBox::SelectionMode __thiscall PGUIListBox::GetSelectionMode(void)const 
+432,0x1b3f0,0x1001b3f0,?GetSelectionMode@PGUITableBox@@QBE?AW4SelectionMode@1@XZ,public: enum PGUITableBox::SelectionMode __thiscall PGUITableBox::GetSelectionMode(void)const 
+433,0x62d0,0x100062d0,?GetSingleton@PGUIPropertyValueFactory@@SGPAV1@XZ,public: static class PGUIPropertyValueFactory * __stdcall PGUIPropertyValueFactory::GetSingleton(void)
+434,0x5c50,0x10005c50,?GetSlotAllocation@PGUIDiscLayout@@QBE?AW4SlotAllocation@1@XZ,public: enum PGUIDiscLayout::SlotAllocation __thiscall PGUIDiscLayout::GetSlotAllocation(void)const 
+435,0x5c70,0x10005c70,?GetSlotCount@PGUIDiscLayout@@QBEHXZ,public: int __thiscall PGUIDiscLayout::GetSlotCount(void)const 
+436,0x6150,0x10006150,?GetState@PGUIItemData@@QAEIXZ,public: unsigned int __thiscall PGUIItemData::GetState(void)
+437,0x6020,0x10006020,?GetState@PGUIRowData@@QBEIH@Z,public: unsigned int __thiscall PGUIRowData::GetState(int)const 
+438,0x5fb0,0x10005fb0,?GetState@PGUIRowData@@QBEIXZ,public: unsigned int __thiscall PGUIRowData::GetState(void)const 
+439,0x4430,0x10004430,?GetStaticWidgetInfo@PGUIButton@@SGPBVTGUIWidgetInfo@Toshi@@XZ,public: static class Toshi::TGUIWidgetInfo const * __stdcall PGUIButton::GetStaticWidgetInfo(void)
+440,0x4ea0,0x10004ea0,?GetStaticWidgetInfo@PGUIDialog@@SGPBVTGUIWidgetInfo@Toshi@@XZ,public: static class Toshi::TGUIWidgetInfo const * __stdcall PGUIDialog::GetStaticWidgetInfo(void)
+441,0x5d50,0x10005d50,?GetStaticWidgetInfo@PGUIDiscMenuDialog@@SGPBVTGUIWidgetInfo@Toshi@@XZ,public: static class Toshi::TGUIWidgetInfo const * __stdcall PGUIDiscMenuDialog::GetStaticWidgetInfo(void)
+442,0x74b0,0x100074b0,?GetStaticWidgetInfo@PGUIHorizontalSplit@@SGPBVTGUIWidgetInfo@Toshi@@XZ,public: static class Toshi::TGUIWidgetInfo const * __stdcall PGUIHorizontalSplit::GetStaticWidgetInfo(void)
+443,0x8690,0x10008690,?GetStaticWidgetInfo@PGUILabel@@SGPBVTGUIWidgetInfo@Toshi@@XZ,public: static class Toshi::TGUIWidgetInfo const * __stdcall PGUILabel::GetStaticWidgetInfo(void)
+444,0xc820,0x1000c820,?GetStaticWidgetInfo@PGUIListBox@@SGPBVTGUIWidgetInfo@Toshi@@XZ,public: static class Toshi::TGUIWidgetInfo const * __stdcall PGUIListBox::GetStaticWidgetInfo(void)
+445,0xc870,0x1000c870,?GetStaticWidgetInfo@PGUIListItem@@SGPBVTGUIWidgetInfo@Toshi@@XZ,public: static class Toshi::TGUIWidgetInfo const * __stdcall PGUIListItem::GetStaticWidgetInfo(void)
+446,0xe040,0x1000e040,?GetStaticWidgetInfo@PGUIMenuBar@@SGPBVTGUIWidgetInfo@Toshi@@XZ,public: static class Toshi::TGUIWidgetInfo const * __stdcall PGUIMenuBar::GetStaticWidgetInfo(void)
+447,0x5db0,0x10005db0,?GetStaticWidgetInfo@PGUIMenuDialog@@SGPBVTGUIWidgetInfo@Toshi@@XZ,public: static class Toshi::TGUIWidgetInfo const * __stdcall PGUIMenuDialog::GetStaticWidgetInfo(void)
+448,0x12680,0x10012680,?GetStaticWidgetInfo@PGUIOwnerDraw@@SGPBVTGUIWidgetInfo@Toshi@@XZ,public: static class Toshi::TGUIWidgetInfo const * __stdcall PGUIOwnerDraw::GetStaticWidgetInfo(void)
+449,0x7500,0x10007500,?GetStaticWidgetInfo@PGUIPanel@@SGPBVTGUIWidgetInfo@Toshi@@XZ,public: static class Toshi::TGUIWidgetInfo const * __stdcall PGUIPanel::GetStaticWidgetInfo(void)
+450,0x13910,0x10013910,?GetStaticWidgetInfo@PGUIPushButton@@SGPBVTGUIWidgetInfo@Toshi@@XZ,public: static class Toshi::TGUIWidgetInfo const * __stdcall PGUIPushButton::GetStaticWidgetInfo(void)
+451,0x7d10,0x10007d10,?GetStaticWidgetInfo@PGUISliderBar@@SGPBVTGUIWidgetInfo@Toshi@@XZ,public: static class Toshi::TGUIWidgetInfo const * __stdcall PGUISliderBar::GetStaticWidgetInfo(void)
+452,0x1b4c0,0x1001b4c0,?GetStaticWidgetInfo@PGUITableBox@@SGPBVTGUIWidgetInfo@Toshi@@XZ,public: static class Toshi::TGUIWidgetInfo const * __stdcall PGUITableBox::GetStaticWidgetInfo(void)
+453,0x1c3d0,0x1001c3d0,?GetStaticWidgetInfo@PGUIToggleButton@@SGPBVTGUIWidgetInfo@Toshi@@XZ,public: static class Toshi::TGUIWidgetInfo const * __stdcall PGUIToggleButton::GetStaticWidgetInfo(void)
+454,0x1d520,0x1001d520,?GetStaticWidgetInfo@PGUIVerticalSplit@@SGPBVTGUIWidgetInfo@Toshi@@XZ,public: static class Toshi::TGUIWidgetInfo const * __stdcall PGUIVerticalSplit::GetStaticWidgetInfo(void)
+455,0x7bb0,0x10007bb0,?GetStepValue@PGUISliderBar@@QBEMXZ,public: float __thiscall PGUISliderBar::GetStepValue(void)const 
+456,0x5e60,0x10005e60,?GetStyle@PGUIMenuTreeItem@@QBEPAVPGUIMenuTreeItemStyle@@XZ,public: class PGUIMenuTreeItemStyle * __thiscall PGUIMenuTreeItem::GetStyle(void)const 
+457,0x74a0,0x100074a0,?GetTopWidget@PGUIHorizontalSplit@@QBEPAVTGUIWidget@Toshi@@XZ,public: class Toshi::TGUIWidget * __thiscall PGUIHorizontalSplit::GetTopWidget(void)const 
+458,0x21bf0,0x10021bf0,?Get_columns_property@PGUIGridLayout@@QBE?AVPPropertyValue@@XZ,public: class PPropertyValue __thiscall PGUIGridLayout::Get_columns_property(void)const 
+459,0x1b030,0x1001b030,?Get_columns_property@PGUITableBox@@QBE?AVPPropertyValue@@XZ,public: class PPropertyValue __thiscall PGUITableBox::Get_columns_property(void)const 
+460,0x23270,0x10023270,?Get_fillhorizontal_property@PGUILayoutManager@Toshi@@QBE?AVPPropertyValue@@XZ,public: class PPropertyValue __thiscall Toshi::PGUILayoutManager::Get_fillhorizontal_property(void)const 
+461,0x24ee0,0x10024ee0,?Get_fillhorizontal_property@PGUIOverlayLayout@@QBE?AVPPropertyValue@@XZ,public: class PPropertyValue __thiscall PGUIOverlayLayout::Get_fillhorizontal_property(void)const 
+462,0x23210,0x10023210,?Get_fillvertical_property@PGUILayoutManager@Toshi@@QBE?AVPPropertyValue@@XZ,public: class PPropertyValue __thiscall Toshi::PGUILayoutManager::Get_fillvertical_property(void)const 
+463,0x24e80,0x10024e80,?Get_fillvertical_property@PGUIOverlayLayout@@QBE?AVPPropertyValue@@XZ,public: class PPropertyValue __thiscall PGUIOverlayLayout::Get_fillvertical_property(void)const 
+464,0x26a20,0x10026a20,?Get_flow_property@PGUIStackLayout@@QBE?AVPPropertyValue@@XZ,public: class PPropertyValue __thiscall PGUIStackLayout::Get_flow_property(void)const 
+465,0x20090,0x10020090,?Get_flowdirection_property@PGUIDiscLayout@@QBE?AVPPropertyValue@@XZ,public: class PPropertyValue __thiscall PGUIDiscLayout::Get_flowdirection_property(void)const 
+466,0x20230,0x10020230,?Get_fullheight_property@PGUIDiscLayout@@QBE?AVPPropertyValue@@XZ,public: class PPropertyValue __thiscall PGUIDiscLayout::Get_fullheight_property(void)const 
+467,0x20290,0x10020290,?Get_fullwidth_property@PGUIDiscLayout@@QBE?AVPPropertyValue@@XZ,public: class PPropertyValue __thiscall PGUIDiscLayout::Get_fullwidth_property(void)const 
+468,0x24e20,0x10024e20,?Get_justifyhoriz_property@PGUIOverlayLayout@@QBE?AVPPropertyValue@@XZ,public: class PPropertyValue __thiscall PGUIOverlayLayout::Get_justifyhoriz_property(void)const 
+469,0x26aa0,0x10026aa0,?Get_justifyhoriz_property@PGUIStackLayout@@QBE?AVPPropertyValue@@XZ,public: class PPropertyValue __thiscall PGUIStackLayout::Get_justifyhoriz_property(void)const 
+470,0x24de0,0x10024de0,?Get_justifyvert_property@PGUIOverlayLayout@@QBE?AVPPropertyValue@@XZ,public: class PPropertyValue __thiscall PGUIOverlayLayout::Get_justifyvert_property(void)const 
+471,0x26a60,0x10026a60,?Get_justifyvert_property@PGUIStackLayout@@QBE?AVPPropertyValue@@XZ,public: class PPropertyValue __thiscall PGUIStackLayout::Get_justifyvert_property(void)const 
+472,0xa3d0,0x1000a3d0,?Get_listitemstyle_property@PGUIListBox@@QBE?AVPPropertyValue@@XZ,public: class PPropertyValue __thiscall PGUIListBox::Get_listitemstyle_property(void)const 
+473,0x200f0,0x100200f0,?Get_offsetangle_property@PGUIDiscLayout@@QBE?AVPPropertyValue@@XZ,public: class PPropertyValue __thiscall PGUIDiscLayout::Get_offsetangle_property(void)const 
+474,0xc4b0,0x1000c4b0,?Get_orientation_property@PGUIListBox@@QBE?AVPPropertyValue@@XZ,public: class PPropertyValue __thiscall PGUIListBox::Get_orientation_property(void)const 
+475,0x17a70,0x10017a70,?Get_orientation_property@PGUISliderBar@@QBE?AVPPropertyValue@@XZ,public: class PPropertyValue __thiscall PGUISliderBar::Get_orientation_property(void)const 
+476,0x233b0,0x100233b0,?Get_padx_property@PGUILayoutManager@Toshi@@QBE?AVPPropertyValue@@XZ,public: class PPropertyValue __thiscall Toshi::PGUILayoutManager::Get_padx_property(void)const 
+477,0x23370,0x10023370,?Get_pady_property@PGUILayoutManager@Toshi@@QBE?AVPPropertyValue@@XZ,public: class PPropertyValue __thiscall Toshi::PGUILayoutManager::Get_pady_property(void)const 
+478,0x201d0,0x100201d0,?Get_radiusx_property@PGUIDiscLayout@@QBE?AVPPropertyValue@@XZ,public: class PPropertyValue __thiscall PGUIDiscLayout::Get_radiusx_property(void)const 
+479,0x20170,0x10020170,?Get_radiusy_property@PGUIDiscLayout@@QBE?AVPPropertyValue@@XZ,public: class PPropertyValue __thiscall PGUIDiscLayout::Get_radiusy_property(void)const 
+480,0x21bd0,0x10021bd0,?Get_rows_property@PGUIGridLayout@@QBE?AVPPropertyValue@@XZ,public: class PPropertyValue __thiscall PGUIGridLayout::Get_rows_property(void)const 
+481,0x202f0,0x100202f0,?Get_sameheight_property@PGUIDiscLayout@@QBE?AVPPropertyValue@@XZ,public: class PPropertyValue __thiscall PGUIDiscLayout::Get_sameheight_property(void)const 
+482,0x232d0,0x100232d0,?Get_sameheight_property@PGUILayoutManager@Toshi@@QBE?AVPPropertyValue@@XZ,public: class PPropertyValue __thiscall Toshi::PGUILayoutManager::Get_sameheight_property(void)const 
+483,0x24f40,0x10024f40,?Get_sameheight_property@PGUIOverlayLayout@@QBE?AVPPropertyValue@@XZ,public: class PPropertyValue __thiscall PGUIOverlayLayout::Get_sameheight_property(void)const 
+484,0x20350,0x10020350,?Get_samewidth_property@PGUIDiscLayout@@QBE?AVPPropertyValue@@XZ,public: class PPropertyValue __thiscall PGUIDiscLayout::Get_samewidth_property(void)const 
+485,0x23330,0x10023330,?Get_samewidth_property@PGUILayoutManager@Toshi@@QBE?AVPPropertyValue@@XZ,public: class PPropertyValue __thiscall Toshi::PGUILayoutManager::Get_samewidth_property(void)const 
+486,0x24fa0,0x10024fa0,?Get_samewidth_property@PGUIOverlayLayout@@QBE?AVPPropertyValue@@XZ,public: class PPropertyValue __thiscall PGUIOverlayLayout::Get_samewidth_property(void)const 
+487,0xc470,0x1000c470,?Get_scrollbarpos_property@PGUIListBox@@QBE?AVPPropertyValue@@XZ,public: class PPropertyValue __thiscall PGUIListBox::Get_scrollbarpos_property(void)const 
+488,0xa2c0,0x1000a2c0,?Get_scrollbarstyle_property@PGUIListBox@@QBE?AVPPropertyValue@@XZ,public: class PPropertyValue __thiscall PGUIListBox::Get_scrollbarstyle_property(void)const 
+489,0xc510,0x1000c510,?Get_selectionmode_property@PGUIListBox@@QBE?AVPPropertyValue@@XZ,public: class PPropertyValue __thiscall PGUIListBox::Get_selectionmode_property(void)const 
+490,0x1afd0,0x1001afd0,?Get_selectionmode_property@PGUITableBox@@QBE?AVPPropertyValue@@XZ,public: class PPropertyValue __thiscall PGUITableBox::Get_selectionmode_property(void)const 
+491,0x20050,0x10020050,?Get_slotallocation_property@PGUIDiscLayout@@QBE?AVPPropertyValue@@XZ,public: class PPropertyValue __thiscall PGUIDiscLayout::Get_slotallocation_property(void)const 
+492,0x20010,0x10020010,?Get_slotcount_property@PGUIDiscLayout@@QBE?AVPPropertyValue@@XZ,public: class PPropertyValue __thiscall PGUIDiscLayout::Get_slotcount_property(void)const 
+493,0x7270,0x10007270,?Get_stretchbottom_property@PGUIHorizontalSplit@@QBE?AVPPropertyValue@@XZ,public: class PPropertyValue __thiscall PGUIHorizontalSplit::Get_stretchbottom_property(void)const 
+494,0x1d330,0x1001d330,?Get_stretchleft_property@PGUIVerticalSplit@@QBE?AVPPropertyValue@@XZ,public: class PPropertyValue __thiscall PGUIVerticalSplit::Get_stretchleft_property(void)const 
+495,0x1d2f0,0x1001d2f0,?Get_stretchright_property@PGUIVerticalSplit@@QBE?AVPPropertyValue@@XZ,public: class PPropertyValue __thiscall PGUIVerticalSplit::Get_stretchright_property(void)const 
+496,0x72b0,0x100072b0,?Get_stretchtop_property@PGUIHorizontalSplit@@QBE?AVPPropertyValue@@XZ,public: class PPropertyValue __thiscall PGUIHorizontalSplit::Get_stretchtop_property(void)const 
+497,0x1c200,0x1001c200,?Get_test_property@PGUIToggleButton@@QBE?AVPPropertyValue@@XZ,public: class PPropertyValue __thiscall PGUIToggleButton::Get_test_property(void)const 
+498,0x17b60,0x10017b60,?Get_valuecurr_property@PGUISliderBar@@QBE?AVPPropertyValue@@XZ,public: class PPropertyValue __thiscall PGUISliderBar::Get_valuecurr_property(void)const 
+499,0x17c10,0x10017c10,?Get_valuemax_property@PGUISliderBar@@QBE?AVPPropertyValue@@XZ,public: class PPropertyValue __thiscall PGUISliderBar::Get_valuemax_property(void)const 
+500,0x17cd0,0x10017cd0,?Get_valuemin_property@PGUISliderBar@@QBE?AVPPropertyValue@@XZ,public: class PPropertyValue __thiscall PGUISliderBar::Get_valuemin_property(void)const 
+501,0x17ad0,0x10017ad0,?Get_valuestep_property@PGUISliderBar@@QBE?AVPPropertyValue@@XZ,public: class PPropertyValue __thiscall PGUISliderBar::Get_valuestep_property(void)const 
+502,0xaea0,0x1000aea0,?HitSelectedItem@PGUIListBox@@IAEXXZ,protected: void __thiscall PGUIListBox::HitSelectedItem(void)
+503,0x19540,0x10019540,?Initialise@PGUITableBox@@QAEXXZ,public: void __thiscall PGUITableBox::Initialise(void)
+504,0x3080,0x10003080,?InitialiseStatic@PGUIButton@@CGXXZ,private: static void __stdcall PGUIButton::InitialiseStatic(void)
+505,0x4540,0x10004540,?InitialiseStatic@PGUIDialog@@CGXXZ,private: static void __stdcall PGUIDialog::InitialiseStatic(void)
+506,0x1d5b0,0x1001d5b0,?InitialiseStatic@PGUIDiscLayout@@CGXXZ,private: static void __stdcall PGUIDiscLayout::InitialiseStatic(void)
+507,0x50b0,0x100050b0,?InitialiseStatic@PGUIDiscMenuDialog@@CGXXZ,private: static void __stdcall PGUIDiscMenuDialog::InitialiseStatic(void)
+508,0x20510,0x10020510,?InitialiseStatic@PGUIGridLayout@@CGXXZ,private: static void __stdcall PGUIGridLayout::InitialiseStatic(void)
+509,0x6390,0x10006390,?InitialiseStatic@PGUIHorizontalSplit@@CGXXZ,private: static void __stdcall PGUIHorizontalSplit::InitialiseStatic(void)
+510,0x7da0,0x10007da0,?InitialiseStatic@PGUILabel@@CGXXZ,private: static void __stdcall PGUILabel::InitialiseStatic(void)
+511,0x21e00,0x10021e00,?InitialiseStatic@PGUILayoutManager@Toshi@@CGXXZ,private: static void __stdcall Toshi::PGUILayoutManager::InitialiseStatic(void)
+512,0x8720,0x10008720,?InitialiseStatic@PGUIListBox@@CGXXZ,private: static void __stdcall PGUIListBox::InitialiseStatic(void)
+513,0xc980,0x1000c980,?InitialiseStatic@PGUIListItem@@CGXXZ,private: static void __stdcall PGUIListItem::InitialiseStatic(void)
+514,0xd290,0x1000d290,?InitialiseStatic@PGUIMenuBar@@CGXXZ,private: static void __stdcall PGUIMenuBar::InitialiseStatic(void)
+515,0xe0d0,0x1000e0d0,?InitialiseStatic@PGUIMenuDialog@@CGXXZ,private: static void __stdcall PGUIMenuDialog::InitialiseStatic(void)
+516,0xfe40,0x1000fe40,?InitialiseStatic@PGUIMenuTree@@CGXXZ,private: static void __stdcall PGUIMenuTree::InitialiseStatic(void)
+517,0x234d0,0x100234d0,?InitialiseStatic@PGUIOverlayLayout@@CGXXZ,private: static void __stdcall PGUIOverlayLayout::InitialiseStatic(void)
+518,0x11fa0,0x10011fa0,?InitialiseStatic@PGUIOwnerDraw@@CGXXZ,private: static void __stdcall PGUIOwnerDraw::InitialiseStatic(void)
+519,0x12710,0x10012710,?InitialiseStatic@PGUIPanel@@CGXXZ,private: static void __stdcall PGUIPanel::InitialiseStatic(void)
+520,0x12f60,0x10012f60,?InitialiseStatic@PGUIPushButton@@CGXXZ,private: static void __stdcall PGUIPushButton::InitialiseStatic(void)
+521,0x13920,0x10013920,?InitialiseStatic@PGUISliderBar@@CGXXZ,private: static void __stdcall PGUISliderBar::InitialiseStatic(void)
+522,0x251e0,0x100251e0,?InitialiseStatic@PGUIStackLayout@@CGXXZ,private: static void __stdcall PGUIStackLayout::InitialiseStatic(void)
+523,0x18140,0x10018140,?InitialiseStatic@PGUITableBox@@CGXXZ,private: static void __stdcall PGUITableBox::InitialiseStatic(void)
+524,0x1b550,0x1001b550,?InitialiseStatic@PGUIToggleButton@@CGXXZ,private: static void __stdcall PGUIToggleButton::InitialiseStatic(void)
+525,0x1c460,0x1001c460,?InitialiseStatic@PGUIVerticalSplit@@CGXXZ,private: static void __stdcall PGUIVerticalSplit::InitialiseStatic(void)
+526,0x1ac50,0x1001ac50,?InsertStampWidgets@PGUITableBox@@IAEXXZ,protected: void __thiscall PGUITableBox::InsertStampWidgets(void)
+527,0x10b80,0x10010b80,?InvokeMenu@PGUIMenuTree@@QAE_NHHH@Z,"public: bool __thiscall PGUIMenuTree::InvokeMenu(int,int,int)"
+528,0x10bc0,0x10010bc0,?InvokeMenu@PGUIMenuTree@@QAE_NPAVPGUIMenuTreeItem@@HH@Z,"public: bool __thiscall PGUIMenuTree::InvokeMenu(class PGUIMenuTreeItem *,int,int)"
+529,0x7c40,0x10007c40,?IsCanDecrement@PGUISliderBar@@QBE_NXZ,public: bool __thiscall PGUISliderBar::IsCanDecrement(void)const 
+530,0x7c10,0x10007c10,?IsCanIncrement@PGUISliderBar@@QBE_NXZ,public: bool __thiscall PGUISliderBar::IsCanIncrement(void)const 
+531,0x7c70,0x10007c70,?IsDecrementing@PGUISliderBar@@QBE_NXZ,public: bool __thiscall PGUISliderBar::IsDecrementing(void)const 
+532,0x7ce0,0x10007ce0,?IsDragging@PGUISliderBar@@QBE_NXZ,public: bool __thiscall PGUISliderBar::IsDragging(void)const 
+533,0x74e0,0x100074e0,?IsEditing@PGUIPanel@@QBE_NXZ,public: bool __thiscall PGUIPanel::IsEditing(void)const 
+534,0x7cb0,0x10007cb0,?IsIncrementing@PGUISliderBar@@QBE_NXZ,public: bool __thiscall PGUISliderBar::IsIncrementing(void)const 
+535,0x5de0,0x10005de0,?IsInvoked@PGUIMenuTree@@QAE_NXZ,public: bool __thiscall PGUIMenuTree::IsInvoked(void)
+536,0xc410,0x1000c410,?IsItemVisible@PGUIListBox@@QAE_NPAVPGUIItemData@@@Z,public: bool __thiscall PGUIListBox::IsItemVisible(class PGUIItemData *)
+537,0x19590,0x10019590,?IsItemVisible@PGUITableBox@@QAE_NPAVPGUIRowData@@@Z,public: bool __thiscall PGUITableBox::IsItemVisible(class PGUIRowData *)
+538,0xfb40,0x1000fb40,?IsParentOf@PGUIMenuTreeItem@@QBE_NPAV1@@Z,public: bool __thiscall PGUIMenuTreeItem::IsParentOf(class PGUIMenuTreeItem *)const 
+539,0x4420,0x10004420,?IsPressed@PGUIButton@@QBE_NXZ,public: bool __thiscall PGUIButton::IsPressed(void)const 
+540,0xc7c0,0x1000c7c0,?IsScrollableBackward@PGUIListBox@@QBE_NXZ,public: bool __thiscall PGUIListBox::IsScrollableBackward(void)const 
+541,0x1b460,0x1001b460,?IsScrollableBackward@PGUITableBox@@QBE_NXZ,public: bool __thiscall PGUITableBox::IsScrollableBackward(void)const 
+542,0xc7f0,0x1000c7f0,?IsScrollableForward@PGUIListBox@@QBE_NXZ,public: bool __thiscall PGUIListBox::IsScrollableForward(void)const 
+543,0x1b490,0x1001b490,?IsScrollableForward@PGUITableBox@@QBE_NXZ,public: bool __thiscall PGUITableBox::IsScrollableForward(void)const 
+544,0x1c3c0,0x1001c3c0,?IsToggled@PGUIToggleButton@@QBE_NXZ,public: bool __thiscall PGUIToggleButton::IsToggled(void)const 
+545,0x4a50,0x10004a50,?Layout@PGUIDialog@@UAEXFF@Z,"public: virtual void __thiscall PGUIDialog::Layout(short,short)"
+546,0x5ab0,0x10005ab0,?Layout@PGUIDiscMenuDialog@@UAEXFF@Z,"public: virtual void __thiscall PGUIDiscMenuDialog::Layout(short,short)"
+547,0x6ed0,0x10006ed0,?Layout@PGUIHorizontalSplit@@UAEXFF@Z,"public: virtual void __thiscall PGUIHorizontalSplit::Layout(short,short)"
+548,0x82b0,0x100082b0,?Layout@PGUILabel@@UAEXFF@Z,"public: virtual void __thiscall PGUILabel::Layout(short,short)"
+549,0x9f80,0x10009f80,?Layout@PGUIListBox@@UAEXFF@Z,"public: virtual void __thiscall PGUIListBox::Layout(short,short)"
+550,0xce90,0x1000ce90,?Layout@PGUIListItem@@UAEXFF@Z,"public: virtual void __thiscall PGUIListItem::Layout(short,short)"
+551,0xe690,0x1000e690,?Layout@PGUIMenuDialog@@UAEXFF@Z,"public: virtual void __thiscall PGUIMenuDialog::Layout(short,short)"
+552,0x12380,0x10012380,?Layout@PGUIOwnerDraw@@UAEXFF@Z,"public: virtual void __thiscall PGUIOwnerDraw::Layout(short,short)"
+553,0x12ba0,0x10012ba0,?Layout@PGUIPanel@@UAEXFF@Z,"public: virtual void __thiscall PGUIPanel::Layout(short,short)"
+554,0x13500,0x10013500,?Layout@PGUIPushButton@@UAEXFF@Z,"public: virtual void __thiscall PGUIPushButton::Layout(short,short)"
+555,0x152d0,0x100152d0,?Layout@PGUISliderBar@@UAEXFF@Z,"public: virtual void __thiscall PGUISliderBar::Layout(short,short)"
+556,0x190d0,0x100190d0,?Layout@PGUITableBox@@UAEXFF@Z,"public: virtual void __thiscall PGUITableBox::Layout(short,short)"
+557,0x1bf20,0x1001bf20,?Layout@PGUIToggleButton@@UAEXFF@Z,"public: virtual void __thiscall PGUIToggleButton::Layout(short,short)"
+558,0x1cfb0,0x1001cfb0,?Layout@PGUIVerticalSplit@@UAEXFF@Z,"public: virtual void __thiscall PGUIVerticalSplit::Layout(short,short)"
+559,0x17500,0x10017500,?LayoutComponents@PGUISliderBar@@IAEXAAH0@Z,"protected: void __thiscall PGUISliderBar::LayoutComponents(int &,int &)"
+560,0xbda0,0x1000bda0,?MakeNewItem@PGUIListBox@@IAEPAVTGUIWidget@Toshi@@XZ,protected: class Toshi::TGUIWidget * __thiscall PGUIListBox::MakeNewItem(void)
+561,0xc810,0x1000c810,?ManagesChildren@PGUIListBox@@UBE_NXZ,public: virtual bool __thiscall PGUIListBox::ManagesChildren(void)const 
+562,0xb4a0,0x1000b4a0,?Navigate@PGUIListBox@@IAE_NPAVInputEvent@TInputInterface@Toshi@@H@Z,"protected: bool __thiscall PGUIListBox::Navigate(class Toshi::TInputInterface::InputEvent *,int)"
+563,0x1a2d0,0x1001a2d0,?Navigate@PGUITableBox@@IAE_NPAVInputEvent@TInputInterface@Toshi@@H@Z,"protected: bool __thiscall PGUITableBox::Navigate(class Toshi::TInputInterface::InputEvent *,int)"
+564,0xb1a0,0x1000b1a0,?NotifyFocusGained@PGUIListBox@@MAEXPAVTGUIWidget@Toshi@@0@Z,"protected: virtual void __thiscall PGUIListBox::NotifyFocusGained(class Toshi::TGUIWidget *,class Toshi::TGUIWidget *)"
+565,0xf510,0x1000f510,?NotifyFocusGained@PGUIMenuDialog@@UAEXPAVTGUIWidget@Toshi@@0@Z,"public: virtual void __thiscall PGUIMenuDialog::NotifyFocusGained(class Toshi::TGUIWidget *,class Toshi::TGUIWidget *)"
+566,0x1af50,0x1001af50,?NotifyFocusGained@PGUITableBox@@MAEXPAVTGUIWidget@Toshi@@0@Z,"protected: virtual void __thiscall PGUITableBox::NotifyFocusGained(class Toshi::TGUIWidget *,class Toshi::TGUIWidget *)"
+567,0xc370,0x1000c370,?NotifyFocusLost@PGUIListBox@@MAEXPAVTGUIWidget@Toshi@@0@Z,"protected: virtual void __thiscall PGUIListBox::NotifyFocusLost(class Toshi::TGUIWidget *,class Toshi::TGUIWidget *)"
+568,0xf530,0x1000f530,?NotifyFocusLost@PGUIMenuDialog@@UAEXPAVTGUIWidget@Toshi@@0@Z,"public: virtual void __thiscall PGUIMenuDialog::NotifyFocusLost(class Toshi::TGUIWidget *,class Toshi::TGUIWidget *)"
+569,0x17a00,0x10017a00,?NotifyFocusLost@PGUISliderBar@@MAEXPAVTGUIWidget@Toshi@@0@Z,"protected: virtual void __thiscall PGUISliderBar::NotifyFocusLost(class Toshi::TGUIWidget *,class Toshi::TGUIWidget *)"
+570,0x1af70,0x1001af70,?NotifyFocusLost@PGUITableBox@@MAEXPAVTGUIWidget@Toshi@@0@Z,"protected: virtual void __thiscall PGUITableBox::NotifyFocusLost(class Toshi::TGUIWidget *,class Toshi::TGUIWidget *)"
+571,0x5490,0x10005490,?OnAxisMove@PGUIDiscMenuDialog@@UAE_NPAVInputEvent@TInputInterface@Toshi@@H@Z,"public: virtual bool __thiscall PGUIDiscMenuDialog::OnAxisMove(class Toshi::TInputInterface::InputEvent *,int)"
+572,0xdc20,0x1000dc20,?OnButtonAction@PGUIMenuBar@@CG_NPAV1@PAVPGUIButton@@PAVTGUIActionEvent@Toshi@@@Z,"private: static bool __stdcall PGUIMenuBar::OnButtonAction(class PGUIMenuBar *,class PGUIButton *,class Toshi::TGUIActionEvent *)"
+573,0xf3f0,0x1000f3f0,?OnButtonAction@PGUIMenuDialog@@CG_NPAV1@PAVPGUIButton@@PAVTGUIActionEvent@Toshi@@@Z,"private: static bool __stdcall PGUIMenuDialog::OnButtonAction(class PGUIMenuDialog *,class PGUIButton *,class Toshi::TGUIActionEvent *)"
+574,0x3500,0x10003500,?OnButtonPress@PGUIButton@@UAE_NPAVInputEvent@TInputInterface@Toshi@@H@Z,"public: virtual bool __thiscall PGUIButton::OnButtonPress(class Toshi::TInputInterface::InputEvent *,int)"
+575,0x4b40,0x10004b40,?OnButtonPress@PGUIDialog@@MAE_NPAVInputEvent@TInputInterface@Toshi@@H@Z,"protected: virtual bool __thiscall PGUIDialog::OnButtonPress(class Toshi::TInputInterface::InputEvent *,int)"
+576,0x5a80,0x10005a80,?OnButtonPress@PGUIDiscMenuDialog@@UAE_NPAVInputEvent@TInputInterface@Toshi@@H@Z,"public: virtual bool __thiscall PGUIDiscMenuDialog::OnButtonPress(class Toshi::TInputInterface::InputEvent *,int)"
+577,0xb020,0x1000b020,?OnButtonPress@PGUIListBox@@MAE_NPAVInputEvent@TInputInterface@Toshi@@H@Z,"protected: virtual bool __thiscall PGUIListBox::OnButtonPress(class Toshi::TInputInterface::InputEvent *,int)"
+578,0xe7d0,0x1000e7d0,?OnButtonPress@PGUIMenuDialog@@UAE_NPAVInputEvent@TInputInterface@Toshi@@H@Z,"public: virtual bool __thiscall PGUIMenuDialog::OnButtonPress(class Toshi::TInputInterface::InputEvent *,int)"
+579,0x15340,0x10015340,?OnButtonPress@PGUISliderBar@@UAE_NPAVInputEvent@TInputInterface@Toshi@@H@Z,"public: virtual bool __thiscall PGUISliderBar::OnButtonPress(class Toshi::TInputInterface::InputEvent *,int)"
+580,0x19d50,0x10019d50,?OnButtonPress@PGUITableBox@@MAE_NPAVInputEvent@TInputInterface@Toshi@@H@Z,"protected: virtual bool __thiscall PGUITableBox::OnButtonPress(class Toshi::TInputInterface::InputEvent *,int)"
+581,0x3660,0x10003660,?OnButtonRelease@PGUIButton@@UAE_NPAVInputEvent@TInputInterface@Toshi@@H@Z,"public: virtual bool __thiscall PGUIButton::OnButtonRelease(class Toshi::TInputInterface::InputEvent *,int)"
+582,0x4b90,0x10004b90,?OnButtonRelease@PGUIDialog@@MAE_NPAVInputEvent@TInputInterface@Toshi@@H@Z,"protected: virtual bool __thiscall PGUIDialog::OnButtonRelease(class Toshi::TInputInterface::InputEvent *,int)"
+583,0x5a50,0x10005a50,?OnButtonRelease@PGUIDiscMenuDialog@@UAE_NPAVInputEvent@TInputInterface@Toshi@@H@Z,"public: virtual bool __thiscall PGUIDiscMenuDialog::OnButtonRelease(class Toshi::TInputInterface::InputEvent *,int)"
+584,0xf550,0x1000f550,?OnButtonRelease@PGUIMenuDialog@@UAE_NPAVInputEvent@TInputInterface@Toshi@@H@Z,"public: virtual bool __thiscall PGUIMenuDialog::OnButtonRelease(class Toshi::TInputInterface::InputEvent *,int)"
+585,0x16890,0x10016890,?OnButtonRelease@PGUISliderBar@@UAE_NPAVInputEvent@TInputInterface@Toshi@@H@Z,"public: virtual bool __thiscall PGUISliderBar::OnButtonRelease(class Toshi::TInputInterface::InputEvent *,int)"
+586,0xb150,0x1000b150,?OnButtonRepeat@PGUIListBox@@MAE_NPAVInputEvent@TInputInterface@Toshi@@H@Z,"protected: virtual bool __thiscall PGUIListBox::OnButtonRepeat(class Toshi::TInputInterface::InputEvent *,int)"
+587,0xe900,0x1000e900,?OnButtonRepeat@PGUIMenuDialog@@UAE_NPAVInputEvent@TInputInterface@Toshi@@H@Z,"public: virtual bool __thiscall PGUIMenuDialog::OnButtonRepeat(class Toshi::TInputInterface::InputEvent *,int)"
+588,0x162e0,0x100162e0,?OnButtonRepeat@PGUISliderBar@@UAE_NPAVInputEvent@TInputInterface@Toshi@@H@Z,"public: virtual bool __thiscall PGUISliderBar::OnButtonRepeat(class Toshi::TInputInterface::InputEvent *,int)"
+589,0x19f90,0x10019f90,?OnButtonRepeat@PGUITableBox@@MAE_NPAVInputEvent@TInputInterface@Toshi@@H@Z,"protected: virtual bool __thiscall PGUITableBox::OnButtonRepeat(class Toshi::TInputInterface::InputEvent *,int)"
+590,0x19240,0x10019240,?OnPaint@PGUITableBox@@UAE_NPAVTGUIDisplayContext@Toshi@@@Z,public: virtual bool __thiscall PGUITableBox::OnPaint(class Toshi::TGUIDisplayContext *)
+591,0x4cc0,0x10004cc0,?OnPointerMove@PGUIDialog@@MAE_NHH@Z,"protected: virtual bool __thiscall PGUIDialog::OnPointerMove(int,int)"
+592,0xc3b0,0x1000c3b0,?OnPointerMove@PGUIListBox@@MAE_NHH@Z,"protected: virtual bool __thiscall PGUIListBox::OnPointerMove(int,int)"
+593,0x16a50,0x10016a50,?OnPointerMove@PGUISliderBar@@UAE_NHH@Z,"public: virtual bool __thiscall PGUISliderBar::OnPointerMove(int,int)"
+594,0x1af90,0x1001af90,?OnPointerMove@PGUITableBox@@MAE_NHH@Z,"protected: virtual bool __thiscall PGUITableBox::OnPointerMove(int,int)"
+595,0x4a00,0x10004a00,?Pack@PGUIDialog@@UAEXXZ,public: virtual void __thiscall PGUIDialog::Pack(void)
+596,0x5ad0,0x10005ad0,?Pack@PGUIDiscMenuDialog@@UAEXXZ,public: virtual void __thiscall PGUIDiscMenuDialog::Pack(void)
+597,0x6cf0,0x10006cf0,?Pack@PGUIHorizontalSplit@@UAEXXZ,public: virtual void __thiscall PGUIHorizontalSplit::Pack(void)
+598,0x8260,0x10008260,?Pack@PGUILabel@@UAEXXZ,public: virtual void __thiscall PGUILabel::Pack(void)
+599,0x9e30,0x10009e30,?Pack@PGUIListBox@@UAEXXZ,public: virtual void __thiscall PGUIListBox::Pack(void)
+600,0xce40,0x1000ce40,?Pack@PGUIListItem@@UAEXXZ,public: virtual void __thiscall PGUIListItem::Pack(void)
+601,0xe640,0x1000e640,?Pack@PGUIMenuDialog@@UAEXXZ,public: virtual void __thiscall PGUIMenuDialog::Pack(void)
+602,0x124d0,0x100124d0,?Pack@PGUIOwnerDraw@@UAEXXZ,public: virtual void __thiscall PGUIOwnerDraw::Pack(void)
+603,0x12b60,0x10012b60,?Pack@PGUIPanel@@UAEXXZ,public: virtual void __thiscall PGUIPanel::Pack(void)
+604,0x134a0,0x100134a0,?Pack@PGUIPushButton@@UAEXXZ,public: virtual void __thiscall PGUIPushButton::Pack(void)
+605,0x17d70,0x10017d70,?Pack@PGUISliderBar@@UAEXXZ,public: virtual void __thiscall PGUISliderBar::Pack(void)
+606,0x18f80,0x10018f80,?Pack@PGUITableBox@@UAEXXZ,public: virtual void __thiscall PGUITableBox::Pack(void)
+607,0x1be50,0x1001be50,?Pack@PGUIToggleButton@@UAEXXZ,public: virtual void __thiscall PGUIToggleButton::Pack(void)
+608,0x1cdd0,0x1001cdd0,?Pack@PGUIVerticalSplit@@UAEXXZ,public: virtual void __thiscall PGUIVerticalSplit::Pack(void)
+609,0x170b0,0x100170b0,?PackComponents@PGUISliderBar@@IAEXXZ,protected: void __thiscall PGUISliderBar::PackComponents(void)
+610,0x124b0,0x100124b0,?Paint@PGUIOwnerDraw@@UAEXPAVTGUIDisplayContext@Toshi@@@Z,public: virtual void __thiscall PGUIOwnerDraw::Paint(class Toshi::TGUIDisplayContext *)
+611,0x11260,0x10011260,?PropagateState@PGUIMenuTree@@QAEIIPAVPGUIMenuTreeItem@@@Z,"public: unsigned int __thiscall PGUIMenuTree::PropagateState(unsigned int,class PGUIMenuTreeItem *)"
+612,0x112f0,0x100112f0,?PropagateState@PGUIMenuTree@@QAEXIIPAVPGUIMenuTreeItem@@0@Z,"public: void __thiscall PGUIMenuTree::PropagateState(unsigned int,unsigned int,class PGUIMenuTreeItem *,class PGUIMenuTreeItem *)"
+613,0x101d0,0x100101d0,?RecurseTree@PGUIMenuTree@@QAEXP6G_NPAVPGUIMenuTreeItem@@PAX@Z221@Z,"public: void __thiscall PGUIMenuTree::RecurseTree(bool (__stdcall*)(class PGUIMenuTreeItem *,void *),bool (__stdcall*)(class PGUIMenuTreeItem *,void *),bool (__stdcall*)(class PGUIMenuTreeItem *,void *),void *)"
+614,0xfc30,0x1000fc30,?RecurseTree@PGUIMenuTreeItem@@QAEXP6G_NPAV1@PAX@Z221@Z,"public: void __thiscall PGUIMenuTreeItem::RecurseTree(bool (__stdcall*)(class PGUIMenuTreeItem *,void *),bool (__stdcall*)(class PGUIMenuTreeItem *,void *),bool (__stdcall*)(class PGUIMenuTreeItem *,void *),void *)"
+615,0xdae0,0x1000dae0,?RecycleButton@PGUIMenuBar@@AAEPAVTGUIWidget@Toshi@@PAVTGUIStyle@3@@Z,private: class Toshi::TGUIWidget * __thiscall PGUIMenuBar::RecycleButton(class Toshi::TGUIStyle *)
+616,0xf2b0,0x1000f2b0,?RecycleButton@PGUIMenuDialog@@AAEPAVTGUIWidget@Toshi@@PAVTGUIStyle@3@@Z,private: class Toshi::TGUIWidget * __thiscall PGUIMenuDialog::RecycleButton(class Toshi::TGUIStyle *)
+617,0x11920,0x10011920,?RecycleDialog@PGUIMenuTree@@AAEPAVPGUIMenuDialog@@PAV2@@Z,private: class PGUIMenuDialog * __thiscall PGUIMenuTree::RecycleDialog(class PGUIMenuDialog *)
+618,0xa920,0x1000a920,?RefreshItemList@PGUIListBox@@QAEXXZ,public: void __thiscall PGUIListBox::RefreshItemList(void)
+619,0x197e0,0x100197e0,?RefreshItemList@PGUITableBox@@QAEXXZ,public: void __thiscall PGUITableBox::RefreshItemList(void)
+620,0xc6b0,0x1000c6b0,?RemoveAllItems@PGUIListBox@@QAEXXZ,public: void __thiscall PGUIListBox::RemoveAllItems(void)
+621,0x1b390,0x1001b390,?RemoveAllItems@PGUITableBox@@QAEXXZ,public: void __thiscall PGUITableBox::RemoveAllItems(void)
+622,0xc2d0,0x1000c2d0,?RemoveAllItemsImpl@PGUIListBox@@IAEXXZ,protected: void __thiscall PGUIListBox::RemoveAllItemsImpl(void)
+623,0x1aea0,0x1001aea0,?RemoveAllItemsImpl@PGUITableBox@@IAEXXZ,protected: void __thiscall PGUITableBox::RemoveAllItemsImpl(void)
+624,0xc6c0,0x1000c6c0,?RemoveItem@PGUIListBox@@QAEXPAVPGUIItemData@@@Z,public: void __thiscall PGUIListBox::RemoveItem(class PGUIItemData *)
+625,0x11c60,0x10011c60,?RemoveItem@PGUIMenuTreeItem@@QAEXPAV1@@Z,public: void __thiscall PGUIMenuTreeItem::RemoveItem(class PGUIMenuTreeItem *)
+626,0x1b3b0,0x1001b3b0,?RemoveItem@PGUITableBox@@QAEXPAVPGUIRowData@@@Z,public: void __thiscall PGUITableBox::RemoveItem(class PGUIRowData *)
+627,0xbf50,0x1000bf50,?RemoveItemImpl@PGUIListBox@@IAEXPAVPGUIItemData@@@Z,protected: void __thiscall PGUIListBox::RemoveItemImpl(class PGUIItemData *)
+628,0x1a9f0,0x1001a9f0,?RemoveItemImpl@PGUITableBox@@IAEXPAVPGUIRowData@@@Z,protected: void __thiscall PGUITableBox::RemoveItemImpl(class PGUIRowData *)
+629,0x11830,0x10011830,?RemoveMenus@PGUIMenuTree@@IAEXXZ,protected: void __thiscall PGUIMenuTree::RemoveMenus(void)
+630,0x1aca0,0x1001aca0,?RemoveStampWidgets@PGUITableBox@@IAEXXZ,protected: void __thiscall PGUITableBox::RemoveStampWidgets(void)
+631,0x6120,0x10006120,?RemoveState@PGUIItemData@@QAEXI@Z,public: void __thiscall PGUIItemData::RemoveState(unsigned int)
+632,0x5fc0,0x10005fc0,?RemoveState@PGUIRowData@@QAEXHI@Z,"public: void __thiscall PGUIRowData::RemoveState(int,unsigned int)"
+633,0x7970,0x10007970,?RemoveState@PGUIRowData@@QAEXI@Z,public: void __thiscall PGUIRowData::RemoveState(unsigned int)
+634,0x10590,0x10010590,?Reset@PGUIMenuTree@@QAEXXZ,public: void __thiscall PGUIMenuTree::Reset(void)
+635,0x10c30,0x10010c30,?ScrollMenu@PGUIMenuTree@@QAEXH@Z,public: void __thiscall PGUIMenuTree::ScrollMenu(int)
+636,0xc690,0x1000c690,?SelectItem@PGUIListBox@@QAEXPAVPGUIItemData@@@Z,public: void __thiscall PGUIListBox::SelectItem(class PGUIItemData *)
+637,0x1b370,0x1001b370,?SelectItem@PGUITableBox@@QAEXPAVPGUIRowData@@@Z,public: void __thiscall PGUITableBox::SelectItem(class PGUIRowData *)
+638,0xa620,0x1000a620,?SelectItemAtPoint@PGUIListBox@@QAEXHH@Z,"public: void __thiscall PGUIListBox::SelectItemAtPoint(int,int)"
+639,0x195f0,0x100195f0,?SelectItemAtPoint@PGUITableBox@@QAEXHH@Z,"public: void __thiscall PGUITableBox::SelectItemAtPoint(int,int)"
+640,0xc060,0x1000c060,?SelectItemImpl@PGUIListBox@@IAEXPAVPGUIItemData@@@Z,protected: void __thiscall PGUIListBox::SelectItemImpl(class PGUIItemData *)
+641,0x1ab00,0x1001ab00,?SelectItemImpl@PGUITableBox@@IAEXPAVPGUIRowData@@@Z,protected: void __thiscall PGUITableBox::SelectItemImpl(class PGUIRowData *)
+642,0x11080,0x10011080,?SelectMenu@PGUIMenuTree@@QAEXXZ,public: void __thiscall PGUIMenuTree::SelectMenu(void)
+643,0x3a60,0x10003a60,?Serialise@PGUIButton@@UAE_NPAVPProperties@@@Z,public: virtual bool __thiscall PGUIButton::Serialise(class PProperties *)
+644,0x4d10,0x10004d10,?Serialise@PGUIDialog@@UAE_NPAVPProperties@@@Z,public: virtual bool __thiscall PGUIDialog::Serialise(class PProperties *)
+645,0x20390,0x10020390,?Serialise@PGUIDiscLayout@@UAE_NPAVPProperties@@@Z,public: virtual bool __thiscall PGUIDiscLayout::Serialise(class PProperties *)
+646,0x5ae0,0x10005ae0,?Serialise@PGUIDiscMenuDialog@@UAE_NPAVPProperties@@@Z,public: virtual bool __thiscall PGUIDiscMenuDialog::Serialise(class PProperties *)
+647,0x21c10,0x10021c10,?Serialise@PGUIGridLayout@@UAE_NPAVPProperties@@@Z,public: virtual bool __thiscall PGUIGridLayout::Serialise(class PProperties *)
+648,0x72f0,0x100072f0,?Serialise@PGUIHorizontalSplit@@UAE_NPAVPProperties@@@Z,public: virtual bool __thiscall PGUIHorizontalSplit::Serialise(class PProperties *)
+649,0x8530,0x10008530,?Serialise@PGUILabel@@UAE_NPAVPProperties@@@Z,public: virtual bool __thiscall PGUILabel::Serialise(class PProperties *)
+650,0xc560,0x1000c560,?Serialise@PGUIListBox@@UAE_NPAVPProperties@@@Z,public: virtual bool __thiscall PGUIListBox::Serialise(class PProperties *)
+651,0xd0c0,0x1000d0c0,?Serialise@PGUIListItem@@UAE_NPAVPProperties@@@Z,public: virtual bool __thiscall PGUIListItem::Serialise(class PProperties *)
+652,0xdda0,0x1000dda0,?Serialise@PGUIMenuBar@@UAE_NPAVPProperties@@@Z,public: virtual bool __thiscall PGUIMenuBar::Serialise(class PProperties *)
+653,0xf570,0x1000f570,?Serialise@PGUIMenuDialog@@UAE_NPAVPProperties@@@Z,public: virtual bool __thiscall PGUIMenuDialog::Serialise(class PProperties *)
+654,0x11b30,0x10011b30,?Serialise@PGUIMenuTree@@UAE_NPAVPProperties@@@Z,public: virtual bool __thiscall PGUIMenuTree::Serialise(class PProperties *)
+655,0x24fe0,0x10024fe0,?Serialise@PGUIOverlayLayout@@UAE_NPAVPProperties@@@Z,public: virtual bool __thiscall PGUIOverlayLayout::Serialise(class PProperties *)
+656,0x124f0,0x100124f0,?Serialise@PGUIOwnerDraw@@UAE_NPAVPProperties@@@Z,public: virtual bool __thiscall PGUIOwnerDraw::Serialise(class PProperties *)
+657,0x12d90,0x10012d90,?Serialise@PGUIPanel@@UAE_NPAVPProperties@@@Z,public: virtual bool __thiscall PGUIPanel::Serialise(class PProperties *)
+658,0x137a0,0x100137a0,?Serialise@PGUIPushButton@@UAE_NPAVPProperties@@@Z,public: virtual bool __thiscall PGUIPushButton::Serialise(class PProperties *)
+659,0x17d80,0x10017d80,?Serialise@PGUISliderBar@@UAE_NPAVPProperties@@@Z,public: virtual bool __thiscall PGUISliderBar::Serialise(class PProperties *)
+660,0x26ae0,0x10026ae0,?Serialise@PGUIStackLayout@@UAE_NPAVPProperties@@@Z,public: virtual bool __thiscall PGUIStackLayout::Serialise(class PProperties *)
+661,0x1b070,0x1001b070,?Serialise@PGUITableBox@@UAE_NPAVPProperties@@@Z,public: virtual bool __thiscall PGUITableBox::Serialise(class PProperties *)
+662,0x1c230,0x1001c230,?Serialise@PGUIToggleButton@@UAE_NPAVPProperties@@@Z,public: virtual bool __thiscall PGUIToggleButton::Serialise(class PProperties *)
+663,0x1d370,0x1001d370,?Serialise@PGUIVerticalSplit@@UAE_NPAVPProperties@@@Z,public: virtual bool __thiscall PGUIVerticalSplit::Serialise(class PProperties *)
+664,0xc3e0,0x1000c3e0,?SerialiseChildren@PGUIListBox@@MAE_NPAVPProperties@@@Z,protected: virtual bool __thiscall PGUIListBox::SerialiseChildren(class PProperties *)
+665,0xc750,0x1000c750,?SetBlankItem@PGUIListBox@@QAEXPAVPGUIItemData@@@Z,public: void __thiscall PGUIListBox::SetBlankItem(class PGUIItemData *)
+666,0x12490,0x10012490,?SetCallBack@PGUIOwnerDraw@@QAEPAVCallBack@1@PAV21@@Z,public: class PGUIOwnerDraw::CallBack * __thiscall PGUIOwnerDraw::SetCallBack(class PGUIOwnerDraw::CallBack *)
+667,0x7c20,0x10007c20,?SetCanDecrement@PGUISliderBar@@QAEX_N@Z,public: void __thiscall PGUISliderBar::SetCanDecrement(bool)
+668,0x7bf0,0x10007bf0,?SetCanIncrement@PGUISliderBar@@QAEX_N@Z,public: void __thiscall PGUISliderBar::SetCanIncrement(bool)
+669,0x7b00,0x10007b00,?SetCurrentValue@PGUISliderBar@@QAEXM@Z,public: void __thiscall PGUISliderBar::SetCurrentValue(float)
+670,0xc850,0x1000c850,?SetData@PGUIListItem@@QAEXPAVPGUIItemData@@@Z,public: void __thiscall PGUIListItem::SetData(class PGUIItemData *)
+671,0x7c50,0x10007c50,?SetDecrementing@PGUISliderBar@@QAEX_N@Z,public: void __thiscall PGUISliderBar::SetDecrementing(bool)
+672,0x5d80,0x10005d80,?SetDisplayMode@PGUIMenuDialog@@QAEXW4DisplayLevel@PGUIMenuTreeItemStyle@@@Z,public: void __thiscall PGUIMenuDialog::SetDisplayMode(enum PGUIMenuTreeItemStyle::DisplayLevel)
+673,0x7cc0,0x10007cc0,?SetDragging@PGUISliderBar@@QAEX_N@Z,public: void __thiscall PGUISliderBar::SetDragging(bool)
+674,0x74c0,0x100074c0,?SetEditing@PGUIPanel@@QAEX_N@Z,public: void __thiscall PGUIPanel::SetEditing(bool)
+675,0xc360,0x1000c360,?SetFirstItem@PGUIListBox@@IAEXPAVPGUIItemData@@@Z,protected: void __thiscall PGUIListBox::SetFirstItem(class PGUIItemData *)
+676,0x1af40,0x1001af40,?SetFirstItem@PGUITableBox@@IAEXPAVPGUIRowData@@@Z,protected: void __thiscall PGUITableBox::SetFirstItem(class PGUIRowData *)
+677,0x5ce0,0x10005ce0,?SetFlowDirection@PGUIDiscLayout@@QAEXW4FlowDirection@1@@Z,public: void __thiscall PGUIDiscLayout::SetFlowDirection(enum PGUIDiscLayout::FlowDirection)
+678,0x11e70,0x10011e70,?SetFlowDirection@PGUIStackLayout@@QAEXW4FlowDirection@1@@Z,public: void __thiscall PGUIStackLayout::SetFlowDirection(enum PGUIStackLayout::FlowDirection)
+679,0x5d30,0x10005d30,?SetForceSameHeight@PGUIDiscLayout@@QAEX_N@Z,public: void __thiscall PGUIDiscLayout::SetForceSameHeight(bool)
+680,0x11de0,0x10011de0,?SetForceSameHeight@PGUILayoutManager@Toshi@@QAEX_N@Z,public: void __thiscall Toshi::PGUILayoutManager::SetForceSameHeight(bool)
+681,0x25140,0x10025140,?SetForceSameHeight@PGUIOverlayLayout@@QAEX_N@Z,public: void __thiscall PGUIOverlayLayout::SetForceSameHeight(bool)
+682,0x5d40,0x10005d40,?SetForceSameWidth@PGUIDiscLayout@@QAEX_N@Z,public: void __thiscall PGUIDiscLayout::SetForceSameWidth(bool)
+683,0x11df0,0x10011df0,?SetForceSameWidth@PGUILayoutManager@Toshi@@QAEX_N@Z,public: void __thiscall Toshi::PGUILayoutManager::SetForceSameWidth(bool)
+684,0x25150,0x10025150,?SetForceSameWidth@PGUIOverlayLayout@@QAEX_N@Z,public: void __thiscall PGUIOverlayLayout::SetForceSameWidth(bool)
+685,0xc770,0x1000c770,?SetHoverSelectMode@PGUIListBox@@QAEX_N@Z,public: void __thiscall PGUIListBox::SetHoverSelectMode(bool)
+686,0x1b430,0x1001b430,?SetHoverSelectMode@PGUITableBox@@QAEX_N@Z,public: void __thiscall PGUITableBox::SetHoverSelectMode(bool)
+687,0x7c90,0x10007c90,?SetIncrementing@PGUISliderBar@@QAEX_N@Z,public: void __thiscall PGUISliderBar::SetIncrementing(bool)
+688,0xc830,0x1000c830,?SetIndex@PGUIListItem@@QAEXH@Z,public: void __thiscall PGUIListItem::SetIndex(int)
+689,0x5e50,0x10005e50,?SetInterface@PGUIMenuTree@@UAEXPAVTGUIInterface@Toshi@@@Z,public: virtual void __thiscall PGUIMenuTree::SetInterface(class Toshi::TGUIInterface *)
+690,0x25120,0x10025120,?SetJustifyHoriz@PGUIOverlayLayout@@QAEXW4Alignment@TGUILayoutManager@Toshi@@@Z,public: void __thiscall PGUIOverlayLayout::SetJustifyHoriz(enum Toshi::TGUILayoutManager::Alignment)
+691,0x11e80,0x10011e80,?SetJustifyHoriz@PGUIStackLayout@@QAEXW4Alignment@TGUILayoutManager@Toshi@@@Z,public: void __thiscall PGUIStackLayout::SetJustifyHoriz(enum Toshi::TGUILayoutManager::Alignment)
+692,0x25130,0x10025130,?SetJustifyVert@PGUIOverlayLayout@@QAEXW4Alignment@TGUILayoutManager@Toshi@@@Z,public: void __thiscall PGUIOverlayLayout::SetJustifyVert(enum Toshi::TGUILayoutManager::Alignment)
+693,0x11e90,0x10011e90,?SetJustifyVert@PGUIStackLayout@@QAEXW4Alignment@TGUILayoutManager@Toshi@@@Z,public: void __thiscall PGUIStackLayout::SetJustifyVert(enum Toshi::TGUILayoutManager::Alignment)
+694,0xa5a0,0x1000a5a0,?SetListItemStyle@PGUIListBox@@QAEXABVTPCString@Toshi@@@Z,public: void __thiscall PGUIListBox::SetListItemStyle(class Toshi::TPCString const &)
+695,0xc450,0x1000c450,?SetListItemStyle@PGUIListBox@@QAEXPAVTGUIStyle@Toshi@@@Z,public: void __thiscall PGUIListBox::SetListItemStyle(class Toshi::TGUIStyle *)
+696,0x7a40,0x10007a40,?SetMaximumValue@PGUISliderBar@@QAEXM@Z,public: void __thiscall PGUISliderBar::SetMaximumValue(float)
+697,0xe030,0x1000e030,?SetMenuTree@PGUIMenuBar@@QAEXPAVPGUIMenuTree@@@Z,public: void __thiscall PGUIMenuBar::SetMenuTree(class PGUIMenuTree *)
+698,0x5d90,0x10005d90,?SetMenuTree@PGUIMenuDialog@@QAEXPAVPGUIMenuTree@@@Z,public: void __thiscall PGUIMenuDialog::SetMenuTree(class PGUIMenuTree *)
+699,0x7aa0,0x10007aa0,?SetMinimumValue@PGUISliderBar@@QAEXM@Z,public: void __thiscall PGUISliderBar::SetMinimumValue(float)
+700,0x21d60,0x10021d60,?SetNumCols@PGUIGridLayout@@QAEXH@Z,public: void __thiscall PGUIGridLayout::SetNumCols(int)
+701,0x21d70,0x10021d70,?SetNumRows@PGUIGridLayout@@QAEXH@Z,public: void __thiscall PGUIGridLayout::SetNumRows(int)
+702,0x5d00,0x10005d00,?SetOffsetAngle@PGUIDiscLayout@@QAEXM@Z,public: void __thiscall PGUIDiscLayout::SetOffsetAngle(float)
+703,0xa5f0,0x1000a5f0,?SetOrientation@PGUIListBox@@QAEXH@Z,public: void __thiscall PGUIListBox::SetOrientation(int)
+704,0xc790,0x1000c790,?SetOrientation@PGUIListBox@@QAEXW4ArrangeMode@1@@Z,public: void __thiscall PGUIListBox::SetOrientation(enum PGUIListBox::ArrangeMode)
+705,0x17a50,0x10017a50,?SetOrientation@PGUISliderBar@@QAEXH@Z,public: void __thiscall PGUISliderBar::SetOrientation(int)
+706,0x7cf0,0x10007cf0,?SetOrientation@PGUISliderBar@@QAEXW4Orientation@TGUIWidget@Toshi@@@Z,public: void __thiscall PGUISliderBar::SetOrientation(enum Toshi::TGUIWidget::Orientation)
+707,0x11e00,0x10011e00,?SetPad@PGUILayoutManager@Toshi@@QAEXHH@Z,"public: void __thiscall Toshi::PGUILayoutManager::SetPad(int,int)"
+708,0x11e30,0x10011e30,?SetPadX@PGUILayoutManager@Toshi@@QAEXH@Z,public: void __thiscall Toshi::PGUILayoutManager::SetPadX(int)
+709,0x11e20,0x10011e20,?SetPadY@PGUILayoutManager@Toshi@@QAEXH@Z,public: void __thiscall Toshi::PGUILayoutManager::SetPadY(int)
+710,0x5e90,0x10005e90,?SetParent@PGUIMenuTreeItem@@QAEXPAV1@@Z,public: void __thiscall PGUIMenuTreeItem::SetParent(class PGUIMenuTreeItem *)
+711,0x4400,0x10004400,?SetPressed@PGUIButton@@QAEX_N@Z,public: void __thiscall PGUIButton::SetPressed(bool)
+712,0x5d20,0x10005d20,?SetRadiusX@PGUIDiscLayout@@QAEXM@Z,public: void __thiscall PGUIDiscLayout::SetRadiusX(float)
+713,0x5d10,0x10005d10,?SetRadiusY@PGUIDiscLayout@@QAEXM@Z,public: void __thiscall PGUIDiscLayout::SetRadiusY(float)
+714,0x7b40,0x10007b40,?SetRange@PGUISliderBar@@QAEXMM@Z,"public: void __thiscall PGUISliderBar::SetRange(float,float)"
+715,0xdd70,0x1000dd70,?SetRootItem@PGUIMenuBar@@QAEXPAVPGUIMenuTreeItem@@@Z,public: void __thiscall PGUIMenuBar::SetRootItem(class PGUIMenuTreeItem *)
+716,0xe970,0x1000e970,?SetRootItem@PGUIMenuDialog@@QAEXPAVPGUIMenuTreeItem@@@Z,public: void __thiscall PGUIMenuDialog::SetRootItem(class PGUIMenuTreeItem *)
+717,0x10170,0x10010170,?SetScreen@PGUIMenuTree@@QAEXPAVTGUIScreen@Toshi@@@Z,public: void __thiscall PGUIMenuTree::SetScreen(class Toshi::TGUIScreen *)
+718,0x11ad0,0x10011ad0,?SetScreenMarginBottom@PGUIMenuTree@@QAEXH@Z,public: void __thiscall PGUIMenuTree::SetScreenMarginBottom(int)
+719,0x11b00,0x10011b00,?SetScreenMarginLeft@PGUIMenuTree@@QAEXH@Z,public: void __thiscall PGUIMenuTree::SetScreenMarginLeft(int)
+720,0x11af0,0x10011af0,?SetScreenMarginRight@PGUIMenuTree@@QAEXH@Z,public: void __thiscall PGUIMenuTree::SetScreenMarginRight(int)
+721,0x11ae0,0x10011ae0,?SetScreenMarginTop@PGUIMenuTree@@QAEXH@Z,public: void __thiscall PGUIMenuTree::SetScreenMarginTop(int)
+722,0x11b10,0x10011b10,?SetScreenMargins@PGUIMenuTree@@QAEXHHHH@Z,"public: void __thiscall PGUIMenuTree::SetScreenMargins(int,int,int,int)"
+723,0xc430,0x1000c430,?SetScrollBarPosition@PGUIListBox@@QAEXH@Z,public: void __thiscall PGUIListBox::SetScrollBarPosition(int)
+724,0xc780,0x1000c780,?SetScrollBarPosition@PGUIListBox@@QAEXW4Placement@TGUIWidget@Toshi@@@Z,public: void __thiscall PGUIListBox::SetScrollBarPosition(enum Toshi::TGUIWidget::Placement)
+725,0xa470,0x1000a470,?SetScrollBarStyle@PGUIListBox@@QAEXABVTPCString@Toshi@@@Z,public: void __thiscall PGUIListBox::SetScrollBarStyle(class Toshi::TPCString const &)
+726,0xa4c0,0x1000a4c0,?SetScrollBarStyle@PGUIListBox@@QAEXPAVTGUIStyle@Toshi@@@Z,public: void __thiscall PGUIListBox::SetScrollBarStyle(class Toshi::TGUIStyle *)
+727,0xc7a0,0x1000c7a0,?SetScrollableBackward@PGUIListBox@@QAEX_N@Z,public: void __thiscall PGUIListBox::SetScrollableBackward(bool)
+728,0x1b440,0x1001b440,?SetScrollableBackward@PGUITableBox@@QAEX_N@Z,public: void __thiscall PGUITableBox::SetScrollableBackward(bool)
+729,0xc7d0,0x1000c7d0,?SetScrollableForward@PGUIListBox@@QAEX_N@Z,public: void __thiscall PGUIListBox::SetScrollableForward(bool)
+730,0x1b470,0x1001b470,?SetScrollableForward@PGUITableBox@@QAEX_N@Z,public: void __thiscall PGUITableBox::SetScrollableForward(bool)
+731,0xdd50,0x1000dd50,?SetSelectedButton@PGUIMenuBar@@IAEXPAVTGUIWidget@Toshi@@@Z,protected: void __thiscall PGUIMenuBar::SetSelectedButton(class Toshi::TGUIWidget *)
+732,0xed70,0x1000ed70,?SetSelectedButton@PGUIMenuDialog@@MAEXPAVTGUIWidget@Toshi@@@Z,protected: virtual void __thiscall PGUIMenuDialog::SetSelectedButton(class Toshi::TGUIWidget *)
+733,0xd750,0x1000d750,?SetSelectedItem@PGUIMenuBar@@QAEXPAVPGUIMenuTreeItem@@@Z,public: void __thiscall PGUIMenuBar::SetSelectedItem(class PGUIMenuTreeItem *)
+734,0xe9b0,0x1000e9b0,?SetSelectedItem@PGUIMenuDialog@@QAEXPAVPGUIMenuTreeItem@@@Z,public: void __thiscall PGUIMenuDialog::SetSelectedItem(class PGUIMenuTreeItem *)
+735,0x11330,0x10011330,?SetSelectedItem@PGUIMenuTree@@QAEXPAVPGUIMenuTreeItem@@@Z,public: void __thiscall PGUIMenuTree::SetSelectedItem(class PGUIMenuTreeItem *)
+736,0xc760,0x1000c760,?SetSelectionMode@PGUIListBox@@QAEXW4SelectionMode@1@@Z,public: void __thiscall PGUIListBox::SetSelectionMode(enum PGUIListBox::SelectionMode)
+737,0x1b420,0x1001b420,?SetSelectionMode@PGUITableBox@@QAEXW4SelectionMode@1@@Z,public: void __thiscall PGUITableBox::SetSelectionMode(enum PGUITableBox::SelectionMode)
+738,0x5cd0,0x10005cd0,?SetSlotAllocation@PGUIDiscLayout@@QAEXW4SlotAllocation@1@@Z,public: void __thiscall PGUIDiscLayout::SetSlotAllocation(enum PGUIDiscLayout::SlotAllocation)
+739,0x5cf0,0x10005cf0,?SetSlotCount@PGUIDiscLayout@@QAEXH@Z,public: void __thiscall PGUIDiscLayout::SetSlotCount(int)
+740,0x6140,0x10006140,?SetState@PGUIItemData@@QAEXI@Z,public: void __thiscall PGUIItemData::SetState(unsigned int)
+741,0x60e0,0x100060e0,?SetState@PGUIItemData@@QAEXII@Z,"public: void __thiscall PGUIItemData::SetState(unsigned int,unsigned int)"
+742,0x6100,0x10006100,?SetState@PGUIItemData@@QAEXI_N@Z,"public: void __thiscall PGUIItemData::SetState(unsigned int,bool)"
+743,0x6000,0x10006000,?SetState@PGUIRowData@@QAEXHI@Z,"public: void __thiscall PGUIRowData::SetState(int,unsigned int)"
+744,0x7930,0x10007930,?SetState@PGUIRowData@@QAEXI@Z,public: void __thiscall PGUIRowData::SetState(unsigned int)
+745,0x7a10,0x10007a10,?SetStepValue@PGUISliderBar@@QAEXM@Z,public: void __thiscall PGUISliderBar::SetStepValue(float)
+746,0x5e80,0x10005e80,?SetStyle@PGUIMenuTreeItem@@QAEXPAVPGUIMenuTreeItemStyle@@@Z,public: void __thiscall PGUIMenuTreeItem::SetStyle(class PGUIMenuTreeItemStyle *)
+747,0x1c3a0,0x1001c3a0,?SetToggled@PGUIToggleButton@@QAEX_N@Z,public: void __thiscall PGUIToggleButton::SetToggled(bool)
+748,0x219e0,0x100219e0,?Set_columns_property@PGUIGridLayout@@QAEXABVPPropertyValue@@@Z,public: void __thiscall PGUIGridLayout::Set_columns_property(class PPropertyValue const &)
+749,0x1b050,0x1001b050,?Set_columns_property@PGUITableBox@@QAEXABVPPropertyValue@@@Z,public: void __thiscall PGUITableBox::Set_columns_property(class PPropertyValue const &)
+750,0x23290,0x10023290,?Set_fillhorizontal_property@PGUILayoutManager@Toshi@@QAEXABVPPropertyValue@@@Z,public: void __thiscall Toshi::PGUILayoutManager::Set_fillhorizontal_property(class PPropertyValue const &)
+751,0x24f00,0x10024f00,?Set_fillhorizontal_property@PGUIOverlayLayout@@QAEXABVPPropertyValue@@@Z,public: void __thiscall PGUIOverlayLayout::Set_fillhorizontal_property(class PPropertyValue const &)
+752,0x23230,0x10023230,?Set_fillvertical_property@PGUILayoutManager@Toshi@@QAEXABVPPropertyValue@@@Z,public: void __thiscall Toshi::PGUILayoutManager::Set_fillvertical_property(class PPropertyValue const &)
+753,0x24ea0,0x10024ea0,?Set_fillvertical_property@PGUIOverlayLayout@@QAEXABVPPropertyValue@@@Z,public: void __thiscall PGUIOverlayLayout::Set_fillvertical_property(class PPropertyValue const &)
+754,0x26a40,0x10026a40,?Set_flow_property@PGUIStackLayout@@QAEXABVPPropertyValue@@@Z,public: void __thiscall PGUIStackLayout::Set_flow_property(class PPropertyValue const &)
+755,0x200b0,0x100200b0,?Set_flowdirection_property@PGUIDiscLayout@@QAEXABVPPropertyValue@@@Z,public: void __thiscall PGUIDiscLayout::Set_flowdirection_property(class PPropertyValue const &)
+756,0x20250,0x10020250,?Set_fullheight_property@PGUIDiscLayout@@QAEXABVPPropertyValue@@@Z,public: void __thiscall PGUIDiscLayout::Set_fullheight_property(class PPropertyValue const &)
+757,0x202b0,0x100202b0,?Set_fullwidth_property@PGUIDiscLayout@@QAEXABVPPropertyValue@@@Z,public: void __thiscall PGUIDiscLayout::Set_fullwidth_property(class PPropertyValue const &)
+758,0x24e40,0x10024e40,?Set_justifyhoriz_property@PGUIOverlayLayout@@QAEXABVPPropertyValue@@@Z,public: void __thiscall PGUIOverlayLayout::Set_justifyhoriz_property(class PPropertyValue const &)
+759,0x26ac0,0x10026ac0,?Set_justifyhoriz_property@PGUIStackLayout@@QAEXABVPPropertyValue@@@Z,public: void __thiscall PGUIStackLayout::Set_justifyhoriz_property(class PPropertyValue const &)
+760,0x24e00,0x10024e00,?Set_justifyvert_property@PGUIOverlayLayout@@QAEXABVPPropertyValue@@@Z,public: void __thiscall PGUIOverlayLayout::Set_justifyvert_property(class PPropertyValue const &)
+761,0x26a80,0x10026a80,?Set_justifyvert_property@PGUIStackLayout@@QAEXABVPPropertyValue@@@Z,public: void __thiscall PGUIStackLayout::Set_justifyvert_property(class PPropertyValue const &)
+762,0xa360,0x1000a360,?Set_listitemstyle_property@PGUIListBox@@QAEXABVPPropertyValue@@@Z,public: void __thiscall PGUIListBox::Set_listitemstyle_property(class PPropertyValue const &)
+763,0x20120,0x10020120,?Set_offsetangle_property@PGUIDiscLayout@@QAEXABVPPropertyValue@@@Z,public: void __thiscall PGUIDiscLayout::Set_offsetangle_property(class PPropertyValue const &)
+764,0xc4d0,0x1000c4d0,?Set_orientation_property@PGUIListBox@@QAEXABVPPropertyValue@@@Z,public: void __thiscall PGUIListBox::Set_orientation_property(class PPropertyValue const &)
+765,0x17a90,0x10017a90,?Set_orientation_property@PGUISliderBar@@QAEXABVPPropertyValue@@@Z,public: void __thiscall PGUISliderBar::Set_orientation_property(class PPropertyValue const &)
+766,0x233d0,0x100233d0,?Set_padx_property@PGUILayoutManager@Toshi@@QAEXABVPPropertyValue@@@Z,public: void __thiscall Toshi::PGUILayoutManager::Set_padx_property(class PPropertyValue const &)
+767,0x23390,0x10023390,?Set_pady_property@PGUILayoutManager@Toshi@@QAEXABVPPropertyValue@@@Z,public: void __thiscall Toshi::PGUILayoutManager::Set_pady_property(class PPropertyValue const &)
+768,0x201f0,0x100201f0,?Set_radiusx_property@PGUIDiscLayout@@QAEXABVPPropertyValue@@@Z,public: void __thiscall PGUIDiscLayout::Set_radiusx_property(class PPropertyValue const &)
+769,0x20190,0x10020190,?Set_radiusy_property@PGUIDiscLayout@@QAEXABVPPropertyValue@@@Z,public: void __thiscall PGUIDiscLayout::Set_radiusy_property(class PPropertyValue const &)
+770,0x21a70,0x10021a70,?Set_rows_property@PGUIGridLayout@@QAEXABVPPropertyValue@@@Z,public: void __thiscall PGUIGridLayout::Set_rows_property(class PPropertyValue const &)
+771,0x20310,0x10020310,?Set_sameheight_property@PGUIDiscLayout@@QAEXABVPPropertyValue@@@Z,public: void __thiscall PGUIDiscLayout::Set_sameheight_property(class PPropertyValue const &)
+772,0x232f0,0x100232f0,?Set_sameheight_property@PGUILayoutManager@Toshi@@QAEXABVPPropertyValue@@@Z,public: void __thiscall Toshi::PGUILayoutManager::Set_sameheight_property(class PPropertyValue const &)
+773,0x24f60,0x10024f60,?Set_sameheight_property@PGUIOverlayLayout@@QAEXABVPPropertyValue@@@Z,public: void __thiscall PGUIOverlayLayout::Set_sameheight_property(class PPropertyValue const &)
+774,0x20370,0x10020370,?Set_samewidth_property@PGUIDiscLayout@@QAEXABVPPropertyValue@@@Z,public: void __thiscall PGUIDiscLayout::Set_samewidth_property(class PPropertyValue const &)
+775,0x23350,0x10023350,?Set_samewidth_property@PGUILayoutManager@Toshi@@QAEXABVPPropertyValue@@@Z,public: void __thiscall Toshi::PGUILayoutManager::Set_samewidth_property(class PPropertyValue const &)
+776,0x24fc0,0x10024fc0,?Set_samewidth_property@PGUIOverlayLayout@@QAEXABVPPropertyValue@@@Z,public: void __thiscall PGUIOverlayLayout::Set_samewidth_property(class PPropertyValue const &)
+777,0xc490,0x1000c490,?Set_scrollbarpos_property@PGUIListBox@@QAEXABVPPropertyValue@@@Z,public: void __thiscall PGUIListBox::Set_scrollbarpos_property(class PPropertyValue const &)
+778,0xa250,0x1000a250,?Set_scrollbarstyle_property@PGUIListBox@@QAEXABVPPropertyValue@@@Z,public: void __thiscall PGUIListBox::Set_scrollbarstyle_property(class PPropertyValue const &)
+779,0xc530,0x1000c530,?Set_selectionmode_property@PGUIListBox@@QAEXABVPPropertyValue@@@Z,public: void __thiscall PGUIListBox::Set_selectionmode_property(class PPropertyValue const &)
+780,0x1aff0,0x1001aff0,?Set_selectionmode_property@PGUITableBox@@QAEXABVPPropertyValue@@@Z,public: void __thiscall PGUITableBox::Set_selectionmode_property(class PPropertyValue const &)
+781,0x20070,0x10020070,?Set_slotallocation_property@PGUIDiscLayout@@QAEXABVPPropertyValue@@@Z,public: void __thiscall PGUIDiscLayout::Set_slotallocation_property(class PPropertyValue const &)
+782,0x20030,0x10020030,?Set_slotcount_property@PGUIDiscLayout@@QAEXABVPPropertyValue@@@Z,public: void __thiscall PGUIDiscLayout::Set_slotcount_property(class PPropertyValue const &)
+783,0x7290,0x10007290,?Set_stretchbottom_property@PGUIHorizontalSplit@@QAEXABVPPropertyValue@@@Z,public: void __thiscall PGUIHorizontalSplit::Set_stretchbottom_property(class PPropertyValue const &)
+784,0x1d350,0x1001d350,?Set_stretchleft_property@PGUIVerticalSplit@@QAEXABVPPropertyValue@@@Z,public: void __thiscall PGUIVerticalSplit::Set_stretchleft_property(class PPropertyValue const &)
+785,0x1d310,0x1001d310,?Set_stretchright_property@PGUIVerticalSplit@@QAEXABVPPropertyValue@@@Z,public: void __thiscall PGUIVerticalSplit::Set_stretchright_property(class PPropertyValue const &)
+786,0x72d0,0x100072d0,?Set_stretchtop_property@PGUIHorizontalSplit@@QAEXABVPPropertyValue@@@Z,public: void __thiscall PGUIHorizontalSplit::Set_stretchtop_property(class PPropertyValue const &)
+787,0x1c220,0x1001c220,?Set_test_property@PGUIToggleButton@@QAEXABVPPropertyValue@@@Z,public: void __thiscall PGUIToggleButton::Set_test_property(class PPropertyValue const &)
+788,0x17b80,0x10017b80,?Set_valuecurr_property@PGUISliderBar@@QAEXABVPPropertyValue@@@Z,public: void __thiscall PGUISliderBar::Set_valuecurr_property(class PPropertyValue const &)
+789,0x17c30,0x10017c30,?Set_valuemax_property@PGUISliderBar@@QAEXABVPPropertyValue@@@Z,public: void __thiscall PGUISliderBar::Set_valuemax_property(class PPropertyValue const &)
+790,0x17cf0,0x10017cf0,?Set_valuemin_property@PGUISliderBar@@QAEXABVPPropertyValue@@@Z,public: void __thiscall PGUISliderBar::Set_valuemin_property(class PPropertyValue const &)
+791,0x17af0,0x10017af0,?Set_valuestep_property@PGUISliderBar@@QAEXABVPPropertyValue@@@Z,public: void __thiscall PGUISliderBar::Set_valuestep_property(class PPropertyValue const &)
+792,0xa660,0x1000a660,?SizeToFit@PGUIListBox@@QAEXH@Z,public: void __thiscall PGUIListBox::SizeToFit(int)
+793,0xa870,0x1000a870,?SizeToFit@PGUIListBox@@QAEXHH@Z,"public: void __thiscall PGUIListBox::SizeToFit(int,int)"
+794,0x17060,0x10017060,?ThrowValueChange@PGUISliderBar@@IAEXXZ,protected: void __thiscall PGUISliderBar::ThrowValueChange(void)
+795,0x16ca0,0x10016ca0,?UpdateKnob@PGUISliderBar@@IAEXXZ,protected: void __thiscall PGUISliderBar::UpdateKnob(void)
+796,0xd7d0,0x1000d7d0,?UpdateMenu@PGUIMenuBar@@QAEXXZ,public: void __thiscall PGUIMenuBar::UpdateMenu(void)
+797,0xef40,0x1000ef40,?UpdateMenu@PGUIMenuDialog@@MAEXXZ,protected: virtual void __thiscall PGUIMenuDialog::UpdateMenu(void)
+798,0x105f0,0x100105f0,?UpdateMenu@PGUIMenuTree@@QAEXPAVPGUIMenuTreeItem@@@Z,public: void __thiscall PGUIMenuTree::UpdateMenu(class PGUIMenuTreeItem *)
+799,0x5790,0x10005790,?UpdatePosition@PGUIDiscMenuDialog@@UAEXAAH0@Z,"public: virtual void __thiscall PGUIDiscMenuDialog::UpdatePosition(int &,int &)"
+800,0xea50,0x1000ea50,?UpdatePosition@PGUIMenuDialog@@UAEXAAH0@Z,"public: virtual void __thiscall PGUIMenuDialog::UpdatePosition(int &,int &)"
+801,0x58f0,0x100058f0,?UpdateSelection@PGUIDiscMenuDialog@@MAEXXZ,protected: virtual void __thiscall PGUIDiscMenuDialog::UpdateSelection(void)
+802,0xda30,0x1000da30,?UpdateSelection@PGUIMenuBar@@IAEXXZ,protected: void __thiscall PGUIMenuBar::UpdateSelection(void)
+803,0xee40,0x1000ee40,?UpdateSelection@PGUIMenuDialog@@MAEXXZ,protected: virtual void __thiscall PGUIMenuDialog::UpdateSelection(void)
+804,0x77c0,0x100077c0,?UpdateWidget@PGUIItemData@@QAEXPAVTGUIWidget@Toshi@@@Z,public: void __thiscall PGUIItemData::UpdateWidget(class Toshi::TGUIWidget *)
+805,0x19ce0,0x10019ce0,?UpdateWidgetWidths@PGUITableBox@@IAEXXZ,protected: void __thiscall PGUITableBox::UpdateWidgetWidths(void)
+806,0x19bc0,0x10019bc0,?UpdateWidgets@PGUITableBox@@IAEHPAVPGUIRowData@@@Z,protected: int __thiscall PGUITableBox::UpdateWidgets(class PGUIRowData *)
+807,0x21a30,0x10021a30,?Val_columns_property@PGUIGridLayout@@QAE_NABVPPropertyValue@@@Z,public: bool __thiscall PGUIGridLayout::Val_columns_property(class PPropertyValue const &)
+808,0x1b010,0x1001b010,?Val_columns_property@PGUITableBox@@QAE_NABVPPropertyValue@@@Z,public: bool __thiscall PGUITableBox::Val_columns_property(class PPropertyValue const &)
+809,0x23250,0x10023250,?Val_fillhorizontal_property@PGUILayoutManager@Toshi@@QAE_NABVPPropertyValue@@@Z,public: bool __thiscall Toshi::PGUILayoutManager::Val_fillhorizontal_property(class PPropertyValue const &)
+810,0x24ec0,0x10024ec0,?Val_fillhorizontal_property@PGUIOverlayLayout@@QAE_NABVPPropertyValue@@@Z,public: bool __thiscall PGUIOverlayLayout::Val_fillhorizontal_property(class PPropertyValue const &)
+811,0x231f0,0x100231f0,?Val_fillvertical_property@PGUILayoutManager@Toshi@@QAE_NABVPPropertyValue@@@Z,public: bool __thiscall Toshi::PGUILayoutManager::Val_fillvertical_property(class PPropertyValue const &)
+812,0x24e60,0x10024e60,?Val_fillvertical_property@PGUIOverlayLayout@@QAE_NABVPPropertyValue@@@Z,public: bool __thiscall PGUIOverlayLayout::Val_fillvertical_property(class PPropertyValue const &)
+813,0x26730,0x10026730,?Val_flow_property@PGUIStackLayout@@QAE_NABVPPropertyValue@@@Z,public: bool __thiscall PGUIStackLayout::Val_flow_property(class PPropertyValue const &)
+814,0x1f780,0x1001f780,?Val_flowdirection_property@PGUIDiscLayout@@QAE_NABVPPropertyValue@@@Z,public: bool __thiscall PGUIDiscLayout::Val_flowdirection_property(class PPropertyValue const &)
+815,0x20210,0x10020210,?Val_fullheight_property@PGUIDiscLayout@@QAE_NABVPPropertyValue@@@Z,public: bool __thiscall PGUIDiscLayout::Val_fullheight_property(class PPropertyValue const &)
+816,0x20270,0x10020270,?Val_fullwidth_property@PGUIDiscLayout@@QAE_NABVPPropertyValue@@@Z,public: bool __thiscall PGUIDiscLayout::Val_fullwidth_property(class PPropertyValue const &)
+817,0x24c40,0x10024c40,?Val_justifyhoriz_property@PGUIOverlayLayout@@QAE_NABVPPropertyValue@@@Z,public: bool __thiscall PGUIOverlayLayout::Val_justifyhoriz_property(class PPropertyValue const &)
+818,0x26670,0x10026670,?Val_justifyhoriz_property@PGUIStackLayout@@QAE_NABVPPropertyValue@@@Z,public: bool __thiscall PGUIStackLayout::Val_justifyhoriz_property(class PPropertyValue const &)
+819,0x24ca0,0x10024ca0,?Val_justifyvert_property@PGUIOverlayLayout@@QAE_NABVPPropertyValue@@@Z,public: bool __thiscall PGUIOverlayLayout::Val_justifyvert_property(class PPropertyValue const &)
+820,0x266d0,0x100266d0,?Val_justifyvert_property@PGUIStackLayout@@QAE_NABVPPropertyValue@@@Z,public: bool __thiscall PGUIStackLayout::Val_justifyvert_property(class PPropertyValue const &)
+821,0xa420,0x1000a420,?Val_listitemstyle_property@PGUIListBox@@QAE_NABVPPropertyValue@@@Z,public: bool __thiscall PGUIListBox::Val_listitemstyle_property(class PPropertyValue const &)
+822,0x200d0,0x100200d0,?Val_offsetangle_property@PGUIDiscLayout@@QAE_NABVPPropertyValue@@@Z,public: bool __thiscall PGUIDiscLayout::Val_offsetangle_property(class PPropertyValue const &)
+823,0xa190,0x1000a190,?Val_orientation_property@PGUIListBox@@QAE_NABVPPropertyValue@@@Z,public: bool __thiscall PGUIListBox::Val_orientation_property(class PPropertyValue const &)
+824,0x16bc0,0x10016bc0,?Val_orientation_property@PGUISliderBar@@QAE_NABVPPropertyValue@@@Z,public: bool __thiscall PGUISliderBar::Val_orientation_property(class PPropertyValue const &)
+825,0x230b0,0x100230b0,?Val_padx_property@PGUILayoutManager@Toshi@@QAE_NABVPPropertyValue@@@Z,public: bool __thiscall Toshi::PGUILayoutManager::Val_padx_property(class PPropertyValue const &)
+826,0x230f0,0x100230f0,?Val_pady_property@PGUILayoutManager@Toshi@@QAE_NABVPPropertyValue@@@Z,public: bool __thiscall Toshi::PGUILayoutManager::Val_pady_property(class PPropertyValue const &)
+827,0x201b0,0x100201b0,?Val_radiusx_property@PGUIDiscLayout@@QAE_NABVPPropertyValue@@@Z,public: bool __thiscall PGUIDiscLayout::Val_radiusx_property(class PPropertyValue const &)
+828,0x20150,0x10020150,?Val_radiusy_property@PGUIDiscLayout@@QAE_NABVPPropertyValue@@@Z,public: bool __thiscall PGUIDiscLayout::Val_radiusy_property(class PPropertyValue const &)
+829,0x21ac0,0x10021ac0,?Val_rows_property@PGUIGridLayout@@QAE_NABVPPropertyValue@@@Z,public: bool __thiscall PGUIGridLayout::Val_rows_property(class PPropertyValue const &)
+830,0x202d0,0x100202d0,?Val_sameheight_property@PGUIDiscLayout@@QAE_NABVPPropertyValue@@@Z,public: bool __thiscall PGUIDiscLayout::Val_sameheight_property(class PPropertyValue const &)
+831,0x232b0,0x100232b0,?Val_sameheight_property@PGUILayoutManager@Toshi@@QAE_NABVPPropertyValue@@@Z,public: bool __thiscall Toshi::PGUILayoutManager::Val_sameheight_property(class PPropertyValue const &)
+832,0x24f20,0x10024f20,?Val_sameheight_property@PGUIOverlayLayout@@QAE_NABVPPropertyValue@@@Z,public: bool __thiscall PGUIOverlayLayout::Val_sameheight_property(class PPropertyValue const &)
+833,0x20330,0x10020330,?Val_samewidth_property@PGUIDiscLayout@@QAE_NABVPPropertyValue@@@Z,public: bool __thiscall PGUIDiscLayout::Val_samewidth_property(class PPropertyValue const &)
+834,0x23310,0x10023310,?Val_samewidth_property@PGUILayoutManager@Toshi@@QAE_NABVPPropertyValue@@@Z,public: bool __thiscall Toshi::PGUILayoutManager::Val_samewidth_property(class PPropertyValue const &)
+835,0x24f80,0x10024f80,?Val_samewidth_property@PGUIOverlayLayout@@QAE_NABVPPropertyValue@@@Z,public: bool __thiscall PGUIOverlayLayout::Val_samewidth_property(class PPropertyValue const &)
+836,0xa1f0,0x1000a1f0,?Val_scrollbarpos_property@PGUIListBox@@QAE_NABVPPropertyValue@@@Z,public: bool __thiscall PGUIListBox::Val_scrollbarpos_property(class PPropertyValue const &)
+837,0xa310,0x1000a310,?Val_scrollbarstyle_property@PGUIListBox@@QAE_NABVPPropertyValue@@@Z,public: bool __thiscall PGUIListBox::Val_scrollbarstyle_property(class PPropertyValue const &)
+838,0xc4f0,0x1000c4f0,?Val_selectionmode_property@PGUIListBox@@QAE_NABVPPropertyValue@@@Z,public: bool __thiscall PGUIListBox::Val_selectionmode_property(class PPropertyValue const &)
+839,0x1afb0,0x1001afb0,?Val_selectionmode_property@PGUITableBox@@QAE_NABVPPropertyValue@@@Z,public: bool __thiscall PGUITableBox::Val_selectionmode_property(class PPropertyValue const &)
+840,0x1f7e0,0x1001f7e0,?Val_slotallocation_property@PGUIDiscLayout@@QAE_NABVPPropertyValue@@@Z,public: bool __thiscall PGUIDiscLayout::Val_slotallocation_property(class PPropertyValue const &)
+841,0x1fff0,0x1001fff0,?Val_slotcount_property@PGUIDiscLayout@@QAE_NABVPPropertyValue@@@Z,public: bool __thiscall PGUIDiscLayout::Val_slotcount_property(class PPropertyValue const &)
+842,0x70f0,0x100070f0,?Val_stretchbottom_property@PGUIHorizontalSplit@@QAE_NABVPPropertyValue@@@Z,public: bool __thiscall PGUIHorizontalSplit::Val_stretchbottom_property(class PPropertyValue const &)
+843,0x1d120,0x1001d120,?Val_stretchleft_property@PGUIVerticalSplit@@QAE_NABVPPropertyValue@@@Z,public: bool __thiscall PGUIVerticalSplit::Val_stretchleft_property(class PPropertyValue const &)
+844,0x1d170,0x1001d170,?Val_stretchright_property@PGUIVerticalSplit@@QAE_NABVPPropertyValue@@@Z,public: bool __thiscall PGUIVerticalSplit::Val_stretchright_property(class PPropertyValue const &)
+845,0x70a0,0x100070a0,?Val_stretchtop_property@PGUIHorizontalSplit@@QAE_NABVPPropertyValue@@@Z,public: bool __thiscall PGUIHorizontalSplit::Val_stretchtop_property(class PPropertyValue const &)
+846,0x1c1f0,0x1001c1f0,?Val_test_property@PGUIToggleButton@@QAE_NABVPPropertyValue@@@Z,public: bool __thiscall PGUIToggleButton::Val_test_property(class PPropertyValue const &)
+847,0x17b40,0x10017b40,?Val_valuecurr_property@PGUISliderBar@@QAE_NABVPPropertyValue@@@Z,public: bool __thiscall PGUISliderBar::Val_valuecurr_property(class PPropertyValue const &)
+848,0x17bf0,0x10017bf0,?Val_valuemax_property@PGUISliderBar@@QAE_NABVPPropertyValue@@@Z,public: bool __thiscall PGUISliderBar::Val_valuemax_property(class PPropertyValue const &)
+849,0x17cb0,0x10017cb0,?Val_valuemin_property@PGUISliderBar@@QAE_NABVPPropertyValue@@@Z,public: bool __thiscall PGUISliderBar::Val_valuemin_property(class PPropertyValue const &)
+850,0x17ab0,0x10017ab0,?Val_valuestep_property@PGUISliderBar@@QAE_NABVPPropertyValue@@@Z,public: bool __thiscall PGUISliderBar::Val_valuestep_property(class PPropertyValue const &)
+851,0x3b380,0x1003b380,?m_sClass@PGUIButton@@2VTClass@Toshi@@A,public: static class Toshi::TClass PGUIButton::m_sClass
+852,0x3b340,0x1003b340,?m_sClass@PGUIDialog@@2VTClass@Toshi@@A,public: static class Toshi::TClass PGUIDialog::m_sClass
+853,0x3af40,0x1003af40,?m_sClass@PGUIDiscLayout@@2VTClass@Toshi@@A,public: static class Toshi::TClass PGUIDiscLayout::m_sClass
+854,0x3b300,0x1003b300,?m_sClass@PGUIDiscMenuDialog@@2VTClass@Toshi@@A,public: static class Toshi::TClass PGUIDiscMenuDialog::m_sClass
+855,0x3af00,0x1003af00,?m_sClass@PGUIGridLayout@@2VTClass@Toshi@@A,public: static class Toshi::TClass PGUIGridLayout::m_sClass
+856,0x3b2c0,0x1003b2c0,?m_sClass@PGUIHorizontalSplit@@2VTClass@Toshi@@A,public: static class Toshi::TClass PGUIHorizontalSplit::m_sClass
+857,0x3b280,0x1003b280,?m_sClass@PGUILabel@@2VTClass@Toshi@@A,public: static class Toshi::TClass PGUILabel::m_sClass
+858,0x3aec0,0x1003aec0,?m_sClass@PGUILayoutManager@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::PGUILayoutManager::m_sClass
+859,0x3b240,0x1003b240,?m_sClass@PGUIListBox@@2VTClass@Toshi@@A,public: static class Toshi::TClass PGUIListBox::m_sClass
+860,0x3b200,0x1003b200,?m_sClass@PGUIListItem@@2VTClass@Toshi@@A,public: static class Toshi::TClass PGUIListItem::m_sClass
+861,0x3b1c0,0x1003b1c0,?m_sClass@PGUIMenuBar@@2VTClass@Toshi@@A,public: static class Toshi::TClass PGUIMenuBar::m_sClass
+862,0x3b180,0x1003b180,?m_sClass@PGUIMenuDialog@@2VTClass@Toshi@@A,public: static class Toshi::TClass PGUIMenuDialog::m_sClass
+863,0x3b140,0x1003b140,?m_sClass@PGUIMenuTree@@2VTClass@Toshi@@A,public: static class Toshi::TClass PGUIMenuTree::m_sClass
+864,0x3ae80,0x1003ae80,?m_sClass@PGUIOverlayLayout@@2VTClass@Toshi@@A,public: static class Toshi::TClass PGUIOverlayLayout::m_sClass
+865,0x3b100,0x1003b100,?m_sClass@PGUIOwnerDraw@@2VTClass@Toshi@@A,public: static class Toshi::TClass PGUIOwnerDraw::m_sClass
+866,0x3b0c0,0x1003b0c0,?m_sClass@PGUIPanel@@2VTClass@Toshi@@A,public: static class Toshi::TClass PGUIPanel::m_sClass
+867,0x3b080,0x1003b080,?m_sClass@PGUIPushButton@@2VTClass@Toshi@@A,public: static class Toshi::TClass PGUIPushButton::m_sClass
+868,0x3b040,0x1003b040,?m_sClass@PGUISliderBar@@2VTClass@Toshi@@A,public: static class Toshi::TClass PGUISliderBar::m_sClass
+869,0x3ae40,0x1003ae40,?m_sClass@PGUIStackLayout@@2VTClass@Toshi@@A,public: static class Toshi::TClass PGUIStackLayout::m_sClass
+870,0x3b000,0x1003b000,?m_sClass@PGUITableBox@@2VTClass@Toshi@@A,public: static class Toshi::TClass PGUITableBox::m_sClass
+871,0x3afc0,0x1003afc0,?m_sClass@PGUIToggleButton@@2VTClass@Toshi@@A,public: static class Toshi::TClass PGUIToggleButton::m_sClass
+872,0x3af80,0x1003af80,?m_sClass@PGUIVerticalSplit@@2VTClass@Toshi@@A,public: static class Toshi::TClass PGUIVerticalSplit::m_sClass
+873,0x3af68,0x1003af68,?ms_layout_info@PGUIDiscLayout@@1PAVTGUILayoutInfo@Toshi@@A,protected: static class Toshi::TGUILayoutInfo * PGUIDiscLayout::ms_layout_info
+874,0x3af28,0x1003af28,?ms_layout_info@PGUIGridLayout@@1PAVTGUILayoutInfo@Toshi@@A,protected: static class Toshi::TGUILayoutInfo * PGUIGridLayout::ms_layout_info
+875,0x3aeac,0x1003aeac,?ms_layout_info@PGUILayoutManager@Toshi@@1PAVTGUILayoutInfo@2@A,protected: static class Toshi::TGUILayoutInfo * Toshi::PGUILayoutManager::ms_layout_info
+876,0x3aea8,0x1003aea8,?ms_layout_info@PGUIOverlayLayout@@1PAVTGUILayoutInfo@Toshi@@A,protected: static class Toshi::TGUILayoutInfo * PGUIOverlayLayout::ms_layout_info
+877,0x3ae68,0x1003ae68,?ms_layout_info@PGUIStackLayout@@1PAVTGUILayoutInfo@Toshi@@A,protected: static class Toshi::TGUILayoutInfo * PGUIStackLayout::ms_layout_info
+878,0x3ab44,0x1003ab44,?ms_oPropertySet@PGUIButton@@1PAV?$TArray@PAVTGUIPropertySpec@Toshi@@@Toshi@@A,protected: static class Toshi::TArray<class Toshi::TGUIPropertySpec *> * PGUIButton::ms_oPropertySet
+879,0x3ab64,0x1003ab64,?ms_oPropertySet@PGUIDialog@@1PAV?$TArray@PAVTGUIPropertySpec@Toshi@@@Toshi@@A,protected: static class Toshi::TArray<class Toshi::TGUIPropertySpec *> * PGUIDialog::ms_oPropertySet
+880,0x3ad84,0x1003ad84,?ms_oPropertySet@PGUIDiscLayout@@1PAV?$TArray@PAVTGUIPropertySpec@Toshi@@@Toshi@@A,protected: static class Toshi::TArray<class Toshi::TGUIPropertySpec *> * PGUIDiscLayout::ms_oPropertySet
+881,0x3ab84,0x1003ab84,?ms_oPropertySet@PGUIDiscMenuDialog@@1PAV?$TArray@PAVTGUIPropertySpec@Toshi@@@Toshi@@A,protected: static class Toshi::TArray<class Toshi::TGUIPropertySpec *> * PGUIDiscMenuDialog::ms_oPropertySet
+882,0x3ada4,0x1003ada4,?ms_oPropertySet@PGUIGridLayout@@1PAV?$TArray@PAVTGUIPropertySpec@Toshi@@@Toshi@@A,protected: static class Toshi::TArray<class Toshi::TGUIPropertySpec *> * PGUIGridLayout::ms_oPropertySet
+883,0x3aba4,0x1003aba4,?ms_oPropertySet@PGUIHorizontalSplit@@1PAV?$TArray@PAVTGUIPropertySpec@Toshi@@@Toshi@@A,protected: static class Toshi::TArray<class Toshi::TGUIPropertySpec *> * PGUIHorizontalSplit::ms_oPropertySet
+884,0x3abe4,0x1003abe4,?ms_oPropertySet@PGUILabel@@1PAV?$TArray@PAVTGUIPropertySpec@Toshi@@@Toshi@@A,protected: static class Toshi::TArray<class Toshi::TGUIPropertySpec *> * PGUILabel::ms_oPropertySet
+885,0x3adc4,0x1003adc4,?ms_oPropertySet@PGUILayoutManager@Toshi@@1PAV?$TArray@PAVTGUIPropertySpec@Toshi@@@2@A,protected: static class Toshi::TArray<class Toshi::TGUIPropertySpec *> * Toshi::PGUILayoutManager::ms_oPropertySet
+886,0x3ac04,0x1003ac04,?ms_oPropertySet@PGUIListBox@@1PAV?$TArray@PAVTGUIPropertySpec@Toshi@@@Toshi@@A,protected: static class Toshi::TArray<class Toshi::TGUIPropertySpec *> * PGUIListBox::ms_oPropertySet
+887,0x3ac24,0x1003ac24,?ms_oPropertySet@PGUIListItem@@1PAV?$TArray@PAVTGUIPropertySpec@Toshi@@@Toshi@@A,protected: static class Toshi::TArray<class Toshi::TGUIPropertySpec *> * PGUIListItem::ms_oPropertySet
+888,0x3ac44,0x1003ac44,?ms_oPropertySet@PGUIMenuBar@@1PAV?$TArray@PAVTGUIPropertySpec@Toshi@@@Toshi@@A,protected: static class Toshi::TArray<class Toshi::TGUIPropertySpec *> * PGUIMenuBar::ms_oPropertySet
+889,0x3ac78,0x1003ac78,?ms_oPropertySet@PGUIMenuDialog@@1PAV?$TArray@PAVTGUIPropertySpec@Toshi@@@Toshi@@A,protected: static class Toshi::TArray<class Toshi::TGUIPropertySpec *> * PGUIMenuDialog::ms_oPropertySet
+890,0x3ac88,0x1003ac88,?ms_oPropertySet@PGUIMenuTree@@1PAV?$TArray@PAVTGUIPropertySpec@Toshi@@@Toshi@@A,protected: static class Toshi::TArray<class Toshi::TGUIPropertySpec *> * PGUIMenuTree::ms_oPropertySet
+891,0x3ade4,0x1003ade4,?ms_oPropertySet@PGUIOverlayLayout@@1PAV?$TArray@PAVTGUIPropertySpec@Toshi@@@Toshi@@A,protected: static class Toshi::TArray<class Toshi::TGUIPropertySpec *> * PGUIOverlayLayout::ms_oPropertySet
+892,0x3aca4,0x1003aca4,?ms_oPropertySet@PGUIOwnerDraw@@1PAV?$TArray@PAVTGUIPropertySpec@Toshi@@@Toshi@@A,protected: static class Toshi::TArray<class Toshi::TGUIPropertySpec *> * PGUIOwnerDraw::ms_oPropertySet
+893,0x3acc4,0x1003acc4,?ms_oPropertySet@PGUIPanel@@1PAV?$TArray@PAVTGUIPropertySpec@Toshi@@@Toshi@@A,protected: static class Toshi::TArray<class Toshi::TGUIPropertySpec *> * PGUIPanel::ms_oPropertySet
+894,0x3ace4,0x1003ace4,?ms_oPropertySet@PGUIPushButton@@1PAV?$TArray@PAVTGUIPropertySpec@Toshi@@@Toshi@@A,protected: static class Toshi::TArray<class Toshi::TGUIPropertySpec *> * PGUIPushButton::ms_oPropertySet
+895,0x3ad04,0x1003ad04,?ms_oPropertySet@PGUISliderBar@@1PAV?$TArray@PAVTGUIPropertySpec@Toshi@@@Toshi@@A,protected: static class Toshi::TArray<class Toshi::TGUIPropertySpec *> * PGUISliderBar::ms_oPropertySet
+896,0x3ae04,0x1003ae04,?ms_oPropertySet@PGUIStackLayout@@1PAV?$TArray@PAVTGUIPropertySpec@Toshi@@@Toshi@@A,protected: static class Toshi::TArray<class Toshi::TGUIPropertySpec *> * PGUIStackLayout::ms_oPropertySet
+897,0x3ad24,0x1003ad24,?ms_oPropertySet@PGUITableBox@@1PAV?$TArray@PAVTGUIPropertySpec@Toshi@@@Toshi@@A,protected: static class Toshi::TArray<class Toshi::TGUIPropertySpec *> * PGUITableBox::ms_oPropertySet
+898,0x3ad44,0x1003ad44,?ms_oPropertySet@PGUIToggleButton@@1PAV?$TArray@PAVTGUIPropertySpec@Toshi@@@Toshi@@A,protected: static class Toshi::TArray<class Toshi::TGUIPropertySpec *> * PGUIToggleButton::ms_oPropertySet
+899,0x3ad64,0x1003ad64,?ms_oPropertySet@PGUIVerticalSplit@@1PAV?$TArray@PAVTGUIPropertySpec@Toshi@@@Toshi@@A,protected: static class Toshi::TArray<class Toshi::TGUIPropertySpec *> * PGUIVerticalSplit::ms_oPropertySet
+900,0x3ab40,0x1003ab40,?ms_oPropertySetOrdered@PGUIButton@@1PAV?$TSortedArray@PAVTGUIPropertySpec@Toshi@@UComparator@12@@Toshi@@A,"protected: static class Toshi::TSortedArray<class Toshi::TGUIPropertySpec *,struct Toshi::TGUIPropertySpec::Comparator> * PGUIButton::ms_oPropertySetOrdered"
+901,0x3ab60,0x1003ab60,?ms_oPropertySetOrdered@PGUIDialog@@1PAV?$TSortedArray@PAVTGUIPropertySpec@Toshi@@UComparator@12@@Toshi@@A,"protected: static class Toshi::TSortedArray<class Toshi::TGUIPropertySpec *,struct Toshi::TGUIPropertySpec::Comparator> * PGUIDialog::ms_oPropertySetOrdered"
+902,0x3ad80,0x1003ad80,?ms_oPropertySetOrdered@PGUIDiscLayout@@1PAV?$TSortedArray@PAVTGUIPropertySpec@Toshi@@UComparator@12@@Toshi@@A,"protected: static class Toshi::TSortedArray<class Toshi::TGUIPropertySpec *,struct Toshi::TGUIPropertySpec::Comparator> * PGUIDiscLayout::ms_oPropertySetOrdered"
+903,0x3ab80,0x1003ab80,?ms_oPropertySetOrdered@PGUIDiscMenuDialog@@1PAV?$TSortedArray@PAVTGUIPropertySpec@Toshi@@UComparator@12@@Toshi@@A,"protected: static class Toshi::TSortedArray<class Toshi::TGUIPropertySpec *,struct Toshi::TGUIPropertySpec::Comparator> * PGUIDiscMenuDialog::ms_oPropertySetOrdered"
+904,0x3ada0,0x1003ada0,?ms_oPropertySetOrdered@PGUIGridLayout@@1PAV?$TSortedArray@PAVTGUIPropertySpec@Toshi@@UComparator@12@@Toshi@@A,"protected: static class Toshi::TSortedArray<class Toshi::TGUIPropertySpec *,struct Toshi::TGUIPropertySpec::Comparator> * PGUIGridLayout::ms_oPropertySetOrdered"
+905,0x3aba0,0x1003aba0,?ms_oPropertySetOrdered@PGUIHorizontalSplit@@1PAV?$TSortedArray@PAVTGUIPropertySpec@Toshi@@UComparator@12@@Toshi@@A,"protected: static class Toshi::TSortedArray<class Toshi::TGUIPropertySpec *,struct Toshi::TGUIPropertySpec::Comparator> * PGUIHorizontalSplit::ms_oPropertySetOrdered"
+906,0x3abe0,0x1003abe0,?ms_oPropertySetOrdered@PGUILabel@@1PAV?$TSortedArray@PAVTGUIPropertySpec@Toshi@@UComparator@12@@Toshi@@A,"protected: static class Toshi::TSortedArray<class Toshi::TGUIPropertySpec *,struct Toshi::TGUIPropertySpec::Comparator> * PGUILabel::ms_oPropertySetOrdered"
+907,0x3adc0,0x1003adc0,?ms_oPropertySetOrdered@PGUILayoutManager@Toshi@@1PAV?$TSortedArray@PAVTGUIPropertySpec@Toshi@@UComparator@12@@2@A,"protected: static class Toshi::TSortedArray<class Toshi::TGUIPropertySpec *,struct Toshi::TGUIPropertySpec::Comparator> * Toshi::PGUILayoutManager::ms_oPropertySetOrdered"
+908,0x3ac00,0x1003ac00,?ms_oPropertySetOrdered@PGUIListBox@@1PAV?$TSortedArray@PAVTGUIPropertySpec@Toshi@@UComparator@12@@Toshi@@A,"protected: static class Toshi::TSortedArray<class Toshi::TGUIPropertySpec *,struct Toshi::TGUIPropertySpec::Comparator> * PGUIListBox::ms_oPropertySetOrdered"
+909,0x3ac20,0x1003ac20,?ms_oPropertySetOrdered@PGUIListItem@@1PAV?$TSortedArray@PAVTGUIPropertySpec@Toshi@@UComparator@12@@Toshi@@A,"protected: static class Toshi::TSortedArray<class Toshi::TGUIPropertySpec *,struct Toshi::TGUIPropertySpec::Comparator> * PGUIListItem::ms_oPropertySetOrdered"
+910,0x3ac40,0x1003ac40,?ms_oPropertySetOrdered@PGUIMenuBar@@1PAV?$TSortedArray@PAVTGUIPropertySpec@Toshi@@UComparator@12@@Toshi@@A,"protected: static class Toshi::TSortedArray<class Toshi::TGUIPropertySpec *,struct Toshi::TGUIPropertySpec::Comparator> * PGUIMenuBar::ms_oPropertySetOrdered"
+911,0x3ac74,0x1003ac74,?ms_oPropertySetOrdered@PGUIMenuDialog@@1PAV?$TSortedArray@PAVTGUIPropertySpec@Toshi@@UComparator@12@@Toshi@@A,"protected: static class Toshi::TSortedArray<class Toshi::TGUIPropertySpec *,struct Toshi::TGUIPropertySpec::Comparator> * PGUIMenuDialog::ms_oPropertySetOrdered"
+912,0x3ac84,0x1003ac84,?ms_oPropertySetOrdered@PGUIMenuTree@@1PAV?$TSortedArray@PAVTGUIPropertySpec@Toshi@@UComparator@12@@Toshi@@A,"protected: static class Toshi::TSortedArray<class Toshi::TGUIPropertySpec *,struct Toshi::TGUIPropertySpec::Comparator> * PGUIMenuTree::ms_oPropertySetOrdered"
+913,0x3ade0,0x1003ade0,?ms_oPropertySetOrdered@PGUIOverlayLayout@@1PAV?$TSortedArray@PAVTGUIPropertySpec@Toshi@@UComparator@12@@Toshi@@A,"protected: static class Toshi::TSortedArray<class Toshi::TGUIPropertySpec *,struct Toshi::TGUIPropertySpec::Comparator> * PGUIOverlayLayout::ms_oPropertySetOrdered"
+914,0x3aca0,0x1003aca0,?ms_oPropertySetOrdered@PGUIOwnerDraw@@1PAV?$TSortedArray@PAVTGUIPropertySpec@Toshi@@UComparator@12@@Toshi@@A,"protected: static class Toshi::TSortedArray<class Toshi::TGUIPropertySpec *,struct Toshi::TGUIPropertySpec::Comparator> * PGUIOwnerDraw::ms_oPropertySetOrdered"
+915,0x3acc0,0x1003acc0,?ms_oPropertySetOrdered@PGUIPanel@@1PAV?$TSortedArray@PAVTGUIPropertySpec@Toshi@@UComparator@12@@Toshi@@A,"protected: static class Toshi::TSortedArray<class Toshi::TGUIPropertySpec *,struct Toshi::TGUIPropertySpec::Comparator> * PGUIPanel::ms_oPropertySetOrdered"
+916,0x3ace0,0x1003ace0,?ms_oPropertySetOrdered@PGUIPushButton@@1PAV?$TSortedArray@PAVTGUIPropertySpec@Toshi@@UComparator@12@@Toshi@@A,"protected: static class Toshi::TSortedArray<class Toshi::TGUIPropertySpec *,struct Toshi::TGUIPropertySpec::Comparator> * PGUIPushButton::ms_oPropertySetOrdered"
+917,0x3ad00,0x1003ad00,?ms_oPropertySetOrdered@PGUISliderBar@@1PAV?$TSortedArray@PAVTGUIPropertySpec@Toshi@@UComparator@12@@Toshi@@A,"protected: static class Toshi::TSortedArray<class Toshi::TGUIPropertySpec *,struct Toshi::TGUIPropertySpec::Comparator> * PGUISliderBar::ms_oPropertySetOrdered"
+918,0x3ae00,0x1003ae00,?ms_oPropertySetOrdered@PGUIStackLayout@@1PAV?$TSortedArray@PAVTGUIPropertySpec@Toshi@@UComparator@12@@Toshi@@A,"protected: static class Toshi::TSortedArray<class Toshi::TGUIPropertySpec *,struct Toshi::TGUIPropertySpec::Comparator> * PGUIStackLayout::ms_oPropertySetOrdered"
+919,0x3ad20,0x1003ad20,?ms_oPropertySetOrdered@PGUITableBox@@1PAV?$TSortedArray@PAVTGUIPropertySpec@Toshi@@UComparator@12@@Toshi@@A,"protected: static class Toshi::TSortedArray<class Toshi::TGUIPropertySpec *,struct Toshi::TGUIPropertySpec::Comparator> * PGUITableBox::ms_oPropertySetOrdered"
+920,0x3ad40,0x1003ad40,?ms_oPropertySetOrdered@PGUIToggleButton@@1PAV?$TSortedArray@PAVTGUIPropertySpec@Toshi@@UComparator@12@@Toshi@@A,"protected: static class Toshi::TSortedArray<class Toshi::TGUIPropertySpec *,struct Toshi::TGUIPropertySpec::Comparator> * PGUIToggleButton::ms_oPropertySetOrdered"
+921,0x3ad60,0x1003ad60,?ms_oPropertySetOrdered@PGUIVerticalSplit@@1PAV?$TSortedArray@PAVTGUIPropertySpec@Toshi@@UComparator@12@@Toshi@@A,"protected: static class Toshi::TSortedArray<class Toshi::TGUIPropertySpec *,struct Toshi::TGUIPropertySpec::Comparator> * PGUIVerticalSplit::ms_oPropertySetOrdered"
+922,0x3abc0,0x1003abc0,?ms_pSingleton@PGUIPropertyValueFactory@@0PAV1@A,private: static class PGUIPropertyValueFactory * PGUIPropertyValueFactory::ms_pSingleton
+923,0x3b3a8,0x1003b3a8,?ms_widget_info@PGUIButton@@1PAVTGUIWidgetInfo@Toshi@@A,protected: static class Toshi::TGUIWidgetInfo * PGUIButton::ms_widget_info
+924,0x3b368,0x1003b368,?ms_widget_info@PGUIDialog@@1PAVTGUIWidgetInfo@Toshi@@A,protected: static class Toshi::TGUIWidgetInfo * PGUIDialog::ms_widget_info
+925,0x3b328,0x1003b328,?ms_widget_info@PGUIDiscMenuDialog@@1PAVTGUIWidgetInfo@Toshi@@A,protected: static class Toshi::TGUIWidgetInfo * PGUIDiscMenuDialog::ms_widget_info
+926,0x3b2e8,0x1003b2e8,?ms_widget_info@PGUIHorizontalSplit@@1PAVTGUIWidgetInfo@Toshi@@A,protected: static class Toshi::TGUIWidgetInfo * PGUIHorizontalSplit::ms_widget_info
+927,0x3b2a8,0x1003b2a8,?ms_widget_info@PGUILabel@@1PAVTGUIWidgetInfo@Toshi@@A,protected: static class Toshi::TGUIWidgetInfo * PGUILabel::ms_widget_info
+928,0x3b268,0x1003b268,?ms_widget_info@PGUIListBox@@1PAVTGUIWidgetInfo@Toshi@@A,protected: static class Toshi::TGUIWidgetInfo * PGUIListBox::ms_widget_info
+929,0x3b228,0x1003b228,?ms_widget_info@PGUIListItem@@1PAVTGUIWidgetInfo@Toshi@@A,protected: static class Toshi::TGUIWidgetInfo * PGUIListItem::ms_widget_info
+930,0x3b1e8,0x1003b1e8,?ms_widget_info@PGUIMenuBar@@1PAVTGUIWidgetInfo@Toshi@@A,protected: static class Toshi::TGUIWidgetInfo * PGUIMenuBar::ms_widget_info
+931,0x3b1a8,0x1003b1a8,?ms_widget_info@PGUIMenuDialog@@1PAVTGUIWidgetInfo@Toshi@@A,protected: static class Toshi::TGUIWidgetInfo * PGUIMenuDialog::ms_widget_info
+932,0x3b128,0x1003b128,?ms_widget_info@PGUIOwnerDraw@@1PAVTGUIWidgetInfo@Toshi@@A,protected: static class Toshi::TGUIWidgetInfo * PGUIOwnerDraw::ms_widget_info
+933,0x3b0e8,0x1003b0e8,?ms_widget_info@PGUIPanel@@1PAVTGUIWidgetInfo@Toshi@@A,protected: static class Toshi::TGUIWidgetInfo * PGUIPanel::ms_widget_info
+934,0x3b0a8,0x1003b0a8,?ms_widget_info@PGUIPushButton@@1PAVTGUIWidgetInfo@Toshi@@A,protected: static class Toshi::TGUIWidgetInfo * PGUIPushButton::ms_widget_info
+935,0x3b068,0x1003b068,?ms_widget_info@PGUISliderBar@@1PAVTGUIWidgetInfo@Toshi@@A,protected: static class Toshi::TGUIWidgetInfo * PGUISliderBar::ms_widget_info
+936,0x3b028,0x1003b028,?ms_widget_info@PGUITableBox@@1PAVTGUIWidgetInfo@Toshi@@A,protected: static class Toshi::TGUIWidgetInfo * PGUITableBox::ms_widget_info
+937,0x3afe8,0x1003afe8,?ms_widget_info@PGUIToggleButton@@1PAVTGUIWidgetInfo@Toshi@@A,protected: static class Toshi::TGUIWidgetInfo * PGUIToggleButton::ms_widget_info
+938,0x3afa8,0x1003afa8,?ms_widget_info@PGUIVerticalSplit@@1PAVTGUIWidgetInfo@Toshi@@A,protected: static class Toshi::TGUIWidgetInfo * PGUIVerticalSplit::ms_widget_info

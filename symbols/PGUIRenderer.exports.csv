@@ -1,0 +1,153 @@
+ordinal,rva,va,name,demangled
+1,0x60d0,0x100060d0,??0Font@PGUITRFontFactory@@QAE@ABVTPCString@Toshi@@@Z,public: __thiscall PGUITRFontFactory::Font::Font(class Toshi::TPCString const &)
+2,0x60f0,0x100060f0,??0Font@PGUITRFontFactory@@QAE@XZ,public: __thiscall PGUITRFontFactory::Font::Font(void)
+3,0x1080,0x10001080,??0PGUITRDisplayContext@@QAE@XZ,public: __thiscall PGUITRDisplayContext::PGUITRDisplayContext(void)
+4,0x6180,0x10006180,??0PGUITRFontFactory@@QAE@XZ,public: __thiscall PGUITRFontFactory::PGUITRFontFactory(void)
+5,0x6460,0x10006460,??0PGUITRRenderObject@@QAE@XZ,public: __thiscall PGUITRRenderObject::PGUITRRenderObject(void)
+6,0x68e0,0x100068e0,??0PGUITRTextureFactory@@QAE@XZ,public: __thiscall PGUITRTextureFactory::PGUITRTextureFactory(void)
+7,0x62b0,0x100062b0,??0PGUITRViewportHandler@@QAE@AAVPGUITRRenderObject@@@Z,public: __thiscall PGUITRViewportHandler::PGUITRViewportHandler(class PGUITRRenderObject &)
+8,0x67e0,0x100067e0,??0PGUITRViewportHandler@@QAE@ABV0@@Z,public: __thiscall PGUITRViewportHandler::PGUITRViewportHandler(class PGUITRViewportHandler const &)
+9,0x77c0,0x100077c0,??0Texture@PGUITRTextureFactory@@QAE@ABVTPCString@Toshi@@PAV1@PAVTSpriteMaterial@3@HH@Z,"public: __thiscall PGUITRTextureFactory::Texture::Texture(class Toshi::TPCString const &,class PGUITRTextureFactory *,class Toshi::TSpriteMaterial *,int,int)"
+10,0x7770,0x10007770,??0Texture@PGUITRTextureFactory@@QAE@ABVTPCString@Toshi@@PAV1@_N@Z,"public: __thiscall PGUITRTextureFactory::Texture::Texture(class Toshi::TPCString const &,class PGUITRTextureFactory *,bool)"
+11,0x5c80,0x10005c80,??0TextureSet@PGUITRTextureFactory@@QAE@PAV1@@Z,public: __thiscall PGUITRTextureFactory::TextureSet::TextureSet(class PGUITRTextureFactory *)
+12,0x5b10,0x10005b10,??1Font@PGUITRFontFactory@@QAE@XZ,public: __thiscall PGUITRFontFactory::Font::~Font(void)
+13,0x1140,0x10001140,??1PGUITRDisplayContext@@UAE@XZ,public: virtual __thiscall PGUITRDisplayContext::~PGUITRDisplayContext(void)
+14,0x6150,0x10006150,??1PGUITRFontFactory@@UAE@XZ,public: virtual __thiscall PGUITRFontFactory::~PGUITRFontFactory(void)
+15,0x6680,0x10006680,??1PGUITRRenderObject@@UAE@XZ,public: virtual __thiscall PGUITRRenderObject::~PGUITRRenderObject(void)
+16,0x7da0,0x10007da0,??1PGUITRTextureFactory@@UAE@XZ,public: virtual __thiscall PGUITRTextureFactory::~PGUITRTextureFactory(void)
+17,0x67b0,0x100067b0,??1PGUITRViewportHandler@@QAE@XZ,public: __thiscall PGUITRViewportHandler::~PGUITRViewportHandler(void)
+18,0x7b50,0x10007b50,??1Texture@PGUITRTextureFactory@@QAE@XZ,public: __thiscall PGUITRTextureFactory::Texture::~Texture(void)
+19,0x5c30,0x10005c30,??1TextureSet@PGUITRTextureFactory@@QAE@XZ,public: __thiscall PGUITRTextureFactory::TextureSet::~TextureSet(void)
+20,0x6090,0x10006090,??4Font@PGUITRFontFactory@@QAEAAV01@ABV01@@Z,public: class PGUITRFontFactory::Font & __thiscall PGUITRFontFactory::Font::operator=(class PGUITRFontFactory::Font const &)
+21,0xe100,0x1000e100,??_7PGUITRDisplayContext@@6B@,const PGUITRDisplayContext::`vftable'
+22,0xe200,0x1000e200,??_7PGUITRFontFactory@@6B@,const PGUITRFontFactory::`vftable'
+23,0xe260,0x1000e260,??_7PGUITRRenderObject@@6B@,const PGUITRRenderObject::`vftable'
+24,0xe2e0,0x1000e2e0,??_7PGUITRTextureFactory@@6B@,const PGUITRTextureFactory::`vftable'
+25,0x7930,0x10007930,?Add@TextureSet@PGUITRTextureFactory@@QAEXPBD@Z,public: void __thiscall PGUITRTextureFactory::TextureSet::Add(char const *)
+26,0x70e0,0x100070e0,?AllocateTextureID@PGUITRTextureFactory@@IAEFXZ,protected: short __thiscall PGUITRTextureFactory::AllocateTextureID(void)
+27,0x5a40,0x10005a40,?BeginPostpone@PGUITRDisplayContext@@UAEXXZ,public: virtual void __thiscall PGUITRDisplayContext::BeginPostpone(void)
+28,0x12e0,0x100012e0,?BeginScene@PGUITRDisplayContext@@UAEXXZ,public: virtual void __thiscall PGUITRDisplayContext::BeginScene(void)
+29,0x63a0,0x100063a0,?ConnectEventHandlers@PGUITRViewportHandler@@AAEXXZ,private: void __thiscall PGUITRViewportHandler::ConnectEventHandlers(void)
+30,0x5920,0x10005920,?Create@PGUITRDisplayContext@@AAEXXZ,private: void __thiscall PGUITRDisplayContext::Create(void)
+31,0x11b0,0x100011b0,?Create@PGUITRDisplayContext@@QAEXV?$TManagedPtr@VTRenderInterface@Toshi@@@Toshi@@@Z,public: void __thiscall PGUITRDisplayContext::Create(class Toshi::TManagedPtr<class Toshi::TRenderInterface>)
+32,0x1260,0x10001260,?Create@PGUITRDisplayContext@@QAEXV?$TManagedPtr@VTRenderInterface@Toshi@@@Toshi@@PAVPGUITRTextureFactory@@PAVPGUITRFontFactory@@@Z,"public: void __thiscall PGUITRDisplayContext::Create(class Toshi::TManagedPtr<class Toshi::TRenderInterface>,class PGUITRTextureFactory *,class PGUITRFontFactory *)"
+33,0x6140,0x10006140,?Create@PGUITRFontFactory@@QAEXPAVPGUITRDisplayContext@@@Z,public: void __thiscall PGUITRFontFactory::Create(class PGUITRDisplayContext *)
+34,0x6660,0x10006660,?Create@PGUITRRenderObject@@UAE_NH@Z,public: virtual bool __thiscall PGUITRRenderObject::Create(int)
+35,0x7c60,0x10007c60,?Create@PGUITRTextureFactory@@QAEXPAVPGUITRDisplayContext@@@Z,public: void __thiscall PGUITRTextureFactory::Create(class PGUITRDisplayContext *)
+36,0x5ab0,0x10005ab0,?CreateObject@PGUITRDisplayContext@@CGPAVTObject@Toshi@@XZ,private: static class Toshi::TObject * __stdcall PGUITRDisplayContext::CreateObject(void)
+37,0x61f0,0x100061f0,?CreateObject@PGUITRFontFactory@@CGPAVTObject@Toshi@@XZ,private: static class Toshi::TObject * __stdcall PGUITRFontFactory::CreateObject(void)
+38,0x6700,0x10006700,?CreateObject@PGUITRRenderObject@@CGPAVTObject@Toshi@@XZ,private: static class Toshi::TObject * __stdcall PGUITRRenderObject::CreateObject(void)
+39,0x7e10,0x10007e10,?CreateObject@PGUITRTextureFactory@@CGPAVTObject@Toshi@@XZ,private: static class Toshi::TObject * __stdcall PGUITRTextureFactory::CreateObject(void)
+40,0x5a90,0x10005a90,?CreateObjectInPlace@PGUITRDisplayContext@@CGPAVTObject@Toshi@@PAX@Z,private: static class Toshi::TObject * __stdcall PGUITRDisplayContext::CreateObjectInPlace(void *)
+41,0x61d0,0x100061d0,?CreateObjectInPlace@PGUITRFontFactory@@CGPAVTObject@Toshi@@PAX@Z,private: static class Toshi::TObject * __stdcall PGUITRFontFactory::CreateObjectInPlace(void *)
+42,0x66e0,0x100066e0,?CreateObjectInPlace@PGUITRRenderObject@@CGPAVTObject@Toshi@@PAX@Z,private: static class Toshi::TObject * __stdcall PGUITRRenderObject::CreateObjectInPlace(void *)
+43,0x7df0,0x10007df0,?CreateObjectInPlace@PGUITRTextureFactory@@CGPAVTObject@Toshi@@PAX@Z,private: static class Toshi::TObject * __stdcall PGUITRTextureFactory::CreateObjectInPlace(void *)
+44,0x5a70,0x10005a70,?DeinitialiseStatic@PGUITRDisplayContext@@CGXXZ,private: static void __stdcall PGUITRDisplayContext::DeinitialiseStatic(void)
+45,0x61b0,0x100061b0,?DeinitialiseStatic@PGUITRFontFactory@@CGXXZ,private: static void __stdcall PGUITRFontFactory::DeinitialiseStatic(void)
+46,0x66c0,0x100066c0,?DeinitialiseStatic@PGUITRRenderObject@@CGXXZ,private: static void __stdcall PGUITRRenderObject::DeinitialiseStatic(void)
+47,0x7dd0,0x10007dd0,?DeinitialiseStatic@PGUITRTextureFactory@@CGXXZ,private: static void __stdcall PGUITRTextureFactory::DeinitialiseStatic(void)
+48,0x6a80,0x10006a80,?DestroyTexture@PGUITRTextureFactory@@QAEXF@Z,public: void __thiscall PGUITRTextureFactory::DestroyTexture(short)
+49,0x6430,0x10006430,?DisconnectEventHandlers@PGUITRViewportHandler@@AAEXXZ,private: void __thiscall PGUITRViewportHandler::DisconnectEventHandlers(void)
+50,0x1ec0,0x10001ec0,?DrawLabel@PGUITRDisplayContext@@UAEXPBVTGUIRectangle@Toshi@@PBVTGUIFont@3@ABVTGUIColour@3@ABVTLString@3@0@Z,"public: virtual void __thiscall PGUITRDisplayContext::DrawLabel(class Toshi::TGUIRectangle const *,class Toshi::TGUIFont const *,class Toshi::TGUIColour const &,class Toshi::TLString const &,class Toshi::TGUIRectangle const *)"
+51,0x1e50,0x10001e50,?DrawLabel@PGUITRDisplayContext@@UAEXPBVTGUIRectangle@Toshi@@PBVTGUIFont@3@ABVTGUIColour@3@ABVTLString@3@@Z,"public: virtual void __thiscall PGUITRDisplayContext::DrawLabel(class Toshi::TGUIRectangle const *,class Toshi::TGUIFont const *,class Toshi::TGUIColour const &,class Toshi::TLString const &)"
+52,0x1c30,0x10001c30,?DrawLabel@PGUITRDisplayContext@@UAEXPBVTGUIRectangle@Toshi@@PBVTGUIFont@3@ABVTGUIColour@3@ABVTWString@3@_N@Z,"public: virtual void __thiscall PGUITRDisplayContext::DrawLabel(class Toshi::TGUIRectangle const *,class Toshi::TGUIFont const *,class Toshi::TGUIColour const &,class Toshi::TWString const &,bool)"
+53,0x1b60,0x10001b60,?DrawLine@PGUITRDisplayContext@@UAEXHHHHABVTGUIColour@Toshi@@@Z,"public: virtual void __thiscall PGUITRDisplayContext::DrawLine(int,int,int,int,class Toshi::TGUIColour const &)"
+54,0x5a20,0x10005a20,?DrawPostpone@PGUITRDisplayContext@@UAEXXZ,public: virtual void __thiscall PGUITRDisplayContext::DrawPostpone(void)
+55,0x2190,0x10002190,?DrawTexturePie@PGUITRDisplayContext@@UAEXPBVTGUITextureSection@Toshi@@ABVTGUIColour@3@HHMM@Z,"public: virtual void __thiscall PGUITRDisplayContext::DrawTexturePie(class Toshi::TGUITextureSection const *,class Toshi::TGUIColour const &,int,int,float,float)"
+56,0x5a30,0x10005a30,?EndPostpone@PGUITRDisplayContext@@UAEXXZ,public: virtual void __thiscall PGUITRDisplayContext::EndPostpone(void)
+57,0x5a50,0x10005a50,?EndScene@PGUITRDisplayContext@@UAEXXZ,public: virtual void __thiscall PGUITRDisplayContext::EndScene(void)
+58,0x5fb0,0x10005fb0,?FindFontID@PGUITRFontFactory@@UAEHABVTPCString@Toshi@@@Z,public: virtual int __thiscall PGUITRFontFactory::FindFontID(class Toshi::TPCString const &)
+59,0x6b80,0x10006b80,?FindTextureID@PGUITRTextureFactory@@UAEFABVTPCString@Toshi@@@Z,public: virtual short __thiscall PGUITRTextureFactory::FindTextureID(class Toshi::TPCString const &)
+60,0x36d0,0x100036d0,?FollowRectIntoMesh@PGUITRDisplayContext@@QAEXPAVTexture@PGUITRTextureFactory@@ABVTGUIColour@Toshi@@MMMMMMMMMW4StripDirection@1@@Z,"public: void __thiscall PGUITRDisplayContext::FollowRectIntoMesh(class PGUITRTextureFactory::Texture *,class Toshi::TGUIColour const &,float,float,float,float,float,float,float,float,float,enum PGUITRDisplayContext::StripDirection)"
+61,0x5a10,0x10005a10,?GetBackDepth@PGUITRDisplayContext@@UAEMXZ,public: virtual float __thiscall PGUITRDisplayContext::GetBackDepth(void)
+62,0x5ae0,0x10005ae0,?GetClass@PGUITRDisplayContext@@UBEAAVTClass@Toshi@@XZ,public: virtual class Toshi::TClass & __thiscall PGUITRDisplayContext::GetClass(void)const 
+63,0x6220,0x10006220,?GetClass@PGUITRFontFactory@@UBEAAVTClass@Toshi@@XZ,public: virtual class Toshi::TClass & __thiscall PGUITRFontFactory::GetClass(void)const 
+64,0x6730,0x10006730,?GetClass@PGUITRRenderObject@@UBEAAVTClass@Toshi@@XZ,public: virtual class Toshi::TClass & __thiscall PGUITRRenderObject::GetClass(void)const 
+65,0x7e40,0x10007e40,?GetClass@PGUITRTextureFactory@@UBEAAVTClass@Toshi@@XZ,public: virtual class Toshi::TClass & __thiscall PGUITRTextureFactory::GetClass(void)const 
+66,0x59f0,0x100059f0,?GetDepthIncrement@PGUITRDisplayContext@@UAEMXZ,public: virtual float __thiscall PGUITRDisplayContext::GetDepthIncrement(void)
+67,0x7bb0,0x10007bb0,?GetFirstTextureID@PGUITRTextureFactory@@UBEFXZ,public: virtual short __thiscall PGUITRTextureFactory::GetFirstTextureID(void)const 
+68,0x7b20,0x10007b20,?GetFlag@Texture@PGUITRTextureFactory@@QBE_NW4TextureFlag@TGUITextureFactory@Toshi@@@Z,public: bool __thiscall PGUITRTextureFactory::Texture::GetFlag(enum Toshi::TGUITextureFactory::TextureFlag)const 
+69,0x6100,0x10006100,?GetFont@PGUITRFontFactory@@QBEPAVFont@1@H@Z,public: class PGUITRFontFactory::Font * __thiscall PGUITRFontFactory::GetFont(int)const 
+70,0x5b50,0x10005b50,?GetFontCount@PGUITRFontFactory@@QBEHXZ,public: int __thiscall PGUITRFontFactory::GetFontCount(void)const 
+71,0x5bc0,0x10005bc0,?GetFontFactory@PGUITRDisplayContext@@QAEPAVPGUITRFontFactory@@XZ,public: class PGUITRFontFactory * __thiscall PGUITRDisplayContext::GetFontFactory(void)
+72,0x5e30,0x10005e30,?GetFontID@PGUITRFontFactory@@UAEHABVTPCString@Toshi@@@Z,public: virtual int __thiscall PGUITRFontFactory::GetFontID(class Toshi::TPCString const &)
+73,0x6130,0x10006130,?GetFontName@PGUITRFontFactory@@UBEABVTPCString@Toshi@@H@Z,public: virtual class Toshi::TPCString const & __thiscall PGUITRFontFactory::GetFontName(int)const 
+74,0x5a00,0x10005a00,?GetFrontDepth@PGUITRDisplayContext@@UAEMXZ,public: virtual float __thiscall PGUITRDisplayContext::GetFrontDepth(void)
+75,0x5cc0,0x10005cc0,?GetHeight@Texture@PGUITRTextureFactory@@QAEHXZ,public: int __thiscall PGUITRTextureFactory::Texture::GetHeight(void)
+76,0x5cb0,0x10005cb0,?GetMaterial@Texture@PGUITRTextureFactory@@QBEPAVTSpriteMaterial@Toshi@@XZ,public: class Toshi::TSpriteMaterial * __thiscall PGUITRTextureFactory::Texture::GetMaterial(void)const 
+77,0x5b40,0x10005b40,?GetName@Font@PGUITRFontFactory@@QBEABVTPCString@Toshi@@XZ,public: class Toshi::TPCString const & __thiscall PGUITRFontFactory::Font::GetName(void)const 
+78,0x7b40,0x10007b40,?GetName@Texture@PGUITRTextureFactory@@QBEABVTPCString@Toshi@@XZ,public: class Toshi::TPCString const & __thiscall PGUITRTextureFactory::Texture::GetName(void)const 
+79,0x7b90,0x10007b90,?GetNextTextureID@PGUITRTextureFactory@@UBEFF@Z,public: virtual short __thiscall PGUITRTextureFactory::GetNextTextureID(short)const 
+80,0x5c20,0x10005c20,?GetRenderInterface@PGUITRDisplayContext@@QBEPAVTRenderInterface@Toshi@@XZ,public: class Toshi::TRenderInterface * __thiscall PGUITRDisplayContext::GetRenderInterface(void)const 
+81,0x6760,0x10006760,?GetRenderObject@PGUITRViewportHandler@@QAEAAVPGUITRRenderObject@@XZ,public: class PGUITRRenderObject & __thiscall PGUITRViewportHandler::GetRenderObject(void)
+82,0x67a0,0x100067a0,?GetRenderOrder@PGUITRRenderObject@@QBEHXZ,public: int __thiscall PGUITRRenderObject::GetRenderOrder(void)const 
+83,0x6770,0x10006770,?GetRenderer@PGUITRViewportHandler@@QAEPAVTRenderInterface@Toshi@@XZ,public: class Toshi::TRenderInterface * __thiscall PGUITRViewportHandler::GetRenderer(void)
+84,0x5bf0,0x10005bf0,?GetScaleX@PGUITRDisplayContext@@QBEMXZ,public: float __thiscall PGUITRDisplayContext::GetScaleX(void)const 
+85,0x5be0,0x10005be0,?GetScaleY@PGUITRDisplayContext@@QBEMXZ,public: float __thiscall PGUITRDisplayContext::GetScaleY(void)const 
+86,0x6630,0x10006630,?GetScreen@PGUITRRenderObject@@QAEPAVTGUIScreen@Toshi@@XZ,public: class Toshi::TGUIScreen * __thiscall PGUITRRenderObject::GetScreen(void)
+87,0x5bb0,0x10005bb0,?GetShader@PGUITRDisplayContext@@QBEPAVTSpriteShader@Toshi@@XZ,public: class Toshi::TSpriteShader * __thiscall PGUITRDisplayContext::GetShader(void)const 
+88,0x7b70,0x10007b70,?GetShader@PGUITRTextureFactory@@QAEPAVTSpriteShader@Toshi@@XZ,public: class Toshi::TSpriteShader * __thiscall PGUITRTextureFactory::GetShader(void)
+89,0x6c40,0x10006c40,?GetTexture@PGUITRTextureFactory@@QAEPAVTexture@1@ABVTPCString@Toshi@@@Z,public: class PGUITRTextureFactory::Texture * __thiscall PGUITRTextureFactory::GetTexture(class Toshi::TPCString const &)
+90,0x7b80,0x10007b80,?GetTexture@PGUITRTextureFactory@@QAEPAVTexture@1@F@Z,public: class PGUITRTextureFactory::Texture * __thiscall PGUITRTextureFactory::GetTexture(short)
+91,0x5d00,0x10005d00,?GetTextureCount@PGUITRTextureFactory@@QBEHXZ,public: int __thiscall PGUITRTextureFactory::GetTextureCount(void)const 
+92,0x5bd0,0x10005bd0,?GetTextureFactory@PGUITRDisplayContext@@QAEPAVPGUITRTextureFactory@@XZ,public: class PGUITRTextureFactory * __thiscall PGUITRDisplayContext::GetTextureFactory(void)
+93,0x7be0,0x10007be0,?GetTextureFlag@PGUITRTextureFactory@@UBE_NFW4TextureFlag@TGUITextureFactory@Toshi@@@Z,"public: virtual bool __thiscall PGUITRTextureFactory::GetTextureFlag(short,enum Toshi::TGUITextureFactory::TextureFlag)const "
+94,0x7c00,0x10007c00,?GetTextureHeight@PGUITRTextureFactory@@UBEFF@Z,public: virtual short __thiscall PGUITRTextureFactory::GetTextureHeight(short)const 
+95,0x6980,0x10006980,?GetTextureID@PGUITRTextureFactory@@QAEFPAVTTextureResource@Toshi@@@Z,public: short __thiscall PGUITRTextureFactory::GetTextureID(class Toshi::TTextureResource *)
+96,0x6b20,0x10006b20,?GetTextureID@PGUITRTextureFactory@@UAEFABVTPCString@Toshi@@@Z,public: virtual short __thiscall PGUITRTextureFactory::GetTextureID(class Toshi::TPCString const &)
+97,0x7c40,0x10007c40,?GetTextureName@PGUITRTextureFactory@@UBEABVTPCString@Toshi@@F@Z,public: virtual class Toshi::TPCString const & __thiscall PGUITRTextureFactory::GetTextureName(short)const 
+98,0x7c20,0x10007c20,?GetTextureWidth@PGUITRTextureFactory@@UBEFF@Z,public: virtual short __thiscall PGUITRTextureFactory::GetTextureWidth(short)const 
+99,0x6640,0x10006640,?GetViewport@PGUITRRenderObject@@QBEPAVTViewport@Toshi@@XZ,public: class Toshi::TViewport * __thiscall PGUITRRenderObject::GetViewport(void)const 
+100,0x6750,0x10006750,?GetViewport@PGUITRViewportHandler@@QAEPAVTViewport@Toshi@@XZ,public: class Toshi::TViewport * __thiscall PGUITRViewportHandler::GetViewport(void)
+101,0x5cd0,0x10005cd0,?GetWidth@Texture@PGUITRTextureFactory@@QAEHXZ,public: int __thiscall PGUITRTextureFactory::Texture::GetWidth(void)
+102,0x39e0,0x100039e0,?Imp_DrawFilledRectangle@PGUITRDisplayContext@@MAEXHHHHABVTGUIColour@Toshi@@@Z,"protected: virtual void __thiscall PGUITRDisplayContext::Imp_DrawFilledRectangle(int,int,int,int,class Toshi::TGUIColour const &)"
+103,0x3910,0x10003910,?Imp_DrawOutlineRectangle@PGUITRDisplayContext@@MAEXHHHHABVTGUIColour@Toshi@@@Z,"protected: virtual void __thiscall PGUITRDisplayContext::Imp_DrawOutlineRectangle(int,int,int,int,class Toshi::TGUIColour const &)"
+104,0x3790,0x10003790,?Imp_DrawTextureSection@PGUITRDisplayContext@@MAEXPBVTGUITextureSection@Toshi@@ABVTGUIColour@3@HHHHW4TGUIAlignment@3@2@Z,"protected: virtual void __thiscall PGUITRDisplayContext::Imp_DrawTextureSection(class Toshi::TGUITextureSection const *,class Toshi::TGUIColour const &,int,int,int,int,enum Toshi::TGUIAlignment,enum Toshi::TGUIAlignment)"
+105,0x5a80,0x10005a80,?InitialiseStatic@PGUITRDisplayContext@@CGXXZ,private: static void __stdcall PGUITRDisplayContext::InitialiseStatic(void)
+106,0x61c0,0x100061c0,?InitialiseStatic@PGUITRFontFactory@@CGXXZ,private: static void __stdcall PGUITRFontFactory::InitialiseStatic(void)
+107,0x66d0,0x100066d0,?InitialiseStatic@PGUITRRenderObject@@CGXXZ,private: static void __stdcall PGUITRRenderObject::InitialiseStatic(void)
+108,0x7de0,0x10007de0,?InitialiseStatic@PGUITRTextureFactory@@CGXXZ,private: static void __stdcall PGUITRTextureFactory::InitialiseStatic(void)
+109,0x76b0,0x100076b0,?InsertColour@PGUITRTextureFactory@@IAEEPAIAAEI@Z,"protected: unsigned char __thiscall PGUITRTextureFactory::InsertColour(unsigned int *,unsigned char &,unsigned int)"
+110,0x3610,0x10003610,?InsertRectIntoMesh@PGUITRDisplayContext@@QAEXPAVTexture@PGUITRTextureFactory@@ABVTGUIColour@Toshi@@MMMMMMMMMW4StripDirection@1@@Z,"public: void __thiscall PGUITRDisplayContext::InsertRectIntoMesh(class PGUITRTextureFactory::Texture *,class Toshi::TGUIColour const &,float,float,float,float,float,float,float,float,float,enum PGUITRDisplayContext::StripDirection)"
+111,0x78e0,0x100078e0,?Invalidate@Texture@PGUITRTextureFactory@@QAEXXZ,public: void __thiscall PGUITRTextureFactory::Texture::Invalidate(void)
+112,0x7a00,0x10007a00,?Invalidate@TextureSet@PGUITRTextureFactory@@QAEXXZ,public: void __thiscall PGUITRTextureFactory::TextureSet::Invalidate(void)
+113,0x6110,0x10006110,?IsFontIDValid@PGUITRFontFactory@@UBE_NH@Z,public: virtual bool __thiscall PGUITRFontFactory::IsFontIDValid(int)const 
+114,0x6c10,0x10006c10,?IsTextureIDValid@PGUITRTextureFactory@@UBE_NF@Z,public: virtual bool __thiscall PGUITRTextureFactory::IsTextureIDValid(short)const 
+115,0x5ca0,0x10005ca0,?IsValidated@Texture@PGUITRTextureFactory@@QAE_NXZ,public: bool __thiscall PGUITRTextureFactory::Texture::IsValidated(void)
+116,0x6c70,0x10006c70,?LoadTTexture@PGUITRTextureFactory@@UAEPAVTTextureResource@Toshi@@ABVTPCString@3@AAH1@Z,"public: virtual class Toshi::TTextureResource * __thiscall PGUITRTextureFactory::LoadTTexture(class Toshi::TPCString const &,int &,int &)"
+117,0x5b60,0x10005b60,?MirrorUV@PGUITRDisplayContext@@IAEXAAM000_N1@Z,"protected: void __thiscall PGUITRDisplayContext::MirrorUV(float &,float &,float &,float &,bool,bool)"
+118,0x62f0,0x100062f0,?OnBeginRenderEvent@PGUITRViewportHandler@@SG_NPAV1@PAVTViewport@Toshi@@PAVBeginRenderEvent@23@@Z,"public: static bool __stdcall PGUITRViewportHandler::OnBeginRenderEvent(class PGUITRViewportHandler *,class Toshi::TViewport *,class Toshi::TViewport::BeginRenderEvent *)"
+119,0x6650,0x10006650,?OnDestroy@PGUITRRenderObject@@UAEXXZ,public: virtual void __thiscall PGUITRRenderObject::OnDestroy(void)
+120,0x6370,0x10006370,?OnEndRenderEvent@PGUITRViewportHandler@@SG_NPAV1@PAVTViewport@Toshi@@PAVEndRenderEvent@23@@Z,"public: static bool __stdcall PGUITRViewportHandler::OnEndRenderEvent(class PGUITRViewportHandler *,class Toshi::TViewport *,class Toshi::TViewport::EndRenderEvent *)"
+121,0x6320,0x10006320,?OnRenderEvent@PGUITRViewportHandler@@SG_NPAV1@PAVTViewport@Toshi@@PAVRenderEvent@23@@Z,"public: static bool __stdcall PGUITRViewportHandler::OnRenderEvent(class PGUITRViewportHandler *,class Toshi::TViewport *,class Toshi::TViewport::RenderEvent *)"
+122,0x6740,0x10006740,?OnUpdateEvent@PGUITRViewportHandler@@SG_NPAV1@PAVTViewport@Toshi@@PAVUpdateEvent@23@@Z,"public: static bool __stdcall PGUITRViewportHandler::OnUpdateEvent(class PGUITRViewportHandler *,class Toshi::TViewport *,class Toshi::TViewport::UpdateEvent *)"
+123,0x1ac0,0x10001ac0,?PopAdditiveColour@PGUITRDisplayContext@@UAEXXZ,public: virtual void __thiscall PGUITRDisplayContext::PopAdditiveColour(void)
+124,0x1970,0x10001970,?PopModulateColour@PGUITRDisplayContext@@UAEXXZ,public: virtual void __thiscall PGUITRDisplayContext::PopModulateColour(void)
+125,0x1880,0x10001880,?PopTransform@PGUITRDisplayContext@@UAEXXZ,public: virtual void __thiscall PGUITRDisplayContext::PopTransform(void)
+126,0x1a10,0x10001a10,?PushAdditiveColour@PGUITRDisplayContext@@UAEXABVTGUIColour@Toshi@@@Z,public: virtual void __thiscall PGUITRDisplayContext::PushAdditiveColour(class Toshi::TGUIColour const &)
+127,0x18c0,0x100018c0,?PushModulateColour@PGUITRDisplayContext@@UAEXABVTGUIColour@Toshi@@@Z,public: virtual void __thiscall PGUITRDisplayContext::PushModulateColour(class Toshi::TGUIColour const &)
+128,0x1480,0x10001480,?PushRotation@PGUITRDisplayContext@@UAEXMHH@Z,"public: virtual void __thiscall PGUITRDisplayContext::PushRotation(float,int,int)"
+129,0x16b0,0x100016b0,?PushScale@PGUITRDisplayContext@@UAEXMM@Z,"public: virtual void __thiscall PGUITRDisplayContext::PushScale(float,float)"
+130,0x7540,0x10007540,?QuantisePalette256@PGUITRTextureFactory@@IAEEPAIPAEHHH1HHHH_N2@Z,"protected: unsigned char __thiscall PGUITRTextureFactory::QuantisePalette256(unsigned int *,unsigned char *,int,int,int,unsigned char *,int,int,int,int,bool,bool)"
+131,0x7380,0x10007380,?QuantiseRGBA16@PGUITRTextureFactory@@IAEXPAEHHHH0HHHH_N1@Z,"protected: void __thiscall PGUITRTextureFactory::QuantiseRGBA16(unsigned char *,int,int,int,int,unsigned char *,int,int,int,int,bool,bool)"
+132,0x6d60,0x10006d60,?ReadPPM@PGUITRTextureFactory@@QAEPAVTTextureResource@Toshi@@PAEHAAH1@Z,"public: class Toshi::TTextureResource * __thiscall PGUITRTextureFactory::ReadPPM(unsigned char *,int,int &,int &)"
+133,0x40d0,0x100040d0,?RenderComplex@PGUITRDisplayContext@@IAEXPBVTGUITextureSection@Toshi@@ABVTGUIColour@3@HHHHHH@Z,"protected: void __thiscall PGUITRDisplayContext::RenderComplex(class Toshi::TGUITextureSection const *,class Toshi::TGUIColour const &,int,int,int,int,int,int)"
+134,0x3ab0,0x10003ab0,?RenderTexture@PGUITRDisplayContext@@IAEXPBVTGUITextureSection@Toshi@@ABVTGUIColour@3@HHHHHH@Z,"protected: void __thiscall PGUITRDisplayContext::RenderTexture(class Toshi::TGUITextureSection const *,class Toshi::TGUIColour const &,int,int,int,int,int,int)"
+135,0x6a30,0x10006a30,?ReplaceTexture@PGUITRTextureFactory@@QAEXFPAVTTextureResource@Toshi@@@Z,"public: void __thiscall PGUITRTextureFactory::ReplaceTexture(short,class Toshi::TTextureResource *)"
+136,0x6ac0,0x10006ac0,?ReserveTextureID@PGUITRTextureFactory@@UAEFABVTPCString@Toshi@@@Z,public: virtual short __thiscall PGUITRTextureFactory::ReserveTextureID(class Toshi::TPCString const &)
+137,0x6910,0x10006910,?ResolveMaterials@PGUITRTextureFactory@@QAEXXZ,public: void __thiscall PGUITRTextureFactory::ResolveMaterials(void)
+138,0x7b00,0x10007b00,?SetFlag@Texture@PGUITRTextureFactory@@QAEXW4TextureFlag@TGUITextureFactory@Toshi@@_N@Z,"public: void __thiscall PGUITRTextureFactory::Texture::SetFlag(enum Toshi::TGUITextureFactory::TextureFlag,bool)"
+139,0x7ad0,0x10007ad0,?SetMaterial@Texture@PGUITRTextureFactory@@IAEXPAVTSpriteMaterial@Toshi@@HH@Z,"protected: void __thiscall PGUITRTextureFactory::Texture::SetMaterial(class Toshi::TSpriteMaterial *,int,int)"
+140,0x5c10,0x10005c10,?SetScaleX@PGUITRDisplayContext@@QAEXM@Z,public: void __thiscall PGUITRDisplayContext::SetScaleX(float)
+141,0x5c00,0x10005c00,?SetScaleY@PGUITRDisplayContext@@QAEXM@Z,public: void __thiscall PGUITRDisplayContext::SetScaleY(float)
+142,0x6550,0x10006550,?SetScreen@PGUITRRenderObject@@QAEPAVTGUIScreen@Toshi@@PAV23@@Z,public: class Toshi::TGUIScreen * __thiscall PGUITRRenderObject::SetScreen(class Toshi::TGUIScreen *)
+143,0x7bc0,0x10007bc0,?SetTextureFlag@PGUITRTextureFactory@@UAEXFW4TextureFlag@TGUITextureFactory@Toshi@@_N@Z,"public: virtual void __thiscall PGUITRTextureFactory::SetTextureFlag(short,enum Toshi::TGUITextureFactory::TextureFlag,bool)"
+144,0x5ce0,0x10005ce0,?SetTextureRoot@PGUITRTextureFactory@@QAEXABVTCString@Toshi@@@Z,public: void __thiscall PGUITRTextureFactory::SetTextureRoot(class Toshi::TCString const &)
+145,0x64a0,0x100064a0,?SetViewport@PGUITRRenderObject@@QAEPAVTViewport@Toshi@@PAV23@@Z,public: class Toshi::TViewport * __thiscall PGUITRRenderObject::SetViewport(class Toshi::TViewport *)
+146,0x7700,0x10007700,?TestRGBA16@PGUITRTextureFactory@@IAE_NPAEHHHH@Z,"protected: bool __thiscall PGUITRTextureFactory::TestRGBA16(unsigned char *,int,int,int,int)"
+147,0x7810,0x10007810,?Validate@Texture@PGUITRTextureFactory@@QAEXXZ,public: void __thiscall PGUITRTextureFactory::Texture::Validate(void)
+148,0x79c0,0x100079c0,?Validate@TextureSet@PGUITRTextureFactory@@QAEXXZ,public: void __thiscall PGUITRTextureFactory::TextureSet::Validate(void)
+149,0xd2e0,0x1000d2e0,?m_sClass@PGUITRDisplayContext@@2VTClass@Toshi@@A,public: static class Toshi::TClass PGUITRDisplayContext::m_sClass
+150,0xd2a0,0x1000d2a0,?m_sClass@PGUITRFontFactory@@2VTClass@Toshi@@A,public: static class Toshi::TClass PGUITRFontFactory::m_sClass
+151,0xd260,0x1000d260,?m_sClass@PGUITRRenderObject@@2VTClass@Toshi@@A,public: static class Toshi::TClass PGUITRRenderObject::m_sClass
+152,0xd220,0x1000d220,?m_sClass@PGUITRTextureFactory@@2VTClass@Toshi@@A,public: static class Toshi::TClass PGUITRTextureFactory::m_sClass

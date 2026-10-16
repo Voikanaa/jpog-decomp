@@ -1,0 +1,234 @@
+ordinal,rva,va,name,demangled
+1,0xa050,0x1000a050,??0AActionValues@@AAE@XZ,private: __thiscall AActionValues::AActionValues(void)
+2,0xbb80,0x1000bb80,??0AUnitAlberto@@QAE@XZ,public: __thiscall AUnitAlberto::AUnitAlberto(void)
+3,0xd980,0x1000d980,??0AUnitBalloon@@QAE@XZ,public: __thiscall AUnitBalloon::AUnitBalloon(void)
+4,0xf040,0x1000f040,??0AUnitBalloonRide@@QAE@XZ,public: __thiscall AUnitBalloonRide::AUnitBalloonRide(void)
+5,0x11b40,0x10011b40,??0AUnitCerato@@QAE@XZ,public: __thiscall AUnitCerato::AUnitCerato(void)
+6,0x13f80,0x10013f80,??0AUnitCleanerDialog@@QAE@XZ,public: __thiscall AUnitCleanerDialog::AUnitCleanerDialog(void)
+7,0x182f0,0x100182f0,??0AUnitHatchery@@QAE@XZ,public: __thiscall AUnitHatchery::AUnitHatchery(void)
+8,0x187f0,0x100187f0,??0AUnitHatcheryDialog@@QAE@XZ,public: __thiscall AUnitHatcheryDialog::AUnitHatcheryDialog(void)
+9,0x197c0,0x100197c0,??0AUnitHatcheryPowerBox@@QAE@XZ,public: __thiscall AUnitHatcheryPowerBox::AUnitHatcheryPowerBox(void)
+10,0x1ab90,0x1001ab90,??0AUnitInvisBeacon@@QAE@XZ,public: __thiscall AUnitInvisBeacon::AUnitInvisBeacon(void)
+11,0x1b340,0x1001b340,??0AUnitJeep@@QAE@XZ,public: __thiscall AUnitJeep::AUnitJeep(void)
+12,0x1e700,0x1001e700,??0AUnitRanger@@QAE@XZ,public: __thiscall AUnitRanger::AUnitRanger(void)
+13,0x25df0,0x10025df0,??0AUnitTornado@@QAE@XZ,public: __thiscall AUnitTornado::AUnitTornado(void)
+14,0x2d540,0x1002d540,??0AUnitVisitorDialog@@QAE@XZ,public: __thiscall AUnitVisitorDialog::AUnitVisitorDialog(void)
+15,0x306a0,0x100306a0,??0AUnitWaypoint@@QAE@XZ,public: __thiscall AUnitWaypoint::AUnitWaypoint(void)
+16,0xbb70,0x1000bb70,??1AUnitAlberto@@UAE@XZ,public: virtual __thiscall AUnitAlberto::~AUnitAlberto(void)
+17,0xdb10,0x1000db10,??1AUnitBalloon@@UAE@XZ,public: virtual __thiscall AUnitBalloon::~AUnitBalloon(void)
+18,0xf030,0x1000f030,??1AUnitBalloonRide@@UAE@XZ,public: virtual __thiscall AUnitBalloonRide::~AUnitBalloonRide(void)
+19,0x11b30,0x10011b30,??1AUnitCerato@@UAE@XZ,public: virtual __thiscall AUnitCerato::~AUnitCerato(void)
+20,0x13f70,0x10013f70,??1AUnitCleanerDialog@@UAE@XZ,public: virtual __thiscall AUnitCleanerDialog::~AUnitCleanerDialog(void)
+21,0x182b0,0x100182b0,??1AUnitHatchery@@UAE@XZ,public: virtual __thiscall AUnitHatchery::~AUnitHatchery(void)
+22,0x18dc0,0x10018dc0,??1AUnitHatcheryDialog@@UAE@XZ,public: virtual __thiscall AUnitHatcheryDialog::~AUnitHatcheryDialog(void)
+23,0x197b0,0x100197b0,??1AUnitHatcheryPowerBox@@UAE@XZ,public: virtual __thiscall AUnitHatcheryPowerBox::~AUnitHatcheryPowerBox(void)
+24,0x1abc0,0x1001abc0,??1AUnitInvisBeacon@@UAE@XZ,public: virtual __thiscall AUnitInvisBeacon::~AUnitInvisBeacon(void)
+25,0x1b330,0x1001b330,??1AUnitJeep@@UAE@XZ,public: virtual __thiscall AUnitJeep::~AUnitJeep(void)
+26,0x1e6f0,0x1001e6f0,??1AUnitRanger@@UAE@XZ,public: virtual __thiscall AUnitRanger::~AUnitRanger(void)
+27,0x25f80,0x10025f80,??1AUnitTornado@@UAE@XZ,public: virtual __thiscall AUnitTornado::~AUnitTornado(void)
+28,0x2de60,0x1002de60,??1AUnitVisitorDialog@@UAE@XZ,public: virtual __thiscall AUnitVisitorDialog::~AUnitVisitorDialog(void)
+29,0x30690,0x10030690,??1AUnitWaypoint@@UAE@XZ,public: virtual __thiscall AUnitWaypoint::~AUnitWaypoint(void)
+30,0xa760,0x1000a760,??4AActionValues@@QAEAAV0@ABV0@@Z,public: class AActionValues & __thiscall AActionValues::operator=(class AActionValues const &)
+31,0x48d00,0x10048d00,??_7AUnitAlberto@@6B@,const AUnitAlberto::`vftable'
+32,0x49fe0,0x10049fe0,??_7AUnitBalloon@@6B@,const AUnitBalloon::`vftable'
+33,0x4a4a0,0x1004a4a0,??_7AUnitBalloonRide@@6B@,const AUnitBalloonRide::`vftable'
+34,0x4bae0,0x1004bae0,??_7AUnitCerato@@6B@,const AUnitCerato::`vftable'
+35,0x4c4a0,0x1004c4a0,??_7AUnitCleanerDialog@@6B@,const AUnitCleanerDialog::`vftable'
+36,0x4eea0,0x1004eea0,??_7AUnitHatchery@@6B@,const AUnitHatchery::`vftable'
+37,0x4f280,0x1004f280,??_7AUnitHatcheryDialog@@6B@,const AUnitHatcheryDialog::`vftable'
+38,0x4f6e0,0x1004f6e0,??_7AUnitHatcheryPowerBox@@6B@,const AUnitHatcheryPowerBox::`vftable'
+39,0x504a0,0x100504a0,??_7AUnitInvisBeacon@@6B@,const AUnitInvisBeacon::`vftable'
+40,0x50760,0x10050760,??_7AUnitJeep@@6B@,const AUnitJeep::`vftable'
+41,0x527e0,0x100527e0,??_7AUnitRanger@@6B@,const AUnitRanger::`vftable'
+42,0x55a60,0x10055a60,??_7AUnitTornado@@6B@,const AUnitTornado::`vftable'
+43,0x57c40,0x10057c40,??_7AUnitVisitorDialog@@6B@,const AUnitVisitorDialog::`vftable'
+44,0x58960,0x10058960,??_7AUnitWaypoint@@6B@,const AUnitWaypoint::`vftable'
+45,0x2d8c0,0x1002d8c0,?AttachUnit@AUnitVisitorDialog@@MAEXV?$TManagedPtr@VAUnitProxy@@@Toshi@@@Z,protected: virtual void __thiscall AUnitVisitorDialog::AttachUnit(class Toshi::TManagedPtr<class AUnitProxy>)
+46,0x272f0,0x100272f0,?CheckForUnitsInRange@AUnitTornado@@AAEXXZ,private: void __thiscall AUnitTornado::CheckForUnitsInRange(void)
+47,0xddf0,0x1000ddf0,?CmdCrashBalloon@AUnitBalloon@@UAE_NXZ,public: virtual bool __thiscall AUnitBalloon::CmdCrashBalloon(void)
+48,0x2dc50,0x1002dc50,?CreateDinoListRow@AUnitVisitorDialog@@IAEPAVPGUIRowData@@PBVADinoInfo@@@Z,protected: class PGUIRowData * __thiscall AUnitVisitorDialog::CreateDinoListRow(class ADinoInfo const *)
+49,0x2dcb0,0x1002dcb0,?CreateDinoListStarRatingBreak@AUnitVisitorDialog@@IAEPAVPGUIRowData@@H@Z,protected: class PGUIRowData * __thiscall AUnitVisitorDialog::CreateDinoListStarRatingBreak(int)
+50,0xbbe0,0x1000bbe0,?CreateObject@AUnitAlberto@@CGPAVTObject@Toshi@@XZ,private: static class Toshi::TObject * __stdcall AUnitAlberto::CreateObject(void)
+51,0xeb80,0x1000eb80,?CreateObject@AUnitBalloon@@CGPAVTObject@Toshi@@XZ,private: static class Toshi::TObject * __stdcall AUnitBalloon::CreateObject(void)
+52,0xf0a0,0x1000f0a0,?CreateObject@AUnitBalloonRide@@CGPAVTObject@Toshi@@XZ,private: static class Toshi::TObject * __stdcall AUnitBalloonRide::CreateObject(void)
+53,0x11ba0,0x10011ba0,?CreateObject@AUnitCerato@@CGPAVTObject@Toshi@@XZ,private: static class Toshi::TObject * __stdcall AUnitCerato::CreateObject(void)
+54,0x13fe0,0x10013fe0,?CreateObject@AUnitCleanerDialog@@CGPAVTObject@Toshi@@XZ,private: static class Toshi::TObject * __stdcall AUnitCleanerDialog::CreateObject(void)
+55,0x18350,0x10018350,?CreateObject@AUnitHatchery@@CGPAVTObject@Toshi@@XZ,private: static class Toshi::TObject * __stdcall AUnitHatchery::CreateObject(void)
+56,0x195d0,0x100195d0,?CreateObject@AUnitHatcheryDialog@@CGPAVTObject@Toshi@@XZ,private: static class Toshi::TObject * __stdcall AUnitHatcheryDialog::CreateObject(void)
+57,0x19820,0x10019820,?CreateObject@AUnitHatcheryPowerBox@@CGPAVTObject@Toshi@@XZ,private: static class Toshi::TObject * __stdcall AUnitHatcheryPowerBox::CreateObject(void)
+58,0x1aef0,0x1001aef0,?CreateObject@AUnitInvisBeacon@@CGPAVTObject@Toshi@@XZ,private: static class Toshi::TObject * __stdcall AUnitInvisBeacon::CreateObject(void)
+59,0x1b3a0,0x1001b3a0,?CreateObject@AUnitJeep@@CGPAVTObject@Toshi@@XZ,private: static class Toshi::TObject * __stdcall AUnitJeep::CreateObject(void)
+60,0x1e760,0x1001e760,?CreateObject@AUnitRanger@@CGPAVTObject@Toshi@@XZ,private: static class Toshi::TObject * __stdcall AUnitRanger::CreateObject(void)
+61,0x28a00,0x10028a00,?CreateObject@AUnitTornado@@CGPAVTObject@Toshi@@XZ,private: static class Toshi::TObject * __stdcall AUnitTornado::CreateObject(void)
+62,0x2dec0,0x1002dec0,?CreateObject@AUnitVisitorDialog@@CGPAVTObject@Toshi@@XZ,private: static class Toshi::TObject * __stdcall AUnitVisitorDialog::CreateObject(void)
+63,0x30700,0x10030700,?CreateObject@AUnitWaypoint@@CGPAVTObject@Toshi@@XZ,private: static class Toshi::TObject * __stdcall AUnitWaypoint::CreateObject(void)
+64,0xbbc0,0x1000bbc0,?CreateObjectInPlace@AUnitAlberto@@CGPAVTObject@Toshi@@PAX@Z,private: static class Toshi::TObject * __stdcall AUnitAlberto::CreateObjectInPlace(void *)
+65,0xeb60,0x1000eb60,?CreateObjectInPlace@AUnitBalloon@@CGPAVTObject@Toshi@@PAX@Z,private: static class Toshi::TObject * __stdcall AUnitBalloon::CreateObjectInPlace(void *)
+66,0xf080,0x1000f080,?CreateObjectInPlace@AUnitBalloonRide@@CGPAVTObject@Toshi@@PAX@Z,private: static class Toshi::TObject * __stdcall AUnitBalloonRide::CreateObjectInPlace(void *)
+67,0x11b80,0x10011b80,?CreateObjectInPlace@AUnitCerato@@CGPAVTObject@Toshi@@PAX@Z,private: static class Toshi::TObject * __stdcall AUnitCerato::CreateObjectInPlace(void *)
+68,0x13fc0,0x10013fc0,?CreateObjectInPlace@AUnitCleanerDialog@@CGPAVTObject@Toshi@@PAX@Z,private: static class Toshi::TObject * __stdcall AUnitCleanerDialog::CreateObjectInPlace(void *)
+69,0x18330,0x10018330,?CreateObjectInPlace@AUnitHatchery@@CGPAVTObject@Toshi@@PAX@Z,private: static class Toshi::TObject * __stdcall AUnitHatchery::CreateObjectInPlace(void *)
+70,0x195b0,0x100195b0,?CreateObjectInPlace@AUnitHatcheryDialog@@CGPAVTObject@Toshi@@PAX@Z,private: static class Toshi::TObject * __stdcall AUnitHatcheryDialog::CreateObjectInPlace(void *)
+71,0x19800,0x10019800,?CreateObjectInPlace@AUnitHatcheryPowerBox@@CGPAVTObject@Toshi@@PAX@Z,private: static class Toshi::TObject * __stdcall AUnitHatcheryPowerBox::CreateObjectInPlace(void *)
+72,0x1aed0,0x1001aed0,?CreateObjectInPlace@AUnitInvisBeacon@@CGPAVTObject@Toshi@@PAX@Z,private: static class Toshi::TObject * __stdcall AUnitInvisBeacon::CreateObjectInPlace(void *)
+73,0x1b380,0x1001b380,?CreateObjectInPlace@AUnitJeep@@CGPAVTObject@Toshi@@PAX@Z,private: static class Toshi::TObject * __stdcall AUnitJeep::CreateObjectInPlace(void *)
+74,0x1e740,0x1001e740,?CreateObjectInPlace@AUnitRanger@@CGPAVTObject@Toshi@@PAX@Z,private: static class Toshi::TObject * __stdcall AUnitRanger::CreateObjectInPlace(void *)
+75,0x289e0,0x100289e0,?CreateObjectInPlace@AUnitTornado@@CGPAVTObject@Toshi@@PAX@Z,private: static class Toshi::TObject * __stdcall AUnitTornado::CreateObjectInPlace(void *)
+76,0x2dea0,0x1002dea0,?CreateObjectInPlace@AUnitVisitorDialog@@CGPAVTObject@Toshi@@PAX@Z,private: static class Toshi::TObject * __stdcall AUnitVisitorDialog::CreateObjectInPlace(void *)
+77,0x306e0,0x100306e0,?CreateObjectInPlace@AUnitWaypoint@@CGPAVTObject@Toshi@@PAX@Z,private: static class Toshi::TObject * __stdcall AUnitWaypoint::CreateObjectInPlace(void *)
+78,0x18080,0x10018080,?CreatePowerBoxUnit@AUnitHatchery@@IAEXXZ,protected: void __thiscall AUnitHatchery::CreatePowerBoxUnit(void)
+79,0xbba0,0x1000bba0,?DeinitialiseStatic@AUnitAlberto@@CGXXZ,private: static void __stdcall AUnitAlberto::DeinitialiseStatic(void)
+80,0xeb40,0x1000eb40,?DeinitialiseStatic@AUnitBalloon@@CGXXZ,private: static void __stdcall AUnitBalloon::DeinitialiseStatic(void)
+81,0xf060,0x1000f060,?DeinitialiseStatic@AUnitBalloonRide@@CGXXZ,private: static void __stdcall AUnitBalloonRide::DeinitialiseStatic(void)
+82,0x11b60,0x10011b60,?DeinitialiseStatic@AUnitCerato@@CGXXZ,private: static void __stdcall AUnitCerato::DeinitialiseStatic(void)
+83,0x13fa0,0x10013fa0,?DeinitialiseStatic@AUnitCleanerDialog@@CGXXZ,private: static void __stdcall AUnitCleanerDialog::DeinitialiseStatic(void)
+84,0x18310,0x10018310,?DeinitialiseStatic@AUnitHatchery@@CGXXZ,private: static void __stdcall AUnitHatchery::DeinitialiseStatic(void)
+85,0x19590,0x10019590,?DeinitialiseStatic@AUnitHatcheryDialog@@CGXXZ,private: static void __stdcall AUnitHatcheryDialog::DeinitialiseStatic(void)
+86,0x197e0,0x100197e0,?DeinitialiseStatic@AUnitHatcheryPowerBox@@CGXXZ,private: static void __stdcall AUnitHatcheryPowerBox::DeinitialiseStatic(void)
+87,0x1aeb0,0x1001aeb0,?DeinitialiseStatic@AUnitInvisBeacon@@CGXXZ,private: static void __stdcall AUnitInvisBeacon::DeinitialiseStatic(void)
+88,0x1b360,0x1001b360,?DeinitialiseStatic@AUnitJeep@@CGXXZ,private: static void __stdcall AUnitJeep::DeinitialiseStatic(void)
+89,0x1e720,0x1001e720,?DeinitialiseStatic@AUnitRanger@@CGXXZ,private: static void __stdcall AUnitRanger::DeinitialiseStatic(void)
+90,0x289c0,0x100289c0,?DeinitialiseStatic@AUnitTornado@@CGXXZ,private: static void __stdcall AUnitTornado::DeinitialiseStatic(void)
+91,0x2de80,0x1002de80,?DeinitialiseStatic@AUnitVisitorDialog@@CGXXZ,private: static void __stdcall AUnitVisitorDialog::DeinitialiseStatic(void)
+92,0x306c0,0x100306c0,?DeinitialiseStatic@AUnitWaypoint@@CGXXZ,private: static void __stdcall AUnitWaypoint::DeinitialiseStatic(void)
+93,0x1ae00,0x1001ae00,?DeleteComponents@AUnitInvisBeacon@@MAEXXZ,protected: virtual void __thiscall AUnitInvisBeacon::DeleteComponents(void)
+94,0xdcc0,0x1000dcc0,?Deserialise@AUnitBalloon@@UAE_NAAVASaveData@@@Z,public: virtual bool __thiscall AUnitBalloon::Deserialise(class ASaveData &)
+95,0x18020,0x10018020,?Deserialise@AUnitHatchery@@UAE_NAAVASaveData@@@Z,public: virtual bool __thiscall AUnitHatchery::Deserialise(class ASaveData &)
+96,0x1ae20,0x1001ae20,?DoesSatisfyAnyDrives@AUnitInvisBeacon@@UBE_NE@Z,public: virtual bool __thiscall AUnitInvisBeacon::DoesSatisfyAnyDrives(unsigned char)const 
+97,0x1ae30,0x1001ae30,?DoesSatisfyDrive@AUnitInvisBeacon@@UBE_NE@Z,public: virtual bool __thiscall AUnitInvisBeacon::DoesSatisfyDrive(unsigned char)const 
+98,0xeaf0,0x1000eaf0,?ExecuteOrder_JumpToBalloonRideDepot@AUnitBalloon@@IAE_NXZ,protected: bool __thiscall AUnitBalloon::ExecuteOrder_JumpToBalloonRideDepot(void)
+99,0xe910,0x1000e910,?ExecuteOrder_TakePhotos@AUnitBalloon@@IAE_NXZ,protected: bool __thiscall AUnitBalloon::ExecuteOrder_TakePhotos(void)
+100,0x2d9c0,0x1002d9c0,?FindField@AUnitVisitorDialog@@IAEPAVADialogField@@PBD@Z,protected: class ADialogField * __thiscall AUnitVisitorDialog::FindField(char const *)
+101,0xa7e0,0x1000a7e0,?GetActionValues@AActionValues@@SGAAV1@XZ,public: static class AActionValues & __stdcall AActionValues::GetActionValues(void)
+102,0xebc0,0x1000ebc0,?GetBalloonSteer@AUnitBalloon@@IAEAAVABalloonSteer@@XZ,protected: class ABalloonSteer & __thiscall AUnitBalloon::GetBalloonSteer(void)
+103,0xbc10,0x1000bc10,?GetClass@AUnitAlberto@@UBEAAVTClass@Toshi@@XZ,public: virtual class Toshi::TClass & __thiscall AUnitAlberto::GetClass(void)const 
+104,0xebb0,0x1000ebb0,?GetClass@AUnitBalloon@@UBEAAVTClass@Toshi@@XZ,public: virtual class Toshi::TClass & __thiscall AUnitBalloon::GetClass(void)const 
+105,0xf0d0,0x1000f0d0,?GetClass@AUnitBalloonRide@@UBEAAVTClass@Toshi@@XZ,public: virtual class Toshi::TClass & __thiscall AUnitBalloonRide::GetClass(void)const 
+106,0x11bd0,0x10011bd0,?GetClass@AUnitCerato@@UBEAAVTClass@Toshi@@XZ,public: virtual class Toshi::TClass & __thiscall AUnitCerato::GetClass(void)const 
+107,0x14010,0x10014010,?GetClass@AUnitCleanerDialog@@UBEAAVTClass@Toshi@@XZ,public: virtual class Toshi::TClass & __thiscall AUnitCleanerDialog::GetClass(void)const 
+108,0x18380,0x10018380,?GetClass@AUnitHatchery@@UBEAAVTClass@Toshi@@XZ,public: virtual class Toshi::TClass & __thiscall AUnitHatchery::GetClass(void)const 
+109,0x19600,0x10019600,?GetClass@AUnitHatcheryDialog@@UBEAAVTClass@Toshi@@XZ,public: virtual class Toshi::TClass & __thiscall AUnitHatcheryDialog::GetClass(void)const 
+110,0x19850,0x10019850,?GetClass@AUnitHatcheryPowerBox@@UBEAAVTClass@Toshi@@XZ,public: virtual class Toshi::TClass & __thiscall AUnitHatcheryPowerBox::GetClass(void)const 
+111,0x1af20,0x1001af20,?GetClass@AUnitInvisBeacon@@UBEAAVTClass@Toshi@@XZ,public: virtual class Toshi::TClass & __thiscall AUnitInvisBeacon::GetClass(void)const 
+112,0x1b3d0,0x1001b3d0,?GetClass@AUnitJeep@@UBEAAVTClass@Toshi@@XZ,public: virtual class Toshi::TClass & __thiscall AUnitJeep::GetClass(void)const 
+113,0x1e790,0x1001e790,?GetClass@AUnitRanger@@UBEAAVTClass@Toshi@@XZ,public: virtual class Toshi::TClass & __thiscall AUnitRanger::GetClass(void)const 
+114,0x28a30,0x10028a30,?GetClass@AUnitTornado@@UBEAAVTClass@Toshi@@XZ,public: virtual class Toshi::TClass & __thiscall AUnitTornado::GetClass(void)const 
+115,0x2def0,0x1002def0,?GetClass@AUnitVisitorDialog@@UBEAAVTClass@Toshi@@XZ,public: virtual class Toshi::TClass & __thiscall AUnitVisitorDialog::GetClass(void)const 
+116,0x30730,0x10030730,?GetClass@AUnitWaypoint@@UBEAAVTClass@Toshi@@XZ,public: virtual class Toshi::TClass & __thiscall AUnitWaypoint::GetClass(void)const 
+117,0x1ae40,0x1001ae40,?GetCurrentDrive@AUnitInvisBeacon@@UBEEXZ,public: virtual unsigned char __thiscall AUnitInvisBeacon::GetCurrentDrive(void)const 
+118,0x1af70,0x1001af70,?GetHashTimeStamp@AUnitInvisBeacon@@UBE?BIXZ,public: virtual unsigned int const __thiscall AUnitInvisBeacon::GetHashTimeStamp(void)const 
+119,0xa000,0x1000a000,?GetID@AActionValues@@SGHPBD@Z,public: static int __stdcall AActionValues::GetID(char const *)
+120,0xa780,0x1000a780,?GetMessageId@AActionValues@@QAEHW4AActionTypes@1@@Z,public: int __thiscall AActionValues::GetMessageId(enum AActionValues::AActionTypes)
+121,0x1af50,0x1001af50,?GetNNPerception@AUnitInvisBeacon@@UBEPAVAUnitNNPerception@@XZ,public: virtual class AUnitNNPerception * __thiscall AUnitInvisBeacon::GetNNPerception(void)const 
+122,0xa750,0x1000a750,?GetName@AActionValues@@SGABVTCString@Toshi@@W4AActionTypes@1@@Z,public: static class Toshi::TCString const & __stdcall AActionValues::GetName(enum AActionValues::AActionTypes)
+123,0xa800,0x1000a800,?GetOONumTypes@AQualities@@SGMXZ,public: static float __stdcall AQualities::GetOONumTypes(void)
+124,0xd8e0,0x1000d8e0,?GetOrders@AUnitBalloon@@UAEPAVAUnitOrders@@XZ,public: virtual class AUnitOrders * __thiscall AUnitBalloon::GetOrders(void)
+125,0xa810,0x1000a810,?GetOverallScore@AQualities@@QBEMXZ,public: float __thiscall AQualities::GetOverallScore(void)const 
+126,0x1b310,0x1001b310,?GetSceneGraphType@AUnitJeep@@MAEXAA_NAAH@Z,"protected: virtual void __thiscall AUnitJeep::GetSceneGraphType(bool &,int &)"
+127,0x1ae50,0x1001ae50,?GetSimLOD@AUnitInvisBeacon@@UBE?AW4AUnitLOD@AUnit@@XZ,public: virtual enum AUnit::AUnitLOD __thiscall AUnitInvisBeacon::GetSimLOD(void)const 
+128,0xebd0,0x1000ebd0,?GetSteerClass@AUnitBalloon@@MBEAAVTClass@Toshi@@XZ,protected: virtual class Toshi::TClass & __thiscall AUnitBalloon::GetSteerClass(void)const 
+129,0xa7a0,0x1000a7a0,?GetStyle@AActionValues@@QAE?AW4AActionStyle@1@W4AActionTypes@1@@Z,public: enum AActionValues::AActionStyle __thiscall AActionValues::GetStyle(enum AActionValues::AActionTypes)
+130,0x1af60,0x1001af60,?GetUnitHashRef@AUnitInvisBeacon@@UBEPAVAUnitHashRef@@XZ,public: virtual class AUnitHashRef * __thiscall AUnitInvisBeacon::GetUnitHashRef(void)const 
+131,0xa7c0,0x1000a7c0,?GetValue@AActionValues@@QAEMW4AActionTypes@1@W4QualityTypes@AQualities@@@Z,"public: float __thiscall AActionValues::GetValue(enum AActionValues::AActionTypes,enum AQualities::QualityTypes)"
+132,0xa7f0,0x1000a7f0,?GetValue@AQualities@@MBEMW4QualityTypes@1@@Z,protected: virtual float __thiscall AQualities::GetValue(enum AQualities::QualityTypes)const 
+133,0xa8c0,0x1000a8c0,?GetValueCapped@AQualities@@QBEMH@Z,public: float __thiscall AQualities::GetValueCapped(int)const 
+134,0xa900,0x1000a900,?GetValueCapped@AQualities@@QBEMW4QualityTypes@1@@Z,public: float __thiscall AQualities::GetValueCapped(enum AQualities::QualityTypes)const 
+135,0xeb20,0x1000eb20,?HurtUnit@AUnitBalloon@@UAEXMW4UnitHurtType@AUnit@@PAV3@@Z,"public: virtual void __thiscall AUnitBalloon::HurtUnit(float,enum AUnit::UnitHurtType,class AUnit *)"
+136,0x196a0,0x100196a0,?HurtUnit@AUnitHatcheryPowerBox@@MAEXMW4UnitHurtType@AUnit@@PAV3@@Z,"protected: virtual void __thiscall AUnitHatcheryPowerBox::HurtUnit(float,enum AUnit::UnitHurtType,class AUnit *)"
+137,0x261e0,0x100261e0,?HurtUnit@AUnitTornado@@UAEXMW4UnitHurtType@AUnit@@PAV3@@Z,"public: virtual void __thiscall AUnitTornado::HurtUnit(float,enum AUnit::UnitHurtType,class AUnit *)"
+138,0xde60,0x1000de60,?Imp_UpdateAesthetics@AUnitBalloon@@MAEXM@Z,protected: virtual void __thiscall AUnitBalloon::Imp_UpdateAesthetics(float)
+139,0x27230,0x10027230,?Imp_UpdateAesthetics@AUnitTornado@@MAEXM@Z,protected: virtual void __thiscall AUnitTornado::Imp_UpdateAesthetics(float)
+140,0x305d0,0x100305d0,?Imp_UpdateAesthetics@AUnitWaypoint@@UAEXM@Z,public: virtual void __thiscall AUnitWaypoint::Imp_UpdateAesthetics(float)
+141,0xe610,0x1000e610,?Imp_UpdateControl@AUnitBalloon@@MAEXM@Z,protected: virtual void __thiscall AUnitBalloon::Imp_UpdateControl(float)
+142,0x1ac90,0x1001ac90,?Imp_UpdateControl@AUnitInvisBeacon@@UAEXM@Z,public: virtual void __thiscall AUnitInvisBeacon::Imp_UpdateControl(float)
+143,0x264a0,0x100264a0,?Imp_UpdateControl@AUnitTornado@@MAEXM@Z,protected: virtual void __thiscall AUnitTornado::Imp_UpdateControl(float)
+144,0x30680,0x10030680,?Imp_UpdateControl@AUnitWaypoint@@UAEXM@Z,public: virtual void __thiscall AUnitWaypoint::Imp_UpdateControl(float)
+145,0x1ae80,0x1001ae80,?Imp_UpdateMovement@AUnitInvisBeacon@@UAE_NM@Z,public: virtual bool __thiscall AUnitInvisBeacon::Imp_UpdateMovement(float)
+146,0x289a0,0x100289a0,?Imp_UpdateMovement@AUnitTornado@@MAE_NM@Z,protected: virtual bool __thiscall AUnitTornado::Imp_UpdateMovement(float)
+147,0x18210,0x10018210,?InitUIFlags@AUnitHatchery@@AAEX_N@Z,private: void __thiscall AUnitHatchery::InitUIFlags(bool)
+148,0x27e20,0x10027e20,?InitUnitForFling@AUnitTornado@@AAEXAAVAUnitNode@1@_N@Z,"private: void __thiscall AUnitTornado::InitUnitForFling(class AUnitTornado::AUnitNode &,bool)"
+149,0x1acd0,0x1001acd0,?InitialLoadSteeringObject@AUnitInvisBeacon@@IAE_NABVTClass@Toshi@@@Z,protected: bool __thiscall AUnitInvisBeacon::InitialLoadSteeringObject(class Toshi::TClass const &)
+150,0xbbb0,0x1000bbb0,?InitialiseStatic@AUnitAlberto@@CGXXZ,private: static void __stdcall AUnitAlberto::InitialiseStatic(void)
+151,0xeb50,0x1000eb50,?InitialiseStatic@AUnitBalloon@@CGXXZ,private: static void __stdcall AUnitBalloon::InitialiseStatic(void)
+152,0xf070,0x1000f070,?InitialiseStatic@AUnitBalloonRide@@CGXXZ,private: static void __stdcall AUnitBalloonRide::InitialiseStatic(void)
+153,0x11b70,0x10011b70,?InitialiseStatic@AUnitCerato@@CGXXZ,private: static void __stdcall AUnitCerato::InitialiseStatic(void)
+154,0x13fb0,0x10013fb0,?InitialiseStatic@AUnitCleanerDialog@@CGXXZ,private: static void __stdcall AUnitCleanerDialog::InitialiseStatic(void)
+155,0x18320,0x10018320,?InitialiseStatic@AUnitHatchery@@CGXXZ,private: static void __stdcall AUnitHatchery::InitialiseStatic(void)
+156,0x195a0,0x100195a0,?InitialiseStatic@AUnitHatcheryDialog@@CGXXZ,private: static void __stdcall AUnitHatcheryDialog::InitialiseStatic(void)
+157,0x197f0,0x100197f0,?InitialiseStatic@AUnitHatcheryPowerBox@@CGXXZ,private: static void __stdcall AUnitHatcheryPowerBox::InitialiseStatic(void)
+158,0x1aec0,0x1001aec0,?InitialiseStatic@AUnitInvisBeacon@@CGXXZ,private: static void __stdcall AUnitInvisBeacon::InitialiseStatic(void)
+159,0x1b370,0x1001b370,?InitialiseStatic@AUnitJeep@@CGXXZ,private: static void __stdcall AUnitJeep::InitialiseStatic(void)
+160,0x1e730,0x1001e730,?InitialiseStatic@AUnitRanger@@CGXXZ,private: static void __stdcall AUnitRanger::InitialiseStatic(void)
+161,0x289d0,0x100289d0,?InitialiseStatic@AUnitTornado@@CGXXZ,private: static void __stdcall AUnitTornado::InitialiseStatic(void)
+162,0x2de90,0x1002de90,?InitialiseStatic@AUnitVisitorDialog@@CGXXZ,private: static void __stdcall AUnitVisitorDialog::InitialiseStatic(void)
+163,0x306d0,0x100306d0,?InitialiseStatic@AUnitWaypoint@@CGXXZ,private: static void __stdcall AUnitWaypoint::InitialiseStatic(void)
+164,0xd780,0x1000d780,?InsertOrders@AUnitBalloon@@KGXXZ,protected: static void __stdcall AUnitBalloon::InsertOrders(void)
+165,0x1af30,0x1001af30,?IsHashException@AUnitInvisBeacon@@UBE_NXZ,public: virtual bool __thiscall AUnitInvisBeacon::IsHashException(void)const 
+166,0x1af40,0x1001af40,?IsHashExclude@AUnitInvisBeacon@@UBE_NXZ,public: virtual bool __thiscall AUnitInvisBeacon::IsHashExclude(void)const 
+167,0xeb00,0x1000eb00,?IsOrderAllowed_JumpToBalloonRideDepot@AUnitBalloon@@IAE_NXZ,protected: bool __thiscall AUnitBalloon::IsOrderAllowed_JumpToBalloonRideDepot(void)
+168,0xead0,0x1000ead0,?IsOrderAllowed_TakePhotos@AUnitBalloon@@IAE_NXZ,protected: bool __thiscall AUnitBalloon::IsOrderAllowed_TakePhotos(void)
+169,0xebe0,0x1000ebe0,?IsSerialiseable@AUnitBalloon@@UAE_NXZ,public: virtual bool __thiscall AUnitBalloon::IsSerialiseable(void)
+170,0x18260,0x10018260,?IsSerialiseable@AUnitHatchery@@UAE_NXZ,public: virtual bool __thiscall AUnitHatchery::IsSerialiseable(void)
+171,0x19860,0x10019860,?IsSerialiseable@AUnitHatcheryPowerBox@@MAE_NXZ,protected: virtual bool __thiscall AUnitHatcheryPowerBox::IsSerialiseable(void)
+172,0x1ae70,0x1001ae70,?IsSerialiseable@AUnitInvisBeacon@@UAE_NXZ,public: virtual bool __thiscall AUnitInvisBeacon::IsSerialiseable(void)
+173,0x30740,0x10030740,?IsSerialiseable@AUnitWaypoint@@UAE_NXZ,public: virtual bool __thiscall AUnitWaypoint::IsSerialiseable(void)
+174,0x1afa0,0x1001afa0,?IsUnitDead@AUnitInvisBeacon@@UBE_NXZ,public: virtual bool __thiscall AUnitInvisBeacon::IsUnitDead(void)const 
+175,0x27cf0,0x10027cf0,?MoveUnitsInLayerUp@AUnitTornado@@AAEXI@Z,private: void __thiscall AUnitTornado::MoveUnitsInLayerUp(unsigned int)
+176,0x18e80,0x10018e80,?OnActivate@AUnitHatcheryDialog@@MAE_NXZ,protected: virtual bool __thiscall AUnitHatcheryDialog::OnActivate(void)
+177,0x2d870,0x1002d870,?OnActivate@AUnitVisitorDialog@@MAE_NXZ,protected: virtual bool __thiscall AUnitVisitorDialog::OnActivate(void)
+178,0xbb50,0x1000bb50,?OnCreate@AUnitAlberto@@MAE_NXZ,protected: virtual bool __thiscall AUnitAlberto::OnCreate(void)
+179,0xdb40,0x1000db40,?OnCreate@AUnitBalloon@@UAE_NXZ,public: virtual bool __thiscall AUnitBalloon::OnCreate(void)
+180,0x11b10,0x10011b10,?OnCreate@AUnitCerato@@MAE_NXZ,protected: virtual bool __thiscall AUnitCerato::OnCreate(void)
+181,0x182a0,0x100182a0,?OnCreate@AUnitHatchery@@UAE_NXZ,public: virtual bool __thiscall AUnitHatchery::OnCreate(void)
+182,0x1abf0,0x1001abf0,?OnCreate@AUnitInvisBeacon@@UAE_NXZ,public: virtual bool __thiscall AUnitInvisBeacon::OnCreate(void)
+183,0x26300,0x10026300,?OnCreate@AUnitTornado@@MAE_NXZ,protected: virtual bool __thiscall AUnitTornado::OnCreate(void)
+184,0x30580,0x10030580,?OnCreate@AUnitWaypoint@@UAE_NXZ,public: virtual bool __thiscall AUnitWaypoint::OnCreate(void)
+185,0x19560,0x10019560,?OnDeactivate@AUnitHatcheryDialog@@MAE_NXZ,protected: virtual bool __thiscall AUnitHatcheryDialog::OnDeactivate(void)
+186,0x2de30,0x1002de30,?OnDeactivate@AUnitVisitorDialog@@MAE_NXZ,protected: virtual bool __thiscall AUnitVisitorDialog::OnDeactivate(void)
+187,0x18270,0x10018270,?OnDestroy@AUnitHatchery@@UAEXXZ,public: virtual void __thiscall AUnitHatchery::OnDestroy(void)
+188,0x1ae90,0x1001ae90,?OnDestroy@AUnitInvisBeacon@@UAEXXZ,public: virtual void __thiscall AUnitInvisBeacon::OnDestroy(void)
+189,0x26450,0x10026450,?OnDestroy@AUnitTornado@@MAEXXZ,protected: virtual void __thiscall AUnitTornado::OnDestroy(void)
+190,0x19530,0x10019530,?OnFlushDinosaurModelsResponse@AUnitHatcheryDialog@@CG_NPAV1@PAVAGameController@@PAVFlushDinosaurModelsEvent@2@@Z,"private: static bool __stdcall AUnitHatcheryDialog::OnFlushDinosaurModelsResponse(class AUnitHatcheryDialog *,class AGameController *,class AGameController::FlushDinosaurModelsEvent *)"
+191,0xb5a0,0x1000b5a0,?OnLoadBehaviour@AUnitAlberto@@MAEXXZ,protected: virtual void __thiscall AUnitAlberto::OnLoadBehaviour(void)
+192,0x11560,0x10011560,?OnLoadBehaviour@AUnitCerato@@MAEXXZ,protected: virtual void __thiscall AUnitCerato::OnLoadBehaviour(void)
+193,0x18280,0x10018280,?OnPostCreate@AUnitHatchery@@UAEXXZ,public: virtual void __thiscall AUnitHatchery::OnPostCreate(void)
+194,0x2d950,0x1002d950,?OnUpdate@AUnitVisitorDialog@@MAE_NM@Z,protected: virtual bool __thiscall AUnitVisitorDialog::OnUpdate(float)
+195,0x27870,0x10027870,?PickUpUnit@AUnitTornado@@AAEXPAVAVisibleUnit@@@Z,private: void __thiscall AUnitTornado::PickUpUnit(class AVisibleUnit *)
+196,0xeb30,0x1000eb30,?PostDeserialiseLink@AUnitBalloon@@UAEXXZ,public: virtual void __thiscall AUnitBalloon::PostDeserialiseLink(void)
+197,0x2da60,0x1002da60,?RefreshDinoList@AUnitVisitorDialog@@IAEXXZ,protected: void __thiscall AUnitVisitorDialog::RefreshDinoList(void)
+198,0xdba0,0x1000dba0,?Serialise@AUnitBalloon@@UAE_NAAVASaveData@@@Z,public: virtual bool __thiscall AUnitBalloon::Serialise(class ASaveData &)
+199,0x18220,0x10018220,?Serialise@AUnitHatchery@@UAE_NAAVASaveData@@@Z,public: virtual bool __thiscall AUnitHatchery::Serialise(class ASaveData &)
+200,0xb810,0x1000b810,?SetAnimBreakpoints@AUnitAlberto@@MAEXXZ,protected: virtual void __thiscall AUnitAlberto::SetAnimBreakpoints(void)
+201,0x117d0,0x100117d0,?SetAnimBreakpoints@AUnitCerato@@MAEXXZ,protected: virtual void __thiscall AUnitCerato::SetAnimBreakpoints(void)
+202,0x1ae10,0x1001ae10,?SetHashException@AUnitInvisBeacon@@UAE?AW4AUnitHashException@AUnit@@W423@@Z,public: virtual enum AUnit::AUnitHashException __thiscall AUnitInvisBeacon::SetHashException(enum AUnit::AUnitHashException)
+203,0x1af80,0x1001af80,?SetHashTimeStamp@AUnitInvisBeacon@@UAEXI@Z,public: virtual void __thiscall AUnitInvisBeacon::SetHashTimeStamp(unsigned int)
+204,0x1ae60,0x1001ae60,?SetSimLOD@AUnitInvisBeacon@@UAEXW4AUnitLOD@AUnit@@@Z,public: virtual void __thiscall AUnitInvisBeacon::SetSimLOD(enum AUnit::AUnitLOD)
+205,0x1af90,0x1001af90,?SetUnitHashRef@AUnitInvisBeacon@@UAEXPAVAUnitHashRef@@@Z,public: virtual void __thiscall AUnitInvisBeacon::SetUnitHashRef(class AUnitHashRef *)
+206,0xd930,0x1000d930,?StaticGetOrders@AUnitBalloon@@SGPAVAUnitOrders@@XZ,public: static class AUnitOrders * __stdcall AUnitBalloon::StaticGetOrders(void)
+207,0x19360,0x10019360,?TranslateNumber@AUnitHatcheryDialog@@CGXABVPPropertyValue@@AAV2@@Z,"private: static void __stdcall AUnitHatcheryDialog::TranslateNumber(class PPropertyValue const &,class PPropertyValue &)"
+208,0x18ec0,0x10018ec0,?UpdateFields@AUnitHatcheryDialog@@MAEXXZ,protected: virtual void __thiscall AUnitHatcheryDialog::UpdateFields(void)
+209,0x472c0,0x100472c0,?m_sClass@AUnitAlberto@@2VTClass@Toshi@@A,public: static class Toshi::TClass AUnitAlberto::m_sClass
+210,0x471c0,0x100471c0,?m_sClass@AUnitBalloon@@2VTClass@Toshi@@A,public: static class Toshi::TClass AUnitBalloon::m_sClass
+211,0x47180,0x10047180,?m_sClass@AUnitBalloonRide@@2VTClass@Toshi@@A,public: static class Toshi::TClass AUnitBalloonRide::m_sClass
+212,0x46fc0,0x10046fc0,?m_sClass@AUnitCerato@@2VTClass@Toshi@@A,public: static class Toshi::TClass AUnitCerato::m_sClass
+213,0x46f20,0x10046f20,?m_sClass@AUnitCleanerDialog@@2VTClass@Toshi@@A,public: static class Toshi::TClass AUnitCleanerDialog::m_sClass
+214,0x46c60,0x10046c60,?m_sClass@AUnitHatchery@@2VTClass@Toshi@@A,public: static class Toshi::TClass AUnitHatchery::m_sClass
+215,0x46be0,0x10046be0,?m_sClass@AUnitHatcheryDialog@@2VTClass@Toshi@@A,public: static class Toshi::TClass AUnitHatcheryDialog::m_sClass
+216,0x46ba0,0x10046ba0,?m_sClass@AUnitHatcheryPowerBox@@2VTClass@Toshi@@A,public: static class Toshi::TClass AUnitHatcheryPowerBox::m_sClass
+217,0x46aa0,0x10046aa0,?m_sClass@AUnitInvisBeacon@@2VTClass@Toshi@@A,public: static class Toshi::TClass AUnitInvisBeacon::m_sClass
+218,0x46a60,0x10046a60,?m_sClass@AUnitJeep@@2VTClass@Toshi@@A,public: static class Toshi::TClass AUnitJeep::m_sClass
+219,0x46820,0x10046820,?m_sClass@AUnitRanger@@2VTClass@Toshi@@A,public: static class Toshi::TClass AUnitRanger::m_sClass
+220,0x46560,0x10046560,?m_sClass@AUnitTornado@@2VTClass@Toshi@@A,public: static class Toshi::TClass AUnitTornado::m_sClass
+221,0x46320,0x10046320,?m_sClass@AUnitVisitorDialog@@2VTClass@Toshi@@A,public: static class Toshi::TClass AUnitVisitorDialog::m_sClass
+222,0x46240,0x10046240,?m_sClass@AUnitWaypoint@@2VTClass@Toshi@@A,public: static class Toshi::TClass AUnitWaypoint::m_sClass
+223,0x49fc0,0x10049fc0,?m_scfDetachedBalloonAccel@AUnitBalloon@@0MB,private: static float const AUnitBalloon::m_scfDetachedBalloonAccel
+224,0x49fc4,0x10049fc4,?m_scfDetachedBalloonMaxHeight@AUnitBalloon@@0MB,private: static float const AUnitBalloon::m_scfDetachedBalloonMaxHeight
+225,0x471e8,0x100471e8,?m_scoBalloonAnimName@AUnitBalloon@@0VTCString@Toshi@@B,private: static class Toshi::TCString const AUnitBalloon::m_scoBalloonAnimName
+226,0x471f0,0x100471f0,?m_scoBalloonLocatorName@AUnitBalloon@@0VTCString@Toshi@@B,private: static class Toshi::TCString const AUnitBalloon::m_scoBalloonLocatorName
+227,0x46c40,0x10046c40,?ms_coPowerBoxLocatorName@AUnitHatchery@@0VTCString@Toshi@@B,private: static class Toshi::TCString const AUnitHatchery::ms_coPowerBoxLocatorName
+228,0x46c38,0x10046c38,?ms_coPowerBoxUnitName@AUnitHatchery@@0VTCString@Toshi@@B,private: static class Toshi::TCString const AUnitHatchery::ms_coPowerBoxUnitName
+229,0x45bd0,0x10045bd0,?ms_poUnitOrders@AUnitBalloon@@1PAVAUnitOrders@@A,protected: static class AUnitOrders * AUnitBalloon::ms_poUnitOrders
+230,0x475a0,0x100475a0,?scm_aActions@AActionValues@@0QBVTCString@Toshi@@B,private: static class Toshi::TCString const * const AActionValues::scm_aActions
+231,0x46c20,0x10046c20,?sm_aoNumberNames@AUnitHatcheryDialog@@1PAVTLString@Toshi@@A,protected: static class Toshi::TLString * AUnitHatcheryDialog::sm_aoNumberNames
+232,0x47340,0x10047340,?sm_oSingleton@AActionValues@@0V1@A,private: static class AActionValues AActionValues::sm_oSingleton
+233,0x57c30,0x10057c30,?sm_uiMaskInvalid@AUnitVisitorDialog@@0IB,private: static unsigned int const AUnitVisitorDialog::sm_uiMaskInvalid

@@ -1,0 +1,104 @@
+ordinal,rva,va,name,demangled
+1,0x2cc0,0x10002cc0,??0InputEvent@TInputInterface@Toshi@@QAE@PAVTInputDevice@2@HW4EventType@12@@Z,"public: __thiscall Toshi::TInputInterface::InputEvent::InputEvent(class Toshi::TInputDevice *,int,enum Toshi::TInputInterface::EventType)"
+2,0x2b60,0x10002b60,??0InputEvent@TInputInterface@Toshi@@QAE@PAVTInputDevice@2@HW4EventType@12@H@Z,"public: __thiscall Toshi::TInputInterface::InputEvent::InputEvent(class Toshi::TInputDevice *,int,enum Toshi::TInputInterface::EventType,int)"
+3,0x2bc0,0x10002bc0,??0InputEvent@TInputInterface@Toshi@@QAE@PAVTInputDevice@2@HW4EventType@12@HH@Z,"public: __thiscall Toshi::TInputInterface::InputEvent::InputEvent(class Toshi::TInputDevice *,int,enum Toshi::TInputInterface::EventType,int,int)"
+4,0x2b30,0x10002b30,??0InputEvent@TInputInterface@Toshi@@QAE@PAVTInputDevice@2@HW4EventType@12@M@Z,"public: __thiscall Toshi::TInputInterface::InputEvent::InputEvent(class Toshi::TInputDevice *,int,enum Toshi::TInputInterface::EventType,float)"
+5,0x2b90,0x10002b90,??0InputEvent@TInputInterface@Toshi@@QAE@PAVTInputDevice@2@HW4EventType@12@MM@Z,"public: __thiscall Toshi::TInputInterface::InputEvent::InputEvent(class Toshi::TInputDevice *,int,enum Toshi::TInputInterface::EventType,float,float)"
+6,0x1080,0x10001080,??0TInputDevice@Toshi@@QAE@XZ,public: __thiscall Toshi::TInputDevice::TInputDevice(void)
+7,0x2de0,0x10002de0,??0TInputDeviceChangeEvent@Toshi@@QAE@PAVTInputDevice@1@W4Type@01@@Z,"public: __thiscall Toshi::TInputDeviceChangeEvent::TInputDeviceChangeEvent(class Toshi::TInputDevice *,enum Toshi::TInputDeviceChangeEvent::Type)"
+8,0x1ac0,0x10001ac0,??0TInputDeviceController@Toshi@@QAE@XZ,public: __thiscall Toshi::TInputDeviceController::TInputDeviceController(void)
+9,0x2210,0x10002210,??0TInputDeviceKeyboard@Toshi@@QAE@XZ,public: __thiscall Toshi::TInputDeviceKeyboard::TInputDeviceKeyboard(void)
+10,0x2710,0x10002710,??0TInputDeviceMouse@Toshi@@QAE@XZ,public: __thiscall Toshi::TInputDeviceMouse::TInputDeviceMouse(void)
+11,0x2800,0x10002800,??0TInputInterface@Toshi@@QAE@XZ,public: __thiscall Toshi::TInputInterface::TInputInterface(void)
+12,0x10d0,0x100010d0,??1TInputDevice@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TInputDevice::~TInputDevice(void)
+13,0x2100,0x10002100,??1TInputDeviceController@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TInputDeviceController::~TInputDeviceController(void)
+14,0x2570,0x10002570,??1TInputDeviceKeyboard@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TInputDeviceKeyboard::~TInputDeviceKeyboard(void)
+15,0x2700,0x10002700,??1TInputDeviceMouse@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TInputDeviceMouse::~TInputDeviceMouse(void)
+16,0x2840,0x10002840,??1TInputInterface@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TInputInterface::~TInputInterface(void)
+17,0x1940,0x10001940,??4InputEvent@TInputInterface@Toshi@@QAEAAV012@ABV012@@Z,public: class Toshi::TInputInterface::InputEvent & __thiscall Toshi::TInputInterface::InputEvent::operator=(class Toshi::TInputInterface::InputEvent const &)
+18,0x19e0,0x100019e0,??4TInputDeviceChangeEvent@Toshi@@QAEAAV01@ABV01@@Z,public: class Toshi::TInputDeviceChangeEvent & __thiscall Toshi::TInputDeviceChangeEvent::operator=(class Toshi::TInputDeviceChangeEvent const &)
+19,0x7020,0x10007020,??_7TInputDevice@Toshi@@6B@,const Toshi::TInputDevice::`vftable'
+20,0x7120,0x10007120,??_7TInputDeviceController@Toshi@@6B@,const Toshi::TInputDeviceController::`vftable'
+21,0x71c0,0x100071c0,??_7TInputDeviceKeyboard@Toshi@@6B@,const Toshi::TInputDeviceKeyboard::`vftable'
+22,0x7260,0x10007260,??_7TInputDeviceMouse@Toshi@@6B@,const Toshi::TInputDeviceMouse::`vftable'
+23,0x7300,0x10007300,??_7TInputInterface@Toshi@@6B@,const Toshi::TInputInterface::`vftable'
+24,0x2920,0x10002920,?AcquireAll@TInputInterface@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TInputInterface::AcquireAll(void)
+25,0x2d30,0x10002d30,?AddDevice@TInputInterface@Toshi@@QAEXPAVTInputDevice@2@@Z,public: void __thiscall Toshi::TInputInterface::AddDevice(class Toshi::TInputDevice *)
+26,0x1780,0x10001780,?CreateObject@TInputDevice@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::TInputDevice::CreateObject(void)
+27,0x2160,0x10002160,?CreateObject@TInputDeviceController@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::TInputDeviceController::CreateObject(void)
+28,0x25b0,0x100025b0,?CreateObject@TInputDeviceKeyboard@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::TInputDeviceKeyboard::CreateObject(void)
+29,0x2760,0x10002760,?CreateObject@TInputDeviceMouse@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::TInputDeviceMouse::CreateObject(void)
+30,0x2dc0,0x10002dc0,?CreateObject@TInputInterface@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::TInputInterface::CreateObject(void)
+31,0x1770,0x10001770,?CreateObjectInPlace@TInputDevice@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::TInputDevice::CreateObjectInPlace(void *)
+32,0x2150,0x10002150,?CreateObjectInPlace@TInputDeviceController@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::TInputDeviceController::CreateObjectInPlace(void *)
+33,0x25a0,0x100025a0,?CreateObjectInPlace@TInputDeviceKeyboard@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::TInputDeviceKeyboard::CreateObjectInPlace(void *)
+34,0x2750,0x10002750,?CreateObjectInPlace@TInputDeviceMouse@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::TInputDeviceMouse::CreateObjectInPlace(void *)
+35,0x2db0,0x10002db0,?CreateObjectInPlace@TInputInterface@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::TInputInterface::CreateObjectInPlace(void *)
+36,0x28d0,0x100028d0,?Deinitialise@TInputInterface@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TInputInterface::Deinitialise(void)
+37,0x1750,0x10001750,?DeinitialiseStatic@TInputDevice@Toshi@@CGXXZ,private: static void __stdcall Toshi::TInputDevice::DeinitialiseStatic(void)
+38,0x2130,0x10002130,?DeinitialiseStatic@TInputDeviceController@Toshi@@CGXXZ,private: static void __stdcall Toshi::TInputDeviceController::DeinitialiseStatic(void)
+39,0x2580,0x10002580,?DeinitialiseStatic@TInputDeviceKeyboard@Toshi@@CGXXZ,private: static void __stdcall Toshi::TInputDeviceKeyboard::DeinitialiseStatic(void)
+40,0x2730,0x10002730,?DeinitialiseStatic@TInputDeviceMouse@Toshi@@CGXXZ,private: static void __stdcall Toshi::TInputDeviceMouse::DeinitialiseStatic(void)
+41,0x2d90,0x10002d90,?DeinitialiseStatic@TInputInterface@Toshi@@CGXXZ,private: static void __stdcall Toshi::TInputInterface::DeinitialiseStatic(void)
+42,0x1910,0x10001910,?Flush@TInputDevice@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TInputDevice::Flush(void)
+43,0x29e0,0x100029e0,?FlushAll@TInputInterface@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TInputInterface::FlushAll(void)
+44,0x19a0,0x100019a0,?GetAxisCount@InputEvent@TInputInterface@Toshi@@QBECXZ,public: signed char __thiscall Toshi::TInputInterface::InputEvent::GetAxisCount(void)const 
+45,0x2560,0x10002560,?GetAxisCount@TInputDeviceKeyboard@Toshi@@UAEHXZ,public: virtual int __thiscall Toshi::TInputDeviceKeyboard::GetAxisCount(void)
+46,0x2540,0x10002540,?GetAxisFloat@TInputDeviceKeyboard@Toshi@@UBEMHH@Z,"public: virtual float __thiscall Toshi::TInputDeviceKeyboard::GetAxisFloat(int,int)const "
+47,0x2550,0x10002550,?GetAxisInt@TInputDeviceKeyboard@Toshi@@UBEHHH@Z,"public: virtual int __thiscall Toshi::TInputDeviceKeyboard::GetAxisInt(int,int)const "
+48,0x1790,0x10001790,?GetClass@TInputDevice@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::TInputDevice::GetClass(void)const 
+49,0x2170,0x10002170,?GetClass@TInputDeviceController@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::TInputDeviceController::GetClass(void)const 
+50,0x25c0,0x100025c0,?GetClass@TInputDeviceKeyboard@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::TInputDeviceKeyboard::GetClass(void)const 
+51,0x2770,0x10002770,?GetClass@TInputDeviceMouse@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::TInputDeviceMouse::GetClass(void)const 
+52,0x2dd0,0x10002dd0,?GetClass@TInputInterface@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::TInputInterface::GetClass(void)const 
+53,0x1a10,0x10001a10,?GetDevice@TInputDeviceChangeEvent@Toshi@@QBEPAVTInputDevice@2@XZ,public: class Toshi::TInputDevice * __thiscall Toshi::TInputDeviceChangeEvent::GetDevice(void)const 
+54,0x19d0,0x100019d0,?GetDoodad@InputEvent@TInputInterface@Toshi@@QBEHXZ,public: int __thiscall Toshi::TInputInterface::InputEvent::GetDoodad(void)const 
+55,0x1b60,0x10001b60,?GetDoodadProperties@TInputDeviceController@Toshi@@UBE_NHAAUDoodadProperties@TInputDevice@2@@Z,"public: virtual bool __thiscall Toshi::TInputDeviceController::GetDoodadProperties(int,struct Toshi::TInputDevice::DoodadProperties &)const "
+56,0x2510,0x10002510,?GetDoodadProperties@TInputDeviceKeyboard@Toshi@@UBE_NHAAUDoodadProperties@TInputDevice@2@@Z,"public: virtual bool __thiscall Toshi::TInputDeviceKeyboard::GetDoodadProperties(int,struct Toshi::TInputDevice::DoodadProperties &)const "
+57,0x2650,0x10002650,?GetDoodadProperties@TInputDeviceMouse@Toshi@@UBE_NHAAUDoodadProperties@TInputDevice@2@@Z,"public: virtual bool __thiscall Toshi::TInputDeviceMouse::GetDoodadProperties(int,struct Toshi::TInputDevice::DoodadProperties &)const "
+58,0x19c0,0x100019c0,?GetEventType@InputEvent@TInputInterface@Toshi@@QBE?AW4EventType@23@XZ,public: enum Toshi::TInputInterface::EventType __thiscall Toshi::TInputInterface::InputEvent::GetEventType(void)const 
+59,0x2d60,0x10002d60,?GetExclusiveMode@TInputInterface@Toshi@@UBE_NXZ,public: virtual bool __thiscall Toshi::TInputInterface::GetExclusiveMode(void)const 
+60,0x1930,0x10001930,?GetInputInterface@TInputDevice@Toshi@@QAEPAVTInputInterface@2@XZ,public: class Toshi::TInputInterface * __thiscall Toshi::TInputDevice::GetInputInterface(void)
+61,0x2ca0,0x10002ca0,?GetMagnitudeFloat@InputEvent@TInputInterface@Toshi@@QBEMH@Z,public: float __thiscall Toshi::TInputInterface::InputEvent::GetMagnitudeFloat(int)const 
+62,0x2bf0,0x10002bf0,?GetMagnitudeInt@InputEvent@TInputInterface@Toshi@@QBEHH@Z,public: int __thiscall Toshi::TInputInterface::InputEvent::GetMagnitudeInt(int)const 
+63,0x19b0,0x100019b0,?GetSource@InputEvent@TInputInterface@Toshi@@QBEPAVTInputDevice@3@XZ,public: class Toshi::TInputDevice * __thiscall Toshi::TInputInterface::InputEvent::GetSource(void)const 
+64,0x1a00,0x10001a00,?GetType@TInputDeviceChangeEvent@Toshi@@QBE?AW4Type@12@XZ,public: enum Toshi::TInputDeviceChangeEvent::Type __thiscall Toshi::TInputDeviceChangeEvent::GetType(void)const 
+65,0x2270,0x10002270,?GetVirtStickDoodads@TInputDeviceKeyboard@Toshi@@QAEXHAAH000@Z,"public: void __thiscall Toshi::TInputDeviceKeyboard::GetVirtStickDoodads(int,int &,int &,int &,int &)"
+66,0x2d80,0x10002d80,?Initialise@TInputInterface@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TInputInterface::Initialise(void)
+67,0x1760,0x10001760,?InitialiseStatic@TInputDevice@Toshi@@CGXXZ,private: static void __stdcall Toshi::TInputDevice::InitialiseStatic(void)
+68,0x2140,0x10002140,?InitialiseStatic@TInputDeviceController@Toshi@@CGXXZ,private: static void __stdcall Toshi::TInputDeviceController::InitialiseStatic(void)
+69,0x2590,0x10002590,?InitialiseStatic@TInputDeviceKeyboard@Toshi@@CGXXZ,private: static void __stdcall Toshi::TInputDeviceKeyboard::InitialiseStatic(void)
+70,0x2740,0x10002740,?InitialiseStatic@TInputDeviceMouse@Toshi@@CGXXZ,private: static void __stdcall Toshi::TInputDeviceMouse::InitialiseStatic(void)
+71,0x2da0,0x10002da0,?InitialiseStatic@TInputInterface@Toshi@@CGXXZ,private: static void __stdcall Toshi::TInputInterface::InitialiseStatic(void)
+72,0x1920,0x10001920,?IsAcquired@TInputDevice@Toshi@@QBE_NXZ,public: bool __thiscall Toshi::TInputDevice::IsAcquired(void)const 
+73,0x1bb0,0x10001bb0,?IsDown@TInputDeviceController@Toshi@@UBE_NH@Z,public: virtual bool __thiscall Toshi::TInputDeviceController::IsDown(int)const 
+74,0x1900,0x10001900,?IsForceFeedbackDevice@TInputDevice@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TInputDevice::IsForceFeedbackDevice(void)
+75,0x14e0,0x100014e0,?IsLatched@TInputDevice@Toshi@@QAE_NH@Z,public: bool __thiscall Toshi::TInputDevice::IsLatched(int)
+76,0x1980,0x10001980,?IsMagnitudeFloat@InputEvent@TInputInterface@Toshi@@QBE_NXZ,public: bool __thiscall Toshi::TInputInterface::InputEvent::IsMagnitudeFloat(void)const 
+77,0x1990,0x10001990,?IsMagnitudeInt@InputEvent@TInputInterface@Toshi@@QBE_NXZ,public: bool __thiscall Toshi::TInputInterface::InputEvent::IsMagnitudeInt(void)const 
+78,0x12a0,0x100012a0,?Latch@TInputDevice@Toshi@@QAE_NH@Z,public: bool __thiscall Toshi::TInputDevice::Latch(int)
+79,0x2a40,0x10002a40,?ProcessEvents@TInputInterface@Toshi@@UAEHM@Z,public: virtual int __thiscall Toshi::TInputInterface::ProcessEvents(float)
+80,0x1560,0x10001560,?ProcessRepeats@TInputDevice@Toshi@@IAEHAAV?$TEmitter@VTInputInterface@Toshi@@VInputEvent@12@@2@M@Z,"protected: int __thiscall Toshi::TInputDevice::ProcessRepeats(class Toshi::TEmitter<class Toshi::TInputInterface,class Toshi::TInputInterface::InputEvent> &,float)"
+81,0x2000,0x10002000,?ProcessVirtualButtons@TInputDeviceController@Toshi@@MAEHAAV?$TEmitter@VTInputInterface@Toshi@@VInputEvent@12@@2@M@Z,"protected: virtual int __thiscall Toshi::TInputDeviceController::ProcessVirtualButtons(class Toshi::TEmitter<class Toshi::TInputInterface,class Toshi::TInputInterface::InputEvent> &,float)"
+82,0x2360,0x10002360,?ProcessVirtualButtons@TInputDeviceKeyboard@Toshi@@MAEHAAV?$TEmitter@VTInputInterface@Toshi@@VInputEvent@12@@2@M@Z,"protected: virtual int __thiscall Toshi::TInputDeviceKeyboard::ProcessVirtualButtons(class Toshi::TEmitter<class Toshi::TInputInterface,class Toshi::TInputInterface::InputEvent> &,float)"
+83,0x2cf0,0x10002cf0,?RemoveDevice@TInputInterface@Toshi@@QAEXPAVTInputDevice@2@@Z,public: void __thiscall Toshi::TInputInterface::RemoveDevice(class Toshi::TInputDevice *)
+84,0x2d70,0x10002d70,?SetExclusiveMode@TInputInterface@Toshi@@UAEX_N@Z,public: virtual void __thiscall Toshi::TInputInterface::SetExclusiveMode(bool)
+85,0x1740,0x10001740,?SetInputInterface@TInputDevice@Toshi@@QAEXPAVTInputInterface@2@@Z,public: void __thiscall Toshi::TInputDevice::SetInputInterface(class Toshi::TInputInterface *)
+86,0x2180,0x10002180,?SetVibration@TInputDeviceController@Toshi@@UAEXW4VIBRATION_ACTUATOR@12@M@Z,"public: virtual void __thiscall Toshi::TInputDeviceController::SetVibration(enum Toshi::TInputDeviceController::VIBRATION_ACTUATOR,float)"
+87,0x2240,0x10002240,?SetVirtStickDoodads@TInputDeviceKeyboard@Toshi@@QAEXHHHHH@Z,"public: void __thiscall Toshi::TInputDeviceKeyboard::SetVirtStickDoodads(int,int,int,int,int)"
+88,0x1100,0x10001100,?StartRepeat@TInputDevice@Toshi@@UAE_NHMM@Z,"public: virtual bool __thiscall Toshi::TInputDevice::StartRepeat(int,float,float)"
+89,0x1720,0x10001720,?StopAllRepeats@TInputDevice@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TInputDevice::StopAllRepeats(void)
+90,0x2af0,0x10002af0,?StopAllRepeats@TInputInterface@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TInputInterface::StopAllRepeats(void)
+91,0x11f0,0x100011f0,?StopRepeat@TInputDevice@Toshi@@UAEXH@Z,public: virtual void __thiscall Toshi::TInputDevice::StopRepeat(int)
+92,0x16d0,0x100016d0,?ThrowRepeatEvent@TInputDevice@Toshi@@UAEXAAV?$TEmitter@VTInputInterface@Toshi@@VInputEvent@12@@2@PAURepeatInfo@12@M@Z,"public: virtual void __thiscall Toshi::TInputDevice::ThrowRepeatEvent(class Toshi::TEmitter<class Toshi::TInputInterface,class Toshi::TInputInterface::InputEvent> &,struct Toshi::TInputDevice::RepeatInfo *,float)"
+93,0x2980,0x10002980,?UnacquireAll@TInputInterface@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TInputInterface::UnacquireAll(void)
+94,0x1450,0x10001450,?Unlatch@TInputDevice@Toshi@@QAEXH@Z,public: void __thiscall Toshi::TInputDevice::Unlatch(int)
+95,0x1700,0x10001700,?UnlatchAll@TInputDevice@Toshi@@QAEXH@Z,public: void __thiscall Toshi::TInputDevice::UnlatchAll(int)
+96,0x1c90,0x10001c90,?UpdateVirtualButtons@TInputDeviceController@Toshi@@IAEXXZ,protected: void __thiscall Toshi::TInputDeviceController::UpdateVirtualButtons(void)
+97,0x22b0,0x100022b0,?UpdateVirtualButtons@TInputDeviceKeyboard@Toshi@@IAEXXZ,protected: void __thiscall Toshi::TInputDeviceKeyboard::UpdateVirtualButtons(void)
+98,0x1c20,0x10001c20,?WasDown@TInputDeviceController@Toshi@@UBE_NH@Z,public: virtual bool __thiscall Toshi::TInputDeviceController::WasDown(int)const 
+99,0x6380,0x10006380,?m_sClass@TInputDevice@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::TInputDevice::m_sClass
+100,0x6340,0x10006340,?m_sClass@TInputDeviceController@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::TInputDeviceController::m_sClass
+101,0x6300,0x10006300,?m_sClass@TInputDeviceKeyboard@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::TInputDeviceKeyboard::m_sClass
+102,0x62c0,0x100062c0,?m_sClass@TInputDeviceMouse@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::TInputDeviceMouse::m_sClass
+103,0x6280,0x10006280,?m_sClass@TInputInterface@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::TInputInterface::m_sClass

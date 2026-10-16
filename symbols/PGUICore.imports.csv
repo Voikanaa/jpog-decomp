@@ -1,0 +1,198 @@
+dll,name,iat_rva,demangled
+TGuiInterface.dll,?NotifyDescendantRemoved@TGUIWidget@Toshi@@UAEXPAV12@0@Z,0x28084,"public: virtual void __thiscall Toshi::TGUIWidget::NotifyDescendantRemoved(class Toshi::TGUIWidget *,class Toshi::TGUIWidget *)"
+TGuiInterface.dll,?NotifyFocusLost@TGUIWidget@Toshi@@UAEXPAV12@0@Z,0x28088,"public: virtual void __thiscall Toshi::TGUIWidget::NotifyFocusLost(class Toshi::TGUIWidget *,class Toshi::TGUIWidget *)"
+TGuiInterface.dll,?NotifyFocusGained@TGUIWidget@Toshi@@UAEXPAV12@0@Z,0x2808c,"public: virtual void __thiscall Toshi::TGUIWidget::NotifyFocusGained(class Toshi::TGUIWidget *,class Toshi::TGUIWidget *)"
+TGuiInterface.dll,?NotifySlaveStateChanged@TGUIWidget@Toshi@@UAEXPAV12@I@Z,0x28090,"public: virtual void __thiscall Toshi::TGUIWidget::NotifySlaveStateChanged(class Toshi::TGUIWidget *,unsigned int)"
+TGuiInterface.dll,?NotifyDescendantRemoval@TGUIWidget@Toshi@@UAEXPAV12@@Z,0x28094,public: virtual void __thiscall Toshi::TGUIWidget::NotifyDescendantRemoval(class Toshi::TGUIWidget *)
+TGuiInterface.dll,?OnButtonRepeat@TGUIWidget@Toshi@@UAE_NPAVInputEvent@TInputInterface@2@H@Z,0x28098,"public: virtual bool __thiscall Toshi::TGUIWidget::OnButtonRepeat(class Toshi::TInputInterface::InputEvent *,int)"
+TGuiInterface.dll,?OnButtonHit@TGUIWidget@Toshi@@UAE_NPAVInputEvent@TInputInterface@2@H@Z,0x2809c,"public: virtual bool __thiscall Toshi::TGUIWidget::OnButtonHit(class Toshi::TInputInterface::InputEvent *,int)"
+TGuiInterface.dll,?OnAxisMove@TGUIWidget@Toshi@@UAE_NPAVInputEvent@TInputInterface@2@H@Z,0x280a0,"public: virtual bool __thiscall Toshi::TGUIWidget::OnAxisMove(class Toshi::TInputInterface::InputEvent *,int)"
+TGuiInterface.dll,?OnPointerMove@TGUIWidget@Toshi@@UAE_NHH@Z,0x280a4,"public: virtual bool __thiscall Toshi::TGUIWidget::OnPointerMove(int,int)"
+TGuiInterface.dll,?OnPointerEnter@TGUIWidget@Toshi@@UAE_NXZ,0x280a8,public: virtual bool __thiscall Toshi::TGUIWidget::OnPointerEnter(void)
+TGuiInterface.dll,?OnPointerExit@TGUIWidget@Toshi@@UAE_NXZ,0x280ac,public: virtual bool __thiscall Toshi::TGUIWidget::OnPointerExit(void)
+TGuiInterface.dll,?OnPaint@TGUIWidget@Toshi@@UAE_NPAVTGUIDisplayContext@2@@Z,0x280b0,public: virtual bool __thiscall Toshi::TGUIWidget::OnPaint(class Toshi::TGUIDisplayContext *)
+TGuiInterface.dll,?DeserialiseState@TGUIWidget@Toshi@@MAE_NPBVPProperties@@@Z,0x280b4,protected: virtual bool __thiscall Toshi::TGUIWidget::DeserialiseState(class PProperties const *)
+TGuiInterface.dll,?DeserialiseParameters@TGUIWidget@Toshi@@MAE_NPBVPProperties@@@Z,0x280b8,protected: virtual bool __thiscall Toshi::TGUIWidget::DeserialiseParameters(class PProperties const *)
+TGuiInterface.dll,?DeserialiseChildren@TGUIWidget@Toshi@@MAE_NPBVPProperties@@@Z,0x280bc,protected: virtual bool __thiscall Toshi::TGUIWidget::DeserialiseChildren(class PProperties const *)
+TGuiInterface.dll,?SerialiseState@TGUIWidget@Toshi@@MAE_NPAVPProperties@@@Z,0x280c0,protected: virtual bool __thiscall Toshi::TGUIWidget::SerialiseState(class PProperties *)
+TGuiInterface.dll,?SerialiseParameters@TGUIWidget@Toshi@@MAE_NPAVPProperties@@@Z,0x280c4,protected: virtual bool __thiscall Toshi::TGUIWidget::SerialiseParameters(class PProperties *)
+TGuiInterface.dll,?SerialiseChildren@TGUIWidget@Toshi@@MAE_NPAVPProperties@@@Z,0x280c8,protected: virtual bool __thiscall Toshi::TGUIWidget::SerialiseChildren(class PProperties *)
+TGuiInterface.dll,?NotifyParentChange@TGUIWidget@Toshi@@MAEXPAV12@@Z,0x280cc,protected: virtual void __thiscall Toshi::TGUIWidget::NotifyParentChange(class Toshi::TGUIWidget *)
+TGuiInterface.dll,?ms_widget_info@TGUIWindow@Toshi@@1PAVTGUIWidgetInfo@2@A,0x280d0,protected: static class Toshi::TGUIWidgetInfo * Toshi::TGUIWindow::ms_widget_info
+TGuiInterface.dll,?ms_oPropertySet@TGUIWindow@Toshi@@1PAV?$TArray@PAVTGUIPropertySpec@Toshi@@@2@A,0x280d4,protected: static class Toshi::TArray<class Toshi::TGUIPropertySpec *> * Toshi::TGUIWindow::ms_oPropertySet
+TGuiInterface.dll,?PackChildren@TGUIWidget@Toshi@@IAEXXZ,0x280d8,protected: void __thiscall Toshi::TGUIWidget::PackChildren(void)
+TGuiInterface.dll,?SetComponentBBox@TGUIWidget@Toshi@@IAEXHHHHH@Z,0x280dc,"protected: void __thiscall Toshi::TGUIWidget::SetComponentBBox(int,int,int,int,int)"
+TGuiInterface.dll,?GetComponentPreferredSize@TGUIStyle@Toshi@@QAE_NHPAVPPropertyValue@@AAH1FFAA_N@Z,0x280e0,"public: bool __thiscall Toshi::TGUIStyle::GetComponentPreferredSize(int,class PPropertyValue *,int &,int &,short,short,bool &)"
+TGuiInterface.dll,?LayoutChildren@TGUIWidget@Toshi@@IAEXFF@Z,0x280e4,"protected: void __thiscall Toshi::TGUIWidget::LayoutChildren(short,short)"
+TGuiInterface.dll,?SetHeight@TGUIWidget@Toshi@@QAEXH@Z,0x280e8,public: void __thiscall Toshi::TGUIWidget::SetHeight(int)
+TGuiInterface.dll,?SetWidth@TGUIWidget@Toshi@@QAEXH@Z,0x280ec,public: void __thiscall Toshi::TGUIWidget::SetWidth(int)
+TGuiInterface.dll,?m_sClass@TGUIWindow@Toshi@@2VTClass@2@A,0x280f0,public: static class Toshi::TClass Toshi::TGUIWindow::m_sClass
+TGuiInterface.dll,??0TGUIWindow@Toshi@@IAE@ABV01@@Z,0x280f4,protected: __thiscall Toshi::TGUIWindow::TGUIWindow(class Toshi::TGUIWindow const &)
+TGuiInterface.dll,?Serialise@TGUIWindow@Toshi@@UAE_NPAVPProperties@@@Z,0x280f8,public: virtual bool __thiscall Toshi::TGUIWindow::Serialise(class PProperties *)
+TGuiInterface.dll,?Deserialise@TGUIWindow@Toshi@@UAE_NPBVPProperties@@@Z,0x280fc,public: virtual bool __thiscall Toshi::TGUIWindow::Deserialise(class PProperties const *)
+TGuiInterface.dll,?TGUINew@Toshi@@YGPAXI@Z,0x28100,void * __stdcall Toshi::TGUINew(unsigned int)
+TGuiInterface.dll,??1TGUIWindow@Toshi@@UAE@XZ,0x28104,public: virtual __thiscall Toshi::TGUIWindow::~TGUIWindow(void)
+TGuiInterface.dll,??0TGUIWindow@Toshi@@QAE@XZ,0x28108,public: __thiscall Toshi::TGUIWindow::TGUIWindow(void)
+TGuiInterface.dll,?NotifyDescendantRemoval@TGUIWindow@Toshi@@MAEXPAVTGUIWidget@2@@Z,0x2810c,protected: virtual void __thiscall Toshi::TGUIWindow::NotifyDescendantRemoval(class Toshi::TGUIWidget *)
+TGuiInterface.dll,?NotifyFocusLost@TGUIWindow@Toshi@@MAEXPAVTGUIWidget@2@0@Z,0x28110,"protected: virtual void __thiscall Toshi::TGUIWindow::NotifyFocusLost(class Toshi::TGUIWidget *,class Toshi::TGUIWidget *)"
+TGuiInterface.dll,?NotifyFocusGained@TGUIWindow@Toshi@@MAEXPAVTGUIWidget@2@0@Z,0x28114,"protected: virtual void __thiscall Toshi::TGUIWindow::NotifyFocusGained(class Toshi::TGUIWidget *,class Toshi::TGUIWidget *)"
+TGuiInterface.dll,?NotifyParentChange@TGUIWindow@Toshi@@MAEXPAVTGUIWidget@2@@Z,0x28118,protected: virtual void __thiscall Toshi::TGUIWindow::NotifyParentChange(class Toshi::TGUIWidget *)
+TGuiInterface.dll,?GetAutoFocus@TGUIWindow@Toshi@@UAEPAVTGUIWidget@2@XZ,0x2811c,public: virtual class Toshi::TGUIWidget * __thiscall Toshi::TGUIWindow::GetAutoFocus(void)
+TGuiInterface.dll,?TransformWidgetToDevice@TGUIWidget@Toshi@@QBEXHHAAH0@Z,0x28120,"public: void __thiscall Toshi::TGUIWidget::TransformWidgetToDevice(int,int,int &,int &)const "
+TGuiInterface.dll,?SetPosition@TGUIWidget@Toshi@@QAEXHH@Z,0x28124,"public: void __thiscall Toshi::TGUIWidget::SetPosition(int,int)"
+TGuiInterface.dll,?SetStyle@TGUIWidget@Toshi@@QAEXPAVTGUIStyle@2@@Z,0x28128,public: void __thiscall Toshi::TGUIWidget::SetStyle(class Toshi::TGUIStyle *)
+TGuiInterface.dll,??0TGUIPropertySpecSimple@Toshi@@QAE@ABVTPCString@1@P8TGUIDeserialisable@1@AEXABVPPropertyValue@@@ZP831@BE?AV4@XZPBVTClass@1@_N4H@Z,0x2812c,"public: __thiscall Toshi::TGUIPropertySpecSimple::TGUIPropertySpecSimple(class Toshi::TPCString const &,void (__thiscall Toshi::TGUIDeserialisable::*)(class PPropertyValue const &),class PPropertyValue (__thiscall Toshi::TGUIDeserialisable::*)(void)const ,class Toshi::TClass const *,bool,class Toshi::TClass const *,int)"
+TGuiInterface.dll,?GetComponentPreferredSize@TGUIStyle@Toshi@@QAE_NHPAVPPropertyValue@@AAH1@Z,0x28130,"public: bool __thiscall Toshi::TGUIStyle::GetComponentPreferredSize(int,class PPropertyValue *,int &,int &)"
+TGuiInterface.dll,?SetSize@TGUIWidget@Toshi@@QAEXHH@Z,0x28134,"public: void __thiscall Toshi::TGUIWidget::SetSize(int,int)"
+TGuiInterface.dll,?SetParameter@TGUIWidget@Toshi@@QAEXHABVPPropertyValue@@@Z,0x28138,"public: void __thiscall Toshi::TGUIWidget::SetParameter(int,class PPropertyValue const &)"
+TGuiInterface.dll,?ms_paPlacementNames@TGUIWidget@Toshi@@1QBQBDB,0x2813c,protected: static char const * const * const Toshi::TGUIWidget::ms_paPlacementNames
+TGuiInterface.dll,??0TGUIPropertySpecSimple@Toshi@@QAE@ABVTPCString@1@P8TGUIDeserialisable@1@AEXABVPPropertyValue@@@ZP831@BE?AV4@XZPBVTClass@1@_N4HHPBQBD@Z,0x28140,"public: __thiscall Toshi::TGUIPropertySpecSimple::TGUIPropertySpecSimple(class Toshi::TPCString const &,void (__thiscall Toshi::TGUIDeserialisable::*)(class PPropertyValue const &),class PPropertyValue (__thiscall Toshi::TGUIDeserialisable::*)(void)const ,class Toshi::TClass const *,bool,class Toshi::TClass const *,int,int,char const * const *)"
+TGuiInterface.dll,??0TGUIPropertySpecSimple@Toshi@@QAE@ABVTPCString@1@P8TGUIDeserialisable@1@AEXABVPPropertyValue@@@ZP831@BE?AV4@XZPBVTClass@1@_N4H4@Z,0x28144,"public: __thiscall Toshi::TGUIPropertySpecSimple::TGUIPropertySpecSimple(class Toshi::TPCString const &,void (__thiscall Toshi::TGUIDeserialisable::*)(class PPropertyValue const &),class PPropertyValue (__thiscall Toshi::TGUIDeserialisable::*)(void)const ,class Toshi::TClass const *,bool,class Toshi::TClass const *,int,class Toshi::TClass const *)"
+TGuiInterface.dll,?AllowsFocus@TGUIWidget@Toshi@@UAEPAV12@PAV12@@Z,0x28148,public: virtual class Toshi::TGUIWidget * __thiscall Toshi::TGUIWidget::AllowsFocus(class Toshi::TGUIWidget *)
+TGuiInterface.dll,?FindStyleInstance@TGUIInterface@Toshi@@QBEPAVTGUIStyle@2@ABVTPCString@2@@Z,0x2814c,public: class Toshi::TGUIStyle * __thiscall Toshi::TGUIInterface::FindStyleInstance(class Toshi::TPCString const &)const 
+TGuiInterface.dll,?RemoveWidget@TGUIWidget@Toshi@@QAEXPAV12@@Z,0x28150,public: void __thiscall Toshi::TGUIWidget::RemoveWidget(class Toshi::TGUIWidget *)
+TGuiInterface.dll,?Create@TGUIWidget@Toshi@@QAEXPAVTGUIInterface@2@PAVTGUIStyle@2@ABVTPCString@2@@Z,0x28154,"public: void __thiscall Toshi::TGUIWidget::Create(class Toshi::TGUIInterface *,class Toshi::TGUIStyle *,class Toshi::TPCString const &)"
+TGuiInterface.dll,?SetInterface@TGUIWidget@Toshi@@UAEXPAVTGUIInterface@2@@Z,0x28158,public: virtual void __thiscall Toshi::TGUIWidget::SetInterface(class Toshi::TGUIInterface *)
+TGuiInterface.dll,?NotifyDescendantAddition@TGUIWidget@Toshi@@UAEXPAV12@@Z,0x2815c,public: virtual void __thiscall Toshi::TGUIWidget::NotifyDescendantAddition(class Toshi::TGUIWidget *)
+TGuiInterface.dll,?SetFixedSize@TGUIWidget@Toshi@@QAEXHH@Z,0x28160,"public: void __thiscall Toshi::TGUIWidget::SetFixedSize(int,int)"
+TGuiInterface.dll,?TransformDeviceToWidget@TGUIWidget@Toshi@@QBEXHHAAH0@Z,0x28164,"public: void __thiscall Toshi::TGUIWidget::TransformDeviceToWidget(int,int,int &,int &)const "
+TGuiInterface.dll,?AddWidget@TGUIWidget@Toshi@@QAEXPAV12@_N@Z,0x28168,"public: void __thiscall Toshi::TGUIWidget::AddWidget(class Toshi::TGUIWidget *,bool)"
+TGuiInterface.dll,?CreateWidget@TGUIStyle@Toshi@@QAEPAVTGUIWidget@2@XZ,0x2816c,public: class Toshi::TGUIWidget * __thiscall Toshi::TGUIStyle::CreateWidget(void)
+TGuiInterface.dll,?FindNamedChild@TGUIWidget@Toshi@@QBEPAV12@ABVTPCString@2@@Z,0x28170,public: class Toshi::TGUIWidget * __thiscall Toshi::TGUIWidget::FindNamedChild(class Toshi::TPCString const &)const 
+TGuiInterface.dll,??0TGUIDeserialisable@Toshi@@QAE@XZ,0x28174,public: __thiscall Toshi::TGUIDeserialisable::TGUIDeserialisable(void)
+TGuiInterface.dll,??1TGUIDeserialisable@Toshi@@UAE@XZ,0x28178,public: virtual __thiscall Toshi::TGUIDeserialisable::~TGUIDeserialisable(void)
+TGuiInterface.dll,?FindTopLevelInstance@TGUIInterface@Toshi@@QBEPAVTGUIWidget@2@ABVTPCString@2@I@Z,0x2817c,"public: class Toshi::TGUIWidget * __thiscall Toshi::TGUIInterface::FindTopLevelInstance(class Toshi::TPCString const &,unsigned int)const "
+TGuiInterface.dll,?AllowRolloverUpdate@TGUIScreen@Toshi@@QAEX_N@Z,0x28180,public: void __thiscall Toshi::TGUIScreen::AllowRolloverUpdate(bool)
+TGuiInterface.dll,?RequestFocus@TGUIWidget@Toshi@@QAEXXZ,0x28184,public: void __thiscall Toshi::TGUIWidget::RequestFocus(void)
+TGuiInterface.dll,?IsAncestorOf@TGUIWidget@Toshi@@QBE_NPBV12@@Z,0x28188,public: bool __thiscall Toshi::TGUIWidget::IsAncestorOf(class Toshi::TGUIWidget const *)const 
+TGuiInterface.dll,?RefreshPointerPosition@TGUIScreen@Toshi@@QAE_NPAVTGUIWidget@2@HH@Z,0x2818c,"public: bool __thiscall Toshi::TGUIScreen::RefreshPointerPosition(class Toshi::TGUIWidget *,int,int)"
+TGuiInterface.dll,?HitTestDeepest@TGUIWidget@Toshi@@QAEPAV12@HHAAH0II@Z,0x28190,"public: class Toshi::TGUIWidget * __thiscall Toshi::TGUIWidget::HitTestDeepest(int,int,int &,int &,unsigned int,unsigned int)"
+TGuiInterface.dll,?TGUIDelete@Toshi@@YGXPAX@Z,0x28194,void __stdcall Toshi::TGUIDelete(void *)
+TGuiInterface.dll,??_7TGUIDeserialisable@Toshi@@6B@,0x28198,const Toshi::TGUIDeserialisable::`vftable'
+TGuiInterface.dll,?UpdatePointerPosition@TGUIScreen@Toshi@@QAE_NPAVInputEvent@TInputInterface@2@H@Z,0x2819c,"public: bool __thiscall Toshi::TGUIScreen::UpdatePointerPosition(class Toshi::TInputInterface::InputEvent *,int)"
+TGuiInterface.dll,?Serialise@TGUIDeserialisable@Toshi@@UAE_NPAVPProperties@@@Z,0x281a0,public: virtual bool __thiscall Toshi::TGUIDeserialisable::Serialise(class PProperties *)
+TGuiInterface.dll,?Deserialise@TGUIDeserialisable@Toshi@@UAE_NPBVPProperties@@@Z,0x281a4,public: virtual bool __thiscall Toshi::TGUIDeserialisable::Deserialise(class PProperties const *)
+TGuiInterface.dll,?GetPropertyCount@TGUIDeserialisable@Toshi@@UBEHXZ,0x281a8,public: virtual int __thiscall Toshi::TGUIDeserialisable::GetPropertyCount(void)const 
+TGuiInterface.dll,?FindPropertyInfo@TGUIDeserialisable@Toshi@@UBEPBVTGUIPropertySpec@2@ABVTPCString@2@@Z,0x281ac,public: virtual class Toshi::TGUIPropertySpec const * __thiscall Toshi::TGUIDeserialisable::FindPropertyInfo(class Toshi::TPCString const &)const 
+TGuiInterface.dll,?GetPropertyInfo@TGUIDeserialisable@Toshi@@UBEPBVTGUIPropertySpec@2@H@Z,0x281b0,public: virtual class Toshi::TGUIPropertySpec const * __thiscall Toshi::TGUIDeserialisable::GetPropertyInfo(int)const 
+TGuiInterface.dll,?ValidatePropertyInfo@TGUIDeserialisable@Toshi@@UBE_NPBVTGUIPropertySpec@2@@Z,0x281b4,public: virtual bool __thiscall Toshi::TGUIDeserialisable::ValidatePropertyInfo(class Toshi::TGUIPropertySpec const *)const 
+TGuiInterface.dll,?ms_paOrientationNames@TGUIWidget@Toshi@@1QBQBDB,0x281b8,protected: static char const * const * const Toshi::TGUIWidget::ms_paOrientationNames
+TGuiInterface.dll,?GetRootComponent@TGUIStyle@Toshi@@QAEAAVTGUIStyleRootComponent@2@H@Z,0x281bc,public: class Toshi::TGUIStyleRootComponent & __thiscall Toshi::TGUIStyle::GetRootComponent(int)
+TGuiInterface.dll,?Invalidate@TGUIComponentCache@Toshi@@QAEXXZ,0x281c0,public: void __thiscall Toshi::TGUIComponentCache::Invalidate(void)
+TGuiInterface.dll,?InvalidateComponentCache@TGUIWidget@Toshi@@QAEX_N@Z,0x281c4,public: void __thiscall Toshi::TGUIWidget::InvalidateComponentCache(bool)
+TGuiInterface.dll,?SetFixedWidth@TGUIWidget@Toshi@@QAEXH@Z,0x281c8,public: void __thiscall Toshi::TGUIWidget::SetFixedWidth(int)
+TGuiInterface.dll,?SetFixedHeight@TGUIWidget@Toshi@@QAEXH@Z,0x281cc,public: void __thiscall Toshi::TGUIWidget::SetFixedHeight(int)
+TGuiInterface.dll,?ms_oPropertySet@TGUILayoutManager@Toshi@@1PAV?$TArray@PAVTGUIPropertySpec@Toshi@@@2@A,0x281d0,protected: static class Toshi::TArray<class Toshi::TGUIPropertySpec *> * Toshi::TGUILayoutManager::ms_oPropertySet
+TGuiInterface.dll,?AddLayoutClass@TGUIInterface@Toshi@@SGXPAVTGUILayoutInfo@2@@Z,0x281d4,public: static void __stdcall Toshi::TGUIInterface::AddLayoutClass(class Toshi::TGUILayoutInfo *)
+TGuiInterface.dll,??0TGUILayoutInfo@Toshi@@QAE@ABVTPCString@1@0PAV?$TArray@PAVTGUIPropertySpec@Toshi@@@1@@Z,0x281d8,"public: __thiscall Toshi::TGUILayoutInfo::TGUILayoutInfo(class Toshi::TPCString const &,class Toshi::TPCString const &,class Toshi::TArray<class Toshi::TGUIPropertySpec *> *)"
+TGuiInterface.dll,??1TGUILayoutInfo@Toshi@@QAE@XZ,0x281dc,public: __thiscall Toshi::TGUILayoutInfo::~TGUILayoutInfo(void)
+TGuiInterface.dll,??0TGUILayoutManager@Toshi@@QAE@XZ,0x281e0,public: __thiscall Toshi::TGUILayoutManager::TGUILayoutManager(void)
+TGuiInterface.dll,?GetMargins@TGUIWidget@Toshi@@QAEXAAH000@Z,0x281e4,"public: void __thiscall Toshi::TGUIWidget::GetMargins(int &,int &,int &,int &)"
+TGuiInterface.dll,?GetInteriorSize@TGUIWidget@Toshi@@QBEXAAH0@Z,0x281e8,"public: void __thiscall Toshi::TGUIWidget::GetInteriorSize(int &,int &)const "
+TGuiInterface.dll,??0TGUILayoutManager@Toshi@@IAE@ABV01@@Z,0x281ec,protected: __thiscall Toshi::TGUILayoutManager::TGUILayoutManager(class Toshi::TGUILayoutManager const &)
+TGuiInterface.dll,?m_sClass@TGUILayoutManager@Toshi@@2VTClass@2@A,0x281f0,public: static class Toshi::TClass Toshi::TGUILayoutManager::m_sClass
+TGuiInterface.dll,?Serialise@TGUILayoutManager@Toshi@@UAE_NPAVPProperties@@@Z,0x281f4,public: virtual bool __thiscall Toshi::TGUILayoutManager::Serialise(class PProperties *)
+TGuiInterface.dll,?Deserialise@TGUILayoutManager@Toshi@@UAE_NPBVPProperties@@@Z,0x281f8,public: virtual bool __thiscall Toshi::TGUILayoutManager::Deserialise(class PProperties const *)
+TGuiInterface.dll,??1TGUILayoutManager@Toshi@@UAE@XZ,0x281fc,public: virtual __thiscall Toshi::TGUILayoutManager::~TGUILayoutManager(void)
+TGuiInterface.dll,?SetInterface@TGUILayoutManager@Toshi@@UAEXPAVTGUIInterface@2@@Z,0x28200,public: virtual void __thiscall Toshi::TGUILayoutManager::SetInterface(class Toshi::TGUIInterface *)
+TGuiInterface.dll,?GetInterface@TGUILayoutManager@Toshi@@UBEPAVTGUIInterface@2@XZ,0x28204,public: virtual class Toshi::TGUIInterface * __thiscall Toshi::TGUILayoutManager::GetInterface(void)const 
+TGuiInterface.dll,?GetInteriorHeight@TGUIWidget@Toshi@@QBEHXZ,0x28208,public: int __thiscall Toshi::TGUIWidget::GetInteriorHeight(void)const 
+TGuiInterface.dll,?GetInteriorWidth@TGUIWidget@Toshi@@QBEHXZ,0x2820c,public: int __thiscall Toshi::TGUIWidget::GetInteriorWidth(void)const 
+TGuiInterface.dll,?GrabFocus@TGUIScreen@Toshi@@QAEXPAVTGUIWidget@2@@Z,0x28210,public: void __thiscall Toshi::TGUIScreen::GrabFocus(class Toshi::TGUIWidget *)
+TGuiInterface.dll,??1TGUIWidgetInfo@Toshi@@QAE@XZ,0x28214,public: __thiscall Toshi::TGUIWidgetInfo::~TGUIWidgetInfo(void)
+TGuiInterface.dll,?AddStateVars@TGUIWidgetInfo@Toshi@@QAEXABV?$TSortedArray@VTGUIStateVarInfo@Toshi@@UComparator@12@@2@@Z,0x28218,"public: void __thiscall Toshi::TGUIWidgetInfo::AddStateVars(class Toshi::TSortedArray<class Toshi::TGUIStateVarInfo,struct Toshi::TGUIStateVarInfo::Comparator> const &)"
+TGuiInterface.dll,?SetWidgetName@TGUIWidgetInfo@Toshi@@QAEXABVTPCString@2@@Z,0x2821c,public: void __thiscall Toshi::TGUIWidgetInfo::SetWidgetName(class Toshi::TPCString const &)
+TGuiInterface.dll,?SetWidgetLabel@TGUIWidgetInfo@Toshi@@QAEXABVTPCString@2@@Z,0x28220,public: void __thiscall Toshi::TGUIWidgetInfo::SetWidgetLabel(class Toshi::TPCString const &)
+TGuiInterface.dll,?SetProperties@TGUIWidgetInfo@Toshi@@QAEXPAV?$TSortedArray@PAVTGUIPropertySpec@Toshi@@UComparator@12@@2@@Z,0x28224,"public: void __thiscall Toshi::TGUIWidgetInfo::SetProperties(class Toshi::TSortedArray<class Toshi::TGUIPropertySpec *,struct Toshi::TGUIPropertySpec::Comparator> *)"
+TGuiInterface.dll,?SetConcrete@TGUIWidgetInfo@Toshi@@QAEX_N@Z,0x28228,public: void __thiscall Toshi::TGUIWidgetInfo::SetConcrete(bool)
+TGuiInterface.dll,?AddWidgetClass@TGUIInterface@Toshi@@SGXAAVTGUIWidgetInfo@2@@Z,0x2822c,public: static void __stdcall Toshi::TGUIInterface::AddWidgetClass(class Toshi::TGUIWidgetInfo &)
+TGuiInterface.dll,?ms_oPropertySet@TGUIWidget@Toshi@@1PAV?$TArray@PAVTGUIPropertySpec@Toshi@@@2@A,0x28230,protected: static class Toshi::TArray<class Toshi::TGUIPropertySpec *> * Toshi::TGUIWidget::ms_oPropertySet
+TGuiInterface.dll,?ms_widget_info@TGUIWidget@Toshi@@1PAVTGUIWidgetInfo@2@A,0x28234,protected: static class Toshi::TGUIWidgetInfo * Toshi::TGUIWidget::ms_widget_info
+TGuiInterface.dll,?FindPropertyInfo@TGUIWidget@Toshi@@UBEPBVTGUIPropertySpec@2@ABVTPCString@2@@Z,0x28238,public: virtual class Toshi::TGUIPropertySpec const * __thiscall Toshi::TGUIWidget::FindPropertyInfo(class Toshi::TPCString const &)const 
+TGuiInterface.dll,?ValidatePropertyInfo@TGUIWidget@Toshi@@UBE_NPBVTGUIPropertySpec@2@@Z,0x2823c,public: virtual bool __thiscall Toshi::TGUIWidget::ValidatePropertyInfo(class Toshi::TGUIPropertySpec const *)const 
+TGuiInterface.dll,?GetPropertyInfo@TGUIWidget@Toshi@@UBEPBVTGUIPropertySpec@2@H@Z,0x28240,public: virtual class Toshi::TGUIPropertySpec const * __thiscall Toshi::TGUIWidget::GetPropertyInfo(int)const 
+TGuiInterface.dll,??1TGUIWidget@Toshi@@UAE@XZ,0x28244,public: virtual __thiscall Toshi::TGUIWidget::~TGUIWidget(void)
+TGuiInterface.dll,?GetPropertyCount@TGUIWidget@Toshi@@UBEHXZ,0x28248,public: virtual int __thiscall Toshi::TGUIWidget::GetPropertyCount(void)const 
+TGuiInterface.dll,??0TGUIWidget@Toshi@@QAE@XZ,0x2824c,public: __thiscall Toshi::TGUIWidget::TGUIWidget(void)
+TGuiInterface.dll,??0TGUIWidget@Toshi@@IAE@ABV01@@Z,0x28250,protected: __thiscall Toshi::TGUIWidget::TGUIWidget(class Toshi::TGUIWidget const &)
+TGuiInterface.dll,?Deserialise@TGUIWidget@Toshi@@UAE_NPBVPProperties@@@Z,0x28254,public: virtual bool __thiscall Toshi::TGUIWidget::Deserialise(class PProperties const *)
+TGuiInterface.dll,?Serialise@TGUIWidget@Toshi@@UAE_NPAVPProperties@@@Z,0x28258,public: virtual bool __thiscall Toshi::TGUIWidget::Serialise(class PProperties *)
+TGuiInterface.dll,?OnButtonRelease@TGUIWidget@Toshi@@UAE_NPAVInputEvent@TInputInterface@2@H@Z,0x2825c,"public: virtual bool __thiscall Toshi::TGUIWidget::OnButtonRelease(class Toshi::TInputInterface::InputEvent *,int)"
+TGuiInterface.dll,??0TGUIWidgetInfo@Toshi@@QAE@XZ,0x28260,public: __thiscall Toshi::TGUIWidgetInfo::TGUIWidgetInfo(void)
+TGuiInterface.dll,?m_sClass@TGUIWidget@Toshi@@2VTClass@2@A,0x28264,public: static class Toshi::TClass Toshi::TGUIWidget::m_sClass
+TGuiInterface.dll,?GetScreen@TGUIWidget@Toshi@@QAEPAVTGUIScreen@2@XZ,0x28268,public: class Toshi::TGUIScreen * __thiscall Toshi::TGUIWidget::GetScreen(void)
+TGuiInterface.dll,?ReleasePointer@TGUIScreen@Toshi@@QAEXPAVTGUIWidget@2@@Z,0x2826c,public: void __thiscall Toshi::TGUIScreen::ReleasePointer(class Toshi::TGUIWidget *)
+TGuiInterface.dll,?ReleaseFocus@TGUIScreen@Toshi@@QAEXPAVTGUIWidget@2@@Z,0x28270,public: void __thiscall Toshi::TGUIScreen::ReleaseFocus(class Toshi::TGUIWidget *)
+TGuiInterface.dll,?GetSoundFactory@TGUIInterface@Toshi@@QBEPAVTGUISoundFactory@2@XZ,0x28274,public: class Toshi::TGUISoundFactory * __thiscall Toshi::TGUIInterface::GetSoundFactory(void)const 
+TGuiInterface.dll,?SetState@TGUIWidget@Toshi@@QAEXII@Z,0x28278,"public: void __thiscall Toshi::TGUIWidget::SetState(unsigned int,unsigned int)"
+TGuiInterface.dll,?OnButtonPress@TGUIWidget@Toshi@@UAE_NPAVInputEvent@TInputInterface@2@H@Z,0x2827c,"public: virtual bool __thiscall Toshi::TGUIWidget::OnButtonPress(class Toshi::TInputInterface::InputEvent *,int)"
+TGuiInterface.dll,?GetChildAtPoint@TGUIWidget@Toshi@@QAEPAV12@HHII@Z,0x28280,"public: class Toshi::TGUIWidget * __thiscall Toshi::TGUIWidget::GetChildAtPoint(int,int,unsigned int,unsigned int)"
+TGuiInterface.dll,?GrabPointer@TGUIScreen@Toshi@@QAEXPAVTGUIWidget@2@@Z,0x28284,public: void __thiscall Toshi::TGUIScreen::GrabPointer(class Toshi::TGUIWidget *)
+TGuiInterface.dll,?GetComponentInteriorBBox@TGUIWidget@Toshi@@IAEXHAAH000@Z,0x28288,"protected: void __thiscall Toshi::TGUIWidget::GetComponentInteriorBBox(int,int &,int &,int &,int &)"
+TGuiInterface.dll,?m_sClass@TGUIStyle@Toshi@@2VTClass@2@A,0x2828c,public: static class Toshi::TClass Toshi::TGUIStyle::m_sClass
+TGuiInterface.dll,?m_sClass@TGUIDeserialisable@Toshi@@2VTClass@2@A,0x28290,public: static class Toshi::TClass Toshi::TGUIDeserialisable::m_sClass
+TKernelInterface.dll,?FloorToInt@TMath@Toshi@@SGHM@Z,0x282a0,public: static int __stdcall Toshi::TMath::FloorToInt(float)
+TKernelInterface.dll,?MAXFLOAT@TMath@Toshi@@2MB,0x282a4,public: static float const Toshi::TMath::MAXFLOAT
+TKernelInterface.dll,?Delete@TLocalisedString@Toshi@@AAEXXZ,0x282a8,private: void __thiscall Toshi::TLocalisedString::Delete(void)
+TKernelInterface.dll,??_7TObject@Toshi@@6B@,0x282ac,const Toshi::TObject::`vftable'
+TKernelInterface.dll,??1TGenericListener@Toshi@@IAE@XZ,0x282b0,protected: __thiscall Toshi::TGenericListener::~TGenericListener(void)
+TKernelInterface.dll,?Disconnect@TGenericListener@Toshi@@IAEXXZ,0x282b4,protected: void __thiscall Toshi::TGenericListener::Disconnect(void)
+TKernelInterface.dll,?RemoveAll@TGenericDList@Toshi@@IAEXXZ,0x282b8,protected: void __thiscall Toshi::TGenericDList::RemoveAll(void)
+TKernelInterface.dll,??0TGenericListener@Toshi@@IAE@XZ,0x282bc,protected: __thiscall Toshi::TGenericListener::TGenericListener(void)
+TKernelInterface.dll,?Connect@TGenericListener@Toshi@@IAEXPAVTGenericEmitter@2@PAXP6G_N111@ZH@Z,0x282c0,"protected: void __thiscall Toshi::TGenericListener::Connect(class Toshi::TGenericEmitter *,void *,bool (__stdcall*)(void *,void *,void *),int)"
+TKernelInterface.dll,?Throw@TGenericEmitter@Toshi@@IAEXPAX@Z,0x282c4,protected: void __thiscall Toshi::TGenericEmitter::Throw(void *)
+TKernelInterface.dll,?IsA@TObject@Toshi@@QBE_NABVTClass@2@@Z,0x282c8,public: bool __thiscall Toshi::TObject::IsA(class Toshi::TClass const &)const 
+TKernelInterface.dll,?CreateObject@TClass@Toshi@@QBEPAVTObject@2@XZ,0x282cc,public: class Toshi::TObject * __thiscall Toshi::TClass::CreateObject(void)const 
+TKernelInterface.dll,?IsA@TClass@Toshi@@QBE_NABV12@@Z,0x282d0,public: bool __thiscall Toshi::TClass::IsA(class Toshi::TClass const &)const 
+TKernelInterface.dll,??1TObject@Toshi@@MAE@XZ,0x282d4,protected: virtual __thiscall Toshi::TObject::~TObject(void)
+TKernelInterface.dll,??0TObject@Toshi@@IAE@XZ,0x282d8,protected: __thiscall Toshi::TObject::TObject(void)
+TKernelInterface.dll,?PI@TMath@Toshi@@2MB,0x282dc,public: static float const Toshi::TMath::PI
+TKernelInterface.dll,?GetClass@TObject@Toshi@@UBEAAVTClass@2@XZ,0x282e0,public: virtual class Toshi::TClass & __thiscall Toshi::TObject::GetClass(void)const 
+TKernelInterface.dll,?Magnitude@TVector2@Toshi@@QBEMXZ,0x282e4,public: float __thiscall Toshi::TVector2::Magnitude(void)const 
+TKernelInterface.dll,?NormaliseAngle@TMath@Toshi@@SGXAAM@Z,0x282e8,public: static void __stdcall Toshi::TMath::NormaliseAngle(float &)
+TKernelInterface.dll,?TWO_PI@TMath@Toshi@@2MB,0x282ec,public: static float const Toshi::TMath::TWO_PI
+TKernelInterface.dll,?Delete@TObject@Toshi@@UAEXXZ,0x282f0,public: virtual void __thiscall Toshi::TObject::Delete(void)
+TKernelInterface.dll,?Compare@TPCString@Toshi@@QBEHABV12@@Z,0x282f4,public: int __thiscall Toshi::TPCString::Compare(class Toshi::TPCString const &)const 
+TKernelInterface.dll,??1TGenericEmitter@Toshi@@IAE@XZ,0x282f8,protected: __thiscall Toshi::TGenericEmitter::~TGenericEmitter(void)
+TKernelInterface.dll,??0TGenericEmitter@Toshi@@IAE@PAX@Z,0x282fc,protected: __thiscall Toshi::TGenericEmitter::TGenericEmitter(void *)
+TKernelInterface.dll,??1TClass@Toshi@@QAE@XZ,0x28300,public: __thiscall Toshi::TClass::~TClass(void)
+TKernelInterface.dll,??0TClass@Toshi@@QAE@PBDPAV01@P6GPAVTObject@1@XZP6GPAV21@PAX@ZP6GXXZ5I@Z,0x28304,"public: __thiscall Toshi::TClass::TClass(char const *,class Toshi::TClass *,class Toshi::TObject * (__stdcall*)(void),class Toshi::TObject * (__stdcall*)(void *),void (__stdcall*)(void),void (__stdcall*)(void),unsigned int)"
+TKernelInterface.dll,?Delete@TPooledCString@Toshi@@AAEXXZ,0x28308,private: void __thiscall Toshi::TPooledCString::Delete(void)
+TKernelInterface.dll,??0TCString@Toshi@@QAE@PBG@Z,0x2830c,public: __thiscall Toshi::TCString::TCString(unsigned short const *)
+TKernelInterface.dll,??1TCString@Toshi@@QAE@XZ,0x28310,public: __thiscall Toshi::TCString::~TCString(void)
+TKernelInterface.dll,?Get@TCStringPool@Toshi@@QAE?AVTPCString@2@ABVTCString@2@@Z,0x28314,public: class Toshi::TPCString __thiscall Toshi::TCStringPool::Get(class Toshi::TCString const &)
+TKernelInterface.dll,?tfree@@YGXPAX@Z,0x28318,void __stdcall tfree(void *)
+TKernelInterface.dll,?tmalloc@@YGPAXHPADH@Z,0x2831c,"void * __stdcall tmalloc(int,char *,int)"
+TKernelInterface.dll,?GetCStringPool@TSystem@Toshi@@SGPAVTCStringPool@2@XZ,0x28320,public: static class Toshi::TCStringPool * __stdcall Toshi::TSystem::GetCStringPool(void)
+TKernelInterface.dll,?Get@TCStringPool@Toshi@@QAE?AVTPCString@2@PBD@Z,0x28324,public: class Toshi::TPCString __thiscall Toshi::TCStringPool::Get(char const *)
+TInputInterface.dll,?GetMagnitudeFloat@InputEvent@TInputInterface@Toshi@@QBEMH@Z,0x28298,public: float __thiscall Toshi::TInputInterface::InputEvent::GetMagnitudeFloat(int)const 
+PPropertyParser.dll,??0PPropertyName@@QAE@ABVTPCString@Toshi@@0@Z,0x28028,"public: __thiscall PPropertyName::PPropertyName(class Toshi::TPCString const &,class Toshi::TPCString const &)"
+PPropertyParser.dll,?TYPE_FLOAT@PPropertyValue@@2PBVTClass@Toshi@@B,0x2802c,public: static class Toshi::TClass const * const PPropertyValue::TYPE_FLOAT
+PPropertyParser.dll,?GetFloat@PPropertyValue@@QBEMXZ,0x28030,public: float __thiscall PPropertyValue::GetFloat(void)const 
+PPropertyParser.dll,??0PPropertyValue@@QAE@XZ,0x28034,public: __thiscall PPropertyValue::PPropertyValue(void)
+PPropertyParser.dll,??0PPropertyValue@@QAE@M@Z,0x28038,public: __thiscall PPropertyValue::PPropertyValue(float)
+PPropertyParser.dll,??1PPropertyValue@@QAE@XZ,0x2803c,public: __thiscall PPropertyValue::~PPropertyValue(void)
+PPropertyParser.dll,?CanBeType@PPropertyValue@@QBE_NPBVTClass@Toshi@@@Z,0x28040,public: bool __thiscall PPropertyValue::CanBeType(class Toshi::TClass const *)const 
+PPropertyParser.dll,?TYPE_INT@PPropertyValue@@2PBVTClass@Toshi@@B,0x28044,public: static class Toshi::TClass const * const PPropertyValue::TYPE_INT
+PPropertyParser.dll,?GetInteger@PPropertyValue@@QBEHXZ,0x28048,public: int __thiscall PPropertyValue::GetInteger(void)const 
+PPropertyParser.dll,?TYPE_TPCSTRING@PPropertyValue@@2PBVTClass@Toshi@@B,0x2804c,public: static class Toshi::TClass const * const PPropertyValue::TYPE_TPCSTRING
+PPropertyParser.dll,?GetTPCString@PPropertyValue@@QBEABVTPCString@Toshi@@XZ,0x28050,public: class Toshi::TPCString const & __thiscall PPropertyValue::GetTPCString(void)const 
+PPropertyParser.dll,?IsType@PPropertyValue@@QBE_NPBVTClass@Toshi@@@Z,0x28054,public: bool __thiscall PPropertyValue::IsType(class Toshi::TClass const *)const 
+PPropertyParser.dll,?GetTObject@PPropertyValue@@QBEPAVTObject@Toshi@@XZ,0x28058,public: class Toshi::TObject * __thiscall PPropertyValue::GetTObject(void)const 
+PPropertyParser.dll,??0PPropertyValue@@QAE@H@Z,0x2805c,public: __thiscall PPropertyValue::PPropertyValue(int)
+PPropertyParser.dll,??4PPropertyValue@@QAEAAV0@ABVTLString@Toshi@@@Z,0x28060,public: class PPropertyValue & __thiscall PPropertyValue::operator=(class Toshi::TLString const &)
+PPropertyParser.dll,??0PPropertyValue@@QAE@ABVTPCString@Toshi@@@Z,0x28064,public: __thiscall PPropertyValue::PPropertyValue(class Toshi::TPCString const &)
+PPropertyParser.dll,??0PPropertyValue@@QAE@ABV0@@Z,0x28068,public: __thiscall PPropertyValue::PPropertyValue(class PPropertyValue const &)
+PPropertyParser.dll,?TYPE_BOOL@PPropertyValue@@2PBVTClass@Toshi@@B,0x2806c,public: static class Toshi::TClass const * const PPropertyValue::TYPE_BOOL
+PPropertyParser.dll,??8PPropertyValue@@QBE_NABVTLString@Toshi@@@Z,0x28070,public: bool __thiscall PPropertyValue::operator==(class Toshi::TLString const &)const 
+PPropertyParser.dll,?GetBoolean@PPropertyValue@@QBE_NXZ,0x28074,public: bool __thiscall PPropertyValue::GetBoolean(void)const 
+PPropertyParser.dll,??0PPropertyValue@@QAE@_N@Z,0x28078,public: __thiscall PPropertyValue::PPropertyValue(bool)
+PPropertyParser.dll,??4PPropertyValue@@QAEAAV0@ABV0@@Z,0x2807c,public: class PPropertyValue & __thiscall PPropertyValue::operator=(class PPropertyValue const &)
+MSVCRT.dll,_onexit,0x28008,_onexit
+MSVCRT.dll,__dllonexit,0x2800c,__dllonexit
+MSVCRT.dll,_purecall,0x28010,_purecall
+MSVCRT.dll,free,0x28014,free
+MSVCRT.dll,malloc,0x28018,malloc
+MSVCRT.dll,_adjust_fdiv,0x2801c,_adjust_fdiv
+MSVCRT.dll,_initterm,0x28020,_initterm
+KERNEL32.dll,DisableThreadLibraryCalls,0x28000,DisableThreadLibraryCalls

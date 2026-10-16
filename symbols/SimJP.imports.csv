@@ -1,0 +1,1198 @@
+dll,name,iat_rva,demangled
+kernel32.dll,GetLogicalDriveStringsA,0xa0e4f0,GetLogicalDriveStringsA
+kernel32.dll,WritePrivateProfileStringA,0xa0e4f4,WritePrivateProfileStringA
+kernel32.dll,QueryPerformanceFrequency,0xa0e4f8,QueryPerformanceFrequency
+kernel32.dll,QueryPerformanceCounter,0xa0e4fc,QueryPerformanceCounter
+kernel32.dll,GetDriveTypeA,0xa0e500,GetDriveTypeA
+kernel32.dll,Sleep,0xa0e504,Sleep
+kernel32.dll,ResumeThread,0xa0e508,ResumeThread
+kernel32.dll,SetThreadPriority,0xa0e50c,SetThreadPriority
+kernel32.dll,GetThreadPriority,0xa0e510,GetThreadPriority
+kernel32.dll,GetCurrentThread,0xa0e514,GetCurrentThread
+kernel32.dll,SuspendThread,0xa0e518,SuspendThread
+kernel32.dll,ExitThread,0xa0e51c,ExitThread
+kernel32.dll,WaitForSingleObject,0xa0e520,WaitForSingleObject
+kernel32.dll,SetEvent,0xa0e524,SetEvent
+kernel32.dll,SetThreadPriorityBoost,0xa0e528,SetThreadPriorityBoost
+kernel32.dll,GetVersionExA,0xa0e52c,GetVersionExA
+kernel32.dll,CreateThread,0xa0e530,CreateThread
+kernel32.dll,CreateEventA,0xa0e534,CreateEventA
+kernel32.dll,CloseHandle,0xa0e538,CloseHandle
+kernel32.dll,GetExitCodeThread,0xa0e53c,GetExitCodeThread
+kernel32.dll,lstrlenA,0xa0e540,lstrlenA
+kernel32.dll,GetFullPathNameA,0xa0e544,GetFullPathNameA
+kernel32.dll,lstrcatA,0xa0e548,lstrcatA
+kernel32.dll,lstrcpyA,0xa0e54c,lstrcpyA
+kernel32.dll,GetOverlappedResult,0xa0e550,GetOverlappedResult
+kernel32.dll,ReadFile,0xa0e554,ReadFile
+kernel32.dll,GetVolumeInformationA,0xa0e558,GetVolumeInformationA
+kernel32.dll,CreateFileA,0xa0e55c,CreateFileA
+kernel32.dll,FindClose,0xa0e560,FindClose
+kernel32.dll,FindFirstFileA,0xa0e564,FindFirstFileA
+kernel32.dll,HeapAlloc,0xa0e568,HeapAlloc
+kernel32.dll,HeapCreate,0xa0e56c,HeapCreate
+kernel32.dll,HeapDestroy,0xa0e570,HeapDestroy
+kernel32.dll,HeapFree,0xa0e574,HeapFree
+kernel32.dll,lstrcmpiA,0xa0e578,lstrcmpiA
+kernel32.dll,GetFileSize,0xa0e57c,GetFileSize
+kernel32.dll,OutputDebugStringA,0xa0e580,OutputDebugStringA
+kernel32.dll,InitializeCriticalSection,0xa0e584,InitializeCriticalSection
+kernel32.dll,DeleteCriticalSection,0xa0e588,DeleteCriticalSection
+kernel32.dll,EnterCriticalSection,0xa0e58c,EnterCriticalSection
+kernel32.dll,LeaveCriticalSection,0xa0e590,LeaveCriticalSection
+kernel32.dll,FindNextFileA,0xa0e594,FindNextFileA
+kernel32.dll,MapViewOfFile,0xa0e598,MapViewOfFile
+kernel32.dll,CreateFileMappingA,0xa0e59c,CreateFileMappingA
+kernel32.dll,CreateFileW,0xa0e5a0,CreateFileW
+kernel32.dll,WideCharToMultiByte,0xa0e5a4,WideCharToMultiByte
+kernel32.dll,UnmapViewOfFile,0xa0e5a8,UnmapViewOfFile
+kernel32.dll,GetLastError,0xa0e5ac,GetLastError
+kernel32.dll,LoadResource,0xa0e5b0,LoadResource
+kernel32.dll,SizeofResource,0xa0e5b4,SizeofResource
+kernel32.dll,FindResourceA,0xa0e5b8,FindResourceA
+kernel32.dll,FindResourceW,0xa0e5bc,FindResourceW
+kernel32.dll,ReleaseMutex,0xa0e5c0,ReleaseMutex
+kernel32.dll,SetFilePointer,0xa0e5c4,SetFilePointer
+kernel32.dll,LockResource,0xa0e5c8,LockResource
+kernel32.dll,CreateMutexA,0xa0e5cc,CreateMutexA
+kernel32.dll,GetTickCount,0xa0e5d0,GetTickCount
+kernel32.dll,GetTempPathA,0xa0e5d4,GetTempPathA
+kernel32.dll,SetEndOfFile,0xa0e5d8,SetEndOfFile
+kernel32.dll,SetEnvironmentVariableA,0xa0e5dc,SetEnvironmentVariableA
+kernel32.dll,CompareStringW,0xa0e5e0,CompareStringW
+kernel32.dll,CompareStringA,0xa0e5e4,CompareStringA
+kernel32.dll,GetCPInfo,0xa0e5e8,GetCPInfo
+kernel32.dll,IsBadCodePtr,0xa0e5ec,IsBadCodePtr
+kernel32.dll,GetACP,0xa0e5f0,GetACP
+kernel32.dll,SetUnhandledExceptionFilter,0xa0e5f4,SetUnhandledExceptionFilter
+kernel32.dll,GetStringTypeW,0xa0e5f8,GetStringTypeW
+kernel32.dll,IsBadReadPtr,0xa0e5fc,IsBadReadPtr
+kernel32.dll,SetStdHandle,0xa0e600,SetStdHandle
+kernel32.dll,GetFileType,0xa0e604,GetFileType
+kernel32.dll,GetStringTypeA,0xa0e608,GetStringTypeA
+kernel32.dll,SetHandleCount,0xa0e60c,SetHandleCount
+kernel32.dll,GetEnvironmentStringsW,0xa0e610,GetEnvironmentStringsW
+kernel32.dll,GetStdHandle,0xa0e614,GetStdHandle
+kernel32.dll,FreeEnvironmentStringsW,0xa0e618,FreeEnvironmentStringsW
+kernel32.dll,FreeEnvironmentStringsA,0xa0e61c,FreeEnvironmentStringsA
+kernel32.dll,GetEnvironmentStrings,0xa0e620,GetEnvironmentStrings
+kernel32.dll,LCMapStringW,0xa0e624,LCMapStringW
+kernel32.dll,LCMapStringA,0xa0e628,LCMapStringA
+kernel32.dll,UnhandledExceptionFilter,0xa0e62c,UnhandledExceptionFilter
+kernel32.dll,IsBadWritePtr,0xa0e630,IsBadWritePtr
+kernel32.dll,HeapReAlloc,0xa0e634,HeapReAlloc
+kernel32.dll,RaiseException,0xa0e638,RaiseException
+kernel32.dll,VirtualFree,0xa0e63c,VirtualFree
+kernel32.dll,SetPriorityClass,0xa0e640,SetPriorityClass
+kernel32.dll,GetPriorityClass,0xa0e644,GetPriorityClass
+kernel32.dll,GetCurrentProcess,0xa0e648,GetCurrentProcess
+kernel32.dll,FreeLibrary,0xa0e64c,FreeLibrary
+kernel32.dll,GetProcAddress,0xa0e650,GetProcAddress
+kernel32.dll,LoadLibraryA,0xa0e654,LoadLibraryA
+kernel32.dll,TerminateProcess,0xa0e658,TerminateProcess
+kernel32.dll,DeviceIoControl,0xa0e65c,DeviceIoControl
+kernel32.dll,CreateDirectoryA,0xa0e660,CreateDirectoryA
+kernel32.dll,CreateSemaphoreA,0xa0e664,CreateSemaphoreA
+kernel32.dll,ReleaseSemaphore,0xa0e668,ReleaseSemaphore
+kernel32.dll,WriteFile,0xa0e66c,WriteFile
+kernel32.dll,GetSystemDirectoryA,0xa0e670,GetSystemDirectoryA
+kernel32.dll,GetOEMCP,0xa0e674,GetOEMCP
+kernel32.dll,MultiByteToWideChar,0xa0e678,MultiByteToWideChar
+kernel32.dll,VirtualAlloc,0xa0e67c,VirtualAlloc
+kernel32.dll,SetLastError,0xa0e680,SetLastError
+kernel32.dll,GetTimeZoneInformation,0xa0e684,GetTimeZoneInformation
+kernel32.dll,GetModuleHandleA,0xa0e688,GetModuleHandleA
+kernel32.dll,DuplicateHandle,0xa0e68c,DuplicateHandle
+kernel32.dll,OpenProcess,0xa0e690,OpenProcess
+kernel32.dll,RtlUnwind,0xa0e694,RtlUnwind
+kernel32.dll,GetUserDefaultLangID,0xa0e698,GetUserDefaultLangID
+kernel32.dll,ExitProcess,0xa0e69c,ExitProcess
+kernel32.dll,GetCommandLineA,0xa0e6a0,GetCommandLineA
+kernel32.dll,GetSystemTime,0xa0e6a4,GetSystemTime
+kernel32.dll,GetLocalTime,0xa0e6a8,GetLocalTime
+kernel32.dll,GetStartupInfoA,0xa0e6ac,GetStartupInfoA
+kernel32.dll,GetEnvironmentVariableA,0xa0e6b0,GetEnvironmentVariableA
+kernel32.dll,GetVersion,0xa0e6b4,GetVersion
+kernel32.dll,FlushFileBuffers,0xa0e6b8,FlushFileBuffers
+kernel32.dll,GetModuleFileNameA,0xa0e6bc,GetModuleFileNameA
+user32.dll,wsprintfA,0xa0e6c4,wsprintfA
+user32.dll,MessageBoxA,0xa0e6c8,MessageBoxA
+user32.dll,UnregisterClassA,0xa0e6cc,UnregisterClassA
+user32.dll,InvalidateRect,0xa0e6d0,InvalidateRect
+user32.dll,SetSystemCursor,0xa0e6d4,SetSystemCursor
+user32.dll,LoadCursorFromFileA,0xa0e6d8,LoadCursorFromFileA
+user32.dll,CopyImage,0xa0e6dc,CopyImage
+user32.dll,LoadImageA,0xa0e6e0,LoadImageA
+gdi32.dll,DeleteObject,0xa0e6e8,DeleteObject
+gdi32.dll,SelectObject,0xa0e6ec,SelectObject
+gdi32.dll,CreateCompatibleBitmap,0xa0e6f0,CreateCompatibleBitmap
+gdi32.dll,BitBlt,0xa0e6f4,BitBlt
+gdi32.dll,SetBkColor,0xa0e6f8,SetBkColor
+gdi32.dll,CreateBitmap,0xa0e6fc,CreateBitmap
+gdi32.dll,CreateCompatibleDC,0xa0e700,CreateCompatibleDC
+gdi32.dll,RectVisible,0xa0e704,RectVisible
+gdi32.dll,StretchDIBits,0xa0e708,StretchDIBits
+gdi32.dll,SetStretchBltMode,0xa0e70c,SetStretchBltMode
+gdi32.dll,DeleteDC,0xa0e710,DeleteDC
+gdi32.dll,StretchBlt,0xa0e714,StretchBlt
+fmod.dll,_FSOUND_GetPan@4,0xa0e71c,_FSOUND_GetPan@4
+fmod.dll,_FSOUND_SetPanSeperation@4,0xa0e720,_FSOUND_SetPanSeperation@4
+fmod.dll,_FSOUND_SetPan@8,0xa0e724,_FSOUND_SetPan@8
+fmod.dll,_FSOUND_3D_SetAttributes@12,0xa0e728,_FSOUND_3D_SetAttributes@12
+fmod.dll,_FSOUND_GetMemoryStats@8,0xa0e72c,_FSOUND_GetMemoryStats@8
+fmod.dll,_FSOUND_SetSpeakerMode@4,0xa0e730,_FSOUND_SetSpeakerMode@4
+fmod.dll,_FSOUND_Sample_GetDefaults@20,0xa0e734,_FSOUND_Sample_GetDefaults@20
+fmod.dll,_FSOUND_GetCurrentSample@4,0xa0e738,_FSOUND_GetCurrentSample@4
+fmod.dll,_FSOUND_3D_Listener_SetAttributes@32,0xa0e73c,_FSOUND_3D_Listener_SetAttributes@32
+fmod.dll,_FSOUND_SetFrequency@8,0xa0e740,_FSOUND_SetFrequency@8
+fmod.dll,_FSOUND_SetSFXMasterVolume@4,0xa0e744,_FSOUND_SetSFXMasterVolume@4
+fmod.dll,_FSOUND_SetHWND@4,0xa0e748,_FSOUND_SetHWND@4
+fmod.dll,_FSOUND_GetFrequency@4,0xa0e74c,_FSOUND_GetFrequency@4
+fmod.dll,_FSOUND_Stream_SetEndCallback@12,0xa0e750,_FSOUND_Stream_SetEndCallback@12
+fmod.dll,_FSOUND_Init@12,0xa0e754,_FSOUND_Init@12
+fmod.dll,_FSOUND_GetVolume@4,0xa0e758,_FSOUND_GetVolume@4
+fmod.dll,_FSOUND_Sample_SetMinMaxDistance@12,0xa0e75c,_FSOUND_Sample_SetMinMaxDistance@12
+fmod.dll,_FSOUND_StopSound@4,0xa0e760,_FSOUND_StopSound@4
+fmod.dll,_FSOUND_Stream_GetOpenState@4,0xa0e764,_FSOUND_Stream_GetOpenState@4
+fmod.dll,_FSOUND_Stream_GetSample@4,0xa0e768,_FSOUND_Stream_GetSample@4
+fmod.dll,_FSOUND_PlaySoundEx@16,0xa0e76c,_FSOUND_PlaySoundEx@16
+fmod.dll,_FSOUND_Sample_SetMode@8,0xa0e770,_FSOUND_Sample_SetMode@8
+fmod.dll,_FSOUND_Sample_SetMaxPlaybacks@8,0xa0e774,_FSOUND_Sample_SetMaxPlaybacks@8
+fmod.dll,_FSOUND_Sample_SetDefaults@20,0xa0e778,_FSOUND_Sample_SetDefaults@20
+fmod.dll,_FSOUND_Sample_Load@16,0xa0e77c,_FSOUND_Sample_Load@16
+fmod.dll,_FSOUND_GetMaxChannels@0,0xa0e780,_FSOUND_GetMaxChannels@0
+fmod.dll,_FSOUND_GetChannelsPlaying@0,0xa0e784,_FSOUND_GetChannelsPlaying@0
+fmod.dll,_FSOUND_Update@0,0xa0e788,_FSOUND_Update@0
+fmod.dll,_FSOUND_SetVolume@8,0xa0e78c,_FSOUND_SetVolume@8
+fmod.dll,_FSOUND_Stream_OpenFile@12,0xa0e790,_FSOUND_Stream_OpenFile@12
+fmod.dll,_FSOUND_Stream_GetTime@4,0xa0e794,_FSOUND_Stream_GetTime@4
+fmod.dll,_FSOUND_Stream_GetLengthMs@4,0xa0e798,_FSOUND_Stream_GetLengthMs@4
+fmod.dll,_FSOUND_SetPaused@8,0xa0e79c,_FSOUND_SetPaused@8
+fmod.dll,_FSOUND_Stream_Close@4,0xa0e7a0,_FSOUND_Stream_Close@4
+fmod.dll,_FSOUND_Stream_PlayEx@16,0xa0e7a4,_FSOUND_Stream_PlayEx@16
+fmod.dll,_FSOUND_Sample_Free@4,0xa0e7a8,_FSOUND_Sample_Free@4
+fmod.dll,_FSOUND_SetBufferSize@4,0xa0e7ac,_FSOUND_SetBufferSize@4
+fmod.dll,_FSOUND_GetPaused@4,0xa0e7b0,_FSOUND_GetPaused@4
+fmod.dll,_FSOUND_Stream_SetBufferSize@4,0xa0e7b4,_FSOUND_Stream_SetBufferSize@4
+fmod.dll,_FSOUND_Close@0,0xa0e7b8,_FSOUND_Close@0
+fmod.dll,_FSOUND_SetMaxHardwareChannels@4,0xa0e7bc,_FSOUND_SetMaxHardwareChannels@4
+dsound.dll,#1,0xa0e7c4,#1
+winmm.dll,timeSetEvent,0xa0e7cc,timeSetEvent
+winmm.dll,timeKillEvent,0xa0e7d0,timeKillEvent
+tapplication.dll,?OnCreate@TApplication@Toshi@@UAE_NHQAPAD@Z,0xa0e7d8,"public: virtual bool __thiscall Toshi::TApplication::OnCreate(int,char * * const)"
+tapplication.dll,?Execute@TApplication@Toshi@@QAE_NXZ,0xa0e7dc,public: bool __thiscall Toshi::TApplication::Execute(void)
+tapplication.dll,?Create@TApplication@Toshi@@QAE_NPBDHQAPAD@Z,0xa0e7e0,"public: bool __thiscall Toshi::TApplication::Create(char const *,int,char * * const)"
+tapplication.dll,?Destroy@TApplication@Toshi@@QAEXXZ,0xa0e7e4,public: void __thiscall Toshi::TApplication::Destroy(void)
+tapplication.dll,?OnUpdate@TApplication@Toshi@@UAE_NM@Z,0xa0e7e8,public: virtual bool __thiscall Toshi::TApplication::OnUpdate(float)
+tapplication.dll,??0TApplication@Toshi@@QAE@XZ,0xa0e7ec,public: __thiscall Toshi::TApplication::TApplication(void)
+tapplication.dll,??_7TApplication@Toshi@@6B@,0xa0e7f0,const Toshi::TApplication::`vftable'
+tapplication.dll,??1TApplication@Toshi@@UAE@XZ,0xa0e7f4,public: virtual __thiscall Toshi::TApplication::~TApplication(void)
+tkernelinterface.dll,??DTMatrix44@Toshi@@QBE?AVTVector4@1@ABV21@@Z,0xa0e7fc,public: class Toshi::TVector4 __thiscall Toshi::TMatrix44::operator*(class Toshi::TVector4 const &)const 
+tkernelinterface.dll,??_0TQuaternion@Toshi@@QAEAAV01@M@Z,0xa0e800,public: class Toshi::TQuaternion & __thiscall Toshi::TQuaternion::operator/=(float)
+tkernelinterface.dll,?GetTree@TScheduler@Toshi@@QAEPAV?$TNodeTree@VTTask@Toshi@@@2@XZ,0xa0e804,public: class Toshi::TNodeTree<class Toshi::TTask> * __thiscall Toshi::TScheduler::GetTree(void)
+tkernelinterface.dll,?Divide@TVector2@Toshi@@QAEXABV12@@Z,0xa0e808,public: void __thiscall Toshi::TVector2::Divide(class Toshi::TVector2 const &)
+tkernelinterface.dll,?DELTA@TQuaternion@Toshi@@2MB,0xa0e80c,public: static float const Toshi::TQuaternion::DELTA
+tkernelinterface.dll,?IsActive@TTask@Toshi@@QBE_NXZ,0xa0e810,public: bool __thiscall Toshi::TTask::IsActive(void)const 
+tkernelinterface.dll,?Lerp@TVector3@Toshi@@QAEXABV12@0M@Z,0xa0e814,"public: void __thiscall Toshi::TVector3::Lerp(class Toshi::TVector3 const &,class Toshi::TVector3 const &,float)"
+tkernelinterface.dll,?GetEulerXYZ@TQuaternion@Toshi@@QBEXPAM@Z,0xa0e818,public: void __thiscall Toshi::TQuaternion::GetEulerXYZ(float *)const 
+tkernelinterface.dll,?Negate@TVector3@Toshi@@QAEXXZ,0xa0e81c,public: void __thiscall Toshi::TVector3::Negate(void)
+tkernelinterface.dll,?Gain075@TMath@Toshi@@SGMM@Z,0xa0e820,public: static float __stdcall Toshi::TMath::Gain075(float)
+tkernelinterface.dll,?Lerp@TQuaternion@Toshi@@QAEXABV12@0M@Z,0xa0e824,"public: void __thiscall Toshi::TQuaternion::Lerp(class Toshi::TQuaternion const &,class Toshi::TQuaternion const &,float)"
+tkernelinterface.dll,?SetFromEulerYX@TQuaternion@Toshi@@QAEXPBM@Z,0xa0e828,public: void __thiscall Toshi::TQuaternion::SetFromEulerYX(float const *)
+tkernelinterface.dll,?ASin@TMath@Toshi@@SGMM@Z,0xa0e82c,public: static float __stdcall Toshi::TMath::ASin(float)
+tkernelinterface.dll,?StringIntToString@TSystem@Toshi@@SGPBDHPADH@Z,0xa0e830,"public: static char const * __stdcall Toshi::TSystem::StringIntToString(int,char *,int)"
+tkernelinterface.dll,?IDENTITY@TMatrix44@Toshi@@2V12@B,0xa0e834,public: static class Toshi::TMatrix44 const Toshi::TMatrix44::IDENTITY
+tkernelinterface.dll,?Divide@TVector2@Toshi@@QAEXM@Z,0xa0e838,public: void __thiscall Toshi::TVector2::Divide(float)
+tkernelinterface.dll,?IsEqual@TVector3@Toshi@@QBE_NABV12@@Z,0xa0e83c,public: bool __thiscall Toshi::TVector3::IsEqual(class Toshi::TVector3 const &)const 
+tkernelinterface.dll,??HTCString@Toshi@@QBE?AV01@PBD@Z,0xa0e840,public: class Toshi::TCString __thiscall Toshi::TCString::operator+(char const *)const 
+tkernelinterface.dll,?Rotate@TVector2@Toshi@@QAEXM@Z,0xa0e844,public: void __thiscall Toshi::TVector2::Rotate(float)
+tkernelinterface.dll,?Find@TCString@Toshi@@QBEHPBDH@Z,0xa0e848,"public: int __thiscall Toshi::TCString::Find(char const *,int)const "
+tkernelinterface.dll,?SetRotation@TQuaternion@Toshi@@QAEXABVTVector3@2@M@Z,0xa0e84c,"public: void __thiscall Toshi::TQuaternion::SetRotation(class Toshi::TVector3 const &,float)"
+tkernelinterface.dll,?Lerp@TVector4@Toshi@@QAEXABV12@0M@Z,0xa0e850,"public: void __thiscall Toshi::TVector4::Lerp(class Toshi::TVector4 const &,class Toshi::TVector4 const &,float)"
+tkernelinterface.dll,?MagnitudeSq@TVector3@Toshi@@QBEMXZ,0xa0e854,public: float __thiscall Toshi::TVector3::MagnitudeSq(void)const 
+tkernelinterface.dll,?Gain@TMath@Toshi@@SGMMM@Z,0xa0e858,"public: static float __stdcall Toshi::TMath::Gain(float,float)"
+tkernelinterface.dll,??8TClass@Toshi@@QBE_NABV01@@Z,0xa0e85c,public: bool __thiscall Toshi::TClass::operator==(class Toshi::TClass const &)const 
+tkernelinterface.dll,?IsA@TClass@Toshi@@QBE_NABV12@@Z,0xa0e860,public: bool __thiscall Toshi::TClass::IsA(class Toshi::TClass const &)const 
+tkernelinterface.dll,??DTQuaternion@Toshi@@QBE?AV01@ABV01@@Z,0xa0e864,public: class Toshi::TQuaternion __thiscall Toshi::TQuaternion::operator*(class Toshi::TQuaternion const &)const 
+tkernelinterface.dll,?CrossProduct@TVector2@Toshi@@SGMABV12@0@Z,0xa0e868,"public: static float __stdcall Toshi::TVector2::CrossProduct(class Toshi::TVector2 const &,class Toshi::TVector2 const &)"
+tkernelinterface.dll,?RayVsCircle2D@TMath@Toshi@@SGHABVTVector2@2@00MAAM1@Z,0xa0e86c,"public: static int __stdcall Toshi::TMath::RayVsCircle2D(class Toshi::TVector2 const &,class Toshi::TVector2 const &,class Toshi::TVector2 const &,float,float &,float &)"
+tkernelinterface.dll,?VEC_POSX@TVector2@Toshi@@2V12@B,0xa0e870,public: static class Toshi::TVector2 const Toshi::TVector2::VEC_POSX
+tkernelinterface.dll,?VEC_POSY@TVector2@Toshi@@2V12@B,0xa0e874,public: static class Toshi::TVector2 const Toshi::TVector2::VEC_POSY
+tkernelinterface.dll,?VEC_NEGX@TVector2@Toshi@@2V12@B,0xa0e878,public: static class Toshi::TVector2 const Toshi::TVector2::VEC_NEGX
+tkernelinterface.dll,??DTVector2@Toshi@@QBE?AV01@M@Z,0xa0e87c,public: class Toshi::TVector2 __thiscall Toshi::TVector2::operator*(float)const 
+tkernelinterface.dll,?Multiply@TVector2@Toshi@@QAEXABV12@@Z,0xa0e880,public: void __thiscall Toshi::TVector2::Multiply(class Toshi::TVector2 const &)
+tkernelinterface.dll,??XTQuaternion@Toshi@@QAEAAV01@ABV01@@Z,0xa0e884,public: class Toshi::TQuaternion & __thiscall Toshi::TQuaternion::operator*=(class Toshi::TQuaternion const &)
+tkernelinterface.dll,?Copy@TCString@Toshi@@QAEXPBDH@Z,0xa0e888,"public: void __thiscall Toshi::TCString::Copy(char const *,int)"
+tkernelinterface.dll,?NormaliseAngle@TMath@Toshi@@SGXAAM@Z,0xa0e88c,public: static void __stdcall Toshi::TMath::NormaliseAngle(float &)
+tkernelinterface.dll,??HTVector2@Toshi@@QBE?AV01@ABV01@@Z,0xa0e890,public: class Toshi::TVector2 __thiscall Toshi::TVector2::operator+(class Toshi::TVector2 const &)const 
+tkernelinterface.dll,?Multiply@TMatrix44@Toshi@@QAEXABV12@0@Z,0xa0e894,"public: void __thiscall Toshi::TMatrix44::Multiply(class Toshi::TMatrix44 const &,class Toshi::TMatrix44 const &)"
+tkernelinterface.dll,?ONEOVER_PI@TMath@Toshi@@2MB,0xa0e898,public: static float const Toshi::TMath::ONEOVER_PI
+tkernelinterface.dll,?Add@TVector2@Toshi@@QAEXABV12@@Z,0xa0e89c,public: void __thiscall Toshi::TVector2::Add(class Toshi::TVector2 const &)
+tkernelinterface.dll,?Multiply@TVector2@Toshi@@QAEXM@Z,0xa0e8a0,public: void __thiscall Toshi::TVector2::Multiply(float)
+tkernelinterface.dll,?VEC_NEGY@TVector2@Toshi@@2V12@B,0xa0e8a4,public: static class Toshi::TVector2 const Toshi::TVector2::VEC_NEGY
+tkernelinterface.dll,?DistanceSq@TVector3@Toshi@@SGMABV12@0@Z,0xa0e8a8,"public: static float __stdcall Toshi::TVector3::DistanceSq(class Toshi::TVector3 const &,class Toshi::TVector3 const &)"
+tkernelinterface.dll,?VEC_POSZ@TVector3@Toshi@@2V12@B,0xa0e8ac,public: static class Toshi::TVector3 const Toshi::TVector3::VEC_POSZ
+tkernelinterface.dll,?VEC_NEGX@TVector3@Toshi@@2V12@B,0xa0e8b0,public: static class Toshi::TVector3 const Toshi::TVector3::VEC_NEGX
+tkernelinterface.dll,?VEC_NEGZ@TVector3@Toshi@@2V12@B,0xa0e8b4,public: static class Toshi::TVector3 const Toshi::TVector3::VEC_NEGZ
+tkernelinterface.dll,?VEC_POSXPOSZ@TVector3@Toshi@@2V12@B,0xa0e8b8,public: static class Toshi::TVector3 const Toshi::TVector3::VEC_POSXPOSZ
+tkernelinterface.dll,?VEC_POSXNEGZ@TVector3@Toshi@@2V12@B,0xa0e8bc,public: static class Toshi::TVector3 const Toshi::TVector3::VEC_POSXNEGZ
+tkernelinterface.dll,?VEC_NEGXPOSZ@TVector3@Toshi@@2V12@B,0xa0e8c0,public: static class Toshi::TVector3 const Toshi::TVector3::VEC_NEGXPOSZ
+tkernelinterface.dll,?VEC_NEGXNEGZ@TVector3@Toshi@@2V12@B,0xa0e8c4,public: static class Toshi::TVector3 const Toshi::TVector3::VEC_NEGXNEGZ
+tkernelinterface.dll,?VEC_ZERO@TVector2@Toshi@@2V12@B,0xa0e8c8,public: static class Toshi::TVector2 const Toshi::TVector2::VEC_ZERO
+tkernelinterface.dll,?Slerp@TQuaternion@Toshi@@QAEXABV12@0M@Z,0xa0e8cc,"public: void __thiscall Toshi::TQuaternion::Slerp(class Toshi::TQuaternion const &,class Toshi::TQuaternion const &,float)"
+tkernelinterface.dll,?SetFromEulerRollPitchYaw@TQuaternion@Toshi@@QAEXMMM@Z,0xa0e8d0,"public: void __thiscall Toshi::TQuaternion::SetFromEulerRollPitchYaw(float,float,float)"
+tkernelinterface.dll,?MatToQuat@TMatrix44@Toshi@@SGXAAVTQuaternion@2@ABV12@@Z,0xa0e8d4,"public: static void __stdcall Toshi::TMatrix44::MatToQuat(class Toshi::TQuaternion &,class Toshi::TMatrix44 const &)"
+tkernelinterface.dll,?SetXZFromVector3@TVector2@Toshi@@QAEXABVTVector3@2@@Z,0xa0e8d8,public: void __thiscall Toshi::TVector2::SetXZFromVector3(class Toshi::TVector3 const &)
+tkernelinterface.dll,?GetAngleDifference@TMath@Toshi@@SGMMM@Z,0xa0e8dc,"public: static float __stdcall Toshi::TMath::GetAngleDifference(float,float)"
+tkernelinterface.dll,?RotateAroundAxis@TQuaternion@Toshi@@QAEXABVTVector3@2@M@Z,0xa0e8e0,"public: void __thiscall Toshi::TQuaternion::RotateAroundAxis(class Toshi::TVector3 const &,float)"
+tkernelinterface.dll,??4TWString@Toshi@@QAEAAV01@AAV01@@Z,0xa0e8e4,public: class Toshi::TWString & __thiscall Toshi::TWString::operator=(class Toshi::TWString &)
+tkernelinterface.dll,?Find@TWString@Toshi@@QBEHPBGH@Z,0xa0e8e8,"public: int __thiscall Toshi::TWString::Find(unsigned short const *,int)const "
+tkernelinterface.dll,??0TWString@Toshi@@QAE@PBG@Z,0xa0e8ec,public: __thiscall Toshi::TWString::TWString(unsigned short const *)
+tkernelinterface.dll,?ACos@TMath@Toshi@@SGMM@Z,0xa0e8f0,public: static float __stdcall Toshi::TMath::ACos(float)
+tkernelinterface.dll,?CompareNoCase@TCString@Toshi@@QBEHPBDH@Z,0xa0e8f4,"public: int __thiscall Toshi::TCString::CompareNoCase(char const *,int)const "
+tkernelinterface.dll,??8TCString@Toshi@@QBE_NPBD@Z,0xa0e8f8,public: bool __thiscall Toshi::TCString::operator==(char const *)const 
+tkernelinterface.dll,?TWO_PI@TMath@Toshi@@2MB,0xa0e8fc,public: static float const Toshi::TMath::TWO_PI
+tkernelinterface.dll,?MemSet@TSystem@Toshi@@SGPAXPAXHH@Z,0xa0e900,"public: static void * __stdcall Toshi::TSystem::MemSet(void *,int,int)"
+tkernelinterface.dll,?HashString@TSystem@Toshi@@SGIPBD@Z,0xa0e904,public: static unsigned int __stdcall Toshi::TSystem::HashString(char const *)
+tkernelinterface.dll,??ATCString@Toshi@@QBEABDH@Z,0xa0e908,public: char const & __thiscall Toshi::TCString::operator[](int)const 
+tkernelinterface.dll,?DebugPrintFreeMemoryAt@TMemory@Toshi@@SGXPBD@Z,0xa0e90c,public: static void __stdcall Toshi::TMemory::DebugPrintFreeMemoryAt(char const *)
+tkernelinterface.dll,?IncrMaxf@TMath@Toshi@@SGMMMM@Z,0xa0e910,"public: static float __stdcall Toshi::TMath::IncrMaxf(float,float,float)"
+tkernelinterface.dll,?DecrMinf@TMath@Toshi@@SGMMMM@Z,0xa0e914,"public: static float __stdcall Toshi::TMath::DecrMinf(float,float,float)"
+tkernelinterface.dll,?FLOATEPSILON@TMath@Toshi@@2MB,0xa0e918,public: static float const Toshi::TMath::FLOATEPSILON
+tkernelinterface.dll,??YTCString@Toshi@@QAEAAV01@ABV01@@Z,0xa0e91c,public: class Toshi::TCString & __thiscall Toshi::TCString::operator+=(class Toshi::TCString const &)
+tkernelinterface.dll,??YTCString@Toshi@@QAEAAV01@PBD@Z,0xa0e920,public: class Toshi::TCString & __thiscall Toshi::TCString::operator+=(char const *)
+tkernelinterface.dll,?IsStaticInitialised@TClass@Toshi@@QBE_NXZ,0xa0e924,public: bool __thiscall Toshi::TClass::IsStaticInitialised(void)const 
+tkernelinterface.dll,?PeekNextToken@TFileLexerUTF8@Toshi@@QAE?AVToken@12@H@Z,0xa0e928,public: class Toshi::TFileLexerUTF8::Token __thiscall Toshi::TFileLexerUTF8::PeekNextToken(int)
+tkernelinterface.dll,?MakeLower@TCString@Toshi@@QAEAAV12@XZ,0xa0e92c,public: class Toshi::TCString & __thiscall Toshi::TCString::MakeLower(void)
+tkernelinterface.dll,??DTQuaternion@Toshi@@QBE?AV01@M@Z,0xa0e930,public: class Toshi::TQuaternion __thiscall Toshi::TQuaternion::operator*(float)const 
+tkernelinterface.dll,??KTQuaternion@Toshi@@QBE?AV01@M@Z,0xa0e934,public: class Toshi::TQuaternion __thiscall Toshi::TQuaternion::operator/(float)const 
+tkernelinterface.dll,?IDENTITY@TQuaternion@Toshi@@2V12@B,0xa0e938,public: static class Toshi::TQuaternion const Toshi::TQuaternion::IDENTITY
+tkernelinterface.dll,?GetVector3XZ@TVector2@Toshi@@QBE?AVTVector3@2@XZ,0xa0e93c,public: class Toshi::TVector3 __thiscall Toshi::TVector2::GetVector3XZ(void)const 
+tkernelinterface.dll,?ConcatPath@TFile@Toshi@@SG?AVTCString@2@ABV32@0@Z,0xa0e940,"public: static class Toshi::TCString __stdcall Toshi::TFile::ConcatPath(class Toshi::TCString const &,class Toshi::TCString const &)"
+tkernelinterface.dll,??GTVector3@Toshi@@QBE?AV01@ABV01@@Z,0xa0e944,public: class Toshi::TVector3 __thiscall Toshi::TVector3::operator-(class Toshi::TVector3 const &)const 
+tkernelinterface.dll,?CrossProduct@TVector3@Toshi@@QAEXABV12@0@Z,0xa0e948,"public: void __thiscall Toshi::TVector3::CrossProduct(class Toshi::TVector3 const &,class Toshi::TVector3 const &)"
+tkernelinterface.dll,?ATan@TMath@Toshi@@SGMM@Z,0xa0e94c,public: static float __stdcall Toshi::TMath::ATan(float)
+tkernelinterface.dll,?SetSeed@TRandom@Toshi@@QAEXI@Z,0xa0e950,public: void __thiscall Toshi::TRandom::SetSeed(unsigned int)
+tkernelinterface.dll,??HTVector3@Toshi@@QBE?AV01@ABV01@@Z,0xa0e954,public: class Toshi::TVector3 __thiscall Toshi::TVector3::operator+(class Toshi::TVector3 const &)const 
+tkernelinterface.dll,??DTVector3@Toshi@@QBE?AV01@M@Z,0xa0e958,public: class Toshi::TVector3 __thiscall Toshi::TVector3::operator*(float)const 
+tkernelinterface.dll,?RotateVector@TQuaternion@Toshi@@SGXAAVTVector3@2@ABV12@ABV32@@Z,0xa0e95c,"public: static void __stdcall Toshi::TQuaternion::RotateVector(class Toshi::TVector3 &,class Toshi::TQuaternion const &,class Toshi::TVector3 const &)"
+tkernelinterface.dll,?VEC3_ZERO_ROTATION@TQuaternion@Toshi@@2VTVector3@2@B,0xa0e960,public: static class Toshi::TVector3 const Toshi::TQuaternion::VEC3_ZERO_ROTATION
+tkernelinterface.dll,?Negate@TVector3@Toshi@@QAEXABV12@@Z,0xa0e964,public: void __thiscall Toshi::TVector3::Negate(class Toshi::TVector3 const &)
+tkernelinterface.dll,?Scale@TMatrix44@Toshi@@QAEXM@Z,0xa0e968,public: void __thiscall Toshi::TMatrix44::Scale(float)
+tkernelinterface.dll,?Add@TVector3@Toshi@@QAEXABV12@0@Z,0xa0e96c,"public: void __thiscall Toshi::TVector3::Add(class Toshi::TVector3 const &,class Toshi::TVector3 const &)"
+tkernelinterface.dll,?RotateY@TMatrix44@Toshi@@QAEXM@Z,0xa0e970,public: void __thiscall Toshi::TMatrix44::RotateY(float)
+tkernelinterface.dll,?GetFloat@TRandom@Toshi@@QAEMXZ,0xa0e974,public: float __thiscall Toshi::TRandom::GetFloat(void)
+tkernelinterface.dll,?GetFloat2@TRandom@Toshi@@QAEMXZ,0xa0e978,public: float __thiscall Toshi::TRandom::GetFloat2(void)
+tkernelinterface.dll,?MAXUINT@TMath@Toshi@@2IB,0xa0e97c,public: static unsigned int const Toshi::TMath::MAXUINT
+tkernelinterface.dll,?GetMemInfo@TMemory@Toshi@@SGXAAUMemInfo@12@PAVMemBlock@12@@Z,0xa0e980,"public: static void __stdcall Toshi::TMemory::GetMemInfo(struct Toshi::TMemory::MemInfo &,class Toshi::TMemory::MemBlock *)"
+tkernelinterface.dll,?Concat@TCString@Toshi@@QAEAAV12@ABV12@H@Z,0xa0e984,"public: class Toshi::TCString & __thiscall Toshi::TCString::Concat(class Toshi::TCString const &,int)"
+tkernelinterface.dll,?LERP@TMath@Toshi@@SGMMMM@Z,0xa0e988,"public: static float __stdcall Toshi::TMath::LERP(float,float,float)"
+tkernelinterface.dll,?GetInt@TRandom@Toshi@@QAEHXZ,0xa0e98c,public: int __thiscall Toshi::TRandom::GetInt(void)
+tkernelinterface.dll,?InitialiseStatic@TClass@Toshi@@QAEXXZ,0xa0e990,public: void __thiscall Toshi::TClass::InitialiseStatic(void)
+tkernelinterface.dll,?CreateCStringPoolExplicit@TSystem@Toshi@@SGPAVTCStringPool@2@PBDHH@Z,0xa0e994,"public: static class Toshi::TCStringPool * __stdcall Toshi::TSystem::CreateCStringPoolExplicit(char const *,int,int)"
+tkernelinterface.dll,?SetCapacity@TFreeList@Toshi@@QAEXH@Z,0xa0e998,public: void __thiscall Toshi::TFreeList::SetCapacity(int)
+tkernelinterface.dll,?LoadInfo@TLocale@Toshi@@QAE_NABVTCString@2@@Z,0xa0e99c,public: bool __thiscall Toshi::TLocale::LoadInfo(class Toshi::TCString const &)
+tkernelinterface.dll,?Debug_PrintTaskTree@TScheduler@Toshi@@QBEXXZ,0xa0e9a0,public: void __thiscall Toshi::TScheduler::Debug_PrintTaskTree(void)const 
+tkernelinterface.dll,?ms_oFreelist@TPooledCString@Toshi@@0VTFreeList@2@A,0xa0e9a4,private: static class Toshi::TFreeList Toshi::TPooledCString::ms_oFreelist
+tkernelinterface.dll,?ms_oFreelist@TPooledWString@Toshi@@0VTFreeList@2@A,0xa0e9a8,private: static class Toshi::TFreeList Toshi::TPooledWString::ms_oFreelist
+tkernelinterface.dll,?ms_oFreelist@TLocalisedString@Toshi@@0VTFreeList@2@A,0xa0e9ac,private: static class Toshi::TFreeList Toshi::TLocalisedString::ms_oFreelist
+tkernelinterface.dll,?StringCompareNoCase@TSystem@Toshi@@SGHPBD0H@Z,0xa0e9b0,"public: static int __stdcall Toshi::TSystem::StringCompareNoCase(char const *,char const *,int)"
+tkernelinterface.dll,?MarkHALPhysical@TMemory@Toshi@@SGXXZ,0xa0e9b4,public: static void __stdcall Toshi::TMemory::MarkHALPhysical(void)
+tkernelinterface.dll,?Set@TVector3@Toshi@@QAEXQBM@Z,0xa0e9b8,public: void __thiscall Toshi::TVector3::Set(float const * const)
+tkernelinterface.dll,?Get@TCStringPool@Toshi@@QAE?AVTPCString@2@H@Z,0xa0e9bc,public: class Toshi::TPCString __thiscall Toshi::TCStringPool::Get(int)
+tkernelinterface.dll,?IsEmpty@TCString@Toshi@@QBE_NXZ,0xa0e9c0,public: bool __thiscall Toshi::TCString::IsEmpty(void)const 
+tkernelinterface.dll,??4TWString@Toshi@@QAEAAV01@PBD@Z,0xa0e9c4,public: class Toshi::TWString & __thiscall Toshi::TWString::operator=(char const *)
+tkernelinterface.dll,?Length@TWString@Toshi@@QBEHXZ,0xa0e9c8,public: int __thiscall Toshi::TWString::Length(void)const 
+tkernelinterface.dll,?GetString@TWString@Toshi@@QBEPBGH@Z,0xa0e9cc,public: unsigned short const * __thiscall Toshi::TWString::GetString(int)const 
+tkernelinterface.dll,?Get@TWStringPool@Toshi@@QAE?AVTPWString@2@PBG@Z,0xa0e9d0,public: class Toshi::TPWString __thiscall Toshi::TWStringPool::Get(unsigned short const *)
+tkernelinterface.dll,?Format@TWString@Toshi@@QAAAAV12@PBGZZ,0xa0e9d4,"public: class Toshi::TWString & __cdecl Toshi::TWString::Format(unsigned short const *,...)"
+tkernelinterface.dll,?Get@TLocale@Toshi@@QAE?AVTLString@2@ABVTPCString@2@@Z,0xa0e9d8,public: class Toshi::TLString __thiscall Toshi::TLocale::Get(class Toshi::TPCString const &)
+tkernelinterface.dll,?Get@TLocale@Toshi@@QAE?AVTLString@2@PBD@Z,0xa0e9dc,public: class Toshi::TLString __thiscall Toshi::TLocale::Get(char const *)
+tkernelinterface.dll,?GetWStringPool@TSystem@Toshi@@SGPAVTWStringPool@2@XZ,0xa0e9e0,public: static class Toshi::TWStringPool * __stdcall Toshi::TSystem::GetWStringPool(void)
+tkernelinterface.dll,?Get@TWStringPool@Toshi@@QAE?AVTPWString@2@ABVTWString@2@@Z,0xa0e9e4,public: class Toshi::TPWString __thiscall Toshi::TWStringPool::Get(class Toshi::TWString const &)
+tkernelinterface.dll,?RecurseTree@TClass@Toshi@@QAEXP6G_NPAV12@PAX@Z221@Z,0xa0e9e8,"public: void __thiscall Toshi::TClass::RecurseTree(bool (__stdcall*)(class Toshi::TClass *,void *),bool (__stdcall*)(class Toshi::TClass *,void *),bool (__stdcall*)(class Toshi::TClass *,void *),void *)"
+tkernelinterface.dll,??ATCString@Toshi@@QAEAADH@Z,0xa0e9ec,public: char & __thiscall Toshi::TCString::operator[](int)
+tkernelinterface.dll,?UnPack@TDateTime@Toshi@@QAEXAAI0@Z,0xa0e9f0,"public: void __thiscall Toshi::TDateTime::UnPack(unsigned int &,unsigned int &)"
+tkernelinterface.dll,?Pack@TDateTime@Toshi@@QAEXAAI0@Z,0xa0e9f4,"public: void __thiscall Toshi::TDateTime::Pack(unsigned int &,unsigned int &)"
+tkernelinterface.dll,?GetLocalTime@TSystem@Toshi@@SG_NAAUTDateTime@2@@Z,0xa0e9f8,public: static bool __stdcall Toshi::TSystem::GetLocalTime(struct Toshi::TDateTime &)
+tkernelinterface.dll,?Get@TCStringPool@Toshi@@QAE?AVTPCString@2@ABVTCString@2@@Z,0xa0e9fc,public: class Toshi::TPCString __thiscall Toshi::TCStringPool::Get(class Toshi::TCString const &)
+tkernelinterface.dll,?ms_csEmpty@TLString@Toshi@@2VTCString@2@B,0xa0ea00,public: static class Toshi::TCString const Toshi::TLString::ms_csEmpty
+tkernelinterface.dll,?s_pFileSystem@TNullFileSystem@Toshi@@0PAV12@A,0xa0ea04,private: static class Toshi::TNullFileSystem * Toshi::TNullFileSystem::s_pFileSystem
+tkernelinterface.dll,??BTWString@Toshi@@QBEPBGXZ,0xa0ea08,public: __thiscall Toshi::TWString::operator unsigned short const *(void)const 
+tkernelinterface.dll,??4TWString@Toshi@@QAEAAV01@PBG@Z,0xa0ea0c,public: class Toshi::TWString & __thiscall Toshi::TWString::operator=(unsigned short const *)
+tkernelinterface.dll,??0TWString@Toshi@@QAE@XZ,0xa0ea10,public: __thiscall Toshi::TWString::TWString(void)
+tkernelinterface.dll,?StringLength@TSystem@Toshi@@SGHPBD@Z,0xa0ea14,public: static int __stdcall Toshi::TSystem::StringLength(char const *)
+tkernelinterface.dll,?GetVersion@TClass@Toshi@@QBEIXZ,0xa0ea18,public: unsigned int __thiscall Toshi::TClass::GetVersion(void)const 
+tkernelinterface.dll,?Print@TCString@Toshi@@QBEABV12@XZ,0xa0ea1c,public: class Toshi::TCString const & __thiscall Toshi::TCString::Print(void)const 
+tkernelinterface.dll,?CreateObject@TClass@Toshi@@QBEPAVTObject@2@XZ,0xa0ea20,public: class Toshi::TObject * __thiscall Toshi::TClass::CreateObject(void)const 
+tkernelinterface.dll,?StringCompare@TSystem@Toshi@@SGHPBD0H@Z,0xa0ea24,"public: static int __stdcall Toshi::TSystem::StringCompare(char const *,char const *,int)"
+tkernelinterface.dll,?DestroyTask@TTask@Toshi@@QAEXXZ,0xa0ea28,public: void __thiscall Toshi::TTask::DestroyTask(void)
+tkernelinterface.dll,?DestroyDyingTasks@TScheduler@Toshi@@QAEXPAVTTask@2@@Z,0xa0ea2c,public: void __thiscall Toshi::TScheduler::DestroyDyingTasks(class Toshi::TTask *)
+tkernelinterface.dll,?GetSystemTimer@TKernelInterface@Toshi@@QAEPAVTHPTimer@2@XZ,0xa0ea30,public: class Toshi::THPTimer * __thiscall Toshi::TKernelInterface::GetSystemTimer(void)
+tkernelinterface.dll,?IsCreated@TTask@Toshi@@QBE_NXZ,0xa0ea34,public: bool __thiscall Toshi::TTask::IsCreated(void)const 
+tkernelinterface.dll,?IsDying@TTask@Toshi@@QBE_NXZ,0xa0ea38,public: bool __thiscall Toshi::TTask::IsDying(void)const 
+tkernelinterface.dll,??1TRandom@Toshi@@QAE@XZ,0xa0ea3c,public: __thiscall Toshi::TRandom::~TRandom(void)
+tkernelinterface.dll,??0TRandom@Toshi@@QAE@XZ,0xa0ea40,public: __thiscall Toshi::TRandom::TRandom(void)
+tkernelinterface.dll,?LoadInterface@TKernelInterface@Toshi@@QAEPAVTKernelInterfaceDLL@2@ABVTCString@2@@Z,0xa0ea44,public: class Toshi::TKernelInterfaceDLL * __thiscall Toshi::TKernelInterface::LoadInterface(class Toshi::TCString const &)
+tkernelinterface.dll,?Concat@TWString@Toshi@@QAEAAV12@ABV12@H@Z,0xa0ea48,"public: class Toshi::TWString & __thiscall Toshi::TWString::Concat(class Toshi::TWString const &,int)"
+tkernelinterface.dll,?Mid@TWString@Toshi@@QBE?AV12@HH@Z,0xa0ea4c,"public: class Toshi::TWString __thiscall Toshi::TWString::Mid(int,int)const "
+tkernelinterface.dll,?Copy@TCString@Toshi@@QAEXPBGH@Z,0xa0ea50,"public: void __thiscall Toshi::TCString::Copy(unsigned short const *,int)"
+tkernelinterface.dll,??ATWString@Toshi@@QBEAAGH@Z,0xa0ea54,public: unsigned short & __thiscall Toshi::TWString::operator[](int)const 
+tkernelinterface.dll,?Find@TWString@Toshi@@QBEHGH@Z,0xa0ea58,"public: int __thiscall Toshi::TWString::Find(unsigned short,int)const "
+tkernelinterface.dll,?Concat@TWString@Toshi@@QAEAAV12@PBGH@Z,0xa0ea5c,"public: class Toshi::TWString & __thiscall Toshi::TWString::Concat(unsigned short const *,int)"
+tkernelinterface.dll,?Copy@TWString@Toshi@@QAEXPBGH@Z,0xa0ea60,"public: void __thiscall Toshi::TWString::Copy(unsigned short const *,int)"
+tkernelinterface.dll,?Clip@TVector3@Toshi@@QAEXMM@Z,0xa0ea64,"public: void __thiscall Toshi::TVector3::Clip(float,float)"
+tkernelinterface.dll,?MagnitudeSq@TVector2@Toshi@@QBEMXZ,0xa0ea68,public: float __thiscall Toshi::TVector2::MagnitudeSq(void)const 
+tkernelinterface.dll,?Subtract@TVector2@Toshi@@QAEXABV12@0@Z,0xa0ea6c,"public: void __thiscall Toshi::TVector2::Subtract(class Toshi::TVector2 const &,class Toshi::TVector2 const &)"
+tkernelinterface.dll,?RayVsCircle3D@TMath@Toshi@@SGHABVTVector3@2@00MAAM1@Z,0xa0ea70,"public: static int __stdcall Toshi::TMath::RayVsCircle3D(class Toshi::TVector3 const &,class Toshi::TVector3 const &,class Toshi::TVector3 const &,float,float &,float &)"
+tkernelinterface.dll,??HTQuaternion@Toshi@@QBE?AV01@ABV01@@Z,0xa0ea74,public: class Toshi::TQuaternion __thiscall Toshi::TQuaternion::operator+(class Toshi::TQuaternion const &)const 
+tkernelinterface.dll,?Negate3@TVector4@Toshi@@QAEXXZ,0xa0ea78,public: void __thiscall Toshi::TVector4::Negate3(void)
+tkernelinterface.dll,?GetTranslate@TMatrix44@Toshi@@QBEXAAVTVector3@2@@Z,0xa0ea7c,public: void __thiscall Toshi::TMatrix44::GetTranslate(class Toshi::TVector3 &)const 
+tkernelinterface.dll,?SetVectorDirection@TQuaternion@Toshi@@QAEXABVTVector3@2@0@Z,0xa0ea80,"public: void __thiscall Toshi::TQuaternion::SetVectorDirection(class Toshi::TVector3 const &,class Toshi::TVector3 const &)"
+tkernelinterface.dll,?IsEmpty@TWString@Toshi@@QBE_NXZ,0xa0ea84,public: bool __thiscall Toshi::TWString::IsEmpty(void)const 
+tkernelinterface.dll,?IsAllLowerCase@TCString@Toshi@@QBE_NXZ,0xa0ea88,public: bool __thiscall Toshi::TCString::IsAllLowerCase(void)const 
+tkernelinterface.dll,?IsExactly@TClass@Toshi@@QBE_NABV12@@Z,0xa0ea8c,public: bool __thiscall Toshi::TClass::IsExactly(class Toshi::TClass const &)const 
+tkernelinterface.dll,?GetWorkingDirectory@TFileManager@Toshi@@QBEABVTCString@2@XZ,0xa0ea90,public: class Toshi::TCString const & __thiscall Toshi::TFileManager::GetWorkingDirectory(void)const 
+tkernelinterface.dll,?GetSystemPath@TFileManager@Toshi@@QBEABVTCString@2@XZ,0xa0ea94,public: class Toshi::TCString const & __thiscall Toshi::TFileManager::GetSystemPath(void)const 
+tkernelinterface.dll,?VEC_POSY@TVector3@Toshi@@2V12@B,0xa0ea98,public: static class Toshi::TVector3 const Toshi::TVector3::VEC_POSY
+tkernelinterface.dll,?SinCos@TMath@Toshi@@SGXMAAM0@Z,0xa0ea9c,"public: static void __stdcall Toshi::TMath::SinCos(float,float &,float &)"
+tkernelinterface.dll,?Divide@TVector3@Toshi@@QAEXM@Z,0xa0eaa0,public: void __thiscall Toshi::TVector3::Divide(float)
+tkernelinterface.dll,?Lerp@TVector2@Toshi@@QAEXABV12@0M@Z,0xa0eaa4,"public: void __thiscall Toshi::TVector2::Lerp(class Toshi::TVector2 const &,class Toshi::TVector2 const &,float)"
+tkernelinterface.dll,?Multiply@TVector3@Toshi@@QAEXABV12@@Z,0xa0eaa8,public: void __thiscall Toshi::TVector3::Multiply(class Toshi::TVector3 const &)
+tkernelinterface.dll,?Format@TLocale@Toshi@@QAA?AVTLString@2@PBDZZ,0xa0eaac,"public: class Toshi::TLString __cdecl Toshi::TLocale::Format(char const *,...)"
+tkernelinterface.dll,?IsPresent@TCStringPool@Toshi@@QAE_NABVTCString@2@@Z,0xa0eab0,public: bool __thiscall Toshi::TCStringPool::IsPresent(class Toshi::TCString const &)
+tkernelinterface.dll,?TestMemIntegrity@TMemory@Toshi@@SG_NPAVMemBlock@12@@Z,0xa0eab4,public: static bool __stdcall Toshi::TMemory::TestMemIntegrity(class Toshi::TMemory::MemBlock *)
+tkernelinterface.dll,??YTWString@Toshi@@QAEAAV01@PBG@Z,0xa0eab8,public: class Toshi::TWString & __thiscall Toshi::TWString::operator+=(unsigned short const *)
+tkernelinterface.dll,?DumpMemInfo@TMemory@Toshi@@SGXAAUMemInfo@12@@Z,0xa0eabc,public: static void __stdcall Toshi::TMemory::DumpMemInfo(struct Toshi::TMemory::MemInfo &)
+tkernelinterface.dll,?MakeUpper@TCString@Toshi@@QAEAAV12@XZ,0xa0eac0,public: class Toshi::TCString & __thiscall Toshi::TCString::MakeUpper(void)
+tkernelinterface.dll,?GetOptional@TCStringPool@Toshi@@QAE?AVTPCString@2@ABVTCString@2@@Z,0xa0eac4,public: class Toshi::TPCString __thiscall Toshi::TCStringPool::GetOptional(class Toshi::TCString const &)
+tkernelinterface.dll,??YTWString@Toshi@@QAEAAV01@ABV01@@Z,0xa0eac8,public: class Toshi::TWString & __thiscall Toshi::TWString::operator+=(class Toshi::TWString const &)
+tkernelinterface.dll,??HToshi@@YG?AVTCString@0@ABV10@ABVTPCString@0@@Z,0xa0eacc,"class Toshi::TCString __stdcall Toshi::operator+(class Toshi::TCString const &,class Toshi::TPCString const &)"
+tkernelinterface.dll,??GTVector4@Toshi@@QBE?AV01@ABV01@@Z,0xa0ead0,public: class Toshi::TVector4 __thiscall Toshi::TVector4::operator-(class Toshi::TVector4 const &)const 
+tkernelinterface.dll,?GetOptional@TLocale@Toshi@@QAE?AVTLString@2@PBD@Z,0xa0ead4,public: class Toshi::TLString __thiscall Toshi::TLocale::GetOptional(char const *)
+tkernelinterface.dll,?E@TMath@Toshi@@2MB,0xa0ead8,public: static float const Toshi::TMath::E
+tkernelinterface.dll,?FindReverse@TCString@Toshi@@QBEHDH@Z,0xa0eadc,"public: int __thiscall Toshi::TCString::FindReverse(char,int)const "
+tkernelinterface.dll,?MagnitudeSq@TVector4@Toshi@@QBEMXZ,0xa0eae0,public: float __thiscall Toshi::TVector4::MagnitudeSq(void)const 
+tkernelinterface.dll,?Scale@TMatrix44@Toshi@@QAEXMMM@Z,0xa0eae4,"public: void __thiscall Toshi::TMatrix44::Scale(float,float,float)"
+tkernelinterface.dll,?AddXZ@TVector2@Toshi@@SGXAAVTVector3@2@ABV32@ABV12@@Z,0xa0eae8,"public: static void __stdcall Toshi::TVector2::AddXZ(class Toshi::TVector3 &,class Toshi::TVector3 const &,class Toshi::TVector2 const &)"
+tkernelinterface.dll,?Invert@TMatrix44@Toshi@@QAE_NXZ,0xa0eaec,public: bool __thiscall Toshi::TMatrix44::Invert(void)
+tkernelinterface.dll,?MINFLOAT@TMath@Toshi@@2MB,0xa0eaf0,public: static float const Toshi::TMath::MINFLOAT
+tkernelinterface.dll,?Sign@TMath@Toshi@@SGMM@Z,0xa0eaf4,public: static float __stdcall Toshi::TMath::Sign(float)
+tkernelinterface.dll,??DTVector2@Toshi@@QBE?AV01@ABV01@@Z,0xa0eaf8,public: class Toshi::TVector2 __thiscall Toshi::TVector2::operator*(class Toshi::TVector2 const &)const 
+tkernelinterface.dll,??KTVector3@Toshi@@QBE?AV01@M@Z,0xa0eafc,public: class Toshi::TVector3 __thiscall Toshi::TVector3::operator/(float)const 
+tkernelinterface.dll,?Abs@TVector2@Toshi@@QAEXABV12@@Z,0xa0eb00,public: void __thiscall Toshi::TVector2::Abs(class Toshi::TVector2 const &)
+tkernelinterface.dll,?Negate@TVector2@Toshi@@QAEXXZ,0xa0eb04,public: void __thiscall Toshi::TVector2::Negate(void)
+tkernelinterface.dll,?SetPerpendicular@TVector2@Toshi@@QAEXXZ,0xa0eb08,public: void __thiscall Toshi::TVector2::SetPerpendicular(void)
+tkernelinterface.dll,?GetAxisChangeLimit3D@TMath@Toshi@@SGXABVTVector3@2@00MAAV32@@Z,0xa0eb0c,"public: static void __stdcall Toshi::TMath::GetAxisChangeLimit3D(class Toshi::TVector3 const &,class Toshi::TVector3 const &,class Toshi::TVector3 const &,float,class Toshi::TVector3 &)"
+tkernelinterface.dll,?RotateVector@TMatrix44@Toshi@@SGXAAVTVector3@2@ABV12@ABV32@@Z,0xa0eb10,"public: static void __stdcall Toshi::TMatrix44::RotateVector(class Toshi::TVector3 &,class Toshi::TMatrix44 const &,class Toshi::TVector3 const &)"
+tkernelinterface.dll,?StringCopy@TSystem@Toshi@@SGPBDPADPBDH@Z,0xa0eb14,"public: static char const * __stdcall Toshi::TSystem::StringCopy(char *,char const *,int)"
+tkernelinterface.dll,?GetFloatMinMax@TRandom@Toshi@@QAEMMM@Z,0xa0eb18,"public: float __thiscall Toshi::TRandom::GetFloatMinMax(float,float)"
+tkernelinterface.dll,?CompareNoCase@TWString@Toshi@@QBEHPBGH@Z,0xa0eb1c,"public: int __thiscall Toshi::TWString::CompareNoCase(unsigned short const *,int)const "
+tkernelinterface.dll,??8TWString@Toshi@@QBE_NABV01@@Z,0xa0eb20,public: bool __thiscall Toshi::TWString::operator==(class Toshi::TWString const &)const 
+tkernelinterface.dll,?Log@TMath@Toshi@@SGMM@Z,0xa0eb24,public: static float __stdcall Toshi::TMath::Log(float)
+tkernelinterface.dll,?Compare@TWString@Toshi@@QBEHPBGH@Z,0xa0eb28,"public: int __thiscall Toshi::TWString::Compare(unsigned short const *,int)const "
+tkernelinterface.dll,?TruncToInt@TMath@Toshi@@SGHM@Z,0xa0eb2c,public: static int __stdcall Toshi::TMath::TruncToInt(float)
+tkernelinterface.dll,??HTCString@Toshi@@QBE?AV01@ABV01@@Z,0xa0eb30,public: class Toshi::TCString __thiscall Toshi::TCString::operator+(class Toshi::TCString const &)const 
+tkernelinterface.dll,?Multiply@TMatrix44@Toshi@@QAEXABV12@M@Z,0xa0eb34,"public: void __thiscall Toshi::TMatrix44::Multiply(class Toshi::TMatrix44 const &,float)"
+tkernelinterface.dll,?Abs@TVector3@Toshi@@QAEXXZ,0xa0eb38,public: void __thiscall Toshi::TVector3::Abs(void)
+tkernelinterface.dll,?DestroyTask@TScheduler@Toshi@@QAEXAAVTTask@2@@Z,0xa0eb3c,public: void __thiscall Toshi::TScheduler::DestroyTask(class Toshi::TTask &)
+tkernelinterface.dll,?ComparePlane@TAABox@Toshi@@QAE?AW4PlaneComparison@TPlane@2@AAV42@@Z,0xa0eb40,public: enum Toshi::TPlane::PlaneComparison __thiscall Toshi::TAABox::ComparePlane(class Toshi::TPlane &)
+tkernelinterface.dll,?Multiply@TVector3@Toshi@@QAEXABV12@M@Z,0xa0eb44,"public: void __thiscall Toshi::TVector3::Multiply(class Toshi::TVector3 const &,float)"
+tkernelinterface.dll,?Exp@TMath@Toshi@@SGMM@Z,0xa0eb48,public: static float __stdcall Toshi::TMath::Exp(float)
+tkernelinterface.dll,?Distance@TVector3@Toshi@@SGMABV12@0@Z,0xa0eb4c,"public: static float __stdcall Toshi::TVector3::Distance(class Toshi::TVector3 const &,class Toshi::TVector3 const &)"
+tkernelinterface.dll,?Distance@TVector2@Toshi@@SGMABV12@0@Z,0xa0eb50,"public: static float __stdcall Toshi::TVector2::Distance(class Toshi::TVector2 const &,class Toshi::TVector2 const &)"
+tkernelinterface.dll,?Find@TCString@Toshi@@QBEHDH@Z,0xa0eb54,"public: int __thiscall Toshi::TCString::Find(char,int)const "
+tkernelinterface.dll,??9TCString@Toshi@@QBE_NABV01@@Z,0xa0eb58,public: bool __thiscall Toshi::TCString::operator!=(class Toshi::TCString const &)const 
+tkernelinterface.dll,?VEC_ZERO@TVector4@Toshi@@2V12@B,0xa0eb5c,public: static class Toshi::TVector4 const Toshi::TVector4::VEC_ZERO
+tkernelinterface.dll,?StringFindChar@TSystem@Toshi@@SGPBDPBDD@Z,0xa0eb60,"public: static char const * __stdcall Toshi::TSystem::StringFindChar(char const *,char)"
+tkernelinterface.dll,?Truncate@TCString@Toshi@@QAEXH@Z,0xa0eb64,public: void __thiscall Toshi::TCString::Truncate(int)
+tkernelinterface.dll,?Pow@TMath@Toshi@@SGMMM@Z,0xa0eb68,"public: static float __stdcall Toshi::TMath::Pow(float,float)"
+tkernelinterface.dll,?StringCompare@TSystem@Toshi@@SGHPBG0H@Z,0xa0eb6c,"public: static int __stdcall Toshi::TSystem::StringCompare(unsigned short const *,unsigned short const *,int)"
+tkernelinterface.dll,?GetVolatile@TLocale@Toshi@@QAE?AVTLString@2@ABVTWString@2@@Z,0xa0eb70,public: class Toshi::TLString __thiscall Toshi::TLocale::GetVolatile(class Toshi::TWString const &)
+tkernelinterface.dll,?Print@TWString@Toshi@@QBEABV12@XZ,0xa0eb74,public: class Toshi::TWString const & __thiscall Toshi::TWString::Print(void)const 
+tkernelinterface.dll,?VEC_NEGY@TVector3@Toshi@@2V12@B,0xa0eb78,public: static class Toshi::TVector3 const Toshi::TVector3::VEC_NEGY
+tkernelinterface.dll,?GetFlags@TTask@Toshi@@QBEIXZ,0xa0eb7c,public: unsigned int __thiscall Toshi::TTask::GetFlags(void)const 
+tkernelinterface.dll,?MININT@TMath@Toshi@@2HB,0xa0eb80,public: static int const Toshi::TMath::MININT
+tkernelinterface.dll,??1TFreeList@Toshi@@QAE@XZ,0xa0eb84,public: __thiscall Toshi::TFreeList::~TFreeList(void)
+tkernelinterface.dll,??0TFreeList@Toshi@@QAE@HHHPAD@Z,0xa0eb88,"public: __thiscall Toshi::TFreeList::TFreeList(int,int,int,char *)"
+tkernelinterface.dll,?Abs@TVector2@Toshi@@QAEXXZ,0xa0eb8c,public: void __thiscall Toshi::TVector2::Abs(void)
+tkernelinterface.dll,?SQRT_TWO@TMath@Toshi@@2MB,0xa0eb90,public: static float const Toshi::TMath::SQRT_TWO
+tkernelinterface.dll,?RotateX@TVector3@Toshi@@QAEXM@Z,0xa0eb94,public: void __thiscall Toshi::TVector3::RotateX(float)
+tkernelinterface.dll,??GTVector2@Toshi@@QBE?AV01@ABV01@@Z,0xa0eb98,public: class Toshi::TVector2 __thiscall Toshi::TVector2::operator-(class Toshi::TVector2 const &)const 
+tkernelinterface.dll,?GetTemporary@TLocale@Toshi@@QAE?AVTLString@2@PBG@Z,0xa0eb9c,public: class Toshi::TLString __thiscall Toshi::TLocale::GetTemporary(unsigned short const *)
+tkernelinterface.dll,?Subtract@TVector3@Toshi@@QAEXABV12@0@Z,0xa0eba0,"public: void __thiscall Toshi::TVector3::Subtract(class Toshi::TVector3 const &,class Toshi::TVector3 const &)"
+tkernelinterface.dll,?Translate@TMatrix44@Toshi@@QAEXABVTVector3@2@@Z,0xa0eba4,public: void __thiscall Toshi::TMatrix44::Translate(class Toshi::TVector3 const &)
+tkernelinterface.dll,?Subtract@TVector2@Toshi@@QAEXABV12@@Z,0xa0eba8,public: void __thiscall Toshi::TVector2::Subtract(class Toshi::TVector2 const &)
+tkernelinterface.dll,?IsEqual@TVector2@Toshi@@QBE_NABV12@@Z,0xa0ebac,public: bool __thiscall Toshi::TVector2::IsEqual(class Toshi::TVector2 const &)const 
+tkernelinterface.dll,?SphereIntersectionPlanar@TMath@Toshi@@SG_NABVTVector3@2@M0MPAMPAV32@1@Z,0xa0ebb0,"public: static bool __stdcall Toshi::TMath::SphereIntersectionPlanar(class Toshi::TVector3 const &,float,class Toshi::TVector3 const &,float,float *,class Toshi::TVector3 *,float *)"
+tkernelinterface.dll,?LineSegmentVsLine2D@TMath@Toshi@@SG_NABVTVector2@2@000AAV32@@Z,0xa0ebb4,"public: static bool __stdcall Toshi::TMath::LineSegmentVsLine2D(class Toshi::TVector2 const &,class Toshi::TVector2 const &,class Toshi::TVector2 const &,class Toshi::TVector2 const &,class Toshi::TVector2 &)"
+tkernelinterface.dll,??KTVector2@Toshi@@QBE?AV01@M@Z,0xa0ebb8,public: class Toshi::TVector2 __thiscall Toshi::TVector2::operator/(float)const 
+tkernelinterface.dll,?Mid@TCString@Toshi@@QBE?AV12@HH@Z,0xa0ebbc,"public: class Toshi::TCString __thiscall Toshi::TCString::Mid(int,int)const "
+tkernelinterface.dll,??0TCString@Toshi@@QAE@PBG@Z,0xa0ebc0,public: __thiscall Toshi::TCString::TCString(unsigned short const *)
+tkernelinterface.dll,??4TWString@Toshi@@QAEAAV01@AAVTCString@1@@Z,0xa0ebc4,public: class Toshi::TWString & __thiscall Toshi::TWString::operator=(class Toshi::TCString &)
+tkernelinterface.dll,?s_pFileManager@TFileManager@Toshi@@0PAV12@A,0xa0ebc8,private: static class Toshi::TFileManager * Toshi::TFileManager::s_pFileManager
+tkernelinterface.dll,?GetVolatile@TLocale@Toshi@@QAE?AVTLString@2@PBG@Z,0xa0ebcc,public: class Toshi::TLString __thiscall Toshi::TLocale::GetVolatile(unsigned short const *)
+tkernelinterface.dll,?FindFileSystem@TFileManager@Toshi@@QAEPAVTFileSystem@2@ABVTCString@2@@Z,0xa0ebd0,public: class Toshi::TFileSystem * __thiscall Toshi::TFileManager::FindFileSystem(class Toshi::TCString const &)
+tkernelinterface.dll,?Concat@TCString@Toshi@@QAEAAV12@PBDH@Z,0xa0ebd4,"public: class Toshi::TCString & __thiscall Toshi::TCString::Concat(char const *,int)"
+tkernelinterface.dll,??0TWString@Toshi@@QAE@ABV01@@Z,0xa0ebd8,public: __thiscall Toshi::TWString::TWString(class Toshi::TWString const &)
+tkernelinterface.dll,?Compare@TPWString@Toshi@@QBEHABV12@@Z,0xa0ebdc,public: int __thiscall Toshi::TPWString::Compare(class Toshi::TPWString const &)const 
+tkernelinterface.dll,?HALF_PI@TMath@Toshi@@2MB,0xa0ebe0,public: static float const Toshi::TMath::HALF_PI
+tkernelinterface.dll,?MAXINT@TMath@Toshi@@2HB,0xa0ebe4,public: static int const Toshi::TMath::MAXINT
+tkernelinterface.dll,??4TCString@Toshi@@QAEAAV01@PBG@Z,0xa0ebe8,public: class Toshi::TCString & __thiscall Toshi::TCString::operator=(unsigned short const *)
+tkernelinterface.dll,??0TWString@Toshi@@QAE@ABVTCString@1@@Z,0xa0ebec,public: __thiscall Toshi::TWString::TWString(class Toshi::TCString const &)
+tkernelinterface.dll,??4TCString@Toshi@@QAEAAV01@AAV01@@Z,0xa0ebf0,public: class Toshi::TCString & __thiscall Toshi::TCString::operator=(class Toshi::TCString &)
+tkernelinterface.dll,?FloorToInt@TMath@Toshi@@SGHM@Z,0xa0ebf4,public: static int __stdcall Toshi::TMath::FloorToInt(float)
+tkernelinterface.dll,?DotProduct@TVector2@Toshi@@SGMABV12@0@Z,0xa0ebf8,"public: static float __stdcall Toshi::TVector2::DotProduct(class Toshi::TVector2 const &,class Toshi::TVector2 const &)"
+tkernelinterface.dll,?Normalise@TVector2@Toshi@@QAEXXZ,0xa0ebfc,public: void __thiscall Toshi::TVector2::Normalise(void)
+tkernelinterface.dll,?Magnitude@TVector2@Toshi@@QBEMXZ,0xa0ec00,public: float __thiscall Toshi::TVector2::Magnitude(void)const 
+tkernelinterface.dll,?MAXFLOAT@TMath@Toshi@@2MB,0xa0ec04,public: static float const Toshi::TMath::MAXFLOAT
+tkernelinterface.dll,?GetInt@TRandom@Toshi@@QAEHH@Z,0xa0ec08,public: int __thiscall Toshi::TRandom::GetInt(int)
+tkernelinterface.dll,?DistanceSq@TVector2@Toshi@@SGMABV12@0@Z,0xa0ec0c,"public: static float __stdcall Toshi::TVector2::DistanceSq(class Toshi::TVector2 const &,class Toshi::TVector2 const &)"
+tkernelinterface.dll,?Clip@TMath@Toshi@@SGXAAHHH@Z,0xa0ec10,"public: static void __stdcall Toshi::TMath::Clip(int &,int,int)"
+tkernelinterface.dll,??1TObject@Toshi@@MAE@XZ,0xa0ec14,protected: virtual __thiscall Toshi::TObject::~TObject(void)
+tkernelinterface.dll,?tfree@@YGXPAX@Z,0xa0ec18,void __stdcall tfree(void *)
+tkernelinterface.dll,??0TGenericListener@Toshi@@IAE@XZ,0xa0ec1c,protected: __thiscall Toshi::TGenericListener::TGenericListener(void)
+tkernelinterface.dll,??0TObject@Toshi@@IAE@XZ,0xa0ec20,protected: __thiscall Toshi::TObject::TObject(void)
+tkernelinterface.dll,?tmalloc@@YGPAXHPADH@Z,0xa0ec24,"void * __stdcall tmalloc(int,char *,int)"
+tkernelinterface.dll,?GetTemporary@TLocale@Toshi@@QAE?AVTLString@2@ABVTWString@2@@Z,0xa0ec28,public: class Toshi::TLString __thiscall Toshi::TLocale::GetTemporary(class Toshi::TWString const &)
+tkernelinterface.dll,?GetLocale@TSystem@Toshi@@SGPAVTLocale@2@XZ,0xa0ec2c,public: static class Toshi::TLocale * __stdcall Toshi::TSystem::GetLocale(void)
+tkernelinterface.dll,??1TWString@Toshi@@QAE@XZ,0xa0ec30,public: __thiscall Toshi::TWString::~TWString(void)
+tkernelinterface.dll,??0TWString@Toshi@@QAE@PBD@Z,0xa0ec34,public: __thiscall Toshi::TWString::TWString(char const *)
+tkernelinterface.dll,?ms_wsEmpty@TLString@Toshi@@2VTWString@2@B,0xa0ec38,public: static class Toshi::TWString const Toshi::TLString::ms_wsEmpty
+tkernelinterface.dll,?ms_sEmpty@TPWString@Toshi@@2VTWString@2@B,0xa0ec3c,public: static class Toshi::TWString const Toshi::TPWString::ms_sEmpty
+tkernelinterface.dll,?Compare@TCString@Toshi@@QBEHPBDH@Z,0xa0ec40,"public: int __thiscall Toshi::TCString::Compare(char const *,int)const "
+tkernelinterface.dll,??1TCString@Toshi@@QAE@XZ,0xa0ec44,public: __thiscall Toshi::TCString::~TCString(void)
+tkernelinterface.dll,??0TCString@Toshi@@QAE@ABVTWString@1@@Z,0xa0ec48,public: __thiscall Toshi::TCString::TCString(class Toshi::TWString const &)
+tkernelinterface.dll,?Get@TLocale@Toshi@@QAE?AVTLString@2@H@Z,0xa0ec4c,public: class Toshi::TLString __thiscall Toshi::TLocale::Get(int)
+tkernelinterface.dll,?Connect@TGenericListener@Toshi@@IAEXPAVTGenericEmitter@2@PAXP6G_N111@ZH@Z,0xa0ec50,"protected: void __thiscall Toshi::TGenericListener::Connect(class Toshi::TGenericEmitter *,void *,bool (__stdcall*)(void *,void *,void *),int)"
+tkernelinterface.dll,?GetInt@TRandom@Toshi@@QAEHHH@Z,0xa0ec54,"public: int __thiscall Toshi::TRandom::GetInt(int,int)"
+tkernelinterface.dll,?Get@TCStringPool@Toshi@@QAE?AVTPCString@2@PBD@Z,0xa0ec58,public: class Toshi::TPCString __thiscall Toshi::TCStringPool::Get(char const *)
+tkernelinterface.dll,??0TClass@Toshi@@QAE@PBDPAV01@P6GPAVTObject@1@XZP6GPAV21@PAX@ZP6GXXZ5I@Z,0xa0ec5c,"public: __thiscall Toshi::TClass::TClass(char const *,class Toshi::TClass *,class Toshi::TObject * (__stdcall*)(void),class Toshi::TObject * (__stdcall*)(void *),void (__stdcall*)(void),void (__stdcall*)(void),unsigned int)"
+tkernelinterface.dll,?Delete@TLocalisedString@Toshi@@AAEXXZ,0xa0ec60,private: void __thiscall Toshi::TLocalisedString::Delete(void)
+tkernelinterface.dll,?m_sClass@TObject@Toshi@@2VTClass@2@A,0xa0ec64,public: static class Toshi::TClass Toshi::TObject::m_sClass
+tkernelinterface.dll,??1TGenericListener@Toshi@@IAE@XZ,0xa0ec68,protected: __thiscall Toshi::TGenericListener::~TGenericListener(void)
+tkernelinterface.dll,??1TTask@Toshi@@UAE@XZ,0xa0ec6c,public: virtual __thiscall Toshi::TTask::~TTask(void)
+tkernelinterface.dll,?Delete@TPooledCString@Toshi@@AAEXXZ,0xa0ec70,private: void __thiscall Toshi::TPooledCString::Delete(void)
+tkernelinterface.dll,?OnDeactivate@TTask@Toshi@@MAEXXZ,0xa0ec74,protected: virtual void __thiscall Toshi::TTask::OnDeactivate(void)
+tkernelinterface.dll,?OnActivate@TTask@Toshi@@MAEXXZ,0xa0ec78,protected: virtual void __thiscall Toshi::TTask::OnActivate(void)
+tkernelinterface.dll,??_7TObject@Toshi@@6B@,0xa0ec7c,const Toshi::TObject::`vftable'
+tkernelinterface.dll,?Delete@TFreeList@Toshi@@QAEXPAX@Z,0xa0ec80,public: void __thiscall Toshi::TFreeList::Delete(void *)
+tkernelinterface.dll,?New@TFreeList@Toshi@@QAEPAXI@Z,0xa0ec84,public: void * __thiscall Toshi::TFreeList::New(unsigned int)
+tkernelinterface.dll,?Magnitude@TVector3@Toshi@@QBEMXZ,0xa0ec88,public: float __thiscall Toshi::TVector3::Magnitude(void)const 
+tkernelinterface.dll,?VEC_ZERO@TVector3@Toshi@@2V12@B,0xa0ec8c,public: static class Toshi::TVector3 const Toshi::TVector3::VEC_ZERO
+tkernelinterface.dll,?ms_sEmpty@TPCString@Toshi@@2VTCString@2@B,0xa0ec90,public: static class Toshi::TCString const Toshi::TPCString::ms_sEmpty
+tkernelinterface.dll,??0TCString@Toshi@@QAE@XZ,0xa0ec94,public: __thiscall Toshi::TCString::TCString(void)
+tkernelinterface.dll,?VEC_POSX@TVector3@Toshi@@2V12@B,0xa0ec98,public: static class Toshi::TVector3 const Toshi::TVector3::VEC_POSX
+tkernelinterface.dll,?MemCopy@TSystem@Toshi@@SGPAXPAXPBXI@Z,0xa0ec9c,"public: static void * __stdcall Toshi::TSystem::MemCopy(void *,void const *,unsigned int)"
+tkernelinterface.dll,?GetString@TCString@Toshi@@QBEPBDH@Z,0xa0eca0,public: char const * __thiscall Toshi::TCString::GetString(int)const 
+tkernelinterface.dll,??BTCString@Toshi@@QBEPBDXZ,0xa0eca4,public: __thiscall Toshi::TCString::operator char const *(void)const 
+tkernelinterface.dll,?Delete@TObject@Toshi@@UAEXXZ,0xa0eca8,public: virtual void __thiscall Toshi::TObject::Delete(void)
+tkernelinterface.dll,??4TCString@Toshi@@QAEAAV01@PBD@Z,0xa0ecac,public: class Toshi::TCString & __thiscall Toshi::TCString::operator=(char const *)
+tkernelinterface.dll,??0TGenericEmitter@Toshi@@IAE@PAX@Z,0xa0ecb0,protected: __thiscall Toshi::TGenericEmitter::TGenericEmitter(void *)
+tkernelinterface.dll,?Throw@TGenericEmitter@Toshi@@IAEXPAX@Z,0xa0ecb4,protected: void __thiscall Toshi::TGenericEmitter::Throw(void *)
+tkernelinterface.dll,??0TCString@Toshi@@QAE@PBD@Z,0xa0ecb8,public: __thiscall Toshi::TCString::TCString(char const *)
+tkernelinterface.dll,?Compare@TPCString@Toshi@@QBEHABV12@@Z,0xa0ecbc,public: int __thiscall Toshi::TPCString::Compare(class Toshi::TPCString const &)const 
+tkernelinterface.dll,??0TTask@Toshi@@QAE@XZ,0xa0ecc0,public: __thiscall Toshi::TTask::TTask(void)
+tkernelinterface.dll,??1TGenericEmitter@Toshi@@IAE@XZ,0xa0ecc4,protected: __thiscall Toshi::TGenericEmitter::~TGenericEmitter(void)
+tkernelinterface.dll,?CreateTask@TScheduler@Toshi@@QAEPAVTTask@2@ABVTClass@2@PAV32@@Z,0xa0ecc8,"public: class Toshi::TTask * __thiscall Toshi::TScheduler::CreateTask(class Toshi::TClass const &,class Toshi::TTask *)"
+tkernelinterface.dll,?Activate@TTask@Toshi@@QAEX_N@Z,0xa0eccc,public: void __thiscall Toshi::TTask::Activate(bool)
+tkernelinterface.dll,?GetScheduler@TKernelInterface@Toshi@@QBEPAVTScheduler@2@XZ,0xa0ecd0,public: class Toshi::TScheduler * __thiscall Toshi::TKernelInterface::GetScheduler(void)const 
+tkernelinterface.dll,??1THPTimer@Toshi@@QAE@XZ,0xa0ecd4,public: __thiscall Toshi::THPTimer::~THPTimer(void)
+tkernelinterface.dll,??0THPTimer@Toshi@@QAE@XZ,0xa0ecd8,public: __thiscall Toshi::THPTimer::THPTimer(void)
+tkernelinterface.dll,?OnCreate@TTask@Toshi@@MAE_NXZ,0xa0ecdc,protected: virtual bool __thiscall Toshi::TTask::OnCreate(void)
+tkernelinterface.dll,?IsExactly@TObject@Toshi@@QBE_NABVTClass@2@@Z,0xa0ece0,public: bool __thiscall Toshi::TObject::IsExactly(class Toshi::TClass const &)const 
+tkernelinterface.dll,?Clip@TMath@Toshi@@SGXAAMMM@Z,0xa0ece4,"public: static void __stdcall Toshi::TMath::Clip(float &,float,float)"
+tkernelinterface.dll,?OnUpdate@TTask@Toshi@@MAE_NM@Z,0xa0ece8,protected: virtual bool __thiscall Toshi::TTask::OnUpdate(float)
+tkernelinterface.dll,?Create@TFile@Toshi@@SGPAV12@ABVTCString@2@I@Z,0xa0ecec,"public: static class Toshi::TFile * __stdcall Toshi::TFile::Create(class Toshi::TCString const &,unsigned int)"
+tkernelinterface.dll,?m_sClass@TTask@Toshi@@2VTClass@2@A,0xa0ecf0,public: static class Toshi::TClass Toshi::TTask::m_sClass
+tkernelinterface.dll,?Destroy@TFile@Toshi@@SGXPAV12@@Z,0xa0ecf4,public: static void __stdcall Toshi::TFile::Destroy(class Toshi::TFile *)
+tkernelinterface.dll,?GetClass@TObject@Toshi@@UBEAAVTClass@2@XZ,0xa0ecf8,public: virtual class Toshi::TClass & __thiscall Toshi::TObject::GetClass(void)const 
+tkernelinterface.dll,?Create@TTask@Toshi@@UAE_NXZ,0xa0ecfc,public: virtual bool __thiscall Toshi::TTask::Create(void)
+tkernelinterface.dll,?GetName@TClass@Toshi@@QBEPBDXZ,0xa0ed00,public: char const * __thiscall Toshi::TClass::GetName(void)const 
+tkernelinterface.dll,?OnUpdateKernelPaused@TTask@Toshi@@MAE_NXZ,0xa0ed04,protected: virtual bool __thiscall Toshi::TTask::OnUpdateKernelPaused(void)
+tkernelinterface.dll,?OnChildDying@TTask@Toshi@@MAE_NPBV12@@Z,0xa0ed08,protected: virtual bool __thiscall Toshi::TTask::OnChildDying(class Toshi::TTask const *)
+tkernelinterface.dll,?CreateFailed@TTask@Toshi@@UAE_NXZ,0xa0ed0c,public: virtual bool __thiscall Toshi::TTask::CreateFailed(void)
+tkernelinterface.dll,?ms_aScratchMem@TSystem@Toshi@@0PAEA,0xa0ed10,private: static unsigned char * Toshi::TSystem::ms_aScratchMem
+tkernelinterface.dll,?StringFormat@TSystem@Toshi@@SAHPADPBDZZ,0xa0ed14,"public: static int __cdecl Toshi::TSystem::StringFormat(char *,char const *,...)"
+tkernelinterface.dll,?OnChildDied@TTask@Toshi@@MAEXABVTClass@2@PBV12@@Z,0xa0ed18,"protected: virtual void __thiscall Toshi::TTask::OnChildDied(class Toshi::TClass const &,class Toshi::TTask const *)"
+tkernelinterface.dll,?GetHALMemInfo@TMemory@Toshi@@SGXAAUHALMemInfo@12@@Z,0xa0ed1c,public: static void __stdcall Toshi::TMemory::GetHALMemInfo(struct Toshi::TMemory::HALMemInfo &)
+tkernelinterface.dll,?CPrintf@TFile@Toshi@@QAAHPBDZZ,0xa0ed20,"public: int __cdecl Toshi::TFile::CPrintf(char const *,...)"
+tkernelinterface.dll,?DebugPrintHALMemInfo@TMemory@Toshi@@SGXPBD@Z,0xa0ed24,public: static void __stdcall Toshi::TMemory::DebugPrintHALMemInfo(char const *)
+tkernelinterface.dll,?Format@TCString@Toshi@@QAAAAV12@PBDZZ,0xa0ed28,"public: class Toshi::TCString & __cdecl Toshi::TCString::Format(char const *,...)"
+tkernelinterface.dll,??HToshi@@YG?AVTCString@0@PBDABV10@@Z,0xa0ed2c,"class Toshi::TCString __stdcall Toshi::operator+(char const *,class Toshi::TCString const &)"
+tkernelinterface.dll,??8TCString@Toshi@@QBE_NABV01@@Z,0xa0ed30,public: bool __thiscall Toshi::TCString::operator==(class Toshi::TCString const &)const 
+tkernelinterface.dll,?Update@THPTimer@Toshi@@QAEXXZ,0xa0ed34,public: void __thiscall Toshi::THPTimer::Update(void)
+tkernelinterface.dll,?GetCurrent@THPTimer@Toshi@@QAEMXZ,0xa0ed38,public: float __thiscall Toshi::THPTimer::GetCurrent(void)
+tkernelinterface.dll,??9TCString@Toshi@@QBE_NPBD@Z,0xa0ed3c,public: bool __thiscall Toshi::TCString::operator!=(char const *)const 
+tkernelinterface.dll,?ChangeLocale@TLocale@Toshi@@QAEXPAVTLocaleInfo@2@@Z,0xa0ed40,public: void __thiscall Toshi::TLocale::ChangeLocale(class Toshi::TLocaleInfo *)
+tkernelinterface.dll,?ChangeLocale@TLocale@Toshi@@QAEXPBD@Z,0xa0ed44,public: void __thiscall Toshi::TLocale::ChangeLocale(char const *)
+tkernelinterface.dll,?Find@TClass@Toshi@@SGPBV12@PBDPBV12@@Z,0xa0ed48,"public: static class Toshi::TClass const * __stdcall Toshi::TClass::Find(char const *,class Toshi::TClass const *)"
+tkernelinterface.dll,?GetCStringPool@TSystem@Toshi@@SGPAVTCStringPool@2@XZ,0xa0ed4c,public: static class Toshi::TCStringPool * __stdcall Toshi::TSystem::GetCStringPool(void)
+tkernelinterface.dll,?Delete@TPooledWString@Toshi@@AAEXXZ,0xa0ed50,private: void __thiscall Toshi::TPooledWString::Delete(void)
+tkernelinterface.dll,?FindLocaleInfo@TLocale@Toshi@@QAEPAVTLocaleInfo@2@PBD@Z,0xa0ed54,public: class Toshi::TLocaleInfo * __thiscall Toshi::TLocale::FindLocaleInfo(char const *)
+tkernelinterface.dll,?GetDelta@THPTimer@Toshi@@QAEMXZ,0xa0ed58,public: float __thiscall Toshi::THPTimer::GetDelta(void)
+tkernelinterface.dll,?Reset@THPTimer@Toshi@@QAEXXZ,0xa0ed5c,public: void __thiscall Toshi::THPTimer::Reset(void)
+tkernelinterface.dll,?Length@TCString@Toshi@@QBEHXZ,0xa0ed60,public: int __thiscall Toshi::TCString::Length(void)const 
+tkernelinterface.dll,?SetTranslate@TMatrix44@Toshi@@QAEXMMM@Z,0xa0ed64,"public: void __thiscall Toshi::TMatrix44::SetTranslate(float,float,float)"
+tkernelinterface.dll,?SetTranslate@TMatrix44@Toshi@@QAEXABVTVector3@2@@Z,0xa0ed68,public: void __thiscall Toshi::TMatrix44::SetTranslate(class Toshi::TVector3 const &)
+tkernelinterface.dll,?SetFromQuaternion@TMatrix44@Toshi@@QAEAAV12@ABVTQuaternion@2@@Z,0xa0ed6c,public: class Toshi::TMatrix44 & __thiscall Toshi::TMatrix44::SetFromQuaternion(class Toshi::TQuaternion const &)
+tkernelinterface.dll,?Identity@TMatrix44@Toshi@@QAEXXZ,0xa0ed70,public: void __thiscall Toshi::TMatrix44::Identity(void)
+tkernelinterface.dll,?GetScheduler@TTask@Toshi@@QAEPAVTScheduler@2@XZ,0xa0ed74,public: class Toshi::TScheduler * __thiscall Toshi::TTask::GetScheduler(void)
+tkernelinterface.dll,?Multiply@TMatrix44@Toshi@@QAEXABV12@@Z,0xa0ed78,public: void __thiscall Toshi::TMatrix44::Multiply(class Toshi::TMatrix44 const &)
+tkernelinterface.dll,?TransformVector@TMatrix44@Toshi@@SGXAAVTVector3@2@ABV12@ABV32@@Z,0xa0ed7c,"public: static void __stdcall Toshi::TMatrix44::TransformVector(class Toshi::TVector3 &,class Toshi::TMatrix44 const &,class Toshi::TVector3 const &)"
+tkernelinterface.dll,?InvertOrthogonal@TMatrix44@Toshi@@QAEXXZ,0xa0ed80,public: void __thiscall Toshi::TMatrix44::InvertOrthogonal(void)
+tkernelinterface.dll,?GetKernelInterface@TScheduler@Toshi@@QAEPAVTKernelInterface@2@XZ,0xa0ed84,public: class Toshi::TKernelInterface * __thiscall Toshi::TScheduler::GetKernelInterface(void)
+tkernelinterface.dll,?RotateY@TVector3@Toshi@@QAEXM@Z,0xa0ed88,public: void __thiscall Toshi::TVector3::RotateY(float)
+tkernelinterface.dll,?Multiply@TVector3@Toshi@@QAEXM@Z,0xa0ed8c,public: void __thiscall Toshi::TVector3::Multiply(float)
+tkernelinterface.dll,?PI@TMath@Toshi@@2MB,0xa0ed90,public: static float const Toshi::TMath::PI
+tkernelinterface.dll,?Add@TVector3@Toshi@@QAEXABV12@@Z,0xa0ed94,public: void __thiscall Toshi::TVector3::Add(class Toshi::TVector3 const &)
+tkernelinterface.dll,?Normalise@TVector3@Toshi@@QAEXXZ,0xa0ed98,public: void __thiscall Toshi::TVector3::Normalise(void)
+tkernelinterface.dll,?Subtract@TVector3@Toshi@@QAEXABV12@@Z,0xa0ed9c,public: void __thiscall Toshi::TVector3::Subtract(class Toshi::TVector3 const &)
+tkernelinterface.dll,?DotProduct@TVector3@Toshi@@SGMABV12@0@Z,0xa0eda0,"public: static float __stdcall Toshi::TVector3::DotProduct(class Toshi::TVector3 const &,class Toshi::TVector3 const &)"
+tkernelinterface.dll,?IsA@TObject@Toshi@@QBE_NABVTClass@2@@Z,0xa0eda4,public: bool __thiscall Toshi::TObject::IsA(class Toshi::TClass const &)const 
+tkernelinterface.dll,?Negate4@TVector4@Toshi@@QAEXXZ,0xa0eda8,public: void __thiscall Toshi::TVector4::Negate4(void)
+tkernelinterface.dll,?Insert@TGenericPriList@Toshi@@IAEXPAVTNode@12@@Z,0xa0edac,protected: void __thiscall Toshi::TGenericPriList::Insert(class Toshi::TGenericPriList::TNode *)
+tkernelinterface.dll,?Disconnect@TGenericListener@Toshi@@IAEXXZ,0xa0edb0,protected: void __thiscall Toshi::TGenericListener::Disconnect(void)
+tkernelinterface.dll,?RemoveAll@TGenericDList@Toshi@@IAEXXZ,0xa0edb4,protected: void __thiscall Toshi::TGenericDList::RemoveAll(void)
+tkernelinterface.dll,??1TClass@Toshi@@QAE@XZ,0xa0edb8,public: __thiscall Toshi::TClass::~TClass(void)
+tkernelinterface.dll,??0TCString@Toshi@@QAE@ABV01@@Z,0xa0edbc,public: __thiscall Toshi::TCString::TCString(class Toshi::TCString const &)
+tkernelinterface.dll,?CeilToInt@TMath@Toshi@@SGHM@Z,0xa0edc0,public: static int __stdcall Toshi::TMath::CeilToInt(float)
+tkernelinterface.dll,?OnDestroy@TTask@Toshi@@MAEXXZ,0xa0edc4,protected: virtual void __thiscall Toshi::TTask::OnDestroy(void)
+tterraininterface.dll,?SafeGetHeightPositionSet@TTerrainInterface@Toshi@@QBEXAAVTVector3@2@@Z,0xa0edcc,public: void __thiscall Toshi::TTerrainInterface::SafeGetHeightPositionSet(class Toshi::TVector3 &)const 
+tterraininterface.dll,?TickLODCounter@TTerrainSection@Toshi@@SGXAAVTTerrainInterface@2@@Z,0xa0edd0,public: static void __stdcall Toshi::TTerrainSection::TickLODCounter(class Toshi::TTerrainInterface &)
+tterraininterface.dll,?SetFlags@TTerrainSection@Toshi@@QAEXI@Z,0xa0edd4,public: void __thiscall Toshi::TTerrainSection::SetFlags(unsigned int)
+tterraininterface.dll,?SetLODDetail@TTerrainInterface@Toshi@@SGXW4TERRAINLOD@12@@Z,0xa0edd8,public: static void __stdcall Toshi::TTerrainInterface::SetLODDetail(enum Toshi::TTerrainInterface::TERRAINLOD)
+tterraininterface.dll,?CompileUVMatrices@TTerrainInterface@Toshi@@QAEXXZ,0xa0eddc,public: void __thiscall Toshi::TTerrainInterface::CompileUVMatrices(void)
+tterraininterface.dll,?SetUVMatrix@TTerrainInterface@Toshi@@QAEXPAVTMatrix44@2@H@Z,0xa0ede0,"public: void __thiscall Toshi::TTerrainInterface::SetUVMatrix(class Toshi::TMatrix44 *,int)"
+tterraininterface.dll,?s_fSectionHRangeOn128@THeightField@Toshi@@2MB,0xa0ede4,public: static float const Toshi::THeightField::s_fSectionHRangeOn128
+tterraininterface.dll,?GetLODHeight@TTerrainInterface@Toshi@@QBEMMM@Z,0xa0ede8,"public: float __thiscall Toshi::TTerrainInterface::GetLODHeight(float,float)const "
+tterraininterface.dll,?GetHeight@THeightField@Toshi@@QBEMII@Z,0xa0edec,"public: float __thiscall Toshi::THeightField::GetHeight(unsigned int,unsigned int)const "
+tterraininterface.dll,?CreateDecal@TTerrainInterface@Toshi@@QAEPAVTTerrainDecal@2@HPAVTVector2@2@0IPAVTMaterial@2@HMPAVTLightingNode@2@@Z,0xa0edf0,"public: class Toshi::TTerrainDecal * __thiscall Toshi::TTerrainInterface::CreateDecal(int,class Toshi::TVector2 *,class Toshi::TVector2 *,unsigned int,class Toshi::TMaterial *,int,float,class Toshi::TLightingNode *)"
+tterraininterface.dll,?Invalidate@TTerrainDecal@Toshi@@QAEXXZ,0xa0edf4,public: void __thiscall Toshi::TTerrainDecal::Invalidate(void)
+tterraininterface.dll,?DestroyDecal@TTerrainInterface@Toshi@@QAEXPAVTTerrainDecal@2@@Z,0xa0edf8,public: void __thiscall Toshi::TTerrainInterface::DestroyDecal(class Toshi::TTerrainDecal *)
+tterraininterface.dll,?SafeGetHeight@TTerrainInterface@Toshi@@QBE_NAAVTVector3@2@@Z,0xa0edfc,public: bool __thiscall Toshi::TTerrainInterface::SafeGetHeight(class Toshi::TVector3 &)const 
+tterraininterface.dll,?AddTriangeToPolyList@TTerrainDecal@Toshi@@QAEXAAVTVector2@2@00000III@Z,0xa0ee00,"public: void __thiscall Toshi::TTerrainDecal::AddTriangeToPolyList(class Toshi::TVector2 &,class Toshi::TVector2 &,class Toshi::TVector2 &,class Toshi::TVector2 &,class Toshi::TVector2 &,class Toshi::TVector2 &,unsigned int,unsigned int,unsigned int)"
+tterraininterface.dll,?GetHeight@THeightField@Toshi@@QBEMMM@Z,0xa0ee04,"public: float __thiscall Toshi::THeightField::GetHeight(float,float)const "
+tterraininterface.dll,?GetSectionFlags@TTerrainInterface@Toshi@@QBEIII@Z,0xa0ee08,"public: unsigned int __thiscall Toshi::TTerrainInterface::GetSectionFlags(unsigned int,unsigned int)const "
+tterraininterface.dll,?GetSection@THeightField@Toshi@@QBEPAVTHeightFieldSection@2@II@Z,0xa0ee0c,"public: class Toshi::THeightFieldSection * __thiscall Toshi::THeightField::GetSection(unsigned int,unsigned int)const "
+tterraininterface.dll,?CreateDecal@TTerrainInterface@Toshi@@QAEPAVTTerrainDecal@2@HPAVTVector2@2@0IPAVTMaterial@2@ABVTVector3@2@HMPAVTLightingNode@2@@Z,0xa0ee10,"public: class Toshi::TTerrainDecal * __thiscall Toshi::TTerrainInterface::CreateDecal(int,class Toshi::TVector2 *,class Toshi::TVector2 *,unsigned int,class Toshi::TMaterial *,class Toshi::TVector3 const &,int,float,class Toshi::TLightingNode *)"
+tterraininterface.dll,?ClearPolyFreeList@TTerrainDecal@Toshi@@SGXXZ,0xa0ee14,public: static void __stdcall Toshi::TTerrainDecal::ClearPolyFreeList(void)
+tterraininterface.dll,?ResetSections@TTerrainInterface@Toshi@@QAEXXZ,0xa0ee18,public: void __thiscall Toshi::TTerrainInterface::ResetSections(void)
+tterraininterface.dll,?SetSectionFlags@TTerrainInterface@Toshi@@QAEXIII@Z,0xa0ee1c,"public: void __thiscall Toshi::TTerrainInterface::SetSectionFlags(unsigned int,unsigned int,unsigned int)"
+tterraininterface.dll,?SetDirty@TTerrainSection@Toshi@@QAEX_N@Z,0xa0ee20,public: void __thiscall Toshi::TTerrainSection::SetDirty(bool)
+tterraininterface.dll,?SetGrassModulateScale@TTerrainInterface@Toshi@@QAEXM@Z,0xa0ee24,public: void __thiscall Toshi::TTerrainInterface::SetGrassModulateScale(float)
+tterraininterface.dll,?SetLightColours@TTerrainInterface@Toshi@@QAEXABVTVector3@2@0@Z,0xa0ee28,"public: void __thiscall Toshi::TTerrainInterface::SetLightColours(class Toshi::TVector3 const &,class Toshi::TVector3 const &)"
+tterraininterface.dll,?RemoveTrisWithMatchingPos2@TTerrainDecal@Toshi@@QAEXAAVTVector2@2@@Z,0xa0ee2c,public: void __thiscall Toshi::TTerrainDecal::RemoveTrisWithMatchingPos2(class Toshi::TVector2 &)
+tterraininterface.dll,?SetMasks@TTerrainDecalMesh@Toshi@@QAEXIE@Z,0xa0ee30,"public: void __thiscall Toshi::TTerrainDecalMesh::SetMasks(unsigned int,unsigned char)"
+tterraininterface.dll,?SetMaterials@TTerrainDecalMesh@Toshi@@SGXPAVTMaterial@2@0@Z,0xa0ee34,"public: static void __stdcall Toshi::TTerrainDecalMesh::SetMaterials(class Toshi::TMaterial *,class Toshi::TMaterial *)"
+tterraininterface.dll,?EnableRenderEnvMap@TTerrainInterface@Toshi@@QAEX_N@Z,0xa0ee38,public: void __thiscall Toshi::TTerrainInterface::EnableRenderEnvMap(bool)
+tterraininterface.dll,?SetWaterHeight@TTerrainInterface@Toshi@@QAEXM@Z,0xa0ee3c,public: void __thiscall Toshi::TTerrainInterface::SetWaterHeight(float)
+simjpterrain.dll,?GetCurSectionTextureValue@APerlinNoise@@QAEMMM@Z,0xa0ee44,"public: float __thiscall APerlinNoise::GetCurSectionTextureValue(float,float)"
+simjpterrain.dll,?IsSafeToLevelSquareRegionUI@ASimJPTerrain@@QBE_NIIABVTVector2@Toshi@@IIMM@Z,0xa0ee48,"public: bool __thiscall ASimJPTerrain::IsSafeToLevelSquareRegionUI(unsigned int,unsigned int,class Toshi::TVector2 const &,unsigned int,unsigned int,float,float)const "
+simjpterrain.dll,?sm_fDeformNoiseMag@ASimJPHeightField@@2MA,0xa0ee4c,public: static float ASimJPHeightField::sm_fDeformNoiseMag
+simjpterrain.dll,??0APerlinNoise@@QAE@I@Z,0xa0ee50,public: __thiscall APerlinNoise::APerlinNoise(unsigned int)
+simjpterrain.dll,??1APerlinNoise@@QAE@XZ,0xa0ee54,public: __thiscall APerlinNoise::~APerlinNoise(void)
+simjpterrain.dll,?TerrainSectionIsActive@ASimJPTerrain@@2IB,0xa0ee58,public: static unsigned int const ASimJPTerrain::TerrainSectionIsActive
+simjpterrain.dll,?sm_iDefaultNoOfRiverJoins@ASimJPHeightField@@2HA,0xa0ee5c,public: static int ASimJPHeightField::sm_iDefaultNoOfRiverJoins
+simjpterrain.dll,?sm_iDefaultNoOfRivers@ASimJPHeightField@@2HA,0xa0ee60,public: static int ASimJPHeightField::sm_iDefaultNoOfRivers
+simjpterrain.dll,?sm_iDefaultNoOfMountains@ASimJPHeightField@@2HA,0xa0ee64,public: static int ASimJPHeightField::sm_iDefaultNoOfMountains
+simjpterrain.dll,?sm_fDefaultIslandShapePower@ASimJPHeightField@@2MA,0xa0ee68,public: static float ASimJPHeightField::sm_fDefaultIslandShapePower
+simjpterrain.dll,?sm_uiDefaultSeed@ASimJPHeightField@@2IA,0xa0ee6c,public: static unsigned int ASimJPHeightField::sm_uiDefaultSeed
+simjpterrain.dll,?s_uiDirtyRoad@ASimJPTerrain@@2IB,0xa0ee70,public: static unsigned int const ASimJPTerrain::s_uiDirtyRoad
+simjpterrain.dll,?s_uiRoadWithBench@ASimJPTerrain@@2IB,0xa0ee74,public: static unsigned int const ASimJPTerrain::s_uiRoadWithBench
+simjpterrain.dll,?s_uiDirtyRoadWithBench@ASimJPTerrain@@2IB,0xa0ee78,public: static unsigned int const ASimJPTerrain::s_uiDirtyRoadWithBench
+simjpterrain.dll,?s_uiRoadWithBin@ASimJPTerrain@@2IB,0xa0ee7c,public: static unsigned int const ASimJPTerrain::s_uiRoadWithBin
+simjpterrain.dll,?s_vSunlight@ASimJPTerrain@@2VTVector3@Toshi@@B,0xa0ee80,public: static class Toshi::TVector3 const ASimJPTerrain::s_vSunlight
+simjpterrain.dll,?Calc@ASimJPRiverGeneration@@QAEXMMMMMMMMM@Z,0xa0ee84,"public: void __thiscall ASimJPRiverGeneration::Calc(float,float,float,float,float,float,float,float,float)"
+simjpterrain.dll,?GetPoint@ASimJPRiverGeneration@@QAEXHAAM0@Z,0xa0ee88,"public: void __thiscall ASimJPRiverGeneration::GetPoint(int,float &,float &)"
+simjpterrain.dll,?GetNoOfPoints@ASimJPRiverGeneration@@QAEHXZ,0xa0ee8c,public: int __thiscall ASimJPRiverGeneration::GetNoOfPoints(void)
+simjpterrain.dll,??1ASimJPRiverGeneration@@QAE@XZ,0xa0ee90,public: __thiscall ASimJPRiverGeneration::~ASimJPRiverGeneration(void)
+simjpterrain.dll,??0ASimJPRiverGeneration@@QAE@H@Z,0xa0ee94,public: __thiscall ASimJPRiverGeneration::ASimJPRiverGeneration(int)
+simjpterrain.dll,?s_uiTRUIShift@ASimJPTerrain@@2IB,0xa0ee98,public: static unsigned int const ASimJPTerrain::s_uiTRUIShift
+simjpterrain.dll,?s_uiBRUIShift@ASimJPTerrain@@2IB,0xa0ee9c,public: static unsigned int const ASimJPTerrain::s_uiBRUIShift
+simjpterrain.dll,?PlaceTreeRegion@ASimJPTerrain@@QAEXIIII_N@Z,0xa0eea0,"public: void __thiscall ASimJPTerrain::PlaceTreeRegion(unsigned int,unsigned int,unsigned int,unsigned int,bool)"
+simjpterrain.dll,?GetData@ASimJPHeightFieldGeneration@@QAEMHH@Z,0xa0eea4,"public: float __thiscall ASimJPHeightFieldGeneration::GetData(int,int)"
+simjpterrain.dll,?Deserialise@ASimJPTerrain@@QAE_NPAVTFile@Toshi@@@Z,0xa0eea8,public: bool __thiscall ASimJPTerrain::Deserialise(class Toshi::TFile *)
+simjpterrain.dll,?m_sClass@ASimJPTerrain@@2VTClass@Toshi@@A,0xa0eeac,public: static class Toshi::TClass ASimJPTerrain::m_sClass
+simjpterrain.dll,?Serialise@ASimJPTerrain@@QAE_NPAVTFile@Toshi@@@Z,0xa0eeb0,public: bool __thiscall ASimJPTerrain::Serialise(class Toshi::TFile *)
+simjpterrain.dll,?s_uiNumBitsPerUI@ASimJPTerrain@@2IB,0xa0eeb4,public: static unsigned int const ASimJPTerrain::s_uiNumBitsPerUI
+simjpterrain.dll,?s_uiTLUIShift@ASimJPTerrain@@2IB,0xa0eeb8,public: static unsigned int const ASimJPTerrain::s_uiTLUIShift
+simjpterrain.dll,?FlattenRegion@ASimJPHeightField@@QAEXIIII@Z,0xa0eebc,"public: void __thiscall ASimJPHeightField::FlattenRegion(unsigned int,unsigned int,unsigned int,unsigned int)"
+simjpterrain.dll,?GenerateCustom@ASimJPTerrain@@QAEXIMMMMHHHHHMMM@Z,0xa0eec0,"public: void __thiscall ASimJPTerrain::GenerateCustom(unsigned int,float,float,float,float,int,int,int,int,int,float,float,float)"
+simjpterrain.dll,?GenerateIslaNublar@ASimJPTerrain@@QAEXXZ,0xa0eec4,public: void __thiscall ASimJPTerrain::GenerateIslaNublar(void)
+simjpterrain.dll,?sm_fDefaultWaterHeight@ASimJPHeightField@@2MA,0xa0eec8,public: static float ASimJPHeightField::sm_fDefaultWaterHeight
+simjpterrain.dll,?LoadTerrainTextures@ASimJPTerrain@@QAEXXZ,0xa0eecc,public: void __thiscall ASimJPTerrain::LoadTerrainTextures(void)
+simjpterrain.dll,?s_uiDirtyRoadWithBin@ASimJPTerrain@@2IB,0xa0eed0,public: static unsigned int const ASimJPTerrain::s_uiDirtyRoadWithBin
+simjpterrain.dll,?s_uiUIMask@ASimJPTerrain@@2IB,0xa0eed4,public: static unsigned int const ASimJPTerrain::s_uiUIMask
+simjpterrain.dll,?s_uiBLUIShift@ASimJPTerrain@@2IB,0xa0eed8,public: static unsigned int const ASimJPTerrain::s_uiBLUIShift
+simjpterrain.dll,?GetTerrainScore@ASimJPTerrain@@QBEMIIII@Z,0xa0eedc,"public: float __thiscall ASimJPTerrain::GetTerrainScore(unsigned int,unsigned int,unsigned int,unsigned int)const "
+simjpterrain.dll,?CreateTerrain@ASimJPHeightField@@QAEXW4TERRAIN_TYPE@1@IIIIMM@Z,0xa0eee0,"public: void __thiscall ASimJPHeightField::CreateTerrain(enum ASimJPHeightField::TERRAIN_TYPE,unsigned int,unsigned int,unsigned int,unsigned int,float,float)"
+simjpterrain.dll,?InitializePerlinNoise@APerlinNoise@@QAEXHMMMMMMMM@Z,0xa0eee4,"public: void __thiscall APerlinNoise::InitializePerlinNoise(int,float,float,float,float,float,float,float,float)"
+simjpterrain.dll,?GetPerlinNoise@APerlinNoise@@QAEMMM@Z,0xa0eee8,"public: float __thiscall APerlinNoise::GetPerlinNoise(float,float)"
+simjpterrain.dll,?ClampPositionToTerrain@ASimJPTerrain@@QBE_NAAVTVector2@Toshi@@@Z,0xa0eeec,public: bool __thiscall ASimJPTerrain::ClampPositionToTerrain(class Toshi::TVector2 &)const 
+simjpterrain.dll,?IsObstructedBuilding@ASimJPTerrain@@QBE_NII@Z,0xa0eef0,"public: bool __thiscall ASimJPTerrain::IsObstructedBuilding(unsigned int,unsigned int)const "
+simjpterrain.dll,?s_uiModernTree@ASimJPTerrain@@2IB,0xa0eef4,public: static unsigned int const ASimJPTerrain::s_uiModernTree
+simjpterrain.dll,?IsBuildingInRegion@ASimJPTerrain@@QBE_NIIII@Z,0xa0eef8,"public: bool __thiscall ASimJPTerrain::IsBuildingInRegion(unsigned int,unsigned int,unsigned int,unsigned int)const "
+simjpterrain.dll,?IsSafariPoint@ASimJPTerrain@@QBE_NII@Z,0xa0eefc,"public: bool __thiscall ASimJPTerrain::IsSafariPoint(unsigned int,unsigned int)const "
+simjpterrain.dll,?ClearRegion@ASimJPTerrain@@QAEXIIII@Z,0xa0ef00,"public: void __thiscall ASimJPTerrain::ClearRegion(unsigned int,unsigned int,unsigned int,unsigned int)"
+simjpterrain.dll,?IsObstructed@ASimJPTerrain@@QBE_NII@Z,0xa0ef04,"public: bool __thiscall ASimJPTerrain::IsObstructed(unsigned int,unsigned int)const "
+simjpterrain.dll,?CalcBlendArea@ASimJPHeightField@@QAEXW4TERRAIN_TYPE@1@IIIIAAMM@Z,0xa0ef08,"public: void __thiscall ASimJPHeightField::CalcBlendArea(enum ASimJPHeightField::TERRAIN_TYPE,unsigned int,unsigned int,unsigned int,unsigned int,float &,float)"
+simjpterrain.dll,?RefreshGrassFlags@ASimJPTerrain@@QAEXIIII@Z,0xa0ef0c,"public: void __thiscall ASimJPTerrain::RefreshGrassFlags(unsigned int,unsigned int,unsigned int,unsigned int)"
+simjpterrain.dll,?s_uiWater@ASimJPTerrain@@2IB,0xa0ef10,public: static unsigned int const ASimJPTerrain::s_uiWater
+simjpterrain.dll,?s_uiSafariPoint@ASimJPTerrain@@2IB,0xa0ef14,public: static unsigned int const ASimJPTerrain::s_uiSafariPoint
+simjpterrain.dll,?LevelCircleRegion@ASimJPHeightField@@QAEXABVTVector2@Toshi@@MMMMM@Z,0xa0ef18,"public: void __thiscall ASimJPHeightField::LevelCircleRegion(class Toshi::TVector2 const &,float,float,float,float,float)"
+simjpterrain.dll,?IsSafeToLevelCircleRegionUI@ASimJPTerrain@@QBE_NIIABVTVector2@Toshi@@MMMM@Z,0xa0ef1c,"public: bool __thiscall ASimJPTerrain::IsSafeToLevelCircleRegionUI(unsigned int,unsigned int,class Toshi::TVector2 const &,float,float,float,float)const "
+simjpterrain.dll,??0ASimJPPrevTerrain@@QAE@XZ,0xa0ef20,public: __thiscall ASimJPPrevTerrain::ASimJPPrevTerrain(void)
+simjpterrain.dll,?s_uiPaleoTree@ASimJPTerrain@@2IB,0xa0ef24,public: static unsigned int const ASimJPTerrain::s_uiPaleoTree
+simjpterrain.dll,?sm_fMaxHeight@ASimJPHeightField@@2MB,0xa0ef28,public: static float const ASimJPHeightField::sm_fMaxHeight
+simjpterrain.dll,?sm_fMinHeight@ASimJPHeightField@@2MB,0xa0ef2c,public: static float const ASimJPHeightField::sm_fMinHeight
+simjpterrain.dll,?CalcTerrainIntersectDist@ASimJPTerrain@@QBEMABVTVector3@Toshi@@0M@Z,0xa0ef30,"public: float __thiscall ASimJPTerrain::CalcTerrainIntersectDist(class Toshi::TVector3 const &,class Toshi::TVector3 const &,float)const "
+simjpterrain.dll,?IsObstructedInRegion@ASimJPTerrain@@QBE_NIIII@Z,0xa0ef34,"public: bool __thiscall ASimJPTerrain::IsObstructedInRegion(unsigned int,unsigned int,unsigned int,unsigned int)const "
+simjpterrain.dll,?IsInRegion@ASimJPTerrain@@ABE_NIIIII@Z,0xa0ef38,"private: bool __thiscall ASimJPTerrain::IsInRegion(unsigned int,unsigned int,unsigned int,unsigned int,unsigned int)const "
+simjpterrain.dll,?ClampPositionToTerrain@ASimJPTerrain@@QBE_NAAVTVector3@Toshi@@@Z,0xa0ef3c,public: bool __thiscall ASimJPTerrain::ClampPositionToTerrain(class Toshi::TVector3 &)const 
+simjpterrain.dll,?IsTree@ASimJPTerrain@@QBE_NII@Z,0xa0ef40,"public: bool __thiscall ASimJPTerrain::IsTree(unsigned int,unsigned int)const "
+simjpterrain.dll,?ApplyOffsetToPos@ASimJPTerrain@@AAEXAAVTVector3@Toshi@@@Z,0xa0ef44,private: void __thiscall ASimJPTerrain::ApplyOffsetToPos(class Toshi::TVector3 &)
+simjpterrain.dll,?IsBuilding@ASimJPTerrain@@QBE_NII@Z,0xa0ef48,"public: bool __thiscall ASimJPTerrain::IsBuilding(unsigned int,unsigned int)const "
+simjpterrain.dll,?SetUIFlags@ASimJPTerrain@@QAEXIII@Z,0xa0ef4c,"public: void __thiscall ASimJPTerrain::SetUIFlags(unsigned int,unsigned int,unsigned int)"
+simjpterrain.dll,?s_uiRoad@ASimJPTerrain@@2IB,0xa0ef50,public: static unsigned int const ASimJPTerrain::s_uiRoad
+simjpterrain.dll,?GetFlags@ASimJPTerrain@@QBEIII@Z,0xa0ef54,"public: unsigned int __thiscall ASimJPTerrain::GetFlags(unsigned int,unsigned int)const "
+simjpterrain.dll,?s_uiFreeBuilding@ASimJPTerrain@@2IB,0xa0ef58,public: static unsigned int const ASimJPTerrain::s_uiFreeBuilding
+simjpterrain.dll,?s_uiFreeBuildingHighRectBL@ASimJPTerrain@@2IB,0xa0ef5c,public: static unsigned int const ASimJPTerrain::s_uiFreeBuildingHighRectBL
+simjpterrain.dll,?PlaceBuildingRegion@ASimJPTerrain@@QAEXIIII_N@Z,0xa0ef60,"public: void __thiscall ASimJPTerrain::PlaceBuildingRegion(unsigned int,unsigned int,unsigned int,unsigned int,bool)"
+simjpterrain.dll,?PlaceBuildingRegion@ASimJPTerrain@@QAEXIIIIAAUATerrainFootprintObstructionData@@@Z,0xa0ef64,"public: void __thiscall ASimJPTerrain::PlaceBuildingRegion(unsigned int,unsigned int,unsigned int,unsigned int,struct ATerrainFootprintObstructionData &)"
+simjpterrain.dll,?PlaceBuildingRegionFreeHigh@ASimJPTerrain@@QAEXIIIIH@Z,0xa0ef68,"public: void __thiscall ASimJPTerrain::PlaceBuildingRegionFreeHigh(unsigned int,unsigned int,unsigned int,unsigned int,int)"
+simjpterrain.dll,?ClearRegionLeaveFence@ASimJPTerrain@@QAEXIIII@Z,0xa0ef6c,"public: void __thiscall ASimJPTerrain::ClearRegionLeaveFence(unsigned int,unsigned int,unsigned int,unsigned int)"
+simjpterrain.dll,?LevelSquareRegion@ASimJPHeightField@@QAEXABVTVector2@Toshi@@IIMMM@Z,0xa0ef70,"public: void __thiscall ASimJPHeightField::LevelSquareRegion(class Toshi::TVector2 const &,unsigned int,unsigned int,float,float,float)"
+simjpterrain.dll,?sm_fDefaultDeformRatio@ASimJPHeightField@@2MB,0xa0ef74,public: static float const ASimJPHeightField::sm_fDefaultDeformRatio
+simjpterrain.dll,?s_uiTerrainUIShift@ASimJPTerrain@@2IB,0xa0ef78,public: static unsigned int const ASimJPTerrain::s_uiTerrainUIShift
+simjpterrain.dll,?IsLineObstructed@ASimJPTerrain@@QBE_NIIIIPAM_N1@Z,0xa0ef7c,"public: bool __thiscall ASimJPTerrain::IsLineObstructed(unsigned int,unsigned int,unsigned int,unsigned int,float *,bool,bool)const "
+simjpterrain.dll,?SetData@ASimJPHeightFieldGeneration@@QAEXHHM@Z,0xa0ef80,"public: void __thiscall ASimJPHeightFieldGeneration::SetData(int,int,float)"
+simjpterrain.dll,?s_uiTerrainUIBlockSize@ASimJPTerrain@@2IB,0xa0ef84,public: static unsigned int const ASimJPTerrain::s_uiTerrainUIBlockSize
+simjpterrain.dll,?IsGrass@ASimJPTerrain@@QBE_NII@Z,0xa0ef88,"public: bool __thiscall ASimJPTerrain::IsGrass(unsigned int,unsigned int)const "
+simjpterrain.dll,?IsWater@ASimJPTerrain@@QBE_NII@Z,0xa0ef8c,"public: bool __thiscall ASimJPTerrain::IsWater(unsigned int,unsigned int)const "
+simjpterrain.dll,?IsRoad@ASimJPTerrain@@QBE_NII@Z,0xa0ef90,"public: bool __thiscall ASimJPTerrain::IsRoad(unsigned int,unsigned int)const "
+simjpterrain.dll,?GetUIFlags@ASimJPTerrain@@QBEIII@Z,0xa0ef94,"public: unsigned int __thiscall ASimJPTerrain::GetUIFlags(unsigned int,unsigned int)const "
+simjpterrain.dll,?IsFence@ASimJPTerrain@@QBE_NII@Z,0xa0ef98,"public: bool __thiscall ASimJPTerrain::IsFence(unsigned int,unsigned int)const "
+simjpterrain.dll,?s_uiBuilding@ASimJPTerrain@@2IB,0xa0ef9c,public: static unsigned int const ASimJPTerrain::s_uiBuilding
+simjpterrain.dll,?s_uiFence@ASimJPTerrain@@2IB,0xa0efa0,public: static unsigned int const ASimJPTerrain::s_uiFence
+simjpterrain.dll,?s_uiPartialObstructedBuilding@ASimJPTerrain@@2IB,0xa0efa4,public: static unsigned int const ASimJPTerrain::s_uiPartialObstructedBuilding
+simjpterrain.dll,?GetWidth@ASimJPHeightFieldGeneration@@QAEHXZ,0xa0efa8,public: int __thiscall ASimJPHeightFieldGeneration::GetWidth(void)
+simjpterrain.dll,?GetHeight@ASimJPHeightFieldGeneration@@QAEHXZ,0xa0efac,public: int __thiscall ASimJPHeightFieldGeneration::GetHeight(void)
+simjpterrain.dll,?sm_iDefaultMaxMountainRadius@ASimJPHeightField@@2HA,0xa0efb0,public: static int ASimJPHeightField::sm_iDefaultMaxMountainRadius
+simjpterrain.dll,?CreatePreviewIsland@ASimJPHeightFieldGeneration@@QAEXIIIMMMMHHHHHMMM@Z,0xa0efb4,"public: void __thiscall ASimJPHeightFieldGeneration::CreatePreviewIsland(unsigned int,unsigned int,unsigned int,float,float,float,float,int,int,int,int,int,float,float,float)"
+simjpterrain.dll,?Copy@ASimJPTerrain@@QAEXPAVASimJPHeightFieldGeneration@@@Z,0xa0efb8,public: void __thiscall ASimJPTerrain::Copy(class ASimJPHeightFieldGeneration *)
+simjpterrain.dll,?sm_fDefaultBeachHeight@ASimJPHeightField@@2MA,0xa0efbc,public: static float ASimJPHeightField::sm_fDefaultBeachHeight
+simjpterrain.dll,?sm_fDefaultFalloff@ASimJPHeightField@@2MA,0xa0efc0,public: static float ASimJPHeightField::sm_fDefaultFalloff
+simjpterrain.dll,?sm_fDefaultHillHeight@ASimJPHeightField@@2MA,0xa0efc4,public: static float ASimJPHeightField::sm_fDefaultHillHeight
+simjpterrain.dll,?sm_iDefaultMaxMountainHeight@ASimJPHeightField@@2HA,0xa0efc8,public: static int ASimJPHeightField::sm_iDefaultMaxMountainHeight
+simjpterrain.dll,?sm_fDefaultMinPercentBuildableLand@ASimJPHeightField@@2MA,0xa0efcc,public: static float ASimJPHeightField::sm_fDefaultMinPercentBuildableLand
+simjpterrain.dll,?sm_fDefaultMaxPercentBuildableLand@ASimJPHeightField@@2MA,0xa0efd0,public: static float ASimJPHeightField::sm_fDefaultMaxPercentBuildableLand
+simjpterrain.dll,??0ASimJPHeightFieldGeneration@@QAE@HH@Z,0xa0efd4,"public: __thiscall ASimJPHeightFieldGeneration::ASimJPHeightFieldGeneration(int,int)"
+simjpterrain.dll,?EnableScratchPad@ASimJPHeightFieldGeneration@@QAEXXZ,0xa0efd8,public: void __thiscall ASimJPHeightFieldGeneration::EnableScratchPad(void)
+pguicore.dll,??1PGUIMenuTreeItem@@UAE@XZ,0xa0efe0,public: virtual __thiscall PGUIMenuTreeItem::~PGUIMenuTreeItem(void)
+pguicore.dll,??0PGUIMenuTreeItem@@QAE@PAVPGUIMenuTreeItemStyle@@HI@Z,0xa0efe4,"public: __thiscall PGUIMenuTreeItem::PGUIMenuTreeItem(class PGUIMenuTreeItemStyle *,int,unsigned int)"
+pguicore.dll,?RecurseTree@PGUIMenuTree@@QAEXP6G_NPAVPGUIMenuTreeItem@@PAX@Z221@Z,0xa0efe8,"public: void __thiscall PGUIMenuTree::RecurseTree(bool (__stdcall*)(class PGUIMenuTreeItem *,void *),bool (__stdcall*)(class PGUIMenuTreeItem *,void *),bool (__stdcall*)(class PGUIMenuTreeItem *,void *),void *)"
+pguicore.dll,?AddItem@PGUIMenuTreeItem@@QAEXPAV1@@Z,0xa0efec,public: void __thiscall PGUIMenuTreeItem::AddItem(class PGUIMenuTreeItem *)
+pguicore.dll,?m_sClass@PGUIPushButton@@2VTClass@Toshi@@A,0xa0eff0,public: static class Toshi::TClass PGUIPushButton::m_sClass
+pguicore.dll,?RemoveAllItemsImpl@PGUIListBox@@IAEXXZ,0xa0eff4,protected: void __thiscall PGUIListBox::RemoveAllItemsImpl(void)
+pguicore.dll,?UpdateKnob@PGUISliderBar@@IAEXXZ,0xa0eff8,protected: void __thiscall PGUISliderBar::UpdateKnob(void)
+pguicore.dll,?ms_pSingleton@PGUIPropertyValueFactory@@0PAV1@A,0xa0effc,private: static class PGUIPropertyValueFactory * PGUIPropertyValueFactory::ms_pSingleton
+pguicore.dll,??_7PGUIItemData@@6B@,0xa0f000,const PGUIItemData::`vftable'
+pguicore.dll,?DeleteItemList@PGUIListBox@@QAEXXZ,0xa0f004,public: void __thiscall PGUIListBox::DeleteItemList(void)
+pguicore.dll,?AddItemImpl@PGUIListBox@@IAEXPAVPGUIItemData@@@Z,0xa0f008,protected: void __thiscall PGUIListBox::AddItemImpl(class PGUIItemData *)
+pguicore.dll,?RefreshItemList@PGUIListBox@@QAEXXZ,0xa0f00c,public: void __thiscall PGUIListBox::RefreshItemList(void)
+pguicore.dll,?SelectItemImpl@PGUIListBox@@IAEXPAVPGUIItemData@@@Z,0xa0f010,protected: void __thiscall PGUIListBox::SelectItemImpl(class PGUIItemData *)
+pguicore.dll,??0PGUIPropertyValueFactory@@QAE@XZ,0xa0f014,public: __thiscall PGUIPropertyValueFactory::PGUIPropertyValueFactory(void)
+pguicore.dll,??1PGUIItemData@@UAE@XZ,0xa0f018,public: virtual __thiscall PGUIItemData::~PGUIItemData(void)
+pguicore.dll,?AllocateValueArray@PGUIPropertyValueFactory@@QAEPAVPPropertyValue@@H@Z,0xa0f01c,public: class PPropertyValue * __thiscall PGUIPropertyValueFactory::AllocateValueArray(int)
+pguicore.dll,?RemoveItem@PGUIMenuTreeItem@@QAEXPAV1@@Z,0xa0f020,public: void __thiscall PGUIMenuTreeItem::RemoveItem(class PGUIMenuTreeItem *)
+pguicore.dll,?UpdateMenu@PGUIMenuTree@@QAEXPAVPGUIMenuTreeItem@@@Z,0xa0f024,public: void __thiscall PGUIMenuTree::UpdateMenu(class PGUIMenuTreeItem *)
+pguicore.dll,?RemoveItemImpl@PGUIListBox@@IAEXPAVPGUIItemData@@@Z,0xa0f028,protected: void __thiscall PGUIListBox::RemoveItemImpl(class PGUIItemData *)
+pguicore.dll,?Initialise@PGUITableBox@@QAEXXZ,0xa0f02c,public: void __thiscall PGUITableBox::Initialise(void)
+pguicore.dll,?RemoveAllItemsImpl@PGUITableBox@@IAEXXZ,0xa0f030,protected: void __thiscall PGUITableBox::RemoveAllItemsImpl(void)
+pguicore.dll,?RecurseTree@PGUIMenuTreeItem@@QAEXP6G_NPAV1@PAX@Z221@Z,0xa0f034,"public: void __thiscall PGUIMenuTreeItem::RecurseTree(bool (__stdcall*)(class PGUIMenuTreeItem *,void *),bool (__stdcall*)(class PGUIMenuTreeItem *,void *),bool (__stdcall*)(class PGUIMenuTreeItem *,void *),void *)"
+pguicore.dll,?SelectItemImpl@PGUITableBox@@IAEXPAVPGUIRowData@@@Z,0xa0f038,protected: void __thiscall PGUITableBox::SelectItemImpl(class PGUIRowData *)
+pguicore.dll,?AddItemImpl@PGUITableBox@@IAEXPAVPGUIRowData@@@Z,0xa0f03c,protected: void __thiscall PGUITableBox::AddItemImpl(class PGUIRowData *)
+pguicore.dll,?RefreshItemList@PGUITableBox@@QAEXXZ,0xa0f040,public: void __thiscall PGUITableBox::RefreshItemList(void)
+pguicore.dll,??_7PGUIRowData@@6B@,0xa0f044,const PGUIRowData::`vftable'
+pguicore.dll,??1PGUIRowData@@UAE@XZ,0xa0f048,public: virtual __thiscall PGUIRowData::~PGUIRowData(void)
+pguicore.dll,??0PGUIRowData@@QAE@HQBHI@Z,0xa0f04c,"public: __thiscall PGUIRowData::PGUIRowData(int,int const * const,unsigned int)"
+pguicore.dll,?m_sClass@PGUIToggleButton@@2VTClass@Toshi@@A,0xa0f050,public: static class Toshi::TClass PGUIToggleButton::m_sClass
+pguicore.dll,?m_sClass@PGUISliderBar@@2VTClass@Toshi@@A,0xa0f054,public: static class Toshi::TClass PGUISliderBar::m_sClass
+pguicore.dll,?SizeToFit@PGUIListBox@@QAEXHH@Z,0xa0f058,"public: void __thiscall PGUIListBox::SizeToFit(int,int)"
+pguicore.dll,?SizeToFit@PGUIListBox@@QAEXH@Z,0xa0f05c,public: void __thiscall PGUIListBox::SizeToFit(int)
+pguicore.dll,??0PGUIPanel@@QAE@XZ,0xa0f060,public: __thiscall PGUIPanel::PGUIPanel(void)
+pguicore.dll,?m_sClass@PGUIDialog@@2VTClass@Toshi@@A,0xa0f064,public: static class Toshi::TClass PGUIDialog::m_sClass
+pguicore.dll,?GetCurrentMenu@PGUIMenuTree@@QAEPAVPGUIMenuDialog@@XZ,0xa0f068,public: class PGUIMenuDialog * __thiscall PGUIMenuTree::GetCurrentMenu(void)
+pguicore.dll,?SetRootItem@PGUIMenuBar@@QAEXPAVPGUIMenuTreeItem@@@Z,0xa0f06c,public: void __thiscall PGUIMenuBar::SetRootItem(class PGUIMenuTreeItem *)
+pguicore.dll,?SetSelectedItem@PGUIMenuTree@@QAEXPAVPGUIMenuTreeItem@@@Z,0xa0f070,public: void __thiscall PGUIMenuTree::SetSelectedItem(class PGUIMenuTreeItem *)
+pguicore.dll,?UpdateMenu@PGUIMenuBar@@QAEXXZ,0xa0f074,public: void __thiscall PGUIMenuBar::UpdateMenu(void)
+pguicore.dll,?CreateMenuStyleGroup@PGUIMenuTree@@QAEPAVPGUIMenuTreeItemStyle@@PBD00000@Z,0xa0f078,"public: class PGUIMenuTreeItemStyle * __thiscall PGUIMenuTree::CreateMenuStyleGroup(char const *,char const *,char const *,char const *,char const *,char const *)"
+pguicore.dll,?CancelMenu@PGUIMenuTree@@QAEXXZ,0xa0f07c,public: void __thiscall PGUIMenuTree::CancelMenu(void)
+pguicore.dll,?FindChildItem@PGUIMenuTreeItem@@QAEPAV1@H@Z,0xa0f080,public: class PGUIMenuTreeItem * __thiscall PGUIMenuTreeItem::FindChildItem(int)
+pguicore.dll,?InvokeMenu@PGUIMenuTree@@QAE_NPAVPGUIMenuTreeItem@@HH@Z,0xa0f084,"public: bool __thiscall PGUIMenuTree::InvokeMenu(class PGUIMenuTreeItem *,int,int)"
+pguicore.dll,?SetScreen@PGUIMenuTree@@QAEXPAVTGUIScreen@Toshi@@@Z,0xa0f088,public: void __thiscall PGUIMenuTree::SetScreen(class Toshi::TGUIScreen *)
+pguicore.dll,?m_sClass@PGUIMenuTree@@2VTClass@Toshi@@A,0xa0f08c,public: static class Toshi::TClass PGUIMenuTree::m_sClass
+pguicore.dll,??0PGUIMenuTreeItem@@IAE@ABV0@@Z,0xa0f090,protected: __thiscall PGUIMenuTreeItem::PGUIMenuTreeItem(class PGUIMenuTreeItem const &)
+pguicore.dll,?FindChildItem@PGUIMenuTreeItem@@QAEPAV1@ABVTLString@Toshi@@_N@Z,0xa0f094,"public: class PGUIMenuTreeItem * __thiscall PGUIMenuTreeItem::FindChildItem(class Toshi::TLString const &,bool)"
+pguicore.dll,??1PGUIMenuTree@@UAE@XZ,0xa0f098,public: virtual __thiscall PGUIMenuTree::~PGUIMenuTree(void)
+pguicore.dll,??0PGUIMenuTree@@QAE@XZ,0xa0f09c,public: __thiscall PGUIMenuTree::PGUIMenuTree(void)
+pguicore.dll,?Deserialise@PGUIMenuTree@@UAE_NPBVPProperties@@@Z,0xa0f0a0,public: virtual bool __thiscall PGUIMenuTree::Deserialise(class PProperties const *)
+pguicore.dll,?Serialise@PGUIMenuTree@@UAE_NPAVPProperties@@@Z,0xa0f0a4,public: virtual bool __thiscall PGUIMenuTree::Serialise(class PProperties *)
+pguicore.dll,?GetPropertyInfoSet@PGUIMenuTree@@MBEPBV?$TArray@PAVTGUIPropertySpec@Toshi@@@Toshi@@XZ,0xa0f0a8,protected: virtual class Toshi::TArray<class Toshi::TGUIPropertySpec *> const * __thiscall PGUIMenuTree::GetPropertyInfoSet(void)const 
+pguicore.dll,?GetPropertyInfoOrderedSet@PGUIMenuTree@@MBEPBV?$TSortedArray@PAVTGUIPropertySpec@Toshi@@UComparator@12@@Toshi@@XZ,0xa0f0ac,"protected: virtual class Toshi::TSortedArray<class Toshi::TGUIPropertySpec *,struct Toshi::TGUIPropertySpec::Comparator> const * __thiscall PGUIMenuTree::GetPropertyInfoOrderedSet(void)const "
+pguicore.dll,?Clone@PGUIMenuTree@@UBEPAV1@XZ,0xa0f0b0,public: virtual class PGUIMenuTree * __thiscall PGUIMenuTree::Clone(void)const 
+pguicore.dll,?DoButtonPress@PGUIMenuTree@@UAE_NPAVInputEvent@TInputInterface@Toshi@@H@Z,0xa0f0b4,"public: virtual bool __thiscall PGUIMenuTree::DoButtonPress(class Toshi::TInputInterface::InputEvent *,int)"
+pguicore.dll,?DoButtonRepeat@PGUIMenuTree@@UAE_NPAVInputEvent@TInputInterface@Toshi@@H@Z,0xa0f0b8,"public: virtual bool __thiscall PGUIMenuTree::DoButtonRepeat(class Toshi::TInputInterface::InputEvent *,int)"
+pguicore.dll,?DoButtonRelease@PGUIMenuTree@@UAE_NPAVInputEvent@TInputInterface@Toshi@@H@Z,0xa0f0bc,"public: virtual bool __thiscall PGUIMenuTree::DoButtonRelease(class Toshi::TInputInterface::InputEvent *,int)"
+pguicore.dll,?DoAxisMove@PGUIMenuTree@@UAE_NPAVInputEvent@TInputInterface@Toshi@@H@Z,0xa0f0c0,"public: virtual bool __thiscall PGUIMenuTree::DoAxisMove(class Toshi::TInputInterface::InputEvent *,int)"
+pguicore.dll,?DoPointerMove@PGUIMenuTree@@UAE_NPAVInputEvent@TInputInterface@Toshi@@H@Z,0xa0f0c4,"public: virtual bool __thiscall PGUIMenuTree::DoPointerMove(class Toshi::TInputInterface::InputEvent *,int)"
+pguicore.dll,?DoRolloverUpdate@PGUIMenuTree@@UAEXXZ,0xa0f0c8,public: virtual void __thiscall PGUIMenuTree::DoRolloverUpdate(void)
+pguicore.dll,?PropagateState@PGUIMenuTree@@QAEIIPAVPGUIMenuTreeItem@@@Z,0xa0f0cc,"public: unsigned int __thiscall PGUIMenuTree::PropagateState(unsigned int,class PGUIMenuTreeItem *)"
+pguicore.dll,?FlushOldDialogs@PGUIMenuTree@@QAEXXZ,0xa0f0d0,public: void __thiscall PGUIMenuTree::FlushOldDialogs(void)
+pguicore.dll,?SetScreenMarginBottom@PGUIMenuTree@@QAEXH@Z,0xa0f0d4,public: void __thiscall PGUIMenuTree::SetScreenMarginBottom(int)
+pguicore.dll,?SetScreenMarginTop@PGUIMenuTree@@QAEXH@Z,0xa0f0d8,public: void __thiscall PGUIMenuTree::SetScreenMarginTop(int)
+pguicore.dll,?SetScreenMarginRight@PGUIMenuTree@@QAEXH@Z,0xa0f0dc,public: void __thiscall PGUIMenuTree::SetScreenMarginRight(int)
+pguicore.dll,?SetScreenMarginLeft@PGUIMenuTree@@QAEXH@Z,0xa0f0e0,public: void __thiscall PGUIMenuTree::SetScreenMarginLeft(int)
+tguiinterface.dll,?SetPositionCenter@TGUIWidget@Toshi@@QAEXXZ,0xa0f0e8,public: void __thiscall Toshi::TGUIWidget::SetPositionCenter(void)
+tguiinterface.dll,?SetWidgetName@TGUIWidgetInfo@Toshi@@QAEXABVTPCString@2@@Z,0xa0f0ec,public: void __thiscall Toshi::TGUIWidgetInfo::SetWidgetName(class Toshi::TPCString const &)
+tguiinterface.dll,?ValidatePropertyInfo@TGUIDeserialisable@Toshi@@UBE_NPBVTGUIPropertySpec@2@@Z,0xa0f0f0,public: virtual bool __thiscall Toshi::TGUIDeserialisable::ValidatePropertyInfo(class Toshi::TGUIPropertySpec const *)const 
+tguiinterface.dll,?GetPropertyInfo@TGUIDeserialisable@Toshi@@UBEPBVTGUIPropertySpec@2@H@Z,0xa0f0f4,public: virtual class Toshi::TGUIPropertySpec const * __thiscall Toshi::TGUIDeserialisable::GetPropertyInfo(int)const 
+tguiinterface.dll,?SetFontFactory@TGUIInterface@Toshi@@QAEXPAVTGUIFontFactory@2@@Z,0xa0f0f8,public: void __thiscall Toshi::TGUIInterface::SetFontFactory(class Toshi::TGUIFontFactory *)
+tguiinterface.dll,?GetPropertyCount@TGUIDeserialisable@Toshi@@UBEHXZ,0xa0f0fc,public: virtual int __thiscall Toshi::TGUIDeserialisable::GetPropertyCount(void)const 
+tguiinterface.dll,?m_sClass@TGUIInputContext@Toshi@@2VTClass@2@A,0xa0f100,public: static class Toshi::TClass Toshi::TGUIInputContext::m_sClass
+tguiinterface.dll,?FindPropertyInfo@TGUIDeserialisable@Toshi@@UBEPBVTGUIPropertySpec@2@ABVTPCString@2@@Z,0xa0f104,public: virtual class Toshi::TGUIPropertySpec const * __thiscall Toshi::TGUIDeserialisable::FindPropertyInfo(class Toshi::TPCString const &)const 
+tguiinterface.dll,??1TGUIInputContext@Toshi@@UAE@XZ,0xa0f108,public: virtual __thiscall Toshi::TGUIInputContext::~TGUIInputContext(void)
+tguiinterface.dll,??0TGUIInputContext@Toshi@@QAE@XZ,0xa0f10c,public: __thiscall Toshi::TGUIInputContext::TGUIInputContext(void)
+tguiinterface.dll,?UpdateStatusDisplay@TGUIInputContext@Toshi@@UAEXXZ,0xa0f110,public: virtual void __thiscall Toshi::TGUIInputContext::UpdateStatusDisplay(void)
+tguiinterface.dll,?DeleteTextureSection@TGUIInterface@Toshi@@QAEXPAVTGUITextureSection@2@@Z,0xa0f114,public: void __thiscall Toshi::TGUIInterface::DeleteTextureSection(class Toshi::TGUITextureSection *)
+tguiinterface.dll,?SetWidth@TGUIWidget@Toshi@@QAEXH@Z,0xa0f118,public: void __thiscall Toshi::TGUIWidget::SetWidth(int)
+tguiinterface.dll,?AddTextureSection@TGUIInterface@Toshi@@QAEPAVTGUITextureSection@2@PAV32@@Z,0xa0f11c,public: class Toshi::TGUITextureSection * __thiscall Toshi::TGUIInterface::AddTextureSection(class Toshi::TGUITextureSection *)
+tguiinterface.dll,??0TGUIWidget@Toshi@@IAE@ABV01@@Z,0xa0f120,protected: __thiscall Toshi::TGUIWidget::TGUIWidget(class Toshi::TGUIWidget const &)
+tguiinterface.dll,?GetSoundFactory@TGUIInterface@Toshi@@QBEPAVTGUISoundFactory@2@XZ,0xa0f124,public: class Toshi::TGUISoundFactory * __thiscall Toshi::TGUIInterface::GetSoundFactory(void)const 
+tguiinterface.dll,?SetSize@TGUIWidget@Toshi@@QAEXHH@Z,0xa0f128,"public: void __thiscall Toshi::TGUIWidget::SetSize(int,int)"
+tguiinterface.dll,?GetRootComponent@TGUIStyle@Toshi@@QAEAAVTGUIStyleRootComponent@2@H@Z,0xa0f12c,public: class Toshi::TGUIStyleRootComponent & __thiscall Toshi::TGUIStyle::GetRootComponent(int)
+tguiinterface.dll,?SetColour@TGUIElement@Toshi@@QAEAAV12@ABVTGUIColour@2@@Z,0xa0f130,public: class Toshi::TGUIElement & __thiscall Toshi::TGUIElement::SetColour(class Toshi::TGUIColour const &)
+tguiinterface.dll,?GetElement@TGUIComponent@Toshi@@QAEAAVTGUIElement@2@H@Z,0xa0f134,public: class Toshi::TGUIElement & __thiscall Toshi::TGUIComponent::GetElement(int)
+tguiinterface.dll,??0TGUIWidget@Toshi@@QAE@XZ,0xa0f138,public: __thiscall Toshi::TGUIWidget::TGUIWidget(void)
+tguiinterface.dll,?ms_oPropertySet@TGUIWidget@Toshi@@1PAV?$TArray@PAVTGUIPropertySpec@Toshi@@@2@A,0xa0f13c,protected: static class Toshi::TArray<class Toshi::TGUIPropertySpec *> * Toshi::TGUIWidget::ms_oPropertySet
+tguiinterface.dll,??1TGUIWidget@Toshi@@UAE@XZ,0xa0f140,public: virtual __thiscall Toshi::TGUIWidget::~TGUIWidget(void)
+tguiinterface.dll,??0TGUIWidgetInfo@Toshi@@QAE@XZ,0xa0f144,public: __thiscall Toshi::TGUIWidgetInfo::TGUIWidgetInfo(void)
+tguiinterface.dll,?OnPaint@TGUIWidget@Toshi@@UAE_NPAVTGUIDisplayContext@2@@Z,0xa0f148,public: virtual bool __thiscall Toshi::TGUIWidget::OnPaint(class Toshi::TGUIDisplayContext *)
+tguiinterface.dll,?ms_widget_info@TGUIWidget@Toshi@@1PAVTGUIWidgetInfo@2@A,0xa0f14c,protected: static class Toshi::TGUIWidgetInfo * Toshi::TGUIWidget::ms_widget_info
+tguiinterface.dll,?SetWidgetLabel@TGUIWidgetInfo@Toshi@@QAEXABVTPCString@2@@Z,0xa0f150,public: void __thiscall Toshi::TGUIWidgetInfo::SetWidgetLabel(class Toshi::TPCString const &)
+tguiinterface.dll,?SetProperties@TGUIWidgetInfo@Toshi@@QAEXPAV?$TSortedArray@PAVTGUIPropertySpec@Toshi@@UComparator@12@@2@@Z,0xa0f154,"public: void __thiscall Toshi::TGUIWidgetInfo::SetProperties(class Toshi::TSortedArray<class Toshi::TGUIPropertySpec *,struct Toshi::TGUIPropertySpec::Comparator> *)"
+tguiinterface.dll,?AddStateVars@TGUIWidgetInfo@Toshi@@QAEXABV?$TSortedArray@VTGUIStateVarInfo@Toshi@@UComparator@12@@2@@Z,0xa0f158,"public: void __thiscall Toshi::TGUIWidgetInfo::AddStateVars(class Toshi::TSortedArray<class Toshi::TGUIStateVarInfo,struct Toshi::TGUIStateVarInfo::Comparator> const &)"
+tguiinterface.dll,?AddWidgetClass@TGUIInterface@Toshi@@SGXAAVTGUIWidgetInfo@2@@Z,0xa0f15c,public: static void __stdcall Toshi::TGUIInterface::AddWidgetClass(class Toshi::TGUIWidgetInfo &)
+tguiinterface.dll,?ReleasePointer@TGUIScreen@Toshi@@QAEXPAVTGUIWidget@2@@Z,0xa0f160,public: void __thiscall Toshi::TGUIScreen::ReleasePointer(class Toshi::TGUIWidget *)
+tguiinterface.dll,?SetConcrete@TGUIWidgetInfo@Toshi@@QAEX_N@Z,0xa0f164,public: void __thiscall Toshi::TGUIWidgetInfo::SetConcrete(bool)
+tguiinterface.dll,?OrderToFront@TGUIWidget@Toshi@@QAEXXZ,0xa0f168,public: void __thiscall Toshi::TGUIWidget::OrderToFront(void)
+tguiinterface.dll,?SetParameter@TGUIWidget@Toshi@@QAEXHABVTWString@2@@Z,0xa0f16c,"public: void __thiscall Toshi::TGUIWidget::SetParameter(int,class Toshi::TWString const &)"
+tguiinterface.dll,?AddWidgetBefore@TGUIWidget@Toshi@@QAEXPAV12@0@Z,0xa0f170,"public: void __thiscall Toshi::TGUIWidget::AddWidgetBefore(class Toshi::TGUIWidget *,class Toshi::TGUIWidget *)"
+tguiinterface.dll,?DeleteAllWidgets@TGUIWidget@Toshi@@QAEXXZ,0xa0f174,public: void __thiscall Toshi::TGUIWidget::DeleteAllWidgets(void)
+tguiinterface.dll,?FindStyleInstance@TGUIInterface@Toshi@@QBEPAVTGUIStyle@2@ABVTPCString@2@@Z,0xa0f178,public: class Toshi::TGUIStyle * __thiscall Toshi::TGUIInterface::FindStyleInstance(class Toshi::TPCString const &)const 
+tguiinterface.dll,?SetStyle@TGUIWidget@Toshi@@QAEXPAVTGUIStyle@2@@Z,0xa0f17c,public: void __thiscall Toshi::TGUIWidget::SetStyle(class Toshi::TGUIStyle *)
+tguiinterface.dll,?TranslateDoodadToAction@TGUIActionMap@Toshi@@QAEIH@Z,0xa0f180,public: unsigned int __thiscall Toshi::TGUIActionMap::TranslateDoodadToAction(int)
+tguiinterface.dll,?m_sClass@TGUIWidget@Toshi@@2VTClass@2@A,0xa0f184,public: static class Toshi::TClass Toshi::TGUIWidget::m_sClass
+tguiinterface.dll,?TGUINew@Toshi@@YGPAXI@Z,0xa0f188,void * __stdcall Toshi::TGUINew(unsigned int)
+tguiinterface.dll,?m_sClass@TGUITextureSection@Toshi@@2VTClass@2@A,0xa0f18c,public: static class Toshi::TClass Toshi::TGUITextureSection::m_sClass
+tguiinterface.dll,?GetWindow@TGUIWidget@Toshi@@QAEPAVTGUIWindow@2@XZ,0xa0f190,public: class Toshi::TGUIWindow * __thiscall Toshi::TGUIWidget::GetWindow(void)
+tguiinterface.dll,?FindParameter@TGUIStyle@Toshi@@QBEHABVTPCString@2@@Z,0xa0f194,public: int __thiscall Toshi::TGUIStyle::FindParameter(class Toshi::TPCString const &)const 
+tguiinterface.dll,?SetDefaultFocus@TGUIWindow@Toshi@@QAEXPAVTGUIWidget@2@@Z,0xa0f198,public: void __thiscall Toshi::TGUIWindow::SetDefaultFocus(class Toshi::TGUIWidget *)
+tguiinterface.dll,?AddAction@TGUIWidget@Toshi@@QAEPAVTGUIWidgetAction@2@HABVTLString@2@H@Z,0xa0f19c,"public: class Toshi::TGUIWidgetAction * __thiscall Toshi::TGUIWidget::AddAction(int,class Toshi::TLString const &,int)"
+tguiinterface.dll,?GetFocusNeighbour@TGUIWindow@Toshi@@QBEPAVTGUIWidget@2@PAV32@W4NeighbourDirection@32@@Z,0xa0f1a0,"public: class Toshi::TGUIWidget * __thiscall Toshi::TGUIWindow::GetFocusNeighbour(class Toshi::TGUIWidget *,enum Toshi::TGUIWidget::NeighbourDirection)const "
+tguiinterface.dll,?SetParameter@TGUIWidget@Toshi@@QAEXHPAVTGUITextureSection@2@@Z,0xa0f1a4,"public: void __thiscall Toshi::TGUIWidget::SetParameter(int,class Toshi::TGUITextureSection *)"
+tguiinterface.dll,?TransformDeviceToWidget@TGUIWidget@Toshi@@QBEXHHAAH0@Z,0xa0f1a8,"public: void __thiscall Toshi::TGUIWidget::TransformDeviceToWidget(int,int,int &,int &)const "
+tguiinterface.dll,?TransformWidgetToDevice@TGUIWidget@Toshi@@QBEXHHAAH0@Z,0xa0f1ac,"public: void __thiscall Toshi::TGUIWidget::TransformWidgetToDevice(int,int,int &,int &)const "
+tguiinterface.dll,?SerialiseChildren@TGUIWidget@Toshi@@MAE_NPAVPProperties@@@Z,0xa0f1b0,protected: virtual bool __thiscall Toshi::TGUIWidget::SerialiseChildren(class PProperties *)
+tguiinterface.dll,?SerialiseParameters@TGUIWidget@Toshi@@MAE_NPAVPProperties@@@Z,0xa0f1b4,protected: virtual bool __thiscall Toshi::TGUIWidget::SerialiseParameters(class PProperties *)
+tguiinterface.dll,?NotifyParentChange@TGUIWidget@Toshi@@MAEXPAV12@@Z,0xa0f1b8,protected: virtual void __thiscall Toshi::TGUIWidget::NotifyParentChange(class Toshi::TGUIWidget *)
+tguiinterface.dll,?DeserialiseChildren@TGUIWidget@Toshi@@MAE_NPBVPProperties@@@Z,0xa0f1bc,protected: virtual bool __thiscall Toshi::TGUIWidget::DeserialiseChildren(class PProperties const *)
+tguiinterface.dll,?DeserialiseParameters@TGUIWidget@Toshi@@MAE_NPBVPProperties@@@Z,0xa0f1c0,protected: virtual bool __thiscall Toshi::TGUIWidget::DeserialiseParameters(class PProperties const *)
+tguiinterface.dll,?SerialiseState@TGUIWidget@Toshi@@MAE_NPAVPProperties@@@Z,0xa0f1c4,protected: virtual bool __thiscall Toshi::TGUIWidget::SerialiseState(class PProperties *)
+tguiinterface.dll,?OnPointerExit@TGUIWidget@Toshi@@UAE_NXZ,0xa0f1c8,public: virtual bool __thiscall Toshi::TGUIWidget::OnPointerExit(void)
+tguiinterface.dll,?OnPointerEnter@TGUIWidget@Toshi@@UAE_NXZ,0xa0f1cc,public: virtual bool __thiscall Toshi::TGUIWidget::OnPointerEnter(void)
+tguiinterface.dll,?DeserialiseState@TGUIWidget@Toshi@@MAE_NPBVPProperties@@@Z,0xa0f1d0,protected: virtual bool __thiscall Toshi::TGUIWidget::DeserialiseState(class PProperties const *)
+tguiinterface.dll,?OnAxisMove@TGUIWidget@Toshi@@UAE_NPAVInputEvent@TInputInterface@2@H@Z,0xa0f1d4,"public: virtual bool __thiscall Toshi::TGUIWidget::OnAxisMove(class Toshi::TInputInterface::InputEvent *,int)"
+tguiinterface.dll,?OnButtonHit@TGUIWidget@Toshi@@UAE_NPAVInputEvent@TInputInterface@2@H@Z,0xa0f1d8,"public: virtual bool __thiscall Toshi::TGUIWidget::OnButtonHit(class Toshi::TInputInterface::InputEvent *,int)"
+tguiinterface.dll,?OnPointerMove@TGUIWidget@Toshi@@UAE_NHH@Z,0xa0f1dc,"public: virtual bool __thiscall Toshi::TGUIWidget::OnPointerMove(int,int)"
+tguiinterface.dll,?OnButtonRepeat@TGUIWidget@Toshi@@UAE_NPAVInputEvent@TInputInterface@2@H@Z,0xa0f1e0,"public: virtual bool __thiscall Toshi::TGUIWidget::OnButtonRepeat(class Toshi::TInputInterface::InputEvent *,int)"
+tguiinterface.dll,?OnButtonPress@TGUIWidget@Toshi@@UAE_NPAVInputEvent@TInputInterface@2@H@Z,0xa0f1e4,"public: virtual bool __thiscall Toshi::TGUIWidget::OnButtonPress(class Toshi::TInputInterface::InputEvent *,int)"
+tguiinterface.dll,?OnButtonRelease@TGUIWidget@Toshi@@UAE_NPAVInputEvent@TInputInterface@2@H@Z,0xa0f1e8,"public: virtual bool __thiscall Toshi::TGUIWidget::OnButtonRelease(class Toshi::TInputInterface::InputEvent *,int)"
+tguiinterface.dll,?NotifyFocusGained@TGUIWidget@Toshi@@UAEXPAV12@0@Z,0xa0f1ec,"public: virtual void __thiscall Toshi::TGUIWidget::NotifyFocusGained(class Toshi::TGUIWidget *,class Toshi::TGUIWidget *)"
+tguiinterface.dll,?NotifyFocusLost@TGUIWidget@Toshi@@UAEXPAV12@0@Z,0xa0f1f0,"public: virtual void __thiscall Toshi::TGUIWidget::NotifyFocusLost(class Toshi::TGUIWidget *,class Toshi::TGUIWidget *)"
+tguiinterface.dll,?NotifySlaveStateChanged@TGUIWidget@Toshi@@UAEXPAV12@I@Z,0xa0f1f4,"public: virtual void __thiscall Toshi::TGUIWidget::NotifySlaveStateChanged(class Toshi::TGUIWidget *,unsigned int)"
+tguiinterface.dll,?NotifyDescendantRemoval@TGUIWidget@Toshi@@UAEXPAV12@@Z,0xa0f1f8,public: virtual void __thiscall Toshi::TGUIWidget::NotifyDescendantRemoval(class Toshi::TGUIWidget *)
+tguiinterface.dll,?NotifyDescendantAddition@TGUIWidget@Toshi@@UAEXPAV12@@Z,0xa0f1fc,public: virtual void __thiscall Toshi::TGUIWidget::NotifyDescendantAddition(class Toshi::TGUIWidget *)
+tguiinterface.dll,?NotifyDescendantRemoved@TGUIWidget@Toshi@@UAEXPAV12@0@Z,0xa0f200,"public: virtual void __thiscall Toshi::TGUIWidget::NotifyDescendantRemoved(class Toshi::TGUIWidget *,class Toshi::TGUIWidget *)"
+tguiinterface.dll,?SetInterface@TGUIWidget@Toshi@@UAEXPAVTGUIInterface@2@@Z,0xa0f204,public: virtual void __thiscall Toshi::TGUIWidget::SetInterface(class Toshi::TGUIInterface *)
+tguiinterface.dll,?ValidatePropertyInfo@TGUIWidget@Toshi@@UBE_NPBVTGUIPropertySpec@2@@Z,0xa0f208,public: virtual bool __thiscall Toshi::TGUIWidget::ValidatePropertyInfo(class Toshi::TGUIPropertySpec const *)const 
+tguiinterface.dll,?AllowsFocus@TGUIWidget@Toshi@@UAEPAV12@PAV12@@Z,0xa0f20c,public: virtual class Toshi::TGUIWidget * __thiscall Toshi::TGUIWidget::AllowsFocus(class Toshi::TGUIWidget *)
+tguiinterface.dll,?FindPropertyInfo@TGUIWidget@Toshi@@UBEPBVTGUIPropertySpec@2@ABVTPCString@2@@Z,0xa0f210,public: virtual class Toshi::TGUIPropertySpec const * __thiscall Toshi::TGUIWidget::FindPropertyInfo(class Toshi::TPCString const &)const 
+tguiinterface.dll,?GetPropertyCount@TGUIWidget@Toshi@@UBEHXZ,0xa0f214,public: virtual int __thiscall Toshi::TGUIWidget::GetPropertyCount(void)const 
+tguiinterface.dll,?GetPropertyInfo@TGUIWidget@Toshi@@UBEPBVTGUIPropertySpec@2@H@Z,0xa0f218,public: virtual class Toshi::TGUIPropertySpec const * __thiscall Toshi::TGUIWidget::GetPropertyInfo(int)const 
+tguiinterface.dll,?Deserialise@TGUIWidget@Toshi@@UAE_NPBVPProperties@@@Z,0xa0f21c,public: virtual bool __thiscall Toshi::TGUIWidget::Deserialise(class PProperties const *)
+tguiinterface.dll,?TGUIDelete@Toshi@@YGXPAX@Z,0xa0f220,void __stdcall Toshi::TGUIDelete(void *)
+tguiinterface.dll,?Serialise@TGUIWidget@Toshi@@UAE_NPAVPProperties@@@Z,0xa0f224,public: virtual bool __thiscall Toshi::TGUIWidget::Serialise(class PProperties *)
+tguiinterface.dll,?GrabFocus@TGUIScreen@Toshi@@QAEXPAVTGUIWidget@2@@Z,0xa0f228,public: void __thiscall Toshi::TGUIScreen::GrabFocus(class Toshi::TGUIWidget *)
+tguiinterface.dll,?FindFont@TGUIInterface@Toshi@@QBEPAVTGUIFont@2@ABVTPCString@2@@Z,0xa0f22c,public: class Toshi::TGUIFont * __thiscall Toshi::TGUIInterface::FindFont(class Toshi::TPCString const &)const 
+tguiinterface.dll,?SetFixedHeight@TGUIWidget@Toshi@@QAEXH@Z,0xa0f230,public: void __thiscall Toshi::TGUIWidget::SetFixedHeight(int)
+tguiinterface.dll,??0TGUITextureSection@Toshi@@QAE@FABVTPCString@1@HHHHH_N11@Z,0xa0f234,"public: __thiscall Toshi::TGUITextureSection::TGUITextureSection(short,class Toshi::TPCString const &,int,int,int,int,int,bool,bool,bool)"
+tguiinterface.dll,?SetFixedSize@TGUIWidget@Toshi@@QAEXHH@Z,0xa0f238,"public: void __thiscall Toshi::TGUIWidget::SetFixedSize(int,int)"
+tguiinterface.dll,?FindTextureSection@TGUIInterface@Toshi@@QBEPAVTGUITextureSection@2@ABVTPCString@2@@Z,0xa0f23c,public: class Toshi::TGUITextureSection * __thiscall Toshi::TGUIInterface::FindTextureSection(class Toshi::TPCString const &)const 
+tguiinterface.dll,?InvalidateWidgetUnderPointer@TGUIScreen@Toshi@@QAEXXZ,0xa0f240,public: void __thiscall Toshi::TGUIScreen::InvalidateWidgetUnderPointer(void)
+tguiinterface.dll,?SetParameter@TGUIWidget@Toshi@@QAEXHABVPPropertyValue@@@Z,0xa0f244,"public: void __thiscall Toshi::TGUIWidget::SetParameter(int,class PPropertyValue const &)"
+tguiinterface.dll,?GetParameter@TGUIWidget@Toshi@@QBE?AVPPropertyValue@@H@Z,0xa0f248,public: class PPropertyValue __thiscall Toshi::TGUIWidget::GetParameter(int)const 
+tguiinterface.dll,?IsDescendantOf@TGUIWidget@Toshi@@QBE_NPBV12@@Z,0xa0f24c,public: bool __thiscall Toshi::TGUIWidget::IsDescendantOf(class Toshi::TGUIWidget const *)const 
+tguiinterface.dll,?GetParameterInfo@TGUIStyle@Toshi@@QBEPBVTGUIStyleParameterInfo@2@H@Z,0xa0f250,public: class Toshi::TGUIStyleParameterInfo const * __thiscall Toshi::TGUIStyle::GetParameterInfo(int)const 
+tguiinterface.dll,?RemoveWidget@TGUIWidget@Toshi@@QAEXPAV12@@Z,0xa0f254,public: void __thiscall Toshi::TGUIWidget::RemoveWidget(class Toshi::TGUIWidget *)
+tguiinterface.dll,?AddWidget@TGUIWidget@Toshi@@QAEXPAV12@_N@Z,0xa0f258,"public: void __thiscall Toshi::TGUIWidget::AddWidget(class Toshi::TGUIWidget *,bool)"
+tguiinterface.dll,?GetScreen@TGUIWidget@Toshi@@QAEPAVTGUIScreen@2@XZ,0xa0f25c,public: class Toshi::TGUIScreen * __thiscall Toshi::TGUIWidget::GetScreen(void)
+tguiinterface.dll,??1TGUISoundFactory@Toshi@@UAE@XZ,0xa0f260,public: virtual __thiscall Toshi::TGUISoundFactory::~TGUISoundFactory(void)
+tguiinterface.dll,?m_sClass@TGUISoundFactory@Toshi@@2VTClass@2@A,0xa0f264,public: static class Toshi::TClass Toshi::TGUISoundFactory::m_sClass
+tguiinterface.dll,??0TGUISoundFactory@Toshi@@QAE@XZ,0xa0f268,public: __thiscall Toshi::TGUISoundFactory::TGUISoundFactory(void)
+tguiinterface.dll,??0TGUIAudioContext@Toshi@@QAE@XZ,0xa0f26c,public: __thiscall Toshi::TGUIAudioContext::TGUIAudioContext(void)
+tguiinterface.dll,??1TGUIAudioContext@Toshi@@UAE@XZ,0xa0f270,public: virtual __thiscall Toshi::TGUIAudioContext::~TGUIAudioContext(void)
+tguiinterface.dll,?m_sClass@TGUIAudioContext@Toshi@@2VTClass@2@A,0xa0f274,public: static class Toshi::TClass Toshi::TGUIAudioContext::m_sClass
+tguiinterface.dll,?ReleaseFocus@TGUIScreen@Toshi@@QAEXPAVTGUIWidget@2@@Z,0xa0f278,public: void __thiscall Toshi::TGUIScreen::ReleaseFocus(class Toshi::TGUIWidget *)
+tguiinterface.dll,?SetPointerImage@TGUIScreen@Toshi@@QAEXPAVTGUITextureSection@2@HH@Z,0xa0f27c,"public: void __thiscall Toshi::TGUIScreen::SetPointerImage(class Toshi::TGUITextureSection *,int,int)"
+tguiinterface.dll,?NotifyInputEvent@TGUIScreen@Toshi@@QAE_NPAVInputEvent@TInputInterface@2@@Z,0xa0f280,public: bool __thiscall Toshi::TGUIScreen::NotifyInputEvent(class Toshi::TInputInterface::InputEvent *)
+tguiinterface.dll,?LoadDefinitionFile@TGUIInterface@Toshi@@QAE_NABVTCString@2@@Z,0xa0f284,public: bool __thiscall Toshi::TGUIInterface::LoadDefinitionFile(class Toshi::TCString const &)
+tguiinterface.dll,?ms_bAllocUsePile@TGUIMemory@Toshi@@2_NA,0xa0f288,public: static bool Toshi::TGUIMemory::ms_bAllocUsePile
+tguiinterface.dll,?SetFixedWidth@TGUIWidget@Toshi@@QAEXH@Z,0xa0f28c,public: void __thiscall Toshi::TGUIWidget::SetFixedWidth(int)
+tguiinterface.dll,?Create@TGUIInterface@Toshi@@QAEXXZ,0xa0f290,public: void __thiscall Toshi::TGUIInterface::Create(void)
+tguiinterface.dll,?AddScreenInstance@TGUIInterface@Toshi@@QAEXPAVTGUIScreen@2@@Z,0xa0f294,public: void __thiscall Toshi::TGUIInterface::AddScreenInstance(class Toshi::TGUIScreen *)
+tguiinterface.dll,?SetSoundFactory@TGUIInterface@Toshi@@QAEXPAVTGUISoundFactory@2@@Z,0xa0f298,public: void __thiscall Toshi::TGUIInterface::SetSoundFactory(class Toshi::TGUISoundFactory *)
+tguiinterface.dll,??0TGUIScreen@Toshi@@QAE@XZ,0xa0f29c,public: __thiscall Toshi::TGUIScreen::TGUIScreen(void)
+tguiinterface.dll,?SetInputContext@TGUIScreen@Toshi@@QAEXPAVTGUIInputContext@2@@Z,0xa0f2a0,public: void __thiscall Toshi::TGUIScreen::SetInputContext(class Toshi::TGUIInputContext *)
+tguiinterface.dll,?SetScreen@TGUIInputContext@Toshi@@QAEXPAVTGUIScreen@2@@Z,0xa0f2a4,public: void __thiscall Toshi::TGUIInputContext::SetScreen(class Toshi::TGUIScreen *)
+tguiinterface.dll,?SetTextureFactory@TGUIInterface@Toshi@@QAEXPAVTGUITextureFactory@2@@Z,0xa0f2a8,public: void __thiscall Toshi::TGUIInterface::SetTextureFactory(class Toshi::TGUITextureFactory *)
+tguiinterface.dll,?SetFocusNeighbour@TGUIWindow@Toshi@@QAEXPAVTGUIWidget@2@W4NeighbourDirection@32@0@Z,0xa0f2ac,"public: void __thiscall Toshi::TGUIWindow::SetFocusNeighbour(class Toshi::TGUIWidget *,enum Toshi::TGUIWidget::NeighbourDirection,class Toshi::TGUIWidget *)"
+tguiinterface.dll,?SetParameter@TGUIWidget@Toshi@@QAEXHABVTLString@2@@Z,0xa0f2b0,"public: void __thiscall Toshi::TGUIWidget::SetParameter(int,class Toshi::TLString const &)"
+tguiinterface.dll,?FindNamedChild@TGUIWidget@Toshi@@QBEPAV12@PBD@Z,0xa0f2b4,public: class Toshi::TGUIWidget * __thiscall Toshi::TGUIWidget::FindNamedChild(char const *)const 
+tguiinterface.dll,?RequestFocus@TGUIWidget@Toshi@@QAEXXZ,0xa0f2b8,public: void __thiscall Toshi::TGUIWidget::RequestFocus(void)
+tguiinterface.dll,?ms_oFreelist@TGUIWidgetAction@Toshi@@0VTFreeList@2@A,0xa0f2bc,private: static class Toshi::TFreeList Toshi::TGUIWidgetAction::ms_oFreelist
+tguiinterface.dll,?InvalidateComponentCache@TGUIWidget@Toshi@@QAEX_N@Z,0xa0f2c0,public: void __thiscall Toshi::TGUIWidget::InvalidateComponentCache(bool)
+tguiinterface.dll,?SetPosition@TGUIWidget@Toshi@@QAEXHH@Z,0xa0f2c4,"public: void __thiscall Toshi::TGUIWidget::SetPosition(int,int)"
+tguiinterface.dll,?FindNamedChild@TGUIWidget@Toshi@@QBEPAV12@ABVTPCString@2@@Z,0xa0f2c8,public: class Toshi::TGUIWidget * __thiscall Toshi::TGUIWidget::FindNamedChild(class Toshi::TPCString const &)const 
+tguiinterface.dll,?SetState@TGUIWidget@Toshi@@QAEXII@Z,0xa0f2cc,"public: void __thiscall Toshi::TGUIWidget::SetState(unsigned int,unsigned int)"
+tguiinterface.dll,?FindTopLevelInstance@TGUIInterface@Toshi@@QBEPAVTGUIWidget@2@ABVTPCString@2@I@Z,0xa0f2d0,"public: class Toshi::TGUIWidget * __thiscall Toshi::TGUIInterface::FindTopLevelInstance(class Toshi::TPCString const &,unsigned int)const "
+tguiinterface.dll,?SetPointerPosition@TGUIScreen@Toshi@@QAE_NHH@Z,0xa0f2d4,"public: bool __thiscall Toshi::TGUIScreen::SetPointerPosition(int,int)"
+tguiinterface.dll,??1TGUIWidgetInfo@Toshi@@QAE@XZ,0xa0f2d8,public: __thiscall Toshi::TGUIWidgetInfo::~TGUIWidgetInfo(void)
+tinputinterface.dll,?m_sClass@TInputDeviceMouse@Toshi@@2VTClass@2@A,0xa0f2e0,public: static class Toshi::TClass Toshi::TInputDeviceMouse::m_sClass
+tinputinterface.dll,?m_sClass@TInputDeviceKeyboard@Toshi@@2VTClass@2@A,0xa0f2e4,public: static class Toshi::TClass Toshi::TInputDeviceKeyboard::m_sClass
+tinputinterface.dll,?m_sClass@TInputInterface@Toshi@@2VTClass@2@A,0xa0f2e8,public: static class Toshi::TClass Toshi::TInputInterface::m_sClass
+tinputinterface.dll,?m_sClass@TInputDeviceController@Toshi@@2VTClass@2@A,0xa0f2ec,public: static class Toshi::TClass Toshi::TInputDeviceController::m_sClass
+tinputinterface.dll,?GetMagnitudeInt@InputEvent@TInputInterface@Toshi@@QBEHH@Z,0xa0f2f0,public: int __thiscall Toshi::TInputInterface::InputEvent::GetMagnitudeInt(int)const 
+tinputinterface.dll,?SetVirtStickDoodads@TInputDeviceKeyboard@Toshi@@QAEXHHHHH@Z,0xa0f2f4,"public: void __thiscall Toshi::TInputDeviceKeyboard::SetVirtStickDoodads(int,int,int,int,int)"
+tinputinterface.dll,?GetMagnitudeFloat@InputEvent@TInputInterface@Toshi@@QBEMH@Z,0xa0f2f8,public: float __thiscall Toshi::TInputInterface::InputEvent::GetMagnitudeFloat(int)const 
+trenderinterface.dll,?m_sClass@TMaterial@Toshi@@2VTClass@2@A,0xa0f300,public: static class Toshi::TClass Toshi::TMaterial::m_sClass
+trenderinterface.dll,?SetTextureAlphas@TGFXFileInstanceObject@Toshi@@QAEXEEEE@Z,0xa0f304,"public: void __thiscall Toshi::TGFXFileInstanceObject::SetTextureAlphas(unsigned char,unsigned char,unsigned char,unsigned char)"
+trenderinterface.dll,?IsAnimating@TSkeletonInstance@Toshi@@QAEPAVTAnimation@2@F@Z,0xa0f308,public: class Toshi::TAnimation * __thiscall Toshi::TSkeletonInstance::IsAnimating(short)
+trenderinterface.dll,?LoadLibrary@TKeyframeLibraryManager@Toshi@@QAEPAVTKeyframeLibrary@2@PBD@Z,0xa0f30c,public: class Toshi::TKeyframeLibrary * __thiscall Toshi::TKeyframeLibraryManager::LoadLibrary(char const *)
+trenderinterface.dll,?UnloadLibrary@TKeyframeLibraryManager@Toshi@@QAEXPAVTKeyframeLibrary@2@@Z,0xa0f310,public: void __thiscall Toshi::TKeyframeLibraryManager::UnloadLibrary(class Toshi::TKeyframeLibrary *)
+trenderinterface.dll,?RemoveAnimation@TSkeletonInstance@Toshi@@QAEXPAVTAnimation@2@M@Z,0xa0f314,"public: void __thiscall Toshi::TSkeletonInstance::RemoveAnimation(class Toshi::TAnimation *,float)"
+trenderinterface.dll,?DestroyResource@TRenderInterface@Toshi@@QAEXPAVTResource@2@@Z,0xa0f318,public: void __thiscall Toshi::TRenderInterface::DestroyResource(class Toshi::TResource *)
+trenderinterface.dll,?GetName@TResource@Toshi@@QBEPBDXZ,0xa0f31c,public: char const * __thiscall Toshi::TResource::GetName(void)const 
+trenderinterface.dll,?m_sClass@TNullResource@Toshi@@2VTClass@2@A,0xa0f320,public: static class Toshi::TClass Toshi::TNullResource::m_sClass
+trenderinterface.dll,?SetUpdateStateOnRemove@TAnimation@Toshi@@QAE_N_N@Z,0xa0f324,public: bool __thiscall Toshi::TAnimation::SetUpdateStateOnRemove(bool)
+trenderinterface.dll,?SetTime@TAnimation@Toshi@@QAEMM@Z,0xa0f328,public: float __thiscall Toshi::TAnimation::SetTime(float)
+trenderinterface.dll,?SetWeight@TAnimation@Toshi@@QAEMM@Z,0xa0f32c,public: float __thiscall Toshi::TAnimation::SetWeight(float)
+trenderinterface.dll,?ChangeToManaged@TAnimation@Toshi@@QAEXM@Z,0xa0f330,public: void __thiscall Toshi::TAnimation::ChangeToManaged(float)
+trenderinterface.dll,??0TTransformObject@Toshi@@QAE@ABV01@@Z,0xa0f334,public: __thiscall Toshi::TTransformObject::TTransformObject(class Toshi::TTransformObject const &)
+trenderinterface.dll,?AddAnimation@TSkeletonInstance@Toshi@@QAEPAVTAnimation@2@FMM@Z,0xa0f338,"public: class Toshi::TAnimation * __thiscall Toshi::TSkeletonInstance::AddAnimation(short,float,float)"
+trenderinterface.dll,?SetProjType@TCameraObject@Toshi@@QAEXW4PROJTYPE@12@@Z,0xa0f33c,public: void __thiscall Toshi::TCameraObject::SetProjType(enum Toshi::TCameraObject::PROJTYPE)
+trenderinterface.dll,?GetBoneTransformLocal@TSkeleton@Toshi@@QAEGHHMGAAVTMatrix44@2@@Z,0xa0f340,"public: unsigned short __thiscall Toshi::TSkeleton::GetBoneTransformLocal(int,int,float,unsigned short,class Toshi::TMatrix44 &)"
+trenderinterface.dll,?SetTextureStages@TGFXFileInstanceObject@Toshi@@QAEXCCCC@Z,0xa0f344,"public: void __thiscall Toshi::TGFXFileInstanceObject::SetTextureStages(signed char,signed char,signed char,signed char)"
+trenderinterface.dll,?GetBoneID@TSkeleton@Toshi@@QAEHPBDH@Z,0xa0f348,"public: int __thiscall Toshi::TSkeleton::GetBoneID(char const *,int)"
+trenderinterface.dll,?EnableFog@TRenderContext@Toshi@@QAEX_N@Z,0xa0f34c,public: void __thiscall Toshi::TRenderContext::EnableFog(bool)
+trenderinterface.dll,?SetBiasColour@TSun@Toshi@@QAEXABVTVector3@2@M@Z,0xa0f350,"public: void __thiscall Toshi::TSun::SetBiasColour(class Toshi::TVector3 const &,float)"
+trenderinterface.dll,?SetFogDistance@TRenderContext@Toshi@@QAEXMM@Z,0xa0f354,"public: void __thiscall Toshi::TRenderContext::SetFogDistance(float,float)"
+trenderinterface.dll,?Recurse@TSceneObject@Toshi@@UAE_NAAVTScene@2@@Z,0xa0f358,public: virtual bool __thiscall Toshi::TSceneObject::Recurse(class Toshi::TScene &)
+trenderinterface.dll,?CreateInstance@TGFXFileObject@Toshi@@QAEPAVTGFXFileInstanceObject@2@PBDPAVTResource@2@@Z,0xa0f35c,"public: class Toshi::TGFXFileInstanceObject * __thiscall Toshi::TGFXFileObject::CreateInstance(char const *,class Toshi::TResource *)"
+trenderinterface.dll,?GetLocalMatrix@TSceneObject@Toshi@@UAEXAAVTMatrix44@2@@Z,0xa0f360,public: virtual void __thiscall Toshi::TSceneObject::GetLocalMatrix(class Toshi::TMatrix44 &)
+trenderinterface.dll,?OnLostDevice@TResource@Toshi@@UAE_NXZ,0xa0f364,public: virtual bool __thiscall Toshi::TResource::OnLostDevice(void)
+trenderinterface.dll,?OnDestroy@TResource@Toshi@@MAEXXZ,0xa0f368,protected: virtual void __thiscall Toshi::TResource::OnDestroy(void)
+trenderinterface.dll,?OnResetDevice@TResource@Toshi@@UAE_NXZ,0xa0f36c,public: virtual bool __thiscall Toshi::TResource::OnResetDevice(void)
+trenderinterface.dll,?Validate@TResource@Toshi@@UAE_NXZ,0xa0f370,public: virtual bool __thiscall Toshi::TResource::Validate(void)
+trenderinterface.dll,?DestroyResource@TResource@Toshi@@UAEXXZ,0xa0f374,public: virtual void __thiscall Toshi::TResource::DestroyResource(void)
+trenderinterface.dll,?Invalidate@TResource@Toshi@@UAEXXZ,0xa0f378,public: virtual void __thiscall Toshi::TResource::Invalidate(void)
+trenderinterface.dll,??1TSceneObject@Toshi@@UAE@XZ,0xa0f37c,public: virtual __thiscall Toshi::TSceneObject::~TSceneObject(void)
+trenderinterface.dll,?Create@TResource@Toshi@@UAE_NXZ,0xa0f380,public: virtual bool __thiscall Toshi::TResource::Create(void)
+trenderinterface.dll,??0TSceneObject@Toshi@@QAE@XZ,0xa0f384,public: __thiscall Toshi::TSceneObject::TSceneObject(void)
+trenderinterface.dll,?m_sClass@TSceneObject@Toshi@@2VTClass@2@A,0xa0f388,public: static class Toshi::TClass Toshi::TSceneObject::m_sClass
+trenderinterface.dll,?Update@TSceneObject@Toshi@@UAE_NAAVTScene@2@@Z,0xa0f38c,public: virtual bool __thiscall Toshi::TSceneObject::Update(class Toshi::TScene &)
+trenderinterface.dll,?Render@TSceneObject@Toshi@@UAE_NAAVTScene@2@@Z,0xa0f390,public: virtual bool __thiscall Toshi::TSceneObject::Render(class Toshi::TScene &)
+trenderinterface.dll,?SetTranslate@TTransformObject@Toshi@@QAEXABVTVector3@2@@Z,0xa0f394,public: void __thiscall Toshi::TTransformObject::SetTranslate(class Toshi::TVector3 const &)
+trenderinterface.dll,?GetRenderer@TResource@Toshi@@QBEPAVTRenderInterface@2@XZ,0xa0f398,public: class Toshi::TRenderInterface * __thiscall Toshi::TResource::GetRenderer(void)const 
+trenderinterface.dll,?SetEuler@TTransformObject@Toshi@@QAEXABVTVector3@2@@Z,0xa0f39c,public: void __thiscall Toshi::TTransformObject::SetEuler(class Toshi::TVector3 const &)
+trenderinterface.dll,?GetBoneTransformCurrent@TSkeletonInstance@Toshi@@QAEABVTMatrix44@2@H@Z,0xa0f3a0,public: class Toshi::TMatrix44 const & __thiscall Toshi::TSkeletonInstance::GetBoneTransformCurrent(int)
+trenderinterface.dll,?Update@TModelInstance@Toshi@@QAEXM@Z,0xa0f3a4,public: void __thiscall Toshi::TModelInstance::Update(float)
+trenderinterface.dll,?UpdateState@TSkeletonInstance@Toshi@@QAEXXZ,0xa0f3a8,public: void __thiscall Toshi::TSkeletonInstance::UpdateState(void)
+trenderinterface.dll,?GetBoneTransform@TSkeleton@Toshi@@QAEXHHMAAVTMatrix44@2@@Z,0xa0f3ac,"public: void __thiscall Toshi::TSkeleton::GetBoneTransform(int,int,float,class Toshi::TMatrix44 &)"
+trenderinterface.dll,?SetFlag@TMaterial@Toshi@@QAEXI_N@Z,0xa0f3b0,"public: void __thiscall Toshi::TMaterial::SetFlag(unsigned int,bool)"
+trenderinterface.dll,?SetMaterial@TMesh@Toshi@@IAEXPAVTMaterial@2@@Z,0xa0f3b4,protected: void __thiscall Toshi::TMesh::SetMaterial(class Toshi::TMaterial *)
+trenderinterface.dll,?SetParent@TResource@Toshi@@QAEXPAV12@@Z,0xa0f3b8,public: void __thiscall Toshi::TResource::SetParent(class Toshi::TResource *)
+trenderinterface.dll,?SetMode@TTransformObject@Toshi@@QAE?AW4MODE@TTransformData@2@W4342@@Z,0xa0f3bc,public: enum Toshi::TTransformData::MODE __thiscall Toshi::TTransformObject::SetMode(enum Toshi::TTransformData::MODE)
+trenderinterface.dll,?SetQuat@TTransformObject@Toshi@@QAEXABVTQuaternion@2@@Z,0xa0f3c0,public: void __thiscall Toshi::TTransformObject::SetQuat(class Toshi::TQuaternion const &)
+trenderinterface.dll,?GetNear@TCameraObject@Toshi@@QAEMXZ,0xa0f3c4,public: float __thiscall Toshi::TCameraObject::GetNear(void)
+trenderinterface.dll,?SetAll@TAtmosphere@Toshi@@QAEXMMABVTVector3@2@0MMM@Z,0xa0f3c8,"public: void __thiscall Toshi::TAtmosphere::SetAll(float,float,class Toshi::TVector3 const &,class Toshi::TVector3 const &,float,float,float)"
+trenderinterface.dll,?Set@TSun@Toshi@@QAEXMMABVTVector3@2@M@Z,0xa0f3cc,"public: void __thiscall Toshi::TSun::Set(float,float,class Toshi::TVector3 const &,float)"
+trenderinterface.dll,?FindDevice@TRenderInterface@Toshi@@QAEPBVDevice@Mode@TRenderAdapter@2@PBVDisplayParams@12@@Z,0xa0f3d0,public: class Toshi::TRenderAdapter::Mode::Device const * __thiscall Toshi::TRenderInterface::FindDevice(class Toshi::TRenderInterface::DisplayParams const *)
+trenderinterface.dll,?GetFar@TCameraObject@Toshi@@QAEMXZ,0xa0f3d4,public: float __thiscall Toshi::TCameraObject::GetFar(void)
+trenderinterface.dll,?GetFOV@TCameraObject@Toshi@@QAEMXZ,0xa0f3d8,public: float __thiscall Toshi::TCameraObject::GetFOV(void)
+trenderinterface.dll,?LoadMaterialLibrary@TMaterialLibraryManager@Toshi@@QAEIPBD@Z,0xa0f3dc,public: unsigned int __thiscall Toshi::TMaterialLibraryManager::LoadMaterialLibrary(char const *)
+trenderinterface.dll,?Create@TMaterialLibraryManager@Toshi@@QAEXXZ,0xa0f3e0,public: void __thiscall Toshi::TMaterialLibraryManager::Create(void)
+trenderinterface.dll,?UnloadMaterialLibrary@TMaterialLibraryManager@Toshi@@QAEXI@Z,0xa0f3e4,public: void __thiscall Toshi::TMaterialLibraryManager::UnloadMaterialLibrary(unsigned int)
+trenderinterface.dll,?GetWorldGuardPlanes@TRenderContext@Toshi@@QAEXPAVTPlane@2@H@Z,0xa0f3e8,"public: void __thiscall Toshi::TRenderContext::GetWorldGuardPlanes(class Toshi::TPlane *,int)"
+trenderinterface.dll,?GetViewWorldMatrix@TRenderContext@Toshi@@QAEABVTMatrix44@2@XZ,0xa0f3ec,public: class Toshi::TMatrix44 const & __thiscall Toshi::TRenderContext::GetViewWorldMatrix(void)
+trenderinterface.dll,?GetWorldPlanes@TRenderContext@Toshi@@QAEXPAVTPlane@2@H@Z,0xa0f3f0,"public: void __thiscall Toshi::TRenderContext::GetWorldPlanes(class Toshi::TPlane *,int)"
+trenderinterface.dll,?CreateViewport@TScene@Toshi@@QAEPAVTViewport@2@PBDPAVTResource@2@_N@Z,0xa0f3f4,"public: class Toshi::TViewport * __thiscall Toshi::TScene::CreateViewport(char const *,class Toshi::TResource *,bool)"
+trenderinterface.dll,?GetCurrentRenderContext@TRenderInterface@Toshi@@QAEPAVTRenderContext@2@XZ,0xa0f3f8,public: class Toshi::TRenderContext * __thiscall Toshi::TRenderInterface::GetCurrentRenderContext(void)
+trenderinterface.dll,?SetName@TResource@Toshi@@QAEXPBD@Z,0xa0f3fc,public: void __thiscall Toshi::TResource::SetName(char const *)
+trenderinterface.dll,?SetMinZ@TViewport@Toshi@@QAEMM@Z,0xa0f400,public: float __thiscall Toshi::TViewport::SetMinZ(float)
+trenderinterface.dll,?SetX@TViewport@Toshi@@QAEMM@Z,0xa0f404,public: float __thiscall Toshi::TViewport::SetX(float)
+trenderinterface.dll,?SetY@TViewport@Toshi@@QAEMM@Z,0xa0f408,public: float __thiscall Toshi::TViewport::SetY(float)
+trenderinterface.dll,?AllowBackgroundClear@TViewport@Toshi@@QAE_N_N@Z,0xa0f40c,public: bool __thiscall Toshi::TViewport::AllowBackgroundClear(bool)
+trenderinterface.dll,?SetMaxZ@TViewport@Toshi@@QAEMM@Z,0xa0f410,public: float __thiscall Toshi::TViewport::SetMaxZ(float)
+trenderinterface.dll,?SetBackgroundColour@TViewport@Toshi@@QAEXEEEE@Z,0xa0f414,"public: void __thiscall Toshi::TViewport::SetBackgroundColour(unsigned char,unsigned char,unsigned char,unsigned char)"
+trenderinterface.dll,?Begin@TScene@Toshi@@QAE_NXZ,0xa0f418,public: bool __thiscall Toshi::TScene::Begin(void)
+trenderinterface.dll,?SetViewport@TCameraObject@Toshi@@QAEPAVTViewport@2@PAV32@@Z,0xa0f41c,public: class Toshi::TViewport * __thiscall Toshi::TCameraObject::SetViewport(class Toshi::TViewport *)
+trenderinterface.dll,?m_sClass@TScene@Toshi@@2VTClass@2@A,0xa0f420,public: static class Toshi::TClass Toshi::TScene::m_sClass
+trenderinterface.dll,?End@TScene@Toshi@@QAE_NXZ,0xa0f424,public: bool __thiscall Toshi::TScene::End(void)
+trenderinterface.dll,?Update@TScene@Toshi@@QAE_NM@Z,0xa0f428,public: bool __thiscall Toshi::TScene::Update(float)
+trenderinterface.dll,?Render@TScene@Toshi@@QAE_NXZ,0xa0f42c,public: bool __thiscall Toshi::TScene::Render(void)
+trenderinterface.dll,?GetWidth@TViewport@Toshi@@QAEMXZ,0xa0f430,public: float __thiscall Toshi::TViewport::GetWidth(void)
+trenderinterface.dll,?SetWidth@TViewport@Toshi@@QAEMM@Z,0xa0f434,public: float __thiscall Toshi::TViewport::SetWidth(float)
+trenderinterface.dll,?SetHeight@TViewport@Toshi@@QAEMM@Z,0xa0f438,public: float __thiscall Toshi::TViewport::SetHeight(float)
+trenderinterface.dll,?SetMatrix@TTransformObject@Toshi@@QAEXABVTMatrix44@2@@Z,0xa0f43c,public: void __thiscall Toshi::TTransformObject::SetMatrix(class Toshi::TMatrix44 const &)
+trenderinterface.dll,?GetHeight@TViewport@Toshi@@QAEMXZ,0xa0f440,public: float __thiscall Toshi::TViewport::GetHeight(void)
+trenderinterface.dll,?AllowDepthClear@TViewport@Toshi@@QAE_N_N@Z,0xa0f444,public: bool __thiscall Toshi::TViewport::AllowDepthClear(bool)
+trenderinterface.dll,?SetProjectionCentreX@TCameraObject@Toshi@@QAEMM@Z,0xa0f448,public: float __thiscall Toshi::TCameraObject::SetProjectionCentreX(float)
+trenderinterface.dll,?SetFar@TCameraObject@Toshi@@QAEMM@Z,0xa0f44c,public: float __thiscall Toshi::TCameraObject::SetFar(float)
+trenderinterface.dll,?SetFOV@TCameraObject@Toshi@@QAEMM@Z,0xa0f450,public: float __thiscall Toshi::TCameraObject::SetFOV(float)
+trenderinterface.dll,?sm_bForceLowLOD@TGFXFileInstanceObject@Toshi@@0_NA,0xa0f454,private: static bool Toshi::TGFXFileInstanceObject::sm_bForceLowLOD
+trenderinterface.dll,?SetProjectionCentreY@TCameraObject@Toshi@@QAEMM@Z,0xa0f458,public: float __thiscall Toshi::TCameraObject::SetProjectionCentreY(float)
+trenderinterface.dll,?GetTransformObject@TCameraObject@Toshi@@QAEPAVTTransformObject@2@XZ,0xa0f45c,public: class Toshi::TTransformObject * __thiscall Toshi::TCameraObject::GetTransformObject(void)
+trenderinterface.dll,?GetResourceTree@TRenderInterface@Toshi@@QAEPAV?$TNodeTree@VTResource@Toshi@@@2@XZ,0xa0f460,public: class Toshi::TNodeTree<class Toshi::TResource> * __thiscall Toshi::TRenderInterface::GetResourceTree(void)
+trenderinterface.dll,?GetModeList@TRenderAdapter@Toshi@@QAEPAV?$TNodeList@VMode@TRenderAdapter@Toshi@@@2@XZ,0xa0f464,public: class Toshi::TNodeList<class Toshi::TRenderAdapter::Mode> * __thiscall Toshi::TRenderAdapter::GetModeList(void)
+trenderinterface.dll,?GetAdapterList@TRenderInterface@Toshi@@QAEPAV?$TNodeList@VTRenderAdapter@Toshi@@@2@XZ,0xa0f468,public: class Toshi::TNodeList<class Toshi::TRenderAdapter> * __thiscall Toshi::TRenderInterface::GetAdapterList(void)
+trenderinterface.dll,?s_Interface@TRenderInterface@Toshi@@0PAV12@A,0xa0f46c,private: static class Toshi::TRenderInterface * Toshi::TRenderInterface::s_Interface
+trenderinterface.dll,?FindOrphanedResource@TRenderInterface@Toshi@@QAEPAVTResource@2@PBDPAV32@@Z,0xa0f470,"public: class Toshi::TResource * __thiscall Toshi::TRenderInterface::FindOrphanedResource(char const *,class Toshi::TResource *)"
+trenderinterface.dll,?FlushDyingResources@TRenderInterface@Toshi@@QAEXXZ,0xa0f474,public: void __thiscall Toshi::TRenderInterface::FlushDyingResources(void)
+trenderinterface.dll,?GetSystemResource@TRenderInterface@Toshi@@QAEPAVTResource@2@W4SYSRESOURCES@12@@Z,0xa0f478,public: class Toshi::TResource * __thiscall Toshi::TRenderInterface::GetSystemResource(enum Toshi::TRenderInterface::SYSRESOURCES)
+trenderinterface.dll,?SetFlags@TSceneObject@Toshi@@QAEII@Z,0xa0f47c,public: unsigned int __thiscall Toshi::TSceneObject::SetFlags(unsigned int)
+trenderinterface.dll,?CreateResource@TRenderInterface@Toshi@@QAEPAVTResource@2@PBVTClass@2@PBDPAV32@@Z,0xa0f480,"public: class Toshi::TResource * __thiscall Toshi::TRenderInterface::CreateResource(class Toshi::TClass const *,char const *,class Toshi::TResource *)"
+trenderinterface.dll,??0TTransformObject@Toshi@@QAE@XZ,0xa0f484,public: __thiscall Toshi::TTransformObject::TTransformObject(void)
+trenderinterface.dll,?m_sClass@TLightingNode@Toshi@@2VTClass@2@A,0xa0f488,public: static class Toshi::TClass Toshi::TLightingNode::m_sClass
+trenderinterface.dll,?m_sClass@TJPShadowFudgeNode@Toshi@@2VTClass@2@A,0xa0f48c,public: static class Toshi::TClass Toshi::TJPShadowFudgeNode::m_sClass
+trenderinterface.dll,?GetMaterial@TMaterialLibraryManager@Toshi@@QAEPAVTMaterial@2@PBD@Z,0xa0f490,public: class Toshi::TMaterial * __thiscall Toshi::TMaterialLibraryManager::GetMaterial(char const *)
+trenderinterface.dll,??4TTransformObject@Toshi@@QAEAAV01@ABV01@@Z,0xa0f494,public: class Toshi::TTransformObject & __thiscall Toshi::TTransformObject::operator=(class Toshi::TTransformObject const &)
+trenderinterface.dll,?m_sClass@TTransformObject@Toshi@@2VTClass@2@A,0xa0f498,public: static class Toshi::TClass Toshi::TTransformObject::m_sClass
+trenderinterface.dll,?m_sClass@TGFXFileObject@Toshi@@2VTClass@2@A,0xa0f49c,public: static class Toshi::TClass Toshi::TGFXFileObject::m_sClass
+trenderinterface.dll,?IsDying@TResource@Toshi@@QAE_NXZ,0xa0f4a0,public: bool __thiscall Toshi::TResource::IsDying(void)
+trenderinterface.dll,?CreateCamera@TScene@Toshi@@QAEPAVTCameraObject@2@PBDPAVTResource@2@@Z,0xa0f4a4,"public: class Toshi::TCameraObject * __thiscall Toshi::TScene::CreateCamera(char const *,class Toshi::TResource *)"
+trenderd3dinterface.dll,?GetHWND@TMSWindow@Toshi@@QBEPAUHWND__@@XZ,0xa0f4ac,public: struct HWND__ * __thiscall Toshi::TMSWindow::GetHWND(void)const 
+trenderd3dinterface.dll,?GetMSWindow@TRenderD3DInterface@Toshi@@QAEPAVTMSWindow@2@XZ,0xa0f4b0,public: class Toshi::TMSWindow * __thiscall Toshi::TRenderD3DInterface::GetMSWindow(void)
+trenderd3dinterface.dll,?ms_oFreelist@TIndexBlockResource@Toshi@@0VTFreeList@2@A,0xa0f4b4,private: static class Toshi::TFreeList Toshi::TIndexBlockResource::ms_oFreelist
+trenderd3dinterface.dll,?ms_oFreelist@TVertexBlockResource@Toshi@@0VTFreeList@2@A,0xa0f4b8,private: static class Toshi::TFreeList Toshi::TVertexBlockResource::ms_oFreelist
+trenderd3dinterface.dll,?ms_oFreelist@TTextureResourceHAL@Toshi@@0VTFreeList@2@A,0xa0f4bc,private: static class Toshi::TFreeList Toshi::TTextureResourceHAL::ms_oFreelist
+pguirenderer.dll,?ResolveMaterials@PGUITRTextureFactory@@QAEXXZ,0xa0f4c4,public: void __thiscall PGUITRTextureFactory::ResolveMaterials(void)
+pguirenderer.dll,?GetTextureID@PGUITRTextureFactory@@QAEFPAVTTextureResource@Toshi@@@Z,0xa0f4c8,public: short __thiscall PGUITRTextureFactory::GetTextureID(class Toshi::TTextureResource *)
+pguirenderer.dll,?DestroyTexture@PGUITRTextureFactory@@QAEXF@Z,0xa0f4cc,public: void __thiscall PGUITRTextureFactory::DestroyTexture(short)
+pguirenderer.dll,?ReplaceTexture@PGUITRTextureFactory@@QAEXFPAVTTextureResource@Toshi@@@Z,0xa0f4d0,"public: void __thiscall PGUITRTextureFactory::ReplaceTexture(short,class Toshi::TTextureResource *)"
+pguirenderer.dll,??0PGUITRFontFactory@@QAE@XZ,0xa0f4d4,public: __thiscall PGUITRFontFactory::PGUITRFontFactory(void)
+pguirenderer.dll,?Create@PGUITRDisplayContext@@QAEXV?$TManagedPtr@VTRenderInterface@Toshi@@@Toshi@@PAVPGUITRTextureFactory@@PAVPGUITRFontFactory@@@Z,0xa0f4d8,"public: void __thiscall PGUITRDisplayContext::Create(class Toshi::TManagedPtr<class Toshi::TRenderInterface>,class PGUITRTextureFactory *,class PGUITRFontFactory *)"
+pguirenderer.dll,??0PGUITRDisplayContext@@QAE@XZ,0xa0f4dc,public: __thiscall PGUITRDisplayContext::PGUITRDisplayContext(void)
+pguirenderer.dll,?SetScreen@PGUITRRenderObject@@QAEPAVTGUIScreen@Toshi@@PAV23@@Z,0xa0f4e0,public: class Toshi::TGUIScreen * __thiscall PGUITRRenderObject::SetScreen(class Toshi::TGUIScreen *)
+pguirenderer.dll,?SetViewport@PGUITRRenderObject@@QAEPAVTViewport@Toshi@@PAV23@@Z,0xa0f4e4,public: class Toshi::TViewport * __thiscall PGUITRRenderObject::SetViewport(class Toshi::TViewport *)
+pguirenderer.dll,?LoadTTexture@PGUITRTextureFactory@@UAEPAVTTextureResource@Toshi@@ABVTPCString@3@AAH1@Z,0xa0f4e8,"public: virtual class Toshi::TTextureResource * __thiscall PGUITRTextureFactory::LoadTTexture(class Toshi::TPCString const &,int &,int &)"
+pguirenderer.dll,?m_sClass@PGUITRTextureFactory@@2VTClass@Toshi@@A,0xa0f4ec,public: static class Toshi::TClass PGUITRTextureFactory::m_sClass
+pguirenderer.dll,??1PGUITRTextureFactory@@UAE@XZ,0xa0f4f0,public: virtual __thiscall PGUITRTextureFactory::~PGUITRTextureFactory(void)
+pguirenderer.dll,??0PGUITRTextureFactory@@QAE@XZ,0xa0f4f4,public: __thiscall PGUITRTextureFactory::PGUITRTextureFactory(void)
+pguirenderer.dll,?GetTextureID@PGUITRTextureFactory@@UAEFABVTPCString@Toshi@@@Z,0xa0f4f8,public: virtual short __thiscall PGUITRTextureFactory::GetTextureID(class Toshi::TPCString const &)
+pguirenderer.dll,?FindTextureID@PGUITRTextureFactory@@UAEFABVTPCString@Toshi@@@Z,0xa0f4fc,public: virtual short __thiscall PGUITRTextureFactory::FindTextureID(class Toshi::TPCString const &)
+pguirenderer.dll,?GetTextureName@PGUITRTextureFactory@@UBEABVTPCString@Toshi@@F@Z,0xa0f500,public: virtual class Toshi::TPCString const & __thiscall PGUITRTextureFactory::GetTextureName(short)const 
+pguirenderer.dll,?GetTextureWidth@PGUITRTextureFactory@@UBEFF@Z,0xa0f504,public: virtual short __thiscall PGUITRTextureFactory::GetTextureWidth(short)const 
+pguirenderer.dll,?GetTextureHeight@PGUITRTextureFactory@@UBEFF@Z,0xa0f508,public: virtual short __thiscall PGUITRTextureFactory::GetTextureHeight(short)const 
+pguirenderer.dll,?GetTextureFlag@PGUITRTextureFactory@@UBE_NFW4TextureFlag@TGUITextureFactory@Toshi@@@Z,0xa0f50c,"public: virtual bool __thiscall PGUITRTextureFactory::GetTextureFlag(short,enum Toshi::TGUITextureFactory::TextureFlag)const "
+pguirenderer.dll,?SetTextureFlag@PGUITRTextureFactory@@UAEXFW4TextureFlag@TGUITextureFactory@Toshi@@_N@Z,0xa0f510,"public: virtual void __thiscall PGUITRTextureFactory::SetTextureFlag(short,enum Toshi::TGUITextureFactory::TextureFlag,bool)"
+pguirenderer.dll,?GetFirstTextureID@PGUITRTextureFactory@@UBEFXZ,0xa0f514,public: virtual short __thiscall PGUITRTextureFactory::GetFirstTextureID(void)const 
+pguirenderer.dll,?GetNextTextureID@PGUITRTextureFactory@@UBEFF@Z,0xa0f518,public: virtual short __thiscall PGUITRTextureFactory::GetNextTextureID(short)const 
+pguirenderer.dll,?ReserveTextureID@PGUITRTextureFactory@@UAEFABVTPCString@Toshi@@@Z,0xa0f51c,public: virtual short __thiscall PGUITRTextureFactory::ReserveTextureID(class Toshi::TPCString const &)
+pguirenderer.dll,?IsTextureIDValid@PGUITRTextureFactory@@UBE_NF@Z,0xa0f520,public: virtual bool __thiscall PGUITRTextureFactory::IsTextureIDValid(short)const 
+ppropertyparser.dll,??0PProperties@@QAE@XZ,0xa0f528,public: __thiscall PProperties::PProperties(void)
+ppropertyparser.dll,??1PProperties@@UAE@XZ,0xa0f52c,public: virtual __thiscall PProperties::~PProperties(void)
+ppropertyparser.dll,?GetProperties@PPropertyValue@@QBEPAVPProperties@@XZ,0xa0f530,public: class PProperties * __thiscall PPropertyValue::GetProperties(void)const 
+ppropertyparser.dll,??0PPropertyValue@@QAE@H@Z,0xa0f534,public: __thiscall PPropertyValue::PPropertyValue(int)
+ppropertyparser.dll,??0PPropertyValue@@QAE@ABVTLString@Toshi@@@Z,0xa0f538,public: __thiscall PPropertyValue::PPropertyValue(class Toshi::TLString const &)
+ppropertyparser.dll,??1PPropertyReader@@UAE@XZ,0xa0f53c,public: virtual __thiscall PPropertyReader::~PPropertyReader(void)
+ppropertyparser.dll,?Load@PPropertyReader@@QAE_NABVTCString@Toshi@@AAVPProperties@@@Z,0xa0f540,"public: bool __thiscall PPropertyReader::Load(class Toshi::TCString const &,class PProperties &)"
+ppropertyparser.dll,??1PPropertyValue@@QAE@XZ,0xa0f544,public: __thiscall PPropertyValue::~PPropertyValue(void)
+ppropertyparser.dll,??0PPropertyValue@@QAE@XZ,0xa0f548,public: __thiscall PPropertyValue::PPropertyValue(void)
+ppropertyparser.dll,??4PPropertyValue@@QAEAAV0@ABV0@@Z,0xa0f54c,public: class PPropertyValue & __thiscall PPropertyValue::operator=(class PPropertyValue const &)
+ppropertyparser.dll,?ms_oFreelist@PProperties@@0VTFreeList@Toshi@@A,0xa0f550,private: static class Toshi::TFreeList PProperties::ms_oFreelist
+ppropertyparser.dll,?TYPE_PROPS@PPropertyValue@@2PBVTClass@Toshi@@B,0xa0f554,public: static class Toshi::TClass const * const PPropertyValue::TYPE_PROPS
+ppropertyparser.dll,?CanBeType@PPropertyValue@@QBE_NPBVTClass@Toshi@@@Z,0xa0f558,public: bool __thiscall PPropertyValue::CanBeType(class Toshi::TClass const *)const 
+ppropertyparser.dll,?PutProperty@PProperties@@QAEXABVTPCString@Toshi@@ABVPPropertyValue@@@Z,0xa0f55c,"public: void __thiscall PProperties::PutProperty(class Toshi::TPCString const &,class PPropertyValue const &)"
+ppropertyparser.dll,??0PProperties@@QAE@PAV0@@Z,0xa0f560,public: __thiscall PProperties::PProperties(class PProperties *)
+ppropertyparser.dll,??0PPropertyValue@@QAE@PAVPProperties@@@Z,0xa0f564,public: __thiscall PPropertyValue::PPropertyValue(class PProperties *)
+ppropertyparser.dll,?TYPE_INT@PPropertyValue@@2PBVTClass@Toshi@@B,0xa0f568,public: static class Toshi::TClass const * const PPropertyValue::TYPE_INT
+ppropertyparser.dll,?GetInteger@PPropertyValue@@QBEHXZ,0xa0f56c,public: int __thiscall PPropertyValue::GetInteger(void)const 
+ppropertyparser.dll,?TYPE_UINT32@PPropertyValue@@2PBVTClass@Toshi@@B,0xa0f570,public: static class Toshi::TClass const * const PPropertyValue::TYPE_UINT32
+ppropertyparser.dll,?GetUINT32@PPropertyValue@@QBEIXZ,0xa0f574,public: unsigned int __thiscall PPropertyValue::GetUINT32(void)const 
+ppropertyparser.dll,?TYPE_FLOAT@PPropertyValue@@2PBVTClass@Toshi@@B,0xa0f578,public: static class Toshi::TClass const * const PPropertyValue::TYPE_FLOAT
+ppropertyparser.dll,?GetFloat@PPropertyValue@@QBEMXZ,0xa0f57c,public: float __thiscall PPropertyValue::GetFloat(void)const 
+ppropertyparser.dll,?TYPE_BOOL@PPropertyValue@@2PBVTClass@Toshi@@B,0xa0f580,public: static class Toshi::TClass const * const PPropertyValue::TYPE_BOOL
+ppropertyparser.dll,?GetBoolean@PPropertyValue@@QBE_NXZ,0xa0f584,public: bool __thiscall PPropertyValue::GetBoolean(void)const 
+ppropertyparser.dll,?TYPE_TPCSTRING@PPropertyValue@@2PBVTClass@Toshi@@B,0xa0f588,public: static class Toshi::TClass const * const PPropertyValue::TYPE_TPCSTRING
+ppropertyparser.dll,?GetTPCString@PPropertyValue@@QBEABVTPCString@Toshi@@XZ,0xa0f58c,public: class Toshi::TPCString const & __thiscall PPropertyValue::GetTPCString(void)const 
+ppropertyparser.dll,?TYPE_TPWSTRING@PPropertyValue@@2PBVTClass@Toshi@@B,0xa0f590,public: static class Toshi::TClass const * const PPropertyValue::TYPE_TPWSTRING
+ppropertyparser.dll,?GetTPWString@PPropertyValue@@QBEABVTPWString@Toshi@@XZ,0xa0f594,public: class Toshi::TPWString const & __thiscall PPropertyValue::GetTPWString(void)const 
+ppropertyparser.dll,?TYPE_ARRAY@PPropertyValue@@2PBVTClass@Toshi@@B,0xa0f598,public: static class Toshi::TClass const * const PPropertyValue::TYPE_ARRAY
+ppropertyparser.dll,?GetTVector2@PPropertyValueArray@@QBE_NAAVTVector2@Toshi@@@Z,0xa0f59c,public: bool __thiscall PPropertyValueArray::GetTVector2(class Toshi::TVector2 &)const 
+ppropertyparser.dll,?GetArray@PPropertyValue@@QBEPAVPPropertyValueArray@@XZ,0xa0f5a0,public: class PPropertyValueArray * __thiscall PPropertyValue::GetArray(void)const 
+ppropertyparser.dll,?IsType@PPropertyValue@@QBE_NPBVTClass@Toshi@@@Z,0xa0f5a4,public: bool __thiscall PPropertyValue::IsType(class Toshi::TClass const *)const 
+ppropertyparser.dll,?GetTVector3@PPropertyValueArray@@QBE_NAAVTVector3@Toshi@@@Z,0xa0f5a8,public: bool __thiscall PPropertyValueArray::GetTVector3(class Toshi::TVector3 &)const 
+ppropertyparser.dll,?PutPropertyUnique@PProperties@@QAEXABVTPCString@Toshi@@ABVPPropertyValue@@@Z,0xa0f5ac,"public: void __thiscall PProperties::PutPropertyUnique(class Toshi::TPCString const &,class PPropertyValue const &)"
+ppropertyparser.dll,??0PPropertyValue@@QAE@I@Z,0xa0f5b0,public: __thiscall PPropertyValue::PPropertyValue(unsigned int)
+ppropertyparser.dll,??0PPropertyValue@@QAE@M@Z,0xa0f5b4,public: __thiscall PPropertyValue::PPropertyValue(float)
+ppropertyparser.dll,??0PPropertyValue@@QAE@_N@Z,0xa0f5b8,public: __thiscall PPropertyValue::PPropertyValue(bool)
+ppropertyparser.dll,??0PPropertyValue@@QAE@ABVTPCString@Toshi@@@Z,0xa0f5bc,public: __thiscall PPropertyValue::PPropertyValue(class Toshi::TPCString const &)
+ppropertyparser.dll,??0PPropertyValue@@QAE@ABVTPWString@Toshi@@@Z,0xa0f5c0,public: __thiscall PPropertyValue::PPropertyValue(class Toshi::TPWString const &)
+ppropertyparser.dll,??0PPropertyValue@@QAE@PAVPPropertyValueArray@@@Z,0xa0f5c4,public: __thiscall PPropertyValue::PPropertyValue(class PPropertyValueArray *)
+ppropertyparser.dll,?GetOptionalProperty@PProperties@@QBEPBVPPropertyValue@@ABVTPCString@Toshi@@PBVTClass@4@@Z,0xa0f5c8,"public: class PPropertyValue const * __thiscall PProperties::GetOptionalProperty(class Toshi::TPCString const &,class Toshi::TClass const *)const "
+ppropertyparser.dll,?SetUINT32@PPropertyValue@@QAEXI@Z,0xa0f5cc,public: void __thiscall PPropertyValue::SetUINT32(unsigned int)
+ppropertyparser.dll,?LoadPropertyBlock@PPropertyReader@@QAE_NAAVPProperties@@@Z,0xa0f5d0,public: bool __thiscall PPropertyReader::LoadPropertyBlock(class PProperties &)
+ppropertyparser.dll,?Open@PPropertyReader@@UAE_NABVTCString@Toshi@@@Z,0xa0f5d4,public: virtual bool __thiscall PPropertyReader::Open(class Toshi::TCString const &)
+ppropertyparser.dll,?PutPropertyBlock@PPropertyWriter@@QAE_NPBVPProperties@@@Z,0xa0f5d8,public: bool __thiscall PPropertyWriter::PutPropertyBlock(class PProperties const *)
+ppropertyparser.dll,?Close@PPropertyWriter@@QAEXXZ,0xa0f5dc,public: void __thiscall PPropertyWriter::Close(void)
+ppropertyparser.dll,?Open@PPropertyWriter@@QAE_NABVTWString@Toshi@@@Z,0xa0f5e0,public: bool __thiscall PPropertyWriter::Open(class Toshi::TWString const &)
+ppropertyparser.dll,??1PPropertyWriter@@UAE@XZ,0xa0f5e4,public: virtual __thiscall PPropertyWriter::~PPropertyWriter(void)
+ppropertyparser.dll,??0PPropertyWriter@@QAE@XZ,0xa0f5e8,public: __thiscall PPropertyWriter::PPropertyWriter(void)
+ppropertyparser.dll,?LoadBlockHeader@PPropertyReader@@QAE_NAAVTPCString@Toshi@@@Z,0xa0f5ec,public: bool __thiscall PPropertyReader::LoadBlockHeader(class Toshi::TPCString &)
+ppropertyparser.dll,?LoadPropertyBlock@PPropertyReader@@QAEPAVPProperties@@XZ,0xa0f5f0,public: class PProperties * __thiscall PPropertyReader::LoadPropertyBlock(void)
+ppropertyparser.dll,??4PPropertyValue@@QAEAAV0@M@Z,0xa0f5f4,public: class PPropertyValue & __thiscall PPropertyValue::operator=(float)
+ppropertyparser.dll,??4PPropertyValue@@QAEAAV0@I@Z,0xa0f5f8,public: class PPropertyValue & __thiscall PPropertyValue::operator=(unsigned int)
+ppropertyparser.dll,?SetTLString@PPropertyValue@@QAEXABVTLString@Toshi@@@Z,0xa0f5fc,public: void __thiscall PPropertyValue::SetTLString(class Toshi::TLString const &)
+ppropertyparser.dll,?GetRequiredProperty@PProperties@@QBEPBVPPropertyValue@@ABVTPCString@Toshi@@PBVTClass@4@@Z,0xa0f600,"public: class PPropertyValue const * __thiscall PProperties::GetRequiredProperty(class Toshi::TPCString const &,class Toshi::TClass const *)const "
+ppropertyparser.dll,?GetTLString@PPropertyValue@@QBEABVTLString@Toshi@@XZ,0xa0f604,public: class Toshi::TLString const & __thiscall PPropertyValue::GetTLString(void)const 
+ppropertyparser.dll,?SetFloat@PPropertyValue@@QAEXM@Z,0xa0f608,public: void __thiscall PPropertyValue::SetFloat(float)
+ppropertyparser.dll,?SetTPCString@PPropertyValue@@QAEXABVTPCString@Toshi@@@Z,0xa0f60c,public: void __thiscall PPropertyValue::SetTPCString(class Toshi::TPCString const &)
+ppropertyparser.dll,?SetBoolean@PPropertyValue@@QAEX_N@Z,0xa0f610,public: void __thiscall PPropertyValue::SetBoolean(bool)
+ppropertyparser.dll,?TYPE_TLSTRING@PPropertyValue@@2PBVTClass@Toshi@@B,0xa0f614,public: static class Toshi::TClass const * const PPropertyValue::TYPE_TLSTRING
+ppropertyparser.dll,?SetInteger@PPropertyValue@@QAEXH@Z,0xa0f618,public: void __thiscall PPropertyValue::SetInteger(int)
+ppropertyparser.dll,?GetTPCString@PPropertyValue@@QAEAAVTPCString@Toshi@@XZ,0xa0f61c,public: class Toshi::TPCString & __thiscall PPropertyValue::GetTPCString(void)
+ppropertyparser.dll,?IsFileValid@PPropertyWriter@@QAE_NXZ,0xa0f620,public: bool __thiscall PPropertyWriter::IsFileValid(void)
+ppropertyparser.dll,?GetType@PPropertyValue@@QBEPBVTClass@Toshi@@XZ,0xa0f624,public: class Toshi::TClass const * __thiscall PPropertyValue::GetType(void)const 
+ppropertyparser.dll,?PutBlockHeader@PPropertyWriter@@QAE_NABVTPCString@Toshi@@@Z,0xa0f628,public: bool __thiscall PPropertyWriter::PutBlockHeader(class Toshi::TPCString const &)
+ppropertyparser.dll,?PutProperty@PProperties@@QAEXABVTPCString@Toshi@@0ABVPPropertyValue@@@Z,0xa0f62c,"public: void __thiscall PProperties::PutProperty(class Toshi::TPCString const &,class Toshi::TPCString const &,class PPropertyValue const &)"
+ppropertyparser.dll,?GetString@PPropertyName@@QBE?AVTPCString@Toshi@@XZ,0xa0f630,public: class Toshi::TPCString __thiscall PPropertyName::GetString(void)const 
+ppropertyparser.dll,??4PPropertyValue@@QAEAAV0@PAVPProperties@@@Z,0xa0f634,public: class PPropertyValue & __thiscall PPropertyValue::operator=(class PProperties *)
+ppropertyparser.dll,?GetTQuaternion@PPropertyValueArray@@QBE_NAAVTQuaternion@Toshi@@@Z,0xa0f638,public: bool __thiscall PPropertyValueArray::GetTQuaternion(class Toshi::TQuaternion &)const 
+ppropertyparser.dll,?ms_oFreelist@PProperty@PProperties@@0VTFreeList@Toshi@@A,0xa0f63c,private: static class Toshi::TFreeList PProperties::PProperty::ms_oFreelist
+ppropertyparser.dll,?GetTLString@PPropertyValue@@QAEAAVTLString@Toshi@@XZ,0xa0f640,public: class Toshi::TLString & __thiscall PPropertyValue::GetTLString(void)
+ppropertyparser.dll,?Close@PPropertyReader@@QAEXXZ,0xa0f644,public: void __thiscall PPropertyReader::Close(void)
+ppropertyparser.dll,??0PPropertyName@@QAE@ABVTPCString@Toshi@@@Z,0xa0f648,public: __thiscall PPropertyName::PPropertyName(class Toshi::TPCString const &)
+ppropertyparser.dll,??0PPropertyName@@QAE@ABVTPCString@Toshi@@0@Z,0xa0f64c,"public: __thiscall PPropertyName::PPropertyName(class Toshi::TPCString const &,class Toshi::TPCString const &)"
+ppropertyparser.dll,??4PPropertyValue@@QAEAAV0@ABVTPWString@Toshi@@@Z,0xa0f650,public: class PPropertyValue & __thiscall PPropertyValue::operator=(class Toshi::TPWString const &)
+ppropertyparser.dll,?GetProperty@PProperties@@QBEPBVPPropertyValue@@ABVPPropertyName@@@Z,0xa0f654,public: class PPropertyValue const * __thiscall PProperties::GetProperty(class PPropertyName const &)const 
+ppropertyparser.dll,??0PPropertyValue@@QAE@PAVTObject@Toshi@@@Z,0xa0f658,public: __thiscall PPropertyValue::PPropertyValue(class Toshi::TObject *)
+ppropertyparser.dll,??4PPropertyValue@@QAEAAV0@PAVPPropertyValueArray@@@Z,0xa0f65c,public: class PPropertyValue & __thiscall PPropertyValue::operator=(class PPropertyValueArray *)
+ppropertyparser.dll,??4PPropertyValue@@QAEAAV0@ABVTLString@Toshi@@@Z,0xa0f660,public: class PPropertyValue & __thiscall PPropertyValue::operator=(class Toshi::TLString const &)
+ppropertyparser.dll,?GetProperty@PProperties@@QBEPBVPPropertyValue@@ABVTPCString@Toshi@@H@Z,0xa0f664,"public: class PPropertyValue const * __thiscall PProperties::GetProperty(class Toshi::TPCString const &,int)const "
+ppropertyparser.dll,?SetTObject@PPropertyValue@@QAEXPAVTObject@Toshi@@@Z,0xa0f668,public: void __thiscall PPropertyValue::SetTObject(class Toshi::TObject *)
+ppropertyparser.dll,??0PPropertyValue@@QAE@ABV0@@Z,0xa0f66c,public: __thiscall PPropertyValue::PPropertyValue(class PPropertyValue const &)
+ppropertyparser.dll,?CanBeTypeArray@PPropertyValueArray@@QBE_NPBVTClass@Toshi@@H@Z,0xa0f670,"public: bool __thiscall PPropertyValueArray::CanBeTypeArray(class Toshi::TClass const *,int)const "
+ppropertyparser.dll,?GetRequiredProperty@PProperties@@QBEPBVPPropertyValue@@ABVTPCString@Toshi@@0PBVTClass@4@@Z,0xa0f674,"public: class PPropertyValue const * __thiscall PProperties::GetRequiredProperty(class Toshi::TPCString const &,class Toshi::TPCString const &,class Toshi::TClass const *)const "
+ppropertyparser.dll,?FindProperty@PProperties@@QBEPBVPProperty@1@ABVTPCString@Toshi@@AAVIterator@?$TQList@VPProperty@PProperties@@@4@@Z,0xa0f678,"public: class PProperties::PProperty const * __thiscall PProperties::FindProperty(class Toshi::TPCString const &,class Toshi::TQList<class PProperties::PProperty>::Iterator &)const "
+ppropertyparser.dll,?GetTObject@PPropertyValue@@QBEPAVTObject@Toshi@@XZ,0xa0f67c,public: class Toshi::TObject * __thiscall PPropertyValue::GetTObject(void)const 
+ppropertyparser.dll,??8PPropertyValue@@QBE_NABVTPWString@Toshi@@@Z,0xa0f680,public: bool __thiscall PPropertyValue::operator==(class Toshi::TPWString const &)const 
+ppropertyparser.dll,?GetRequiredProperty@PProperties@@QBEPBVPPropertyValue@@ABVTPCString@Toshi@@HPBVTClass@4@@Z,0xa0f684,"public: class PPropertyValue const * __thiscall PProperties::GetRequiredProperty(class Toshi::TPCString const &,int,class Toshi::TClass const *)const "
+ppropertyparser.dll,?GetTPWString@PPropertyValue@@QAEAAVTPWString@Toshi@@XZ,0xa0f688,public: class Toshi::TPWString & __thiscall PPropertyValue::GetTPWString(void)
+ppropertyparser.dll,??9PPropertyValue@@QBE_NABV0@@Z,0xa0f68c,public: bool __thiscall PPropertyValue::operator!=(class PPropertyValue const &)const 
+ppropertyparser.dll,?SetArray@PPropertyValue@@QAEXPAVPPropertyValueArray@@@Z,0xa0f690,public: void __thiscall PPropertyValue::SetArray(class PPropertyValueArray *)
+ppropertyparser.dll,?SetTPWString@PPropertyValue@@QAEXABVTPWString@Toshi@@@Z,0xa0f694,public: void __thiscall PPropertyValue::SetTPWString(class Toshi::TPWString const &)
+ppropertyparser.dll,??0PPropertyName@@QAE@XZ,0xa0f698,public: __thiscall PPropertyName::PPropertyName(void)
+ppropertyparser.dll,??4PPropertyName@@QAEAAV0@ABV0@@Z,0xa0f69c,public: class PPropertyName & __thiscall PPropertyName::operator=(class PPropertyName const &)
+ppropertyparser.dll,?SetUndef@PPropertyValue@@QAEXXZ,0xa0f6a0,public: void __thiscall PPropertyValue::SetUndef(void)
+ppropertyparser.dll,?GetProperty@PProperties@@QBEPBVPPropertyValue@@ABVTPCString@Toshi@@@Z,0xa0f6a4,public: class PPropertyValue const * __thiscall PProperties::GetProperty(class Toshi::TPCString const &)const 
+ppropertyparser.dll,??0PPropertyName@@QAE@ABV0@@Z,0xa0f6a8,public: __thiscall PPropertyName::PPropertyName(class PPropertyName const &)
+ppropertyparser.dll,??0PPropertyReader@@QAE@XZ,0xa0f6ac,public: __thiscall PPropertyReader::PPropertyReader(void)
+ppropertyparser.dll,??4PPropertyValue@@QAEAAV0@ABVTPCString@Toshi@@@Z,0xa0f6b0,public: class PPropertyValue & __thiscall PPropertyValue::operator=(class Toshi::TPCString const &)
+ppropertyparser.dll,??4PPropertyValue@@QAEAAV0@H@Z,0xa0f6b4,public: class PPropertyValue & __thiscall PPropertyValue::operator=(int)
+tinputdxinterface.dll,?GetLocalisedKeyName@TInputDXDeviceKeyboard@Toshi@@QBE?AVTLString@2@H@Z,0xa0f6bc,public: class Toshi::TLString __thiscall Toshi::TInputDXDeviceKeyboard::GetLocalisedKeyName(int)const 
+libmmd.dll,tan,0xa0f6c4,tan
+libmmd.dll,floor,0xa0f6c8,floor
+libmmd.dll,exp,0xa0f6cc,exp
+libmmd.dll,fmod,0xa0f6d0,fmod
+libmmd.dll,atan2,0xa0f6d4,atan2
+libmmd.dll,fabs,0xa0f6d8,fabs
+libmmd.dll,sqrt,0xa0f6dc,sqrt
+libmmd.dll,cos,0xa0f6e0,cos
+libmmd.dll,sin,0xa0f6e4,sin
+msvcrt.dll,__set_app_type,0xa0f6ec,__set_app_type
+msvcrt.dll,__p__fmode,0xa0f6f0,__p__fmode
+msvcrt.dll,__p__commode,0xa0f6f4,__p__commode
+msvcrt.dll,_controlfp,0xa0f6f8,_controlfp
+msvcrt.dll,_adjust_fdiv,0xa0f6fc,_adjust_fdiv
+msvcrt.dll,__setusermatherr,0xa0f700,__setusermatherr
+msvcrt.dll,_initterm,0xa0f704,_initterm
+msvcrt.dll,__getmainargs,0xa0f708,__getmainargs
+msvcrt.dll,__p___initenv,0xa0f70c,__p___initenv
+msvcrt.dll,_XcptFilter,0xa0f710,_XcptFilter
+msvcrt.dll,_exit,0xa0f714,_exit
+msvcrt.dll,_onexit,0xa0f718,_onexit
+msvcrt.dll,__dllonexit,0xa0f71c,__dllonexit
+msvcrt.dll,calloc,0xa0f720,calloc
+msvcrt.dll,exit,0xa0f724,exit
+msvcrt.dll,__CxxFrameHandler,0xa0f728,__CxxFrameHandler
+msvcrt.dll,isspace,0xa0f72c,isspace
+msvcrt.dll,_setjmp3,0xa0f730,_setjmp3
+msvcrt.dll,longjmp,0xa0f734,longjmp
+msvcrt.dll,_except_handler3,0xa0f738,_except_handler3
+msvcrt.dll,_CIpow,0xa0f73c,_CIpow
+msvcrt.dll,_ftol,0xa0f740,_ftol
+msvcrt.dll,strtoul,0xa0f744,strtoul
+msvcrt.dll,strncmp,0xa0f748,strncmp
+msvcrt.dll,strncat,0xa0f74c,strncat
+msvcrt.dll,_finite,0xa0f750,_finite
+msvcrt.dll,strrchr,0xa0f754,strrchr
+msvcrt.dll,isdigit,0xa0f758,isdigit
+msvcrt.dll,atof,0xa0f75c,atof
+msvcrt.dll,strstr,0xa0f760,strstr
+msvcrt.dll,strncpy,0xa0f764,strncpy
+msvcrt.dll,sscanf,0xa0f768,sscanf
+msvcrt.dll,strchr,0xa0f76c,strchr
+msvcrt.dll,atoi,0xa0f770,atoi
+msvcrt.dll,free,0xa0f774,free
+msvcrt.dll,malloc,0xa0f778,malloc
+msvcrt.dll,sprintf,0xa0f77c,sprintf
+msvcrt.dll,_purecall,0xa0f780,_purecall
+msvcrt.dll,vsprintf,0xa0f784,vsprintf
+msvcrt.dll,_stricmp,0xa0f788,_stricmp
+binkw32.dll,_BinkWait@4,0xa0f790,_BinkWait@4
+binkw32.dll,_BinkOpenDirectSound@4,0xa0f794,_BinkOpenDirectSound@4
+binkw32.dll,_BinkDoFrame@4,0xa0f798,_BinkDoFrame@4
+binkw32.dll,_BinkNextFrame@4,0xa0f79c,_BinkNextFrame@4
+binkw32.dll,_BinkCopyToBuffer@28,0xa0f7a0,_BinkCopyToBuffer@28
+binkw32.dll,_BinkCopyToBufferRect@44,0xa0f7a4,_BinkCopyToBufferRect@44
+binkw32.dll,_BinkClose@4,0xa0f7a8,_BinkClose@4
+binkw32.dll,_BinkOpen@8,0xa0f7ac,_BinkOpen@8
+binkw32.dll,_BinkSetSoundOnOff@8,0xa0f7b0,_BinkSetSoundOnOff@8
+binkw32.dll,_BinkSetSoundTrack@8,0xa0f7b4,_BinkSetSoundTrack@8
+binkw32.dll,_RADSetMemory@8,0xa0f7b8,_RADSetMemory@8
+binkw32.dll,_BinkService@4,0xa0f7bc,_BinkService@4
+binkw32.dll,_BinkSetSoundSystem@8,0xa0f7c0,_BinkSetSoundSystem@8
+version.dll,GetFileVersionInfoSizeA,0xa0f7c8,GetFileVersionInfoSizeA
+version.dll,GetFileVersionInfoA,0xa0f7cc,GetFileVersionInfoA
+version.dll,VerQueryValueA,0xa0f7d0,VerQueryValueA
+advapi32.dll,RegSetValueExA,0xa0f7d8,RegSetValueExA
+advapi32.dll,RegCloseKey,0xa0f7dc,RegCloseKey
+advapi32.dll,RegQueryValueExA,0xa0f7e0,RegQueryValueExA
+advapi32.dll,RegOpenKeyExA,0xa0f7e4,RegOpenKeyExA
+advapi32.dll,RegEnumKeyExA,0xa0f7e8,RegEnumKeyExA
+advapi32.dll,RegOpenKeyA,0xa0f7ec,RegOpenKeyA
+advapi32.dll,AdjustTokenPrivileges,0xa0f7f0,AdjustTokenPrivileges
+advapi32.dll,LookupPrivilegeValueA,0xa0f7f4,LookupPrivilegeValueA
+advapi32.dll,OpenProcessToken,0xa0f7f8,OpenProcessToken

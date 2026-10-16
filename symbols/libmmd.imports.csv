@@ -1,0 +1,14 @@
+dll,name,iat_rva,demangled
+MSVCRT.dll,free,0x75100,free
+MSVCRT.dll,_initterm,0x75104,_initterm
+MSVCRT.dll,fprintf,0x75108,fprintf
+MSVCRT.dll,_adjust_fdiv,0x7510c,_adjust_fdiv
+MSVCRT.dll,_iob,0x75110,_iob
+MSVCRT.dll,__dllonexit,0x75114,__dllonexit
+MSVCRT.dll,_onexit,0x75118,_onexit
+MSVCRT.dll,_errno,0x7511c,_errno
+MSVCRT.dll,malloc,0x75120,malloc
+MSVCRT.dll,longjmp,0x75124,longjmp
+MSVCRT.dll,signal,0x75128,signal
+MSVCRT.dll,_setjmp3,0x7512c,_setjmp3
+KERNEL32.dll,DisableThreadLibraryCalls,0x750d0,DisableThreadLibraryCalls

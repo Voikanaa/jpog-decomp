@@ -1,0 +1,9 @@
+dll,name,iat_rva,demangled
+KERNEL32.DLL,LoadLibraryA,0x7a4bc,LoadLibraryA
+KERNEL32.DLL,GetProcAddress,0x7a4c0,GetProcAddress
+ADVAPI32.dll,RegCloseKey,0x7a4c8,RegCloseKey
+MSACM32.dll,acmStreamSize,0x7a4d0,acmStreamSize
+MSVCRT.dll,abs,0x7a4d8,abs
+ole32.dll,CoInitialize,0x7a4e0,CoInitialize
+USER32.dll,ShowWindow,0x7a4e8,ShowWindow
+WINMM.dll,mixerOpen,0x7a4f0,mixerOpen

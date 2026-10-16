@@ -1,0 +1,20 @@
+dll,name,iat_rva,demangled
+TKernelInterface.dll,??0TClass@Toshi@@QAE@PBDPAV01@P6GPAVTObject@1@XZP6GPAV21@PAX@ZP6GXXZ5I@Z,0x4028,"public: __thiscall Toshi::TClass::TClass(char const *,class Toshi::TClass *,class Toshi::TObject * (__stdcall*)(void),class Toshi::TObject * (__stdcall*)(void *),void (__stdcall*)(void),void (__stdcall*)(void),unsigned int)"
+TKernelInterface.dll,??0TGenericEmitter@Toshi@@IAE@PAX@Z,0x402c,protected: __thiscall Toshi::TGenericEmitter::TGenericEmitter(void *)
+TKernelInterface.dll,?Delete@TObject@Toshi@@UAEXXZ,0x4030,public: virtual void __thiscall Toshi::TObject::Delete(void)
+TKernelInterface.dll,?Throw@TGenericEmitter@Toshi@@IAEXPAX@Z,0x4034,protected: void __thiscall Toshi::TGenericEmitter::Throw(void *)
+TKernelInterface.dll,?m_sClass@TObject@Toshi@@2VTClass@2@A,0x4038,public: static class Toshi::TClass Toshi::TObject::m_sClass
+TKernelInterface.dll,??1TClass@Toshi@@QAE@XZ,0x403c,public: __thiscall Toshi::TClass::~TClass(void)
+TKernelInterface.dll,?tmalloc@@YGPAXHPADH@Z,0x4040,"void * __stdcall tmalloc(int,char *,int)"
+TKernelInterface.dll,??1TObject@Toshi@@MAE@XZ,0x4044,protected: virtual __thiscall Toshi::TObject::~TObject(void)
+TKernelInterface.dll,??0TObject@Toshi@@IAE@XZ,0x4048,protected: __thiscall Toshi::TObject::TObject(void)
+TKernelInterface.dll,?tfree@@YGXPAX@Z,0x404c,void __stdcall tfree(void *)
+TKernelInterface.dll,??1TGenericEmitter@Toshi@@IAE@XZ,0x4050,protected: __thiscall Toshi::TGenericEmitter::~TGenericEmitter(void)
+MSVCRT.dll,_adjust_fdiv,0x4008,_adjust_fdiv
+MSVCRT.dll,malloc,0x400c,malloc
+MSVCRT.dll,_initterm,0x4010,_initterm
+MSVCRT.dll,__dllonexit,0x4014,__dllonexit
+MSVCRT.dll,_purecall,0x4018,_purecall
+MSVCRT.dll,free,0x401c,free
+MSVCRT.dll,_onexit,0x4020,_onexit
+KERNEL32.dll,DisableThreadLibraryCalls,0x4000,DisableThreadLibraryCalls

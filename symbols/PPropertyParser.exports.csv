@@ -1,0 +1,267 @@
+ordinal,rva,va,name,demangled
+1,0x10c0,0x100010c0,??0PProperties@@QAE@PAV0@@Z,public: __thiscall PProperties::PProperties(class PProperties *)
+2,0x1090,0x10001090,??0PProperties@@QAE@XZ,public: __thiscall PProperties::PProperties(void)
+3,0x2440,0x10002440,??0PProperty@PProperties@@QAE@ABV01@@Z,public: __thiscall PProperties::PProperty::PProperty(class PProperties::PProperty const &)
+4,0x1920,0x10001920,??0PProperty@PProperties@@QAE@ABVPPropertyName@@ABVPPropertyValue@@@Z,"public: __thiscall PProperties::PProperty::PProperty(class PPropertyName const &,class PPropertyValue const &)"
+5,0x1960,0x10001960,??0PProperty@PProperties@@QAE@ABVPPropertyName@@ABVPPropertyValue@@ABVTPCString@Toshi@@@Z,"public: __thiscall PProperties::PProperty::PProperty(class PPropertyName const &,class PPropertyValue const &,class Toshi::TPCString const &)"
+6,0x2ae0,0x10002ae0,??0PPropertyBlock@@QAE@ABVTPCString@Toshi@@W4Priority@0@@Z,"public: __thiscall PPropertyBlock::PPropertyBlock(class Toshi::TPCString const &,enum PPropertyBlock::Priority)"
+7,0x2d60,0x10002d60,??0PPropertyName@@QAE@ABV0@@Z,public: __thiscall PPropertyName::PPropertyName(class PPropertyName const &)
+8,0x31c0,0x100031c0,??0PPropertyName@@QAE@ABVTPCString@Toshi@@0@Z,"public: __thiscall PPropertyName::PPropertyName(class Toshi::TPCString const &,class Toshi::TPCString const &)"
+9,0x3200,0x10003200,??0PPropertyName@@QAE@ABVTPCString@Toshi@@@Z,public: __thiscall PPropertyName::PPropertyName(class Toshi::TPCString const &)
+10,0x3220,0x10003220,??0PPropertyName@@QAE@XZ,public: __thiscall PPropertyName::PPropertyName(void)
+11,0x32b0,0x100032b0,??0PPropertyReader@@QAE@XZ,public: __thiscall PPropertyReader::PPropertyReader(void)
+12,0x5ef0,0x10005ef0,??0PPropertyReaderParseError@@QAE@ABV0@@Z,public: __thiscall PPropertyReaderParseError::PPropertyReaderParseError(class PPropertyReaderParseError const &)
+13,0x5f20,0x10005f20,??0PPropertyReaderParseError@@QAE@XZ,public: __thiscall PPropertyReaderParseError::PPropertyReaderParseError(void)
+14,0x7db0,0x10007db0,??0PPropertyValue@@QAE@ABV0@@Z,public: __thiscall PPropertyValue::PPropertyValue(class PPropertyValue const &)
+15,0x6050,0x10006050,??0PPropertyValue@@QAE@ABVPPropertyName@@@Z,public: __thiscall PPropertyValue::PPropertyValue(class PPropertyName const &)
+16,0x5fb0,0x10005fb0,??0PPropertyValue@@QAE@ABVTLString@Toshi@@@Z,public: __thiscall PPropertyValue::PPropertyValue(class Toshi::TLString const &)
+17,0x5f30,0x10005f30,??0PPropertyValue@@QAE@ABVTPCString@Toshi@@@Z,public: __thiscall PPropertyValue::PPropertyValue(class Toshi::TPCString const &)
+18,0x5f70,0x10005f70,??0PPropertyValue@@QAE@ABVTPWString@Toshi@@@Z,public: __thiscall PPropertyValue::PPropertyValue(class Toshi::TPWString const &)
+19,0x7e30,0x10007e30,??0PPropertyValue@@QAE@H@Z,public: __thiscall PPropertyValue::PPropertyValue(int)
+20,0x7e10,0x10007e10,??0PPropertyValue@@QAE@I@Z,public: __thiscall PPropertyValue::PPropertyValue(unsigned int)
+21,0x7df0,0x10007df0,??0PPropertyValue@@QAE@M@Z,public: __thiscall PPropertyValue::PPropertyValue(float)
+22,0x5ff0,0x10005ff0,??0PPropertyValue@@QAE@PAVPProperties@@@Z,public: __thiscall PPropertyValue::PPropertyValue(class PProperties *)
+23,0x6090,0x10006090,??0PPropertyValue@@QAE@PAVPPropertyValueArray@@@Z,public: __thiscall PPropertyValue::PPropertyValue(class PPropertyValueArray *)
+24,0x6100,0x10006100,??0PPropertyValue@@QAE@PAVTObject@Toshi@@@Z,public: __thiscall PPropertyValue::PPropertyValue(class Toshi::TObject *)
+25,0x7e50,0x10007e50,??0PPropertyValue@@QAE@XZ,public: __thiscall PPropertyValue::PPropertyValue(void)
+26,0x7dd0,0x10007dd0,??0PPropertyValue@@QAE@_N@Z,public: __thiscall PPropertyValue::PPropertyValue(bool)
+27,0x26e0,0x100026e0,??0PPropertyValueArray@@QAE@ABV0@@Z,public: __thiscall PPropertyValueArray::PPropertyValueArray(class PPropertyValueArray const &)
+28,0x2710,0x10002710,??0PPropertyValueArray@@QAE@H@Z,public: __thiscall PPropertyValueArray::PPropertyValueArray(int)
+29,0x6f20,0x10006f20,??0PPropertyValueArray@@QAE@PAVPPropertyValue@@H@Z,"public: __thiscall PPropertyValueArray::PPropertyValueArray(class PPropertyValue *,int)"
+30,0x27a0,0x100027a0,??0PPropertyValueArray@@QAE@XZ,public: __thiscall PPropertyValueArray::PPropertyValueArray(void)
+31,0x7fc0,0x10007fc0,??0PPropertyWriter@@QAE@XZ,public: __thiscall PPropertyWriter::PPropertyWriter(void)
+32,0x1100,0x10001100,??1PProperties@@UAE@XZ,public: virtual __thiscall PProperties::~PProperties(void)
+33,0x23f0,0x100023f0,??1PProperty@PProperties@@QAE@XZ,public: __thiscall PProperties::PProperty::~PProperty(void)
+34,0x2b80,0x10002b80,??1PPropertyBlock@@UAE@XZ,public: virtual __thiscall PPropertyBlock::~PPropertyBlock(void)
+35,0x27c0,0x100027c0,??1PPropertyName@@QAE@XZ,public: __thiscall PPropertyName::~PPropertyName(void)
+36,0x3310,0x10003310,??1PPropertyReader@@UAE@XZ,public: virtual __thiscall PPropertyReader::~PPropertyReader(void)
+37,0x5ed0,0x10005ed0,??1PPropertyReaderParseError@@QAE@XZ,public: __thiscall PPropertyReaderParseError::~PPropertyReaderParseError(void)
+38,0x6130,0x10006130,??1PPropertyValue@@QAE@XZ,public: __thiscall PPropertyValue::~PPropertyValue(void)
+39,0x26a0,0x100026a0,??1PPropertyValueArray@@QAE@XZ,public: __thiscall PPropertyValueArray::~PPropertyValueArray(void)
+40,0x8010,0x10008010,??1PPropertyWriter@@UAE@XZ,public: virtual __thiscall PPropertyWriter::~PPropertyWriter(void)
+41,0x2660,0x10002660,??2PProperties@@SGPAXI@Z,public: static void * __stdcall PProperties::operator new(unsigned int)
+42,0x2680,0x10002680,??2PProperties@@SGPAXIPADH@Z,"public: static void * __stdcall PProperties::operator new(unsigned int,char *,int)"
+43,0x2650,0x10002650,??2PProperties@@SGPAXIPAX@Z,"public: static void * __stdcall PProperties::operator new(unsigned int,void *)"
+44,0x2570,0x10002570,??2PProperty@PProperties@@SGPAXI@Z,public: static void * __stdcall PProperties::PProperty::operator new(unsigned int)
+45,0x2590,0x10002590,??2PProperty@PProperties@@SGPAXIPADH@Z,"public: static void * __stdcall PProperties::PProperty::operator new(unsigned int,char *,int)"
+46,0x2560,0x10002560,??2PProperty@PProperties@@SGPAXIPAX@Z,"public: static void * __stdcall PProperties::PProperty::operator new(unsigned int,void *)"
+47,0x2630,0x10002630,??3PProperties@@SGXPAX@Z,public: static void __stdcall PProperties::operator delete(void *)
+48,0x2540,0x10002540,??3PProperty@PProperties@@SGXPAX@Z,public: static void __stdcall PProperties::PProperty::operator delete(void *)
+49,0x2380,0x10002380,??4PProperty@PProperties@@QAEAAV01@ABV01@@Z,public: class PProperties::PProperty & __thiscall PProperties::PProperty::operator=(class PProperties::PProperty const &)
+50,0x2d90,0x10002d90,??4PPropertyName@@QAEAAV0@ABV0@@Z,public: class PPropertyName & __thiscall PPropertyName::operator=(class PPropertyName const &)
+51,0x5ea0,0x10005ea0,??4PPropertyReaderParseError@@QAEAAV0@ABV0@@Z,public: class PPropertyReaderParseError & __thiscall PPropertyReaderParseError::operator=(class PPropertyReaderParseError const &)
+52,0x7c90,0x10007c90,??4PPropertyValue@@QAEAAV0@ABV0@@Z,public: class PPropertyValue & __thiscall PPropertyValue::operator=(class PPropertyValue const &)
+53,0x7cb0,0x10007cb0,??4PPropertyValue@@QAEAAV0@ABVPPropertyName@@@Z,public: class PPropertyValue & __thiscall PPropertyValue::operator=(class PPropertyName const &)
+54,0x7d50,0x10007d50,??4PPropertyValue@@QAEAAV0@ABVTLString@Toshi@@@Z,public: class PPropertyValue & __thiscall PPropertyValue::operator=(class Toshi::TLString const &)
+55,0x7d90,0x10007d90,??4PPropertyValue@@QAEAAV0@ABVTPCString@Toshi@@@Z,public: class PPropertyValue & __thiscall PPropertyValue::operator=(class Toshi::TPCString const &)
+56,0x7d70,0x10007d70,??4PPropertyValue@@QAEAAV0@ABVTPWString@Toshi@@@Z,public: class PPropertyValue & __thiscall PPropertyValue::operator=(class Toshi::TPWString const &)
+57,0x7d30,0x10007d30,??4PPropertyValue@@QAEAAV0@H@Z,public: class PPropertyValue & __thiscall PPropertyValue::operator=(int)
+58,0x7d10,0x10007d10,??4PPropertyValue@@QAEAAV0@I@Z,public: class PPropertyValue & __thiscall PPropertyValue::operator=(unsigned int)
+59,0x7cf0,0x10007cf0,??4PPropertyValue@@QAEAAV0@M@Z,public: class PPropertyValue & __thiscall PPropertyValue::operator=(float)
+60,0x7cd0,0x10007cd0,??4PPropertyValue@@QAEAAV0@PAVPProperties@@@Z,public: class PPropertyValue & __thiscall PPropertyValue::operator=(class PProperties *)
+61,0x7c70,0x10007c70,??4PPropertyValue@@QAEAAV0@PAVPPropertyValueArray@@@Z,public: class PPropertyValue & __thiscall PPropertyValue::operator=(class PPropertyValueArray *)
+62,0x2dc0,0x10002dc0,??8PPropertyName@@QBE_NABV0@@Z,public: bool __thiscall PPropertyName::operator==(class PPropertyName const &)const 
+63,0x6370,0x10006370,??8PPropertyValue@@QBE_NABV0@@Z,public: bool __thiscall PPropertyValue::operator==(class PPropertyValue const &)const 
+64,0x7b70,0x10007b70,??8PPropertyValue@@QBE_NABVPPropertyName@@@Z,public: bool __thiscall PPropertyValue::operator==(class PPropertyName const &)const 
+65,0x62a0,0x100062a0,??8PPropertyValue@@QBE_NABVTLString@Toshi@@@Z,public: bool __thiscall PPropertyValue::operator==(class Toshi::TLString const &)const 
+66,0x6240,0x10006240,??8PPropertyValue@@QBE_NABVTPCString@Toshi@@@Z,public: bool __thiscall PPropertyValue::operator==(class Toshi::TPCString const &)const 
+67,0x6270,0x10006270,??8PPropertyValue@@QBE_NABVTPWString@Toshi@@@Z,public: bool __thiscall PPropertyValue::operator==(class Toshi::TPWString const &)const 
+68,0x7c50,0x10007c50,??8PPropertyValue@@QBE_NH@Z,public: bool __thiscall PPropertyValue::operator==(int)const 
+69,0x7c30,0x10007c30,??8PPropertyValue@@QBE_NI@Z,public: bool __thiscall PPropertyValue::operator==(unsigned int)const 
+70,0x7c00,0x10007c00,??8PPropertyValue@@QBE_NM@Z,public: bool __thiscall PPropertyValue::operator==(float)const 
+71,0x62d0,0x100062d0,??8PPropertyValue@@QBE_NPBD@Z,public: bool __thiscall PPropertyValue::operator==(char const *)const 
+72,0x6320,0x10006320,??8PPropertyValue@@QBE_NPBG@Z,public: bool __thiscall PPropertyValue::operator==(unsigned short const *)const 
+73,0x7bb0,0x10007bb0,??8PPropertyValue@@QBE_NPBVPProperties@@@Z,public: bool __thiscall PPropertyValue::operator==(class PProperties const *)const 
+74,0x7b40,0x10007b40,??8PPropertyValue@@QBE_NPBVPPropertyValueArray@@@Z,public: bool __thiscall PPropertyValue::operator==(class PPropertyValueArray const *)const 
+75,0x6540,0x10006540,??8PPropertyValue@@QBE_NPBVTObject@Toshi@@@Z,public: bool __thiscall PPropertyValue::operator==(class Toshi::TObject const *)const 
+76,0x7be0,0x10007be0,??8PPropertyValue@@QBE_N_N@Z,public: bool __thiscall PPropertyValue::operator==(bool)const 
+77,0x2e10,0x10002e10,??9PPropertyName@@QBE_NABV0@@Z,public: bool __thiscall PPropertyName::operator!=(class PPropertyName const &)const 
+78,0x7b20,0x10007b20,??9PPropertyValue@@QBE_NABV0@@Z,public: bool __thiscall PPropertyValue::operator!=(class PPropertyValue const &)const 
+79,0x2c70,0x10002c70,??H@YG?AVTCString@Toshi@@ABV01@ABVPPropertyName@@@Z,"class Toshi::TCString __stdcall operator+(class Toshi::TCString const &,class PPropertyName const &)"
+80,0x2e50,0x10002e50,??MPPropertyName@@QBE_NABV0@@Z,public: bool __thiscall PPropertyName::operator<(class PPropertyName const &)const 
+81,0x2ea0,0x10002ea0,??OPPropertyName@@QBE_NABV0@@Z,public: bool __thiscall PPropertyName::operator>(class PPropertyName const &)const 
+82,0x10000,0x10010000,??_7PProperties@@6B@,const PProperties::`vftable'
+83,0x10140,0x10010140,??_7PPropertyBlock@@6B@,const PPropertyBlock::`vftable'
+84,0x10200,0x10010200,??_7PPropertyReader@@6B@,const PPropertyReader::`vftable'
+85,0x10860,0x10010860,??_7PPropertyWriter@@6B@,const PPropertyWriter::`vftable'
+86,0x3570,0x10003570,?AddDefinitionBlock@PPropertyReader@@QAEXV?$TManagedPtr@VPPropertyBlock@@@Toshi@@@Z,public: void __thiscall PPropertyReader::AddDefinitionBlock(class Toshi::TManagedPtr<class PPropertyBlock>)
+87,0x9330,0x10009330,?AddDefinitionBlock@PPropertyWriter@@QAEXV?$TManagedPtr@VPPropertyBlock@@@Toshi@@@Z,public: void __thiscall PPropertyWriter::AddDefinitionBlock(class Toshi::TManagedPtr<class PPropertyBlock>)
+88,0x6d30,0x10006d30,?Assign@PPropertyValue@@IAEXABV1@@Z,protected: void __thiscall PPropertyValue::Assign(class PPropertyValue const &)
+89,0x2610,0x10002610,?Begin@PProperties@@QBE?AVIterator@?$TQList@VPProperty@PProperties@@@Toshi@@XZ,public: class Toshi::TQList<class PProperties::PProperty>::Iterator __thiscall PProperties::Begin(void)const 
+90,0x8ff0,0x10008ff0,?BufferCChar@PPropertyWriter@@IAEHABD@Z,protected: int __thiscall PPropertyWriter::BufferCChar(char const &)
+91,0x9030,0x10009030,?BufferCPrintf@PPropertyWriter@@IAAHPBDZZ,"protected: int __cdecl PPropertyWriter::BufferCPrintf(char const *,...)"
+92,0x66f0,0x100066f0,?CanBeType@PPropertyValue@@QBE_NPBVTClass@Toshi@@@Z,public: bool __thiscall PPropertyValue::CanBeType(class Toshi::TClass const *)const 
+93,0x7340,0x10007340,?CanBeTypeArray@PPropertyValueArray@@QBE_NPBVTClass@Toshi@@H@Z,"public: bool __thiscall PPropertyValueArray::CanBeTypeArray(class Toshi::TClass const *,int)const "
+94,0x6b20,0x10006b20,?ChangeType@PPropertyValue@@IAE_NPBVTClass@Toshi@@@Z,protected: bool __thiscall PPropertyValue::ChangeType(class Toshi::TClass const *)
+95,0x3530,0x10003530,?Close@PPropertyReader@@QAEXXZ,public: void __thiscall PPropertyReader::Close(void)
+96,0x93d0,0x100093d0,?Close@PPropertyWriter@@QAEXXZ,public: void __thiscall PPropertyWriter::Close(void)
+97,0x1e80,0x10001e80,?CreateObject@PProperties@@CGPAVTObject@Toshi@@XZ,private: static class Toshi::TObject * __stdcall PProperties::CreateObject(void)
+98,0x2bf0,0x10002bf0,?CreateObject@PPropertyBlock@@CGPAVTObject@Toshi@@XZ,private: static class Toshi::TObject * __stdcall PPropertyBlock::CreateObject(void)
+99,0x58a0,0x100058a0,?CreateObject@PPropertyReader@@CGPAVTObject@Toshi@@XZ,private: static class Toshi::TObject * __stdcall PPropertyReader::CreateObject(void)
+100,0x9440,0x10009440,?CreateObject@PPropertyWriter@@CGPAVTObject@Toshi@@XZ,private: static class Toshi::TObject * __stdcall PPropertyWriter::CreateObject(void)
+101,0x1e60,0x10001e60,?CreateObjectInPlace@PProperties@@CGPAVTObject@Toshi@@PAX@Z,private: static class Toshi::TObject * __stdcall PProperties::CreateObjectInPlace(void *)
+102,0x2be0,0x10002be0,?CreateObjectInPlace@PPropertyBlock@@CGPAVTObject@Toshi@@PAX@Z,private: static class Toshi::TObject * __stdcall PPropertyBlock::CreateObjectInPlace(void *)
+103,0x5880,0x10005880,?CreateObjectInPlace@PPropertyReader@@CGPAVTObject@Toshi@@PAX@Z,private: static class Toshi::TObject * __stdcall PPropertyReader::CreateObjectInPlace(void *)
+104,0x9420,0x10009420,?CreateObjectInPlace@PPropertyWriter@@CGPAVTObject@Toshi@@PAX@Z,private: static class Toshi::TObject * __stdcall PPropertyWriter::CreateObjectInPlace(void *)
+105,0x1e40,0x10001e40,?DeinitialiseStatic@PProperties@@CGXXZ,private: static void __stdcall PProperties::DeinitialiseStatic(void)
+106,0x2bc0,0x10002bc0,?DeinitialiseStatic@PPropertyBlock@@CGXXZ,private: static void __stdcall PPropertyBlock::DeinitialiseStatic(void)
+107,0x5860,0x10005860,?DeinitialiseStatic@PPropertyReader@@CGXXZ,private: static void __stdcall PPropertyReader::DeinitialiseStatic(void)
+108,0x9400,0x10009400,?DeinitialiseStatic@PPropertyWriter@@CGXXZ,private: static void __stdcall PPropertyWriter::DeinitialiseStatic(void)
+109,0x26c0,0x100026c0,?Delete@PPropertyValueArray@@QAEXXZ,public: void __thiscall PPropertyValueArray::Delete(void)
+110,0x2600,0x10002600,?End@PProperties@@QBE?AVIterator@?$TQList@VPProperty@PProperties@@@Toshi@@XZ,public: class Toshi::TQList<class PProperties::PProperty>::Iterator __thiscall PProperties::End(void)const 
+111,0x4c80,0x10004c80,?Error@PPropertyReader@@QAEXABVTCString@Toshi@@@Z,public: void __thiscall PPropertyReader::Error(class Toshi::TCString const &)
+112,0x4d20,0x10004d20,?Error@PPropertyReader@@QAEXABVToken@TFileLexerUTF8@Toshi@@ABVTCString@4@@Z,"public: void __thiscall PPropertyReader::Error(class Toshi::TFileLexerUTF8::Token const &,class Toshi::TCString const &)"
+113,0x91c0,0x100091c0,?Error@PPropertyWriter@@QAEXABVTWString@Toshi@@@Z,public: void __thiscall PPropertyWriter::Error(class Toshi::TWString const &)
+114,0x1740,0x10001740,?FindProperty@PProperties@@QBEPBVPProperty@1@ABVTPCString@Toshi@@AAVIterator@?$TQList@VPProperty@PProperties@@@4@@Z,"public: class PProperties::PProperty const * __thiscall PProperties::FindProperty(class Toshi::TPCString const &,class Toshi::TQList<class PProperties::PProperty>::Iterator &)const "
+115,0x9060,0x10009060,?FlushWriteBuffer@PPropertyWriter@@IAEHXZ,protected: int __thiscall PPropertyWriter::FlushWriteBuffer(void)
+116,0x7990,0x10007990,?GetArray@PPropertyValue@@QBEPAVPPropertyValueArray@@XZ,public: class PPropertyValueArray * __thiscall PPropertyValue::GetArray(void)const 
+117,0x6860,0x10006860,?GetBoolean@PPropertyValue@@QBE_NXZ,public: bool __thiscall PPropertyValue::GetBoolean(void)const 
+118,0x1eb0,0x10001eb0,?GetClass@PProperties@@UBEAAVTClass@Toshi@@XZ,public: virtual class Toshi::TClass & __thiscall PProperties::GetClass(void)const 
+119,0x2c00,0x10002c00,?GetClass@PPropertyBlock@@UBEAAVTClass@Toshi@@XZ,public: virtual class Toshi::TClass & __thiscall PPropertyBlock::GetClass(void)const 
+120,0x58d0,0x100058d0,?GetClass@PPropertyReader@@UBEAAVTClass@Toshi@@XZ,public: virtual class Toshi::TClass & __thiscall PPropertyReader::GetClass(void)const 
+121,0x9470,0x10009470,?GetClass@PPropertyWriter@@UBEAAVTClass@Toshi@@XZ,public: virtual class Toshi::TClass & __thiscall PPropertyWriter::GetClass(void)const 
+122,0x24d0,0x100024d0,?GetComment@PProperty@PProperties@@QBE?AVTPCString@Toshi@@XZ,public: class Toshi::TPCString __thiscall PProperties::PProperty::GetComment(void)const 
+123,0x79d0,0x100079d0,?GetFloat@PPropertyValue@@QBEMXZ,public: float __thiscall PPropertyValue::GetFloat(void)const 
+124,0x2620,0x10002620,?GetFreeList@PProperties@@SGAAVTFreeList@Toshi@@XZ,public: static class Toshi::TFreeList & __stdcall PProperties::GetFreeList(void)
+125,0x2530,0x10002530,?GetFreeList@PProperty@PProperties@@SGAAVTFreeList@Toshi@@XZ,public: static class Toshi::TFreeList & __stdcall PProperties::PProperty::GetFreeList(void)
+126,0x7a70,0x10007a70,?GetInteger@PPropertyValue@@QBEHXZ,public: int __thiscall PPropertyValue::GetInteger(void)const 
+127,0x5e70,0x10005e70,?GetLexer@PPropertyReader@@QAEPAVTFileLexerUTF8@Toshi@@XZ,public: class Toshi::TFileLexerUTF8 * __thiscall PPropertyReader::GetLexer(void)
+128,0x2520,0x10002520,?GetName@PProperty@PProperties@@QBEABVPPropertyName@@XZ,public: class PPropertyName const & __thiscall PProperties::PProperty::GetName(void)const 
+129,0x2c60,0x10002c60,?GetName@PPropertyBlock@@QBEABVTPCString@Toshi@@XZ,public: class Toshi::TPCString const & __thiscall PPropertyBlock::GetName(void)const 
+130,0x2870,0x10002870,?GetName@PPropertyName@@QBEABVTPCString@Toshi@@XZ,public: class Toshi::TPCString const & __thiscall PPropertyName::GetName(void)const 
+131,0x16a0,0x100016a0,?GetOptionalProperty@PProperties@@QBEPBVPPropertyValue@@ABVTPCString@Toshi@@0PBVTClass@4@@Z,"public: class PPropertyValue const * __thiscall PProperties::GetOptionalProperty(class Toshi::TPCString const &,class Toshi::TPCString const &,class Toshi::TClass const *)const "
+132,0x1700,0x10001700,?GetOptionalProperty@PProperties@@QBEPBVPPropertyValue@@ABVTPCString@Toshi@@HPBVTClass@4@@Z,"public: class PPropertyValue const * __thiscall PProperties::GetOptionalProperty(class Toshi::TPCString const &,int,class Toshi::TClass const *)const "
+133,0x1640,0x10001640,?GetOptionalProperty@PProperties@@QBEPBVPPropertyValue@@ABVTPCString@Toshi@@PBVTClass@4@@Z,"public: class PPropertyValue const * __thiscall PProperties::GetOptionalProperty(class Toshi::TPCString const &,class Toshi::TClass const *)const "
+134,0x25f0,0x100025f0,?GetParentProperties@PProperties@@QBEPAV1@XZ,public: class PProperties * __thiscall PProperties::GetParentProperties(void)const 
+135,0x5e60,0x10005e60,?GetParseErrorEmitter@PPropertyReader@@QAEPAV?$TEmitter@VPPropertyReader@@VPPropertyReaderParseError@@@Toshi@@XZ,"public: class Toshi::TEmitter<class PPropertyReader,class PPropertyReaderParseError> * __thiscall PPropertyReader::GetParseErrorEmitter(void)"
+136,0x2c50,0x10002c50,?GetPriority@PPropertyBlock@@QBE?AW4Priority@1@XZ,public: enum PPropertyBlock::Priority __thiscall PPropertyBlock::GetPriority(void)const 
+137,0x7720,0x10007720,?GetPropArrayMP@PPropertyValue@@IAEAAV?$TManagedPtr@VPPropertyValueArray@@@Toshi@@XZ,protected: class Toshi::TManagedPtr<class PPropertyValueArray> & __thiscall PPropertyValue::GetPropArrayMP(void)
+138,0x79b0,0x100079b0,?GetProperties@PPropertyValue@@QBEPAVPProperties@@XZ,public: class PProperties * __thiscall PPropertyValue::GetProperties(void)const 
+139,0x7730,0x10007730,?GetPropertiesMP@PPropertyValue@@IAEAAV?$TManagedPtr@VPProperties@@@Toshi@@XZ,protected: class Toshi::TManagedPtr<class PProperties> & __thiscall PPropertyValue::GetPropertiesMP(void)
+140,0x1430,0x10001430,?GetProperty@PProperties@@QBEPBVPPropertyValue@@ABVPPropertyName@@@Z,public: class PPropertyValue const * __thiscall PProperties::GetProperty(class PPropertyName const &)const 
+141,0x1c20,0x10001c20,?GetProperty@PProperties@@QBEPBVPPropertyValue@@ABVTPCString@Toshi@@0@Z,"public: class PPropertyValue const * __thiscall PProperties::GetProperty(class Toshi::TPCString const &,class Toshi::TPCString const &)const "
+142,0x1c60,0x10001c60,?GetProperty@PProperties@@QBEPBVPPropertyValue@@ABVTPCString@Toshi@@@Z,public: class PPropertyValue const * __thiscall PProperties::GetProperty(class Toshi::TPCString const &)const 
+143,0x1480,0x10001480,?GetProperty@PProperties@@QBEPBVPPropertyValue@@ABVTPCString@Toshi@@H@Z,"public: class PPropertyValue const * __thiscall PProperties::GetProperty(class Toshi::TPCString const &,int)const "
+144,0x25e0,0x100025e0,?GetPropertyCount@PProperties@@QBEHXZ,public: int __thiscall PProperties::GetPropertyCount(void)const 
+145,0x79a0,0x100079a0,?GetPropertyName@PPropertyValue@@QBEABVPPropertyName@@XZ,public: class PPropertyName const & __thiscall PPropertyValue::GetPropertyName(void)const 
+146,0x25b0,0x100025b0,?GetPropertySet@PProperties@@QAEAAV?$TQList@VPProperty@PProperties@@@Toshi@@XZ,public: class Toshi::TQList<class PProperties::PProperty> & __thiscall PProperties::GetPropertySet(void)
+147,0x25c0,0x100025c0,?GetPropertySet@PProperties@@QBEABV?$TQList@VPProperty@PProperties@@@Toshi@@XZ,public: class Toshi::TQList<class PProperties::PProperty> const & __thiscall PProperties::GetPropertySet(void)const 
+148,0x1580,0x10001580,?GetRequiredProperty@PProperties@@QBEPBVPPropertyValue@@ABVTPCString@Toshi@@0PBVTClass@4@@Z,"public: class PPropertyValue const * __thiscall PProperties::GetRequiredProperty(class Toshi::TPCString const &,class Toshi::TPCString const &,class Toshi::TClass const *)const "
+149,0x15f0,0x100015f0,?GetRequiredProperty@PProperties@@QBEPBVPPropertyValue@@ABVTPCString@Toshi@@HPBVTClass@4@@Z,"public: class PPropertyValue const * __thiscall PProperties::GetRequiredProperty(class Toshi::TPCString const &,int,class Toshi::TClass const *)const "
+150,0x1520,0x10001520,?GetRequiredProperty@PProperties@@QBEPBVPPropertyValue@@ABVTPCString@Toshi@@PBVTClass@4@@Z,"public: class PPropertyValue const * __thiscall PProperties::GetRequiredProperty(class Toshi::TPCString const &,class Toshi::TClass const *)const "
+151,0x2ef0,0x10002ef0,?GetString@PPropertyName@@QBE?AVTPCString@Toshi@@XZ,public: class Toshi::TPCString __thiscall PPropertyName::GetString(void)const 
+152,0x2860,0x10002860,?GetSubName@PPropertyName@@QBEABVTPCString@Toshi@@XZ,public: class Toshi::TPCString const & __thiscall PPropertyName::GetSubName(void)const 
+153,0x6960,0x10006960,?GetTLString@PPropertyValue@@QAEAAVTLString@Toshi@@XZ,public: class Toshi::TLString & __thiscall PPropertyValue::GetTLString(void)
+154,0x6a50,0x10006a50,?GetTLString@PPropertyValue@@QBEABVTLString@Toshi@@XZ,public: class Toshi::TLString const & __thiscall PPropertyValue::GetTLString(void)const 
+155,0x7970,0x10007970,?GetTObject@PPropertyValue@@QBEPAVTObject@Toshi@@XZ,public: class Toshi::TObject * __thiscall PPropertyValue::GetTObject(void)const 
+156,0x68c0,0x100068c0,?GetTPCString@PPropertyValue@@QAEAAVTPCString@Toshi@@XZ,public: class Toshi::TPCString & __thiscall PPropertyValue::GetTPCString(void)
+157,0x69b0,0x100069b0,?GetTPCString@PPropertyValue@@QBEABVTPCString@Toshi@@XZ,public: class Toshi::TPCString const & __thiscall PPropertyValue::GetTPCString(void)const 
+158,0x6910,0x10006910,?GetTPWString@PPropertyValue@@QAEAAVTPWString@Toshi@@XZ,public: class Toshi::TPWString & __thiscall PPropertyValue::GetTPWString(void)
+159,0x6a00,0x10006a00,?GetTPWString@PPropertyValue@@QBEABVTPWString@Toshi@@XZ,public: class Toshi::TPWString const & __thiscall PPropertyValue::GetTPWString(void)const 
+160,0x71c0,0x100071c0,?GetTQuaternion@PPropertyValueArray@@QBE_NAAVTQuaternion@Toshi@@@Z,public: bool __thiscall PPropertyValueArray::GetTQuaternion(class Toshi::TQuaternion &)const 
+161,0x6fe0,0x10006fe0,?GetTVector2@PPropertyValueArray@@QBE_NAAVTVector2@Toshi@@@Z,public: bool __thiscall PPropertyValueArray::GetTVector2(class Toshi::TVector2 &)const 
+162,0x70a0,0x100070a0,?GetTVector3@PPropertyValueArray@@QBE_NAAVTVector3@Toshi@@@Z,public: bool __thiscall PPropertyValueArray::GetTVector3(class Toshi::TVector3 &)const 
+163,0x7af0,0x10007af0,?GetType@PPropertyValue@@QBEPBVTClass@Toshi@@XZ,public: class Toshi::TClass const * __thiscall PPropertyValue::GetType(void)const 
+164,0x7a10,0x10007a10,?GetUINT32@PPropertyValue@@QBEIXZ,public: unsigned int __thiscall PPropertyValue::GetUINT32(void)const 
+165,0x2510,0x10002510,?GetValue@PProperty@PProperties@@QBEPBVPPropertyValue@@XZ,public: class PPropertyValue const * __thiscall PProperties::PProperty::GetValue(void)const 
+166,0x4e00,0x10004e00,?GetValue@PPropertyReader@@QAE_NAAVPPropertyValue@@@Z,public: bool __thiscall PPropertyReader::GetValue(class PPropertyValue &)
+167,0x1e50,0x10001e50,?InitialiseStatic@PProperties@@CGXXZ,private: static void __stdcall PProperties::InitialiseStatic(void)
+168,0x2bd0,0x10002bd0,?InitialiseStatic@PPropertyBlock@@CGXXZ,private: static void __stdcall PPropertyBlock::InitialiseStatic(void)
+169,0x5870,0x10005870,?InitialiseStatic@PPropertyReader@@CGXXZ,private: static void __stdcall PPropertyReader::InitialiseStatic(void)
+170,0x9410,0x10009410,?InitialiseStatic@PPropertyWriter@@CGXXZ,private: static void __stdcall PPropertyWriter::InitialiseStatic(void)
+171,0x7b10,0x10007b10,?IsDefined@PPropertyValue@@QBE_NXZ,public: bool __thiscall PPropertyValue::IsDefined(void)const 
+172,0x25d0,0x100025d0,?IsEmpty@PProperties@@QBE_NXZ,public: bool __thiscall PProperties::IsEmpty(void)const 
+173,0x6570,0x10006570,?IsEmpty@PPropertyValue@@QBE_NXZ,public: bool __thiscall PPropertyValue::IsEmpty(void)const 
+174,0x9320,0x10009320,?IsFileValid@PPropertyWriter@@QAE_NXZ,public: bool __thiscall PPropertyWriter::IsFileValid(void)
+175,0x7b00,0x10007b00,?IsType@PPropertyValue@@QBE_NPBVTClass@Toshi@@@Z,public: bool __thiscall PPropertyValue::IsType(class Toshi::TClass const *)const 
+176,0x38c0,0x100038c0,?Load@PPropertyReader@@QAE_NABVTCString@Toshi@@AAVPProperties@@@Z,"public: bool __thiscall PPropertyReader::Load(class Toshi::TCString const &,class PProperties &)"
+177,0x3680,0x10003680,?Load@PPropertyReader@@QAE_NXZ,public: bool __thiscall PPropertyReader::Load(void)
+178,0x4860,0x10004860,?LoadBlockHeader@PPropertyReader@@QAE_NAAVTPCString@Toshi@@@Z,public: bool __thiscall PPropertyReader::LoadBlockHeader(class Toshi::TPCString &)
+179,0x3b00,0x10003b00,?LoadProperty@PPropertyReader@@QAE_NPAVPProperties@@@Z,public: bool __thiscall PPropertyReader::LoadProperty(class PProperties *)
+180,0x39d0,0x100039d0,?LoadPropertyBlock@PPropertyReader@@QAEPAVPProperties@@XZ,public: class PProperties * __thiscall PPropertyReader::LoadPropertyBlock(void)
+181,0x3a70,0x10003a70,?LoadPropertyBlock@PPropertyReader@@QAE_NAAVPProperties@@@Z,public: bool __thiscall PPropertyReader::LoadPropertyBlock(class PProperties &)
+182,0x44f0,0x100044f0,?LoadPropertyName@PPropertyReader@@QAE_NAAVTPCString@Toshi@@0@Z,"public: bool __thiscall PPropertyReader::LoadPropertyName(class Toshi::TPCString &,class Toshi::TPCString &)"
+183,0x55c0,0x100055c0,?OnLexerParseError@PPropertyReader@@CG_NPAV1@PAVTFileLexerUTF8@Toshi@@PAVParseError@23@@Z,"private: static bool __stdcall PPropertyReader::OnLexerParseError(class PPropertyReader *,class Toshi::TFileLexerUTF8 *,class Toshi::TFileLexerUTF8::ParseError *)"
+184,0x3380,0x10003380,?Open@PPropertyReader@@UAE_NABVTCString@Toshi@@@Z,public: virtual bool __thiscall PPropertyReader::Open(class Toshi::TCString const &)
+185,0x3480,0x10003480,?Open@PPropertyReader@@UAE_NABVTCString@Toshi@@PAVTFile@3@@Z,"public: virtual bool __thiscall PPropertyReader::Open(class Toshi::TCString const &,class Toshi::TFile *)"
+186,0x8060,0x10008060,?Open@PPropertyWriter@@QAE_NABVTWString@Toshi@@@Z,public: bool __thiscall PPropertyWriter::Open(class Toshi::TWString const &)
+187,0x8110,0x10008110,?Open@PPropertyWriter@@QAE_NABVTWString@Toshi@@PAVTFile@3@@Z,"public: bool __thiscall PPropertyWriter::Open(class Toshi::TWString const &,class Toshi::TFile *)"
+188,0x9850,0x10009850,?PrintUnsignedAsHex@PPropertyWriter@@QAEX_N@Z,public: void __thiscall PPropertyWriter::PrintUnsignedAsHex(bool)
+189,0x8780,0x10008780,?Put@PPropertyWriter@@QAE_NABVPPropertyName@@@Z,public: bool __thiscall PPropertyWriter::Put(class PPropertyName const &)
+190,0x8500,0x10008500,?Put@PPropertyWriter@@QAE_NABVPPropertyValue@@@Z,public: bool __thiscall PPropertyWriter::Put(class PPropertyValue const &)
+191,0x8a10,0x10008a10,?Put@PPropertyWriter@@QAE_NABVTCString@Toshi@@@Z,public: bool __thiscall PPropertyWriter::Put(class Toshi::TCString const &)
+192,0x8890,0x10008890,?Put@PPropertyWriter@@QAE_NABVTLString@Toshi@@@Z,public: bool __thiscall PPropertyWriter::Put(class Toshi::TLString const &)
+193,0x9270,0x10009270,?Put@PPropertyWriter@@QAE_NABVTPCString@Toshi@@@Z,public: bool __thiscall PPropertyWriter::Put(class Toshi::TPCString const &)
+194,0x8840,0x10008840,?Put@PPropertyWriter@@QAE_NABVTPWString@Toshi@@@Z,public: bool __thiscall PPropertyWriter::Put(class Toshi::TPWString const &)
+195,0x89d0,0x100089d0,?Put@PPropertyWriter@@QAE_NDH@Z,"public: bool __thiscall PPropertyWriter::Put(char,int)"
+196,0x9240,0x10009240,?Put@PPropertyWriter@@QAE_NH@Z,public: bool __thiscall PPropertyWriter::Put(int)
+197,0x8b90,0x10008b90,?Put@PPropertyWriter@@QAE_NI@Z,public: bool __thiscall PPropertyWriter::Put(unsigned int)
+198,0x9210,0x10009210,?Put@PPropertyWriter@@QAE_NM@Z,public: bool __thiscall PPropertyWriter::Put(float)
+199,0x8ae0,0x10008ae0,?Put@PPropertyWriter@@QAE_NPBD@Z,public: bool __thiscall PPropertyWriter::Put(char const *)
+200,0x91d0,0x100091d0,?Put@PPropertyWriter@@QAE_N_N@Z,public: bool __thiscall PPropertyWriter::Put(bool)
+201,0x82d0,0x100082d0,?PutBlockHeader@PPropertyWriter@@QAE_NABVTPCString@Toshi@@@Z,public: bool __thiscall PPropertyWriter::PutBlockHeader(class Toshi::TPCString const &)
+202,0x92c0,0x100092c0,?PutEndLine@PPropertyWriter@@QAE_NXZ,public: bool __thiscall PPropertyWriter::PutEndLine(void)
+203,0x8ea0,0x10008ea0,?PutLiteral@PPropertyWriter@@QAE_NPBD@Z,public: bool __thiscall PPropertyWriter::PutLiteral(char const *)
+204,0x92a0,0x100092a0,?PutNewLine@PPropertyWriter@@QAE_NXZ,public: bool __thiscall PPropertyWriter::PutNewLine(void)
+205,0x1290,0x10001290,?PutProperty@PProperties@@QAEXABVPPropertyName@@ABVPPropertyValue@@@Z,"public: void __thiscall PProperties::PutProperty(class PPropertyName const &,class PPropertyValue const &)"
+206,0x1230,0x10001230,?PutProperty@PProperties@@QAEXABVPPropertyName@@ABVPPropertyValue@@ABVTPCString@Toshi@@@Z,"public: void __thiscall PProperties::PutProperty(class PPropertyName const &,class PPropertyValue const &,class Toshi::TPCString const &)"
+207,0x11e0,0x100011e0,?PutProperty@PProperties@@QAEXABVTPCString@Toshi@@0ABVPPropertyValue@@0@Z,"public: void __thiscall PProperties::PutProperty(class Toshi::TPCString const &,class Toshi::TPCString const &,class PPropertyValue const &,class Toshi::TPCString const &)"
+208,0x1d70,0x10001d70,?PutProperty@PProperties@@QAEXABVTPCString@Toshi@@0ABVPPropertyValue@@@Z,"public: void __thiscall PProperties::PutProperty(class Toshi::TPCString const &,class Toshi::TPCString const &,class PPropertyValue const &)"
+209,0x1df0,0x10001df0,?PutProperty@PProperties@@QAEXABVTPCString@Toshi@@ABVPPropertyValue@@0@Z,"public: void __thiscall PProperties::PutProperty(class Toshi::TPCString const &,class PPropertyValue const &,class Toshi::TPCString const &)"
+210,0x1db0,0x10001db0,?PutProperty@PProperties@@QAEXABVTPCString@Toshi@@ABVPPropertyValue@@@Z,"public: void __thiscall PProperties::PutProperty(class Toshi::TPCString const &,class PPropertyValue const &)"
+211,0x8340,0x10008340,?PutPropertyBlock@PPropertyWriter@@QAE_NHPBVPProperties@@@Z,"public: bool __thiscall PPropertyWriter::PutPropertyBlock(int,class PProperties const *)"
+212,0x9300,0x10009300,?PutPropertyBlock@PPropertyWriter@@QAE_NPBVPProperties@@@Z,public: bool __thiscall PPropertyWriter::PutPropertyBlock(class PProperties const *)
+213,0x8220,0x10008220,?PutPropertyName@PPropertyWriter@@QAE_NABVTPCString@Toshi@@0@Z,"public: bool __thiscall PPropertyWriter::PutPropertyName(class Toshi::TPCString const &,class Toshi::TPCString const &)"
+214,0x1390,0x10001390,?PutPropertyUnique@PProperties@@QAEXABVPPropertyName@@ABVPPropertyValue@@@Z,"public: void __thiscall PProperties::PutPropertyUnique(class PPropertyName const &,class PPropertyValue const &)"
+215,0x1330,0x10001330,?PutPropertyUnique@PProperties@@QAEXABVPPropertyName@@ABVPPropertyValue@@ABVTPCString@Toshi@@@Z,"public: void __thiscall PProperties::PutPropertyUnique(class PPropertyName const &,class PPropertyValue const &,class Toshi::TPCString const &)"
+216,0x12e0,0x100012e0,?PutPropertyUnique@PProperties@@QAEXABVTPCString@Toshi@@0ABVPPropertyValue@@0@Z,"public: void __thiscall PProperties::PutPropertyUnique(class Toshi::TPCString const &,class Toshi::TPCString const &,class PPropertyValue const &,class Toshi::TPCString const &)"
+217,0x1ca0,0x10001ca0,?PutPropertyUnique@PProperties@@QAEXABVTPCString@Toshi@@0ABVPPropertyValue@@@Z,"public: void __thiscall PProperties::PutPropertyUnique(class Toshi::TPCString const &,class Toshi::TPCString const &,class PPropertyValue const &)"
+218,0x1d20,0x10001d20,?PutPropertyUnique@PProperties@@QAEXABVTPCString@Toshi@@ABVPPropertyValue@@0@Z,"public: void __thiscall PProperties::PutPropertyUnique(class Toshi::TPCString const &,class PPropertyValue const &,class Toshi::TPCString const &)"
+219,0x1ce0,0x10001ce0,?PutPropertyUnique@PProperties@@QAEXABVTPCString@Toshi@@ABVPPropertyValue@@@Z,"public: void __thiscall PProperties::PutPropertyUnique(class Toshi::TPCString const &,class PPropertyValue const &)"
+220,0x92e0,0x100092e0,?PutSpace@PPropertyWriter@@QAE_NXZ,public: bool __thiscall PPropertyWriter::PutSpace(void)
+221,0x8bf0,0x10008bf0,?PutToken@PPropertyWriter@@QAE_NW4TokenType@TFileLexer@Toshi@@@Z,public: bool __thiscall PPropertyWriter::PutToken(enum Toshi::TFileLexer::TokenType)
+222,0x81a0,0x100081a0,?Save@PPropertyWriter@@QAE_NXZ,public: bool __thiscall PPropertyWriter::Save(void)
+223,0x7760,0x10007760,?SetArray@PPropertyValue@@QAEXPAVPPropertyValueArray@@@Z,public: void __thiscall PPropertyValue::SetArray(class PPropertyValueArray *)
+224,0x5e80,0x10005e80,?SetAssertOnError@PPropertyReader@@QAEX_N@Z,public: void __thiscall PPropertyReader::SetAssertOnError(bool)
+225,0x78a0,0x100078a0,?SetBoolean@PPropertyValue@@QAEX_N@Z,public: void __thiscall PPropertyValue::SetBoolean(bool)
+226,0x2490,0x10002490,?SetComment@PProperty@PProperties@@QAEXABVTPCString@Toshi@@@Z,public: void __thiscall PProperties::PProperty::SetComment(class Toshi::TPCString const &)
+227,0x78d0,0x100078d0,?SetFloat@PPropertyValue@@QAEXM@Z,public: void __thiscall PPropertyValue::SetFloat(float)
+228,0x7930,0x10007930,?SetInteger@PPropertyValue@@QAEXH@Z,public: void __thiscall PPropertyValue::SetInteger(int)
+229,0x5e90,0x10005e90,?SetLoadComments@PPropertyReader@@QAEX_N@Z,public: void __thiscall PPropertyReader::SetLoadComments(bool)
+230,0x2c10,0x10002c10,?SetName@PPropertyBlock@@QAEXABVTPCString@Toshi@@@Z,public: void __thiscall PPropertyBlock::SetName(class Toshi::TPCString const &)
+231,0x2820,0x10002820,?SetName@PPropertyName@@QAEXABVTPCString@Toshi@@@Z,public: void __thiscall PPropertyName::SetName(class Toshi::TPCString const &)
+232,0x77c0,0x100077c0,?SetProperties@PPropertyValue@@QAEXPAVPProperties@@@Z,public: void __thiscall PPropertyValue::SetProperties(class PProperties *)
+233,0x6aa0,0x10006aa0,?SetPropertyName@PPropertyValue@@QAEXABVPPropertyName@@@Z,public: void __thiscall PPropertyValue::SetPropertyName(class PPropertyName const &)
+234,0x27e0,0x100027e0,?SetSubName@PPropertyName@@QAEXABVTPCString@Toshi@@@Z,public: void __thiscall PPropertyName::SetSubName(class Toshi::TPCString const &)
+235,0x7810,0x10007810,?SetTLString@PPropertyValue@@QAEXABVTLString@Toshi@@@Z,public: void __thiscall PPropertyValue::SetTLString(class Toshi::TLString const &)
+236,0x6ae0,0x10006ae0,?SetTObject@PPropertyValue@@QAEXPAVTObject@Toshi@@@Z,public: void __thiscall PPropertyValue::SetTObject(class Toshi::TObject *)
+237,0x7870,0x10007870,?SetTPCString@PPropertyValue@@QAEXABVTPCString@Toshi@@@Z,public: void __thiscall PPropertyValue::SetTPCString(class Toshi::TPCString const &)
+238,0x7840,0x10007840,?SetTPWString@PPropertyValue@@QAEXABVTPWString@Toshi@@@Z,public: void __thiscall PPropertyValue::SetTPWString(class Toshi::TPWString const &)
+239,0x7900,0x10007900,?SetUINT32@PPropertyValue@@QAEXI@Z,public: void __thiscall PPropertyValue::SetUINT32(unsigned int)
+240,0x7960,0x10007960,?SetUndef@PPropertyValue@@QAEXXZ,public: void __thiscall PPropertyValue::SetUndef(void)
+241,0x24f0,0x100024f0,?SetValue@PProperty@PProperties@@QAEXABVPPropertyValue@@@Z,public: void __thiscall PProperties::PProperty::SetValue(class PPropertyValue const &)
+242,0x5440,0x10005440,?SkipBlock@PPropertyReader@@AAE_NXZ,private: bool __thiscall PPropertyReader::SkipBlock(void)
+243,0x17a0,0x100017a0,?Sort@PProperties@@QAEXXZ,public: void __thiscall PProperties::Sort(void)
+244,0x3000,0x10003000,?Split@PPropertyName@@IAEXABVTPCString@Toshi@@@Z,protected: void __thiscall PPropertyName::Split(class Toshi::TPCString const &)
+245,0xf224,0x1000f224,?TYPE_ARRAY@PPropertyValue@@2PBVTClass@Toshi@@B,public: static class Toshi::TClass const * const PPropertyValue::TYPE_ARRAY
+246,0xf20c,0x1000f20c,?TYPE_BOOL@PPropertyValue@@2PBVTClass@Toshi@@B,public: static class Toshi::TClass const * const PPropertyValue::TYPE_BOOL
+247,0xf208,0x1000f208,?TYPE_FLOAT@PPropertyValue@@2PBVTClass@Toshi@@B,public: static class Toshi::TClass const * const PPropertyValue::TYPE_FLOAT
+248,0xf200,0x1000f200,?TYPE_INT@PPropertyValue@@2PBVTClass@Toshi@@B,public: static class Toshi::TClass const * const PPropertyValue::TYPE_INT
+249,0xf220,0x1000f220,?TYPE_PROPNAME@PPropertyValue@@2PBVTClass@Toshi@@B,public: static class Toshi::TClass const * const PPropertyValue::TYPE_PROPNAME
+250,0xf21c,0x1000f21c,?TYPE_PROPS@PPropertyValue@@2PBVTClass@Toshi@@B,public: static class Toshi::TClass const * const PPropertyValue::TYPE_PROPS
+251,0xf218,0x1000f218,?TYPE_TLSTRING@PPropertyValue@@2PBVTClass@Toshi@@B,public: static class Toshi::TClass const * const PPropertyValue::TYPE_TLSTRING
+252,0xf210,0x1000f210,?TYPE_TPCSTRING@PPropertyValue@@2PBVTClass@Toshi@@B,public: static class Toshi::TClass const * const PPropertyValue::TYPE_TPCSTRING
+253,0xf214,0x1000f214,?TYPE_TPWSTRING@PPropertyValue@@2PBVTClass@Toshi@@B,public: static class Toshi::TClass const * const PPropertyValue::TYPE_TPWSTRING
+254,0xf204,0x1000f204,?TYPE_UINT32@PPropertyValue@@2PBVTClass@Toshi@@B,public: static class Toshi::TClass const * const PPropertyValue::TYPE_UINT32
+255,0xf418,0x1000f418,?TYPE_UNDEF@PPropertyValue@@2PBVTClass@Toshi@@B,public: static class Toshi::TClass const * const PPropertyValue::TYPE_UNDEF
+256,0x7740,0x10007740,?ToString@PPropertyValue@@SGPBDPBVTClass@Toshi@@@Z,public: static char const * __stdcall PPropertyValue::ToString(class Toshi::TClass const *)
+257,0x4af0,0x10004af0,?Token2Value@PPropertyReader@@QAE?AVPPropertyValue@@ABVToken@TFileLexerUTF8@Toshi@@@Z,public: class PPropertyValue __thiscall PPropertyReader::Token2Value(class Toshi::TFileLexerUTF8::Token const &)
+258,0x5850,0x10005850,?Warning@PPropertyReader@@QAEXABVTCString@Toshi@@@Z,public: void __thiscall PPropertyReader::Warning(class Toshi::TCString const &)
+259,0x4d90,0x10004d90,?Warning@PPropertyReader@@QAEXABVToken@TFileLexerUTF8@Toshi@@ABVTCString@4@@Z,"public: void __thiscall PPropertyReader::Warning(class Toshi::TFileLexerUTF8::Token const &,class Toshi::TCString const &)"
+260,0xf500,0x1000f500,?m_sClass@PProperties@@2VTClass@Toshi@@A,public: static class Toshi::TClass PProperties::m_sClass
+261,0xf4c0,0x1000f4c0,?m_sClass@PPropertyBlock@@2VTClass@Toshi@@A,public: static class Toshi::TClass PPropertyBlock::m_sClass
+262,0xf480,0x1000f480,?m_sClass@PPropertyReader@@2VTClass@Toshi@@A,public: static class Toshi::TClass PPropertyReader::m_sClass
+263,0xf440,0x1000f440,?m_sClass@PPropertyWriter@@2VTClass@Toshi@@A,public: static class Toshi::TClass PPropertyWriter::m_sClass
+264,0xf560,0x1000f560,?ms_oFreelist@PProperties@@0VTFreeList@Toshi@@A,private: static class Toshi::TFreeList PProperties::ms_oFreelist
+265,0xf540,0x1000f540,?ms_oFreelist@PProperty@PProperties@@0VTFreeList@Toshi@@A,private: static class Toshi::TFreeList PProperties::PProperty::ms_oFreelist
+266,0x8ef0,0x10008ef0,?string_needs_quotes@PPropertyWriter@@IBE_NPBDH@Z,"protected: bool __thiscall PPropertyWriter::string_needs_quotes(char const *,int)const "

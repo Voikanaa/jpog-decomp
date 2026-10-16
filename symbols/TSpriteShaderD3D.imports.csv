@@ -1,0 +1,60 @@
+dll,name,iat_rva,demangled
+TKernelInterface.dll,??_7TObject@Toshi@@6B@,0x7030,const Toshi::TObject::`vftable'
+TKernelInterface.dll,?Delete@TObject@Toshi@@UAEXXZ,0x7034,public: virtual void __thiscall Toshi::TObject::Delete(void)
+TKernelInterface.dll,?tfree@@YGXPAX@Z,0x7038,void __stdcall tfree(void *)
+TKernelInterface.dll,??1TClass@Toshi@@QAE@XZ,0x703c,public: __thiscall Toshi::TClass::~TClass(void)
+TKernelInterface.dll,?tmalloc@@YGPAXHPADH@Z,0x7040,"void * __stdcall tmalloc(int,char *,int)"
+TKernelInterface.dll,??0TClass@Toshi@@QAE@PBDPAV01@P6GPAVTObject@1@XZP6GPAV21@PAX@ZP6GXXZ5I@Z,0x7044,"public: __thiscall Toshi::TClass::TClass(char const *,class Toshi::TClass *,class Toshi::TObject * (__stdcall*)(void),class Toshi::TObject * (__stdcall*)(void *),void (__stdcall*)(void),void (__stdcall*)(void),unsigned int)"
+TKernelInterface.dll,?IDENTITY@TMatrix44@Toshi@@2V12@B,0x7048,public: static class Toshi::TMatrix44 const Toshi::TMatrix44::IDENTITY
+TRenderD3DInterface.dll,??0TRenderPacket@Toshi@@QAE@XZ,0x7050,public: __thiscall Toshi::TRenderPacket::TRenderPacket(void)
+TRenderD3DInterface.dll,?TD3DAssert@TRenderD3DInterface@Toshi@@SGXJPBD@Z,0x7054,"public: static void __stdcall Toshi::TRenderD3DInterface::TD3DAssert(long,char const *)"
+TRenderD3DInterface.dll,?GetHAL@TIndexPoolResource@Toshi@@QAE_NPAVHALBuffer@TIndexBlockResource@2@@Z,0x7058,public: bool __thiscall Toshi::TIndexPoolResource::GetHAL(class Toshi::TIndexBlockResource::HALBuffer *)
+TRenderD3DInterface.dll,?GetHAL@TVertexPoolResource@Toshi@@QAE_NPAVHALBuffer@TVertexBlockResource@2@@Z,0x705c,public: bool __thiscall Toshi::TVertexPoolResource::GetHAL(class Toshi::TVertexBlockResource::HALBuffer *)
+TRenderD3DInterface.dll,?SetTextureAddressMode@TRenderD3DInterface@Toshi@@QAEXII@Z,0x7060,"public: void __thiscall Toshi::TRenderD3DInterface::SetTextureAddressMode(unsigned int,unsigned int)"
+TRenderD3DInterface.dll,?SetModelViewMatrix@TRenderPacket@Toshi@@QAEXABVTMatrix44@2@@Z,0x7064,public: void __thiscall Toshi::TRenderPacket::SetModelViewMatrix(class Toshi::TMatrix44 const &)
+TRenderD3DInterface.dll,?SetMesh@TRenderPacket@Toshi@@QAEXPAVTMesh@2@@Z,0x7068,public: void __thiscall Toshi::TRenderPacket::SetMesh(class Toshi::TMesh *)
+TRenderD3DInterface.dll,??1TRenderPacket@Toshi@@QAE@XZ,0x706c,public: __thiscall Toshi::TRenderPacket::~TRenderPacket(void)
+TRenderInterface.dll,?OnLostDevice@TResource@Toshi@@UAE_NXZ,0x7074,public: virtual bool __thiscall Toshi::TResource::OnLostDevice(void)
+TRenderInterface.dll,??1TMaterial@Toshi@@UAE@XZ,0x7078,public: virtual __thiscall Toshi::TMaterial::~TMaterial(void)
+TRenderInterface.dll,?GetCurrentRenderContext@TRenderInterface@Toshi@@QAEPAVTRenderContext@2@XZ,0x707c,public: class Toshi::TRenderContext * __thiscall Toshi::TRenderInterface::GetCurrentRenderContext(void)
+TRenderInterface.dll,?SetMaterial@TMesh@Toshi@@IAEXPAVTMaterial@2@@Z,0x7080,protected: void __thiscall Toshi::TMesh::SetMaterial(class Toshi::TMaterial *)
+TRenderInterface.dll,?Invalidate@TResource@Toshi@@UAEXXZ,0x7084,public: virtual void __thiscall Toshi::TResource::Invalidate(void)
+TRenderInterface.dll,??1TMesh@Toshi@@UAE@XZ,0x7088,public: virtual __thiscall Toshi::TMesh::~TMesh(void)
+TRenderInterface.dll,?OnResetDevice@TResource@Toshi@@UAE_NXZ,0x708c,public: virtual bool __thiscall Toshi::TResource::OnResetDevice(void)
+TRenderInterface.dll,?Flush@TShader@Toshi@@UAEXXZ,0x7090,public: virtual void __thiscall Toshi::TShader::Flush(void)
+TRenderInterface.dll,??_7TResource@Toshi@@6B@,0x7094,const Toshi::TResource::`vftable'
+TRenderInterface.dll,??_7TMaterial@Toshi@@6B@,0x7098,const Toshi::TMaterial::`vftable'
+TRenderInterface.dll,?DestroyResource@TResource@Toshi@@UAEXXZ,0x709c,public: virtual void __thiscall Toshi::TResource::DestroyResource(void)
+TRenderInterface.dll,?m_sClass@TShader@Toshi@@2VTClass@2@A,0x70a0,public: static class Toshi::TClass Toshi::TShader::m_sClass
+TRenderInterface.dll,?CreateResource@TRenderInterface@Toshi@@QAEPAVTResource@2@PBVTClass@2@PBDPAV32@@Z,0x70a4,"public: class Toshi::TResource * __thiscall Toshi::TRenderInterface::CreateResource(class Toshi::TClass const *,char const *,class Toshi::TResource *)"
+TRenderInterface.dll,?SetShader@TMesh@Toshi@@IAEXPAVTShader@2@@Z,0x70a8,protected: void __thiscall Toshi::TMesh::SetShader(class Toshi::TShader *)
+TRenderInterface.dll,?CreateResourceInPlace@TRenderInterface@Toshi@@QAEPAVTResource@2@PBVTClass@2@PAXPBDPAV32@@Z,0x70ac,"public: class Toshi::TResource * __thiscall Toshi::TRenderInterface::CreateResourceInPlace(class Toshi::TClass const *,void *,char const *,class Toshi::TResource *)"
+TRenderInterface.dll,?GetFlags@TIndexPoolResourceInterface@Toshi@@QBEIXZ,0x70b0,public: unsigned int __thiscall Toshi::TIndexPoolResourceInterface::GetFlags(void)const 
+TRenderInterface.dll,?GetNumVertices@TVertexPoolResourceInterface@Toshi@@QBEIXZ,0x70b4,public: unsigned int __thiscall Toshi::TVertexPoolResourceInterface::GetNumVertices(void)const 
+TRenderInterface.dll,?IsDying@TResource@Toshi@@QAE_NXZ,0x70b8,public: bool __thiscall Toshi::TResource::IsDying(void)
+TRenderInterface.dll,?GetSystemResource@TRenderInterface@Toshi@@QAEPAVTResource@2@W4SYSRESOURCES@12@@Z,0x70bc,public: class Toshi::TResource * __thiscall Toshi::TRenderInterface::GetSystemResource(enum Toshi::TRenderInterface::SYSRESOURCES)
+TRenderInterface.dll,?Render@TMesh@Toshi@@UAE_NXZ,0x70c0,public: virtual bool __thiscall Toshi::TMesh::Render(void)
+TRenderInterface.dll,?GetRenderer@TResource@Toshi@@QBEPAVTRenderInterface@2@XZ,0x70c4,public: class Toshi::TRenderInterface * __thiscall Toshi::TResource::GetRenderer(void)const 
+TRenderInterface.dll,??_7TMesh@Toshi@@6B@,0x70c8,const Toshi::TMesh::`vftable'
+TRenderInterface.dll,?Create@TResource@Toshi@@UAE_NXZ,0x70cc,public: virtual bool __thiscall Toshi::TResource::Create(void)
+TRenderInterface.dll,?m_sClass@TMaterial@Toshi@@2VTClass@2@A,0x70d0,public: static class Toshi::TClass Toshi::TMaterial::m_sClass
+TRenderInterface.dll,?m_sClass@TMesh@Toshi@@2VTClass@2@A,0x70d4,public: static class Toshi::TClass Toshi::TMesh::m_sClass
+TRenderInterface.dll,??0TMesh@Toshi@@QAE@XZ,0x70d8,public: __thiscall Toshi::TMesh::TMesh(void)
+TRenderInterface.dll,?Validate@TResource@Toshi@@UAE_NXZ,0x70dc,public: virtual bool __thiscall Toshi::TResource::Validate(void)
+TRenderInterface.dll,?IsValid@TResource@Toshi@@QAE_NXZ,0x70e0,public: bool __thiscall Toshi::TResource::IsValid(void)
+TRenderInterface.dll,??0TMaterial@Toshi@@QAE@XZ,0x70e4,public: __thiscall Toshi::TMaterial::TMaterial(void)
+TRenderInterface.dll,??0TShader@Toshi@@QAE@XZ,0x70e8,public: __thiscall Toshi::TShader::TShader(void)
+TRenderInterface.dll,?SetShader@TMaterial@Toshi@@IAEXPAVTShader@2@@Z,0x70ec,protected: void __thiscall Toshi::TMaterial::SetShader(class Toshi::TShader *)
+TRenderInterface.dll,?SetFlag@TMaterial@Toshi@@QAEXI_N@Z,0x70f0,"public: void __thiscall Toshi::TMaterial::SetFlag(unsigned int,bool)"
+TRenderInterface.dll,?OnDestroy@TResource@Toshi@@MAEXXZ,0x70f4,protected: virtual void __thiscall Toshi::TResource::OnDestroy(void)
+TRenderInterface.dll,??1TShader@Toshi@@UAE@XZ,0x70f8,public: virtual __thiscall Toshi::TShader::~TShader(void)
+MSVCRT.dll,_adjust_fdiv,0x7008,_adjust_fdiv
+MSVCRT.dll,malloc,0x700c,malloc
+MSVCRT.dll,_purecall,0x7010,_purecall
+MSVCRT.dll,_CIacos,0x7014,_CIacos
+MSVCRT.dll,_onexit,0x7018,_onexit
+MSVCRT.dll,_finite,0x701c,_finite
+MSVCRT.dll,free,0x7020,free
+MSVCRT.dll,_initterm,0x7024,_initterm
+MSVCRT.dll,__dllonexit,0x7028,__dllonexit
+KERNEL32.dll,DisableThreadLibraryCalls,0x7000,DisableThreadLibraryCalls

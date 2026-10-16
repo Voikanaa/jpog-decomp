@@ -1,0 +1,328 @@
+ordinal,rva,va,name,demangled
+1,0x9580,0x10009580,??0APerlinNoise@@QAE@ABV0@@Z,public: __thiscall APerlinNoise::APerlinNoise(class APerlinNoise const &)
+2,0x2080,0x10002080,??0APerlinNoise@@QAE@I@Z,public: __thiscall APerlinNoise::APerlinNoise(unsigned int)
+3,0x3520,0x10003520,??0ASimJPHeightField@@QAE@XZ,public: __thiscall ASimJPHeightField::ASimJPHeightField(void)
+4,0x33e0,0x100033e0,??0ASimJPHeightFieldGeneration@@QAE@ABV0@@Z,public: __thiscall ASimJPHeightFieldGeneration::ASimJPHeightFieldGeneration(class ASimJPHeightFieldGeneration const &)
+5,0x95f0,0x100095f0,??0ASimJPHeightFieldGeneration@@QAE@HH@Z,"public: __thiscall ASimJPHeightFieldGeneration::ASimJPHeightFieldGeneration(int,int)"
+6,0x9690,0x10009690,??0ASimJPHeightFieldGeneration@@QAE@XZ,public: __thiscall ASimJPHeightFieldGeneration::ASimJPHeightFieldGeneration(void)
+7,0x158c0,0x100158c0,??0ASimJPPrevTerrain@@QAE@XZ,public: __thiscall ASimJPPrevTerrain::ASimJPPrevTerrain(void)
+8,0x16210,0x10016210,??0ASimJPRiverGeneration@@QAE@H@Z,public: __thiscall ASimJPRiverGeneration::ASimJPRiverGeneration(int)
+9,0x16180,0x10016180,??0ASimJPRiverGeneration@@QAE@HMMMMMMMMM@Z,"public: __thiscall ASimJPRiverGeneration::ASimJPRiverGeneration(int,float,float,float,float,float,float,float,float,float)"
+10,0x156c0,0x100156c0,??0ASimJPSingleTendril@ASimJPTendrilsGeneration@@QAE@ABV01@@Z,public: __thiscall ASimJPTendrilsGeneration::ASimJPSingleTendril::ASimJPSingleTendril(class ASimJPTendrilsGeneration::ASimJPSingleTendril const &)
+11,0x16ac0,0x10016ac0,??0ASimJPSingleTendril@ASimJPTendrilsGeneration@@QAE@MMMMMHHMHM@Z,"public: __thiscall ASimJPTendrilsGeneration::ASimJPSingleTendril::ASimJPSingleTendril(float,float,float,float,float,int,int,float,int,float)"
+12,0x16770,0x10016770,??0ASimJPTendrilsGeneration@@QAE@FMHHMMHM@Z,"public: __thiscall ASimJPTendrilsGeneration::ASimJPTendrilsGeneration(short,float,int,int,float,float,int,float)"
+13,0x17060,0x10017060,??0ASimJPTerrain@@QAE@XZ,public: __thiscall ASimJPTerrain::ASimJPTerrain(void)
+14,0x3370,0x10003370,??1APerlinNoise@@QAE@XZ,public: __thiscall APerlinNoise::~APerlinNoise(void)
+15,0x8ea0,0x10008ea0,??1ASimJPHeightField@@UAE@XZ,public: virtual __thiscall ASimJPHeightField::~ASimJPHeightField(void)
+16,0x96c0,0x100096c0,??1ASimJPHeightFieldGeneration@@UAE@XZ,public: virtual __thiscall ASimJPHeightFieldGeneration::~ASimJPHeightFieldGeneration(void)
+17,0x160c0,0x100160c0,??1ASimJPPrevTerrain@@UAE@XZ,public: virtual __thiscall ASimJPPrevTerrain::~ASimJPPrevTerrain(void)
+18,0x16760,0x10016760,??1ASimJPRiverGeneration@@QAE@XZ,public: __thiscall ASimJPRiverGeneration::~ASimJPRiverGeneration(void)
+19,0x16e30,0x10016e30,??1ASimJPSingleTendril@ASimJPTendrilsGeneration@@QAE@XZ,public: __thiscall ASimJPTendrilsGeneration::ASimJPSingleTendril::~ASimJPSingleTendril(void)
+20,0x168e0,0x100168e0,??1ASimJPTendrilsGeneration@@QAE@XZ,public: __thiscall ASimJPTendrilsGeneration::~ASimJPTendrilsGeneration(void)
+21,0x1c160,0x1001c160,??1ASimJPTerrain@@UAE@XZ,public: virtual __thiscall ASimJPTerrain::~ASimJPTerrain(void)
+22,0x3450,0x10003450,??4APerlinNoise@@QAEAAV0@ABV0@@Z,public: class APerlinNoise & __thiscall APerlinNoise::operator=(class APerlinNoise const &)
+23,0x3390,0x10003390,??4ASimJPHeightFieldGeneration@@QAEAAV0@ABV0@@Z,public: class ASimJPHeightFieldGeneration & __thiscall ASimJPHeightFieldGeneration::operator=(class ASimJPHeightFieldGeneration const &)
+24,0x15640,0x10015640,??4ASimJPRiverGeneration@@QAEAAV0@ABV0@@Z,public: class ASimJPRiverGeneration & __thiscall ASimJPRiverGeneration::operator=(class ASimJPRiverGeneration const &)
+25,0x15680,0x10015680,??4ASimJPSingleTendril@ASimJPTendrilsGeneration@@QAEAAV01@ABV01@@Z,public: class ASimJPTendrilsGeneration::ASimJPSingleTendril & __thiscall ASimJPTendrilsGeneration::ASimJPSingleTendril::operator=(class ASimJPTendrilsGeneration::ASimJPSingleTendril const &)
+26,0x15710,0x10015710,??4ASimJPTendrilsGeneration@@QAEAAV0@ABV0@@Z,public: class ASimJPTendrilsGeneration & __thiscall ASimJPTendrilsGeneration::operator=(class ASimJPTendrilsGeneration const &)
+27,0x3b3e0,0x1003b3e0,??_7ASimJPHeightField@@6B@,const ASimJPHeightField::`vftable'
+28,0x3b0e0,0x1003b0e0,??_7ASimJPHeightFieldGeneration@@6B@,const ASimJPHeightFieldGeneration::`vftable'
+29,0x3c360,0x1003c360,??_7ASimJPPrevTerrain@@6B@,const ASimJPPrevTerrain::`vftable'
+30,0x3c820,0x1003c820,??_7ASimJPTerrain@@6B@,const ASimJPTerrain::`vftable'
+31,0x3470,0x10003470,??_FAPerlinNoise@@QAEXXZ,public: void __thiscall APerlinNoise::`default constructor closure'(void)
+32,0xbd50,0x1000bd50,?Add@ASimJPHeightFieldGeneration@@QAEXPAV1@W4ASimJPHeightFieldGenerationPosEnum@@W4ASimJPHeightFieldGenerationOperEnum@@MHH_N@Z,"public: void __thiscall ASimJPHeightFieldGeneration::Add(class ASimJPHeightFieldGeneration *,enum ASimJPHeightFieldGenerationPosEnum,enum ASimJPHeightFieldGenerationOperEnum,float,int,int,bool)"
+33,0x111a0,0x100111a0,?AddDeepOcean@ASimJPHeightFieldGeneration@@QAEXIIM@Z,"public: void __thiscall ASimJPHeightFieldGeneration::AddDeepOcean(unsigned int,unsigned int,float)"
+34,0x1c0e0,0x1001c0e0,?AddFlags@ASimJPTerrain@@QAEXIII@Z,"public: void __thiscall ASimJPTerrain::AddFlags(unsigned int,unsigned int,unsigned int)"
+35,0x13a70,0x10013a70,?AddHills@ASimJPHeightFieldGeneration@@QAEXIIMMMPAVTVector2@Toshi@@0I@Z,"public: void __thiscall ASimJPHeightFieldGeneration::AddHills(unsigned int,unsigned int,float,float,float,class Toshi::TVector2 *,class Toshi::TVector2 *,unsigned int)"
+36,0x1bb60,0x1001bb60,?ApplyOffsetToPos@ASimJPTerrain@@AAEXAAVTVector3@Toshi@@@Z,private: void __thiscall ASimJPTerrain::ApplyOffsetToPos(class Toshi::TVector3 &)
+37,0xce10,0x1000ce10,?Average@ASimJPHeightFieldGeneration@@QAEXH@Z,public: void __thiscall ASimJPHeightFieldGeneration::Average(int)
+38,0xd770,0x1000d770,?AverageCircleRegion@ASimJPHeightFieldGeneration@@QAEXHHHHH@Z,"public: void __thiscall ASimJPHeightFieldGeneration::AverageCircleRegion(int,int,int,int,int)"
+39,0xdd00,0x1000dd00,?AveragePoint@ASimJPHeightFieldGeneration@@QAEMHHH@Z,"public: float __thiscall ASimJPHeightFieldGeneration::AveragePoint(int,int,int)"
+40,0x10ba0,0x10010ba0,?AverageSubPixel@ASimJPHeightFieldGeneration@@QAEXM@Z,public: void __thiscall ASimJPHeightFieldGeneration::AverageSubPixel(float)
+41,0xd2b0,0x1000d2b0,?AverageWithoutEdgeCase@ASimJPHeightFieldGeneration@@QAEXH@Z,public: void __thiscall ASimJPHeightFieldGeneration::AverageWithoutEdgeCase(int)
+42,0x16260,0x10016260,?Calc@ASimJPRiverGeneration@@QAEXMMMMMMMMM@Z,"public: void __thiscall ASimJPRiverGeneration::Calc(float,float,float,float,float,float,float,float,float)"
+43,0x6ac0,0x10006ac0,?CalcBlendArea@ASimJPHeightField@@QAEXW4TERRAIN_TYPE@1@IIIIAAMM@Z,"public: void __thiscall ASimJPHeightField::CalcBlendArea(enum ASimJPHeightField::TERRAIN_TYPE,unsigned int,unsigned int,unsigned int,unsigned int,float &,float)"
+44,0x14300,0x10014300,?CalcMountainInfo@ASimJPHeightFieldGeneration@@QAEXIIPAVTVector2@Toshi@@AAPAMHHMM@Z,"public: void __thiscall ASimJPHeightFieldGeneration::CalcMountainInfo(unsigned int,unsigned int,class Toshi::TVector2 *,float * &,int,int,float,float)"
+45,0x14270,0x10014270,?CalcPercentageLand@ASimJPHeightFieldGeneration@@QAEMM@Z,public: float __thiscall ASimJPHeightFieldGeneration::CalcPercentageLand(float)
+46,0x1af10,0x1001af10,?CalcTerrainIntersectDist@ASimJPTerrain@@QBEMABVTVector3@Toshi@@0M@Z,"public: float __thiscall ASimJPTerrain::CalcTerrainIntersectDist(class Toshi::TVector3 const &,class Toshi::TVector3 const &,float)const "
+47,0x15580,0x10015580,?CheckAllSections@ASimJPHeightFieldGeneration@@QAEXXZ,public: void __thiscall ASimJPHeightFieldGeneration::CheckAllSections(void)
+48,0x15560,0x10015560,?CheckHeight@ASimJPHeightFieldGeneration@@QAE_NMMIIII@Z,"public: bool __thiscall ASimJPHeightFieldGeneration::CheckHeight(float,float,unsigned int,unsigned int,unsigned int,unsigned int)"
+49,0x15570,0x10015570,?CheckSection@ASimJPHeightFieldGeneration@@QAEXII@Z,"public: void __thiscall ASimJPHeightFieldGeneration::CheckSection(unsigned int,unsigned int)"
+50,0xe610,0x1000e610,?ChopAboveOne@ASimJPHeightFieldGeneration@@QAEXXZ,public: void __thiscall ASimJPHeightFieldGeneration::ChopAboveOne(void)
+51,0xe5a0,0x1000e5a0,?ChopNegative@ASimJPHeightFieldGeneration@@QAEXXZ,public: void __thiscall ASimJPHeightFieldGeneration::ChopNegative(void)
+52,0x1ad50,0x1001ad50,?ClampPositionToTerrain@ASimJPTerrain@@QBE_NAAH0@Z,"public: bool __thiscall ASimJPTerrain::ClampPositionToTerrain(int &,int &)const "
+53,0x1adb0,0x1001adb0,?ClampPositionToTerrain@ASimJPTerrain@@QBE_NAAVTVector2@Toshi@@@Z,public: bool __thiscall ASimJPTerrain::ClampPositionToTerrain(class Toshi::TVector2 &)const 
+54,0x1ae60,0x1001ae60,?ClampPositionToTerrain@ASimJPTerrain@@QBE_NAAVTVector3@Toshi@@@Z,public: bool __thiscall ASimJPTerrain::ClampPositionToTerrain(class Toshi::TVector3 &)const 
+55,0x1bf60,0x1001bf60,?ClearRegion@ASimJPTerrain@@QAEXIIII@Z,"public: void __thiscall ASimJPTerrain::ClearRegion(unsigned int,unsigned int,unsigned int,unsigned int)"
+56,0x1a940,0x1001a940,?ClearRegionLeaveFence@ASimJPTerrain@@QAEXIIII@Z,"public: void __thiscall ASimJPTerrain::ClearRegionLeaveFence(unsigned int,unsigned int,unsigned int,unsigned int)"
+57,0x1a9c0,0x1001a9c0,?ClearTreesInRegion@ASimJPTerrain@@QAEXIIII@Z,"public: void __thiscall ASimJPTerrain::ClearTreesInRegion(unsigned int,unsigned int,unsigned int,unsigned int)"
+58,0x1bef0,0x1001bef0,?ComputeAuxBuffer@ASimJPTerrain@@EAEXII@Z,"private: virtual void __thiscall ASimJPTerrain::ComputeAuxBuffer(unsigned int,unsigned int)"
+59,0x160b0,0x100160b0,?ComputeGrassMask@ASimJPPrevTerrain@@UAEIPAVTTerrainSection@Toshi@@@Z,public: virtual unsigned int __thiscall ASimJPPrevTerrain::ComputeGrassMask(class Toshi::TTerrainSection *)
+60,0x17d60,0x10017d60,?ComputeGrassMask@ASimJPTerrain@@UAEIPAVTTerrainSection@Toshi@@@Z,public: virtual unsigned int __thiscall ASimJPTerrain::ComputeGrassMask(class Toshi::TTerrainSection *)
+61,0x15dd0,0x10015dd0,?ComputeShadowBuffer@ASimJPPrevTerrain@@UAEXAAVTShadowFieldBuffer@Toshi@@IIII@Z,"public: virtual void __thiscall ASimJPPrevTerrain::ComputeShadowBuffer(class Toshi::TShadowFieldBuffer &,unsigned int,unsigned int,unsigned int,unsigned int)"
+62,0x17af0,0x10017af0,?ComputeShadowBuffer@ASimJPTerrain@@UAEXAAVTShadowFieldBuffer@Toshi@@IIII@Z,"public: virtual void __thiscall ASimJPTerrain::ComputeShadowBuffer(class Toshi::TShadowFieldBuffer &,unsigned int,unsigned int,unsigned int,unsigned int)"
+63,0x15970,0x10015970,?ComputeStrataBuffer@ASimJPPrevTerrain@@UAEXAAVTStrataFieldBuffer@Toshi@@IIII@Z,"public: virtual void __thiscall ASimJPPrevTerrain::ComputeStrataBuffer(class Toshi::TStrataFieldBuffer &,unsigned int,unsigned int,unsigned int,unsigned int)"
+64,0x17820,0x10017820,?ComputeStrataBuffer@ASimJPTerrain@@UAEXAAVTStrataFieldBuffer@Toshi@@IIII@Z,"public: virtual void __thiscall ASimJPTerrain::ComputeStrataBuffer(class Toshi::TStrataFieldBuffer &,unsigned int,unsigned int,unsigned int,unsigned int)"
+65,0x1b960,0x1001b960,?ComputeStrataPoint@ASimJPTerrain@@AAEMII@Z,"private: float __thiscall ASimJPTerrain::ComputeStrataPoint(unsigned int,unsigned int)"
+66,0x9430,0x10009430,?ConvertPosToUISquareCoords@ASimJPTerrain@@QBEXHHAAE0@Z,"public: void __thiscall ASimJPTerrain::ConvertPosToUISquareCoords(int,int,unsigned char &,unsigned char &)const "
+67,0xef70,0x1000ef70,?ConvertToHeightField@ASimJPHeightFieldGeneration@@QAEXPAVASimJPRiverGeneration@@_NMM@Z,"public: void __thiscall ASimJPHeightFieldGeneration::ConvertToHeightField(class ASimJPRiverGeneration *,bool,float,float)"
+68,0xf830,0x1000f830,?ConvertToHeightField@ASimJPHeightFieldGeneration@@QAEXPAVASimJPTendrilsGeneration@@HHHH_NMM@Z,"public: void __thiscall ASimJPHeightFieldGeneration::ConvertToHeightField(class ASimJPTendrilsGeneration *,int,int,int,int,bool,float,float)"
+69,0x162b0,0x100162b0,?ConvertToHeightField@ASimJPRiverGeneration@@QAEPAVASimJPHeightFieldGeneration@@HH_N@Z,"public: class ASimJPHeightFieldGeneration * __thiscall ASimJPRiverGeneration::ConvertToHeightField(int,int,bool)"
+70,0x9400,0x10009400,?ConvertUISquareCoordsToPos@ASimJPTerrain@@QBEXEEAAH0@Z,"public: void __thiscall ASimJPTerrain::ConvertUISquareCoordsToPos(unsigned char,unsigned char,int &,int &)const "
+71,0x8e80,0x10008e80,?Copy@ASimJPHeightField@@QAEXPAVASimJPHeightFieldGeneration@@@Z,public: void __thiscall ASimJPHeightField::Copy(class ASimJPHeightFieldGeneration *)
+72,0xc740,0x1000c740,?Copy@ASimJPHeightFieldGeneration@@QAEPAV1@XZ,public: class ASimJPHeightFieldGeneration * __thiscall ASimJPHeightFieldGeneration::Copy(void)
+73,0x17f50,0x10017f50,?Copy@ASimJPTerrain@@QAEXPAVASimJPHeightFieldGeneration@@@Z,public: void __thiscall ASimJPTerrain::Copy(class ASimJPHeightFieldGeneration *)
+74,0x78a0,0x100078a0,?CopyHeightField@ASimJPHeightField@@AAEXAAVASimJPHeightFieldGeneration@@@Z,private: void __thiscall ASimJPHeightField::CopyHeightField(class ASimJPHeightFieldGeneration &)
+75,0xc7d0,0x1000c7d0,?CopyRegion@ASimJPHeightFieldGeneration@@QAEPAV1@HHHH@Z,"public: class ASimJPHeightFieldGeneration * __thiscall ASimJPHeightFieldGeneration::CopyRegion(int,int,int,int)"
+76,0x160d0,0x100160d0,?Create@ASimJPPrevTerrain@@UAEXIIPAVTRenderInterface@Toshi@@PBD@Z,"public: virtual void __thiscall ASimJPPrevTerrain::Create(unsigned int,unsigned int,class Toshi::TRenderInterface *,char const *)"
+77,0x171a0,0x100171a0,?Create@ASimJPTerrain@@UAEXIIPAVTRenderInterface@Toshi@@PBD@Z,"public: virtual void __thiscall ASimJPTerrain::Create(unsigned int,unsigned int,class Toshi::TRenderInterface *,char const *)"
+78,0x137e0,0x100137e0,?CreateCircle@ASimJPHeightFieldGeneration@@QAEXII_N@Z,"public: void __thiscall ASimJPHeightFieldGeneration::CreateCircle(unsigned int,unsigned int,bool)"
+79,0xa820,0x1000a820,?CreateEntireIsland@ASimJPHeightFieldGeneration@@QAEXIMMMMHHHHHMMM@Z,"public: void __thiscall ASimJPHeightFieldGeneration::CreateEntireIsland(unsigned int,float,float,float,float,int,int,int,int,int,float,float,float)"
+80,0xb540,0x1000b540,?CreateIslaNublar@ASimJPHeightFieldGeneration@@QAEXXZ,public: void __thiscall ASimJPHeightFieldGeneration::CreateIslaNublar(void)
+81,0x11c60,0x10011c60,?CreateIslandShape@ASimJPHeightFieldGeneration@@QAEXIIMW4GENERATION_ISLAND_SHAPE@1@@Z,"public: void __thiscall ASimJPHeightFieldGeneration::CreateIslandShape(unsigned int,unsigned int,float,enum ASimJPHeightFieldGeneration::GENERATION_ISLAND_SHAPE)"
+82,0x4b80,0x10004b80,?CreateMountain@ASimJPHeightField@@QAEXABVTVector2@Toshi@@MM@Z,"public: void __thiscall ASimJPHeightField::CreateMountain(class Toshi::TVector2 const &,float,float)"
+83,0xe690,0x1000e690,?CreateMountain@ASimJPHeightFieldGeneration@@QAEXHHHHMM_N0@Z,"public: void __thiscall ASimJPHeightFieldGeneration::CreateMountain(int,int,int,int,float,float,bool,bool)"
+84,0x8f00,0x10008f00,?CreateObject@ASimJPHeightField@@CGPAVTObject@Toshi@@XZ,private: static class Toshi::TObject * __stdcall ASimJPHeightField::CreateObject(void)
+85,0x16140,0x10016140,?CreateObject@ASimJPPrevTerrain@@CGPAVTObject@Toshi@@XZ,private: static class Toshi::TObject * __stdcall ASimJPPrevTerrain::CreateObject(void)
+86,0x1c1d0,0x1001c1d0,?CreateObject@ASimJPTerrain@@CGPAVTObject@Toshi@@XZ,private: static class Toshi::TObject * __stdcall ASimJPTerrain::CreateObject(void)
+87,0x8ee0,0x10008ee0,?CreateObjectInPlace@ASimJPHeightField@@CGPAVTObject@Toshi@@PAX@Z,private: static class Toshi::TObject * __stdcall ASimJPHeightField::CreateObjectInPlace(void *)
+88,0x16120,0x10016120,?CreateObjectInPlace@ASimJPPrevTerrain@@CGPAVTObject@Toshi@@PAX@Z,private: static class Toshi::TObject * __stdcall ASimJPPrevTerrain::CreateObjectInPlace(void *)
+89,0x1c1b0,0x1001c1b0,?CreateObjectInPlace@ASimJPTerrain@@CGPAVTObject@Toshi@@PAX@Z,private: static class Toshi::TObject * __stdcall ASimJPTerrain::CreateObjectInPlace(void *)
+90,0xaed0,0x1000aed0,?CreatePreviewIsland@ASimJPHeightFieldGeneration@@QAEXIIIMMMMHHHHHMMM@Z,"public: void __thiscall ASimJPHeightFieldGeneration::CreatePreviewIsland(unsigned int,unsigned int,unsigned int,float,float,float,float,int,int,int,int,int,float,float,float)"
+91,0x165a0,0x100165a0,?CreateRiver@ASimJPRiverGeneration@@AAEXMMMMM@Z,"private: void __thiscall ASimJPRiverGeneration::CreateRiver(float,float,float,float,float)"
+92,0x122f0,0x100122f0,?CreateRivers@ASimJPHeightFieldGeneration@@QAEXIIPAVTVector2@Toshi@@0HH@Z,"public: void __thiscall ASimJPHeightFieldGeneration::CreateRivers(unsigned int,unsigned int,class Toshi::TVector2 *,class Toshi::TVector2 *,int,int)"
+93,0x5690,0x10005690,?CreateTerrain@ASimJPHeightField@@QAEXW4TERRAIN_TYPE@1@IIIIMM@Z,"public: void __thiscall ASimJPHeightField::CreateTerrain(enum ASimJPHeightField::TERRAIN_TYPE,unsigned int,unsigned int,unsigned int,unsigned int,float,float)"
+94,0x8ec0,0x10008ec0,?DeinitialiseStatic@ASimJPHeightField@@CGXXZ,private: static void __stdcall ASimJPHeightField::DeinitialiseStatic(void)
+95,0x16100,0x10016100,?DeinitialiseStatic@ASimJPPrevTerrain@@CGXXZ,private: static void __stdcall ASimJPPrevTerrain::DeinitialiseStatic(void)
+96,0x1c190,0x1001c190,?DeinitialiseStatic@ASimJPTerrain@@CGXXZ,private: static void __stdcall ASimJPTerrain::DeinitialiseStatic(void)
+97,0x1ac40,0x1001ac40,?Deserialise@ASimJPTerrain@@QAE_NPAVTFile@Toshi@@@Z,public: bool __thiscall ASimJPTerrain::Deserialise(class Toshi::TFile *)
+98,0x1c150,0x1001c150,?Destroy@ASimJPTerrain@@UAEXXZ,public: virtual void __thiscall ASimJPTerrain::Destroy(void)
+99,0x14f90,0x10014f90,?DoesMountainFit@ASimJPHeightFieldGeneration@@QAE_NIIPBVTVector2@Toshi@@PAMHHMM@Z,"public: bool __thiscall ASimJPHeightFieldGeneration::DoesMountainFit(unsigned int,unsigned int,class Toshi::TVector2 const *,float *,int,int,float,float)"
+100,0x14190,0x10014190,?EmphasizeCenter@ASimJPHeightFieldGeneration@@QAEXM@Z,public: void __thiscall ASimJPHeightFieldGeneration::EmphasizeCenter(float)
+101,0x9750,0x10009750,?EnableScratchPad@ASimJPHeightFieldGeneration@@QAEXXZ,public: void __thiscall ASimJPHeightFieldGeneration::EnableScratchPad(void)
+102,0x10070,0x10010070,?FastDiamondSquare@ASimJPHeightFieldGeneration@@QAE_NGGGGG@Z,"public: bool __thiscall ASimJPHeightFieldGeneration::FastDiamondSquare(unsigned short,unsigned short,unsigned short,unsigned short,unsigned short)"
+103,0x7730,0x10007730,?FlattenPath@ASimJPHeightField@@QAEXABVTVector2@Toshi@@0II@Z,"public: void __thiscall ASimJPHeightField::FlattenPath(class Toshi::TVector2 const &,class Toshi::TVector2 const &,unsigned int,unsigned int)"
+104,0x7c80,0x10007c80,?FlattenPathPoint@ASimJPHeightField@@AAEXVTVector2@Toshi@@W4eTerrainDirEnum@1@II@Z,"private: void __thiscall ASimJPHeightField::FlattenPathPoint(class Toshi::TVector2,enum ASimJPHeightField::eTerrainDirEnum,unsigned int,unsigned int)"
+105,0x7340,0x10007340,?FlattenRegion@ASimJPHeightField@@QAEXIIII@Z,"public: void __thiscall ASimJPHeightField::FlattenRegion(unsigned int,unsigned int,unsigned int,unsigned int)"
+106,0xef00,0x1000ef00,?FlipXY@ASimJPHeightFieldGeneration@@QAEXXZ,public: void __thiscall ASimJPHeightFieldGeneration::FlipXY(void)
+107,0x17ea0,0x10017ea0,?GenerateCustom@ASimJPTerrain@@QAEXIMMMMHHHHHMMM@Z,"public: void __thiscall ASimJPTerrain::GenerateCustom(unsigned int,float,float,float,float,int,int,int,int,int,float,float,float)"
+108,0x3710,0x10003710,?GenerateCustomHeightField@ASimJPHeightField@@QAEXIMMMMHHHHHMMM@Z,"public: void __thiscall ASimJPHeightField::GenerateCustomHeightField(unsigned int,float,float,float,float,int,int,int,int,int,float,float,float)"
+109,0x36b0,0x100036b0,?GenerateIslaNublar@ASimJPHeightField@@QAEXXZ,public: void __thiscall ASimJPHeightField::GenerateIslaNublar(void)
+110,0x17fc0,0x10017fc0,?GenerateIslaNublar@ASimJPTerrain@@QAEXXZ,public: void __thiscall ASimJPTerrain::GenerateIslaNublar(void)
+111,0x9200,0x10009200,?GetBLUIFromFlags@ASimJPTerrain@@SGII@Z,public: static unsigned int __stdcall ASimJPTerrain::GetBLUIFromFlags(unsigned int)
+112,0x91e0,0x100091e0,?GetBRUIFromFlags@ASimJPTerrain@@SGII@Z,public: static unsigned int __stdcall ASimJPTerrain::GetBRUIFromFlags(unsigned int)
+113,0x9500,0x10009500,?GetBlendXEnd@ASimJPHeightField@@QAEGI@Z,public: unsigned short __thiscall ASimJPHeightField::GetBlendXEnd(unsigned int)
+114,0x9520,0x10009520,?GetBlendXStart@ASimJPHeightField@@QAEGI@Z,public: unsigned short __thiscall ASimJPHeightField::GetBlendXStart(unsigned int)
+115,0x94c0,0x100094c0,?GetBlendZEnd@ASimJPHeightField@@QAEGI@Z,public: unsigned short __thiscall ASimJPHeightField::GetBlendZEnd(unsigned int)
+116,0x94e0,0x100094e0,?GetBlendZStart@ASimJPHeightField@@QAEGI@Z,public: unsigned short __thiscall ASimJPHeightField::GetBlendZStart(unsigned int)
+117,0x8f30,0x10008f30,?GetClass@ASimJPHeightField@@UBEAAVTClass@Toshi@@XZ,public: virtual class Toshi::TClass & __thiscall ASimJPHeightField::GetClass(void)const 
+118,0x16170,0x10016170,?GetClass@ASimJPPrevTerrain@@UBEAAVTClass@Toshi@@XZ,public: virtual class Toshi::TClass & __thiscall ASimJPPrevTerrain::GetClass(void)const 
+119,0x1c200,0x1001c200,?GetClass@ASimJPTerrain@@UBEAAVTClass@Toshi@@XZ,public: virtual class Toshi::TClass & __thiscall ASimJPTerrain::GetClass(void)const 
+120,0x28e0,0x100028e0,?GetCurSectionTextureValue@APerlinNoise@@QAEEHHHH@Z,"public: unsigned char __thiscall APerlinNoise::GetCurSectionTextureValue(int,int,int,int)"
+121,0x2980,0x10002980,?GetCurSectionTextureValue@APerlinNoise@@QAEMMM@Z,"public: float __thiscall APerlinNoise::GetCurSectionTextureValue(float,float)"
+122,0x15610,0x10015610,?GetData@ASimJPHeightFieldGeneration@@QAEMHH@Z,"public: float __thiscall ASimJPHeightFieldGeneration::GetData(int,int)"
+123,0x9560,0x10009560,?GetDeformMaxX@ASimJPHeightField@@QAEHXZ,public: int __thiscall ASimJPHeightField::GetDeformMaxX(void)
+124,0x9540,0x10009540,?GetDeformMaxZ@ASimJPHeightField@@QAEHXZ,public: int __thiscall ASimJPHeightField::GetDeformMaxZ(void)
+125,0x9570,0x10009570,?GetDeformMinX@ASimJPHeightField@@QAEHXZ,public: int __thiscall ASimJPHeightField::GetDeformMinX(void)
+126,0x9550,0x10009550,?GetDeformMinZ@ASimJPHeightField@@QAEHXZ,public: int __thiscall ASimJPHeightField::GetDeformMinZ(void)
+127,0x7fe0,0x10007fe0,?GetDirection@ASimJPHeightField@@AAEXABVTVector2@Toshi@@0AAV23@AAMAAW4eTerrainDirEnum@1@@Z,"private: void __thiscall ASimJPHeightField::GetDirection(class Toshi::TVector2 const &,class Toshi::TVector2 const &,class Toshi::TVector2 &,float &,enum ASimJPHeightField::eTerrainDirEnum &)"
+128,0x9490,0x10009490,?GetFieldUIBlocksX@ASimJPTerrain@@QAEHXZ,public: int __thiscall ASimJPTerrain::GetFieldUIBlocksX(void)
+129,0x9480,0x10009480,?GetFieldUIBlocksZ@ASimJPTerrain@@QAEHXZ,public: int __thiscall ASimJPTerrain::GetFieldUIBlocksZ(void)
+130,0x1c0c0,0x1001c0c0,?GetFlags@ASimJPTerrain@@QBEIII@Z,"public: unsigned int __thiscall ASimJPTerrain::GetFlags(unsigned int,unsigned int)const "
+131,0x155d0,0x100155d0,?GetHeight@ASimJPHeightFieldGeneration@@QAEHXZ,public: int __thiscall ASimJPHeightFieldGeneration::GetHeight(void)
+132,0x91b0,0x100091b0,?GetHeightWithOffset@ASimJPTerrain@@QAEXAAVTVector3@Toshi@@@Z,public: void __thiscall ASimJPTerrain::GetHeightWithOffset(class Toshi::TVector3 &)
+133,0x15390,0x10015390,?GetInlandMountainPos@ASimJPHeightFieldGeneration@@QAEXAAMMH@Z,"public: void __thiscall ASimJPHeightFieldGeneration::GetInlandMountainPos(float &,float,int)"
+134,0x94b0,0x100094b0,?GetKernel@ASimJPHeightField@@QAEPAVTKernelInterface@Toshi@@XZ,public: class Toshi::TKernelInterface * __thiscall ASimJPHeightField::GetKernel(void)
+135,0x3440,0x10003440,?GetKernel@ASimJPHeightFieldGeneration@@QAEPAVTKernelInterface@Toshi@@XZ,public: class Toshi::TKernelInterface * __thiscall ASimJPHeightFieldGeneration::GetKernel(void)
+136,0x9270,0x10009270,?GetKernel@ASimJPTerrain@@QAEPAVTKernelInterface@Toshi@@XZ,public: class Toshi::TKernelInterface * __thiscall ASimJPTerrain::GetKernel(void)
+137,0x9180,0x10009180,?GetLODHeightWithOffset@ASimJPTerrain@@QAEXAAVTVector3@Toshi@@@Z,public: void __thiscall ASimJPTerrain::GetLODHeightWithOffset(class Toshi::TVector3 &)
+138,0x97c0,0x100097c0,?GetMagnitude@ASimJPHeightFieldGeneration@@QAEMXZ,public: float __thiscall ASimJPHeightFieldGeneration::GetMagnitude(void)
+139,0x7be0,0x10007be0,?GetMaxAndMinHeight@ASimJPHeightField@@AAEXIIIIAAM0@Z,"private: void __thiscall ASimJPHeightField::GetMaxAndMinHeight(unsigned int,unsigned int,unsigned int,unsigned int,float &,float &)"
+140,0x7010,0x10007010,?GetMaxAndMinLevelHeight@ASimJPHeightField@@QAEXIIIIAAM0@Z,"public: void __thiscall ASimJPHeightField::GetMaxAndMinLevelHeight(unsigned int,unsigned int,unsigned int,unsigned int,float &,float &)"
+141,0x13190,0x10013190,?GetNewRiverPositions@ASimJPHeightFieldGeneration@@QAE_NIIAAVTVector2@Toshi@@0_N@Z,"public: bool __thiscall ASimJPHeightFieldGeneration::GetNewRiverPositions(unsigned int,unsigned int,class Toshi::TVector2 &,class Toshi::TVector2 &,bool)"
+142,0x16e90,0x10016e90,?GetNext@ASimJPSingleTendril@ASimJPTendrilsGeneration@@QAEPAV12@XZ,public: class ASimJPTendrilsGeneration::ASimJPSingleTendril * __thiscall ASimJPTendrilsGeneration::ASimJPSingleTendril::GetNext(void)
+143,0x16730,0x10016730,?GetNoOfPoints@ASimJPRiverGeneration@@QAEHXZ,public: int __thiscall ASimJPRiverGeneration::GetNoOfPoints(void)
+144,0x93f0,0x100093f0,?GetNoiseTexture@ASimJPTerrain@@QAEAAVAPerlinNoise@@XZ,public: class APerlinNoise & __thiscall ASimJPTerrain::GetNoiseTexture(void)
+145,0x15730,0x10015730,?GetNumberOfTendrils@ASimJPTendrilsGeneration@@QAEHXZ,public: int __thiscall ASimJPTendrilsGeneration::GetNumberOfTendrils(void)
+146,0x23d0,0x100023d0,?GetPerlinNoise@APerlinNoise@@QAEMMM@Z,"public: float __thiscall APerlinNoise::GetPerlinNoise(float,float)"
+147,0x16740,0x10016740,?GetPoint@ASimJPRiverGeneration@@QAEXHAAM0@Z,"public: void __thiscall ASimJPRiverGeneration::GetPoint(int,float &,float &)"
+148,0x155f0,0x100155f0,?GetScratchData@ASimJPHeightFieldGeneration@@QAEMHH@Z,"public: float __thiscall ASimJPHeightFieldGeneration::GetScratchData(int,int)"
+149,0x3340,0x10003340,?GetSectionTexture@APerlinNoise@@QAEPAEII@Z,"public: unsigned char * __thiscall APerlinNoise::GetSectionTexture(unsigned int,unsigned int)"
+150,0x1aa50,0x1001aa50,?GetShadow@ASimJPTerrain@@UBEMII@Z,"public: virtual float __thiscall ASimJPTerrain::GetShadow(unsigned int,unsigned int)const "
+151,0x9240,0x10009240,?GetTLUIFromFlags@ASimJPTerrain@@SGII@Z,public: static unsigned int __stdcall ASimJPTerrain::GetTLUIFromFlags(unsigned int)
+152,0x9220,0x10009220,?GetTRUIFromFlags@ASimJPTerrain@@SGII@Z,public: static unsigned int __stdcall ASimJPTerrain::GetTRUIFromFlags(unsigned int)
+153,0x16f50,0x10016f50,?GetTendril@ASimJPTendrilsGeneration@@QAEPAVASimJPSingleTendril@1@H@Z,public: class ASimJPTendrilsGeneration::ASimJPSingleTendril * __thiscall ASimJPTendrilsGeneration::GetTendril(int)
+154,0x18020,0x10018020,?GetTerrainScore@ASimJPTerrain@@QBEMIIII@Z,"public: float __thiscall ASimJPTerrain::GetTerrainScore(unsigned int,unsigned int,unsigned int,unsigned int)const "
+155,0x1c130,0x1001c130,?GetTerrainScore@ASimJPTerrain@@QBEMXZ,public: float __thiscall ASimJPTerrain::GetTerrainScore(void)const 
+156,0x185a0,0x100185a0,?GetUIFlags@ASimJPTerrain@@QBEIII@Z,"public: unsigned int __thiscall ASimJPTerrain::GetUIFlags(unsigned int,unsigned int)const "
+157,0x155e0,0x100155e0,?GetWidth@ASimJPHeightFieldGeneration@@QAEHXZ,public: int __thiscall ASimJPHeightFieldGeneration::GetWidth(void)
+158,0xc9b0,0x1000c9b0,?HeightBasedSmooth@ASimJPHeightFieldGeneration@@QAEXHM@Z,"public: void __thiscall ASimJPHeightFieldGeneration::HeightBasedSmooth(int,float)"
+159,0x8ed0,0x10008ed0,?InitialiseStatic@ASimJPHeightField@@CGXXZ,private: static void __stdcall ASimJPHeightField::InitialiseStatic(void)
+160,0x16110,0x10016110,?InitialiseStatic@ASimJPPrevTerrain@@CGXXZ,private: static void __stdcall ASimJPPrevTerrain::InitialiseStatic(void)
+161,0x1c1a0,0x1001c1a0,?InitialiseStatic@ASimJPTerrain@@CGXXZ,private: static void __stdcall ASimJPTerrain::InitialiseStatic(void)
+162,0x1b660,0x1001b660,?InitializeGrass@ASimJPTerrain@@AAEXXZ,private: void __thiscall ASimJPTerrain::InitializeGrass(void)
+163,0x22e0,0x100022e0,?InitializePerlinNoise@APerlinNoise@@QAEXHMMMMMMMM@Z,"public: void __thiscall APerlinNoise::InitializePerlinNoise(int,float,float,float,float,float,float,float,float)"
+164,0x24a0,0x100024a0,?InitializeTexture@APerlinNoise@@QAEXIHMMMMMMMM@Z,"public: void __thiscall APerlinNoise::InitializeTexture(unsigned int,int,float,float,float,float,float,float,float,float)"
+165,0x1b730,0x1001b730,?InitializeUIFlags@ASimJPTerrain@@AAEXXZ,private: void __thiscall ASimJPTerrain::InitializeUIFlags(void)
+166,0x8870,0x10008870,?InvalidateSections@ASimJPHeightField@@AAEXAAVTVector2@Toshi@@E@Z,"private: void __thiscall ASimJPHeightField::InvalidateSections(class Toshi::TVector2 &,unsigned char)"
+167,0xe540,0x1000e540,?Invert@ASimJPHeightFieldGeneration@@QAEXXZ,public: void __thiscall ASimJPHeightFieldGeneration::Invert(void)
+168,0x9080,0x10009080,?IsBetweenDeepWaterAndHills@ASimJPTerrain@@AAE_NM@Z,private: bool __thiscall ASimJPTerrain::IsBetweenDeepWaterAndHills(float)
+169,0xbcc0,0x1000bcc0,?IsBuildableArea@ASimJPHeightFieldGeneration@@QAE_NII@Z,"public: bool __thiscall ASimJPHeightFieldGeneration::IsBuildableArea(unsigned int,unsigned int)"
+170,0x1c070,0x1001c070,?IsBuilding@ASimJPTerrain@@QBE_NII@Z,"public: bool __thiscall ASimJPTerrain::IsBuilding(unsigned int,unsigned int)const "
+171,0x9150,0x10009150,?IsBuildingFlag@ASimJPTerrain@@SG_NI@Z,public: static bool __stdcall ASimJPTerrain::IsBuildingFlag(unsigned int)
+172,0x18770,0x10018770,?IsBuildingInRegion@ASimJPTerrain@@QBE_NIIII@Z,"public: bool __thiscall ASimJPTerrain::IsBuildingInRegion(unsigned int,unsigned int,unsigned int,unsigned int)const "
+173,0x9110,0x10009110,?IsBuildingOrFenceFlag@ASimJPTerrain@@SG_NI@Z,public: static bool __stdcall ASimJPTerrain::IsBuildingOrFenceFlag(unsigned int)
+174,0x90b0,0x100090b0,?IsCloseToWater@ASimJPTerrain@@AAE_NM@Z,private: bool __thiscall ASimJPTerrain::IsCloseToWater(float)
+175,0x18310,0x10018310,?IsCoast@ASimJPTerrain@@QBE_NII@Z,"public: bool __thiscall ASimJPTerrain::IsCoast(unsigned int,unsigned int)const "
+176,0x9000,0x10009000,?IsEdgeOfHills@ASimJPTerrain@@AAE_NMMM@Z,"private: bool __thiscall ASimJPTerrain::IsEdgeOfHills(float,float,float)"
+177,0x8f40,0x10008f40,?IsEdgeOfMountain@ASimJPTerrain@@AAE_NMMM@Z,"private: bool __thiscall ASimJPTerrain::IsEdgeOfMountain(float,float,float)"
+178,0x1c050,0x1001c050,?IsFence@ASimJPTerrain@@QBE_NII@Z,"public: bool __thiscall ASimJPTerrain::IsFence(unsigned int,unsigned int)const "
+179,0x90e0,0x100090e0,?IsFreeBuildingFlag@ASimJPTerrain@@SG_NI@Z,public: static bool __stdcall ASimJPTerrain::IsFreeBuildingFlag(unsigned int)
+180,0x18d40,0x10018d40,?IsGrass@ASimJPTerrain@@QBE_NII@Z,"public: bool __thiscall ASimJPTerrain::IsGrass(unsigned int,unsigned int)const "
+181,0x8fc0,0x10008fc0,?IsHillsHeight@ASimJPTerrain@@AAE_NMMM@Z,"private: bool __thiscall ASimJPTerrain::IsHillsHeight(float,float,float)"
+182,0x1b270,0x1001b270,?IsInRegion@ASimJPTerrain@@ABE_NIIIII@Z,"private: bool __thiscall ASimJPTerrain::IsInRegion(unsigned int,unsigned int,unsigned int,unsigned int,unsigned int)const "
+183,0x1b3d0,0x1001b3d0,?IsInRegionFast@ASimJPTerrain@@ABE_NIIIIII@Z,"private: bool __thiscall ASimJPTerrain::IsInRegionFast(unsigned int,unsigned int,unsigned int,unsigned int,unsigned int,unsigned int)const "
+184,0x1c100,0x1001c100,?IsLand@ASimJPTerrain@@QBE_NII@Z,"public: bool __thiscall ASimJPTerrain::IsLand(unsigned int,unsigned int)const "
+185,0x18a10,0x10018a10,?IsLineObstructed@ASimJPTerrain@@QBE_NIIIIPAM_N1@Z,"public: bool __thiscall ASimJPTerrain::IsLineObstructed(unsigned int,unsigned int,unsigned int,unsigned int,float *,bool,bool)const "
+186,0x8fa0,0x10008fa0,?IsMountainHeight@ASimJPTerrain@@AAE_NMM@Z,"private: bool __thiscall ASimJPTerrain::IsMountainHeight(float,float)"
+187,0x1a900,0x1001a900,?IsObstructed@ASimJPTerrain@@QBE_NII@Z,"public: bool __thiscall ASimJPTerrain::IsObstructed(unsigned int,unsigned int)const "
+188,0x18730,0x10018730,?IsObstructedBuilding@ASimJPTerrain@@QBE_NII@Z,"public: bool __thiscall ASimJPTerrain::IsObstructedBuilding(unsigned int,unsigned int)const "
+189,0x18980,0x10018980,?IsObstructedInRegion@ASimJPTerrain@@QBE_NIIII@Z,"public: bool __thiscall ASimJPTerrain::IsObstructedInRegion(unsigned int,unsigned int,unsigned int,unsigned int)const "
+190,0x9040,0x10009040,?IsOnLand@ASimJPTerrain@@AAE_NM@Z,private: bool __thiscall ASimJPTerrain::IsOnLand(float)
+191,0x9450,0x10009450,?IsPositionValid@ASimJPTerrain@@QBE_NII@Z,"public: bool __thiscall ASimJPTerrain::IsPositionValid(unsigned int,unsigned int)const "
+192,0x1c030,0x1001c030,?IsRoad@ASimJPTerrain@@QBE_NII@Z,"public: bool __thiscall ASimJPTerrain::IsRoad(unsigned int,unsigned int)const "
+193,0x93c0,0x100093c0,?IsRoadInRegion@ASimJPTerrain@@QBE_NIIII@Z,"public: bool __thiscall ASimJPTerrain::IsRoadInRegion(unsigned int,unsigned int,unsigned int,unsigned int)const "
+194,0x9380,0x10009380,?IsRoadInRegionFast@ASimJPTerrain@@QBE_NIIII@Z,"public: bool __thiscall ASimJPTerrain::IsRoadInRegionFast(unsigned int,unsigned int,unsigned int,unsigned int)const "
+195,0x1bff0,0x1001bff0,?IsSafariPoint@ASimJPTerrain@@QBE_NII@Z,"public: bool __thiscall ASimJPTerrain::IsSafariPoint(unsigned int,unsigned int)const "
+196,0x1a0d0,0x1001a0d0,?IsSafeToLevelCircleRegionUI@ASimJPTerrain@@QBE_NIIABVTVector2@Toshi@@MMMM@Z,"public: bool __thiscall ASimJPTerrain::IsSafeToLevelCircleRegionUI(unsigned int,unsigned int,class Toshi::TVector2 const &,float,float,float,float)const "
+197,0x192a0,0x100192a0,?IsSafeToLevelSquareRegion@ASimJPTerrain@@QBE_NABVTVector2@Toshi@@IIMM@Z,"public: bool __thiscall ASimJPTerrain::IsSafeToLevelSquareRegion(class Toshi::TVector2 const &,unsigned int,unsigned int,float,float)const "
+198,0x1a440,0x1001a440,?IsSafeToLevelSquareRegionUI@ASimJPTerrain@@QBE_NIIABVTVector2@Toshi@@IIMM@Z,"public: bool __thiscall ASimJPTerrain::IsSafeToLevelSquareRegionUI(unsigned int,unsigned int,class Toshi::TVector2 const &,unsigned int,unsigned int,float,float)const "
+199,0x190b0,0x100190b0,?IsSafeToPlaceStructure@ASimJPTerrain@@QBE_NIIII@Z,"public: bool __thiscall ASimJPTerrain::IsSafeToPlaceStructure(unsigned int,unsigned int,unsigned int,unsigned int)const "
+200,0x8f80,0x10008f80,?IsSteep@ASimJPTerrain@@AAE_NMM@Z,"private: bool __thiscall ASimJPTerrain::IsSteep(float,float)"
+201,0x18950,0x10018950,?IsTree@ASimJPTerrain@@QBE_NII@Z,"public: bool __thiscall ASimJPTerrain::IsTree(unsigned int,unsigned int)const "
+202,0x92d0,0x100092d0,?IsUIFlagABuilding@ASimJPTerrain@@SG_NI@Z,public: static bool __stdcall ASimJPTerrain::IsUIFlagABuilding(unsigned int)
+203,0x9280,0x10009280,?IsUIFlagAObstructedBuilding@ASimJPTerrain@@SG_NI@Z,public: static bool __stdcall ASimJPTerrain::IsUIFlagAObstructedBuilding(unsigned int)
+204,0x92b0,0x100092b0,?IsUIFlagAPartiallyObstructedBuilding@ASimJPTerrain@@SG_NI@Z,public: static bool __stdcall ASimJPTerrain::IsUIFlagAPartiallyObstructedBuilding(unsigned int)
+205,0x9310,0x10009310,?IsUIFlagATree@ASimJPTerrain@@SG_NI@Z,public: static bool __stdcall ASimJPTerrain::IsUIFlagATree(unsigned int)
+206,0x9340,0x10009340,?IsUIFlagRoad@ASimJPTerrain@@SG_NI@Z,public: static bool __stdcall ASimJPTerrain::IsUIFlagRoad(unsigned int)
+207,0x9360,0x10009360,?IsUIFlagWater@ASimJPTerrain@@SG_NI@Z,public: static bool __stdcall ASimJPTerrain::IsUIFlagWater(unsigned int)
+208,0x9060,0x10009060,?IsUnderWater@ASimJPTerrain@@AAE_NM@Z,private: bool __thiscall ASimJPTerrain::IsUnderWater(float)
+209,0x1c010,0x1001c010,?IsWater@ASimJPTerrain@@QBE_NII@Z,"public: bool __thiscall ASimJPTerrain::IsWater(unsigned int,unsigned int)const "
+210,0x37b0,0x100037b0,?LevelCircleRegion@ASimJPHeightField@@QAEXABVTVector2@Toshi@@MMMMM@Z,"public: void __thiscall ASimJPHeightField::LevelCircleRegion(class Toshi::TVector2 const &,float,float,float,float,float)"
+211,0x4020,0x10004020,?LevelSquareRegion@ASimJPHeightField@@QAEXABVTVector2@Toshi@@IIMMM@Z,"public: void __thiscall ASimJPHeightField::LevelSquareRegion(class Toshi::TVector2 const &,unsigned int,unsigned int,float,float,float)"
+212,0xa300,0x1000a300,?LoadFullQuality@ASimJPHeightFieldGeneration@@QAE_NABVTCString@Toshi@@@Z,public: bool __thiscall ASimJPHeightFieldGeneration::LoadFullQuality(class Toshi::TCString const &)
+213,0xa410,0x1000a410,?LoadPPM@ASimJPHeightFieldGeneration@@QAE_NABVTCString@Toshi@@_N@Z,"public: bool __thiscall ASimJPHeightFieldGeneration::LoadPPM(class Toshi::TCString const &,bool)"
+214,0x1bf20,0x1001bf20,?LoadTerrainTextures@ASimJPTerrain@@QAEXXZ,public: void __thiscall ASimJPTerrain::LoadTerrainTextures(void)
+215,0x81d0,0x100081d0,?LockMultipleBuffers@ASimJPHeightField@@AAEXXZ,private: void __thiscall ASimJPHeightField::LockMultipleBuffers(void)
+216,0xee90,0x1000ee90,?LowerDepthResolution@ASimJPHeightFieldGeneration@@QAEXH@Z,public: void __thiscall ASimJPHeightFieldGeneration::LowerDepthResolution(int)
+217,0x86d0,0x100086d0,?MultipleBuffersGetData@ASimJPHeightField@@AAEMII@Z,"private: float __thiscall ASimJPHeightField::MultipleBuffersGetData(unsigned int,unsigned int)"
+218,0x82f0,0x100082f0,?MultipleBuffersSetData@ASimJPHeightField@@AAEXIIM@Z,"private: void __thiscall ASimJPHeightField::MultipleBuffersSetData(unsigned int,unsigned int,float)"
+219,0xe460,0x1000e460,?Normalize@ASimJPHeightFieldGeneration@@QAEXXZ,public: void __thiscall ASimJPHeightFieldGeneration::Normalize(void)
+220,0x16940,0x10016940,?Normalize@ASimJPTendrilsGeneration@@QAEXXZ,public: void __thiscall ASimJPTendrilsGeneration::Normalize(void)
+221,0x1bf90,0x1001bf90,?PlaceBuilding@ASimJPTerrain@@QAEXII@Z,"public: void __thiscall ASimJPTerrain::PlaceBuilding(unsigned int,unsigned int)"
+222,0x18e20,0x10018e20,?PlaceBuildingOverFence@ASimJPTerrain@@QAEXIIII@Z,"public: void __thiscall ASimJPTerrain::PlaceBuildingOverFence(unsigned int,unsigned int,unsigned int,unsigned int)"
+223,0x18ef0,0x10018ef0,?PlaceBuildingRegion@ASimJPTerrain@@QAEXIIIIAAUATerrainFootprintObstructionData@@@Z,"public: void __thiscall ASimJPTerrain::PlaceBuildingRegion(unsigned int,unsigned int,unsigned int,unsigned int,struct ATerrainFootprintObstructionData &)"
+224,0x18ea0,0x10018ea0,?PlaceBuildingRegion@ASimJPTerrain@@QAEXIIII_N@Z,"public: void __thiscall ASimJPTerrain::PlaceBuildingRegion(unsigned int,unsigned int,unsigned int,unsigned int,bool)"
+225,0x18fe0,0x10018fe0,?PlaceBuildingRegionFreeHigh@ASimJPTerrain@@QAEXIIIIH@Z,"public: void __thiscall ASimJPTerrain::PlaceBuildingRegionFreeHigh(unsigned int,unsigned int,unsigned int,unsigned int,int)"
+226,0x1b0f0,0x1001b0f0,?PlaceRegion@ASimJPTerrain@@AAEXIIIII_N@Z,"private: void __thiscall ASimJPTerrain::PlaceRegion(unsigned int,unsigned int,unsigned int,unsigned int,unsigned int,bool)"
+227,0x1bfd0,0x1001bfd0,?PlaceRoad@ASimJPTerrain@@QAEXII@Z,"public: void __thiscall ASimJPTerrain::PlaceRoad(unsigned int,unsigned int)"
+228,0x1bfb0,0x1001bfb0,?PlaceSafariPoint@ASimJPTerrain@@QAEXII@Z,"public: void __thiscall ASimJPTerrain::PlaceSafariPoint(unsigned int,unsigned int)"
+229,0x19070,0x10019070,?PlaceTreeRegion@ASimJPTerrain@@QAEXIIII_N@Z,"public: void __thiscall ASimJPTerrain::PlaceTreeRegion(unsigned int,unsigned int,unsigned int,unsigned int,bool)"
+230,0x17300,0x10017300,?Precache@ASimJPTerrain@@UAEXXZ,public: virtual void __thiscall ASimJPTerrain::Precache(void)
+231,0x18430,0x10018430,?RefreshGrassFlags@ASimJPTerrain@@QAEXIIII@Z,"public: void __thiscall ASimJPTerrain::RefreshGrassFlags(unsigned int,unsigned int,unsigned int,unsigned int)"
+232,0x16ef0,0x10016ef0,?ResetTraversal@ASimJPSingleTendril@ASimJPTendrilsGeneration@@QAEXXZ,public: void __thiscall ASimJPTendrilsGeneration::ASimJPSingleTendril::ResetTraversal(void)
+233,0x9d40,0x10009d40,?SaveAsErrorPPM@ASimJPHeightFieldGeneration@@QAEXABVTCString@Toshi@@IIII_N@Z,"public: void __thiscall ASimJPHeightFieldGeneration::SaveAsErrorPPM(class Toshi::TCString const &,unsigned int,unsigned int,unsigned int,unsigned int,bool)"
+234,0xa140,0x1000a140,?SaveAsFullQuality@ASimJPHeightFieldGeneration@@QAEXABVTCString@Toshi@@@Z,public: void __thiscall ASimJPHeightFieldGeneration::SaveAsFullQuality(class Toshi::TCString const &)
+235,0x9840,0x10009840,?SaveAsPPM@ASimJPHeightFieldGeneration@@QAEXABVTCString@Toshi@@_N1@Z,"public: void __thiscall ASimJPHeightFieldGeneration::SaveAsPPM(class Toshi::TCString const &,bool,bool)"
+236,0x1bf50,0x1001bf50,?SaveUIDataAsPPM@ASimJPTerrain@@QAEXABVTCString@Toshi@@@Z,public: void __thiscall ASimJPTerrain::SaveUIDataAsPPM(class Toshi::TCString const &)
+237,0xdf40,0x1000df40,?Scale@ASimJPHeightFieldGeneration@@QAEXM@Z,public: void __thiscall ASimJPHeightFieldGeneration::Scale(float)
+238,0xded0,0x1000ded0,?ScaleAndTranslate@ASimJPHeightFieldGeneration@@QAEXMM@Z,"public: void __thiscall ASimJPHeightFieldGeneration::ScaleAndTranslate(float,float)"
+239,0x1bf30,0x1001bf30,?Serialise@ASimJPTerrain@@QAE_NPAVTFile@Toshi@@@Z,public: bool __thiscall ASimJPTerrain::Serialise(class Toshi::TFile *)
+240,0xde70,0x1000de70,?SetAllZero@ASimJPHeightFieldGeneration@@QAEXXZ,public: void __thiscall ASimJPHeightFieldGeneration::SetAllZero(void)
+241,0x155b0,0x100155b0,?SetData@ASimJPHeightFieldGeneration@@QAEXHHM@Z,"public: void __thiscall ASimJPHeightFieldGeneration::SetData(int,int,float)"
+242,0xe0f0,0x1000e0f0,?SetEdgesZero@ASimJPHeightFieldGeneration@@QAEXHH@Z,"public: void __thiscall ASimJPHeightFieldGeneration::SetEdgesZero(int,int)"
+243,0x18540,0x10018540,?SetFlags@ASimJPTerrain@@QAEXIII@Z,"public: void __thiscall ASimJPTerrain::SetFlags(unsigned int,unsigned int,unsigned int)"
+244,0x94a0,0x100094a0,?SetKernel@ASimJPHeightField@@QAEXPAVTKernelInterface@Toshi@@@Z,public: void __thiscall ASimJPHeightField::SetKernel(class Toshi::TKernelInterface *)
+245,0x3430,0x10003430,?SetKernel@ASimJPHeightFieldGeneration@@QAEXPAVTKernelInterface@Toshi@@@Z,public: void __thiscall ASimJPHeightFieldGeneration::SetKernel(class Toshi::TKernelInterface *)
+246,0x9260,0x10009260,?SetKernel@ASimJPTerrain@@QAEXPAVTKernelInterface@Toshi@@@Z,public: void __thiscall ASimJPTerrain::SetKernel(class Toshi::TKernelInterface *)
+247,0x15590,0x10015590,?SetScratchData@ASimJPHeightFieldGeneration@@QAEXHHM@Z,"public: void __thiscall ASimJPHeightFieldGeneration::SetScratchData(int,int,float)"
+248,0x18660,0x10018660,?SetUIFlags@ASimJPTerrain@@QAEXIII@Z,"public: void __thiscall ASimJPTerrain::SetUIFlags(unsigned int,unsigned int,unsigned int)"
+249,0xdfb0,0x1000dfb0,?SobelDualEdgeMask@ASimJPHeightFieldGeneration@@QAEXPAM@Z,public: void __thiscall ASimJPHeightFieldGeneration::SobelDualEdgeMask(float *)
+250,0x165f0,0x100165f0,?Split@ASimJPRiverGeneration@@AAEXHH@Z,"private: void __thiscall ASimJPRiverGeneration::Split(int,int)"
+251,0xcbc0,0x1000cbc0,?SquareSmooth@ASimJPHeightFieldGeneration@@QAEXHHHHH@Z,"public: void __thiscall ASimJPHeightFieldGeneration::SquareSmooth(int,int,int,int,int)"
+252,0x15630,0x10015630,?SwapBuffers@ASimJPHeightFieldGeneration@@QAEXXZ,public: void __thiscall ASimJPHeightFieldGeneration::SwapBuffers(void)
+253,0x3c808,0x1003c808,?TerrainSectionGrass@ASimJPTerrain@@2IB,public: static unsigned int const ASimJPTerrain::TerrainSectionGrass
+254,0x3c80c,0x1003c80c,?TerrainSectionIsActive@ASimJPTerrain@@2IB,public: static unsigned int const ASimJPTerrain::TerrainSectionIsActive
+255,0xc440,0x1000c440,?Thicken@ASimJPHeightFieldGeneration@@QAEXMHW4ASimJPHeightFieldGenerationThickenType@@H@Z,"public: void __thiscall ASimJPHeightFieldGeneration::Thicken(float,int,enum ASimJPHeightFieldGenerationThickenType,int)"
+256,0xde00,0x1000de00,?TranslateHeight@ASimJPHeightFieldGeneration@@QAEXM@Z,public: void __thiscall ASimJPHeightFieldGeneration::TranslateHeight(float)
+257,0x8220,0x10008220,?UnLockMultipleBuffers@ASimJPHeightField@@AAEXXZ,private: void __thiscall ASimJPHeightField::UnLockMultipleBuffers(void)
+258,0x1bf10,0x1001bf10,?UnloadTerrainTextures@ASimJPTerrain@@QAEXXZ,public: void __thiscall ASimJPTerrain::UnloadTerrainTextures(void)
+259,0x39a20,0x10039a20,?g1@APerlinNoise@@0PAMA,private: static float * APerlinNoise::g1
+260,0x38a00,0x10038a00,?g2@APerlinNoise@@0PAY01MA,private: static float (* APerlinNoise::g2)[2]
+261,0x371e0,0x100371e0,?g3@APerlinNoise@@0PAY02MA,private: static float (* APerlinNoise::g3)[3]
+262,0x2100,0x10002100,?init@APerlinNoise@@QAEXI@Z,public: void __thiscall APerlinNoise::init(unsigned int)
+263,0x36980,0x10036980,?m_aInc@APerlinNoise@@0PAY01UAPerlinIncrement@1@A,private: static struct APerlinNoise::APerlinIncrement (* APerlinNoise::m_aInc)[2]
+264,0x24880,0x10024880,?m_aPerlinTexture@APerlinNoise@@0PAY0BA@UAPerlinSection@1@A,private: static struct APerlinNoise::APerlinSection (* APerlinNoise::m_aPerlinTexture)[16]
+265,0x24840,0x10024840,?m_avDir@ASimJPHeightField@@0QBVTVector2@Toshi@@B,private: static class Toshi::TVector2 const * const ASimJPHeightField::m_avDir
+266,0x24760,0x10024760,?m_oRand@ASimJPHeightFieldGeneration@@2VTRandom@Toshi@@A,public: static class Toshi::TRandom ASimJPHeightFieldGeneration::m_oRand
+267,0x24800,0x10024800,?m_sClass@ASimJPHeightField@@2VTClass@Toshi@@A,public: static class Toshi::TClass ASimJPHeightField::m_sClass
+268,0x24720,0x10024720,?m_sClass@ASimJPPrevTerrain@@2VTClass@Toshi@@A,public: static class Toshi::TClass ASimJPPrevTerrain::m_sClass
+269,0x246e0,0x100246e0,?m_sClass@ASimJPTerrain@@2VTClass@Toshi@@A,public: static class Toshi::TClass ASimJPTerrain::m_sClass
+270,0x2ad0,0x10002ad0,?noise1@APerlinNoise@@QAEMM@Z,public: float __thiscall APerlinNoise::noise1(float)
+271,0x2d30,0x10002d30,?noise2@APerlinNoise@@QAEMMM@Z,"public: float __thiscall APerlinNoise::noise2(float,float)"
+272,0x2b80,0x10002b80,?noise2@APerlinNoise@@QAEMQAM@Z,public: float __thiscall APerlinNoise::noise2(float * const)
+273,0x2ef0,0x10002ef0,?noise3@APerlinNoise@@QAEMQAM@Z,public: float __thiscall APerlinNoise::noise3(float * const)
+274,0x3290,0x10003290,?normalize2@APerlinNoise@@QAEXQAM@Z,public: void __thiscall APerlinNoise::normalize2(float * const)
+275,0x32c0,0x100032c0,?normalize3@APerlinNoise@@QAEXQAM@Z,public: void __thiscall APerlinNoise::normalize3(float * const)
+276,0x369c0,0x100369c0,?p@APerlinNoise@@0PAHA,private: static int * APerlinNoise::p
+277,0x3c7a0,0x1003c7a0,?s_uiBLUIShift@ASimJPTerrain@@2IB,public: static unsigned int const ASimJPTerrain::s_uiBLUIShift
+278,0x3c7a4,0x1003c7a4,?s_uiBRUIShift@ASimJPTerrain@@2IB,public: static unsigned int const ASimJPTerrain::s_uiBRUIShift
+279,0x3c7a8,0x1003c7a8,?s_uiBuilding@ASimJPTerrain@@2IB,public: static unsigned int const ASimJPTerrain::s_uiBuilding
+280,0x3c7c8,0x1003c7c8,?s_uiDirtyRoad@ASimJPTerrain@@2IB,public: static unsigned int const ASimJPTerrain::s_uiDirtyRoad
+281,0x3c7d0,0x1003c7d0,?s_uiDirtyRoadWithBench@ASimJPTerrain@@2IB,public: static unsigned int const ASimJPTerrain::s_uiDirtyRoadWithBench
+282,0x3c7d8,0x1003c7d8,?s_uiDirtyRoadWithBin@ASimJPTerrain@@2IB,public: static unsigned int const ASimJPTerrain::s_uiDirtyRoadWithBin
+283,0x3c7b0,0x1003c7b0,?s_uiFence@ASimJPTerrain@@2IB,public: static unsigned int const ASimJPTerrain::s_uiFence
+284,0x3c7ac,0x1003c7ac,?s_uiFreeBuilding@ASimJPTerrain@@2IB,public: static unsigned int const ASimJPTerrain::s_uiFreeBuilding
+285,0x3c7ec,0x1003c7ec,?s_uiFreeBuildingHighPlusBL@ASimJPTerrain@@2IB,public: static unsigned int const ASimJPTerrain::s_uiFreeBuildingHighPlusBL
+286,0x3c7f0,0x1003c7f0,?s_uiFreeBuildingHighPlusBR@ASimJPTerrain@@2IB,public: static unsigned int const ASimJPTerrain::s_uiFreeBuildingHighPlusBR
+287,0x3c7f4,0x1003c7f4,?s_uiFreeBuildingHighPlusTL@ASimJPTerrain@@2IB,public: static unsigned int const ASimJPTerrain::s_uiFreeBuildingHighPlusTL
+288,0x3c7f8,0x1003c7f8,?s_uiFreeBuildingHighPlusTR@ASimJPTerrain@@2IB,public: static unsigned int const ASimJPTerrain::s_uiFreeBuildingHighPlusTR
+289,0x3c7dc,0x1003c7dc,?s_uiFreeBuildingHighRectBL@ASimJPTerrain@@2IB,public: static unsigned int const ASimJPTerrain::s_uiFreeBuildingHighRectBL
+290,0x3c7e0,0x1003c7e0,?s_uiFreeBuildingHighRectBR@ASimJPTerrain@@2IB,public: static unsigned int const ASimJPTerrain::s_uiFreeBuildingHighRectBR
+291,0x3c7e4,0x1003c7e4,?s_uiFreeBuildingHighRectTL@ASimJPTerrain@@2IB,public: static unsigned int const ASimJPTerrain::s_uiFreeBuildingHighRectTL
+292,0x3c7e8,0x1003c7e8,?s_uiFreeBuildingHighRectTR@ASimJPTerrain@@2IB,public: static unsigned int const ASimJPTerrain::s_uiFreeBuildingHighRectTR
+293,0x3c7b8,0x1003c7b8,?s_uiModernTree@ASimJPTerrain@@2IB,public: static unsigned int const ASimJPTerrain::s_uiModernTree
+294,0x3c790,0x1003c790,?s_uiNumBitsPerUI@ASimJPTerrain@@2IB,public: static unsigned int const ASimJPTerrain::s_uiNumBitsPerUI
+295,0x3c7b4,0x1003c7b4,?s_uiPaleoTree@ASimJPTerrain@@2IB,public: static unsigned int const ASimJPTerrain::s_uiPaleoTree
+296,0x3c7fc,0x1003c7fc,?s_uiPartialObstructedBuilding@ASimJPTerrain@@2IB,public: static unsigned int const ASimJPTerrain::s_uiPartialObstructedBuilding
+297,0x3c800,0x1003c800,?s_uiRoad4Mask@ASimJPTerrain@@2IB,public: static unsigned int const ASimJPTerrain::s_uiRoad4Mask
+298,0x3c7bc,0x1003c7bc,?s_uiRoad@ASimJPTerrain@@2IB,public: static unsigned int const ASimJPTerrain::s_uiRoad
+299,0x3c7cc,0x1003c7cc,?s_uiRoadWithBench@ASimJPTerrain@@2IB,public: static unsigned int const ASimJPTerrain::s_uiRoadWithBench
+300,0x3c7d4,0x1003c7d4,?s_uiRoadWithBin@ASimJPTerrain@@2IB,public: static unsigned int const ASimJPTerrain::s_uiRoadWithBin
+301,0x3c7c4,0x1003c7c4,?s_uiSafariPoint@ASimJPTerrain@@2IB,public: static unsigned int const ASimJPTerrain::s_uiSafariPoint
+302,0x3c804,0x1003c804,?s_uiSerialise4Mask@ASimJPTerrain@@2IB,public: static unsigned int const ASimJPTerrain::s_uiSerialise4Mask
+303,0x3c798,0x1003c798,?s_uiTLUIShift@ASimJPTerrain@@2IB,public: static unsigned int const ASimJPTerrain::s_uiTLUIShift
+304,0x3c79c,0x1003c79c,?s_uiTRUIShift@ASimJPTerrain@@2IB,public: static unsigned int const ASimJPTerrain::s_uiTRUIShift
+305,0x3c810,0x1003c810,?s_uiTerrainUIBlockSize@ASimJPTerrain@@2IB,public: static unsigned int const ASimJPTerrain::s_uiTerrainUIBlockSize
+306,0x3c814,0x1003c814,?s_uiTerrainUIShift@ASimJPTerrain@@2IB,public: static unsigned int const ASimJPTerrain::s_uiTerrainUIShift
+307,0x3c794,0x1003c794,?s_uiUIMask@ASimJPTerrain@@2IB,public: static unsigned int const ASimJPTerrain::s_uiUIMask
+308,0x3c7c0,0x1003c7c0,?s_uiWater@ASimJPTerrain@@2IB,public: static unsigned int const ASimJPTerrain::s_uiWater
+309,0x24710,0x10024710,?s_vSunlight@ASimJPTerrain@@2VTVector3@Toshi@@B,public: static class Toshi::TVector3 const ASimJPTerrain::s_vSunlight
+310,0x241d4,0x100241d4,?sm_fDefaultBeachHeight@ASimJPHeightField@@2MA,public: static float ASimJPHeightField::sm_fDefaultBeachHeight
+311,0x3b3c0,0x1003b3c0,?sm_fDefaultDeformRatio@ASimJPHeightField@@2MB,public: static float const ASimJPHeightField::sm_fDefaultDeformRatio
+312,0x241d8,0x100241d8,?sm_fDefaultFalloff@ASimJPHeightField@@2MA,public: static float ASimJPHeightField::sm_fDefaultFalloff
+313,0x241e0,0x100241e0,?sm_fDefaultHillHeight@ASimJPHeightField@@2MA,public: static float ASimJPHeightField::sm_fDefaultHillHeight
+314,0x241dc,0x100241dc,?sm_fDefaultIslandShapePower@ASimJPHeightField@@2MA,public: static float ASimJPHeightField::sm_fDefaultIslandShapePower
+315,0x241fc,0x100241fc,?sm_fDefaultMaxPercentBuildableLand@ASimJPHeightField@@2MA,public: static float ASimJPHeightField::sm_fDefaultMaxPercentBuildableLand
+316,0x241f8,0x100241f8,?sm_fDefaultMinPercentBuildableLand@ASimJPHeightField@@2MA,public: static float ASimJPHeightField::sm_fDefaultMinPercentBuildableLand
+317,0x24200,0x10024200,?sm_fDefaultWaterHeight@ASimJPHeightField@@2MA,public: static float ASimJPHeightField::sm_fDefaultWaterHeight
+318,0x24828,0x10024828,?sm_fDeformNoiseMag@ASimJPHeightField@@2MA,public: static float ASimJPHeightField::sm_fDeformNoiseMag
+319,0x3b3b8,0x1003b3b8,?sm_fMaxHeight@ASimJPHeightField@@2MB,public: static float const ASimJPHeightField::sm_fMaxHeight
+320,0x3b3bc,0x1003b3bc,?sm_fMinHeight@ASimJPHeightField@@2MB,public: static float const ASimJPHeightField::sm_fMinHeight
+321,0x241ec,0x100241ec,?sm_iDefaultMaxMountainHeight@ASimJPHeightField@@2HA,public: static int ASimJPHeightField::sm_iDefaultMaxMountainHeight
+322,0x241e8,0x100241e8,?sm_iDefaultMaxMountainRadius@ASimJPHeightField@@2HA,public: static int ASimJPHeightField::sm_iDefaultMaxMountainRadius
+323,0x241e4,0x100241e4,?sm_iDefaultNoOfMountains@ASimJPHeightField@@2HA,public: static int ASimJPHeightField::sm_iDefaultNoOfMountains
+324,0x241f4,0x100241f4,?sm_iDefaultNoOfRiverJoins@ASimJPHeightField@@2HA,public: static int ASimJPHeightField::sm_iDefaultNoOfRiverJoins
+325,0x241f0,0x100241f0,?sm_iDefaultNoOfRivers@ASimJPHeightField@@2HA,public: static int ASimJPHeightField::sm_iDefaultNoOfRivers
+326,0x241d0,0x100241d0,?sm_uiDefaultSeed@ASimJPHeightField@@2IA,public: static unsigned int ASimJPHeightField::sm_uiDefaultSeed
+327,0x241a0,0x100241a0,?start@APerlinNoise@@0_NA,private: static bool APerlinNoise::start

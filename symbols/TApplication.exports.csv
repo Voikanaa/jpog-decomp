@@ -1,0 +1,18 @@
+ordinal,rva,va,name,demangled
+1,0x1490,0x10001490,??0TApplication@Toshi@@QAE@ABV01@@Z,public: __thiscall Toshi::TApplication::TApplication(class Toshi::TApplication const &)
+2,0x1150,0x10001150,??0TApplication@Toshi@@QAE@XZ,public: __thiscall Toshi::TApplication::TApplication(void)
+3,0x11a0,0x100011a0,??1TApplication@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TApplication::~TApplication(void)
+4,0x1420,0x10001420,??4TApplication@Toshi@@QAEAAV01@AAV01@@Z,public: class Toshi::TApplication & __thiscall Toshi::TApplication::operator=(class Toshi::TApplication &)
+5,0x4000,0x10004000,??_7TApplication@Toshi@@6B@,const Toshi::TApplication::`vftable'
+6,0x1260,0x10001260,?Create@TApplication@Toshi@@QAE_NPBDHQAPAD@Z,"public: bool __thiscall Toshi::TApplication::Create(char const *,int,char * * const)"
+7,0x1410,0x10001410,?Destroy@TApplication@Toshi@@QAEXXZ,public: void __thiscall Toshi::TApplication::Destroy(void)
+8,0x1340,0x10001340,?DisplayErrorMessageBox@TApplication@Toshi@@QAEXVTCString@2@@Z,public: void __thiscall Toshi::TApplication::DisplayErrorMessageBox(class Toshi::TCString)
+9,0x11e0,0x100011e0,?Execute@TApplication@Toshi@@QAE_NXZ,public: bool __thiscall Toshi::TApplication::Execute(void)
+10,0x14f0,0x100014f0,?GetKernel@TApplication@Toshi@@QAEPAVTKernelInterface@2@XZ,public: class Toshi::TKernelInterface * __thiscall Toshi::TApplication::GetKernel(void)
+11,0x1400,0x10001400,?IsCreated@TApplication@Toshi@@QAE_NXZ,public: bool __thiscall Toshi::TApplication::IsCreated(void)
+12,0x13e0,0x100013e0,?OnCreate@TApplication@Toshi@@UAE_NHQAPAD@Z,"public: virtual bool __thiscall Toshi::TApplication::OnCreate(int,char * * const)"
+13,0x13b0,0x100013b0,?OnDestroy@TApplication@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TApplication::OnDestroy(void)
+14,0x13c0,0x100013c0,?OnUpdate@TApplication@Toshi@@UAE_NM@Z,public: virtual bool __thiscall Toshi::TApplication::OnUpdate(float)
+15,0x1500,0x10001500,?SetVerbose@TApplication@Toshi@@QAEX_N@Z,public: void __thiscall Toshi::TApplication::SetVerbose(bool)
+16,0x1300,0x10001300,?ShowConsole@TApplication@Toshi@@QAE_N_N@Z,public: bool __thiscall Toshi::TApplication::ShowConsole(bool)
+17,0x1380,0x10001380,?ToggleConsole@TApplication@Toshi@@QAE_NXZ,public: bool __thiscall Toshi::TApplication::ToggleConsole(void)

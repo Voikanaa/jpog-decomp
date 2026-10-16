@@ -1,0 +1,83 @@
+dll,name,iat_rva,demangled
+TKernelInterface.dll,?m_sClass@TObject@Toshi@@2VTClass@2@A,0xa030,public: static class Toshi::TClass Toshi::TObject::m_sClass
+TKernelInterface.dll,??0TClass@Toshi@@QAE@PBDPAV01@P6GPAVTObject@1@XZP6GPAV21@PAX@ZP6GXXZ5I@Z,0xa034,"public: __thiscall Toshi::TClass::TClass(char const *,class Toshi::TClass *,class Toshi::TObject * (__stdcall*)(void),class Toshi::TObject * (__stdcall*)(void *),void (__stdcall*)(void),void (__stdcall*)(void),unsigned int)"
+TKernelInterface.dll,??1TFreeList@Toshi@@QAE@XZ,0xa038,public: __thiscall Toshi::TFreeList::~TFreeList(void)
+TKernelInterface.dll,??1TClass@Toshi@@QAE@XZ,0xa03c,public: __thiscall Toshi::TClass::~TClass(void)
+TKernelInterface.dll,?ms_sEmpty@TPCString@Toshi@@2VTCString@2@B,0xa040,public: static class Toshi::TCString const Toshi::TPCString::ms_sEmpty
+TKernelInterface.dll,?Compare@TPCString@Toshi@@QBEHABV12@@Z,0xa044,public: int __thiscall Toshi::TPCString::Compare(class Toshi::TPCString const &)const 
+TKernelInterface.dll,?IsEmpty@TCString@Toshi@@QBE_NXZ,0xa048,public: bool __thiscall Toshi::TCString::IsEmpty(void)const 
+TKernelInterface.dll,?tmalloc@@YGPAXHPADH@Z,0xa04c,"void * __stdcall tmalloc(int,char *,int)"
+TKernelInterface.dll,?Delete@TObject@Toshi@@UAEXXZ,0xa050,public: virtual void __thiscall Toshi::TObject::Delete(void)
+TKernelInterface.dll,?GetString@TCString@Toshi@@QBEPBDH@Z,0xa054,public: char const * __thiscall Toshi::TCString::GetString(int)const 
+TKernelInterface.dll,??HTCString@Toshi@@QBE?AV01@PBD@Z,0xa058,public: class Toshi::TCString __thiscall Toshi::TCString::operator+(char const *)const 
+TKernelInterface.dll,??YTCString@Toshi@@QAEAAV01@PBD@Z,0xa05c,public: class Toshi::TCString & __thiscall Toshi::TCString::operator+=(char const *)
+TKernelInterface.dll,??YTCString@Toshi@@QAEAAV01@ABV01@@Z,0xa060,public: class Toshi::TCString & __thiscall Toshi::TCString::operator+=(class Toshi::TCString const &)
+TKernelInterface.dll,??0TCString@Toshi@@QAE@ABV01@@Z,0xa064,public: __thiscall Toshi::TCString::TCString(class Toshi::TCString const &)
+TKernelInterface.dll,??0TCString@Toshi@@QAE@PBD@Z,0xa068,public: __thiscall Toshi::TCString::TCString(char const *)
+TKernelInterface.dll,??HToshi@@YG?AVTCString@0@ABV10@ABVTPCString@0@@Z,0xa06c,"class Toshi::TCString __stdcall Toshi::operator+(class Toshi::TCString const &,class Toshi::TPCString const &)"
+TKernelInterface.dll,??HTCString@Toshi@@QBE?AV01@PBG@Z,0xa070,public: class Toshi::TCString __thiscall Toshi::TCString::operator+(unsigned short const *)const 
+TKernelInterface.dll,??0TCString@Toshi@@QAE@ABVTWString@1@@Z,0xa074,public: __thiscall Toshi::TCString::TCString(class Toshi::TWString const &)
+TKernelInterface.dll,??0TCString@Toshi@@QAE@PBG@Z,0xa078,public: __thiscall Toshi::TCString::TCString(unsigned short const *)
+TKernelInterface.dll,??YTWString@Toshi@@QAEAAV01@ABV01@@Z,0xa07c,public: class Toshi::TWString & __thiscall Toshi::TWString::operator+=(class Toshi::TWString const &)
+TKernelInterface.dll,??1TWString@Toshi@@QAE@XZ,0xa080,public: __thiscall Toshi::TWString::~TWString(void)
+TKernelInterface.dll,??0TWString@Toshi@@QAE@ABVTCString@1@@Z,0xa084,public: __thiscall Toshi::TWString::TWString(class Toshi::TCString const &)
+TKernelInterface.dll,??0TWString@Toshi@@QAE@PBD@Z,0xa088,public: __thiscall Toshi::TWString::TWString(char const *)
+TKernelInterface.dll,?Find@TCString@Toshi@@QBEHDH@Z,0xa08c,"public: int __thiscall Toshi::TCString::Find(char,int)const "
+TKernelInterface.dll,?Mid@TCString@Toshi@@QBE?AV12@HH@Z,0xa090,"public: class Toshi::TCString __thiscall Toshi::TCString::Mid(int,int)const "
+TKernelInterface.dll,??0TGenericListener@Toshi@@IAE@XZ,0xa094,protected: __thiscall Toshi::TGenericListener::TGenericListener(void)
+TKernelInterface.dll,??0TGenericEmitter@Toshi@@IAE@PAX@Z,0xa098,protected: __thiscall Toshi::TGenericEmitter::TGenericEmitter(void *)
+TKernelInterface.dll,?Destroy@TFile@Toshi@@SGXPAV12@@Z,0xa09c,public: static void __stdcall Toshi::TFile::Destroy(class Toshi::TFile *)
+TKernelInterface.dll,??1TGenericListener@Toshi@@IAE@XZ,0xa0a0,protected: __thiscall Toshi::TGenericListener::~TGenericListener(void)
+TKernelInterface.dll,?Delete@TPooledCString@Toshi@@AAEXXZ,0xa0a4,private: void __thiscall Toshi::TPooledCString::Delete(void)
+TKernelInterface.dll,??0TFreeList@Toshi@@QAE@HHHPAD@Z,0xa0a8,"public: __thiscall Toshi::TFreeList::TFreeList(int,int,int,char *)"
+TKernelInterface.dll,?Create@TFile@Toshi@@SGPAV12@ABVTCString@2@I@Z,0xa0ac,"public: static class Toshi::TFile * __stdcall Toshi::TFile::Create(class Toshi::TCString const &,unsigned int)"
+TKernelInterface.dll,?Connect@TGenericListener@Toshi@@IAEXPAVTGenericEmitter@2@PAXP6G_N111@ZH@Z,0xa0b0,"protected: void __thiscall Toshi::TGenericListener::Connect(class Toshi::TGenericEmitter *,void *,bool (__stdcall*)(void *,void *,void *),int)"
+TKernelInterface.dll,??4TCString@Toshi@@QAEAAV01@PBD@Z,0xa0b4,public: class Toshi::TCString & __thiscall Toshi::TCString::operator=(char const *)
+TKernelInterface.dll,??BTCString@Toshi@@QBEPBDXZ,0xa0b8,public: __thiscall Toshi::TCString::operator char const *(void)const 
+TKernelInterface.dll,?assign@Token@TFileLexerUTF8@Toshi@@QAEXABV123@@Z,0xa0bc,public: void __thiscall Toshi::TFileLexerUTF8::Token::assign(class Toshi::TFileLexerUTF8::Token const &)
+TKernelInterface.dll,?PeekNextToken@TFileLexerUTF8@Toshi@@QAE?AVToken@12@H@Z,0xa0c0,public: class Toshi::TFileLexerUTF8::Token __thiscall Toshi::TFileLexerUTF8::PeekNextToken(int)
+TKernelInterface.dll,?GetNextToken@TFileLexerUTF8@Toshi@@QAE?AVToken@12@XZ,0xa0c4,public: class Toshi::TFileLexerUTF8::Token __thiscall Toshi::TFileLexerUTF8::GetNextToken(void)
+TKernelInterface.dll,?Expect@TFileLexerUTF8@Toshi@@QAE_NW4TokenType@TFileLexer@2@AAVToken@12@@Z,0xa0c8,"public: bool __thiscall Toshi::TFileLexerUTF8::Expect(enum Toshi::TFileLexer::TokenType,class Toshi::TFileLexerUTF8::Token &)"
+TKernelInterface.dll,?Get@TCStringPool@Toshi@@QAE?AVTPCString@2@H@Z,0xa0cc,public: class Toshi::TPCString __thiscall Toshi::TCStringPool::Get(int)
+TKernelInterface.dll,?Throw@TGenericEmitter@Toshi@@IAEXPAX@Z,0xa0d0,protected: void __thiscall Toshi::TGenericEmitter::Throw(void *)
+TKernelInterface.dll,?Get@TLocale@Toshi@@QAE?AVTLString@2@H@Z,0xa0d4,public: class Toshi::TLString __thiscall Toshi::TLocale::Get(int)
+TKernelInterface.dll,?Get@TLocale@Toshi@@QAE?AVTLString@2@ABVTPCString@2@@Z,0xa0d8,public: class Toshi::TLString __thiscall Toshi::TLocale::Get(class Toshi::TPCString const &)
+TKernelInterface.dll,?GetLocale@TSystem@Toshi@@SGPAVTLocale@2@XZ,0xa0dc,public: static class Toshi::TLocale * __stdcall Toshi::TSystem::GetLocale(void)
+TKernelInterface.dll,?Delete@TLocalisedString@Toshi@@AAEXXZ,0xa0e0,private: void __thiscall Toshi::TLocalisedString::Delete(void)
+TKernelInterface.dll,?Compare@TCString@Toshi@@QBEHPBDH@Z,0xa0e4,"public: int __thiscall Toshi::TCString::Compare(char const *,int)const "
+TKernelInterface.dll,?ms_sEmpty@TPWString@Toshi@@2VTWString@2@B,0xa0e8,public: static class Toshi::TWString const Toshi::TPWString::ms_sEmpty
+TKernelInterface.dll,?Compare@TWString@Toshi@@QBEHPBGH@Z,0xa0ec,"public: int __thiscall Toshi::TWString::Compare(unsigned short const *,int)const "
+TKernelInterface.dll,?ms_wsEmpty@TLString@Toshi@@2VTWString@2@B,0xa0f0,public: static class Toshi::TWString const Toshi::TLString::ms_wsEmpty
+TKernelInterface.dll,?IsEmpty@TWString@Toshi@@QBE_NXZ,0xa0f4,public: bool __thiscall Toshi::TWString::IsEmpty(void)const 
+TKernelInterface.dll,?Delete@TPooledWString@Toshi@@AAEXXZ,0xa0f8,private: void __thiscall Toshi::TPooledWString::Delete(void)
+TKernelInterface.dll,?GetName@TClass@Toshi@@QBEPBDXZ,0xa0fc,public: char const * __thiscall Toshi::TClass::GetName(void)const 
+TKernelInterface.dll,?GetString@TWString@Toshi@@QBEPBGH@Z,0xa100,public: unsigned short const * __thiscall Toshi::TWString::GetString(int)const 
+TKernelInterface.dll,??HTWString@Toshi@@QBE?AV01@PBG@Z,0xa104,public: class Toshi::TWString __thiscall Toshi::TWString::operator+(unsigned short const *)const 
+TKernelInterface.dll,??0TWString@Toshi@@QAE@PBG@Z,0xa108,public: __thiscall Toshi::TWString::TWString(unsigned short const *)
+TKernelInterface.dll,?ms_csEmpty@TLString@Toshi@@2VTCString@2@B,0xa10c,public: static class Toshi::TCString const Toshi::TLString::ms_csEmpty
+TKernelInterface.dll,?IsTemporary@TLocalisedString@Toshi@@QBE_NXZ,0xa110,public: bool __thiscall Toshi::TLocalisedString::IsTemporary(void)const 
+TKernelInterface.dll,?Length@TCString@Toshi@@QBEHXZ,0xa114,public: int __thiscall Toshi::TCString::Length(void)const 
+TKernelInterface.dll,?StringCompare@TSystem@Toshi@@SGHPBD0H@Z,0xa118,"public: static int __stdcall Toshi::TSystem::StringCompare(char const *,char const *,int)"
+TKernelInterface.dll,?Print@TWString@Toshi@@QBEABV12@XZ,0xa11c,public: class Toshi::TWString const & __thiscall Toshi::TWString::Print(void)const 
+TKernelInterface.dll,?Format@TCString@Toshi@@QAAAAV12@PBDZZ,0xa120,"public: class Toshi::TCString & __cdecl Toshi::TCString::Format(char const *,...)"
+TKernelInterface.dll,??0TCString@Toshi@@QAE@XZ,0xa124,public: __thiscall Toshi::TCString::TCString(void)
+TKernelInterface.dll,??1TCString@Toshi@@QAE@XZ,0xa128,public: __thiscall Toshi::TCString::~TCString(void)
+TKernelInterface.dll,?New@TFreeList@Toshi@@QAEPAXI@Z,0xa12c,public: void * __thiscall Toshi::TFreeList::New(unsigned int)
+TKernelInterface.dll,?GetCStringPool@TSystem@Toshi@@SGPAVTCStringPool@2@XZ,0xa130,public: static class Toshi::TCStringPool * __stdcall Toshi::TSystem::GetCStringPool(void)
+TKernelInterface.dll,?Get@TCStringPool@Toshi@@QAE?AVTPCString@2@ABVTCString@2@@Z,0xa134,public: class Toshi::TPCString __thiscall Toshi::TCStringPool::Get(class Toshi::TCString const &)
+TKernelInterface.dll,?tfree@@YGXPAX@Z,0xa138,void __stdcall tfree(void *)
+TKernelInterface.dll,??1TObject@Toshi@@MAE@XZ,0xa13c,protected: virtual __thiscall Toshi::TObject::~TObject(void)
+TKernelInterface.dll,??0TObject@Toshi@@IAE@XZ,0xa140,protected: __thiscall Toshi::TObject::TObject(void)
+TKernelInterface.dll,??1TGenericEmitter@Toshi@@IAE@XZ,0xa144,protected: __thiscall Toshi::TGenericEmitter::~TGenericEmitter(void)
+TKernelInterface.dll,?Delete@TFreeList@Toshi@@QAEXPAX@Z,0xa148,public: void __thiscall Toshi::TFreeList::Delete(void *)
+TKernelInterface.dll,??0TFileLexerUTF8@Toshi@@QAE@PAVTFile@1@H@Z,0xa14c,"public: __thiscall Toshi::TFileLexerUTF8::TFileLexerUTF8(class Toshi::TFile *,int)"
+MSVCRT.dll,malloc,0xa008,malloc
+MSVCRT.dll,_initterm,0xa00c,_initterm
+MSVCRT.dll,_adjust_fdiv,0xa010,_adjust_fdiv
+MSVCRT.dll,_onexit,0xa014,_onexit
+MSVCRT.dll,__dllonexit,0xa018,__dllonexit
+MSVCRT.dll,free,0xa01c,free
+MSVCRT.dll,isalnum,0xa020,isalnum
+MSVCRT.dll,_purecall,0xa024,_purecall
+MSVCRT.dll,isalpha,0xa028,isalpha
+KERNEL32.dll,DisableThreadLibraryCalls,0xa000,DisableThreadLibraryCalls

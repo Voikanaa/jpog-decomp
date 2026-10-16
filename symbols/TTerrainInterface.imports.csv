@@ -1,0 +1,57 @@
+dll,name,iat_rva,demangled
+TKernelInterface.dll,?MINFLOAT@TMath@Toshi@@2MB,0xd024,public: static float const Toshi::TMath::MINFLOAT
+TKernelInterface.dll,?MAXFLOAT@TMath@Toshi@@2MB,0xd028,public: static float const Toshi::TMath::MAXFLOAT
+TKernelInterface.dll,?Normalise@TVector2@Toshi@@QAEXXZ,0xd02c,public: void __thiscall Toshi::TVector2::Normalise(void)
+TKernelInterface.dll,??GTVector2@Toshi@@QBE?AV01@ABV01@@Z,0xd030,public: class Toshi::TVector2 __thiscall Toshi::TVector2::operator-(class Toshi::TVector2 const &)const 
+TKernelInterface.dll,?IsEqual@TVector2@Toshi@@QBE_NABV12@@Z,0xd034,public: bool __thiscall Toshi::TVector2::IsEqual(class Toshi::TVector2 const &)const 
+TKernelInterface.dll,?Delete@TObject@Toshi@@UAEXXZ,0xd038,public: virtual void __thiscall Toshi::TObject::Delete(void)
+TKernelInterface.dll,?DotProduct@TVector2@Toshi@@SGMABV12@0@Z,0xd03c,"public: static float __stdcall Toshi::TVector2::DotProduct(class Toshi::TVector2 const &,class Toshi::TVector2 const &)"
+TKernelInterface.dll,?Lerp@TVector2@Toshi@@QAEXABV12@0M@Z,0xd040,"public: void __thiscall Toshi::TVector2::Lerp(class Toshi::TVector2 const &,class Toshi::TVector2 const &,float)"
+TKernelInterface.dll,?VEC_ZERO@TVector3@Toshi@@2V12@B,0xd044,public: static class Toshi::TVector3 const Toshi::TVector3::VEC_ZERO
+TKernelInterface.dll,?Translate@TMatrix44@Toshi@@QAEXABVTVector3@2@@Z,0xd048,public: void __thiscall Toshi::TMatrix44::Translate(class Toshi::TVector3 const &)
+TKernelInterface.dll,??0TAABox@Toshi@@QAE@XZ,0xd04c,public: __thiscall Toshi::TAABox::TAABox(void)
+TKernelInterface.dll,?BoxUnion@TAABox@Toshi@@QAEXPAV12@I@Z,0xd050,"public: void __thiscall Toshi::TAABox::BoxUnion(class Toshi::TAABox *,unsigned int)"
+TKernelInterface.dll,?ComparePlane@TAABox@Toshi@@QAE?AW4PlaneComparison@TPlane@2@AAV42@@Z,0xd054,public: enum Toshi::TPlane::PlaneComparison __thiscall Toshi::TAABox::ComparePlane(class Toshi::TPlane &)
+TKernelInterface.dll,?DistanceSq@TVector3@Toshi@@SGMABV12@0@Z,0xd058,"public: static float __stdcall Toshi::TVector3::DistanceSq(class Toshi::TVector3 const &,class Toshi::TVector3 const &)"
+TKernelInterface.dll,??0TGenericListener@Toshi@@IAE@XZ,0xd05c,protected: __thiscall Toshi::TGenericListener::TGenericListener(void)
+TKernelInterface.dll,?VEC_ZERO@TVector2@Toshi@@2V12@B,0xd060,public: static class Toshi::TVector2 const Toshi::TVector2::VEC_ZERO
+TKernelInterface.dll,??0TClass@Toshi@@QAE@PBDPAV01@P6GPAVTObject@1@XZP6GPAV21@PAX@ZP6GXXZ5I@Z,0xd064,"public: __thiscall Toshi::TClass::TClass(char const *,class Toshi::TClass *,class Toshi::TObject * (__stdcall*)(void),class Toshi::TObject * (__stdcall*)(void *),void (__stdcall*)(void),void (__stdcall*)(void),unsigned int)"
+TKernelInterface.dll,??1TGenericListener@Toshi@@IAE@XZ,0xd068,protected: __thiscall Toshi::TGenericListener::~TGenericListener(void)
+TKernelInterface.dll,?RemoveAll@TGenericDList@Toshi@@IAEXXZ,0xd06c,protected: void __thiscall Toshi::TGenericDList::RemoveAll(void)
+TKernelInterface.dll,?Update@THPTimer@Toshi@@QAEXXZ,0xd070,public: void __thiscall Toshi::THPTimer::Update(void)
+TKernelInterface.dll,?GetCurrent@THPTimer@Toshi@@QAEMXZ,0xd074,public: float __thiscall Toshi::THPTimer::GetCurrent(void)
+TKernelInterface.dll,?tfree@@YGXPAX@Z,0xd078,void __stdcall tfree(void *)
+TKernelInterface.dll,??0THPTimer@Toshi@@QAE@XZ,0xd07c,public: __thiscall Toshi::THPTimer::THPTimer(void)
+TKernelInterface.dll,?Connect@TGenericListener@Toshi@@IAEXPAVTGenericEmitter@2@PAXP6G_N111@ZH@Z,0xd080,"protected: void __thiscall Toshi::TGenericListener::Connect(class Toshi::TGenericEmitter *,void *,bool (__stdcall*)(void *,void *,void *),int)"
+TKernelInterface.dll,?Find@TClass@Toshi@@SGPBV12@PBDPBV12@@Z,0xd084,"public: static class Toshi::TClass const * __stdcall Toshi::TClass::Find(char const *,class Toshi::TClass const *)"
+TKernelInterface.dll,?CreateObject@TClass@Toshi@@QBEPAVTObject@2@XZ,0xd088,public: class Toshi::TObject * __thiscall Toshi::TClass::CreateObject(void)const 
+TKernelInterface.dll,?Disconnect@TGenericListener@Toshi@@IAEXXZ,0xd08c,protected: void __thiscall Toshi::TGenericListener::Disconnect(void)
+TKernelInterface.dll,?CeilToInt@TMath@Toshi@@SGHM@Z,0xd090,public: static int __stdcall Toshi::TMath::CeilToInt(float)
+TKernelInterface.dll,?Add@TVector2@Toshi@@QAEXABV12@@Z,0xd094,public: void __thiscall Toshi::TVector2::Add(class Toshi::TVector2 const &)
+TKernelInterface.dll,??HTVector2@Toshi@@QBE?AV01@ABV01@@Z,0xd098,public: class Toshi::TVector2 __thiscall Toshi::TVector2::operator+(class Toshi::TVector2 const &)const 
+TKernelInterface.dll,?FLOATEPSILON@TMath@Toshi@@2MB,0xd09c,public: static float const Toshi::TMath::FLOATEPSILON
+TKernelInterface.dll,??1TObject@Toshi@@MAE@XZ,0xd0a0,protected: virtual __thiscall Toshi::TObject::~TObject(void)
+TKernelInterface.dll,??0TObject@Toshi@@IAE@XZ,0xd0a4,protected: __thiscall Toshi::TObject::TObject(void)
+TKernelInterface.dll,?m_sClass@TObject@Toshi@@2VTClass@2@A,0xd0a8,public: static class Toshi::TClass Toshi::TObject::m_sClass
+TKernelInterface.dll,??1TClass@Toshi@@QAE@XZ,0xd0ac,public: __thiscall Toshi::TClass::~TClass(void)
+TKernelInterface.dll,?FloorToInt@TMath@Toshi@@SGHM@Z,0xd0b0,public: static int __stdcall Toshi::TMath::FloorToInt(float)
+TKernelInterface.dll,?tmalloc@@YGPAXHPADH@Z,0xd0b4,"void * __stdcall tmalloc(int,char *,int)"
+TKernelInterface.dll,?tmemalign@@YGPAXHH@Z,0xd0b8,"void * __stdcall tmemalign(int,int)"
+TKernelInterface.dll,?Identity@TMatrix44@Toshi@@QAEXXZ,0xd0bc,public: void __thiscall Toshi::TMatrix44::Identity(void)
+TKernelInterface.dll,??1THPTimer@Toshi@@QAE@XZ,0xd0c0,public: __thiscall Toshi::THPTimer::~THPTimer(void)
+TRenderInterface.dll,?GetSystemResource@TRenderInterface@Toshi@@QAEPAVTResource@2@W4SYSRESOURCES@12@@Z,0xd0c8,public: class Toshi::TResource * __thiscall Toshi::TRenderInterface::GetSystemResource(enum Toshi::TRenderInterface::SYSRESOURCES)
+TRenderInterface.dll,?CreateResource@TRenderInterface@Toshi@@QAEPAVTResource@2@PBVTClass@2@PBDPAV32@@Z,0xd0cc,"public: class Toshi::TResource * __thiscall Toshi::TRenderInterface::CreateResource(class Toshi::TClass const *,char const *,class Toshi::TResource *)"
+TRenderInterface.dll,?SetAsLastChild@TRenderInterface@Toshi@@QAEXPAVTResource@2@@Z,0xd0d0,public: void __thiscall Toshi::TRenderInterface::SetAsLastChild(class Toshi::TResource *)
+TRenderInterface.dll,?FindOrphanedResource@TRenderInterface@Toshi@@QAEPAVTResource@2@PBDPAV32@@Z,0xd0d4,"public: class Toshi::TResource * __thiscall Toshi::TRenderInterface::FindOrphanedResource(char const *,class Toshi::TResource *)"
+TRenderInterface.dll,?SetFlag@TMaterial@Toshi@@QAEXI_N@Z,0xd0d8,"public: void __thiscall Toshi::TMaterial::SetFlag(unsigned int,bool)"
+TRenderInterface.dll,?SetMaterial@TMesh@Toshi@@IAEXPAVTMaterial@2@@Z,0xd0dc,protected: void __thiscall Toshi::TMesh::SetMaterial(class Toshi::TMaterial *)
+TRenderInterface.dll,?s_Interface@TRenderInterface@Toshi@@0PAV12@A,0xd0e0,private: static class Toshi::TRenderInterface * Toshi::TRenderInterface::s_Interface
+TRenderInterface.dll,?GetRenderer@TResource@Toshi@@QBEPAVTRenderInterface@2@XZ,0xd0e4,public: class Toshi::TRenderInterface * __thiscall Toshi::TResource::GetRenderer(void)const 
+TRenderInterface.dll,?GetCurrentRenderContext@TRenderInterface@Toshi@@QAEPAVTRenderContext@2@XZ,0xd0e8,public: class Toshi::TRenderContext * __thiscall Toshi::TRenderInterface::GetCurrentRenderContext(void)
+MSVCRT.dll,__dllonexit,0xd008,__dllonexit
+MSVCRT.dll,_onexit,0xd00c,_onexit
+MSVCRT.dll,free,0xd010,free
+MSVCRT.dll,_initterm,0xd014,_initterm
+MSVCRT.dll,malloc,0xd018,malloc
+MSVCRT.dll,_adjust_fdiv,0xd01c,_adjust_fdiv
+KERNEL32.dll,DisableThreadLibraryCalls,0xd000,DisableThreadLibraryCalls

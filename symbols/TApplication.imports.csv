@@ -1,0 +1,31 @@
+dll,name,iat_rva,demangled
+KERNEL32.dll,GetConsoleTitleA,0x2000,GetConsoleTitleA
+KERNEL32.dll,DisableThreadLibraryCalls,0x2004,DisableThreadLibraryCalls
+KERNEL32.dll,SetConsoleTitleA,0x2008,SetConsoleTitleA
+USER32.dll,UpdateWindow,0x2070,UpdateWindow
+USER32.dll,MessageBoxA,0x2074,MessageBoxA
+USER32.dll,ShowWindow,0x2078,ShowWindow
+USER32.dll,FindWindowA,0x207c,FindWindowA
+WINMM.dll,timeGetTime,0x2084,timeGetTime
+TKernelInterface.dll,??1TCString@Toshi@@QAE@XZ,0x2030,public: __thiscall Toshi::TCString::~TCString(void)
+TKernelInterface.dll,?Update@TKernelInterface@Toshi@@QAE_NXZ,0x2034,public: bool __thiscall Toshi::TKernelInterface::Update(void)
+TKernelInterface.dll,?tfree@@YGXPAX@Z,0x2038,void __stdcall tfree(void *)
+TKernelInterface.dll,??0TCString@Toshi@@QAE@XZ,0x203c,public: __thiscall Toshi::TCString::TCString(void)
+TKernelInterface.dll,?tmalloc@@YGPAXHPADH@Z,0x2040,"void * __stdcall tmalloc(int,char *,int)"
+TKernelInterface.dll,??YTCString@Toshi@@QAEAAV01@PBD@Z,0x2044,public: class Toshi::TCString & __thiscall Toshi::TCString::operator+=(char const *)
+TKernelInterface.dll,??BTCString@Toshi@@QBEPBDXZ,0x2048,public: __thiscall Toshi::TCString::operator char const *(void)const 
+TKernelInterface.dll,?GetDelta@THPTimer@Toshi@@QAEMXZ,0x204c,public: float __thiscall Toshi::THPTimer::GetDelta(void)
+TKernelInterface.dll,??0TKernelInterface@Toshi@@QAE@HQAPAD_N@Z,0x2050,"public: __thiscall Toshi::TKernelInterface::TKernelInterface(int,char * * const,bool)"
+TKernelInterface.dll,??4TCString@Toshi@@QAEAAV01@PBD@Z,0x2054,public: class Toshi::TCString & __thiscall Toshi::TCString::operator=(char const *)
+TKernelInterface.dll,?GetString@TCString@Toshi@@QBEPBDH@Z,0x2058,public: char const * __thiscall Toshi::TCString::GetString(int)const 
+TKernelInterface.dll,??4TCString@Toshi@@QAEAAV01@AAV01@@Z,0x205c,public: class Toshi::TCString & __thiscall Toshi::TCString::operator=(class Toshi::TCString &)
+TKernelInterface.dll,??0TCString@Toshi@@QAE@ABV01@@Z,0x2060,public: __thiscall Toshi::TCString::TCString(class Toshi::TCString const &)
+TKernelInterface.dll,??0TCString@Toshi@@QAE@PBD@Z,0x2064,public: __thiscall Toshi::TCString::TCString(char const *)
+TKernelInterface.dll,?GetSystemTimer@TKernelInterface@Toshi@@QAEPAVTHPTimer@2@XZ,0x2068,public: class Toshi::THPTimer * __thiscall Toshi::TKernelInterface::GetSystemTimer(void)
+MSVCRT.dll,_onexit,0x2010,_onexit
+MSVCRT.dll,__dllonexit,0x2014,__dllonexit
+MSVCRT.dll,_adjust_fdiv,0x2018,_adjust_fdiv
+MSVCRT.dll,malloc,0x201c,malloc
+MSVCRT.dll,_initterm,0x2020,_initterm
+MSVCRT.dll,free,0x2024,free
+MSVCRT.dll,_ultoa,0x2028,_ultoa

@@ -1,0 +1,190 @@
+dll,name,iat_rva,demangled
+TKernelInterface.dll,?RemoveAll@TGenericDList@Toshi@@IAEXXZ,0x2f1a0,protected: void __thiscall Toshi::TGenericDList::RemoveAll(void)
+TKernelInterface.dll,?IsExactly@TClass@Toshi@@QBE_NABV12@@Z,0x2f1a4,public: bool __thiscall Toshi::TClass::IsExactly(class Toshi::TClass const &)const 
+TKernelInterface.dll,?Expect@TFileLexerUTF8@Toshi@@QAE_NW4TokenType@TFileLexer@2@@Z,0x2f1a8,public: bool __thiscall Toshi::TFileLexerUTF8::Expect(enum Toshi::TFileLexer::TokenType)
+TKernelInterface.dll,?PeekNextToken@TFileLexerUTF8@Toshi@@QAE?AVToken@12@H@Z,0x2f1ac,public: class Toshi::TFileLexerUTF8::Token __thiscall Toshi::TFileLexerUTF8::PeekNextToken(int)
+TKernelInterface.dll,?GetNextToken@TFileLexerUTF8@Toshi@@QAE?AVToken@12@XZ,0x2f1b0,public: class Toshi::TFileLexerUTF8::Token __thiscall Toshi::TFileLexerUTF8::GetNextToken(void)
+TKernelInterface.dll,?Compare@TCString@Toshi@@QBEHPBDH@Z,0x2f1b4,"public: int __thiscall Toshi::TCString::Compare(char const *,int)const "
+TKernelInterface.dll,?Insert@TLocale@Toshi@@QAEPAVTLocalisedString@2@ABVTPCString@2@ABVTPWString@2@@Z,0x2f1b8,"public: class Toshi::TLocalisedString * __thiscall Toshi::TLocale::Insert(class Toshi::TPCString const &,class Toshi::TPWString const &)"
+TKernelInterface.dll,?MakeFunctionString@TSumOfMinterms@Toshi@@QBE?AVTPCString@2@QAPBDABV?$TArray@VTPCString@Toshi@@@2@@Z,0x2f1bc,"public: class Toshi::TPCString __thiscall Toshi::TSumOfMinterms::MakeFunctionString(char const * * const,class Toshi::TArray<class Toshi::TPCString> const &)const "
+TKernelInterface.dll,?ms_aEnglishOpNames@TMinterm@Toshi@@2PAPBDA,0x2f1c0,public: static char const * * Toshi::TMinterm::ms_aEnglishOpNames
+TKernelInterface.dll,?IsTemporary@TLocalisedString@Toshi@@QBE_NXZ,0x2f1c4,public: bool __thiscall Toshi::TLocalisedString::IsTemporary(void)const 
+TKernelInterface.dll,??0TCString@Toshi@@QAE@ABVTWString@1@@Z,0x2f1c8,public: __thiscall Toshi::TCString::TCString(class Toshi::TWString const &)
+TKernelInterface.dll,??HTCString@Toshi@@QBE?AV01@PBG@Z,0x2f1cc,public: class Toshi::TCString __thiscall Toshi::TCString::operator+(unsigned short const *)const 
+TKernelInterface.dll,??0TCString@Toshi@@QAE@PBG@Z,0x2f1d0,public: __thiscall Toshi::TCString::TCString(unsigned short const *)
+TKernelInterface.dll,??1TFreeList@Toshi@@QAE@XZ,0x2f1d4,public: __thiscall Toshi::TFreeList::~TFreeList(void)
+TKernelInterface.dll,??0TFreeList@Toshi@@QAE@HHHPAD@Z,0x2f1d8,"public: __thiscall Toshi::TFreeList::TFreeList(int,int,int,char *)"
+TKernelInterface.dll,?IsEmpty@TWString@Toshi@@QBE_NXZ,0x2f1dc,public: bool __thiscall Toshi::TWString::IsEmpty(void)const 
+TKernelInterface.dll,?ms_wsEmpty@TLString@Toshi@@2VTWString@2@B,0x2f1e0,public: static class Toshi::TWString const Toshi::TLString::ms_wsEmpty
+TKernelInterface.dll,?GetTemporary@TLocale@Toshi@@QAE?AVTLString@2@ABVTWString@2@@Z,0x2f1e4,public: class Toshi::TLString __thiscall Toshi::TLocale::GetTemporary(class Toshi::TWString const &)
+TKernelInterface.dll,??YTCString@Toshi@@QAEAAV01@PBD@Z,0x2f1e8,public: class Toshi::TCString & __thiscall Toshi::TCString::operator+=(char const *)
+TKernelInterface.dll,?RawIsInside@TPile@Toshi@@QAE_NPAX@Z,0x2f1ec,public: bool __thiscall Toshi::TPile::RawIsInside(void *)
+TKernelInterface.dll,??0TPile@Toshi@@QAE@HHI@Z,0x2f1f0,"public: __thiscall Toshi::TPile::TPile(int,int,unsigned int)"
+TKernelInterface.dll,??1TPile@Toshi@@QAE@XZ,0x2f1f4,public: __thiscall Toshi::TPile::~TPile(void)
+TKernelInterface.dll,?RawAlloc@TPile@Toshi@@QAEPAXHH@Z,0x2f1f8,"public: void * __thiscall Toshi::TPile::RawAlloc(int,int)"
+TKernelInterface.dll,??0TWString@Toshi@@QAE@PBG@Z,0x2f1fc,public: __thiscall Toshi::TWString::TWString(unsigned short const *)
+TKernelInterface.dll,??0TWString@Toshi@@QAE@XZ,0x2f200,public: __thiscall Toshi::TWString::TWString(void)
+TKernelInterface.dll,??0TWString@Toshi@@QAE@PBD@Z,0x2f204,public: __thiscall Toshi::TWString::TWString(char const *)
+TKernelInterface.dll,?Format@TWString@Toshi@@QAAAAV12@PBGZZ,0x2f208,"public: class Toshi::TWString & __cdecl Toshi::TWString::Format(unsigned short const *,...)"
+TKernelInterface.dll,?GetString@TWString@Toshi@@QBEPBGH@Z,0x2f20c,public: unsigned short const * __thiscall Toshi::TWString::GetString(int)const 
+TKernelInterface.dll,?Print@TWString@Toshi@@QBEABV12@XZ,0x2f210,public: class Toshi::TWString const & __thiscall Toshi::TWString::Print(void)const 
+TKernelInterface.dll,?IsA@TObject@Toshi@@QBE_NABVTClass@2@@Z,0x2f214,public: bool __thiscall Toshi::TObject::IsA(class Toshi::TClass const &)const 
+TKernelInterface.dll,??0TWString@Toshi@@QAE@ABVTCString@1@@Z,0x2f218,public: __thiscall Toshi::TWString::TWString(class Toshi::TCString const &)
+TKernelInterface.dll,?Define@TFileLexerUTF8@Toshi@@QAEXPBD@Z,0x2f21c,public: void __thiscall Toshi::TFileLexerUTF8::Define(char const *)
+TKernelInterface.dll,??1TGenericListener@Toshi@@IAE@XZ,0x2f220,protected: __thiscall Toshi::TGenericListener::~TGenericListener(void)
+TKernelInterface.dll,??0TGenericListener@Toshi@@IAE@XZ,0x2f224,protected: __thiscall Toshi::TGenericListener::TGenericListener(void)
+TKernelInterface.dll,?Connect@TGenericListener@Toshi@@IAEXPAVTGenericEmitter@2@PAXP6G_N111@ZH@Z,0x2f228,"protected: void __thiscall Toshi::TGenericListener::Connect(class Toshi::TGenericEmitter *,void *,bool (__stdcall*)(void *,void *,void *),int)"
+TKernelInterface.dll,?RecurseTree@TClass@Toshi@@QAEXP6G_NPAV12@PAX@Z221@Z,0x2f22c,"public: void __thiscall Toshi::TClass::RecurseTree(bool (__stdcall*)(class Toshi::TClass *,void *),bool (__stdcall*)(class Toshi::TClass *,void *),bool (__stdcall*)(class Toshi::TClass *,void *),void *)"
+TKernelInterface.dll,?InitialiseStatic@TClass@Toshi@@QAEXXZ,0x2f230,public: void __thiscall Toshi::TClass::InitialiseStatic(void)
+TKernelInterface.dll,?Mid@TWString@Toshi@@QBE?AV12@HH@Z,0x2f234,"public: class Toshi::TWString __thiscall Toshi::TWString::Mid(int,int)const "
+TKernelInterface.dll,?GetWStringPool@TSystem@Toshi@@SGPAVTWStringPool@2@XZ,0x2f238,public: static class Toshi::TWStringPool * __stdcall Toshi::TSystem::GetWStringPool(void)
+TKernelInterface.dll,?Get@TWStringPool@Toshi@@QAE?AVTPWString@2@ABVTWString@2@@Z,0x2f23c,public: class Toshi::TPWString __thiscall Toshi::TWStringPool::Get(class Toshi::TWString const &)
+TKernelInterface.dll,??ATCString@Toshi@@QBEABDH@Z,0x2f240,public: char const & __thiscall Toshi::TCString::operator[](int)const 
+TKernelInterface.dll,?Format@TCString@Toshi@@QAAAAV12@PBDZZ,0x2f244,"public: class Toshi::TCString & __cdecl Toshi::TCString::Format(char const *,...)"
+TKernelInterface.dll,?Length@TWString@Toshi@@QBEHXZ,0x2f248,public: int __thiscall Toshi::TWString::Length(void)const 
+TKernelInterface.dll,??ATWString@Toshi@@QBEAAGH@Z,0x2f24c,public: unsigned short & __thiscall Toshi::TWString::operator[](int)const 
+TKernelInterface.dll,?MAXWCHAR@TMath@Toshi@@2GB,0x2f250,public: static unsigned short const Toshi::TMath::MAXWCHAR
+TKernelInterface.dll,??0TCString@Toshi@@QAE@XZ,0x2f254,public: __thiscall Toshi::TCString::TCString(void)
+TKernelInterface.dll,?Get@TCStringPool@Toshi@@QAE?AVTPCString@2@H@Z,0x2f258,public: class Toshi::TPCString __thiscall Toshi::TCStringPool::Get(int)
+TKernelInterface.dll,?Get@TCStringPool@Toshi@@QAE?AVTPCString@2@ABVTCString@2@@Z,0x2f25c,public: class Toshi::TPCString __thiscall Toshi::TCStringPool::Get(class Toshi::TCString const &)
+TKernelInterface.dll,??0TCString@Toshi@@QAE@ABV01@@Z,0x2f260,public: __thiscall Toshi::TCString::TCString(class Toshi::TCString const &)
+TKernelInterface.dll,??HToshi@@YG?AVTCString@0@ABV10@ABVTPCString@0@@Z,0x2f264,"class Toshi::TCString __stdcall Toshi::operator+(class Toshi::TCString const &,class Toshi::TPCString const &)"
+TKernelInterface.dll,?IsEmpty@TCString@Toshi@@QBE_NXZ,0x2f268,public: bool __thiscall Toshi::TCString::IsEmpty(void)const 
+TKernelInterface.dll,?Delete@TPooledWString@Toshi@@AAEXXZ,0x2f26c,private: void __thiscall Toshi::TPooledWString::Delete(void)
+TKernelInterface.dll,?ms_sEmpty@TPWString@Toshi@@2VTWString@2@B,0x2f270,public: static class Toshi::TWString const Toshi::TPWString::ms_sEmpty
+TKernelInterface.dll,?Compare@TPCString@Toshi@@QBEHABV12@@Z,0x2f274,public: int __thiscall Toshi::TPCString::Compare(class Toshi::TPCString const &)const 
+TKernelInterface.dll,?GetString@TCString@Toshi@@QBEPBDH@Z,0x2f278,public: char const * __thiscall Toshi::TCString::GetString(int)const 
+TKernelInterface.dll,?CreateObject@TClass@Toshi@@QBEPAVTObject@2@XZ,0x2f27c,public: class Toshi::TObject * __thiscall Toshi::TClass::CreateObject(void)const 
+TKernelInterface.dll,?IsA@TClass@Toshi@@QBE_NABV12@@Z,0x2f280,public: bool __thiscall Toshi::TClass::IsA(class Toshi::TClass const &)const 
+TKernelInterface.dll,?Find@TClass@Toshi@@SGPBV12@PBDPBV12@@Z,0x2f284,"public: static class Toshi::TClass const * __stdcall Toshi::TClass::Find(char const *,class Toshi::TClass const *)"
+TKernelInterface.dll,?GetName@TClass@Toshi@@QBEPBDXZ,0x2f288,public: char const * __thiscall Toshi::TClass::GetName(void)const 
+TKernelInterface.dll,?GetCStringPool@TSystem@Toshi@@SGPAVTCStringPool@2@XZ,0x2f28c,public: static class Toshi::TCStringPool * __stdcall Toshi::TSystem::GetCStringPool(void)
+TKernelInterface.dll,?Get@TCStringPool@Toshi@@QAE?AVTPCString@2@PBD@Z,0x2f290,public: class Toshi::TPCString __thiscall Toshi::TCStringPool::Get(char const *)
+TKernelInterface.dll,??0TCString@Toshi@@QAE@PBD@Z,0x2f294,public: __thiscall Toshi::TCString::TCString(char const *)
+TKernelInterface.dll,??1TCString@Toshi@@QAE@XZ,0x2f298,public: __thiscall Toshi::TCString::~TCString(void)
+TKernelInterface.dll,??HTCString@Toshi@@QBE?AV01@ABV01@@Z,0x2f29c,public: class Toshi::TCString __thiscall Toshi::TCString::operator+(class Toshi::TCString const &)const 
+TKernelInterface.dll,??HTCString@Toshi@@QBE?AV01@PBD@Z,0x2f2a0,public: class Toshi::TCString __thiscall Toshi::TCString::operator+(char const *)const 
+TKernelInterface.dll,?ms_sEmpty@TPCString@Toshi@@2VTCString@2@B,0x2f2a4,public: static class Toshi::TCString const Toshi::TPCString::ms_sEmpty
+TKernelInterface.dll,?Delete@TObject@Toshi@@UAEXXZ,0x2f2a8,public: virtual void __thiscall Toshi::TObject::Delete(void)
+TKernelInterface.dll,?New@TFreeList@Toshi@@QAEPAXI@Z,0x2f2ac,public: void * __thiscall Toshi::TFreeList::New(unsigned int)
+TKernelInterface.dll,?Delete@TFreeList@Toshi@@QAEXPAX@Z,0x2f2b0,public: void __thiscall Toshi::TFreeList::Delete(void *)
+TKernelInterface.dll,??0TGenericEmitter@Toshi@@IAE@PAX@Z,0x2f2b4,protected: __thiscall Toshi::TGenericEmitter::TGenericEmitter(void *)
+TKernelInterface.dll,?Throw@TGenericEmitter@Toshi@@IAEXPAX@Z,0x2f2b8,protected: void __thiscall Toshi::TGenericEmitter::Throw(void *)
+TKernelInterface.dll,??1TGenericEmitter@Toshi@@IAE@XZ,0x2f2bc,protected: __thiscall Toshi::TGenericEmitter::~TGenericEmitter(void)
+TKernelInterface.dll,?PI@TMath@Toshi@@2MB,0x2f2c0,public: static float const Toshi::TMath::PI
+TKernelInterface.dll,?Clip@TMath@Toshi@@SGXAAHHH@Z,0x2f2c4,"public: static void __stdcall Toshi::TMath::Clip(int &,int,int)"
+TKernelInterface.dll,?tfree@@YGXPAX@Z,0x2f2c8,void __stdcall tfree(void *)
+TKernelInterface.dll,??0TWString@Toshi@@QAE@ABV01@@Z,0x2f2cc,public: __thiscall Toshi::TWString::TWString(class Toshi::TWString const &)
+TKernelInterface.dll,??1TClass@Toshi@@QAE@XZ,0x2f2d0,public: __thiscall Toshi::TClass::~TClass(void)
+TKernelInterface.dll,?m_sClass@TObject@Toshi@@2VTClass@2@A,0x2f2d4,public: static class Toshi::TClass Toshi::TObject::m_sClass
+TKernelInterface.dll,??1TWString@Toshi@@QAE@XZ,0x2f2d8,public: __thiscall Toshi::TWString::~TWString(void)
+TKernelInterface.dll,??4TWString@Toshi@@QAEAAV01@AAV01@@Z,0x2f2dc,public: class Toshi::TWString & __thiscall Toshi::TWString::operator=(class Toshi::TWString &)
+TKernelInterface.dll,?tmalloc@@YGPAXHPADH@Z,0x2f2e0,"void * __stdcall tmalloc(int,char *,int)"
+TKernelInterface.dll,??0TClass@Toshi@@QAE@PBDPAV01@P6GPAVTObject@1@XZP6GPAV21@PAX@ZP6GXXZ5I@Z,0x2f2e4,"public: __thiscall Toshi::TClass::TClass(char const *,class Toshi::TClass *,class Toshi::TObject * (__stdcall*)(void),class Toshi::TObject * (__stdcall*)(void *),void (__stdcall*)(void),void (__stdcall*)(void),unsigned int)"
+TKernelInterface.dll,??0TObject@Toshi@@IAE@XZ,0x2f2e8,protected: __thiscall Toshi::TObject::TObject(void)
+TKernelInterface.dll,??1TObject@Toshi@@MAE@XZ,0x2f2ec,protected: virtual __thiscall Toshi::TObject::~TObject(void)
+TKernelInterface.dll,?Delete@TPooledCString@Toshi@@AAEXXZ,0x2f2f0,private: void __thiscall Toshi::TPooledCString::Delete(void)
+TKernelInterface.dll,?GetLocale@TSystem@Toshi@@SGPAVTLocale@2@XZ,0x2f2f4,public: static class Toshi::TLocale * __stdcall Toshi::TSystem::GetLocale(void)
+TKernelInterface.dll,?Delete@TLocalisedString@Toshi@@AAEXXZ,0x2f2f8,private: void __thiscall Toshi::TLocalisedString::Delete(void)
+TKernelInterface.dll,?Get@TLocale@Toshi@@QAE?AVTLString@2@PBD@Z,0x2f2fc,public: class Toshi::TLString __thiscall Toshi::TLocale::Get(char const *)
+TInputInterface.dll,?GetMagnitudeInt@InputEvent@TInputInterface@Toshi@@QBEHH@Z,0x2f194,public: int __thiscall Toshi::TInputInterface::InputEvent::GetMagnitudeInt(int)const 
+TInputInterface.dll,?GetMagnitudeFloat@InputEvent@TInputInterface@Toshi@@QBEMH@Z,0x2f198,public: float __thiscall Toshi::TInputInterface::InputEvent::GetMagnitudeFloat(int)const 
+PPropertyParser.dll,?IsType@PPropertyValue@@QBE_NPBVTClass@Toshi@@@Z,0x2f030,public: bool __thiscall PPropertyValue::IsType(class Toshi::TClass const *)const 
+PPropertyParser.dll,?IsDefined@PPropertyValue@@QBE_NXZ,0x2f034,public: bool __thiscall PPropertyValue::IsDefined(void)const 
+PPropertyParser.dll,?CanBeType@PPropertyValue@@QBE_NPBVTClass@Toshi@@@Z,0x2f038,public: bool __thiscall PPropertyValue::CanBeType(class Toshi::TClass const *)const 
+PPropertyParser.dll,?PutSpace@PPropertyWriter@@QAE_NXZ,0x2f03c,public: bool __thiscall PPropertyWriter::PutSpace(void)
+PPropertyParser.dll,?PutEndLine@PPropertyWriter@@QAE_NXZ,0x2f040,public: bool __thiscall PPropertyWriter::PutEndLine(void)
+PPropertyParser.dll,?Put@PPropertyWriter@@QAE_NABVPPropertyValue@@@Z,0x2f044,public: bool __thiscall PPropertyWriter::Put(class PPropertyValue const &)
+PPropertyParser.dll,?Put@PPropertyWriter@@QAE_NABVTPCString@Toshi@@@Z,0x2f048,public: bool __thiscall PPropertyWriter::Put(class Toshi::TPCString const &)
+PPropertyParser.dll,?Put@PPropertyWriter@@QAE_NH@Z,0x2f04c,public: bool __thiscall PPropertyWriter::Put(int)
+PPropertyParser.dll,?Put@PPropertyWriter@@QAE_NM@Z,0x2f050,public: bool __thiscall PPropertyWriter::Put(float)
+PPropertyParser.dll,?Put@PPropertyWriter@@QAE_N_N@Z,0x2f054,public: bool __thiscall PPropertyWriter::Put(bool)
+PPropertyParser.dll,?CanBeTypeArray@PPropertyValueArray@@QBE_NPBVTClass@Toshi@@H@Z,0x2f058,"public: bool __thiscall PPropertyValueArray::CanBeTypeArray(class Toshi::TClass const *,int)const "
+PPropertyParser.dll,?Token2Value@PPropertyReader@@QAE?AVPPropertyValue@@ABVToken@TFileLexerUTF8@Toshi@@@Z,0x2f05c,public: class PPropertyValue __thiscall PPropertyReader::Token2Value(class Toshi::TFileLexerUTF8::Token const &)
+PPropertyParser.dll,?Error@PPropertyReader@@QAEXABVToken@TFileLexerUTF8@Toshi@@ABVTCString@4@@Z,0x2f060,"public: void __thiscall PPropertyReader::Error(class Toshi::TFileLexerUTF8::Token const &,class Toshi::TCString const &)"
+PPropertyParser.dll,?GetValue@PPropertyReader@@QAE_NAAVPPropertyValue@@@Z,0x2f064,public: bool __thiscall PPropertyReader::GetValue(class PPropertyValue &)
+PPropertyParser.dll,??0PPropertyValue@@QAE@ABVTPWString@Toshi@@@Z,0x2f068,public: __thiscall PPropertyValue::PPropertyValue(class Toshi::TPWString const &)
+PPropertyParser.dll,?Warning@PPropertyReader@@QAEXABVTCString@Toshi@@@Z,0x2f06c,public: void __thiscall PPropertyReader::Warning(class Toshi::TCString const &)
+PPropertyParser.dll,??1PPropertyBlock@@UAE@XZ,0x2f070,public: virtual __thiscall PPropertyBlock::~PPropertyBlock(void)
+PPropertyParser.dll,?m_sClass@PPropertyBlock@@2VTClass@Toshi@@A,0x2f074,public: static class Toshi::TClass PPropertyBlock::m_sClass
+PPropertyParser.dll,??1PProperties@@UAE@XZ,0x2f078,public: virtual __thiscall PProperties::~PProperties(void)
+PPropertyParser.dll,?PutBlockHeader@PPropertyWriter@@QAE_NABVTPCString@Toshi@@@Z,0x2f07c,public: bool __thiscall PPropertyWriter::PutBlockHeader(class Toshi::TPCString const &)
+PPropertyParser.dll,?PutPropertyBlock@PPropertyWriter@@QAE_NPBVPProperties@@@Z,0x2f080,public: bool __thiscall PPropertyWriter::PutPropertyBlock(class PProperties const *)
+PPropertyParser.dll,?LoadPropertyBlock@PPropertyReader@@QAEPAVPProperties@@XZ,0x2f084,public: class PProperties * __thiscall PPropertyReader::LoadPropertyBlock(void)
+PPropertyParser.dll,?Error@PPropertyReader@@QAEXABVTCString@Toshi@@@Z,0x2f088,public: void __thiscall PPropertyReader::Error(class Toshi::TCString const &)
+PPropertyParser.dll,??0PPropertyBlock@@QAE@ABVTPCString@Toshi@@W4Priority@0@@Z,0x2f08c,"public: __thiscall PPropertyBlock::PPropertyBlock(class Toshi::TPCString const &,enum PPropertyBlock::Priority)"
+PPropertyParser.dll,??0PPropertyValue@@QAE@I@Z,0x2f090,public: __thiscall PPropertyValue::PPropertyValue(unsigned int)
+PPropertyParser.dll,?GetUINT32@PPropertyValue@@QBEIXZ,0x2f094,public: unsigned int __thiscall PPropertyValue::GetUINT32(void)const 
+PPropertyParser.dll,?TYPE_UINT32@PPropertyValue@@2PBVTClass@Toshi@@B,0x2f098,public: static class Toshi::TClass const * const PPropertyValue::TYPE_UINT32
+PPropertyParser.dll,?GetTLString@PPropertyValue@@QAEAAVTLString@Toshi@@XZ,0x2f09c,public: class Toshi::TLString & __thiscall PPropertyValue::GetTLString(void)
+PPropertyParser.dll,?GetOptionalProperty@PProperties@@QBEPBVPPropertyValue@@ABVTPCString@Toshi@@0PBVTClass@4@@Z,0x2f0a0,"public: class PPropertyValue const * __thiscall PProperties::GetOptionalProperty(class Toshi::TPCString const &,class Toshi::TPCString const &,class Toshi::TClass const *)const "
+PPropertyParser.dll,??0PProperties@@QAE@PAV0@@Z,0x2f0a4,public: __thiscall PProperties::PProperties(class PProperties *)
+PPropertyParser.dll,?Sort@PProperties@@QAEXXZ,0x2f0a8,public: void __thiscall PProperties::Sort(void)
+PPropertyParser.dll,?SetTPCString@PPropertyValue@@QAEXABVTPCString@Toshi@@@Z,0x2f0ac,public: void __thiscall PPropertyValue::SetTPCString(class Toshi::TPCString const &)
+PPropertyParser.dll,??0PPropertyValue@@QAE@ABVTLString@Toshi@@@Z,0x2f0b0,public: __thiscall PPropertyValue::PPropertyValue(class Toshi::TLString const &)
+PPropertyParser.dll,??0PPropertyValue@@QAE@PAVTObject@Toshi@@@Z,0x2f0b4,public: __thiscall PPropertyValue::PPropertyValue(class Toshi::TObject *)
+PPropertyParser.dll,?GetTLString@PPropertyValue@@QBEABVTLString@Toshi@@XZ,0x2f0b8,public: class Toshi::TLString const & __thiscall PPropertyValue::GetTLString(void)const 
+PPropertyParser.dll,?TYPE_TLSTRING@PPropertyValue@@2PBVTClass@Toshi@@B,0x2f0bc,public: static class Toshi::TClass const * const PPropertyValue::TYPE_TLSTRING
+PPropertyParser.dll,?SetTObject@PPropertyValue@@QAEXPAVTObject@Toshi@@@Z,0x2f0c0,public: void __thiscall PPropertyValue::SetTObject(class Toshi::TObject *)
+PPropertyParser.dll,?SetTLString@PPropertyValue@@QAEXABVTLString@Toshi@@@Z,0x2f0c4,public: void __thiscall PPropertyValue::SetTLString(class Toshi::TLString const &)
+PPropertyParser.dll,?SetUndef@PPropertyValue@@QAEXXZ,0x2f0c8,public: void __thiscall PPropertyValue::SetUndef(void)
+PPropertyParser.dll,??0PPropertyValue@@QAE@_N@Z,0x2f0cc,public: __thiscall PPropertyValue::PPropertyValue(bool)
+PPropertyParser.dll,?GetBoolean@PPropertyValue@@QBE_NXZ,0x2f0d0,public: bool __thiscall PPropertyValue::GetBoolean(void)const 
+PPropertyParser.dll,?TYPE_BOOL@PPropertyValue@@2PBVTClass@Toshi@@B,0x2f0d4,public: static class Toshi::TClass const * const PPropertyValue::TYPE_BOOL
+PPropertyParser.dll,??0PPropertyValue@@QAE@PAVPProperties@@@Z,0x2f0d8,public: __thiscall PPropertyValue::PPropertyValue(class PProperties *)
+PPropertyParser.dll,??0PProperties@@QAE@XZ,0x2f0dc,public: __thiscall PProperties::PProperties(void)
+PPropertyParser.dll,?ms_oFreelist@PProperties@@0VTFreeList@Toshi@@A,0x2f0e0,private: static class Toshi::TFreeList PProperties::ms_oFreelist
+PPropertyParser.dll,?GetProperties@PPropertyValue@@QBEPAVPProperties@@XZ,0x2f0e4,public: class PProperties * __thiscall PPropertyValue::GetProperties(void)const 
+PPropertyParser.dll,?GetRequiredProperty@PProperties@@QBEPBVPPropertyValue@@ABVTPCString@Toshi@@PBVTClass@4@@Z,0x2f0e8,"public: class PPropertyValue const * __thiscall PProperties::GetRequiredProperty(class Toshi::TPCString const &,class Toshi::TClass const *)const "
+PPropertyParser.dll,?TYPE_PROPS@PPropertyValue@@2PBVTClass@Toshi@@B,0x2f0ec,public: static class Toshi::TClass const * const PPropertyValue::TYPE_PROPS
+PPropertyParser.dll,??0PPropertyValue@@QAE@ABV0@@Z,0x2f0f0,public: __thiscall PPropertyValue::PPropertyValue(class PPropertyValue const &)
+PPropertyParser.dll,?GetTPCString@PPropertyValue@@QAEAAVTPCString@Toshi@@XZ,0x2f0f4,public: class Toshi::TPCString & __thiscall PPropertyValue::GetTPCString(void)
+PPropertyParser.dll,?TYPE_UNDEF@PPropertyValue@@2PBVTClass@Toshi@@B,0x2f0f8,public: static class Toshi::TClass const * const PPropertyValue::TYPE_UNDEF
+PPropertyParser.dll,?Open@PPropertyWriter@@QAE_NABVTWString@Toshi@@@Z,0x2f0fc,public: bool __thiscall PPropertyWriter::Open(class Toshi::TWString const &)
+PPropertyParser.dll,?Close@PPropertyWriter@@QAEXXZ,0x2f100,public: void __thiscall PPropertyWriter::Close(void)
+PPropertyParser.dll,?Save@PPropertyWriter@@QAE_NXZ,0x2f104,public: bool __thiscall PPropertyWriter::Save(void)
+PPropertyParser.dll,?Close@PPropertyReader@@QAEXXZ,0x2f108,public: void __thiscall PPropertyReader::Close(void)
+PPropertyParser.dll,?Load@PPropertyReader@@QAE_NXZ,0x2f10c,public: bool __thiscall PPropertyReader::Load(void)
+PPropertyParser.dll,?AddDefinitionBlock@PPropertyReader@@QAEXV?$TManagedPtr@VPPropertyBlock@@@Toshi@@@Z,0x2f110,public: void __thiscall PPropertyReader::AddDefinitionBlock(class Toshi::TManagedPtr<class PPropertyBlock>)
+PPropertyParser.dll,?AddDefinitionBlock@PPropertyWriter@@QAEXV?$TManagedPtr@VPPropertyBlock@@@Toshi@@@Z,0x2f114,public: void __thiscall PPropertyWriter::AddDefinitionBlock(class Toshi::TManagedPtr<class PPropertyBlock>)
+PPropertyParser.dll,??0PPropertyReader@@QAE@XZ,0x2f118,public: __thiscall PPropertyReader::PPropertyReader(void)
+PPropertyParser.dll,??0PPropertyWriter@@QAE@XZ,0x2f11c,public: __thiscall PPropertyWriter::PPropertyWriter(void)
+PPropertyParser.dll,??4PPropertyValue@@QAEAAV0@ABV0@@Z,0x2f120,public: class PPropertyValue & __thiscall PPropertyValue::operator=(class PPropertyValue const &)
+PPropertyParser.dll,??0PPropertyValue@@QAE@PAVPPropertyValueArray@@@Z,0x2f124,public: __thiscall PPropertyValue::PPropertyValue(class PPropertyValueArray *)
+PPropertyParser.dll,?PutProperty@PProperties@@QAEXABVTPCString@Toshi@@0ABVPPropertyValue@@@Z,0x2f128,"public: void __thiscall PProperties::PutProperty(class Toshi::TPCString const &,class Toshi::TPCString const &,class PPropertyValue const &)"
+PPropertyParser.dll,?GetType@PPropertyValue@@QBEPBVTClass@Toshi@@XZ,0x2f12c,public: class Toshi::TClass const * __thiscall PPropertyValue::GetType(void)const 
+PPropertyParser.dll,?GetArray@PPropertyValue@@QBEPAVPPropertyValueArray@@XZ,0x2f130,public: class PPropertyValueArray * __thiscall PPropertyValue::GetArray(void)const 
+PPropertyParser.dll,?FindProperty@PProperties@@QBEPBVPProperty@1@ABVTPCString@Toshi@@AAVIterator@?$TQList@VPProperty@PProperties@@@4@@Z,0x2f134,"public: class PProperties::PProperty const * __thiscall PProperties::FindProperty(class Toshi::TPCString const &,class Toshi::TQList<class PProperties::PProperty>::Iterator &)const "
+PPropertyParser.dll,?TYPE_INT@PPropertyValue@@2PBVTClass@Toshi@@B,0x2f138,public: static class Toshi::TClass const * const PPropertyValue::TYPE_INT
+PPropertyParser.dll,?TYPE_ARRAY@PPropertyValue@@2PBVTClass@Toshi@@B,0x2f13c,public: static class Toshi::TClass const * const PPropertyValue::TYPE_ARRAY
+PPropertyParser.dll,??0PPropertyValue@@QAE@M@Z,0x2f140,public: __thiscall PPropertyValue::PPropertyValue(float)
+PPropertyParser.dll,?GetFloat@PPropertyValue@@QBEMXZ,0x2f144,public: float __thiscall PPropertyValue::GetFloat(void)const 
+PPropertyParser.dll,?GetOptionalProperty@PProperties@@QBEPBVPPropertyValue@@ABVTPCString@Toshi@@PBVTClass@4@@Z,0x2f148,"public: class PPropertyValue const * __thiscall PProperties::GetOptionalProperty(class Toshi::TPCString const &,class Toshi::TClass const *)const "
+PPropertyParser.dll,?TYPE_FLOAT@PPropertyValue@@2PBVTClass@Toshi@@B,0x2f14c,public: static class Toshi::TClass const * const PPropertyValue::TYPE_FLOAT
+PPropertyParser.dll,??H@YG?AVTCString@Toshi@@ABV01@ABVPPropertyName@@@Z,0x2f150,"class Toshi::TCString __stdcall operator+(class Toshi::TCString const &,class PPropertyName const &)"
+PPropertyParser.dll,?GetProperty@PProperties@@QBEPBVPPropertyValue@@ABVPPropertyName@@@Z,0x2f154,public: class PPropertyValue const * __thiscall PProperties::GetProperty(class PPropertyName const &)const 
+PPropertyParser.dll,??0PPropertyName@@QAE@ABVTPCString@Toshi@@0@Z,0x2f158,"public: __thiscall PPropertyName::PPropertyName(class Toshi::TPCString const &,class Toshi::TPCString const &)"
+PPropertyParser.dll,??0PPropertyName@@QAE@ABVTPCString@Toshi@@@Z,0x2f15c,public: __thiscall PPropertyName::PPropertyName(class Toshi::TPCString const &)
+PPropertyParser.dll,??0PPropertyValue@@QAE@XZ,0x2f160,public: __thiscall PPropertyValue::PPropertyValue(void)
+PPropertyParser.dll,??0PPropertyValue@@QAE@ABVTPCString@Toshi@@@Z,0x2f164,public: __thiscall PPropertyValue::PPropertyValue(class Toshi::TPCString const &)
+PPropertyParser.dll,?IsEmpty@PPropertyValue@@QBE_NXZ,0x2f168,public: bool __thiscall PPropertyValue::IsEmpty(void)const 
+PPropertyParser.dll,?TYPE_TPCSTRING@PPropertyValue@@2PBVTClass@Toshi@@B,0x2f16c,public: static class Toshi::TClass const * const PPropertyValue::TYPE_TPCSTRING
+PPropertyParser.dll,?GetProperty@PProperties@@QBEPBVPPropertyValue@@ABVTPCString@Toshi@@@Z,0x2f170,public: class PPropertyValue const * __thiscall PProperties::GetProperty(class Toshi::TPCString const &)const 
+PPropertyParser.dll,?ToString@PPropertyValue@@SGPBDPBVTClass@Toshi@@@Z,0x2f174,public: static char const * __stdcall PPropertyValue::ToString(class Toshi::TClass const *)
+PPropertyParser.dll,?GetTPCString@PPropertyValue@@QBEABVTPCString@Toshi@@XZ,0x2f178,public: class Toshi::TPCString const & __thiscall PPropertyValue::GetTPCString(void)const 
+PPropertyParser.dll,?GetInteger@PPropertyValue@@QBEHXZ,0x2f17c,public: int __thiscall PPropertyValue::GetInteger(void)const 
+PPropertyParser.dll,??1PPropertyValue@@QAE@XZ,0x2f180,public: __thiscall PPropertyValue::~PPropertyValue(void)
+PPropertyParser.dll,??0PPropertyValue@@QAE@H@Z,0x2f184,public: __thiscall PPropertyValue::PPropertyValue(int)
+PPropertyParser.dll,?PutProperty@PProperties@@QAEXABVTPCString@Toshi@@ABVPPropertyValue@@@Z,0x2f188,"public: void __thiscall PProperties::PutProperty(class Toshi::TPCString const &,class PPropertyValue const &)"
+PPropertyParser.dll,?GetTObject@PPropertyValue@@QBEPAVTObject@Toshi@@XZ,0x2f18c,public: class Toshi::TObject * __thiscall PPropertyValue::GetTObject(void)const 
+libmmd.dll,fmod,0x2f304,fmod
+MSVCRT.dll,_initterm,0x2f008,_initterm
+MSVCRT.dll,_adjust_fdiv,0x2f00c,_adjust_fdiv
+MSVCRT.dll,malloc,0x2f010,malloc
+MSVCRT.dll,_purecall,0x2f014,_purecall
+MSVCRT.dll,free,0x2f018,free
+MSVCRT.dll,_onexit,0x2f01c,_onexit
+MSVCRT.dll,__dllonexit,0x2f020,__dllonexit
+MSVCRT.dll,iswspace,0x2f024,iswspace
+MSVCRT.dll,sscanf,0x2f028,sscanf
+KERNEL32.dll,DisableThreadLibraryCalls,0x2f000,DisableThreadLibraryCalls

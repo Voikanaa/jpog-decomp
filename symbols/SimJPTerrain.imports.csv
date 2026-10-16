@@ -1,0 +1,108 @@
+dll,name,iat_rva,demangled
+TKernelInterface.dll,?Multiply@TVector2@Toshi@@QAEXABV12@@Z,0x1d02c,public: void __thiscall Toshi::TVector2::Multiply(class Toshi::TVector2 const &)
+TKernelInterface.dll,?Subtract@TVector2@Toshi@@QAEXABV12@@Z,0x1d030,public: void __thiscall Toshi::TVector2::Subtract(class Toshi::TVector2 const &)
+TKernelInterface.dll,?MagnitudeSq@TVector2@Toshi@@QBEMXZ,0x1d034,public: float __thiscall Toshi::TVector2::MagnitudeSq(void)const 
+TKernelInterface.dll,?Gain@TMath@Toshi@@SGMMM@Z,0x1d038,"public: static float __stdcall Toshi::TMath::Gain(float,float)"
+TKernelInterface.dll,?Abs@TVector2@Toshi@@QAEXXZ,0x1d03c,public: void __thiscall Toshi::TVector2::Abs(void)
+TKernelInterface.dll,?LERP@TMath@Toshi@@SGMMMM@Z,0x1d040,"public: static float __stdcall Toshi::TMath::LERP(float,float,float)"
+TKernelInterface.dll,?Normalise@TVector2@Toshi@@QAEXXZ,0x1d044,public: void __thiscall Toshi::TVector2::Normalise(void)
+TKernelInterface.dll,?Add@TVector2@Toshi@@QAEXABV12@@Z,0x1d048,public: void __thiscall Toshi::TVector2::Add(class Toshi::TVector2 const &)
+TKernelInterface.dll,??GTVector2@Toshi@@QBE?AV01@ABV01@@Z,0x1d04c,public: class Toshi::TVector2 __thiscall Toshi::TVector2::operator-(class Toshi::TVector2 const &)const 
+TKernelInterface.dll,?Gain075@TMath@Toshi@@SGMM@Z,0x1d050,public: static float __stdcall Toshi::TMath::Gain075(float)
+TKernelInterface.dll,?Multiply@TVector2@Toshi@@QAEXM@Z,0x1d054,public: void __thiscall Toshi::TVector2::Multiply(float)
+TKernelInterface.dll,?DotProduct@TVector2@Toshi@@SGMABV12@0@Z,0x1d058,"public: static float __stdcall Toshi::TVector2::DotProduct(class Toshi::TVector2 const &,class Toshi::TVector2 const &)"
+TKernelInterface.dll,?Magnitude@TVector2@Toshi@@QBEMXZ,0x1d05c,public: float __thiscall Toshi::TVector2::Magnitude(void)const 
+TKernelInterface.dll,?MAXINT@TMath@Toshi@@2HB,0x1d060,public: static int const Toshi::TMath::MAXINT
+TKernelInterface.dll,?MININT@TMath@Toshi@@2HB,0x1d064,public: static int const Toshi::TMath::MININT
+TKernelInterface.dll,??0TClass@Toshi@@QAE@PBDPAV01@P6GPAVTObject@1@XZP6GPAV21@PAX@ZP6GXXZ5I@Z,0x1d068,"public: __thiscall Toshi::TClass::TClass(char const *,class Toshi::TClass *,class Toshi::TObject * (__stdcall*)(void),class Toshi::TObject * (__stdcall*)(void *),void (__stdcall*)(void),void (__stdcall*)(void),unsigned int)"
+TKernelInterface.dll,??1TClass@Toshi@@QAE@XZ,0x1d06c,public: __thiscall Toshi::TClass::~TClass(void)
+TKernelInterface.dll,?Delete@TObject@Toshi@@UAEXXZ,0x1d070,public: virtual void __thiscall Toshi::TObject::Delete(void)
+TKernelInterface.dll,?Destroy@TFile@Toshi@@SGXPAV12@@Z,0x1d074,public: static void __stdcall Toshi::TFile::Destroy(class Toshi::TFile *)
+TKernelInterface.dll,?Create@TFile@Toshi@@SGPAV12@ABVTCString@2@I@Z,0x1d078,"public: static class Toshi::TFile * __stdcall Toshi::TFile::Create(class Toshi::TCString const &,unsigned int)"
+TKernelInterface.dll,?GetString@TCString@Toshi@@QBEPBDH@Z,0x1d07c,public: char const * __thiscall Toshi::TCString::GetString(int)const 
+TKernelInterface.dll,??DTVector2@Toshi@@QBE?AV01@M@Z,0x1d080,public: class Toshi::TVector2 __thiscall Toshi::TVector2::operator*(float)const 
+TKernelInterface.dll,??0TCString@Toshi@@QAE@PBD@Z,0x1d084,public: __thiscall Toshi::TCString::TCString(char const *)
+TKernelInterface.dll,??0TCString@Toshi@@QAE@XZ,0x1d088,public: __thiscall Toshi::TCString::TCString(void)
+TKernelInterface.dll,?Update@THPTimer@Toshi@@QAEXXZ,0x1d08c,public: void __thiscall Toshi::THPTimer::Update(void)
+TKernelInterface.dll,?GetCurrent@THPTimer@Toshi@@QAEMXZ,0x1d090,public: float __thiscall Toshi::THPTimer::GetCurrent(void)
+TKernelInterface.dll,??1THPTimer@Toshi@@QAE@XZ,0x1d094,public: __thiscall Toshi::THPTimer::~THPTimer(void)
+TKernelInterface.dll,??0THPTimer@Toshi@@QAE@XZ,0x1d098,public: __thiscall Toshi::THPTimer::THPTimer(void)
+TKernelInterface.dll,??4TCString@Toshi@@QAEAAV01@PBD@Z,0x1d09c,public: class Toshi::TCString & __thiscall Toshi::TCString::operator=(char const *)
+TKernelInterface.dll,?GetFloat@TRandom@Toshi@@QAEMXZ,0x1d0a0,public: float __thiscall Toshi::TRandom::GetFloat(void)
+TKernelInterface.dll,??HTVector2@Toshi@@QBE?AV01@ABV01@@Z,0x1d0a4,public: class Toshi::TVector2 __thiscall Toshi::TVector2::operator+(class Toshi::TVector2 const &)const 
+TKernelInterface.dll,?GetFloat2@TRandom@Toshi@@QAEMXZ,0x1d0a8,public: float __thiscall Toshi::TRandom::GetFloat2(void)
+TKernelInterface.dll,?LineSegmentVsLineSegment2D@TMath@Toshi@@SG_NABVTVector2@2@000AAV32@@Z,0x1d0ac,"public: static bool __stdcall Toshi::TMath::LineSegmentVsLineSegment2D(class Toshi::TVector2 const &,class Toshi::TVector2 const &,class Toshi::TVector2 const &,class Toshi::TVector2 const &,class Toshi::TVector2 &)"
+TKernelInterface.dll,?GetInt@TRandom@Toshi@@QAEHHH@Z,0x1d0b0,"public: int __thiscall Toshi::TRandom::GetInt(int,int)"
+TKernelInterface.dll,?Divide@TVector2@Toshi@@QAEXM@Z,0x1d0b4,public: void __thiscall Toshi::TVector2::Divide(float)
+TKernelInterface.dll,?PI@TMath@Toshi@@2MB,0x1d0b8,public: static float const Toshi::TMath::PI
+TKernelInterface.dll,?Subtract@TVector2@Toshi@@QAEXABV12@0@Z,0x1d0bc,"public: void __thiscall Toshi::TVector2::Subtract(class Toshi::TVector2 const &,class Toshi::TVector2 const &)"
+TKernelInterface.dll,?Clip@TMath@Toshi@@SGXAAMMM@Z,0x1d0c0,"public: static void __stdcall Toshi::TMath::Clip(float &,float,float)"
+TKernelInterface.dll,?DotProduct@TVector3@Toshi@@SGMABV12@0@Z,0x1d0c4,"public: static float __stdcall Toshi::TVector3::DotProduct(class Toshi::TVector3 const &,class Toshi::TVector3 const &)"
+TKernelInterface.dll,?Normalise@TVector3@Toshi@@QAEXXZ,0x1d0c8,public: void __thiscall Toshi::TVector3::Normalise(void)
+TKernelInterface.dll,?Normalise@TVector4@Toshi@@QAEXXZ,0x1d0cc,public: void __thiscall Toshi::TVector4::Normalise(void)
+TKernelInterface.dll,??DTVector3@Toshi@@QBE?AV01@M@Z,0x1d0d0,public: class Toshi::TVector3 __thiscall Toshi::TVector3::operator*(float)const 
+TKernelInterface.dll,??HTVector3@Toshi@@QBE?AV01@ABV01@@Z,0x1d0d4,public: class Toshi::TVector3 __thiscall Toshi::TVector3::operator+(class Toshi::TVector3 const &)const 
+TKernelInterface.dll,??0TRandom@Toshi@@QAE@XZ,0x1d0d8,public: __thiscall Toshi::TRandom::TRandom(void)
+TKernelInterface.dll,?GetInt@TRandom@Toshi@@QAEHXZ,0x1d0dc,public: int __thiscall Toshi::TRandom::GetInt(void)
+TKernelInterface.dll,??1TCString@Toshi@@QAE@XZ,0x1d0e0,public: __thiscall Toshi::TCString::~TCString(void)
+TKernelInterface.dll,??1TRandom@Toshi@@QAE@XZ,0x1d0e4,public: __thiscall Toshi::TRandom::~TRandom(void)
+TKernelInterface.dll,?tmalloc@@YGPAXHPADH@Z,0x1d0e8,"void * __stdcall tmalloc(int,char *,int)"
+TKernelInterface.dll,?Pow@TMath@Toshi@@SGMMM@Z,0x1d0ec,"public: static float __stdcall Toshi::TMath::Pow(float,float)"
+TKernelInterface.dll,?SetSeed@TRandom@Toshi@@QAEXI@Z,0x1d0f0,public: void __thiscall Toshi::TRandom::SetSeed(unsigned int)
+TKernelInterface.dll,?GetInt@TRandom@Toshi@@QAEHH@Z,0x1d0f4,public: int __thiscall Toshi::TRandom::GetInt(int)
+TKernelInterface.dll,?Format@TCString@Toshi@@QAAAAV12@PBDZZ,0x1d0f8,"public: class Toshi::TCString & __cdecl Toshi::TCString::Format(char const *,...)"
+TKernelInterface.dll,?Length@TCString@Toshi@@QBEHXZ,0x1d0fc,public: int __thiscall Toshi::TCString::Length(void)const 
+TKernelInterface.dll,?tfree@@YGXPAX@Z,0x1d100,void __stdcall tfree(void *)
+TTerrainInterface.dll,?ResetSections@TTerrainInterface@Toshi@@QAEXXZ,0x1d108,public: void __thiscall Toshi::TTerrainInterface::ResetSections(void)
+TTerrainInterface.dll,?DiscardSectionList@TTerrainInterface@Toshi@@UAEXAAV?$TQList@VTTerrainSectionSetElem@Toshi@@@2@@Z,0x1d10c,public: virtual void __thiscall Toshi::TTerrainInterface::DiscardSectionList(class Toshi::TQList<class Toshi::TTerrainSectionSetElem> &)
+TTerrainInterface.dll,?GetSectionSetSphere@TTerrainInterface@Toshi@@UAEXAAVTVector3@2@M0AAVTVector2@2@AAV?$TQList@VTTerrainSectionSetElem@Toshi@@@2@@Z,0x1d110,"public: virtual void __thiscall Toshi::TTerrainInterface::GetSectionSetSphere(class Toshi::TVector3 &,float,class Toshi::TVector3 &,class Toshi::TVector2 &,class Toshi::TQList<class Toshi::TTerrainSectionSetElem> &)"
+TTerrainInterface.dll,?ActivateTerrainSection@TTerrainInterface@Toshi@@UAEPAVTTerrainSection@2@PAV32@PAVTVector3@2@@Z,0x1d114,"public: virtual class Toshi::TTerrainSection * __thiscall Toshi::TTerrainInterface::ActivateTerrainSection(class Toshi::TTerrainSection *,class Toshi::TVector3 *)"
+TTerrainInterface.dll,?ActivateTerrainSection@TTerrainInterface@Toshi@@UAEPAVTTerrainSection@2@IIPAV32@PAVTVector3@2@@Z,0x1d118,"public: virtual class Toshi::TTerrainSection * __thiscall Toshi::TTerrainInterface::ActivateTerrainSection(unsigned int,unsigned int,class Toshi::TTerrainSection *,class Toshi::TVector3 *)"
+TTerrainInterface.dll,?ActivateTempSection@TTerrainInterface@Toshi@@UAEPAVTTerrainSection@2@PAVTVector3@2@@Z,0x1d11c,public: virtual class Toshi::TTerrainSection * __thiscall Toshi::TTerrainInterface::ActivateTempSection(class Toshi::TVector3 *)
+TTerrainInterface.dll,?GetShadow@TTerrainInterface@Toshi@@UBEMMM@Z,0x1d120,"public: virtual float __thiscall Toshi::TTerrainInterface::GetShadow(float,float)const "
+TTerrainInterface.dll,?CullTerrain@TTerrainInterface@Toshi@@UAEXPAVTPlane@2@IPAPAVTTerrainSection@2@I0H@Z,0x1d124,"public: virtual void __thiscall Toshi::TTerrainInterface::CullTerrain(class Toshi::TPlane *,unsigned int,class Toshi::TTerrainSection * *,unsigned int,class Toshi::TPlane *,int)"
+TTerrainInterface.dll,??0TTerrainInterface@Toshi@@QAE@XZ,0x1d128,public: __thiscall Toshi::TTerrainInterface::TTerrainInterface(void)
+TTerrainInterface.dll,?Create@TTerrainInterface@Toshi@@QAEXAAVTClass@2@IIPAVTRenderInterface@2@PBD@Z,0x1d12c,"public: void __thiscall Toshi::TTerrainInterface::Create(class Toshi::TClass &,unsigned int,unsigned int,class Toshi::TRenderInterface *,char const *)"
+TTerrainInterface.dll,?GetVRemapTable@TTerrainInterface@Toshi@@IAEPAGXZ,0x1d130,protected: unsigned short * __thiscall Toshi::TTerrainInterface::GetVRemapTable(void)
+TTerrainInterface.dll,?CacheShadowBuffer@TTerrainInterface@Toshi@@QAEPAVTShadowFieldBuffer@2@IIPAVTTerrainSection@2@@Z,0x1d134,"public: class Toshi::TShadowFieldBuffer * __thiscall Toshi::TTerrainInterface::CacheShadowBuffer(unsigned int,unsigned int,class Toshi::TTerrainSection *)"
+TTerrainInterface.dll,?CacheStrataBuffer@TTerrainInterface@Toshi@@QAEPAVTStrataFieldBuffer@2@IIPAVTTerrainSection@2@@Z,0x1d138,"public: class Toshi::TStrataFieldBuffer * __thiscall Toshi::TTerrainInterface::CacheStrataBuffer(unsigned int,unsigned int,class Toshi::TTerrainSection *)"
+TTerrainInterface.dll,?GetFreeMesh@TTerrainInterface@Toshi@@QAEPAVTTerrainMeshEx@2@XZ,0x1d13c,public: class Toshi::TTerrainMeshEx * __thiscall Toshi::TTerrainInterface::GetFreeMesh(void)
+TTerrainInterface.dll,?DeactivateTerrainSectionMesh@TTerrainInterface@Toshi@@QAEXPAVTTerrainSection@2@@Z,0x1d140,public: void __thiscall Toshi::TTerrainInterface::DeactivateTerrainSectionMesh(class Toshi::TTerrainSection *)
+TTerrainInterface.dll,?DeactivateTerrainSectionStrata@TTerrainInterface@Toshi@@QAEXPAVTTerrainSection@2@@Z,0x1d144,public: void __thiscall Toshi::TTerrainInterface::DeactivateTerrainSectionStrata(class Toshi::TTerrainSection *)
+TTerrainInterface.dll,?DeactivateTerrainSectionShadow@TTerrainInterface@Toshi@@QAEXPAVTTerrainSection@2@@Z,0x1d148,public: void __thiscall Toshi::TTerrainInterface::DeactivateTerrainSectionShadow(class Toshi::TTerrainSection *)
+TTerrainInterface.dll,?SetGrass@TTerrainSection@Toshi@@QAEX_N@Z,0x1d14c,public: void __thiscall Toshi::TTerrainSection::SetGrass(bool)
+TTerrainInterface.dll,?GetSectionDataRaw@THeightField@Toshi@@QBEXIIAAMPAC@Z,0x1d150,"public: void __thiscall Toshi::THeightField::GetSectionDataRaw(unsigned int,unsigned int,float &,signed char *)const "
+TTerrainInterface.dll,?GetHeightCache@TTerrainInterface@Toshi@@QAEPAMXZ,0x1d154,public: float * __thiscall Toshi::TTerrainInterface::GetHeightCache(void)
+TTerrainInterface.dll,?UpdateWaterDepth@TTerrainInterface@Toshi@@QAEXXZ,0x1d158,public: void __thiscall Toshi::TTerrainInterface::UpdateWaterDepth(void)
+TTerrainInterface.dll,?UpdateQuadTree@TTerrainInterface@Toshi@@QAEXIIII@Z,0x1d15c,"public: void __thiscall Toshi::TTerrainInterface::UpdateQuadTree(unsigned int,unsigned int,unsigned int,unsigned int)"
+TTerrainInterface.dll,?CacheSectionHeights@TTerrainInterface@Toshi@@QAEXII@Z,0x1d160,"public: void __thiscall Toshi::TTerrainInterface::CacheSectionHeights(unsigned int,unsigned int)"
+TTerrainInterface.dll,?GetSectionFlags@TTerrainInterface@Toshi@@QBEIII@Z,0x1d164,"public: unsigned int __thiscall Toshi::TTerrainInterface::GetSectionFlags(unsigned int,unsigned int)const "
+TTerrainInterface.dll,?SetSectionFlags@TTerrainInterface@Toshi@@QAEXIII@Z,0x1d168,"public: void __thiscall Toshi::TTerrainInterface::SetSectionFlags(unsigned int,unsigned int,unsigned int)"
+TTerrainInterface.dll,?SetFlags@TTerrainSection@Toshi@@QAEXI@Z,0x1d16c,public: void __thiscall Toshi::TTerrainSection::SetFlags(unsigned int)
+TTerrainInterface.dll,?Deserialise@THeightField@Toshi@@QAE_NPAVTFile@2@@Z,0x1d170,public: bool __thiscall Toshi::THeightField::Deserialise(class Toshi::TFile *)
+TTerrainInterface.dll,?AddSectionFlags@TTerrainInterface@Toshi@@QAEXIII@Z,0x1d174,"public: void __thiscall Toshi::TTerrainInterface::AddSectionFlags(unsigned int,unsigned int,unsigned int)"
+TTerrainInterface.dll,?s_fSectionHRangeOn128@THeightField@Toshi@@2MB,0x1d178,public: static float const Toshi::THeightField::s_fSectionHRangeOn128
+TTerrainInterface.dll,?GetSection@THeightField@Toshi@@QBEPAVTHeightFieldSection@2@II@Z,0x1d17c,"public: class Toshi::THeightFieldSection * __thiscall Toshi::THeightField::GetSection(unsigned int,unsigned int)const "
+TTerrainInterface.dll,?m_sClass@TTerrainInterface@Toshi@@2VTClass@2@A,0x1d180,public: static class Toshi::TClass Toshi::TTerrainInterface::m_sClass
+TTerrainInterface.dll,?Serialise@THeightField@Toshi@@QBE_NPAVTFile@2@@Z,0x1d184,public: bool __thiscall Toshi::THeightField::Serialise(class Toshi::TFile *)const 
+TTerrainInterface.dll,??1TTerrainInterface@Toshi@@UAE@XZ,0x1d188,public: virtual __thiscall Toshi::TTerrainInterface::~TTerrainInterface(void)
+TTerrainInterface.dll,?GetHeight@THeightField@Toshi@@QBEMMM@Z,0x1d18c,"public: float __thiscall Toshi::THeightField::GetHeight(float,float)const "
+TTerrainInterface.dll,?GetLODHeight@TTerrainInterface@Toshi@@QBEMMM@Z,0x1d190,"public: float __thiscall Toshi::TTerrainInterface::GetLODHeight(float,float)const "
+TTerrainInterface.dll,??1THeightField@Toshi@@UAE@XZ,0x1d194,public: virtual __thiscall Toshi::THeightField::~THeightField(void)
+TTerrainInterface.dll,?m_sClass@THeightField@Toshi@@2VTClass@2@A,0x1d198,public: static class Toshi::TClass Toshi::THeightField::m_sClass
+TTerrainInterface.dll,?InvalidateDecals@TTerrainSection@Toshi@@QAEXXZ,0x1d19c,public: void __thiscall Toshi::TTerrainSection::InvalidateDecals(void)
+TTerrainInterface.dll,?DeactivateTerrainSection@TTerrainInterface@Toshi@@QAEXPAVTTerrainSection@2@@Z,0x1d1a0,public: void __thiscall Toshi::TTerrainInterface::DeactivateTerrainSection(class Toshi::TTerrainSection *)
+TTerrainInterface.dll,?SetDirty@TTerrainSection@Toshi@@QAEX_N@Z,0x1d1a4,public: void __thiscall Toshi::TTerrainSection::SetDirty(bool)
+TTerrainInterface.dll,?LockBuffer@TTerrainInterface@Toshi@@QAEPAVTHeightFieldBuffer@2@II@Z,0x1d1a8,"public: class Toshi::THeightFieldBuffer * __thiscall Toshi::TTerrainInterface::LockBuffer(unsigned int,unsigned int)"
+TTerrainInterface.dll,?UnlockBuffer@TTerrainInterface@Toshi@@QAEXPAVTHeightFieldBuffer@2@@Z,0x1d1ac,public: void __thiscall Toshi::TTerrainInterface::UnlockBuffer(class Toshi::THeightFieldBuffer *)
+TTerrainInterface.dll,?GetHeight@THeightField@Toshi@@QBEMII@Z,0x1d1b0,"public: float __thiscall Toshi::THeightField::GetHeight(unsigned int,unsigned int)const "
+TTerrainInterface.dll,??0THeightField@Toshi@@QAE@XZ,0x1d1b4,public: __thiscall Toshi::THeightField::THeightField(void)
+MSVCRT.dll,strchr,0x1d008,strchr
+MSVCRT.dll,atoi,0x1d00c,atoi
+MSVCRT.dll,__dllonexit,0x1d010,__dllonexit
+MSVCRT.dll,_onexit,0x1d014,_onexit
+MSVCRT.dll,free,0x1d018,free
+MSVCRT.dll,_initterm,0x1d01c,_initterm
+MSVCRT.dll,malloc,0x1d020,malloc
+MSVCRT.dll,_adjust_fdiv,0x1d024,_adjust_fdiv
+KERNEL32.dll,DisableThreadLibraryCalls,0x1d000,DisableThreadLibraryCalls

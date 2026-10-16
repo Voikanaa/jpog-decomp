@@ -1,0 +1,925 @@
+dll,name,iat_rva,demangled
+SimJP.exe,??0AParam@@QAE@ABM@Z,0x33070,public: __thiscall AParam::AParam(float const &)
+SimJP.exe,?m_sClass@AUnitDinosaur@@2VTClass@Toshi@@A,0x33074,public: static class Toshi::TClass AUnitDinosaur::m_sClass
+SimJP.exe,?Imp_UpdateControl@AUnitDinosaur@@MAEXM@Z,0x33078,protected: virtual void __thiscall AUnitDinosaur::Imp_UpdateControl(float)
+SimJP.exe,?OnCreate@AUnitDinosaur@@UAE_NXZ,0x3307c,public: virtual bool __thiscall AUnitDinosaur::OnCreate(void)
+SimJP.exe,??1AUnitDinosaur@@UAE@XZ,0x33080,public: virtual __thiscall AUnitDinosaur::~AUnitDinosaur(void)
+SimJP.exe,??0AUnitDinosaur@@QAE@XZ,0x33084,public: __thiscall AUnitDinosaur::AUnitDinosaur(void)
+SimJP.exe,?sm_oAccessorTable@AUnitDinosaur@@0VAAccessorTable@@A,0x33088,private: static class AAccessorTable AUnitDinosaur::sm_oAccessorTable
+SimJP.exe,?m_szVarNames@AActiveUnit@@0PAPBDA,0x3308c,private: static char const * * AActiveUnit::m_szVarNames
+SimJP.exe,?GetOrders@AUnitDinosaur@@UAEPAVAUnitOrders@@XZ,0x33090,public: virtual class AUnitOrders * __thiscall AUnitDinosaur::GetOrders(void)
+SimJP.exe,?SetSimLOD@AVisibleUnit@@UAEXW4AUnitLOD@AUnit@@@Z,0x33094,public: virtual void __thiscall AVisibleUnit::SetSimLOD(enum AUnit::AUnitLOD)
+SimJP.exe,?GetSimLOD@AVisibleUnit@@UBE?AW4AUnitLOD@AUnit@@XZ,0x33098,public: virtual enum AUnit::AUnitLOD __thiscall AVisibleUnit::GetSimLOD(void)const 
+SimJP.exe,?GetDialog@AUnitDinosaur@@UBEPAVAGameDialog@@XZ,0x3309c,public: virtual class AGameDialog * __thiscall AUnitDinosaur::GetDialog(void)const 
+SimJP.exe,?GetStats@AUnitDinosaur@@UBEXPAW4Statistic@AUnit@@PAMPAIH@Z,0x330a0,"public: virtual void __thiscall AUnitDinosaur::GetStats(enum AUnit::Statistic *,float *,unsigned int *,int)const "
+SimJP.exe,?GetStatsEx@AUnitDinosaur@@UBEXPAW4Statistic@AUnit@@PAMPAIH@Z,0x330a4,"public: virtual void __thiscall AUnitDinosaur::GetStatsEx(enum AUnit::Statistic *,float *,unsigned int *,int)const "
+SimJP.exe,?GetIconType@AActiveUnit@@UAE_NAAIAAVTVector3@Toshi@@AAH2AAUAUnitIconNode@@@Z,0x330a8,"public: virtual bool __thiscall AActiveUnit::GetIconType(unsigned int &,class Toshi::TVector3 &,int &,int &,struct AUnitIconNode &)"
+SimJP.exe,?ShowDetailsIfInfoState@AUnitDinosaur@@UAE_NXZ,0x330ac,public: virtual bool __thiscall AUnitDinosaur::ShowDetailsIfInfoState(void)
+SimJP.exe,?InitialiseUnit@AActiveUnit@@UAEXABVTVector3@Toshi@@0@Z,0x330b0,"public: virtual void __thiscall AActiveUnit::InitialiseUnit(class Toshi::TVector3 const &,class Toshi::TVector3 const &)"
+SimJP.exe,?GetUnitSteerTraits@AUnitDinosaur@@UAEPBVASteerTraits@@XZ,0x330b4,public: virtual class ASteerTraits const * __thiscall AUnitDinosaur::GetUnitSteerTraits(void)
+SimJP.exe,?GetCurrentDrive@AActiveUnit@@UBEEXZ,0x330b8,public: virtual unsigned char __thiscall AActiveUnit::GetCurrentDrive(void)const 
+SimJP.exe,?DoesSatisfyDrive@AVisibleUnit@@UBE_NE@Z,0x330bc,public: virtual bool __thiscall AVisibleUnit::DoesSatisfyDrive(unsigned char)const 
+SimJP.exe,?DoesSatisfyAnyDrives@AVisibleUnit@@UBE_NE@Z,0x330c0,public: virtual bool __thiscall AVisibleUnit::DoesSatisfyAnyDrives(unsigned char)const 
+SimJP.exe,?EatUnit@AActiveUnit@@UAE_NM@Z,0x330c4,public: virtual bool __thiscall AActiveUnit::EatUnit(float)
+SimJP.exe,?SetAnimatableTranslateDirect@AVisibleUnit@@UAEXABVTVector3@Toshi@@@Z,0x330c8,public: virtual void __thiscall AVisibleUnit::SetAnimatableTranslateDirect(class Toshi::TVector3 const &)
+SimJP.exe,?SetSize@AUnitDinosaur@@UAEXM@Z,0x330cc,public: virtual void __thiscall AUnitDinosaur::SetSize(float)
+SimJP.exe,?SetSizeDeltaIncr@AUnitDinosaur@@UAEXMM@Z,0x330d0,"public: virtual void __thiscall AUnitDinosaur::SetSizeDeltaIncr(float,float)"
+SimJP.exe,?SetSizeDeltaDecr@AUnitDinosaur@@UAEXMM@Z,0x330d4,"public: virtual void __thiscall AUnitDinosaur::SetSizeDeltaDecr(float,float)"
+SimJP.exe,?GetVisibility@AActiveUnit@@UBEMXZ,0x330d8,public: virtual float __thiscall AActiveUnit::GetVisibility(void)const 
+SimJP.exe,?GetKillExpScore@AUnitDinosaur@@UBEMXZ,0x330dc,public: virtual float __thiscall AUnitDinosaur::GetKillExpScore(void)const 
+SimJP.exe,?SetFlock@AActiveUnit@@UAEXPAVAFlock@@@Z,0x330e0,public: virtual void __thiscall AActiveUnit::SetFlock(class AFlock *)
+SimJP.exe,?WantFlockImpulse@AActiveUnit@@UBE_NXZ,0x330e4,public: virtual bool __thiscall AActiveUnit::WantFlockImpulse(void)const 
+SimJP.exe,?IsPlaymate@AActiveUnit@@UBE_NG@Z,0x330e8,public: virtual bool __thiscall AActiveUnit::IsPlaymate(unsigned short)const 
+SimJP.exe,?IsPreferredPrey@AActiveUnit@@UBE_NG@Z,0x330ec,public: virtual bool __thiscall AActiveUnit::IsPreferredPrey(unsigned short)const 
+SimJP.exe,?WantThreatScale@AActiveUnit@@UBE_NXZ,0x330f0,public: virtual bool __thiscall AActiveUnit::WantThreatScale(void)const 
+SimJP.exe,?SetHashException@AVisibleUnit@@UAE?AW4AUnitHashException@AUnit@@W423@@Z,0x330f4,public: virtual enum AUnit::AUnitHashException __thiscall AVisibleUnit::SetHashException(enum AUnit::AUnitHashException)
+SimJP.exe,?LoadUnitVariables@AActiveUnit@@UAE_NXZ,0x330f8,public: virtual bool __thiscall AActiveUnit::LoadUnitVariables(void)
+SimJP.exe,?GetTraitIndex@AUnitDinosaur@@UAEHABVTCString@Toshi@@@Z,0x330fc,public: virtual int __thiscall AUnitDinosaur::GetTraitIndex(class Toshi::TCString const &)
+SimJP.exe,?DoesHaveUnitCountIdentifier@AUnitDinosaur@@UAE_NXZ,0x33100,public: virtual bool __thiscall AUnitDinosaur::DoesHaveUnitCountIdentifier(void)
+SimJP.exe,?SetUnitCountIdentifier@AUnitDinosaur@@UAEXI@Z,0x33104,public: virtual void __thiscall AUnitDinosaur::SetUnitCountIdentifier(unsigned int)
+SimJP.exe,?GetUnitCountIdentifier@AUnitDinosaur@@UAEIXZ,0x33108,public: virtual unsigned int __thiscall AUnitDinosaur::GetUnitCountIdentifier(void)
+SimJP.exe,?GetUnitCountMaximum@AUnit@@UAEIXZ,0x3310c,public: virtual unsigned int __thiscall AUnit::GetUnitCountMaximum(void)
+SimJP.exe,?IsUnitDead@AActiveUnit@@UBE_NXZ,0x33110,public: virtual bool __thiscall AActiveUnit::IsUnitDead(void)const 
+SimJP.exe,?GetCollisionGeom@AVisibleUnit@@UAEPBVAGeom@@XZ,0x33114,public: virtual class AGeom const * __thiscall AVisibleUnit::GetCollisionGeom(void)
+SimJP.exe,?RefreshCollisionGeom@AVisibleUnit@@UAEXXZ,0x33118,public: virtual void __thiscall AVisibleUnit::RefreshCollisionGeom(void)
+SimJP.exe,?UnitExitPark@AUnit@@UAEXXZ,0x3311c,public: virtual void __thiscall AUnit::UnitExitPark(void)
+SimJP.exe,?UnitHasEnteredBuilding@AUnit@@UAEXAAV1@@Z,0x33120,public: virtual void __thiscall AUnit::UnitHasEnteredBuilding(class AUnit &)
+SimJP.exe,?UnitHasExitedBuilding@AActiveUnit@@UAEXAAVAUnit@@W4LeaveBuildingReason@2@@Z,0x33124,"public: virtual void __thiscall AActiveUnit::UnitHasExitedBuilding(class AUnit &,enum AUnit::LeaveBuildingReason)"
+SimJP.exe,?HurtUnit@AUnitDinosaur@@UAEXMW4UnitHurtType@AUnit@@PAV3@@Z,0x33128,"public: virtual void __thiscall AUnitDinosaur::HurtUnit(float,enum AUnit::UnitHurtType,class AUnit *)"
+SimJP.exe,?HealUnit@AUnitDinosaur@@UAEXMW4UnitHealType@AUnit@@PAV3@@Z,0x3312c,"public: virtual void __thiscall AUnitDinosaur::HealUnit(float,enum AUnit::UnitHealType,class AUnit *)"
+SimJP.exe,?ChooseUnitToDie@AUnit@@UAE_NPAV1@@Z,0x33130,public: virtual bool __thiscall AUnit::ChooseUnitToDie(class AUnit *)
+SimJP.exe,?UndoChooseUnitToDie@AUnit@@UAEXXZ,0x33134,public: virtual void __thiscall AUnit::UndoChooseUnitToDie(void)
+SimJP.exe,?IsUnitWaitingToDie@AUnit@@UBE_NXZ,0x33138,public: virtual bool __thiscall AUnit::IsUnitWaitingToDie(void)const 
+SimJP.exe,?GetMusterRange@AUnitDinosaur@@UAEMXZ,0x3313c,public: virtual float __thiscall AUnitDinosaur::GetMusterRange(void)
+SimJP.exe,?MakePanic@AUnit@@UAEXPAV1@@Z,0x33140,public: virtual void __thiscall AUnit::MakePanic(class AUnit *)
+SimJP.exe,?StopPanic@AUnit@@UAEXXZ,0x33144,public: virtual void __thiscall AUnit::StopPanic(void)
+SimJP.exe,?IsSerialiseable@AActiveUnit@@UAE_NXZ,0x33148,public: virtual bool __thiscall AActiveUnit::IsSerialiseable(void)
+SimJP.exe,?Serialise@AUnitDinosaur@@UAE_NAAVASaveData@@@Z,0x3314c,public: virtual bool __thiscall AUnitDinosaur::Serialise(class ASaveData &)
+SimJP.exe,?Deserialise@AUnitDinosaur@@UAE_NAAVASaveData@@@Z,0x33150,public: virtual bool __thiscall AUnitDinosaur::Deserialise(class ASaveData &)
+SimJP.exe,?PostDeserialiseLink@AVisibleUnit@@UAEXXZ,0x33154,public: virtual void __thiscall AVisibleUnit::PostDeserialiseLink(void)
+SimJP.exe,?SerialiseTest@AActiveUnit@@UAE_NXZ,0x33158,public: virtual bool __thiscall AActiveUnit::SerialiseTest(void)
+SimJP.exe,?MakeSick@AUnitDinosaur@@UAE_NIM@Z,0x3315c,"public: virtual bool __thiscall AUnitDinosaur::MakeSick(unsigned int,float)"
+SimJP.exe,?IsSick@AUnitDinosaur@@UBE_NXZ,0x33160,public: virtual bool __thiscall AUnitDinosaur::IsSick(void)const 
+SimJP.exe,?UpdateSickness@AUnitDinosaur@@UAE_NM@Z,0x33164,public: virtual bool __thiscall AUnitDinosaur::UpdateSickness(float)
+SimJP.exe,?AddToTerrainScore@AUnit@@UAEXXZ,0x33168,public: virtual void __thiscall AUnit::AddToTerrainScore(void)
+SimJP.exe,?CanCheckForSteerInteraction@AUnit@@UAE_NXZ,0x3316c,public: virtual bool __thiscall AUnit::CanCheckForSteerInteraction(void)
+SimJP.exe,?HaveAssignedSteerInteraction@AUnit@@UAEXXZ,0x33170,public: virtual void __thiscall AUnit::HaveAssignedSteerInteraction(void)
+SimJP.exe,?SetUnitStuck@AActiveUnit@@UAEX_N@Z,0x33174,public: virtual void __thiscall AActiveUnit::SetUnitStuck(bool)
+SimJP.exe,?TransferControlJumpToUnit@AUnit@@UAE_NXZ,0x33178,public: virtual bool __thiscall AUnit::TransferControlJumpToUnit(void)
+SimJP.exe,?OnParkEmergencyModeChange@AUnit@@UAEX_N@Z,0x3317c,public: virtual void __thiscall AUnit::OnParkEmergencyModeChange(bool)
+SimJP.exe,?OnParkClosingChange@AUnit@@UAEX_N@Z,0x33180,public: virtual void __thiscall AUnit::OnParkClosingChange(bool)
+SimJP.exe,?SetLightingNode@AVisibleUnit@@UAEXPAVTLightingNode@Toshi@@@Z,0x33184,public: virtual void __thiscall AVisibleUnit::SetLightingNode(class Toshi::TLightingNode *)
+SimJP.exe,?RoadPointInvalidated@AUnit@@UAEXPAVARoadPoint@@@Z,0x33188,public: virtual void __thiscall AUnit::RoadPointInvalidated(class ARoadPoint *)
+SimJP.exe,?OnPostCreate@AVisibleUnit@@UAEXXZ,0x3318c,public: virtual void __thiscall AVisibleUnit::OnPostCreate(void)
+SimJP.exe,?OnDestroy@AUnitDinosaur@@UAEXXZ,0x33190,public: virtual void __thiscall AUnitDinosaur::OnDestroy(void)
+SimJP.exe,?Imp_UpdateMovement@AActiveUnit@@MAE_NM@Z,0x33194,protected: virtual bool __thiscall AActiveUnit::Imp_UpdateMovement(float)
+SimJP.exe,?Imp_UpdateAesthetics@AUnitDinosaur@@MAEXM@Z,0x33198,protected: virtual void __thiscall AUnitDinosaur::Imp_UpdateAesthetics(float)
+SimJP.exe,?Imp_GetScreenName@AUnitDinosaur@@MBE?AVTLString@Toshi@@XZ,0x3319c,protected: virtual class Toshi::TLString __thiscall AUnitDinosaur::Imp_GetScreenName(void)const 
+SimJP.exe,?Imp_GetSteeringEffect@AActiveUnit@@MAEXMAAVTVector3@Toshi@@0@Z,0x331a0,"protected: virtual void __thiscall AActiveUnit::Imp_GetSteeringEffect(float,class Toshi::TVector3 &,class Toshi::TVector3 &)"
+SimJP.exe,?GetSteerClass@AUnitDinosaur@@MBEAAVTClass@Toshi@@XZ,0x331a4,protected: virtual class Toshi::TClass & __thiscall AUnitDinosaur::GetSteerClass(void)const 
+SimJP.exe,?LoadTraits@AUnit@@MAEXXZ,0x331a8,protected: virtual void __thiscall AUnit::LoadTraits(void)
+SimJP.exe,?SerialiseSteeringObject@AUnit@@MAEXAAVASaveData@@@Z,0x331ac,protected: virtual void __thiscall AUnit::SerialiseSteeringObject(class ASaveData &)
+SimJP.exe,?DeserialiseSteeringObject@AUnit@@MAEXAAVASaveData@@@Z,0x331b0,protected: virtual void __thiscall AUnit::DeserialiseSteeringObject(class ASaveData &)
+SimJP.exe,?CreateJumpToUnitState@AUnit@@MAEPAVARootState@@XZ,0x331b4,protected: virtual class ARootState * __thiscall AUnit::CreateJumpToUnitState(void)
+SimJP.exe,?DeleteComponents@AVisibleUnit@@MAEXXZ,0x331b8,protected: virtual void __thiscall AVisibleUnit::DeleteComponents(void)
+SimJP.exe,?SetVisible@AVisibleUnit@@UAEX_N@Z,0x331bc,public: virtual void __thiscall AVisibleUnit::SetVisible(bool)
+SimJP.exe,?SetRender@AVisibleUnit@@UAEX_N@Z,0x331c0,public: virtual void __thiscall AVisibleUnit::SetRender(bool)
+SimJP.exe,?FootstepCallback@AVisibleUnit@@UAEXPBVAAnimBreakpoint@@@Z,0x331c4,public: virtual void __thiscall AVisibleUnit::FootstepCallback(class AAnimBreakpoint const *)
+SimJP.exe,?GenSoundCallback@AVisibleUnit@@UAEXPBVAAnimBreakpoint@@@Z,0x331c8,public: virtual void __thiscall AVisibleUnit::GenSoundCallback(class AAnimBreakpoint const *)
+SimJP.exe,?BloodCallback@AUnitDinosaur@@UAEXPBVAAnimBreakpoint@@@Z,0x331cc,public: virtual void __thiscall AUnitDinosaur::BloodCallback(class AAnimBreakpoint const *)
+SimJP.exe,?SparkCallback@AVisibleUnit@@UAEXPBVAAnimBreakpoint@@@Z,0x331d0,public: virtual void __thiscall AVisibleUnit::SparkCallback(class AAnimBreakpoint const *)
+SimJP.exe,?SplashCallback@AVisibleUnit@@UAEXPBVAAnimBreakpoint@@@Z,0x331d4,public: virtual void __thiscall AVisibleUnit::SplashCallback(class AAnimBreakpoint const *)
+SimJP.exe,?RipUnitAttach@AActiveUnit@@UAEXPBVAAnimBreakpoint@@@Z,0x331d8,public: virtual void __thiscall AActiveUnit::RipUnitAttach(class AAnimBreakpoint const *)
+SimJP.exe,?PlayAnimTargetCallback@AActiveUnit@@UAEXPBVAAnimBreakpoint@@@Z,0x331dc,public: virtual void __thiscall AActiveUnit::PlayAnimTargetCallback(class AAnimBreakpoint const *)
+SimJP.exe,?FillAccessorCollection@AVisibleUnit@@UAEXAAVAAccessorCollection@@@Z,0x331e0,public: virtual void __thiscall AVisibleUnit::FillAccessorCollection(class AAccessorCollection &)
+SimJP.exe,?SetResearchUpgradeEffect@AVisibleUnit@@UAEXPAVAResearchItem@@_N@Z,0x331e4,"public: virtual void __thiscall AVisibleUnit::SetResearchUpgradeEffect(class AResearchItem *,bool)"
+SimJP.exe,?GetBoundingSphere@AUnitDinosaur@@UBEABVTSphere@Toshi@@XZ,0x331e8,public: virtual class Toshi::TSphere const & __thiscall AUnitDinosaur::GetBoundingSphere(void)const 
+SimJP.exe,?LoadINX@AVisibleUnit@@MAEXXZ,0x331ec,protected: virtual void __thiscall AVisibleUnit::LoadINX(void)
+SimJP.exe,?CreateCollisionGeom@AVisibleUnit@@MAEXXZ,0x331f0,protected: virtual void __thiscall AVisibleUnit::CreateCollisionGeom(void)
+SimJP.exe,?OnRenderChange@AVisibleUnit@@MAEX_N@Z,0x331f4,protected: virtual void __thiscall AVisibleUnit::OnRenderChange(bool)
+SimJP.exe,?InitialLoadSteeringObject@AVisibleUnit@@MAE_NABVTClass@Toshi@@@Z,0x331f8,protected: virtual bool __thiscall AVisibleUnit::InitialLoadSteeringObject(class Toshi::TClass const &)
+SimJP.exe,?GetSceneGraphType@AActiveUnit@@MAEXAA_NAAH@Z,0x331fc,"protected: virtual void __thiscall AActiveUnit::GetSceneGraphType(bool &,int &)"
+SimJP.exe,?WantKilledEvent@AUnitDinosaur@@UBE_NXZ,0x33200,public: virtual bool __thiscall AUnitDinosaur::WantKilledEvent(void)const 
+SimJP.exe,?SetKillCause@AUnitDinosaur@@UAE_NABVTCString@Toshi@@@Z,0x33204,public: virtual bool __thiscall AUnitDinosaur::SetKillCause(class Toshi::TCString const &)
+SimJP.exe,?SetKillCause@AUnitDinosaur@@UAE_NI@Z,0x33208,public: virtual bool __thiscall AUnitDinosaur::SetKillCause(unsigned int)
+SimJP.exe,?LoadBaseDriveRates@AActiveUnit@@UAE_NXZ,0x3320c,public: virtual bool __thiscall AActiveUnit::LoadBaseDriveRates(void)
+SimJP.exe,?ResetBehaviours@AActiveUnit@@UAEXXZ,0x33210,public: virtual void __thiscall AActiveUnit::ResetBehaviours(void)
+SimJP.exe,?SetTargetPosition@AActiveUnit@@UAEXABVTVector3@Toshi@@@Z,0x33214,public: virtual void __thiscall AActiveUnit::SetTargetPosition(class Toshi::TVector3 const &)
+SimJP.exe,?SetMass@AUnitDinosaur@@MAEXM@Z,0x33218,protected: virtual void __thiscall AUnitDinosaur::SetMass(float)
+SimJP.exe,?SetRadius@AUnitDinosaur@@MAEXM@Z,0x3321c,protected: virtual void __thiscall AUnitDinosaur::SetRadius(float)
+SimJP.exe,?SquashUnit@AActiveUnit@@UAE_NXZ,0x33220,public: virtual bool __thiscall AActiveUnit::SquashUnit(void)
+SimJP.exe,?IsKnockRecoil@AActiveUnit@@UAE_NPAVAUnit@@@Z,0x33224,public: virtual bool __thiscall AActiveUnit::IsKnockRecoil(class AUnit *)
+SimJP.exe,?IsEnraged@AUnitDinosaur@@UBE_NXZ,0x33228,public: virtual bool __thiscall AUnitDinosaur::IsEnraged(void)const 
+SimJP.exe,?SetFenceShot@AActiveUnit@@UAE_NABVTVector3@Toshi@@@Z,0x3322c,public: virtual bool __thiscall AActiveUnit::SetFenceShot(class Toshi::TVector3 const &)
+SimJP.exe,?InterpolatePos@AActiveUnit@@UAEXAAVTVector3@Toshi@@ABV23@11MM@Z,0x33230,"public: virtual void __thiscall AActiveUnit::InterpolatePos(class Toshi::TVector3 &,class Toshi::TVector3 const &,class Toshi::TVector3 const &,class Toshi::TVector3 const &,float,float)"
+SimJP.exe,?InterpolateDir@AActiveUnit@@UAEXAAVTVector3@Toshi@@ABV23@1M@Z,0x33234,"public: virtual void __thiscall AActiveUnit::InterpolateDir(class Toshi::TVector3 &,class Toshi::TVector3 const &,class Toshi::TVector3 const &,float)"
+SimJP.exe,?SendParkEventInternal@AActiveUnit@@UAE_NH@Z,0x33238,public: virtual bool __thiscall AActiveUnit::SendParkEventInternal(int)
+SimJP.exe,?SendParkEventInternal@AActiveUnit@@UAE_NABVTWString@Toshi@@@Z,0x3323c,public: virtual bool __thiscall AActiveUnit::SendParkEventInternal(class Toshi::TWString const &)
+SimJP.exe,?SetStuckFlag@AUnitDinosaur@@UAEX_N@Z,0x33240,public: virtual void __thiscall AUnitDinosaur::SetStuckFlag(bool)
+SimJP.exe,?ScaleDeathRadius@AActiveUnit@@UAE?AVAParam@@ABVAParams@@@Z,0x33244,public: virtual class AParam __thiscall AActiveUnit::ScaleDeathRadius(class AParams const &)
+SimJP.exe,?AddKillExperience@AUnitDinosaur@@UAE?AVAParam@@ABVAParams@@@Z,0x33248,public: virtual class AParam __thiscall AUnitDinosaur::AddKillExperience(class AParams const &)
+SimJP.exe,?PlayHungryAnim@AActiveUnit@@UAE?AVAParam@@ABVAParams@@@Z,0x3324c,public: virtual class AParam __thiscall AActiveUnit::PlayHungryAnim(class AParams const &)
+SimJP.exe,?PlayRandomIdleAnim@AActiveUnit@@UAE?AVAParam@@ABVAParams@@@Z,0x33250,public: virtual class AParam __thiscall AActiveUnit::PlayRandomIdleAnim(class AParams const &)
+SimJP.exe,?CanSneeze@AActiveUnit@@UAE?AVAParam@@ABVAParams@@@Z,0x33254,public: virtual class AParam __thiscall AActiveUnit::CanSneeze(class AParams const &)
+SimJP.exe,?SetFatalityAnims@AActiveUnit@@UAE?AVAParam@@ABVAParams@@@Z,0x33258,public: virtual class AParam __thiscall AActiveUnit::SetFatalityAnims(class AParams const &)
+SimJP.exe,?CanPerformFatality@AActiveUnit@@UAE?AVAParam@@ABVAParams@@@Z,0x3325c,public: virtual class AParam __thiscall AActiveUnit::CanPerformFatality(class AParams const &)
+SimJP.exe,?AcquireFlockTarget@AActiveUnit@@UAE?AVAParam@@ABVAParams@@@Z,0x33260,public: virtual class AParam __thiscall AActiveUnit::AcquireFlockTarget(class AParams const &)
+SimJP.exe,?CanGetUp@AActiveUnit@@UAE?AVAParam@@ABVAParams@@@Z,0x33264,public: virtual class AParam __thiscall AActiveUnit::CanGetUp(class AParams const &)
+SimJP.exe,?CanRamTarget@AActiveUnit@@UAE?AVAParam@@ABVAParams@@@Z,0x33268,public: virtual class AParam __thiscall AActiveUnit::CanRamTarget(class AParams const &)
+SimJP.exe,?SetMusterSteering@AUnitDinosaur@@UAE?AVAParam@@ABVAParams@@@Z,0x3326c,public: virtual class AParam __thiscall AUnitDinosaur::SetMusterSteering(class AParams const &)
+SimJP.exe,?CanAmbush@AActiveUnit@@UAE?AVAParam@@ABVAParams@@@Z,0x33270,public: virtual class AParam __thiscall AActiveUnit::CanAmbush(class AParams const &)
+SimJP.exe,?HasTickInfestation@AUnitDinosaur@@UAE?AVAParam@@ABVAParams@@@Z,0x33274,public: virtual class AParam __thiscall AUnitDinosaur::HasTickInfestation(class AParams const &)
+SimJP.exe,?HasBumbleFoot@AUnitDinosaur@@UAE?AVAParam@@ABVAParams@@@Z,0x33278,public: virtual class AParam __thiscall AUnitDinosaur::HasBumbleFoot(class AParams const &)
+SimJP.exe,?SetCommandMode@AActiveUnit@@MAE_NXZ,0x3327c,protected: virtual bool __thiscall AActiveUnit::SetCommandMode(void)
+SimJP.exe,?SubdueDino@AUnitDinosaur@@UAEXM@Z,0x33280,public: virtual void __thiscall AUnitDinosaur::SubdueDino(float)
+SimJP.exe,?HealDino@AUnitDinosaur@@UAEXM@Z,0x33284,public: virtual void __thiscall AUnitDinosaur::HealDino(float)
+SimJP.exe,?Vaccinate@AUnitDinosaur@@UAEXI@Z,0x33288,public: virtual void __thiscall AUnitDinosaur::Vaccinate(unsigned int)
+SimJP.exe,?GetKillCount@AUnitDinosaur@@UBEHXZ,0x3328c,public: virtual int __thiscall AUnitDinosaur::GetKillCount(void)const 
+SimJP.exe,?GetStuckFlag@AUnitDinosaur@@UBE_NXZ,0x33290,public: virtual bool __thiscall AUnitDinosaur::GetStuckFlag(void)const 
+SimJP.exe,?UpdateUnitVariables@AUnitDinosaur@@MAEXM@Z,0x33294,protected: virtual void __thiscall AUnitDinosaur::UpdateUnitVariables(float)
+SimJP.exe,?UpdateAge@AUnitDinosaur@@MAEXM@Z,0x33298,protected: virtual void __thiscall AUnitDinosaur::UpdateAge(float)
+SimJP.exe,?SetAgeCategory@AUnitDinosaur@@MAEXXZ,0x3329c,protected: virtual void __thiscall AUnitDinosaur::SetAgeCategory(void)
+SimJP.exe,?UpdateDinoSize@AUnitDinosaur@@MAEXXZ,0x332a0,protected: virtual void __thiscall AUnitDinosaur::UpdateDinoSize(void)
+SimJP.exe,?OnAgeChange@AUnitDinosaur@@MAEXW4EDINOAGECATEGORY@1@0@Z,0x332a4,"protected: virtual void __thiscall AUnitDinosaur::OnAgeChange(enum AUnitDinosaur::EDINOAGECATEGORY,enum AUnitDinosaur::EDINOAGECATEGORY)"
+SimJP.exe,?PlayPreHuntAnim@AActiveUnit@@UAE?AVAParam@@ABVAParams@@@Z,0x332a8,public: virtual class AParam __thiscall AActiveUnit::PlayPreHuntAnim(class AParams const &)
+SimJP.exe,?m_sClass@ACreatureSteer@@2VTClass@Toshi@@A,0x332ac,public: static class Toshi::TClass ACreatureSteer::m_sClass
+SimJP.exe,?m_sClass@AUnitBuilding@@2VTClass@Toshi@@A,0x332b0,public: static class Toshi::TClass AUnitBuilding::m_sClass
+SimJP.exe,?m_aFloatConstants@AConstants@@0PAMA,0x332b4,private: static float * AConstants::m_aFloatConstants
+SimJP.exe,?HurtUnit@AUnitBuilding@@UAEXMW4UnitHurtType@AUnit@@PAV3@@Z,0x332b8,"public: virtual void __thiscall AUnitBuilding::HurtUnit(float,enum AUnit::UnitHurtType,class AUnit *)"
+SimJP.exe,??1AUnitBuilding@@UAE@XZ,0x332bc,public: virtual __thiscall AUnitBuilding::~AUnitBuilding(void)
+SimJP.exe,??0AUnitBuilding@@QAE@XZ,0x332c0,public: __thiscall AUnitBuilding::AUnitBuilding(void)
+SimJP.exe,?sm_oAccessorTable@AUnitBuilding@@1VAAccessorTable@@A,0x332c4,protected: static class AAccessorTable AUnitBuilding::sm_oAccessorTable
+SimJP.exe,?GetOrders@AUnitBuilding@@UAEPAVAUnitOrders@@XZ,0x332c8,public: virtual class AUnitOrders * __thiscall AUnitBuilding::GetOrders(void)
+SimJP.exe,?GetDialog@AUnitBuilding@@UBEPAVAGameDialog@@XZ,0x332cc,public: virtual class AGameDialog * __thiscall AUnitBuilding::GetDialog(void)const 
+SimJP.exe,?GetStats@AUnitBuilding@@UBEXPAW4Statistic@AUnit@@PAMPAIH@Z,0x332d0,"public: virtual void __thiscall AUnitBuilding::GetStats(enum AUnit::Statistic *,float *,unsigned int *,int)const "
+SimJP.exe,?GetStatsEx@AUnit@@UBEXPAW4Statistic@1@PAMPAIH@Z,0x332d4,"public: virtual void __thiscall AUnit::GetStatsEx(enum AUnit::Statistic *,float *,unsigned int *,int)const "
+SimJP.exe,?GetIconType@AUnit@@UAE_NAAIAAVTVector3@Toshi@@AAH2AAUAUnitIconNode@@@Z,0x332d8,"public: virtual bool __thiscall AUnit::GetIconType(unsigned int &,class Toshi::TVector3 &,int &,int &,struct AUnitIconNode &)"
+SimJP.exe,?ShowDetailsIfInfoState@AUnit@@UAE_NXZ,0x332dc,public: virtual bool __thiscall AUnit::ShowDetailsIfInfoState(void)
+SimJP.exe,?InitialiseUnit@AUnitBuilding@@UAEXABVTVector3@Toshi@@0@Z,0x332e0,"public: virtual void __thiscall AUnitBuilding::InitialiseUnit(class Toshi::TVector3 const &,class Toshi::TVector3 const &)"
+SimJP.exe,?GetUnitSteerTraits@AUnit@@UAEPBVASteerTraits@@XZ,0x332e4,public: virtual class ASteerTraits const * __thiscall AUnit::GetUnitSteerTraits(void)
+SimJP.exe,?SetSize@AVisibleUnit@@UAEXM@Z,0x332e8,public: virtual void __thiscall AVisibleUnit::SetSize(float)
+SimJP.exe,?SetSizeDeltaIncr@AVisibleUnit@@UAEXMM@Z,0x332ec,"public: virtual void __thiscall AVisibleUnit::SetSizeDeltaIncr(float,float)"
+SimJP.exe,?SetSizeDeltaDecr@AVisibleUnit@@UAEXMM@Z,0x332f0,"public: virtual void __thiscall AVisibleUnit::SetSizeDeltaDecr(float,float)"
+SimJP.exe,?LoadUnitVariables@AUnitBuilding@@UAE_NXZ,0x332f4,public: virtual bool __thiscall AUnitBuilding::LoadUnitVariables(void)
+SimJP.exe,?GetTraitIndex@AVisibleUnit@@UAEHABVTCString@Toshi@@@Z,0x332f8,public: virtual int __thiscall AVisibleUnit::GetTraitIndex(class Toshi::TCString const &)
+SimJP.exe,?DoesHaveUnitCountIdentifier@AUnitBuilding@@UAE_NXZ,0x332fc,public: virtual bool __thiscall AUnitBuilding::DoesHaveUnitCountIdentifier(void)
+SimJP.exe,?SetUnitCountIdentifier@AUnitBuilding@@UAEXI@Z,0x33300,public: virtual void __thiscall AUnitBuilding::SetUnitCountIdentifier(unsigned int)
+SimJP.exe,?GetUnitCountIdentifier@AUnitBuilding@@UAEIXZ,0x33304,public: virtual unsigned int __thiscall AUnitBuilding::GetUnitCountIdentifier(void)
+SimJP.exe,?IsUnitDead@AUnitBuilding@@UBE_NXZ,0x33308,public: virtual bool __thiscall AUnitBuilding::IsUnitDead(void)const 
+SimJP.exe,?UnitHasExitedBuilding@AUnit@@UAEXAAV1@W4LeaveBuildingReason@1@@Z,0x3330c,"public: virtual void __thiscall AUnit::UnitHasExitedBuilding(class AUnit &,enum AUnit::LeaveBuildingReason)"
+SimJP.exe,?HealUnit@AUnitBuilding@@UAEXMW4UnitHealType@AUnit@@PAV3@@Z,0x33310,"public: virtual void __thiscall AUnitBuilding::HealUnit(float,enum AUnit::UnitHealType,class AUnit *)"
+SimJP.exe,?Serialise@AUnitBuilding@@UAE_NAAVASaveData@@@Z,0x33314,public: virtual bool __thiscall AUnitBuilding::Serialise(class ASaveData &)
+SimJP.exe,?Deserialise@AUnitBuilding@@UAE_NAAVASaveData@@@Z,0x33318,public: virtual bool __thiscall AUnitBuilding::Deserialise(class ASaveData &)
+SimJP.exe,?PostDeserialiseLink@AUnitBuilding@@UAEXXZ,0x3331c,public: virtual void __thiscall AUnitBuilding::PostDeserialiseLink(void)
+SimJP.exe,?AddToTerrainScore@AUnitBuilding@@UAEXXZ,0x33320,public: virtual void __thiscall AUnitBuilding::AddToTerrainScore(void)
+SimJP.exe,?SetLightingNode@AUnitBuilding@@UAEXPAVTLightingNode@Toshi@@@Z,0x33324,public: virtual void __thiscall AUnitBuilding::SetLightingNode(class Toshi::TLightingNode *)
+SimJP.exe,?OnCreate@AUnitBuilding@@UAE_NXZ,0x33328,public: virtual bool __thiscall AUnitBuilding::OnCreate(void)
+SimJP.exe,?OnDestroy@AUnitBuilding@@UAEXXZ,0x3332c,public: virtual void __thiscall AUnitBuilding::OnDestroy(void)
+SimJP.exe,?Imp_UpdateControl@AUnitBuilding@@MAEXM@Z,0x33330,protected: virtual void __thiscall AUnitBuilding::Imp_UpdateControl(float)
+SimJP.exe,?Imp_UpdateMovement@AVisibleUnit@@MAE_NM@Z,0x33334,protected: virtual bool __thiscall AVisibleUnit::Imp_UpdateMovement(float)
+SimJP.exe,?Imp_UpdateAesthetics@AUnitBuilding@@MAEXM@Z,0x33338,protected: virtual void __thiscall AUnitBuilding::Imp_UpdateAesthetics(float)
+SimJP.exe,?Imp_GetScreenName@AUnitBuilding@@MBE?AVTLString@Toshi@@XZ,0x3333c,protected: virtual class Toshi::TLString __thiscall AUnitBuilding::Imp_GetScreenName(void)const 
+SimJP.exe,?GetSteerClass@AUnit@@MBEAAVTClass@Toshi@@XZ,0x33340,protected: virtual class Toshi::TClass & __thiscall AUnit::GetSteerClass(void)const 
+SimJP.exe,?CreateJumpToUnitState@AUnitBuilding@@MAEPAVARootState@@XZ,0x33344,protected: virtual class ARootState * __thiscall AUnitBuilding::CreateJumpToUnitState(void)
+SimJP.exe,?SetVisible@AUnitBuilding@@UAEX_N@Z,0x33348,public: virtual void __thiscall AUnitBuilding::SetVisible(bool)
+SimJP.exe,?SetRender@AUnitBuilding@@UAEX_N@Z,0x3334c,public: virtual void __thiscall AUnitBuilding::SetRender(bool)
+SimJP.exe,?BloodCallback@AVisibleUnit@@UAEXPBVAAnimBreakpoint@@@Z,0x33350,public: virtual void __thiscall AVisibleUnit::BloodCallback(class AAnimBreakpoint const *)
+SimJP.exe,?RipUnitAttach@AVisibleUnit@@UAEXPBVAAnimBreakpoint@@@Z,0x33354,public: virtual void __thiscall AVisibleUnit::RipUnitAttach(class AAnimBreakpoint const *)
+SimJP.exe,?PlayAnimTargetCallback@AVisibleUnit@@UAEXPBVAAnimBreakpoint@@@Z,0x33358,public: virtual void __thiscall AVisibleUnit::PlayAnimTargetCallback(class AAnimBreakpoint const *)
+SimJP.exe,?FillAccessorCollection@AUnitBuilding@@UAEXAAVAAccessorCollection@@@Z,0x3335c,public: virtual void __thiscall AUnitBuilding::FillAccessorCollection(class AAccessorCollection &)
+SimJP.exe,?GetBoundingSphere@AVisibleUnit@@UBEABVTSphere@Toshi@@XZ,0x33360,public: virtual class Toshi::TSphere const & __thiscall AVisibleUnit::GetBoundingSphere(void)const 
+SimJP.exe,?OnRenderChange@AUnitBuilding@@MAEX_N@Z,0x33364,protected: virtual void __thiscall AUnitBuilding::OnRenderChange(bool)
+SimJP.exe,?GetSceneGraphType@AUnitBuilding@@MAEXAA_NAAH@Z,0x33368,"protected: virtual void __thiscall AUnitBuilding::GetSceneGraphType(bool &,int &)"
+SimJP.exe,?IsBuildingFull@AUnitBuilding@@UBE_NXZ,0x3336c,public: virtual bool __thiscall AUnitBuilding::IsBuildingFull(void)const 
+SimJP.exe,?IsBuildingComponentFull@AUnitBuilding@@UBE_NAAVAUnitComponent@@@Z,0x33370,public: virtual bool __thiscall AUnitBuilding::IsBuildingComponentFull(class AUnitComponent &)const 
+SimJP.exe,?GetBuildingComponentPopulationRatio@AUnitBuilding@@UBEMAAVAUnitComponent@@@Z,0x33374,public: virtual float __thiscall AUnitBuilding::GetBuildingComponentPopulationRatio(class AUnitComponent &)const 
+SimJP.exe,?AreVisitorsAllowed@AUnitBuilding@@UAE_NXZ,0x33378,public: virtual bool __thiscall AUnitBuilding::AreVisitorsAllowed(void)
+SimJP.exe,?GetKinematicsObstructionArray@AUnitBuilding@@UAEPAVAKinematicsObstructionArray@@XZ,0x3337c,public: virtual class AKinematicsObstructionArray * __thiscall AUnitBuilding::GetKinematicsObstructionArray(void)
+SimJP.exe,?ApplyVisitorAtBuildingEffect@AUnitBuilding@@UAEXPAVAVisitorInterface@@@Z,0x33380,public: virtual void __thiscall AUnitBuilding::ApplyVisitorAtBuildingEffect(class AVisitorInterface *)
+SimJP.exe,?HasPostCreatedGameState@AUnitBuilding@@UAE_NXZ,0x33384,public: virtual bool __thiscall AUnitBuilding::HasPostCreatedGameState(void)
+SimJP.exe,?SwitchToPostCreatedGameState@AUnitBuilding@@UAEXXZ,0x33388,public: virtual void __thiscall AUnitBuilding::SwitchToPostCreatedGameState(void)
+SimJP.exe,?InitialiseBuilding@AUnitBuilding@@MAEXABVTVector3@Toshi@@W4FacingDirection@1@@Z,0x3338c,"protected: virtual void __thiscall AUnitBuilding::InitialiseBuilding(class Toshi::TVector3 const &,enum AUnitBuilding::FacingDirection)"
+SimJP.exe,?AttachPaths@AUnitBuilding@@MAEXW4FacingDirection@1@@Z,0x33390,protected: virtual void __thiscall AUnitBuilding::AttachPaths(enum AUnitBuilding::FacingDirection)
+SimJP.exe,?AttachSafariPaths@AUnitBuilding@@MAEXW4FacingDirection@1@@Z,0x33394,protected: virtual void __thiscall AUnitBuilding::AttachSafariPaths(enum AUnitBuilding::FacingDirection)
+SimJP.exe,?DetermineRelativeRoadPosition@AUnitBuilding@@MAEXHAAVTVector2@Toshi@@W4FacingDirection@1@@Z,0x33398,"protected: virtual void __thiscall AUnitBuilding::DetermineRelativeRoadPosition(int,class Toshi::TVector2 &,enum AUnitBuilding::FacingDirection)"
+SimJP.exe,?PostBuildingClearRegion@AUnitBuilding@@MAEXIIII@Z,0x3339c,"protected: virtual void __thiscall AUnitBuilding::PostBuildingClearRegion(unsigned int,unsigned int,unsigned int,unsigned int)"
+SimJP.exe,?OnDamagedStopWorkingStateChanged@AUnitBuilding@@MAEX_N@Z,0x333a0,protected: virtual void __thiscall AUnitBuilding::OnDamagedStopWorkingStateChanged(bool)
+SimJP.exe,?PlaceFootPrintUIFlags@AUnitBuilding@@MAEX_NW4FacingDirection@1@@Z,0x333a4,"protected: virtual void __thiscall AUnitBuilding::PlaceFootPrintUIFlags(bool,enum AUnitBuilding::FacingDirection)"
+SimJP.exe,?DeInitialise@AUnitBuilding@@EAEXXZ,0x333a8,private: virtual void __thiscall AUnitBuilding::DeInitialise(void)
+SimJP.exe,?AddOrder@AUnitOrders@@QAEXW4Type@AUnitOrder@@ABVTPCString@Toshi@@ABVTLString@5@2AAUHack@3@@Z,0x333ac,"public: void __thiscall AUnitOrders::AddOrder(enum AUnitOrder::Type,class Toshi::TPCString const &,class Toshi::TLString const &,class Toshi::TLString const &,struct AUnitOrder::Hack &)"
+SimJP.exe,??0AUnitOrders@@QAE@ABV0@@Z,0x333b0,public: __thiscall AUnitOrders::AUnitOrders(class AUnitOrders const &)
+SimJP.exe,?StaticGetOrders@AUnit@@SGPAVAUnitOrders@@XZ,0x333b4,public: static class AUnitOrders * __stdcall AUnit::StaticGetOrders(void)
+SimJP.exe,??0ADynamics@@QAE@XZ,0x333b8,public: __thiscall ADynamics::ADynamics(void)
+SimJP.exe,??0AUnitStaff@@QAE@XZ,0x333bc,public: __thiscall AUnitStaff::AUnitStaff(void)
+SimJP.exe,??1ADynamics@@UAE@XZ,0x333c0,public: virtual __thiscall ADynamics::~ADynamics(void)
+SimJP.exe,??1AUnitStaff@@UAE@XZ,0x333c4,public: virtual __thiscall AUnitStaff::~AUnitStaff(void)
+SimJP.exe,?SetUpdateModel@AAnimatableObject@@QAEX_N@Z,0x333c8,public: void __thiscall AAnimatableObject::SetUpdateModel(bool)
+SimJP.exe,?AttachToUnit@AAnimatableObject@@QAEXPAV1@PAVALocator@@1@Z,0x333cc,"public: void __thiscall AAnimatableObject::AttachToUnit(class AAnimatableObject *,class ALocator *,class ALocator *)"
+SimJP.exe,?GetLocatorSet@AAnimatableObject@@QAEPAVALocatorSet@@XZ,0x333d0,public: class ALocatorSet * __thiscall AAnimatableObject::GetLocatorSet(void)
+SimJP.exe,?LoadAnimatableObject@AAnimatableObject@@SGPAV1@ABVTCString@Toshi@@W4Type@AFadeDist@@_N@Z,0x333d4,"public: static class AAnimatableObject * __stdcall AAnimatableObject::LoadAnimatableObject(class Toshi::TCString const &,enum AFadeDist::Type,bool)"
+SimJP.exe,?GetLocator@ALocatorSet@@QAEPAVALocator@@ABVTCString@Toshi@@@Z,0x333d8,public: class ALocator * __thiscall ALocatorSet::GetLocator(class Toshi::TCString const &)
+SimJP.exe,?OnCreate@AVisibleUnit@@UAE_NXZ,0x333dc,public: virtual bool __thiscall AVisibleUnit::OnCreate(void)
+SimJP.exe,?IsAttached@AAnimatableObject@@QBE_NXZ,0x333e0,public: bool __thiscall AAnimatableObject::IsAttached(void)const 
+SimJP.exe,?PutValue@ASaveData@@QAEXPBDABVTQuaternion@Toshi@@@Z,0x333e4,"public: void __thiscall ASaveData::PutValue(char const *,class Toshi::TQuaternion const &)"
+SimJP.exe,?PutValue@ASaveData@@QAEXPBDAB_N@Z,0x333e8,"public: void __thiscall ASaveData::PutValue(char const *,bool const &)"
+SimJP.exe,?PutValue@ASaveData@@QAEXPBDABVTVector3@Toshi@@@Z,0x333ec,"public: void __thiscall ASaveData::PutValue(char const *,class Toshi::TVector3 const &)"
+SimJP.exe,?PutValue@ASaveData@@QAEXPBDABM@Z,0x333f0,"public: void __thiscall ASaveData::PutValue(char const *,float const &)"
+SimJP.exe,?PutValue@ASaveData@@QAEXPBDABH@Z,0x333f4,"public: void __thiscall ASaveData::PutValue(char const *,int const &)"
+SimJP.exe,?Serialise@ADynamics@@QAE_NAAVASaveData@@@Z,0x333f8,public: bool __thiscall ADynamics::Serialise(class ASaveData &)
+SimJP.exe,?Serialise@AUnitStaff@@UAE_NAAVASaveData@@@Z,0x333fc,public: virtual bool __thiscall AUnitStaff::Serialise(class ASaveData &)
+SimJP.exe,?DetachFromUnit@AAnimatableObject@@QAE_NPAV1@@Z,0x33400,public: bool __thiscall AAnimatableObject::DetachFromUnit(class AAnimatableObject *)
+SimJP.exe,?SetRender@AAnimatableObject@@QAEX_N0@Z,0x33404,"public: void __thiscall AAnimatableObject::SetRender(bool,bool)"
+SimJP.exe,?SetVisible@AAnimatableObject@@QAEX_N@Z,0x33408,public: void __thiscall AAnimatableObject::SetVisible(bool)
+SimJP.exe,?GetValue@ASaveData@@QAE_NPBDAAVTQuaternion@Toshi@@@Z,0x3340c,"public: bool __thiscall ASaveData::GetValue(char const *,class Toshi::TQuaternion &)"
+SimJP.exe,?GetValue@ASaveData@@QAE_NPBDAA_N@Z,0x33410,"public: bool __thiscall ASaveData::GetValue(char const *,bool &)"
+SimJP.exe,?GetValue@ASaveData@@QAE_NPBDAAVTVector3@Toshi@@@Z,0x33414,"public: bool __thiscall ASaveData::GetValue(char const *,class Toshi::TVector3 &)"
+SimJP.exe,?GetValue@ASaveData@@QAE_NPBDAAM@Z,0x33418,"public: bool __thiscall ASaveData::GetValue(char const *,float &)"
+SimJP.exe,?GetValue@ASaveData@@QAE_NPBDAAH@Z,0x3341c,"public: bool __thiscall ASaveData::GetValue(char const *,int &)"
+SimJP.exe,?Deserialise@ADynamics@@QAE_NAAVASaveData@@@Z,0x33420,public: bool __thiscall ADynamics::Deserialise(class ASaveData &)
+SimJP.exe,?Deserialise@AUnitStaff@@UAE_NAAVASaveData@@@Z,0x33424,public: virtual bool __thiscall AUnitStaff::Deserialise(class ASaveData &)
+SimJP.exe,?m_pParkTime@AParkManager@@0PAVAParkTime@@A,0x33428,private: static class AParkTime * AParkManager::m_pParkTime
+SimJP.exe,?m_pSimJPTerrain@AParkManager@@0PAVASimJPTerrain@@A,0x3342c,private: static class ASimJPTerrain * AParkManager::m_pSimJPTerrain
+SimJP.exe,?m_pWeatherManager@AParkManager@@0PAVAWeatherManager@@A,0x33430,private: static class AWeatherManager * AParkManager::m_pWeatherManager
+SimJP.exe,?g_oTheApp@@3VAApplication@@A,0x33434,class AApplication g_oTheApp
+SimJP.exe,?GetWindMagAtPos@AWeatherManager@@QAEMMM@Z,0x33438,"public: float __thiscall AWeatherManager::GetWindMagAtPos(float,float)"
+SimJP.exe,?PlaySound3D@ASoundManager@@QAEHHABVTVector3@Toshi@@@Z,0x3343c,"public: int __thiscall ASoundManager::PlaySound3D(int,class Toshi::TVector3 const &)"
+SimJP.exe,?SetQuatDirect@AAnimatableObject@@QAEXABVTQuaternion@Toshi@@@Z,0x33440,public: void __thiscall AAnimatableObject::SetQuatDirect(class Toshi::TQuaternion const &)
+SimJP.exe,?SetTranslateDirect@AAnimatableObject@@QAEXABVTVector3@Toshi@@@Z,0x33444,public: void __thiscall AAnimatableObject::SetTranslateDirect(class Toshi::TVector3 const &)
+SimJP.exe,?GetRootTask@AApplication@@QBEPAVARootTask@@XZ,0x33448,public: class ARootTask * __thiscall AApplication::GetRootTask(void)const 
+SimJP.exe,?Imp_UpdateAesthetics@AVisibleUnit@@MAEXM@Z,0x3344c,protected: virtual void __thiscall AVisibleUnit::Imp_UpdateAesthetics(float)
+SimJP.exe,?SetPosition@AUnit@@QAEXABVTVector3@Toshi@@@Z,0x33450,public: void __thiscall AUnit::SetPosition(class Toshi::TVector3 const &)
+SimJP.exe,?m_sClass@AStationarySteer@@2VTClass@Toshi@@A,0x33454,public: static class Toshi::TClass AStationarySteer::m_sClass
+SimJP.exe,?GetQuaternion@ALocator@@QAEXAAVTQuaternion@Toshi@@@Z,0x33458,public: void __thiscall ALocator::GetQuaternion(class Toshi::TQuaternion &)
+SimJP.exe,?GetTranslate@ALocator@@QAEXAAVTVector3@Toshi@@@Z,0x3345c,public: void __thiscall ALocator::GetTranslate(class Toshi::TVector3 &)
+SimJP.exe,?UseIntegration_Euler@ADynamics@@QAEXXZ,0x33460,public: void __thiscall ADynamics::UseIntegration_Euler(void)
+SimJP.exe,?OnUpdate@ADynamics@@QAE_NM@Z,0x33464,public: bool __thiscall ADynamics::OnUpdate(float)
+SimJP.exe,?TumbleEffect_EmitDust@ADynamics@@QAEX_N@Z,0x33468,public: void __thiscall ADynamics::TumbleEffect_EmitDust(bool)
+SimJP.exe,?SetYawSpeedToVelocityRatio@ADynamics@@QAEXABM@Z,0x3346c,public: void __thiscall ADynamics::SetYawSpeedToVelocityRatio(float const &)
+SimJP.exe,?SetRollSpeedToVelocityRatio@ADynamics@@QAEXABM@Z,0x33470,public: void __thiscall ADynamics::SetRollSpeedToVelocityRatio(float const &)
+SimJP.exe,?SetFriction@ADynamics@@QAEXABM@Z,0x33474,public: void __thiscall ADynamics::SetFriction(float const &)
+SimJP.exe,?SetBounceFactor@ADynamics@@QAEXABM@Z,0x33478,public: void __thiscall ADynamics::SetBounceFactor(float const &)
+SimJP.exe,?StartTumbleEffect@ADynamics@@QAEXABVTVector3@Toshi@@@Z,0x3347c,public: void __thiscall ADynamics::StartTumbleEffect(class Toshi::TVector3 const &)
+SimJP.exe,?SetCollisionRadius@ADynamics@@QAEXABM@Z,0x33480,public: void __thiscall ADynamics::SetCollisionRadius(float const &)
+SimJP.exe,?SetEuler@ADynamics@@QAEXABM0@Z,0x33484,"public: void __thiscall ADynamics::SetEuler(float const &,float const &)"
+SimJP.exe,?SetCurrentVelocity@ADynamics@@QAEXABVTVector3@Toshi@@@Z,0x33488,public: void __thiscall ADynamics::SetCurrentVelocity(class Toshi::TVector3 const &)
+SimJP.exe,?SetCurrentPosition@ADynamics@@QAEXABVTVector3@Toshi@@@Z,0x3348c,public: void __thiscall ADynamics::SetCurrentPosition(class Toshi::TVector3 const &)
+SimJP.exe,?SetCurrentOrientation@ADynamics@@QAEXABVTQuaternion@Toshi@@@Z,0x33490,public: void __thiscall ADynamics::SetCurrentOrientation(class Toshi::TQuaternion const &)
+SimJP.exe,?Initialise@ADynamics@@QAEXXZ,0x33494,public: void __thiscall ADynamics::Initialise(void)
+SimJP.exe,?SwitchSteeringClass@AUnit@@QAE_NABVTClass@Toshi@@@Z,0x33498,public: bool __thiscall AUnit::SwitchSteeringClass(class Toshi::TClass const &)
+SimJP.exe,?m_pMiniGameController@AParkManager@@0PAVAMiniGameController@@A,0x3349c,private: static class AMiniGameController * AParkManager::m_pMiniGameController
+SimJP.exe,?m_sClass@ADefaultState@@2VTClass@Toshi@@A,0x334a0,public: static class Toshi::TClass ADefaultState::m_sClass
+SimJP.exe,?CreateMiniGame@AMiniGameController@@QAEPAVAMiniGameState@@PAVAUnit@@W4EnumeratedMiniGameType@1@ABHAB_N@Z,0x334a4,"public: class AMiniGameState * __thiscall AMiniGameController::CreateMiniGame(class AUnit *,enum AMiniGameController::EnumeratedMiniGameType,int const &,bool const &)"
+SimJP.exe,?ReturnToState@ARootStateController@@QAEXABVTClass@Toshi@@@Z,0x334a8,public: void __thiscall ARootStateController::ReturnToState(class Toshi::TClass const &)
+SimJP.exe,?GetCurrentGameState@ARootStateController@@QAEAAVARootState@@XZ,0x334ac,public: class ARootState & __thiscall ARootStateController::GetCurrentGameState(void)
+SimJP.exe,?GetRootStateController@ARootTask@@QBEPAVARootStateController@@XZ,0x334b0,public: class ARootStateController * __thiscall ARootTask::GetRootStateController(void)const 
+SimJP.exe,?m_sClass@AUnitStaff@@2VTClass@Toshi@@A,0x334b4,public: static class Toshi::TClass AUnitStaff::m_sClass
+SimJP.exe,?JumpToDepot@AUnitStaff@@QAEXXZ,0x334b8,public: void __thiscall AUnitStaff::JumpToDepot(void)
+SimJP.exe,?m_sClass@ABalloonSteer@@2VTClass@Toshi@@A,0x334bc,public: static class Toshi::TClass ABalloonSteer::m_sClass
+SimJP.exe,?sm_oAccessorTable@AUnit@@1VAAccessorTable@@A,0x334c0,protected: static class AAccessorTable AUnit::sm_oAccessorTable
+SimJP.exe,?GetDialog@AUnit@@UBEPAVAGameDialog@@XZ,0x334c4,public: virtual class AGameDialog * __thiscall AUnit::GetDialog(void)const 
+SimJP.exe,?GetStats@AUnit@@UBEXPAW4Statistic@1@PAMPAIH@Z,0x334c8,"public: virtual void __thiscall AUnit::GetStats(enum AUnit::Statistic *,float *,unsigned int *,int)const "
+SimJP.exe,?InitialiseUnit@AUnit@@UAEXABVTVector3@Toshi@@0@Z,0x334cc,"public: virtual void __thiscall AUnit::InitialiseUnit(class Toshi::TVector3 const &,class Toshi::TVector3 const &)"
+SimJP.exe,?LoadUnitVariables@AUnit@@UAE_NXZ,0x334d0,public: virtual bool __thiscall AUnit::LoadUnitVariables(void)
+SimJP.exe,?DoesHaveUnitCountIdentifier@AUnit@@UAE_NXZ,0x334d4,public: virtual bool __thiscall AUnit::DoesHaveUnitCountIdentifier(void)
+SimJP.exe,?SetUnitCountIdentifier@AUnit@@UAEXI@Z,0x334d8,public: virtual void __thiscall AUnit::SetUnitCountIdentifier(unsigned int)
+SimJP.exe,?GetUnitCountIdentifier@AUnit@@UAEIXZ,0x334dc,public: virtual unsigned int __thiscall AUnit::GetUnitCountIdentifier(void)
+SimJP.exe,?IsUnitDead@AUnit@@UBE_NXZ,0x334e0,public: virtual bool __thiscall AUnit::IsUnitDead(void)const 
+SimJP.exe,?HealUnit@AUnit@@UAEXMW4UnitHealType@1@PAV1@@Z,0x334e4,"public: virtual void __thiscall AUnit::HealUnit(float,enum AUnit::UnitHealType,class AUnit *)"
+SimJP.exe,?GetMusterRange@AUnit@@UAEMXZ,0x334e8,public: virtual float __thiscall AUnit::GetMusterRange(void)
+SimJP.exe,?OnDestroy@AUnitStaff@@UAEXXZ,0x334ec,public: virtual void __thiscall AUnitStaff::OnDestroy(void)
+SimJP.exe,?Imp_GetScreenName@AUnit@@MBE?AVTLString@Toshi@@XZ,0x334f0,protected: virtual class Toshi::TLString __thiscall AUnit::Imp_GetScreenName(void)const 
+SimJP.exe,?GetSceneGraphType@AUnitStaff@@MAEXAA_NAAH@Z,0x334f4,"protected: virtual void __thiscall AUnitStaff::GetSceneGraphType(bool &,int &)"
+SimJP.exe,?CmdIncomingVisitors@AUnitStaff@@UAEXXZ,0x334f8,public: virtual void __thiscall AUnitStaff::CmdIncomingVisitors(void)
+SimJP.exe,?CmdGoTo@AUnitStaff@@UAEXABVTVector3@Toshi@@@Z,0x334fc,public: virtual void __thiscall AUnitStaff::CmdGoTo(class Toshi::TVector3 const &)
+SimJP.exe,?CmdLand@AUnitStaff@@UAEXABVAUnitBuilding@@@Z,0x33500,public: virtual void __thiscall AUnitStaff::CmdLand(class AUnitBuilding const &)
+SimJP.exe,?SetDepot@AUnitStaff@@UAEXPAVAUnit@@@Z,0x33504,public: virtual void __thiscall AUnitStaff::SetDepot(class AUnit *)
+SimJP.exe,?GetDepot@AUnitStaff@@UAEPAVAUnit@@XZ,0x33508,public: virtual class AUnit * __thiscall AUnitStaff::GetDepot(void)
+SimJP.exe,?OrdersBroken@AUnitStaff@@UAEXXZ,0x3350c,public: virtual void __thiscall AUnitStaff::OrdersBroken(void)
+SimJP.exe,?FireStaff@AUnitStaff@@UAEXXZ,0x33510,public: virtual void __thiscall AUnitStaff::FireStaff(void)
+SimJP.exe,?StaffFiredByDepot@AUnitStaff@@UAEXXZ,0x33514,public: virtual void __thiscall AUnitStaff::StaffFiredByDepot(void)
+SimJP.exe,?HaveCleanedBuilding@AUnitStaff@@UAEXPAVAUnitBuilding@@M@Z,0x33518,"public: virtual void __thiscall AUnitStaff::HaveCleanedBuilding(class AUnitBuilding *,float)"
+SimJP.exe,?m_sClass@AVisibleUnit@@2VTClass@Toshi@@A,0x3351c,public: static class Toshi::TClass AVisibleUnit::m_sClass
+SimJP.exe,??1AVisibleUnit@@UAE@XZ,0x33520,public: virtual __thiscall AVisibleUnit::~AVisibleUnit(void)
+SimJP.exe,??0AVisibleUnit@@QAE@XZ,0x33524,public: __thiscall AVisibleUnit::AVisibleUnit(void)
+SimJP.exe,?GetOrders@AUnit@@UAEPAVAUnitOrders@@XZ,0x33528,public: virtual class AUnitOrders * __thiscall AUnit::GetOrders(void)
+SimJP.exe,?HurtUnit@AUnit@@UAEXMW4UnitHurtType@1@PAV1@@Z,0x3352c,"public: virtual void __thiscall AUnit::HurtUnit(float,enum AUnit::UnitHurtType,class AUnit *)"
+SimJP.exe,?Serialise@AVisibleUnit@@UAE_NAAVASaveData@@@Z,0x33530,public: virtual bool __thiscall AVisibleUnit::Serialise(class ASaveData &)
+SimJP.exe,?Deserialise@AVisibleUnit@@UAE_NAAVASaveData@@@Z,0x33534,public: virtual bool __thiscall AVisibleUnit::Deserialise(class ASaveData &)
+SimJP.exe,?OnDestroy@AVisibleUnit@@UAEXXZ,0x33538,public: virtual void __thiscall AVisibleUnit::OnDestroy(void)
+SimJP.exe,?Imp_UpdateControl@AVisibleUnit@@MAEXM@Z,0x3353c,protected: virtual void __thiscall AVisibleUnit::Imp_UpdateControl(float)
+SimJP.exe,?GetSceneGraphType@AVisibleUnit@@MAEXAA_NAAH@Z,0x33540,"protected: virtual void __thiscall AVisibleUnit::GetSceneGraphType(bool &,int &)"
+SimJP.exe,?Imp_UpdateAesthetics@AUnitArtifact@@MAEXM@Z,0x33544,protected: virtual void __thiscall AUnitArtifact::Imp_UpdateAesthetics(float)
+SimJP.exe,?CheckForNearbyDinos@AUnitArtifact@@QAEXXZ,0x33548,public: void __thiscall AUnitArtifact::CheckForNearbyDinos(void)
+SimJP.exe,?m_sClass@AUnitArtifact@@2VTClass@Toshi@@A,0x3354c,public: static class Toshi::TClass AUnitArtifact::m_sClass
+SimJP.exe,??1AUnitArtifact@@UAE@XZ,0x33550,public: virtual __thiscall AUnitArtifact::~AUnitArtifact(void)
+SimJP.exe,??0AUnitArtifact@@QAE@XZ,0x33554,public: __thiscall AUnitArtifact::AUnitArtifact(void)
+SimJP.exe,?InitialiseUnit@AUnitArtifact@@UAEXABVTVector3@Toshi@@0@Z,0x33558,"public: virtual void __thiscall AUnitArtifact::InitialiseUnit(class Toshi::TVector3 const &,class Toshi::TVector3 const &)"
+SimJP.exe,?Serialise@AUnitArtifact@@UAE_NAAVASaveData@@@Z,0x3355c,public: virtual bool __thiscall AUnitArtifact::Serialise(class ASaveData &)
+SimJP.exe,?Deserialise@AUnitArtifact@@UAE_NAAVASaveData@@@Z,0x33560,public: virtual bool __thiscall AUnitArtifact::Deserialise(class ASaveData &)
+SimJP.exe,?OnCreate@AUnitArtifact@@UAE_NXZ,0x33564,public: virtual bool __thiscall AUnitArtifact::OnCreate(void)
+SimJP.exe,?SetVelocity@AUnitArtifact@@UAEXABVTVector3@Toshi@@@Z,0x33568,public: virtual void __thiscall AUnitArtifact::SetVelocity(class Toshi::TVector3 const &)
+SimJP.exe,?IsAtRest@AUnitArtifact@@UAE_NXZ,0x3356c,public: virtual bool __thiscall AUnitArtifact::IsAtRest(void)
+SimJP.exe,?EmitLureGas@AUnitArtifact@@UAEXXZ,0x33570,public: virtual void __thiscall AUnitArtifact::EmitLureGas(void)
+SimJP.exe,?AddAccessor@AAccessorTable@@QAEXPAVABaseAccessor@@@Z,0x33574,public: void __thiscall AAccessorTable::AddAccessor(class ABaseAccessor *)
+SimJP.exe,?Initialise@AAccessorTable@@QAEXPAV1@@Z,0x33578,public: void __thiscall AAccessorTable::Initialise(class AAccessorTable *)
+SimJP.exe,??0AAccessor@@QAE@PBDP8TObject@Toshi@@AEXAAVPPropertyValue@@@ZP812@AEXABV3@@ZP812@AEXAA_N5@Z4@Z,0x3357c,"public: __thiscall AAccessor::AAccessor(char const *,void (__thiscall Toshi::TObject::*)(class PPropertyValue &),void (__thiscall Toshi::TObject::*)(class PPropertyValue const &),void (__thiscall Toshi::TObject::*)(bool &,bool &),void (__thiscall Toshi::TObject::*)(class PPropertyValue const &))"
+SimJP.exe,?m_sClass@AActualStaffController@@2VTClass@Toshi@@A,0x33580,public: static class Toshi::TClass AActualStaffController::m_sClass
+SimJP.exe,?StaffFireRef@AActualStaffController@@QAE_NPAVAUnitStaff@@@Z,0x33584,public: bool __thiscall AActualStaffController::StaffFireRef(class AUnitStaff *)
+SimJP.exe,?GetComponent@AVisibleUnit@@QBEPBVAUnitComponent@@ABVTClass@Toshi@@@Z,0x33588,public: class AUnitComponent const * __thiscall AVisibleUnit::GetComponent(class Toshi::TClass const &)const 
+SimJP.exe,?s_pThisObject@AParkManager@@0PAV1@A,0x3358c,private: static class AParkManager * AParkManager::s_pThisObject
+SimJP.exe,?UnclaimServiceTarget@AActualStaffControllerList@@QAEXPAVAUnit@@@Z,0x33590,public: void __thiscall AActualStaffControllerList::UnclaimServiceTarget(class AUnit *)
+SimJP.exe,?GetCleanerControllerList@AParkManager@@QAEPAVACleanerControllerList@@XZ,0x33594,public: class ACleanerControllerList * __thiscall AParkManager::GetCleanerControllerList(void)
+SimJP.exe,?GetCurrentlyInsideBuilding@AUnit@@QAEPAVAUnitBuilding@@XZ,0x33598,public: class AUnitBuilding * __thiscall AUnit::GetCurrentlyInsideBuilding(void)
+SimJP.exe,?PutValue@ASaveData@@QAEXPBDABE@Z,0x3359c,"public: void __thiscall ASaveData::PutValue(char const *,unsigned char const &)"
+SimJP.exe,?GetValue@ASaveData@@QAE_NPBDAAE@Z,0x335a0,"public: bool __thiscall ASaveData::GetValue(char const *,unsigned char &)"
+SimJP.exe,?GetClassVersionMajor@ASaveData@@QAEGABVTClass@Toshi@@@Z,0x335a4,public: unsigned short __thiscall ASaveData::GetClassVersionMajor(class Toshi::TClass const &)
+SimJP.exe,?GetAnimLength@AAnimatableObject@@QAEMPAVAAnimationRef@@@Z,0x335a8,public: float __thiscall AAnimatableObject::GetAnimLength(class AAnimationRef *)
+SimJP.exe,?SetAnimParamsDirect@AAnimatableObject@@QAE_NPAVAAnimationRef@@MMM@Z,0x335ac,"public: bool __thiscall AAnimatableObject::SetAnimParamsDirect(class AAnimationRef *,float,float,float)"
+SimJP.exe,?SetLockLastPose@AAnimatableObject@@QAE_NW4OBJECT_ANIM_STATES@@ABVTCString@Toshi@@_N@Z,0x335b0,"public: bool __thiscall AAnimatableObject::SetLockLastPose(enum OBJECT_ANIM_STATES,class Toshi::TCString const &,bool)"
+SimJP.exe,?SetAutoMovementBlending@AAnimatableObject@@QAE_N_N@Z,0x335b4,public: bool __thiscall AAnimatableObject::SetAutoMovementBlending(bool)
+SimJP.exe,??0AUnitInfoState@@QAE@V?$TManagedPtr@VAUnitProxy@@@Toshi@@@Z,0x335b8,public: __thiscall AUnitInfoState::AUnitInfoState(class Toshi::TManagedPtr<class AUnitProxy>)
+SimJP.exe,??0AMessagePopupState@@QAE@ABVTLString@Toshi@@0_NW4eSimJPCommandEnum@AGUICommands@@2221M@Z,0x335bc,"public: __thiscall AMessagePopupState::AMessagePopupState(class Toshi::TLString const &,class Toshi::TLString const &,bool,enum AGUICommands::eSimJPCommandEnum,enum AGUICommands::eSimJPCommandEnum,enum AGUICommands::eSimJPCommandEnum,enum AGUICommands::eSimJPCommandEnum,bool,float)"
+SimJP.exe,?m_pParkStats@AParkManager@@0PAVAParkStatistics@@A,0x335c0,private: static class AParkStatistics * AParkManager::m_pParkStats
+SimJP.exe,?StopAllUserAnimations@AAnimatableObject@@QAE_N_N@Z,0x335c4,public: bool __thiscall AAnimatableObject::StopAllUserAnimations(bool)
+SimJP.exe,?PlayAnim@AAnimatableObject@@QAEXABVANamedAnimation@@_N1@Z,0x335c8,"public: void __thiscall AAnimatableObject::PlayAnim(class ANamedAnimation const &,bool,bool)"
+SimJP.exe,?SetAutoBlend@AAnimatableObject@@QAEX_N@Z,0x335cc,public: void __thiscall AAnimatableObject::SetAutoBlend(bool)
+SimJP.exe,?AccumulateStatistic@AParkStatistics@@QAEXW4StatisticType@1@M@Z,0x335d0,"public: void __thiscall AParkStatistics::AccumulateStatistic(enum AParkStatistics::StatisticType,float)"
+SimJP.exe,?SetMovement@AVisibleUnit@@QAE_N_N@Z,0x335d4,public: bool __thiscall AVisibleUnit::SetMovement(bool)
+SimJP.exe,?DAMAGE_INFINITE@AUnit@@2MB,0x335d8,public: static float const AUnit::DAMAGE_INFINITE
+SimJP.exe,?SetSpeedMode@AVisibleUnit@@AAEXW4SetModeType@1@M_N@Z,0x335dc,"private: void __thiscall AVisibleUnit::SetSpeedMode(enum AVisibleUnit::SetModeType,float,bool)"
+SimJP.exe,?IsEmergencyMode@AParkManager@@QAE_NXZ,0x335e0,public: bool __thiscall AParkManager::IsEmergencyMode(void)
+SimJP.exe,?GetVisitorName@AVisitorAllTypes@@QAE?AVTLString@Toshi@@ABUAVisitorNameInfo@@_NW4Style@4@@Z,0x335e4,"public: class Toshi::TLString __thiscall AVisitorAllTypes::GetVisitorName(struct AVisitorNameInfo const &,bool,enum AVisitorNameInfo::Style)"
+SimJP.exe,?GetVisitorAllTypes@AVisitorInterface@@SGPAVAVisitorAllTypes@@XZ,0x335e8,public: static class AVisitorAllTypes * __stdcall AVisitorInterface::GetVisitorAllTypes(void)
+SimJP.exe,?AssignRandomVisitorName@AVisitorAllTypes@@QAEXAAUAVisitorNameInfo@@_N@Z,0x335ec,"public: void __thiscall AVisitorAllTypes::AssignRandomVisitorName(struct AVisitorNameInfo &,bool)"
+SimJP.exe,?StaffRequestTask@AActualStaffControllerList@@QAE_NAAVAUnit@@H@Z,0x335f0,"public: bool __thiscall AActualStaffControllerList::StaffRequestTask(class AUnit &,int)"
+SimJP.exe,?GetRoadNetwork@ARoadNetwork@@SGPAV1@XZ,0x335f4,public: static class ARoadNetwork * __stdcall ARoadNetwork::GetRoadNetwork(void)
+SimJP.exe,?GetClosestRoadPoint@ARoadNetwork@@QBEPAVARoadPoint@@ABVTVector3@Toshi@@M@Z,0x335f8,"public: class ARoadPoint * __thiscall ARoadNetwork::GetClosestRoadPoint(class Toshi::TVector3 const &,float)const "
+SimJP.exe,?MakeClean@ARoadPoint@@QAEXXZ,0x335fc,public: void __thiscall ARoadPoint::MakeClean(void)
+SimJP.exe,?IsDirty@ARoadPoint@@QBE_NXZ,0x33600,public: bool __thiscall ARoadPoint::IsDirty(void)const 
+SimJP.exe,?GetCommonBuildingComponent@AUnitBuilding@@QBEPBVACommonBuildingComponent@@XZ,0x33604,public: class ACommonBuildingComponent const * __thiscall AUnitBuilding::GetCommonBuildingComponent(void)const 
+SimJP.exe,?UnitEnterBuildingFromRoad@AUnitBuilding@@QAE_NAAVAUnit@@W4NetworkTypes@AInteriorNetworkNames@@@Z,0x33608,"public: bool __thiscall AUnitBuilding::UnitEnterBuildingFromRoad(class AUnit &,enum AInteriorNetworkNames::NetworkTypes)"
+SimJP.exe,??0ASingleAnimInteraction@@QAE@PAVASteerInteractionNode@@PAVASteer@@VANamedAnimation@@MVTVector3@Toshi@@M@Z,0x3360c,"public: __thiscall ASingleAnimInteraction::ASingleAnimInteraction(class ASteerInteractionNode *,class ASteer *,class ANamedAnimation,float,class Toshi::TVector3,float)"
+SimJP.exe,??0ANamedAnimation@@QAE@ABV0@@Z,0x33610,public: __thiscall ANamedAnimation::ANamedAnimation(class ANamedAnimation const &)
+SimJP.exe,?m_pParkInfo@AParkManager@@0PAVAParkInfo@@A,0x33614,private: static class AParkInfo * AParkManager::m_pParkInfo
+SimJP.exe,?GetCleanerVisitorLevel@AParkInfo@@QAE?AW4CleanerVisitorLevel@1@XZ,0x33618,public: enum AParkInfo::CleanerVisitorLevel __thiscall AParkInfo::GetCleanerVisitorLevel(void)
+SimJP.exe,?GAMEMONTHS_TO_ACTUALSECONDS@AParkManager@@2MB,0x3361c,public: static float const AParkManager::GAMEMONTHS_TO_ACTUALSECONDS
+SimJP.exe,?GAMEYEARS_TO_ACTUALSECONDS@AParkManager@@2MB,0x33620,public: static float const AParkManager::GAMEYEARS_TO_ACTUALSECONDS
+SimJP.exe,?GetRandomNonFullSegment@ARoadPoint@@QBEPAVARoadSegment@@PBV2@_N@Z,0x33624,"public: class ARoadSegment * __thiscall ARoadPoint::GetRandomNonFullSegment(class ARoadSegment const *,bool)const "
+SimJP.exe,?ms_pSingleton@AUnitManager@@0PAV1@A,0x33628,private: static class AUnitManager * AUnitManager::ms_pSingleton
+SimJP.exe,?MatchIsLiveCarnivoreDinosaur@AUnitDinosaur@@SG_NPAVAUnit@@@Z,0x3362c,public: static bool __stdcall AUnitDinosaur::MatchIsLiveCarnivoreDinosaur(class AUnit *)
+SimJP.exe,?VicinityHashCompare@AUnitManager@@QAEPAVAProxUnit@@ABVTVector3@Toshi@@MAAI_NI_NP6G_NPAVAUnit@@@Z@Z,0x33630,"public: class AProxUnit * __thiscall AUnitManager::VicinityHashCompare(class Toshi::TVector3 const &,float,unsigned int &,bool,unsigned int,bool,bool (__stdcall*)(class AUnit *))"
+SimJP.exe,?IsLineToUnitObstructed@AUnit@@QAE_NAAV1@@Z,0x33634,public: bool __thiscall AUnit::IsLineToUnitObstructed(class AUnit &)
+SimJP.exe,??0ANamedAnimation@@QAE@PBD@Z,0x33638,public: __thiscall ANamedAnimation::ANamedAnimation(char const *)
+SimJP.exe,??0AAccessorTable@@QAE@XZ,0x3363c,public: __thiscall AAccessorTable::AAccessorTable(void)
+SimJP.exe,??1AAccessorTable@@QAE@XZ,0x33640,public: __thiscall AAccessorTable::~AAccessorTable(void)
+SimJP.exe,?m_sClass@ALODRoadSteer@@2VTClass@Toshi@@A,0x33644,public: static class Toshi::TClass ALODRoadSteer::m_sClass
+SimJP.exe,?m_sClass@AUnitStaffDialog@@2VTClass@Toshi@@A,0x33648,public: static class Toshi::TClass AUnitStaffDialog::m_sClass
+SimJP.exe,??1AUnitStaffDialog@@UAE@XZ,0x3364c,public: virtual __thiscall AUnitStaffDialog::~AUnitStaffDialog(void)
+SimJP.exe,??0AUnitStaffDialog@@QAE@PBD@Z,0x33650,public: __thiscall AUnitStaffDialog::AUnitStaffDialog(char const *)
+SimJP.exe,?Create@AUnitDialog@@UAE_NXZ,0x33654,public: virtual bool __thiscall AUnitDialog::Create(void)
+SimJP.exe,?ProcessCommand@AUnitDialog@@UAE_NW4eSimJPCommandEnum@AGUICommands@@PAVTGUIWidget@Toshi@@@Z,0x33658,"public: virtual bool __thiscall AUnitDialog::ProcessCommand(enum AGUICommands::eSimJPCommandEnum,class Toshi::TGUIWidget *)"
+SimJP.exe,?OnActivate@AUnitDialog@@UAE_NXZ,0x3365c,public: virtual bool __thiscall AUnitDialog::OnActivate(void)
+SimJP.exe,?OnDeactivate@AUnitDialog@@UAE_NXZ,0x33660,public: virtual bool __thiscall AUnitDialog::OnDeactivate(void)
+SimJP.exe,?OnUpdate@AUnitDialog@@UAE_NM@Z,0x33664,public: virtual bool __thiscall AUnitDialog::OnUpdate(float)
+SimJP.exe,?OnChangeField@AGameDialog@@UAEXAAVADialogField@@ABVPPropertyValue@@@Z,0x33668,"public: virtual void __thiscall AGameDialog::OnChangeField(class ADialogField &,class PPropertyValue const &)"
+SimJP.exe,?OnDecrementField@AGameDialog@@UAEXAAVADialogField@@@Z,0x3366c,public: virtual void __thiscall AGameDialog::OnDecrementField(class ADialogField &)
+SimJP.exe,?OnIncrementField@AGameDialog@@UAEXAAVADialogField@@@Z,0x33670,public: virtual void __thiscall AGameDialog::OnIncrementField(class ADialogField &)
+SimJP.exe,??1AAnimBreakpoint@@QAE@XZ,0x33674,public: __thiscall AAnimBreakpoint::~AAnimBreakpoint(void)
+SimJP.exe,?LoadGenericBehaviours@AActiveUnit@@KGXW4EGENERIC_BEHAVIOUR_TYPES@1@ABVTCString@Toshi@@@Z,0x33678,"protected: static void __stdcall AActiveUnit::LoadGenericBehaviours(enum AActiveUnit::EGENERIC_BEHAVIOUR_TYPES,class Toshi::TCString const &)"
+SimJP.exe,?CanModifyField@AGameDialog@@UAEXAAVADialogField@@AA_N1@Z,0x3367c,"public: virtual void __thiscall AGameDialog::CanModifyField(class ADialogField &,bool &,bool &)"
+SimJP.exe,?GenerateAccessorCollection@AUnitDialog@@MAEXAAVAAccessorCollection@@@Z,0x33680,protected: virtual void __thiscall AUnitDialog::GenerateAccessorCollection(class AAccessorCollection &)
+SimJP.exe,??0AUnitBehaviour@@QAE@XZ,0x33684,public: __thiscall AUnitBehaviour::AUnitBehaviour(void)
+SimJP.exe,??0AParam@@QAE@AB_N@Z,0x33688,public: __thiscall AParam::AParam(bool const &)
+SimJP.exe,??1AParam@@QAE@XZ,0x3368c,public: __thiscall AParam::~AParam(void)
+SimJP.exe,?GetModelSize@AAnimatableObject@@QAEMXZ,0x33690,public: float __thiscall AAnimatableObject::GetModelSize(void)
+SimJP.exe,?DestroyUnit@AUnitManager@@QAEXPAVAUnit@@@Z,0x33694,public: void __thiscall AUnitManager::DestroyUnit(class AUnit *)
+SimJP.exe,?m_pEnvironManager@AParkManager@@0PAVAEnvironmentManager@@A,0x33698,private: static class AEnvironmentManager * AParkManager::m_pEnvironManager
+SimJP.exe,?RemoveExcretement@AEnvironmentManager@@QAEXPAVAUnit@@@Z,0x3369c,public: void __thiscall AEnvironmentManager::RemoveExcretement(class AUnit *)
+SimJP.exe,?AddExcretement@AEnvironmentManager@@QAEXPAVAUnit@@@Z,0x336a0,public: void __thiscall AEnvironmentManager::AddExcretement(class AUnit *)
+SimJP.exe,??1AActiveUnit@@UAE@XZ,0x336a4,public: virtual __thiscall AActiveUnit::~AActiveUnit(void)
+SimJP.exe,??0AActiveUnit@@QAE@XZ,0x336a8,public: __thiscall AActiveUnit::AActiveUnit(void)
+SimJP.exe,?GetTraitIndex@AActiveUnit@@UAEHABVTCString@Toshi@@@Z,0x336ac,public: virtual int __thiscall AActiveUnit::GetTraitIndex(class Toshi::TCString const &)
+SimJP.exe,?Serialise@AActiveUnit@@UAE_NAAVASaveData@@@Z,0x336b0,public: virtual bool __thiscall AActiveUnit::Serialise(class ASaveData &)
+SimJP.exe,?Deserialise@AActiveUnit@@UAE_NAAVASaveData@@@Z,0x336b4,public: virtual bool __thiscall AActiveUnit::Deserialise(class ASaveData &)
+SimJP.exe,?Imp_UpdateAesthetics@AActiveUnit@@MAEXM@Z,0x336b8,protected: virtual void __thiscall AActiveUnit::Imp_UpdateAesthetics(float)
+SimJP.exe,?AddKillExperience@AActiveUnit@@UAE?AVAParam@@ABVAParams@@@Z,0x336bc,public: virtual class AParam __thiscall AActiveUnit::AddKillExperience(class AParams const &)
+SimJP.exe,?SetMusterSteering@AActiveUnit@@UAE?AVAParam@@ABVAParams@@@Z,0x336c0,public: virtual class AParam __thiscall AActiveUnit::SetMusterSteering(class AParams const &)
+SimJP.exe,?HasTickInfestation@AActiveUnit@@UAE?AVAParam@@ABVAParams@@@Z,0x336c4,public: virtual class AParam __thiscall AActiveUnit::HasTickInfestation(class AParams const &)
+SimJP.exe,?HasBumbleFoot@AActiveUnit@@UAE?AVAParam@@ABVAParams@@@Z,0x336c8,public: virtual class AParam __thiscall AActiveUnit::HasBumbleFoot(class AParams const &)
+SimJP.exe,?OnLoadBehaviour@AActiveUnit@@MAEXXZ,0x336cc,protected: virtual void __thiscall AActiveUnit::OnLoadBehaviour(void)
+SimJP.exe,?DestroyOldestUnits@AUnitFood@@KGXABVTClass@Toshi@@H_N@Z,0x336d0,"protected: static void __stdcall AUnitFood::DestroyOldestUnits(class Toshi::TClass const &,int,bool)"
+SimJP.exe,??0AUnitFood@@QAE@XZ,0x336d4,public: __thiscall AUnitFood::AUnitFood(void)
+SimJP.exe,?Imp_UpdateControl@AUnitFood@@MAEXM@Z,0x336d8,protected: virtual void __thiscall AUnitFood::Imp_UpdateControl(float)
+SimJP.exe,?m_sClass@AUnitFood@@2VTClass@Toshi@@A,0x336dc,public: static class Toshi::TClass AUnitFood::m_sClass
+SimJP.exe,?OnCreate@AUnitFood@@UAE_NXZ,0x336e0,public: virtual bool __thiscall AUnitFood::OnCreate(void)
+SimJP.exe,??1AUnitFood@@UAE@XZ,0x336e4,public: virtual __thiscall AUnitFood::~AUnitFood(void)
+SimJP.exe,?GetOrders@AUnitFood@@UAEPAVAUnitOrders@@XZ,0x336e8,public: virtual class AUnitOrders * __thiscall AUnitFood::GetOrders(void)
+SimJP.exe,?GetTraitIndex@AUnitFood@@UAEHABVTCString@Toshi@@@Z,0x336ec,public: virtual int __thiscall AUnitFood::GetTraitIndex(class Toshi::TCString const &)
+SimJP.exe,?Serialise@AUnitFood@@UAE_NAAVASaveData@@@Z,0x336f0,public: virtual bool __thiscall AUnitFood::Serialise(class ASaveData &)
+SimJP.exe,?Deserialise@AUnitFood@@UAE_NAAVASaveData@@@Z,0x336f4,public: virtual bool __thiscall AUnitFood::Deserialise(class ASaveData &)
+SimJP.exe,?OnDestroy@AUnitFood@@UAEXXZ,0x336f8,public: virtual void __thiscall AUnitFood::OnDestroy(void)
+SimJP.exe,??0ADinoPerception@@QAE@XZ,0x336fc,public: __thiscall ADinoPerception::ADinoPerception(void)
+SimJP.exe,??0AUnitTerritory@@QAE@XZ,0x33700,public: __thiscall AUnitTerritory::AUnitTerritory(void)
+SimJP.exe,?Create@ADriveManager@@QAE_NABVAActiveUnit@@@Z,0x33704,public: bool __thiscall ADriveManager::Create(class AActiveUnit const &)
+SimJP.exe,??0ADriveManager@@QAE@XZ,0x33708,public: __thiscall ADriveManager::ADriveManager(void)
+SimJP.exe,?OnCreate@AActiveUnit@@MAE_NXZ,0x3370c,protected: virtual bool __thiscall AActiveUnit::OnCreate(void)
+SimJP.exe,?ForceRefresh@ADriveManager@@QAEXXZ,0x33710,public: void __thiscall ADriveManager::ForceRefresh(void)
+SimJP.exe,?CalcPrimaryDrive@ADriveManager@@QAEXABVAActiveUnit@@M@Z,0x33714,"public: void __thiscall ADriveManager::CalcPrimaryDrive(class AActiveUnit const &,float)"
+SimJP.exe,??0AParam@@QAE@ABH@Z,0x33718,public: __thiscall AParam::AParam(int const &)
+SimJP.exe,?GetSteerClass@AUnitFood@@MBEAAVTClass@Toshi@@XZ,0x3371c,protected: virtual class Toshi::TClass & __thiscall AUnitFood::GetSteerClass(void)const 
+SimJP.exe,?DeserialiseUnitProxy@AUnitManager@@QAEXAAVASaveData@@AAV?$TManagedPtr@VAUnitProxy@@@Toshi@@@Z,0x33720,"public: void __thiscall AUnitManager::DeserialiseUnitProxy(class ASaveData &,class Toshi::TManagedPtr<class AUnitProxy> &)"
+SimJP.exe,?LinkBuildings@AUnitBuilding@@SGXAAV1@0@Z,0x33724,"public: static void __stdcall AUnitBuilding::LinkBuildings(class AUnitBuilding &,class AUnitBuilding &)"
+SimJP.exe,?CreateUnit@AUnitManager@@QAEPAVAUnit@@PBDABVTVector3@Toshi@@1@Z,0x33728,"public: class AUnit * __thiscall AUnitManager::CreateUnit(char const *,class Toshi::TVector3 const &,class Toshi::TVector3 const &)"
+SimJP.exe,?SerialiseUnitProxy@AUnitManager@@QAEXAAVASaveData@@AAV?$TManagedPtr@VAUnitProxy@@@Toshi@@@Z,0x3372c,"public: void __thiscall AUnitManager::SerialiseUnitProxy(class ASaveData &,class Toshi::TManagedPtr<class AUnitProxy> &)"
+SimJP.exe,?DinoClassNames@ADinoConstants@@2QBHB,0x33730,public: static int const * const ADinoConstants::DinoClassNames
+SimJP.exe,??0ADialogSliderField@@QAE@PBDMMMP6GXABVPPropertyValue@@AAV1@@Z@Z,0x33734,"public: __thiscall ADialogSliderField::ADialogSliderField(char const *,float,float,float,void (__stdcall*)(class PPropertyValue const &,class PPropertyValue &))"
+SimJP.exe,??0ADialogCycleField@@QAE@PBDP6GXABVPPropertyValue@@AAV1@@Z@Z,0x33738,"public: __thiscall ADialogCycleField::ADialogCycleField(char const *,void (__stdcall*)(class PPropertyValue const &,class PPropertyValue &))"
+SimJP.exe,??0ADialogCycleField@@QAE@PBD@Z,0x3373c,public: __thiscall ADialogCycleField::ADialogCycleField(char const *)
+SimJP.exe,?SetViewAngle@AGUIRenderModel@@QAEXM@Z,0x33740,public: void __thiscall AGUIRenderModel::SetViewAngle(float)
+SimJP.exe,??0AGUIRenderModel@@QAE@_N0@Z,0x33744,"public: __thiscall AGUIRenderModel::AGUIRenderModel(bool,bool)"
+SimJP.exe,??0AUnitBuildingDialog@@QAE@PBD@Z,0x33748,public: __thiscall AUnitBuildingDialog::AUnitBuildingDialog(char const *)
+SimJP.exe,?DEFAULT_ANIM_PRIORITY@AAnimationRef@@2MB,0x3374c,public: static float const AAnimationRef::DEFAULT_ANIM_PRIORITY
+SimJP.exe,?LoadUnitType@AUnitFactory@@AAEPAVAUnitFactoryUnitType@@ABVTPCString@Toshi@@@Z,0x33750,private: class AUnitFactoryUnitType * __thiscall AUnitFactory::LoadUnitType(class Toshi::TPCString const &)
+SimJP.exe,?FindUnitType@AUnitFactory@@AAEPAVAUnitFactoryUnitType@@ABVTPCString@Toshi@@@Z,0x33754,private: class AUnitFactoryUnitType * __thiscall AUnitFactory::FindUnitType(class Toshi::TPCString const &)
+SimJP.exe,??1AUnitBuildingDialog@@UAE@XZ,0x33758,public: virtual __thiscall AUnitBuildingDialog::~AUnitBuildingDialog(void)
+SimJP.exe,?OnActivate@AUnitBuildingDialog@@UAE_NXZ,0x3375c,public: virtual bool __thiscall AUnitBuildingDialog::OnActivate(void)
+SimJP.exe,?AddRenderObject@ARenderer@@QAEXPAVAGUIRenderObject@@H@Z,0x33760,"public: void __thiscall ARenderer::AddRenderObject(class AGUIRenderObject *,int)"
+SimJP.exe,?m_sClass@AHatcheryComponent@@2VTClass@Toshi@@A,0x33764,public: static class Toshi::TClass AHatcheryComponent::m_sClass
+SimJP.exe,?m_pDNAManager@AParkManager@@0PAVADNAManager@@A,0x33768,private: static class ADNAManager * AParkManager::m_pDNAManager
+SimJP.exe,?FormatMoney@ALocale@@YGXHAAVTWString@Toshi@@@Z,0x3376c,"void __stdcall ALocale::FormatMoney(int,class Toshi::TWString &)"
+SimJP.exe,?FormatTime@ALocale@@YGXMAAVTWString@Toshi@@@Z,0x33770,"void __stdcall ALocale::FormatTime(float,class Toshi::TWString &)"
+SimJP.exe,?SetModelOffset@AGUIRenderModel@@QAEXABVTVector3@Toshi@@@Z,0x33774,public: void __thiscall AGUIRenderModel::SetModelOffset(class Toshi::TVector3 const &)
+SimJP.exe,?SetModelAngle@AGUIRenderModel@@QAEXM@Z,0x33778,public: void __thiscall AGUIRenderModel::SetModelAngle(float)
+SimJP.exe,?SetViewRadius@AGUIRenderModel@@QAEXM@Z,0x3377c,public: void __thiscall AGUIRenderModel::SetViewRadius(float)
+SimJP.exe,?SetModel@AGUIRenderModel@@QAEPAVAAnimatableObject@@PBD0@Z,0x33780,"public: class AAnimatableObject * __thiscall AGUIRenderModel::SetModel(char const *,char const *)"
+SimJP.exe,?Load@AGUIRenderModel@@QAEXPAVAUnitFactoryUnitType@@@Z,0x33784,public: void __thiscall AGUIRenderModel::Load(class AUnitFactoryUnitType *)
+SimJP.exe,?ForceModelUpdate@AGUIRenderObject@@QAEXXZ,0x33788,public: void __thiscall AGUIRenderObject::ForceModelUpdate(void)
+SimJP.exe,?Clear@AGUIRenderObject@@QAEXXZ,0x3378c,public: void __thiscall AGUIRenderObject::Clear(void)
+SimJP.exe,?GetAttachedUnit@AUnitDialog@@IAEPAVAUnit@@XZ,0x33790,protected: class AUnit * __thiscall AUnitDialog::GetAttachedUnit(void)
+SimJP.exe,?UpdateFields@AUnitDialog@@MAEXXZ,0x33794,protected: virtual void __thiscall AUnitDialog::UpdateFields(void)
+SimJP.exe,?GetUnitAttribute@AUnitFactoryUnitType@@QAE_NAAVTPCString@Toshi@@ABV23@1@Z,0x33798,"public: bool __thiscall AUnitFactoryUnitType::GetUnitAttribute(class Toshi::TPCString &,class Toshi::TPCString const &,class Toshi::TPCString const &)"
+SimJP.exe,?GetUnitAttribute@AUnitFactoryUnitType@@QAE_NAAMABVTPCString@Toshi@@1@Z,0x3379c,"public: bool __thiscall AUnitFactoryUnitType::GetUnitAttribute(float &,class Toshi::TPCString const &,class Toshi::TPCString const &)"
+SimJP.exe,?GetSubSection@AUnitFactoryUnitType@@QAEPBVPProperties@@PBD@Z,0x337a0,public: class PProperties const * __thiscall AUnitFactoryUnitType::GetSubSection(char const *)
+SimJP.exe,?RefreshDinoType@AHatcheryComponent@@QAEXXZ,0x337a4,public: void __thiscall AHatcheryComponent::RefreshDinoType(void)
+SimJP.exe,?GetProductionCost@ADinoInfo@@QBEH_N@Z,0x337a8,public: int __thiscall ADinoInfo::GetProductionCost(bool)const 
+SimJP.exe,?GetLifeSpan@ADinoInfo@@QBEMXZ,0x337ac,public: float __thiscall ADinoInfo::GetLifeSpan(void)const 
+SimJP.exe,?m_sClass@AUnitBuildingDialog@@2VTClass@Toshi@@A,0x337b0,public: static class Toshi::TClass AUnitBuildingDialog::m_sClass
+SimJP.exe,?OnDeactivate@AUnitBuildingDialog@@UAE_NXZ,0x337b4,public: virtual bool __thiscall AUnitBuildingDialog::OnDeactivate(void)
+SimJP.exe,?RemoveRenderObject@ARenderer@@QAEXPAVAGUIRenderObject@@@Z,0x337b8,public: void __thiscall ARenderer::RemoveRenderObject(class AGUIRenderObject *)
+SimJP.exe,?Create@AUnitBuildingDialog@@UAE_NXZ,0x337bc,public: virtual bool __thiscall AUnitBuildingDialog::Create(void)
+SimJP.exe,?OnUpdate@AUnitBuildingDialog@@UAE_NM@Z,0x337c0,public: virtual bool __thiscall AUnitBuildingDialog::OnUpdate(float)
+SimJP.exe,?AttachUnit@AUnitBuildingDialog@@UAEXV?$TManagedPtr@VAUnitProxy@@@Toshi@@@Z,0x337c4,public: virtual void __thiscall AUnitBuildingDialog::AttachUnit(class Toshi::TManagedPtr<class AUnitProxy>)
+SimJP.exe,?SetDinoProductionEnabled@AHatcheryComponent@@QAEX_N@Z,0x337c8,public: void __thiscall AHatcheryComponent::SetDinoProductionEnabled(bool)
+SimJP.exe,?SetPitch@ASoundManager@@QAE_NHM@Z,0x337cc,"public: bool __thiscall ASoundManager::SetPitch(int,float)"
+SimJP.exe,?GetMasterBuilding@AUnitBuilding@@QAEPAV1@XZ,0x337d0,public: class AUnitBuilding * __thiscall AUnitBuilding::GetMasterBuilding(void)
+SimJP.exe,?GetComponentExactly@AVisibleUnit@@QBEPBVAUnitComponent@@ABVTClass@Toshi@@@Z,0x337d4,public: class AUnitComponent const * __thiscall AVisibleUnit::GetComponentExactly(class Toshi::TClass const &)const 
+SimJP.exe,??0AUnit@@QAE@XZ,0x337d8,public: __thiscall AUnit::AUnit(void)
+SimJP.exe,??1AUnit@@UAE@XZ,0x337dc,public: virtual __thiscall AUnit::~AUnit(void)
+SimJP.exe,?Create@AUnitNNPerception@@QAE_NABVTCString@Toshi@@_N@Z,0x337e0,"public: bool __thiscall AUnitNNPerception::Create(class Toshi::TCString const &,bool)"
+SimJP.exe,??0AUnitNNPerception@@QAE@XZ,0x337e4,public: __thiscall AUnitNNPerception::AUnitNNPerception(void)
+SimJP.exe,?OnCreate@AUnit@@MAE_NXZ,0x337e8,protected: virtual bool __thiscall AUnit::OnCreate(void)
+SimJP.exe,?ValidateLOD@ASteer@@IAEXAAH@Z,0x337ec,protected: void __thiscall ASteer::ValidateLOD(int &)
+SimJP.exe,?m_sClass@AUnit@@2VTClass@Toshi@@A,0x337f0,public: static class Toshi::TClass AUnit::m_sClass
+SimJP.exe,?OnDestroy@AUnit@@MAEXXZ,0x337f4,protected: virtual void __thiscall AUnit::OnDestroy(void)
+SimJP.exe,?m_spInertGeomObj@AUnit@@1PAVAGeom@@A,0x337f8,protected: static class AGeom * AUnit::m_spInertGeomObj
+SimJP.exe,?SetAnimatableTranslateDirect@AUnit@@UAEXABVTVector3@Toshi@@@Z,0x337fc,public: virtual void __thiscall AUnit::SetAnimatableTranslateDirect(class Toshi::TVector3 const &)
+SimJP.exe,?SetSize@AUnit@@UAEXM@Z,0x33800,public: virtual void __thiscall AUnit::SetSize(float)
+SimJP.exe,?SetSizeDeltaIncr@AUnit@@UAEXMM@Z,0x33804,"public: virtual void __thiscall AUnit::SetSizeDeltaIncr(float,float)"
+SimJP.exe,?SetSizeDeltaDecr@AUnit@@UAEXMM@Z,0x33808,"public: virtual void __thiscall AUnit::SetSizeDeltaDecr(float,float)"
+SimJP.exe,?GetTraitIndex@AUnit@@UAEHABVTCString@Toshi@@@Z,0x3380c,public: virtual int __thiscall AUnit::GetTraitIndex(class Toshi::TCString const &)
+SimJP.exe,?Serialise@AUnit@@UAE_NAAVASaveData@@@Z,0x33810,public: virtual bool __thiscall AUnit::Serialise(class ASaveData &)
+SimJP.exe,?Deserialise@AUnit@@UAE_NAAVASaveData@@@Z,0x33814,public: virtual bool __thiscall AUnit::Deserialise(class ASaveData &)
+SimJP.exe,?PostDeserialiseLink@AUnit@@UAEXXZ,0x33818,public: virtual void __thiscall AUnit::PostDeserialiseLink(void)
+SimJP.exe,?SetLightingNode@AUnit@@UAEXPAVTLightingNode@Toshi@@@Z,0x3381c,public: virtual void __thiscall AUnit::SetLightingNode(class Toshi::TLightingNode *)
+SimJP.exe,?OnPostCreate@AUnit@@MAEXXZ,0x33820,protected: virtual void __thiscall AUnit::OnPostCreate(void)
+SimJP.exe,?m_sClass@AUnitVehicle@@2VTClass@Toshi@@A,0x33824,public: static class Toshi::TClass AUnitVehicle::m_sClass
+SimJP.exe,??1AUnitVehicle@@UAE@XZ,0x33828,public: virtual __thiscall AUnitVehicle::~AUnitVehicle(void)
+SimJP.exe,??0AUnitVehicle@@QAE@XZ,0x3382c,public: __thiscall AUnitVehicle::AUnitVehicle(void)
+SimJP.exe,?GetOrders@AUnitVehicle@@UAEPAVAUnitOrders@@XZ,0x33830,public: virtual class AUnitOrders * __thiscall AUnitVehicle::GetOrders(void)
+SimJP.exe,?GetVisibility@AUnitVehicle@@UBEMXZ,0x33834,public: virtual float __thiscall AUnitVehicle::GetVisibility(void)const 
+SimJP.exe,?IsUnitDead@AUnitVehicle@@UBE_NXZ,0x33838,public: virtual bool __thiscall AUnitVehicle::IsUnitDead(void)const 
+SimJP.exe,?HurtUnit@AUnitVehicle@@UAEXMW4UnitHurtType@AUnit@@PAV3@@Z,0x3383c,"public: virtual void __thiscall AUnitVehicle::HurtUnit(float,enum AUnit::UnitHurtType,class AUnit *)"
+SimJP.exe,?Serialise@AUnitVehicle@@UAE_NAAVASaveData@@@Z,0x33840,public: virtual bool __thiscall AUnitVehicle::Serialise(class ASaveData &)
+SimJP.exe,?Deserialise@AUnitVehicle@@UAE_NAAVASaveData@@@Z,0x33844,public: virtual bool __thiscall AUnitVehicle::Deserialise(class ASaveData &)
+SimJP.exe,?PostDeserialiseLink@AUnitVehicle@@UAEXXZ,0x33848,public: virtual void __thiscall AUnitVehicle::PostDeserialiseLink(void)
+SimJP.exe,?OnCreate@AUnitVehicle@@UAE_NXZ,0x3384c,public: virtual bool __thiscall AUnitVehicle::OnCreate(void)
+SimJP.exe,?OnDestroy@AUnitVehicle@@UAEXXZ,0x33850,public: virtual void __thiscall AUnitVehicle::OnDestroy(void)
+SimJP.exe,?Imp_UpdateAesthetics@AUnitVehicle@@MAEXM@Z,0x33854,protected: virtual void __thiscall AUnitVehicle::Imp_UpdateAesthetics(float)
+SimJP.exe,?GetSteerClass@AUnitVehicle@@UBEAAVTClass@Toshi@@XZ,0x33858,public: virtual class Toshi::TClass & __thiscall AUnitVehicle::GetSteerClass(void)const 
+SimJP.exe,?SetRender@AUnitVehicle@@UAEX_N@Z,0x3385c,public: virtual void __thiscall AUnitVehicle::SetRender(bool)
+SimJP.exe,?AllowUserControl@AUnitVehicle@@UAEX_N@Z,0x33860,public: virtual void __thiscall AUnitVehicle::AllowUserControl(bool)
+SimJP.exe,?IsUserControlAllowed@AUnitVehicle@@UBE_NXZ,0x33864,public: virtual bool __thiscall AUnitVehicle::IsUserControlAllowed(void)const 
+SimJP.exe,?UserHasControl@AUnitVehicle@@UBE_NXZ,0x33868,public: virtual bool __thiscall AUnitVehicle::UserHasControl(void)const 
+SimJP.exe,?CmdRequestUserControl@AUnitVehicle@@UAE_NXZ,0x3386c,public: virtual bool __thiscall AUnitVehicle::CmdRequestUserControl(void)
+SimJP.exe,?CmdRemoveUserControl@AUnitVehicle@@UAEXXZ,0x33870,public: virtual void __thiscall AUnitVehicle::CmdRemoveUserControl(void)
+SimJP.exe,?IsUnitInBuilding@AUnitVehicle@@UAE_NXZ,0x33874,public: virtual bool __thiscall AUnitVehicle::IsUnitInBuilding(void)
+SimJP.exe,?Imp_IsOrderAllowed_DriveControlOrder@AUnitVehicle@@MAE_NXZ,0x33878,protected: virtual bool __thiscall AUnitVehicle::Imp_IsOrderAllowed_DriveControlOrder(void)
+SimJP.exe,?Imp_ExecuteOrder_DriveControlOrder@AUnitVehicle@@MAE_NXZ,0x3387c,protected: virtual bool __thiscall AUnitVehicle::Imp_ExecuteOrder_DriveControlOrder(void)
+SimJP.exe,?GetTargetedUnit@AActiveUnit@@QAEPAVAUnit@@XZ,0x33880,public: class AUnit * __thiscall AActiveUnit::GetTargetedUnit(void)
+SimJP.exe,??0AUpgradeAccessor@@QAE@PBDP8TObject@Toshi@@AEXABVPPropertyValue@@@Z@Z,0x33884,"public: __thiscall AUpgradeAccessor::AUpgradeAccessor(char const *,void (__thiscall Toshi::TObject::*)(class PPropertyValue const &))"
+SimJP.exe,?m_pParkEventSystem@AParkManager@@0PAVAParkEventSystem@@A,0x33888,private: static class AParkEventSystem * AParkManager::m_pParkEventSystem
+SimJP.exe,?AddEvent@AParkEventSystem@@QAEXH_NIM@Z,0x3388c,"public: void __thiscall AParkEventSystem::AddEvent(int,bool,unsigned int,float)"
+SimJP.exe,?BeenCreated@AUnitManager@@QBE_NABVTPCString@Toshi@@@Z,0x33890,public: bool __thiscall AUnitManager::BeenCreated(class Toshi::TPCString const &)const 
+SimJP.exe,?m_sClass@AUnitRangerDepotVaccineDialog@@2VTClass@Toshi@@A,0x33894,public: static class Toshi::TClass AUnitRangerDepotVaccineDialog::m_sClass
+SimJP.exe,??0AModalDialogState@@QAE@PBVTClass@Toshi@@@Z,0x33898,public: __thiscall AModalDialogState::AModalDialogState(class Toshi::TClass const *)
+SimJP.exe,?GetHelicopterComment@AUnitHelicopterCommon@@QAEXAAVPPropertyValue@@@Z,0x3389c,public: void __thiscall AUnitHelicopterCommon::GetHelicopterComment(class PPropertyValue &)
+SimJP.exe,?GetStaff@AActualStaffController@@QAEPAVAUnitStaff@@H@Z,0x338a0,public: class AUnitStaff * __thiscall AActualStaffController::GetStaff(int)
+SimJP.exe,?GetHelicopterTask@AUnitHelicopterCommon@@QAEXAAVPPropertyValue@@@Z,0x338a4,public: void __thiscall AUnitHelicopterCommon::GetHelicopterTask(class PPropertyValue &)
+SimJP.exe,?GetRangerControllerList@AParkManager@@QAEPAVARangerControllerList@@XZ,0x338a8,public: class ARangerControllerList * __thiscall AParkManager::GetRangerControllerList(void)
+SimJP.exe,?SetUpgrade@ARangerControllerList@@QAEXW4Upgrade@1@_N@Z,0x338ac,"public: void __thiscall ARangerControllerList::SetUpgrade(enum ARangerControllerList::Upgrade,bool)"
+SimJP.exe,?SetDepotNeedsMaintenance@AUnitHelicopterCommon@@QAEX_N@Z,0x338b0,public: void __thiscall AUnitHelicopterCommon::SetDepotNeedsMaintenance(bool)
+SimJP.exe,??0AUnitHelicopterCommon@@QAE@XZ,0x338b4,public: __thiscall AUnitHelicopterCommon::AUnitHelicopterCommon(void)
+SimJP.exe,?GetParticleSystem@AGameController@@QBEPAVAParticleSystem@@XZ,0x338b8,public: class AParticleSystem * __thiscall AGameController::GetParticleSystem(void)const 
+SimJP.exe,??1AUnitHelicopterCommon@@UAE@XZ,0x338bc,public: virtual __thiscall AUnitHelicopterCommon::~AUnitHelicopterCommon(void)
+SimJP.exe,?StopParticles@AParticleSystem@@QAEXPAVAParticles@@@Z,0x338c0,public: void __thiscall AParticleSystem::StopParticles(class AParticles *)
+SimJP.exe,?m_sClass@AShootingUnitComponent@@2VTClass@Toshi@@A,0x338c4,public: static class Toshi::TClass AShootingUnitComponent::m_sClass
+SimJP.exe,?GetShooterComponent@AUnitHelicopterCommon@@IAEPAVAShootingUnitComponent@@XZ,0x338c8,protected: class AShootingUnitComponent * __thiscall AUnitHelicopterCommon::GetShooterComponent(void)
+SimJP.exe,?AttachShooterUnit@AUnitHelicopterCommon@@IAEXPAVAVisibleUnit@@ABVTCString@Toshi@@@Z,0x338cc,"protected: void __thiscall AUnitHelicopterCommon::AttachShooterUnit(class AVisibleUnit *,class Toshi::TCString const &)"
+SimJP.exe,?AddNewComponent@AVisibleUnit@@QAEXABVTClass@Toshi@@@Z,0x338d0,public: void __thiscall AVisibleUnit::AddNewComponent(class Toshi::TClass const &)
+SimJP.exe,?SetShootRange@AShootingUnitComponent@@QAEXMMM@Z,0x338d4,"public: void __thiscall AShootingUnitComponent::SetShootRange(float,float,float)"
+SimJP.exe,?SetWeapon@AShootingUnitComponent@@QAEXW4Weapon@1@@Z,0x338d8,public: void __thiscall AShootingUnitComponent::SetWeapon(enum AShootingUnitComponent::Weapon)
+SimJP.exe,?GetTranslateTest@ALocator@@QAEXAAVTVector3@Toshi@@@Z,0x338dc,public: void __thiscall ALocator::GetTranslateTest(class Toshi::TVector3 &)
+SimJP.exe,?Serialise@AUnitHelicopterCommon@@UAE_NAAVASaveData@@@Z,0x338e0,public: virtual bool __thiscall AUnitHelicopterCommon::Serialise(class ASaveData &)
+SimJP.exe,?PutValue@ASaveData@@QAEXPBDPB_NH@Z,0x338e4,"public: void __thiscall ASaveData::PutValue(char const *,bool const *,int)"
+SimJP.exe,?Deserialise@AUnitHelicopterCommon@@UAE_NAAVASaveData@@@Z,0x338e8,public: virtual bool __thiscall AUnitHelicopterCommon::Deserialise(class ASaveData &)
+SimJP.exe,?StopSound@ASoundManager@@QAE_NH@Z,0x338ec,public: bool __thiscall ASoundManager::StopSound(int)
+SimJP.exe,?IsLabelValid@ASaveData@@QAE_NPBD@Z,0x338f0,public: bool __thiscall ASaveData::IsLabelValid(char const *)
+SimJP.exe,?GetValue@ASaveData@@QAE_NPBDPA_NH@Z,0x338f4,"public: bool __thiscall ASaveData::GetValue(char const *,bool *,int)"
+SimJP.exe,?DetachShooterUnit@AUnitHelicopterCommon@@IAEPAVAVisibleUnit@@XZ,0x338f8,protected: class AVisibleUnit * __thiscall AUnitHelicopterCommon::DetachShooterUnit(void)
+SimJP.exe,?PostDeserialiseLink@AUnitHelicopterCommon@@UAEXXZ,0x338fc,public: virtual void __thiscall AUnitHelicopterCommon::PostDeserialiseLink(void)
+SimJP.exe,?GetPassenger@AUnitHelicopter@@QBEABV?$TManagedPtr@VAUnitProxy@@@Toshi@@H@Z,0x33900,public: class Toshi::TManagedPtr<class AUnitProxy> const & __thiscall AUnitHelicopter::GetPassenger(int)const 
+SimJP.exe,?GetPassengerCount@AUnitHelicopter@@QBEHXZ,0x33904,public: int __thiscall AUnitHelicopter::GetPassengerCount(void)const 
+SimJP.exe,?RemoveServiceTarget@AActualStaffControllerList@@QAEXPAVAServiceTarget@@@Z,0x33908,public: void __thiscall AActualStaffControllerList::RemoveServiceTarget(class AServiceTarget *)
+SimJP.exe,?GetArtifactType@ADeployArtifactServiceTarget@@QAEHXZ,0x3390c,public: int __thiscall ADeployArtifactServiceTarget::GetArtifactType(void)
+SimJP.exe,?GetTargetPos@ADeployArtifactServiceTarget@@QAEAAVTVector3@Toshi@@XZ,0x33910,public: class Toshi::TVector3 & __thiscall ADeployArtifactServiceTarget::GetTargetPos(void)
+SimJP.exe,?GetVaccinate@AVaccinateServiceTarget@@QBE_NW4DISEASE_TYPES@@@Z,0x33914,public: bool __thiscall AVaccinateServiceTarget::GetVaccinate(enum DISEASE_TYPES)const 
+SimJP.exe,?GetUnit@AServiceTarget@@QBEPAVAUnit@@XZ,0x33918,public: class AUnit * __thiscall AServiceTarget::GetUnit(void)const 
+SimJP.exe,?AssignTask@AUnitHelicopterCommon@@UAE_NPBVAServiceTarget@@@Z,0x3391c,public: virtual bool __thiscall AUnitHelicopterCommon::AssignTask(class AServiceTarget const *)
+SimJP.exe,?GetMaxPassengerCount@AUnitHelicopter@@QBEHXZ,0x33920,public: int __thiscall AUnitHelicopter::GetMaxPassengerCount(void)const 
+SimJP.exe,?GetFlyingHeight@AHelicopterSteer@@QBEMABVTVector3@Toshi@@@Z,0x33924,public: float __thiscall AHelicopterSteer::GetFlyingHeight(class Toshi::TVector3 const &)const 
+SimJP.exe,?CmdShootUnit@AShootingUnitComponent@@QAEXPAVAUnit@@W4Weapon@1@W4ShootType@1@@Z,0x33928,"public: void __thiscall AShootingUnitComponent::CmdShootUnit(class AUnit *,enum AShootingUnitComponent::Weapon,enum AShootingUnitComponent::ShootType)"
+SimJP.exe,?OrdersBroken@AUnitHelicopterCommon@@UAEXXZ,0x3392c,public: virtual void __thiscall AUnitHelicopterCommon::OrdersBroken(void)
+SimJP.exe,?SetBusyFlag@AUnitHelicopterCommon@@IAEXXZ,0x33930,protected: void __thiscall AUnitHelicopterCommon::SetBusyFlag(void)
+SimJP.exe,?UnclaimTask@AUnitHelicopterCommon@@IAEXXZ,0x33934,protected: void __thiscall AUnitHelicopterCommon::UnclaimTask(void)
+SimJP.exe,?ResetOrientationAesthetics@AHelicopterSteer@@QAEXXZ,0x33938,public: void __thiscall AHelicopterSteer::ResetOrientationAesthetics(void)
+SimJP.exe,?Command_Hover@AHelicopterSteer@@QAEXXZ,0x3393c,public: void __thiscall AHelicopterSteer::Command_Hover(void)
+SimJP.exe,?RemovePassenger@AUnitHelicopter@@UAEXABV?$TManagedPtr@VAUnitProxy@@@Toshi@@@Z,0x33940,public: virtual void __thiscall AUnitHelicopter::RemovePassenger(class Toshi::TManagedPtr<class AUnitProxy> const &)
+SimJP.exe,?OnCreate@AUnitHelicopter@@MAE_NXZ,0x33944,protected: virtual bool __thiscall AUnitHelicopter::OnCreate(void)
+SimJP.exe,?ClearBusyFlag@AUnitHelicopterCommon@@IAEXXZ,0x33948,protected: void __thiscall AUnitHelicopterCommon::ClearBusyFlag(void)
+SimJP.exe,?TaskInvalid@AUnitHelicopterCommon@@IAEXXZ,0x3394c,protected: void __thiscall AUnitHelicopterCommon::TaskInvalid(void)
+SimJP.exe,?m_pPlayerInfo@AParkManager@@0PAVAPlayerInfo@@A,0x33950,private: static class APlayerInfo * AParkManager::m_pPlayerInfo
+SimJP.exe,?m_aIntConstants@AConstants@@0PAHA,0x33954,private: static int * AConstants::m_aIntConstants
+SimJP.exe,?IsComatose@AUnitDinosaur@@QBE_NXZ,0x33958,public: bool __thiscall AUnitDinosaur::IsComatose(void)const 
+SimJP.exe,?ClearComatose@AUnitDinosaur@@QAEXXZ,0x3395c,public: void __thiscall AUnitDinosaur::ClearComatose(void)
+SimJP.exe,?IsVaccinated@AUnitDinosaur@@QBE_NW4DISEASE_TYPES@@@Z,0x33960,public: bool __thiscall AUnitDinosaur::IsVaccinated(enum DISEASE_TYPES)const 
+SimJP.exe,?GetDisease@AUnitDinosaur@@QBEIXZ,0x33964,public: unsigned int __thiscall AUnitDinosaur::GetDisease(void)const 
+SimJP.exe,?FoundDisease@ADiseaseManager@@QAEXW4DISEASE_TYPES@@@Z,0x33968,public: void __thiscall ADiseaseManager::FoundDisease(enum DISEASE_TYPES)
+SimJP.exe,?GetVaccineCost@ADiseaseManager@@QBEMW4DISEASE_TYPES@@@Z,0x3396c,public: float __thiscall ADiseaseManager::GetVaccineCost(enum DISEASE_TYPES)const 
+SimJP.exe,?EarnProfit@APlayerInfo@@QAEXHW4MoneyType@1@@Z,0x33970,"public: void __thiscall APlayerInfo::EarnProfit(int,enum APlayerInfo::MoneyType)"
+SimJP.exe,?HaveCost@APlayerInfo@@QAE_NHW4MoneyType@1@@Z,0x33974,"public: bool __thiscall APlayerInfo::HaveCost(int,enum APlayerInfo::MoneyType)"
+SimJP.exe,?IsBusy@AUnitHelicopterCommon@@IBE_NXZ,0x33978,protected: bool __thiscall AUnitHelicopterCommon::IsBusy(void)const 
+SimJP.exe,?TaskCompleted@AUnitHelicopterCommon@@IAEXXZ,0x3397c,protected: void __thiscall AUnitHelicopterCommon::TaskCompleted(void)
+SimJP.exe,?Imp_UpdateControl@AUnitHelicopterCommon@@MAEXM@Z,0x33980,protected: virtual void __thiscall AUnitHelicopterCommon::Imp_UpdateControl(float)
+SimJP.exe,?CreateUnit@AUnitManager@@QAEPAVAUnit@@PAVAUnitFactoryUnitType@@ABVTVector3@Toshi@@1@Z,0x33984,"public: class AUnit * __thiscall AUnitManager::CreateUnit(class AUnitFactoryUnitType *,class Toshi::TVector3 const &,class Toshi::TVector3 const &)"
+SimJP.exe,?PlaySound@ASoundManager@@QAEHH@Z,0x33988,public: int __thiscall ASoundManager::PlaySound(int)
+SimJP.exe,?AddPoint@ARopeParticles@@QAEXABVTVector3@Toshi@@@Z,0x3398c,public: void __thiscall ARopeParticles::AddPoint(class Toshi::TVector3 const &)
+SimJP.exe,?ResetPoints@ARopeParticles@@QAEXXZ,0x33990,public: void __thiscall ARopeParticles::ResetPoints(void)
+SimJP.exe,?Imp_UpdateAesthetics@AUnitHelicopter@@MAEXM@Z,0x33994,protected: virtual void __thiscall AUnitHelicopter::Imp_UpdateAesthetics(float)
+SimJP.exe,?CreateRopeParticles@AParticleSystem@@QAEPAVARopeParticles@@XZ,0x33998,public: class ARopeParticles * __thiscall AParticleSystem::CreateRopeParticles(void)
+SimJP.exe,?GetTranslateDirect@AAnimatableObject@@QAEXAAVTVector3@Toshi@@@Z,0x3399c,public: void __thiscall AAnimatableObject::GetTranslateDirect(class Toshi::TVector3 &)
+SimJP.exe,?s_caMaxRange@AShootingUnitComponent@@1QBW4eFloatConstants@AConstantTypes@@B,0x339a0,protected: static enum AConstantTypes::eFloatConstants const * const AShootingUnitComponent::s_caMaxRange
+SimJP.exe,?s_caMinRange@AShootingUnitComponent@@1QBW4eFloatConstants@AConstantTypes@@B,0x339a4,protected: static enum AConstantTypes::eFloatConstants const * const AShootingUnitComponent::s_caMinRange
+SimJP.exe,?GetWeaponConstant@AShootingUnitComponent@@CGMW4Weapon@1@QBW4eFloatConstants@AConstantTypes@@@Z,0x339a8,"private: static float __stdcall AShootingUnitComponent::GetWeaponConstant(enum AShootingUnitComponent::Weapon,enum AConstantTypes::eFloatConstants const * const)"
+SimJP.exe,?GetJpiBuilding@AParkManager@@QBEPAVAUnitBuilding@@XZ,0x339ac,public: class AUnitBuilding * __thiscall AParkManager::GetJpiBuilding(void)const 
+SimJP.exe,?PlayAnim@AAnimatableObject@@QAEXW4OBJECT_ANIM_STATES@@ABVTCString@Toshi@@_N2@Z,0x339b0,"public: void __thiscall AAnimatableObject::PlayAnim(enum OBJECT_ANIM_STATES,class Toshi::TCString const &,bool,bool)"
+SimJP.exe,?StopAllUserAnimationsInstant@AAnimatableObject@@QAE_N_N@Z,0x339b4,public: bool __thiscall AAnimatableObject::StopAllUserAnimationsInstant(bool)
+SimJP.exe,?m_sClass@AUnitHelicopterCommon@@2VTClass@Toshi@@A,0x339b8,public: static class Toshi::TClass AUnitHelicopterCommon::m_sClass
+SimJP.exe,?AddPassenger@AUnitHelicopter@@UAE_NABV?$TManagedPtr@VAUnitProxy@@@Toshi@@@Z,0x339bc,public: virtual bool __thiscall AUnitHelicopter::AddPassenger(class Toshi::TManagedPtr<class AUnitProxy> const &)
+SimJP.exe,?Imp_IsOrderAllowed_FlyControlOrder@AUnitHelicopterCommon@@MBE_NXZ,0x339c0,protected: virtual bool __thiscall AUnitHelicopterCommon::Imp_IsOrderAllowed_FlyControlOrder(void)const 
+SimJP.exe,?sm_oAccessorTable@AUnitHelicopterCommon@@0VAAccessorTable@@A,0x339c4,private: static class AAccessorTable AUnitHelicopterCommon::sm_oAccessorTable
+SimJP.exe,?m_sClass@AHelicopterSteer@@2VTClass@Toshi@@A,0x339c8,public: static class Toshi::TClass AHelicopterSteer::m_sClass
+SimJP.exe,?GetOrders@AUnitHelicopterCommon@@UAEPAVAUnitOrders@@XZ,0x339cc,public: virtual class AUnitOrders * __thiscall AUnitHelicopterCommon::GetOrders(void)
+SimJP.exe,?GetStats@AUnitHelicopter@@UBEXPAW4Statistic@AUnit@@PAMPAIH@Z,0x339d0,"public: virtual void __thiscall AUnitHelicopter::GetStats(enum AUnit::Statistic *,float *,unsigned int *,int)const "
+SimJP.exe,?InitialiseUnit@AUnitHelicopter@@UAEXABVTVector3@Toshi@@0@Z,0x339d4,"public: virtual void __thiscall AUnitHelicopter::InitialiseUnit(class Toshi::TVector3 const &,class Toshi::TVector3 const &)"
+SimJP.exe,?IsUnitDead@AUnitHelicopter@@UBE_NXZ,0x339d8,public: virtual bool __thiscall AUnitHelicopter::IsUnitDead(void)const 
+SimJP.exe,?GetMusterRange@AUnitHelicopter@@UAEMXZ,0x339dc,public: virtual float __thiscall AUnitHelicopter::GetMusterRange(void)
+SimJP.exe,?OnDestroy@AUnitHelicopterCommon@@MAEXXZ,0x339e0,protected: virtual void __thiscall AUnitHelicopterCommon::OnDestroy(void)
+SimJP.exe,?SetRender@AUnitHelicopter@@UAEX_N@Z,0x339e4,public: virtual void __thiscall AUnitHelicopter::SetRender(bool)
+SimJP.exe,?CmdLand@AUnitHelicopter@@UAEXABVAUnitBuilding@@@Z,0x339e8,public: virtual void __thiscall AUnitHelicopter::CmdLand(class AUnitBuilding const &)
+SimJP.exe,?UserHasControl@AUnitHelicopterCommon@@UBE_NXZ,0x339ec,public: virtual bool __thiscall AUnitHelicopterCommon::UserHasControl(void)const 
+SimJP.exe,?CmdRequestUserControl@AUnitHelicopterCommon@@UAE_NXZ,0x339f0,public: virtual bool __thiscall AUnitHelicopterCommon::CmdRequestUserControl(void)
+SimJP.exe,?CmdRemoveUserControl@AUnitHelicopterCommon@@UAEXXZ,0x339f4,public: virtual void __thiscall AUnitHelicopterCommon::CmdRemoveUserControl(void)
+SimJP.exe,?GetCurrentServiceTarget@AUnitHelicopterCommon@@UAEPBVAServiceTarget@@XZ,0x339f8,public: virtual class AServiceTarget const * __thiscall AUnitHelicopterCommon::GetCurrentServiceTarget(void)
+SimJP.exe,?CmdUserControlled@AUnitHelicopter@@UAEXXZ,0x339fc,public: virtual void __thiscall AUnitHelicopter::CmdUserControlled(void)
+SimJP.exe,?CmdIslandArrival@AUnitHelicopterCommon@@UAEXM@Z,0x33a00,public: virtual void __thiscall AUnitHelicopterCommon::CmdIslandArrival(float)
+SimJP.exe,?CmdFlyTo@AUnitHelicopter@@UAEXAAVAUnit@@MM@Z,0x33a04,"public: virtual void __thiscall AUnitHelicopter::CmdFlyTo(class AUnit &,float,float)"
+SimJP.exe,?CmdFlyTo@AUnitHelicopter@@UAEXAAVAUnit@@M@Z,0x33a08,"public: virtual void __thiscall AUnitHelicopter::CmdFlyTo(class AUnit &,float)"
+SimJP.exe,?CmdFlyTo@AUnitHelicopter@@UAEXABVTVector3@Toshi@@MM@Z,0x33a0c,"public: virtual void __thiscall AUnitHelicopter::CmdFlyTo(class Toshi::TVector3 const &,float,float)"
+SimJP.exe,?CmdFlyTo@AUnitHelicopter@@UAEXABVTVector3@Toshi@@M@Z,0x33a10,"public: virtual void __thiscall AUnitHelicopter::CmdFlyTo(class Toshi::TVector3 const &,float)"
+SimJP.exe,?CmdFlyToStrafe@AUnitHelicopter@@UAEXAAVAUnit@@MMMM@Z,0x33a14,"public: virtual void __thiscall AUnitHelicopter::CmdFlyToStrafe(class AUnit &,float,float,float,float)"
+SimJP.exe,?CmdFlyAway@AUnitHelicopter@@UAEXABVTVector3@Toshi@@@Z,0x33a18,public: virtual void __thiscall AUnitHelicopter::CmdFlyAway(class Toshi::TVector3 const &)
+SimJP.exe,?CmdHover@AUnitHelicopter@@UAEXXZ,0x33a1c,public: virtual void __thiscall AUnitHelicopter::CmdHover(void)
+SimJP.exe,?SetInCopterView@AUnitHelicopterCommon@@UAEX_N@Z,0x33a20,public: virtual void __thiscall AUnitHelicopterCommon::SetInCopterView(bool)
+SimJP.exe,?ShowPlayerCost@AUnitHelicopter@@UAEXH@Z,0x33a24,public: virtual void __thiscall AUnitHelicopter::ShowPlayerCost(int)
+SimJP.exe,?UpdatePassengers@AUnitHelicopter@@UBEXXZ,0x33a28,public: virtual void __thiscall AUnitHelicopter::UpdatePassengers(void)const 
+SimJP.exe,?ArrivalNotification@AUnitHelicopterCommon@@UAEXXZ,0x33a2c,public: virtual void __thiscall AUnitHelicopterCommon::ArrivalNotification(void)
+SimJP.exe,?OnWeatherChanged@AUnitHelicopterCommon@@MAE_NPAVAWeatherManager@@PAVAWeatherChangedEvent@2@@Z,0x33a30,"protected: virtual bool __thiscall AUnitHelicopterCommon::OnWeatherChanged(class AWeatherManager *,class AWeatherManager::AWeatherChangedEvent *)"
+SimJP.exe,?IsIdle@AUnitHelicopterCommon@@UBE_NXZ,0x33a34,public: virtual bool __thiscall AUnitHelicopterCommon::IsIdle(void)const 
+SimJP.exe,?ClearTask@AUnitHelicopterCommon@@UAEXXZ,0x33a38,public: virtual void __thiscall AUnitHelicopterCommon::ClearTask(void)
+SimJP.exe,?CmdReturnToDepot@AUnitHelicopterCommon@@UAEX_N@Z,0x33a3c,public: virtual void __thiscall AUnitHelicopterCommon::CmdReturnToDepot(bool)
+SimJP.exe,?CmdMiniGameLand@AUnitHelicopterCommon@@UAEXABVAUnitBuilding@@@Z,0x33a40,public: virtual void __thiscall AUnitHelicopterCommon::CmdMiniGameLand(class AUnitBuilding const &)
+SimJP.exe,?IsLoopingSample@ASoundManager@@SG_NH@Z,0x33a44,public: static bool __stdcall ASoundManager::IsLoopingSample(int)
+SimJP.exe,?PlaySound3D@ASoundManager@@QAEHHABVTVector3@Toshi@@IM@Z,0x33a48,"public: int __thiscall ASoundManager::PlaySound3D(int,class Toshi::TVector3 const &,unsigned int,float)"
+SimJP.exe,?SetPaused@ASoundManager@@QAE_NH_N@Z,0x33a4c,"public: bool __thiscall ASoundManager::SetPaused(int,bool)"
+SimJP.exe,?SetVolume@ASoundManager@@QAE_NHM@Z,0x33a50,"public: bool __thiscall ASoundManager::SetVolume(int,float)"
+SimJP.exe,?AddLoopSound@AVisibleUnit@@QAEXH@Z,0x33a54,public: void __thiscall AVisibleUnit::AddLoopSound(int)
+SimJP.exe,?GetAnimTime@AAnimatableObject@@QAEMW4OBJECT_ANIM_STATES@@ABVTCString@Toshi@@@Z,0x33a58,"public: float __thiscall AAnimatableObject::GetAnimTime(enum OBJECT_ANIM_STATES,class Toshi::TCString const &)"
+SimJP.exe,?IsTargetMedFence@AActiveUnit@@QAE?AVAParam@@ABVAParams@@@Z,0x33a5c,public: class AParam __thiscall AActiveUnit::IsTargetMedFence(class AParams const &)
+SimJP.exe,?StaticGetOrders@AUnitBuilding@@SGPAVAUnitOrders@@XZ,0x33a60,public: static class AUnitOrders * __stdcall AUnitBuilding::StaticGetOrders(void)
+SimJP.exe,?m_sClass@AVisComponent@@2VTClass@Toshi@@A,0x33a64,public: static class Toshi::TClass AVisComponent::m_sClass
+SimJP.exe,?GetCameraUnit@ASecurityCameraComponent@@QAEPAVAVisibleUnit@@XZ,0x33a68,public: class AVisibleUnit * __thiscall ASecurityCameraComponent::GetCameraUnit(void)
+SimJP.exe,?GetSetting@AAnimParticleLibrary@@QAEPAVAAnimParticleSetting@1@ABVTCString@Toshi@@@Z,0x33a6c,public: class AAnimParticleLibrary::AAnimParticleSetting * __thiscall AAnimParticleLibrary::GetSetting(class Toshi::TCString const &)
+SimJP.exe,?CreateTornadoParticles@AParticleSystem@@QAEPAVATornadoParticles@@PAVAUnit@@@Z,0x33a70,public: class ATornadoParticles * __thiscall AParticleSystem::CreateTornadoParticles(class AUnit *)
+SimJP.exe,?HaveHadTornado@AParkInfo@@QAEXXZ,0x33a74,public: void __thiscall AParkInfo::HaveHadTornado(void)
+SimJP.exe,?OnDestroy@AActiveUnit@@MAEXXZ,0x33a78,protected: virtual void __thiscall AActiveUnit::OnDestroy(void)
+SimJP.exe,?SetFacingDirect@AAnimatableObject@@QAEXABVTVector3@Toshi@@@Z,0x33a7c,public: void __thiscall AAnimatableObject::SetFacingDirect(class Toshi::TVector3 const &)
+SimJP.exe,?HaveHadTornadoFatality@AParkInfo@@QAEXXZ,0x33a80,public: void __thiscall AParkInfo::HaveHadTornadoFatality(void)
+SimJP.exe,?CreateSplashParticles@AParticleSystem@@QAEPAVASplashParticles@@ABVTVector3@Toshi@@0MMMMMM@Z,0x33a84,"public: class ASplashParticles * __thiscall AParticleSystem::CreateSplashParticles(class Toshi::TVector3 const &,class Toshi::TVector3 const &,float,float,float,float,float,float)"
+SimJP.exe,?Imp_UpdateControl@AActiveUnit@@MAEXM@Z,0x33a88,protected: virtual void __thiscall AActiveUnit::Imp_UpdateControl(float)
+SimJP.exe,?SetDisplayPanic@AActiveUnit@@QAEX_N@Z,0x33a8c,public: void __thiscall AActiveUnit::SetDisplayPanic(bool)
+SimJP.exe,?SetHashExclude@AVisibleUnit@@QAE_N_N@Z,0x33a90,public: bool __thiscall AVisibleUnit::SetHashExclude(bool)
+SimJP.exe,?SetControl@AVisibleUnit@@QAE_N_N@Z,0x33a94,public: bool __thiscall AVisibleUnit::SetControl(bool)
+SimJP.exe,?SetHashing@AVisibleUnit@@QAE_N_N@Z,0x33a98,public: bool __thiscall AVisibleUnit::SetHashing(bool)
+SimJP.exe,?FindState@AAnimatableObjectType@@SG?AW4OBJECT_ANIM_STATES@@AAVTCString@Toshi@@@Z,0x33a9c,public: static enum OBJECT_ANIM_STATES __stdcall AAnimatableObjectType::FindState(class Toshi::TCString &)
+SimJP.exe,?m_pRoadNetwork@AParkManager@@0PAVARoadNetwork@@A,0x33aa0,private: static class ARoadNetwork * AParkManager::m_pRoadNetwork
+SimJP.exe,?m_pTreeManager@AParkManager@@0PAVATreeManager@@A,0x33aa4,private: static class ATreeManager * AParkManager::m_pTreeManager
+SimJP.exe,?m_pWallManager@AParkManager@@0PAVAWallManager@@A,0x33aa8,private: static class AWallManager * AParkManager::m_pWallManager
+SimJP.exe,?CheckForDestroyedBuildings@ARoadIntersection@@QAEXXZ,0x33aac,public: void __thiscall ARoadIntersection::CheckForDestroyedBuildings(void)
+SimJP.exe,?GetRoadPoint@ARoadNetwork@@QBEPAVARoadPoint@@HH@Z,0x33ab0,"public: class ARoadPoint * __thiscall ARoadNetwork::GetRoadPoint(int,int)const "
+SimJP.exe,?DestroyRoadPoint@ARoadNetwork@@QAEXABVTVector2@Toshi@@@Z,0x33ab4,public: void __thiscall ARoadNetwork::DestroyRoadPoint(class Toshi::TVector2 const &)
+SimJP.exe,?BreakWallSection@AWallManager@@QAEXABVTVector3@Toshi@@PAVAUnit@@@Z,0x33ab8,"public: void __thiscall AWallManager::BreakWallSection(class Toshi::TVector3 const &,class AUnit *)"
+SimJP.exe,?GetClosestWall@AWallManager@@QAEPAVAWallUnitNode@@ABVTVector3@Toshi@@H_N1@Z,0x33abc,"public: class AWallUnitNode * __thiscall AWallManager::GetClosestWall(class Toshi::TVector3 const &,int,bool,bool)"
+SimJP.exe,?ResetCacheRegion@ATreeManager@@QAEXIIII_N@Z,0x33ac0,"public: void __thiscall ATreeManager::ResetCacheRegion(unsigned int,unsigned int,unsigned int,unsigned int,bool)"
+SimJP.exe,?CreateBloodParticles@AParticleSystem@@QAEPAVABloodParticles@@ABVTVector3@Toshi@@0MMMMMM@Z,0x33ac4,"public: class ABloodParticles * __thiscall AParticleSystem::CreateBloodParticles(class Toshi::TVector3 const &,class Toshi::TVector3 const &,float,float,float,float,float,float)"
+SimJP.exe,?GetFacingDirect@AAnimatableObject@@QAEXAAVTVector3@Toshi@@@Z,0x33ac8,public: void __thiscall AAnimatableObject::GetFacingDirect(class Toshi::TVector3 &)
+SimJP.exe,?m_sClass@AActiveUnit@@2VTClass@Toshi@@A,0x33acc,public: static class Toshi::TClass AActiveUnit::m_sClass
+SimJP.exe,?StaticGetOrders@AVisitorInterface@@SGPAVAUnitOrders@@XZ,0x33ad0,public: static class AUnitOrders * __stdcall AVisitorInterface::StaticGetOrders(void)
+SimJP.exe,?m_sClass@AVisitorInterface@@2VTClass@Toshi@@A,0x33ad4,public: static class Toshi::TClass AVisitorInterface::m_sClass
+SimJP.exe,??1AVisitorInterface@@UAE@XZ,0x33ad8,public: virtual __thiscall AVisitorInterface::~AVisitorInterface(void)
+SimJP.exe,??0AVisitorInterface@@QAE@XZ,0x33adc,public: __thiscall AVisitorInterface::AVisitorInterface(void)
+SimJP.exe,?sm_oAccessorTable@AVisitorInterface@@1VAAccessorTable@@A,0x33ae0,protected: static class AAccessorTable AVisitorInterface::sm_oAccessorTable
+SimJP.exe,?GetStats@AVisitorInterface@@UBEXPAW4Statistic@AUnit@@PAMPAIH@Z,0x33ae4,"public: virtual void __thiscall AVisitorInterface::GetStats(enum AUnit::Statistic *,float *,unsigned int *,int)const "
+SimJP.exe,?GetIconType@AVisitorInterface@@UAE_NAAIAAVTVector3@Toshi@@AAH2AAUAUnitIconNode@@@Z,0x33ae8,"public: virtual bool __thiscall AVisitorInterface::GetIconType(unsigned int &,class Toshi::TVector3 &,int &,int &,struct AUnitIconNode &)"
+SimJP.exe,?ShowDetailsIfInfoState@AVisitorInterface@@UAE_NXZ,0x33aec,public: virtual bool __thiscall AVisitorInterface::ShowDetailsIfInfoState(void)
+SimJP.exe,?SetTrait@AVisitorInterface@@UAEXIM@Z,0x33af0,"public: virtual void __thiscall AVisitorInterface::SetTrait(unsigned int,float)"
+SimJP.exe,?GetTrait@AVisitorInterface@@UBEMI@Z,0x33af4,public: virtual float __thiscall AVisitorInterface::GetTrait(unsigned int)const 
+SimJP.exe,?IsUnitDead@AVisitorInterface@@UBE_NXZ,0x33af8,public: virtual bool __thiscall AVisitorInterface::IsUnitDead(void)const 
+SimJP.exe,?UnitExitPark@AVisitorInterface@@UAEXXZ,0x33afc,public: virtual void __thiscall AVisitorInterface::UnitExitPark(void)
+SimJP.exe,?UnitHasEnteredBuilding@AVisitorInterface@@UAEXAAVAUnit@@@Z,0x33b00,public: virtual void __thiscall AVisitorInterface::UnitHasEnteredBuilding(class AUnit &)
+SimJP.exe,?UnitHasExitedBuilding@AVisitorInterface@@UAEXAAVAUnit@@W4LeaveBuildingReason@2@@Z,0x33b04,"public: virtual void __thiscall AVisitorInterface::UnitHasExitedBuilding(class AUnit &,enum AUnit::LeaveBuildingReason)"
+SimJP.exe,?HurtUnit@AVisitorInterface@@UAEXMW4UnitHurtType@AUnit@@PAV3@@Z,0x33b08,"public: virtual void __thiscall AVisitorInterface::HurtUnit(float,enum AUnit::UnitHurtType,class AUnit *)"
+SimJP.exe,?ChooseUnitToDie@AVisitorInterface@@UAE_NPAVAUnit@@@Z,0x33b0c,public: virtual bool __thiscall AVisitorInterface::ChooseUnitToDie(class AUnit *)
+SimJP.exe,?UndoChooseUnitToDie@AVisitorInterface@@UAEXXZ,0x33b10,public: virtual void __thiscall AVisitorInterface::UndoChooseUnitToDie(void)
+SimJP.exe,?IsUnitWaitingToDie@AVisitorInterface@@UBE_NXZ,0x33b14,public: virtual bool __thiscall AVisitorInterface::IsUnitWaitingToDie(void)const 
+SimJP.exe,?IsUnitAttached@AVisitorInterface@@UBE_NXZ,0x33b18,public: virtual bool __thiscall AVisitorInterface::IsUnitAttached(void)const 
+SimJP.exe,?SetUnitIsAttached@AVisitorInterface@@UAEX_N@Z,0x33b1c,public: virtual void __thiscall AVisitorInterface::SetUnitIsAttached(bool)
+SimJP.exe,?MakePanic@AVisitorInterface@@UAEXPAVAUnit@@@Z,0x33b20,public: virtual void __thiscall AVisitorInterface::MakePanic(class AUnit *)
+SimJP.exe,?StopPanic@AVisitorInterface@@UAEXXZ,0x33b24,public: virtual void __thiscall AVisitorInterface::StopPanic(void)
+SimJP.exe,?IsWaitingToBeRescued@AVisitorInterface@@UAE_NXZ,0x33b28,public: virtual bool __thiscall AVisitorInterface::IsWaitingToBeRescued(void)
+SimJP.exe,?SetBeingRescued@AVisitorInterface@@UAE_NXZ,0x33b2c,public: virtual bool __thiscall AVisitorInterface::SetBeingRescued(void)
+SimJP.exe,?IsBeingRescued@AVisitorInterface@@UAE_NXZ,0x33b30,public: virtual bool __thiscall AVisitorInterface::IsBeingRescued(void)
+SimJP.exe,?SetRescued@AVisitorInterface@@UAE_NXZ,0x33b34,public: virtual bool __thiscall AVisitorInterface::SetRescued(void)
+SimJP.exe,?HasBeenRescued@AVisitorInterface@@UAE_NXZ,0x33b38,public: virtual bool __thiscall AVisitorInterface::HasBeenRescued(void)
+SimJP.exe,?Serialise@AVisitorInterface@@UAE_NAAVASaveData@@@Z,0x33b3c,public: virtual bool __thiscall AVisitorInterface::Serialise(class ASaveData &)
+SimJP.exe,?Deserialise@AVisitorInterface@@UAE_NAAVASaveData@@@Z,0x33b40,public: virtual bool __thiscall AVisitorInterface::Deserialise(class ASaveData &)
+SimJP.exe,?PostDeserialiseLink@AVisitorInterface@@UAEXXZ,0x33b44,public: virtual void __thiscall AVisitorInterface::PostDeserialiseLink(void)
+SimJP.exe,?CanCheckForSteerInteraction@AVisitorInterface@@UAE_NXZ,0x33b48,public: virtual bool __thiscall AVisitorInterface::CanCheckForSteerInteraction(void)
+SimJP.exe,?HaveAssignedSteerInteraction@AVisitorInterface@@UAEXXZ,0x33b4c,public: virtual void __thiscall AVisitorInterface::HaveAssignedSteerInteraction(void)
+SimJP.exe,?OnParkEmergencyModeChange@AVisitorInterface@@UAEX_N@Z,0x33b50,public: virtual void __thiscall AVisitorInterface::OnParkEmergencyModeChange(bool)
+SimJP.exe,?OnParkClosingChange@AVisitorInterface@@UAEX_N@Z,0x33b54,public: virtual void __thiscall AVisitorInterface::OnParkClosingChange(bool)
+SimJP.exe,?RoadPointInvalidated@AVisitorInterface@@UAEXPAVARoadPoint@@@Z,0x33b58,public: virtual void __thiscall AVisitorInterface::RoadPointInvalidated(class ARoadPoint *)
+SimJP.exe,?OnDestroy@AVisitorInterface@@MAEXXZ,0x33b5c,protected: virtual void __thiscall AVisitorInterface::OnDestroy(void)
+SimJP.exe,?Imp_UpdateControl@AVisitorInterface@@MAEXM@Z,0x33b60,protected: virtual void __thiscall AVisitorInterface::Imp_UpdateControl(float)
+SimJP.exe,?Imp_GetScreenName@AVisitorInterface@@MBE?AVTLString@Toshi@@XZ,0x33b64,protected: virtual class Toshi::TLString __thiscall AVisitorInterface::Imp_GetScreenName(void)const 
+SimJP.exe,?GetSteerClass@AVisitorInterface@@UBEAAVTClass@Toshi@@XZ,0x33b68,public: virtual class Toshi::TClass & __thiscall AVisitorInterface::GetSteerClass(void)const 
+SimJP.exe,?LoadTraits@AVisitorInterface@@UAEXXZ,0x33b6c,public: virtual void __thiscall AVisitorInterface::LoadTraits(void)
+SimJP.exe,?GetAutoWalkSpeedModifier@AVisitorInterface@@MAEMXZ,0x33b70,protected: virtual float __thiscall AVisitorInterface::GetAutoWalkSpeedModifier(void)
+SimJP.exe,?GetAutoRunSpeedModifier@AVisitorInterface@@MAEMXZ,0x33b74,protected: virtual float __thiscall AVisitorInterface::GetAutoRunSpeedModifier(void)
+SimJP.exe,?OnRenderChange@AVisitorInterface@@MAEX_N@Z,0x33b78,protected: virtual void __thiscall AVisitorInterface::OnRenderChange(bool)
+SimJP.exe,?GetSceneGraphType@AVisitorInterface@@MAEXAA_NAAH@Z,0x33b7c,"protected: virtual void __thiscall AVisitorInterface::GetSceneGraphType(bool &,int &)"
+SimJP.exe,?CanBeRescued@AVisitorInterface@@UAE_NXZ,0x33b80,public: virtual bool __thiscall AVisitorInterface::CanBeRescued(void)
+SimJP.exe,?SetWaitToBeRescued@AVisitorInterface@@UAEX_N00@Z,0x33b84,"public: virtual void __thiscall AVisitorInterface::SetWaitToBeRescued(bool,bool,bool)"
+SimJP.exe,?MoveVisitorToTerrain@AVisitorInterface@@UAEXAAVTVector2@Toshi@@_N@Z,0x33b88,"public: virtual void __thiscall AVisitorInterface::MoveVisitorToTerrain(class Toshi::TVector2 &,bool)"
+SimJP.exe,?Initialise@AVisitorInterface@@MAEXEI@Z,0x33b8c,"protected: virtual void __thiscall AVisitorInterface::Initialise(unsigned char,unsigned int)"
+SimJP.exe,?AddPicture@ADialogPictureField@@QAEXPBD@Z,0x33b90,public: void __thiscall ADialogPictureField::AddPicture(char const *)
+SimJP.exe,??0ADialogPictureField@@QAE@PBD@Z,0x33b94,public: __thiscall ADialogPictureField::ADialogPictureField(char const *)
+SimJP.exe,??0ADialogLabelField@@QAE@PBDVTLString@Toshi@@@Z,0x33b98,"public: __thiscall ADialogLabelField::ADialogLabelField(char const *,class Toshi::TLString)"
+SimJP.exe,??0ADialogLabelField@@QAE@PBD@Z,0x33b9c,public: __thiscall ADialogLabelField::ADialogLabelField(char const *)
+SimJP.exe,??0AUnitDialog@@QAE@PBDW4DialogLocation@AGUISystem@@@Z,0x33ba0,"public: __thiscall AUnitDialog::AUnitDialog(char const *,enum AGUISystem::DialogLocation)"
+SimJP.exe,?SortDinoArray@ADinoList@@QAEXAAV?$TArray@H@Toshi@@P6GHPBVADinoInfo@@1@Z2@Z,0x33ba4,"public: void __thiscall ADinoList::SortDinoArray(class Toshi::TArray<int> &,int (__stdcall*)(class ADinoInfo const *,class ADinoInfo const *),int (__stdcall*)(class ADinoInfo const *,class ADinoInfo const *))"
+SimJP.exe,?ExpandDinoMask@ADinoList@@QAE_NIAAV?$TArray@H@Toshi@@@Z,0x33ba8,"public: bool __thiscall ADinoList::ExpandDinoMask(unsigned int,class Toshi::TArray<int> &)"
+SimJP.exe,?DinoCompareWorthReverse@ADinoList@@SGHPBVADinoInfo@@0@Z,0x33bac,"public: static int __stdcall ADinoList::DinoCompareWorthReverse(class ADinoInfo const *,class ADinoInfo const *)"
+SimJP.exe,?DinoCompareName@ADinoList@@SGHPBVADinoInfo@@0@Z,0x33bb0,"public: static int __stdcall ADinoList::DinoCompareName(class ADinoInfo const *,class ADinoInfo const *)"
+SimJP.exe,?GetDinoSeenMask@AQualities@@QBEIXZ,0x33bb4,public: unsigned int __thiscall AQualities::GetDinoSeenMask(void)const 
+SimJP.exe,?GetScreenName@ADinoInfo@@QBEABVTLString@Toshi@@XZ,0x33bb8,public: class Toshi::TLString const & __thiscall ADinoInfo::GetScreenName(void)const 
+SimJP.exe,?FormatTags@ALocale@@YG?AVTLString@Toshi@@HABVPPropertyValue@@@Z,0x33bbc,"class Toshi::TLString __stdcall ALocale::FormatTags(int,class PPropertyValue const &)"
+SimJP.exe,?m_sClass@AUnitDialog@@2VTClass@Toshi@@A,0x33bc0,public: static class Toshi::TClass AUnitDialog::m_sClass
+SimJP.exe,??1AUnitDialog@@UAE@XZ,0x33bc4,public: virtual __thiscall AUnitDialog::~AUnitDialog(void)
+SimJP.exe,??0AUnitHelicopter@@QAE@XZ,0x33bc8,public: __thiscall AUnitHelicopter::AUnitHelicopter(void)
+SimJP.exe,?Serialise@AUnitHelicopter@@UAE_NAAVASaveData@@@Z,0x33bcc,public: virtual bool __thiscall AUnitHelicopter::Serialise(class ASaveData &)
+SimJP.exe,?PutValue@ASaveData@@QAEXPBDABI@Z,0x33bd0,"public: void __thiscall ASaveData::PutValue(char const *,unsigned int const &)"
+SimJP.exe,?Deserialise@AUnitHelicopter@@UAE_NAAVASaveData@@@Z,0x33bd4,public: virtual bool __thiscall AUnitHelicopter::Deserialise(class ASaveData &)
+SimJP.exe,?GetValue@ASaveData@@QAE_NPBDAAI@Z,0x33bd8,"public: bool __thiscall ASaveData::GetValue(char const *,unsigned int &)"
+SimJP.exe,?FindMapArrivalPos@AUnitStaff@@SGXAAVTVector3@Toshi@@ABV23@MM@Z,0x33bdc,"public: static void __stdcall AUnitStaff::FindMapArrivalPos(class Toshi::TVector3 &,class Toshi::TVector3 const &,float,float)"
+SimJP.exe,?SetFacing@AUnit@@QAEXABVTVector3@Toshi@@@Z,0x33be0,public: void __thiscall AUnit::SetFacing(class Toshi::TVector3 const &)
+SimJP.exe,?m_sClass@AHelipadEntranceComponent@@2VTClass@Toshi@@A,0x33be4,public: static class Toshi::TClass AHelipadEntranceComponent::m_sClass
+SimJP.exe,?HaveArrival@AParkEntranceComponent@@QAEXXZ,0x33be8,public: void __thiscall AParkEntranceComponent::HaveArrival(void)
+SimJP.exe,?Imp_UpdateControl@AUnitHelicopter@@MAEXM@Z,0x33bec,protected: virtual void __thiscall AUnitHelicopter::Imp_UpdateControl(float)
+SimJP.exe,?m_sClass@AUnitHelicopter@@2VTClass@Toshi@@A,0x33bf0,public: static class Toshi::TClass AUnitHelicopter::m_sClass
+SimJP.exe,??1AUnitHelicopter@@UAE@XZ,0x33bf4,public: virtual __thiscall AUnitHelicopter::~AUnitHelicopter(void)
+SimJP.exe,?OnDestroy@AUnitHelicopter@@MAEXXZ,0x33bf8,protected: virtual void __thiscall AUnitHelicopter::OnDestroy(void)
+SimJP.exe,?AssignTask@AUnitHelicopter@@UAE_NPBVAServiceTarget@@@Z,0x33bfc,public: virtual bool __thiscall AUnitHelicopter::AssignTask(class AServiceTarget const *)
+SimJP.exe,?CmdIslandArrival@AUnitHelicopter@@UAEXM@Z,0x33c00,public: virtual void __thiscall AUnitHelicopter::CmdIslandArrival(float)
+SimJP.exe,?SetInCopterView@AUnitHelicopter@@UAEX_N@Z,0x33c04,public: virtual void __thiscall AUnitHelicopter::SetInCopterView(bool)
+SimJP.exe,?ArrivalNotification@AUnitHelicopter@@MAEXXZ,0x33c08,protected: virtual void __thiscall AUnitHelicopter::ArrivalNotification(void)
+SimJP.exe,?OnWeatherChanged@AUnitHelicopter@@MAE_NPAVAWeatherManager@@PAVAWeatherChangedEvent@2@@Z,0x33c0c,"protected: virtual bool __thiscall AUnitHelicopter::OnWeatherChanged(class AWeatherManager *,class AWeatherManager::AWeatherChangedEvent *)"
+SimJP.exe,?GetPost@AWallManager@@QBEPAVAWallUnitNode@@HI@Z,0x33c10,"public: class AWallUnitNode * __thiscall AWallManager::GetPost(int,unsigned int)const "
+SimJP.exe,?DestroyWall@AWallManager@@QAEXPAVAWallUnitNode@@_N1@Z,0x33c14,"public: void __thiscall AWallManager::DestroyWall(class AWallUnitNode *,bool,bool)"
+SimJP.exe,?GetWall@AWallManager@@QAEPAVAWallUnitNode@@PAVAUnit@@@Z,0x33c18,public: class AWallUnitNode * __thiscall AWallManager::GetWall(class AUnit *)
+SimJP.exe,?CreateDebris@AParticleSystem@@QAEPAVADebrisParticles@@ABVTVector3@Toshi@@00W4DEBRIS@1@0M@Z,0x33c1c,"public: class ADebrisParticles * __thiscall AParticleSystem::CreateDebris(class Toshi::TVector3 const &,class Toshi::TVector3 const &,class Toshi::TVector3 const &,enum AParticleSystem::DEBRIS,class Toshi::TVector3 const &,float)"
+SimJP.exe,?GetTraitString@AUnitTraits@@SGPBDI@Z,0x33c20,public: static char const * __stdcall AUnitTraits::GetTraitString(unsigned int)
+SimJP.exe,?m_pResearchManager@AParkManager@@0PAVAResearchManager@@A,0x33c24,private: static class AResearchManager * AParkManager::m_pResearchManager
+SimJP.exe,?GetStatus@AResearchItem@@QBE?AW4ResearchStatus@AResearchManager@@XZ,0x33c28,public: enum AResearchManager::ResearchStatus __thiscall AResearchItem::GetStatus(void)const 
+SimJP.exe,?FindItemByName@AResearchManager@@QBEPAVAResearchItem@@ABVTPCString@Toshi@@@Z,0x33c2c,public: class AResearchItem * __thiscall AResearchManager::FindItemByName(class Toshi::TPCString const &)const 
+SimJP.exe,?GetUpgradeCost@AWallManager@@QAEHPAVAWallUnitNode@@_N@Z,0x33c30,"public: int __thiscall AWallManager::GetUpgradeCost(class AWallUnitNode *,bool)"
+SimJP.exe,?UpgradeWall@AWallManager@@QAEXPAVAWallUnitNode@@_N111@Z,0x33c34,"public: void __thiscall AWallManager::UpgradeWall(class AWallUnitNode *,bool,bool,bool,bool)"
+SimJP.exe,?SetContextCommand@AGUIGameHUD@@QAEXW4ContextButton@1@W4eSimJPCommandEnum@AGUICommands@@@Z,0x33c38,"public: void __thiscall AGUIGameHUD::SetContextCommand(enum AGUIGameHUD::ContextButton,enum AGUICommands::eSimJPCommandEnum)"
+SimJP.exe,?m_pUnitSelection@AParkManager@@0PAVAUnitSelection@@A,0x33c3c,private: static class AUnitSelection * AParkManager::m_pUnitSelection
+SimJP.exe,?sm_bChangeCameraOnActivate@ADefaultState@@0_NA,0x33c40,private: static bool ADefaultState::sm_bChangeCameraOnActivate
+SimJP.exe,?SetSelectedUnit@AUnitSelection@@QAEXPBVAUnit@@@Z,0x33c44,public: void __thiscall AUnitSelection::SetSelectedUnit(class AUnit const *)
+SimJP.exe,?GetMaintenenceCost@AWallManager@@QAEHPAVAWallUnitNode@@@Z,0x33c48,public: int __thiscall AWallManager::GetMaintenenceCost(class AWallUnitNode *)
+SimJP.exe,?PerformMaitenence@AWallManager@@QAEXPAVAWallUnitNode@@@Z,0x33c4c,public: void __thiscall AWallManager::PerformMaitenence(class AWallUnitNode *)
+SimJP.exe,?GetWall@AWallManager@@QBEPAVAWallUnitNode@@HHW4eWallDirEnum@@_N@Z,0x33c50,"public: class AWallUnitNode * __thiscall AWallManager::GetWall(int,int,enum eWallDirEnum,bool)const "
+SimJP.exe,?GetWallUnit@AWallUnitNode@@QAEPAVAUnit@@XZ,0x33c54,public: class AUnit * __thiscall AWallUnitNode::GetWallUnit(void)
+SimJP.exe,?SetHintMessage@AGUIGameHUD@@QAEXVTLString@Toshi@@M@Z,0x33c58,"public: void __thiscall AGUIGameHUD::SetHintMessage(class Toshi::TLString,float)"
+SimJP.exe,??0AWallLayingState@@QAE@W4WALLSIZE@AWallManager@@PAVAWallUnitNode@@@Z,0x33c5c,"public: __thiscall AWallLayingState::AWallLayingState(enum AWallManager::WALLSIZE,class AWallUnitNode *)"
+SimJP.exe,?SetFlag@AWallUnitNode@@AAEXI_N@Z,0x33c60,"private: void __thiscall AWallUnitNode::SetFlag(unsigned int,bool)"
+SimJP.exe,??0AStationarySteer@@QAE@XZ,0x33c64,public: __thiscall AStationarySteer::AStationarySteer(void)
+SimJP.exe,?s_pInstance@ASoundManager@@0PAV1@A,0x33c68,private: static class ASoundManager * ASoundManager::s_pInstance
+SimJP.exe,?GetGUISystem@ARootTask@@QAEPAVAGUISystem@@XZ,0x33c6c,public: class AGUISystem * __thiscall ARootTask::GetGUISystem(void)
+SimJP.exe,?IsFeatureAllowed@AFeatureInfo@@QAE_NABVTPCString@Toshi@@@Z,0x33c70,public: bool __thiscall AFeatureInfo::IsFeatureAllowed(class Toshi::TPCString const &)
+SimJP.exe,?FindWeakestWall@AWallManager@@QAEPAVAWallUnitNode@@PAV2@_N@Z,0x33c74,"public: class AWallUnitNode * __thiscall AWallManager::FindWeakestWall(class AWallUnitNode *,bool)"
+SimJP.exe,?GetClosestPost@AWallManager@@QAEPAVAWallUnitNode@@HHH_N0@Z,0x33c78,"public: class AWallUnitNode * __thiscall AWallManager::GetClosestPost(int,int,int,bool,bool)"
+SimJP.exe,?GetHealth@AWallUnitNode@@QBEMXZ,0x33c7c,public: float __thiscall AWallUnitNode::GetHealth(void)const 
+SimJP.exe,?PlayAnimExplicit@AAnimatableObject@@QAEPBVAAnimationRef@@W4OBJECT_ANIM_STATES@@ABVTCString@Toshi@@MMM_NMMMMM@Z,0x33c80,"public: class AAnimationRef const * __thiscall AAnimatableObject::PlayAnimExplicit(enum OBJECT_ANIM_STATES,class Toshi::TCString const &,float,float,float,bool,float,float,float,float,float)"
+SimJP.exe,?DEFAULT_ANIM_WEIGHT@AAnimationRef@@2MB,0x33c84,public: static float const AAnimationRef::DEFAULT_ANIM_WEIGHT
+SimJP.exe,?DEFAULT_ANIM_SPEED@AAnimationRef@@2MB,0x33c88,public: static float const AAnimationRef::DEFAULT_ANIM_SPEED
+SimJP.exe,?DEFAULT_ANIM_LOOP@AAnimationRef@@2MB,0x33c8c,public: static float const AAnimationRef::DEFAULT_ANIM_LOOP
+SimJP.exe,?DEFAULT_NOTIFY_MODE@AAnimationRef@@2_NB,0x33c90,public: static bool const AAnimationRef::DEFAULT_NOTIFY_MODE
+SimJP.exe,?DEFAULT_ANIM_BLENDIN_DURATION@AAnimationRef@@2MB,0x33c94,public: static float const AAnimationRef::DEFAULT_ANIM_BLENDIN_DURATION
+SimJP.exe,?DEFAULT_ANIM_BLENDOUT_DURATION@AAnimationRef@@2MB,0x33c98,public: static float const AAnimationRef::DEFAULT_ANIM_BLENDOUT_DURATION
+SimJP.exe,?DEFAULT_ANIM_START@AAnimationRef@@2MB,0x33c9c,public: static float const AAnimationRef::DEFAULT_ANIM_START
+SimJP.exe,?DEFAULT_ANIM_END@AAnimationRef@@2MB,0x33ca0,public: static float const AAnimationRef::DEFAULT_ANIM_END
+SimJP.exe,??0AParam@@QAE@PBD@Z,0x33ca4,public: __thiscall AParam::AParam(char const *)
+SimJP.exe,??0AParams@@QAE@XZ,0x33ca8,public: __thiscall AParams::AParams(void)
+SimJP.exe,??1AParams@@UAE@XZ,0x33cac,public: virtual __thiscall AParams::~AParams(void)
+SimJP.exe,?SetNumParams@AParams@@QAEXH@Z,0x33cb0,public: void __thiscall AParams::SetNumParams(int)
+SimJP.exe,?SetParam@AParams@@QAEXHABVAParam@@@Z,0x33cb4,"public: void __thiscall AParams::SetParam(int,class AParam const &)"
+SimJP.exe,?SetAnimBreakpoints@AUnitDinosaur@@MAEXXZ,0x33cb8,protected: virtual void __thiscall AUnitDinosaur::SetAnimBreakpoints(void)
+SimJP.exe,?AddAnimBreakpoint@AAnimatableObject@@QAE_NW4OBJECT_ANIM_STATES@@ABVTCString@Toshi@@PAVAAnimBreakpoint@@@Z,0x33cbc,"public: bool __thiscall AAnimatableObject::AddAnimBreakpoint(enum OBJECT_ANIM_STATES,class Toshi::TCString const &,class AAnimBreakpoint *)"
+SimJP.exe,??0AAnimBreakpoint@@QAE@XZ,0x33cc0,public: __thiscall AAnimBreakpoint::AAnimBreakpoint(void)
+SimJP.exe,?Create@AUnitBehaviour@@QAEXPAVAActiveUnit@@@Z,0x33cc4,public: void __thiscall AUnitBehaviour::Create(class AActiveUnit *)
+SimJP.exe,?DetachUnit@AUnitDialog@@UAEXXZ,0x33cc8,public: virtual void __thiscall AUnitDialog::DetachUnit(void)
+SimJP.exe,?LoadBehaviour@AUnitBehaviourMgr@@QAEXABVTCString@Toshi@@00I@Z,0x33ccc,"public: void __thiscall AUnitBehaviourMgr::LoadBehaviour(class Toshi::TCString const &,class Toshi::TCString const &,class Toshi::TCString const &,unsigned int)"
+SimJP.exe,?LoadBehaviourCallable@AUnitBehaviourMgr@@QAEXABVTCString@Toshi@@0@Z,0x33cd0,"public: void __thiscall AUnitBehaviourMgr::LoadBehaviourCallable(class Toshi::TCString const &,class Toshi::TCString const &)"
+SimJP.exe,?m_pUnitManager@AUnit@@1PAVAUnitManager@@A,0x33cd4,protected: static class AUnitManager * AUnit::m_pUnitManager
+SimJP.exe,??0AParam@@QAE@XZ,0x33cd8,public: __thiscall AParam::AParam(void)
+SimJP.exe,?UpdateFields@AUnitStaffDialog@@MAEXXZ,0x33cdc,protected: virtual void __thiscall AUnitStaffDialog::UpdateFields(void)
+SimJP.exe,?AttachUnit@AUnitDialog@@UAEXV?$TManagedPtr@VAUnitProxy@@@Toshi@@@Z,0x33ce0,public: virtual void __thiscall AUnitDialog::AttachUnit(class Toshi::TManagedPtr<class AUnitProxy>)
+SimJP.exe,?OnCommandField@AGameDialog@@UAEXAAVADialogField@@@Z,0x33ce4,public: virtual void __thiscall AGameDialog::OnCommandField(class ADialogField &)
+SimJP.exe,?OnToggleField@AGameDialog@@UAEXAAVADialogField@@@Z,0x33ce8,public: virtual void __thiscall AGameDialog::OnToggleField(class ADialogField &)
+SimJP.exe,?SetUnitType@AUnitDialog@@IAEXPAVAUnitFactoryUnitType@@@Z,0x33cec,protected: void __thiscall AUnitDialog::SetUnitType(class AUnitFactoryUnitType *)
+TKernelInterface.dll,??0TCString@Toshi@@QAE@XZ,0x33d3c,public: __thiscall Toshi::TCString::TCString(void)
+TKernelInterface.dll,?StringIntToString@TSystem@Toshi@@SGPBDHPADH@Z,0x33d40,"public: static char const * __stdcall Toshi::TSystem::StringIntToString(int,char *,int)"
+TKernelInterface.dll,??1TWString@Toshi@@QAE@XZ,0x33d44,public: __thiscall Toshi::TWString::~TWString(void)
+TKernelInterface.dll,??0TWString@Toshi@@QAE@PBD@Z,0x33d48,public: __thiscall Toshi::TWString::TWString(char const *)
+TKernelInterface.dll,?GetVolatile@TLocale@Toshi@@QAE?AVTLString@2@PBG@Z,0x33d4c,public: class Toshi::TLString __thiscall Toshi::TLocale::GetVolatile(unsigned short const *)
+TKernelInterface.dll,?GetTemporary@TLocale@Toshi@@QAE?AVTLString@2@ABVTWString@2@@Z,0x33d50,public: class Toshi::TLString __thiscall Toshi::TLocale::GetTemporary(class Toshi::TWString const &)
+TKernelInterface.dll,?FLOATEPSILON@TMath@Toshi@@2MB,0x33d54,public: static float const Toshi::TMath::FLOATEPSILON
+TKernelInterface.dll,?CreateObject@TClass@Toshi@@QBEPAVTObject@2@XZ,0x33d58,public: class Toshi::TObject * __thiscall Toshi::TClass::CreateObject(void)const 
+TKernelInterface.dll,?VEC_POSX@TVector3@Toshi@@2V12@B,0x33d5c,public: static class Toshi::TVector3 const Toshi::TVector3::VEC_POSX
+TKernelInterface.dll,?RotateY@TVector3@Toshi@@QAEXM@Z,0x33d60,public: void __thiscall Toshi::TVector3::RotateY(float)
+TKernelInterface.dll,?CompareNoCase@TCString@Toshi@@QBEHPBDH@Z,0x33d64,"public: int __thiscall Toshi::TCString::CompareNoCase(char const *,int)const "
+TKernelInterface.dll,?Format@TWString@Toshi@@QAAAAV12@PBGZZ,0x33d68,"public: class Toshi::TWString & __cdecl Toshi::TWString::Format(unsigned short const *,...)"
+TKernelInterface.dll,??4TWString@Toshi@@QAEAAV01@PBG@Z,0x33d6c,public: class Toshi::TWString & __thiscall Toshi::TWString::operator=(unsigned short const *)
+TKernelInterface.dll,?Multiply@TVector3@Toshi@@QAEXM@Z,0x33d70,public: void __thiscall Toshi::TVector3::Multiply(float)
+TKernelInterface.dll,?GetFloat2@TRandom@Toshi@@QAEMXZ,0x33d74,public: float __thiscall Toshi::TRandom::GetFloat2(void)
+TKernelInterface.dll,?Find@TClass@Toshi@@SGPBV12@PBDPBV12@@Z,0x33d78,"public: static class Toshi::TClass const * __stdcall Toshi::TClass::Find(char const *,class Toshi::TClass const *)"
+TKernelInterface.dll,?VEC_POSZ@TVector3@Toshi@@2V12@B,0x33d7c,public: static class Toshi::TVector3 const Toshi::TVector3::VEC_POSZ
+TKernelInterface.dll,?GetInt@TRandom@Toshi@@QAEHH@Z,0x33d80,public: int __thiscall Toshi::TRandom::GetInt(int)
+TKernelInterface.dll,?VEC_NEGY@TVector3@Toshi@@2V12@B,0x33d84,public: static class Toshi::TVector3 const Toshi::TVector3::VEC_NEGY
+TKernelInterface.dll,?Clip@TMath@Toshi@@SGXAAMMM@Z,0x33d88,"public: static void __stdcall Toshi::TMath::Clip(float &,float,float)"
+TKernelInterface.dll,?Lerp@TVector3@Toshi@@QAEXABV12@0M@Z,0x33d8c,"public: void __thiscall Toshi::TVector3::Lerp(class Toshi::TVector3 const &,class Toshi::TVector3 const &,float)"
+TKernelInterface.dll,?Normalise@TVector3@Toshi@@QAEXXZ,0x33d90,public: void __thiscall Toshi::TVector3::Normalise(void)
+TKernelInterface.dll,?Divide@TVector3@Toshi@@QAEXM@Z,0x33d94,public: void __thiscall Toshi::TVector3::Divide(float)
+TKernelInterface.dll,?Subtract@TVector3@Toshi@@QAEXABV12@0@Z,0x33d98,"public: void __thiscall Toshi::TVector3::Subtract(class Toshi::TVector3 const &,class Toshi::TVector3 const &)"
+TKernelInterface.dll,??1TRandom@Toshi@@QAE@XZ,0x33d9c,public: __thiscall Toshi::TRandom::~TRandom(void)
+TKernelInterface.dll,?Subtract@TVector3@Toshi@@QAEXABV12@@Z,0x33da0,public: void __thiscall Toshi::TVector3::Subtract(class Toshi::TVector3 const &)
+TKernelInterface.dll,?Add@TVector3@Toshi@@QAEXABV12@@Z,0x33da4,public: void __thiscall Toshi::TVector3::Add(class Toshi::TVector3 const &)
+TKernelInterface.dll,?GetScheduler@TTask@Toshi@@QAEPAVTScheduler@2@XZ,0x33da8,public: class Toshi::TScheduler * __thiscall Toshi::TTask::GetScheduler(void)
+TKernelInterface.dll,?MatToQuat@TMatrix44@Toshi@@SGXAAVTQuaternion@2@ABV12@@Z,0x33dac,"public: static void __stdcall Toshi::TMatrix44::MatToQuat(class Toshi::TQuaternion &,class Toshi::TMatrix44 const &)"
+TKernelInterface.dll,?MagnitudeSq@TVector3@Toshi@@QBEMXZ,0x33db0,public: float __thiscall Toshi::TVector3::MagnitudeSq(void)const 
+TKernelInterface.dll,??1TGenericListener@Toshi@@IAE@XZ,0x33db4,protected: __thiscall Toshi::TGenericListener::~TGenericListener(void)
+TKernelInterface.dll,?Get@TLocale@Toshi@@QAE?AVTLString@2@PBD@Z,0x33db8,public: class Toshi::TLString __thiscall Toshi::TLocale::Get(char const *)
+TKernelInterface.dll,?StringCompare@TSystem@Toshi@@SGHPBD0H@Z,0x33dbc,"public: static int __stdcall Toshi::TSystem::StringCompare(char const *,char const *,int)"
+TKernelInterface.dll,??DTVector4@Toshi@@QBE?AV01@M@Z,0x33dc0,public: class Toshi::TVector4 __thiscall Toshi::TVector4::operator*(float)const 
+TKernelInterface.dll,?Multiply@TVector4@Toshi@@QAEXABV12@@Z,0x33dc4,public: void __thiscall Toshi::TVector4::Multiply(class Toshi::TVector4 const &)
+TKernelInterface.dll,?Clip@TMath@Toshi@@SGXAAHHH@Z,0x33dc8,"public: static void __stdcall Toshi::TMath::Clip(int &,int,int)"
+TKernelInterface.dll,?RotateAroundAxis@TQuaternion@Toshi@@QAEXABVTVector3@2@M@Z,0x33dcc,"public: void __thiscall Toshi::TQuaternion::RotateAroundAxis(class Toshi::TVector3 const &,float)"
+TKernelInterface.dll,?RotateVector@TQuaternion@Toshi@@SGXAAVTVector3@2@ABV12@ABV32@@Z,0x33dd0,"public: static void __stdcall Toshi::TQuaternion::RotateVector(class Toshi::TVector3 &,class Toshi::TQuaternion const &,class Toshi::TVector3 const &)"
+TKernelInterface.dll,?SetFromEulerRollPitchYaw@TQuaternion@Toshi@@QAEXMMM@Z,0x33dd4,"public: void __thiscall Toshi::TQuaternion::SetFromEulerRollPitchYaw(float,float,float)"
+TKernelInterface.dll,?GetFloat@TRandom@Toshi@@QAEMXZ,0x33dd8,public: float __thiscall Toshi::TRandom::GetFloat(void)
+TKernelInterface.dll,?HALF_PI@TMath@Toshi@@2MB,0x33ddc,public: static float const Toshi::TMath::HALF_PI
+TKernelInterface.dll,?VEC3_ZERO_ROTATION@TQuaternion@Toshi@@2VTVector3@2@B,0x33de0,public: static class Toshi::TVector3 const Toshi::TQuaternion::VEC3_ZERO_ROTATION
+TKernelInterface.dll,?VEC_ZERO@TVector3@Toshi@@2V12@B,0x33de4,public: static class Toshi::TVector3 const Toshi::TVector3::VEC_ZERO
+TKernelInterface.dll,?PI@TMath@Toshi@@2MB,0x33de8,public: static float const Toshi::TMath::PI
+TKernelInterface.dll,?IDENTITY@TQuaternion@Toshi@@2V12@B,0x33dec,public: static class Toshi::TQuaternion const Toshi::TQuaternion::IDENTITY
+TKernelInterface.dll,?GetCStringPool@TSystem@Toshi@@SGPAVTCStringPool@2@XZ,0x33df0,public: static class Toshi::TCStringPool * __stdcall Toshi::TSystem::GetCStringPool(void)
+TKernelInterface.dll,?GetLocale@TSystem@Toshi@@SGPAVTLocale@2@XZ,0x33df4,public: static class Toshi::TLocale * __stdcall Toshi::TSystem::GetLocale(void)
+TKernelInterface.dll,?Get@TCStringPool@Toshi@@QAE?AVTPCString@2@PBD@Z,0x33df8,public: class Toshi::TPCString __thiscall Toshi::TCStringPool::Get(char const *)
+TKernelInterface.dll,?Get@TLocale@Toshi@@QAE?AVTLString@2@H@Z,0x33dfc,public: class Toshi::TLString __thiscall Toshi::TLocale::Get(int)
+TKernelInterface.dll,?IsA@TObject@Toshi@@QBE_NABVTClass@2@@Z,0x33e00,public: bool __thiscall Toshi::TObject::IsA(class Toshi::TClass const &)const 
+TKernelInterface.dll,?IsA@TClass@Toshi@@QBE_NABV12@@Z,0x33e04,public: bool __thiscall Toshi::TClass::IsA(class Toshi::TClass const &)const 
+TKernelInterface.dll,?Delete@TObject@Toshi@@UAEXXZ,0x33e08,public: virtual void __thiscall Toshi::TObject::Delete(void)
+TKernelInterface.dll,??BTCString@Toshi@@QBEPBDXZ,0x33e0c,public: __thiscall Toshi::TCString::operator char const *(void)const 
+TKernelInterface.dll,??0TGenericListener@Toshi@@IAE@XZ,0x33e10,protected: __thiscall Toshi::TGenericListener::TGenericListener(void)
+TKernelInterface.dll,??0TObject@Toshi@@IAE@XZ,0x33e14,protected: __thiscall Toshi::TObject::TObject(void)
+TKernelInterface.dll,??1TObject@Toshi@@MAE@XZ,0x33e18,protected: virtual __thiscall Toshi::TObject::~TObject(void)
+TKernelInterface.dll,?m_sClass@TObject@Toshi@@2VTClass@2@A,0x33e1c,public: static class Toshi::TClass Toshi::TObject::m_sClass
+TKernelInterface.dll,?Delete@TPooledCString@Toshi@@AAEXXZ,0x33e20,private: void __thiscall Toshi::TPooledCString::Delete(void)
+TKernelInterface.dll,?Delete@TLocalisedString@Toshi@@AAEXXZ,0x33e24,private: void __thiscall Toshi::TLocalisedString::Delete(void)
+TKernelInterface.dll,??HTVector3@Toshi@@QBE?AV01@ABV01@@Z,0x33e28,public: class Toshi::TVector3 __thiscall Toshi::TVector3::operator+(class Toshi::TVector3 const &)const 
+TKernelInterface.dll,??DTVector3@Toshi@@QBE?AV01@M@Z,0x33e2c,public: class Toshi::TVector3 __thiscall Toshi::TVector3::operator*(float)const 
+TKernelInterface.dll,?Magnitude@TVector3@Toshi@@QBEMXZ,0x33e30,public: float __thiscall Toshi::TVector3::Magnitude(void)const 
+TKernelInterface.dll,??4TCString@Toshi@@QAEAAV01@PBD@Z,0x33e34,public: class Toshi::TCString & __thiscall Toshi::TCString::operator=(char const *)
+TKernelInterface.dll,?DecrMinf@TMath@Toshi@@SGMMMM@Z,0x33e38,"public: static float __stdcall Toshi::TMath::DecrMinf(float,float,float)"
+TKernelInterface.dll,?RotateZ@TVector3@Toshi@@QAEXM@Z,0x33e3c,public: void __thiscall Toshi::TVector3::RotateZ(float)
+TKernelInterface.dll,?Connect@TGenericListener@Toshi@@IAEXPAVTGenericEmitter@2@PAXP6G_N111@ZH@Z,0x33e40,"protected: void __thiscall Toshi::TGenericListener::Connect(class Toshi::TGenericEmitter *,void *,bool (__stdcall*)(void *,void *,void *),int)"
+TKernelInterface.dll,?RotateX@TVector3@Toshi@@QAEXM@Z,0x33e44,public: void __thiscall Toshi::TVector3::RotateX(float)
+TKernelInterface.dll,??0TRandom@Toshi@@QAE@XZ,0x33e48,public: __thiscall Toshi::TRandom::TRandom(void)
+TKernelInterface.dll,??GTVector3@Toshi@@QBE?AV01@ABV01@@Z,0x33e4c,public: class Toshi::TVector3 __thiscall Toshi::TVector3::operator-(class Toshi::TVector3 const &)const 
+TKernelInterface.dll,?Add@TVector4@Toshi@@QAEXABV12@@Z,0x33e50,public: void __thiscall Toshi::TVector4::Add(class Toshi::TVector4 const &)
+TKernelInterface.dll,??1TClass@Toshi@@QAE@XZ,0x33e54,public: __thiscall Toshi::TClass::~TClass(void)
+TKernelInterface.dll,??0TClass@Toshi@@QAE@PBDPAV01@P6GPAVTObject@1@XZP6GPAV21@PAX@ZP6GXXZ5I@Z,0x33e58,"public: __thiscall Toshi::TClass::TClass(char const *,class Toshi::TClass *,class Toshi::TObject * (__stdcall*)(void),class Toshi::TObject * (__stdcall*)(void *),void (__stdcall*)(void),void (__stdcall*)(void),unsigned int)"
+TKernelInterface.dll,??8TCString@Toshi@@QBE_NPBD@Z,0x33e5c,public: bool __thiscall Toshi::TCString::operator==(char const *)const 
+TKernelInterface.dll,??0TCString@Toshi@@QAE@PBD@Z,0x33e60,public: __thiscall Toshi::TCString::TCString(char const *)
+TKernelInterface.dll,?ms_sEmpty@TPCString@Toshi@@2VTCString@2@B,0x33e64,public: static class Toshi::TCString const Toshi::TPCString::ms_sEmpty
+TKernelInterface.dll,?GetString@TCString@Toshi@@QBEPBDH@Z,0x33e68,public: char const * __thiscall Toshi::TCString::GetString(int)const 
+TKernelInterface.dll,?tfree@@YGXPAX@Z,0x33e6c,void __stdcall tfree(void *)
+TKernelInterface.dll,??1TCString@Toshi@@QAE@XZ,0x33e70,public: __thiscall Toshi::TCString::~TCString(void)
+TKernelInterface.dll,?tmalloc@@YGPAXHPADH@Z,0x33e74,"void * __stdcall tmalloc(int,char *,int)"
+PGUICore.dll,?Initialise@PGUITableBox@@QAEXXZ,0x33024,public: void __thiscall PGUITableBox::Initialise(void)
+PGUICore.dll,?SelectItemImpl@PGUITableBox@@IAEXPAVPGUIRowData@@@Z,0x33028,protected: void __thiscall PGUITableBox::SelectItemImpl(class PGUIRowData *)
+PGUICore.dll,?AddItemImpl@PGUITableBox@@IAEXPAVPGUIRowData@@@Z,0x3302c,protected: void __thiscall PGUITableBox::AddItemImpl(class PGUIRowData *)
+PGUICore.dll,?RefreshItemList@PGUITableBox@@QAEXXZ,0x33030,public: void __thiscall PGUITableBox::RefreshItemList(void)
+PGUICore.dll,??0PGUIRowData@@QAE@HQBHI@Z,0x33034,"public: __thiscall PGUIRowData::PGUIRowData(int,int const * const,unsigned int)"
+PGUICore.dll,?UpdateKnob@PGUISliderBar@@IAEXXZ,0x33038,protected: void __thiscall PGUISliderBar::UpdateKnob(void)
+PGUICore.dll,?RemoveAllItemsImpl@PGUITableBox@@IAEXXZ,0x3303c,protected: void __thiscall PGUITableBox::RemoveAllItemsImpl(void)
+PPropertyParser.dll,??4PPropertyValue@@QAEAAV0@ABVTLString@Toshi@@@Z,0x33044,public: class PPropertyValue & __thiscall PPropertyValue::operator=(class Toshi::TLString const &)
+PPropertyParser.dll,??4PPropertyValue@@QAEAAV0@H@Z,0x33048,public: class PPropertyValue & __thiscall PPropertyValue::operator=(int)
+PPropertyParser.dll,??4PPropertyValue@@QAEAAV0@M@Z,0x3304c,public: class PPropertyValue & __thiscall PPropertyValue::operator=(float)
+PPropertyParser.dll,?GetInteger@PPropertyValue@@QBEHXZ,0x33050,public: int __thiscall PPropertyValue::GetInteger(void)const 
+PPropertyParser.dll,?GetTLString@PPropertyValue@@QAEAAVTLString@Toshi@@XZ,0x33054,public: class Toshi::TLString & __thiscall PPropertyValue::GetTLString(void)
+PPropertyParser.dll,??1PPropertyValue@@QAE@XZ,0x33058,public: __thiscall PPropertyValue::~PPropertyValue(void)
+PPropertyParser.dll,??0PPropertyValue@@QAE@_N@Z,0x3305c,public: __thiscall PPropertyValue::PPropertyValue(bool)
+PPropertyParser.dll,?GetBoolean@PPropertyValue@@QBE_NXZ,0x33060,public: bool __thiscall PPropertyValue::GetBoolean(void)const 
+PPropertyParser.dll,?SetTLString@PPropertyValue@@QAEXABVTLString@Toshi@@@Z,0x33064,public: void __thiscall PPropertyValue::SetTLString(class Toshi::TLString const &)
+PPropertyParser.dll,??0PPropertyValue@@QAE@H@Z,0x33068,public: __thiscall PPropertyValue::PPropertyValue(int)
+SimJPTerrain.dll,?s_uiPaleoTree@ASimJPTerrain@@2IB,0x33cf4,public: static unsigned int const ASimJPTerrain::s_uiPaleoTree
+SimJPTerrain.dll,?GetUIFlags@ASimJPTerrain@@QBEIII@Z,0x33cf8,"public: unsigned int __thiscall ASimJPTerrain::GetUIFlags(unsigned int,unsigned int)const "
+SimJPTerrain.dll,?SetUIFlags@ASimJPTerrain@@QAEXIII@Z,0x33cfc,"public: void __thiscall ASimJPTerrain::SetUIFlags(unsigned int,unsigned int,unsigned int)"
+SimJPTerrain.dll,?s_uiFence@ASimJPTerrain@@2IB,0x33d00,public: static unsigned int const ASimJPTerrain::s_uiFence
+SimJPTerrain.dll,?GetCurSectionTextureValue@APerlinNoise@@QAEMMM@Z,0x33d04,"public: float __thiscall APerlinNoise::GetCurSectionTextureValue(float,float)"
+SimJPTerrain.dll,?s_uiModernTree@ASimJPTerrain@@2IB,0x33d08,public: static unsigned int const ASimJPTerrain::s_uiModernTree
+SimJPTerrain.dll,?s_uiRoad@ASimJPTerrain@@2IB,0x33d0c,public: static unsigned int const ASimJPTerrain::s_uiRoad
+SimJPTerrain.dll,??1APerlinNoise@@QAE@XZ,0x33d10,public: __thiscall APerlinNoise::~APerlinNoise(void)
+SimJPTerrain.dll,??0APerlinNoise@@QAE@I@Z,0x33d14,public: __thiscall APerlinNoise::APerlinNoise(unsigned int)
+TGuiInterface.dll,?FindNamedChild@TGUIWidget@Toshi@@QBEPAV12@ABVTPCString@2@@Z,0x33d1c,public: class Toshi::TGUIWidget * __thiscall Toshi::TGUIWidget::FindNamedChild(class Toshi::TPCString const &)const 
+TGuiInterface.dll,?SetParameter@TGUIWidget@Toshi@@QAEXHABVTLString@2@@Z,0x33d20,"public: void __thiscall Toshi::TGUIWidget::SetParameter(int,class Toshi::TLString const &)"
+TGuiInterface.dll,?AddWidget@TGUIWidget@Toshi@@QAEXPAV12@_N@Z,0x33d24,"public: void __thiscall Toshi::TGUIWidget::AddWidget(class Toshi::TGUIWidget *,bool)"
+TGuiInterface.dll,?SetState@TGUIWidget@Toshi@@QAEXII@Z,0x33d28,"public: void __thiscall Toshi::TGUIWidget::SetState(unsigned int,unsigned int)"
+TGuiInterface.dll,?FindNamedChild@TGUIWidget@Toshi@@QBEPAV12@PBD@Z,0x33d2c,public: class Toshi::TGUIWidget * __thiscall Toshi::TGUIWidget::FindNamedChild(char const *)const 
+TGuiInterface.dll,?TGUINew@Toshi@@YGPAXI@Z,0x33d30,void * __stdcall Toshi::TGUINew(unsigned int)
+TGuiInterface.dll,?GetParameter@TGUIWidget@Toshi@@QBE?AVPPropertyValue@@H@Z,0x33d34,public: class PPropertyValue __thiscall Toshi::TGUIWidget::GetParameter(int)const 
+TTerrainInterface.dll,?SafeGetHeight@TTerrainInterface@Toshi@@QBE_NAAVTVector3@2@@Z,0x33e90,public: bool __thiscall Toshi::TTerrainInterface::SafeGetHeight(class Toshi::TVector3 &)const 
+TRenderInterface.dll,?SetEuler@TTransformObject@Toshi@@QAEXABVTVector3@2@@Z,0x33e7c,public: void __thiscall Toshi::TTransformObject::SetEuler(class Toshi::TVector3 const &)
+TRenderInterface.dll,?SetTranslate@TTransformObject@Toshi@@QAEXABVTVector3@2@@Z,0x33e80,public: void __thiscall Toshi::TTransformObject::SetTranslate(class Toshi::TVector3 const &)
+TRenderInterface.dll,?SetQuat@TTransformObject@Toshi@@QAEXABVTQuaternion@2@@Z,0x33e84,public: void __thiscall Toshi::TTransformObject::SetQuat(class Toshi::TQuaternion const &)
+TRenderInterface.dll,?SetParent@TResource@Toshi@@QAEXPAV12@@Z,0x33e88,public: void __thiscall Toshi::TResource::SetParent(class Toshi::TResource *)
+MSVCRT.dll,free,0x33008,free
+MSVCRT.dll,_onexit,0x3300c,_onexit
+MSVCRT.dll,malloc,0x33010,malloc
+MSVCRT.dll,_adjust_fdiv,0x33014,_adjust_fdiv
+MSVCRT.dll,__dllonexit,0x33018,__dllonexit
+MSVCRT.dll,_initterm,0x3301c,_initterm
+KERNEL32.dll,DisableThreadLibraryCalls,0x33000,DisableThreadLibraryCalls

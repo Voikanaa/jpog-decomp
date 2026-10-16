@@ -1,0 +1,235 @@
+ordinal,rva,va,name,demangled
+1,0x1080,0x10001080,??0THeightField@Toshi@@QAE@XZ,public: __thiscall Toshi::THeightField::THeightField(void)
+2,0x23b0,0x100023b0,??0TTerrainDecal@Toshi@@IAE@PAVTTerrainInterface@1@IABVTVector2@1@1PAVTMaterial@1@ABVTVector3@1@HMPAVTLightingNode@1@@Z,"protected: __thiscall Toshi::TTerrainDecal::TTerrainDecal(class Toshi::TTerrainInterface *,unsigned int,class Toshi::TVector2 const &,class Toshi::TVector2 const &,class Toshi::TMaterial *,class Toshi::TVector3 const &,int,float,class Toshi::TLightingNode *)"
+3,0x1ff0,0x10001ff0,??0TTerrainDecal@Toshi@@IAE@PAVTTerrainInterface@1@IPAVTVector2@1@1CPAVTMaterial@1@ABVTVector3@1@HMPAVTLightingNode@1@@Z,"protected: __thiscall Toshi::TTerrainDecal::TTerrainDecal(class Toshi::TTerrainInterface *,unsigned int,class Toshi::TVector2 *,class Toshi::TVector2 *,signed char,class Toshi::TMaterial *,class Toshi::TVector3 const &,int,float,class Toshi::TLightingNode *)"
+4,0x61b0,0x100061b0,??0TTerrainDecalMesh@Toshi@@QAE@XZ,public: __thiscall Toshi::TTerrainDecalMesh::TTerrainDecalMesh(void)
+5,0x3330,0x10003330,??0TTerrainDecalSection@Toshi@@IAE@PAVTTerrainSection@1@PAVTTerrainDecal@1@@Z,"protected: __thiscall Toshi::TTerrainDecalSection::TTerrainDecalSection(class Toshi::TTerrainSection *,class Toshi::TTerrainDecal *)"
+6,0x7fc0,0x10007fc0,??0TTerrainInterface@Toshi@@QAE@XZ,public: __thiscall Toshi::TTerrainInterface::TTerrainInterface(void)
+7,0x6ec0,0x10006ec0,??0TTerrainSection@Toshi@@QAE@XZ,public: __thiscall Toshi::TTerrainSection::TTerrainSection(void)
+8,0x10d0,0x100010d0,??1THeightField@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::THeightField::~THeightField(void)
+9,0x25c0,0x100025c0,??1TTerrainDecal@Toshi@@IAE@XZ,protected: __thiscall Toshi::TTerrainDecal::~TTerrainDecal(void)
+10,0x6170,0x10006170,??1TTerrainDecalMesh@Toshi@@QAE@XZ,public: __thiscall Toshi::TTerrainDecalMesh::~TTerrainDecalMesh(void)
+11,0x2950,0x10002950,??1TTerrainDecalSection@Toshi@@QAE@XZ,public: __thiscall Toshi::TTerrainDecalSection::~TTerrainDecalSection(void)
+12,0x8430,0x10008430,??1TTerrainInterface@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TTerrainInterface::~TTerrainInterface(void)
+13,0x6f00,0x10006f00,??1TTerrainSection@Toshi@@QAE@XZ,public: __thiscall Toshi::TTerrainSection::~TTerrainSection(void)
+14,0x1f60,0x10001f60,??4THeightFieldElement@Toshi@@QAEAAV01@ABV01@@Z,public: class Toshi::THeightFieldElement & __thiscall Toshi::THeightFieldElement::operator=(class Toshi::THeightFieldElement const &)
+15,0x1f50,0x10001f50,??4THeightFieldElement@Toshi@@QAEABCABC@Z,public: signed char const & __thiscall Toshi::THeightFieldElement::operator=(signed char const &)
+16,0x6150,0x10006150,??4TTerrainDecalMesh@Toshi@@QAEAAV01@ABV01@@Z,public: class Toshi::TTerrainDecalMesh & __thiscall Toshi::TTerrainDecalMesh::operator=(class Toshi::TTerrainDecalMesh const &)
+17,0x27060,0x10027060,??_7THeightField@Toshi@@6B@,const Toshi::THeightField::`vftable'
+18,0x27480,0x10027480,??_7TTerrainInterface@Toshi@@6B@,const Toshi::TTerrainInterface::`vftable'
+19,0xa5a0,0x1000a5a0,?ActivateTempSection@TTerrainInterface@Toshi@@UAEPAVTTerrainSection@2@PAVTVector3@2@@Z,public: virtual class Toshi::TTerrainSection * __thiscall Toshi::TTerrainInterface::ActivateTempSection(class Toshi::TVector3 *)
+20,0x9900,0x10009900,?ActivateTerrainSection@TTerrainInterface@Toshi@@UAEPAVTTerrainSection@2@IIPAV32@PAVTVector3@2@@Z,"public: virtual class Toshi::TTerrainSection * __thiscall Toshi::TTerrainInterface::ActivateTerrainSection(unsigned int,unsigned int,class Toshi::TTerrainSection *,class Toshi::TVector3 *)"
+21,0xa570,0x1000a570,?ActivateTerrainSection@TTerrainInterface@Toshi@@UAEPAVTTerrainSection@2@PAV32@PAVTVector3@2@@Z,"public: virtual class Toshi::TTerrainSection * __thiscall Toshi::TTerrainInterface::ActivateTerrainSection(class Toshi::TTerrainSection *,class Toshi::TVector3 *)"
+22,0x5690,0x10005690,?AddClippedPolyToBuffer@TTerrainDecalSection@Toshi@@AAEXAAF0C@Z,"private: void __thiscall Toshi::TTerrainDecalSection::AddClippedPolyToBuffer(short &,short &,signed char)"
+23,0xc660,0x1000c660,?AddFlags@TTerrainSection@Toshi@@QAEXI@Z,public: void __thiscall Toshi::TTerrainSection::AddFlags(unsigned int)
+24,0xc360,0x1000c360,?AddRoadDecal@TTerrainInterface@Toshi@@QAEXEEPAVTMaterial@2@@Z,"public: void __thiscall Toshi::TTerrainInterface::AddRoadDecal(unsigned char,unsigned char,class Toshi::TMaterial *)"
+25,0xc3b0,0x1000c3b0,?AddSectionFlags@TTerrainInterface@Toshi@@QAEXIII@Z,"public: void __thiscall Toshi::TTerrainInterface::AddSectionFlags(unsigned int,unsigned int,unsigned int)"
+26,0x2680,0x10002680,?AddTriangeToPolyList@TTerrainDecal@Toshi@@QAEXAAVTVector2@2@00000III@Z,"public: void __thiscall Toshi::TTerrainDecal::AddTriangeToPolyList(class Toshi::TVector2 &,class Toshi::TVector2 &,class Toshi::TVector2 &,class Toshi::TVector2 &,class Toshi::TVector2 &,class Toshi::TVector2 &,unsigned int,unsigned int,unsigned int)"
+27,0xbec0,0x1000bec0,?BeginSceneCallback@TTerrainInterface@Toshi@@CG_NPAV12@PAVTRenderInterface@2@PAVBeginSceneEvent@32@@Z,"private: static bool __stdcall Toshi::TTerrainInterface::BeginSceneCallback(class Toshi::TTerrainInterface *,class Toshi::TRenderInterface *,class Toshi::TRenderInterface::BeginSceneEvent *)"
+28,0x4670,0x10004670,?BuildMeshes@TTerrainDecalSection@Toshi@@AAEXH@Z,private: void __thiscall Toshi::TTerrainDecalSection::BuildMeshes(int)
+29,0x5b30,0x10005b30,?BuildMeshesFromPolyList@TTerrainDecalSection@Toshi@@AAEXXZ,private: void __thiscall Toshi::TTerrainDecalSection::BuildMeshesFromPolyList(void)
+30,0x4da0,0x10004da0,?BuildMeshesQuickClip@TTerrainDecalSection@Toshi@@AAEXHHHHABVTVector2@2@000@Z,"private: void __thiscall Toshi::TTerrainDecalSection::BuildMeshesQuickClip(int,int,int,int,class Toshi::TVector2 const &,class Toshi::TVector2 const &,class Toshi::TVector2 const &,class Toshi::TVector2 const &)"
+31,0xbbf0,0x1000bbf0,?CacheSectionHeights@TTerrainInterface@Toshi@@QAEXII@Z,"public: void __thiscall Toshi::TTerrainInterface::CacheSectionHeights(unsigned int,unsigned int)"
+32,0xaa50,0x1000aa50,?CacheShadowBuffer@TTerrainInterface@Toshi@@QAEPAVTShadowFieldBuffer@2@IIPAVTTerrainSection@2@@Z,"public: class Toshi::TShadowFieldBuffer * __thiscall Toshi::TTerrainInterface::CacheShadowBuffer(unsigned int,unsigned int,class Toshi::TTerrainSection *)"
+33,0xa8a0,0x1000a8a0,?CacheStrataBuffer@TTerrainInterface@Toshi@@QAEPAVTStrataFieldBuffer@2@IIPAVTTerrainSection@2@@Z,"public: class Toshi::TStrataFieldBuffer * __thiscall Toshi::TTerrainInterface::CacheStrataBuffer(unsigned int,unsigned int,class Toshi::TTerrainSection *)"
+34,0x2820,0x10002820,?ClearPolyFreeList@TTerrainDecal@Toshi@@SGXXZ,public: static void __stdcall Toshi::TTerrainDecal::ClearPolyFreeList(void)
+35,0x28a0,0x100028a0,?ClearPolyList@TTerrainDecal@Toshi@@QAEXXZ,public: void __thiscall Toshi::TTerrainDecal::ClearPolyList(void)
+36,0x29f0,0x100029f0,?ClipPolygon2D@TTerrainDecalSection@Toshi@@SG_NPAVTVector2@2@0C00AACPAVTVector3@2@C@Z,"public: static bool __stdcall Toshi::TTerrainDecalSection::ClipPolygon2D(class Toshi::TVector2 *,class Toshi::TVector2 *,signed char,class Toshi::TVector2 *,class Toshi::TVector2 *,signed char &,class Toshi::TVector3 *,signed char)"
+37,0xc2a0,0x1000c2a0,?CompileUVMatrices@TTerrainInterface@Toshi@@QAEXXZ,public: void __thiscall Toshi::TTerrainInterface::CompileUVMatrices(void)
+38,0x5e10,0x10005e10,?ComputeAuxBuffer@TTerrainInterface@Toshi@@UAEXII@Z,"public: virtual void __thiscall Toshi::TTerrainInterface::ComputeAuxBuffer(unsigned int,unsigned int)"
+39,0x7100,0x10007100,?ComputeBounds@TTerrainSection@Toshi@@QAEXPAVTTerrainInterface@2@@Z,public: void __thiscall Toshi::TTerrainSection::ComputeBounds(class Toshi::TTerrainInterface *)
+40,0xc460,0x1000c460,?ComputeGrassMask@TTerrainInterface@Toshi@@UAEIPAVTTerrainSection@2@@Z,public: virtual unsigned int __thiscall Toshi::TTerrainInterface::ComputeGrassMask(class Toshi::TTerrainSection *)
+41,0x7470,0x10007470,?ComputeLOD@TTerrainSection@Toshi@@QAECAAVTVector3@2@AAC@Z,"public: signed char __thiscall Toshi::TTerrainSection::ComputeLOD(class Toshi::TVector3 &,signed char &)"
+42,0x7710,0x10007710,?ComputePackedLOD@TTerrainSection@Toshi@@QAEGAAVTTerrainInterface@2@AAVTVector3@2@@Z,"public: unsigned short __thiscall Toshi::TTerrainSection::ComputePackedLOD(class Toshi::TTerrainInterface &,class Toshi::TVector3 &)"
+43,0xb340,0x1000b340,?ComputeShadowBuffer@TTerrainInterface@Toshi@@UAEXAAVTShadowFieldBuffer@2@IIII@Z,"public: virtual void __thiscall Toshi::TTerrainInterface::ComputeShadowBuffer(class Toshi::TShadowFieldBuffer &,unsigned int,unsigned int,unsigned int,unsigned int)"
+44,0xb2b0,0x1000b2b0,?ComputeStrataBuffer@TTerrainInterface@Toshi@@UAEXAAVTStrataFieldBuffer@2@IIII@Z,"public: virtual void __thiscall Toshi::TTerrainInterface::ComputeStrataBuffer(class Toshi::TStrataFieldBuffer &,unsigned int,unsigned int,unsigned int,unsigned int)"
+45,0x1180,0x10001180,?Create@THeightField@Toshi@@QAE_NII@Z,"public: bool __thiscall Toshi::THeightField::Create(unsigned int,unsigned int)"
+46,0x6240,0x10006240,?Create@TTerrainDecalMesh@Toshi@@SGXXZ,public: static void __stdcall Toshi::TTerrainDecalMesh::Create(void)
+47,0x86c0,0x100086c0,?Create@TTerrainInterface@Toshi@@QAEXAAVTClass@2@IIPAVTRenderInterface@2@PBD@Z,"public: void __thiscall Toshi::TTerrainInterface::Create(class Toshi::TClass &,unsigned int,unsigned int,class Toshi::TRenderInterface *,char const *)"
+48,0xb6f0,0x1000b6f0,?CreateDecal@TTerrainInterface@Toshi@@QAEPAVTTerrainDecal@2@HABVTVector2@2@0PAVTMaterial@2@ABVTVector3@2@HMPAVTLightingNode@2@@Z,"public: class Toshi::TTerrainDecal * __thiscall Toshi::TTerrainInterface::CreateDecal(int,class Toshi::TVector2 const &,class Toshi::TVector2 const &,class Toshi::TMaterial *,class Toshi::TVector3 const &,int,float,class Toshi::TLightingNode *)"
+49,0xb680,0x1000b680,?CreateDecal@TTerrainInterface@Toshi@@QAEPAVTTerrainDecal@2@HPAVTVector2@2@0IPAVTMaterial@2@ABVTVector3@2@HMPAVTLightingNode@2@@Z,"public: class Toshi::TTerrainDecal * __thiscall Toshi::TTerrainInterface::CreateDecal(int,class Toshi::TVector2 *,class Toshi::TVector2 *,unsigned int,class Toshi::TMaterial *,class Toshi::TVector3 const &,int,float,class Toshi::TLightingNode *)"
+50,0xb640,0x1000b640,?CreateDecal@TTerrainInterface@Toshi@@QAEPAVTTerrainDecal@2@HPAVTVector2@2@0IPAVTMaterial@2@HMPAVTLightingNode@2@@Z,"public: class Toshi::TTerrainDecal * __thiscall Toshi::TTerrainInterface::CreateDecal(int,class Toshi::TVector2 *,class Toshi::TVector2 *,unsigned int,class Toshi::TMaterial *,int,float,class Toshi::TLightingNode *)"
+51,0x71e0,0x100071e0,?CreateDecalSection@TTerrainSection@Toshi@@QAEPAVTTerrainDecalSection@2@PAVTTerrainDecal@2@@Z,public: class Toshi::TTerrainDecalSection * __thiscall Toshi::TTerrainSection::CreateDecalSection(class Toshi::TTerrainDecal *)
+52,0x1f00,0x10001f00,?CreateObject@THeightField@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::THeightField::CreateObject(void)
+53,0xc580,0x1000c580,?CreateObject@TTerrainInterface@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::TTerrainInterface::CreateObject(void)
+54,0x1ef0,0x10001ef0,?CreateObjectInPlace@THeightField@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::THeightField::CreateObjectInPlace(void *)
+55,0xc560,0x1000c560,?CreateObjectInPlace@TTerrainInterface@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::TTerrainInterface::CreateObjectInPlace(void *)
+56,0xb410,0x1000b410,?CullTerrain@TTerrainInterface@Toshi@@UAEXPAVTPlane@2@IPAPAVTTerrainSection@2@I0H@Z,"public: virtual void __thiscall Toshi::TTerrainInterface::CullTerrain(class Toshi::TPlane *,unsigned int,class Toshi::TTerrainSection * *,unsigned int,class Toshi::TPlane *,int)"
+57,0xc510,0x1000c510,?DeactivateTerrainSection@TTerrainInterface@Toshi@@QAEXPAVTTerrainSection@2@@Z,public: void __thiscall Toshi::TTerrainInterface::DeactivateTerrainSection(class Toshi::TTerrainSection *)
+58,0xa6b0,0x1000a6b0,?DeactivateTerrainSectionMesh@TTerrainInterface@Toshi@@QAEXPAVTTerrainSection@2@@Z,public: void __thiscall Toshi::TTerrainInterface::DeactivateTerrainSectionMesh(class Toshi::TTerrainSection *)
+59,0xa610,0x1000a610,?DeactivateTerrainSectionShadow@TTerrainInterface@Toshi@@QAEXPAVTTerrainSection@2@@Z,public: void __thiscall Toshi::TTerrainInterface::DeactivateTerrainSectionShadow(class Toshi::TTerrainSection *)
+60,0xa660,0x1000a660,?DeactivateTerrainSectionStrata@TTerrainInterface@Toshi@@QAEXPAVTTerrainSection@2@@Z,public: void __thiscall Toshi::TTerrainInterface::DeactivateTerrainSectionStrata(class Toshi::TTerrainSection *)
+61,0x1ed0,0x10001ed0,?DeinitialiseStatic@THeightField@Toshi@@CGXXZ,private: static void __stdcall Toshi::THeightField::DeinitialiseStatic(void)
+62,0xc540,0x1000c540,?DeinitialiseStatic@TTerrainInterface@Toshi@@CGXXZ,private: static void __stdcall Toshi::TTerrainInterface::DeinitialiseStatic(void)
+63,0x1d40,0x10001d40,?Deserialise@THeightField@Toshi@@QAE_NPAVTFile@2@@Z,public: bool __thiscall Toshi::THeightField::Deserialise(class Toshi::TFile *)
+64,0x1ea0,0x10001ea0,?Destroy@THeightField@Toshi@@QAEXXZ,public: void __thiscall Toshi::THeightField::Destroy(void)
+65,0x6640,0x10006640,?Destroy@TTerrainDecalMesh@Toshi@@SGXXZ,public: static void __stdcall Toshi::TTerrainDecalMesh::Destroy(void)
+66,0x9030,0x10009030,?Destroy@TTerrainInterface@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TTerrainInterface::Destroy(void)
+67,0xc340,0x1000c340,?DestroyDecal@TTerrainInterface@Toshi@@QAEXPAVTTerrainDecal@2@@Z,public: void __thiscall Toshi::TTerrainInterface::DestroyDecal(class Toshi::TTerrainDecal *)
+68,0x9440,0x10009440,?DiscardSectionList@TTerrainInterface@Toshi@@UAEXAAV?$TQList@VTTerrainSectionSetElem@Toshi@@@2@@Z,public: virtual void __thiscall Toshi::TTerrainInterface::DiscardSectionList(class Toshi::TQList<class Toshi::TTerrainSectionSetElem> &)
+69,0x5b50,0x10005b50,?DistPointTo2DPlane@TTerrainDecalSection@Toshi@@SGMPAVTVector2@2@PAVTVector3@2@@Z,"public: static float __stdcall Toshi::TTerrainDecalSection::DistPointTo2DPlane(class Toshi::TVector2 *,class Toshi::TVector3 *)"
+70,0xc500,0x1000c500,?EnableRenderEnvMap@TTerrainInterface@Toshi@@QAEX_N@Z,public: void __thiscall Toshi::TTerrainInterface::EnableRenderEnvMap(bool)
+71,0xc2f0,0x1000c2f0,?GetActiveMeshCount@TTerrainInterface@Toshi@@QAEHXZ,public: int __thiscall Toshi::TTerrainInterface::GetActiveMeshCount(void)
+72,0x5cc0,0x10005cc0,?GetAlpha@TTerrainDecal@Toshi@@QAEMXZ,public: float __thiscall Toshi::TTerrainDecal::GetAlpha(void)
+73,0x5db0,0x10005db0,?GetAmbientColour@TTerrainInterface@Toshi@@QBEABVTVector3@2@XZ,public: class Toshi::TVector3 const & __thiscall Toshi::TTerrainInterface::GetAmbientColour(void)const 
+74,0x6190,0x10006190,?GetBlockMask@TTerrainDecalMesh@Toshi@@QAEEXZ,public: unsigned char __thiscall Toshi::TTerrainDecalMesh::GetBlockMask(void)
+75,0x6040,0x10006040,?GetBounds@TTerrainSection@Toshi@@QBEXAAC0@Z,"public: void __thiscall Toshi::TTerrainSection::GetBounds(signed char &,signed char &)const "
+76,0x6060,0x10006060,?GetBox@TTerrainSection@Toshi@@QBEXAAVTAABox@2@@Z,public: void __thiscall Toshi::TTerrainSection::GetBox(class Toshi::TAABox &)const 
+77,0x1f10,0x10001f10,?GetClass@THeightField@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::THeightField::GetClass(void)const 
+78,0xc5b0,0x1000c5b0,?GetClass@TTerrainInterface@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::TTerrainInterface::GetClass(void)const 
+79,0x5c70,0x10005c70,?GetDecal@TTerrainDecalSection@Toshi@@IAEPAVTTerrainDecal@2@XZ,protected: class Toshi::TTerrainDecal * __thiscall Toshi::TTerrainDecalSection::GetDecal(void)
+80,0x5f40,0x10005f40,?GetDecalMesh@TTerrainSection@Toshi@@QAEAAVTTerrainDecalMesh@2@XZ,public: class Toshi::TTerrainDecalMesh & __thiscall Toshi::TTerrainSection::GetDecalMesh(void)
+81,0x7390,0x10007390,?GetDecalWithMaterial@TTerrainSection@Toshi@@QAEPAVTTerrainDecal@2@PAVTMaterial@2@@Z,public: class Toshi::TTerrainDecal * __thiscall Toshi::TTerrainSection::GetDecalWithMaterial(class Toshi::TMaterial *)
+82,0x61a0,0x100061a0,?GetExitMask@TTerrainDecalMesh@Toshi@@QAEIXZ,public: unsigned int __thiscall Toshi::TTerrainDecalMesh::GetExitMask(void)
+83,0x1fa0,0x10001fa0,?GetFieldSectionsX@THeightField@Toshi@@QBEIXZ,public: unsigned int __thiscall Toshi::THeightField::GetFieldSectionsX(void)const 
+84,0x1f90,0x10001f90,?GetFieldSectionsZ@THeightField@Toshi@@QBEIXZ,public: unsigned int __thiscall Toshi::THeightField::GetFieldSectionsZ(void)const 
+85,0x1fc0,0x10001fc0,?GetFieldSizeX@THeightField@Toshi@@QBEIXZ,public: unsigned int __thiscall Toshi::THeightField::GetFieldSizeX(void)const 
+86,0x1fb0,0x10001fb0,?GetFieldSizeZ@THeightField@Toshi@@QBEIXZ,public: unsigned int __thiscall Toshi::THeightField::GetFieldSizeZ(void)const 
+87,0x5ca0,0x10005ca0,?GetFlags@TTerrainDecal@Toshi@@QAEIXZ,public: unsigned int __thiscall Toshi::TTerrainDecal::GetFlags(void)
+88,0x6010,0x10006010,?GetFlags@TTerrainSection@Toshi@@QBEIXZ,public: unsigned int __thiscall Toshi::TTerrainSection::GetFlags(void)const 
+89,0xa7f0,0x1000a7f0,?GetFreeMesh@TTerrainInterface@Toshi@@QAEPAVTTerrainMeshEx@2@XZ,public: class Toshi::TTerrainMeshEx * __thiscall Toshi::TTerrainInterface::GetFreeMesh(void)
+90,0x5fc0,0x10005fc0,?GetGrassMesh@TTerrainSection@Toshi@@QBEPAVTTerrainGrassMesh@2@XZ,public: class Toshi::TTerrainGrassMesh * __thiscall Toshi::TTerrainSection::GetGrassMesh(void)const 
+91,0x5d80,0x10005d80,?GetGrassShader@TTerrainInterface@Toshi@@QAEPAVTGrassShader@2@XZ,public: class Toshi::TGrassShader * __thiscall Toshi::TTerrainInterface::GetGrassShader(void)
+92,0x14b0,0x100014b0,?GetHeight@THeightField@Toshi@@QBEMII@Z,"public: float __thiscall Toshi::THeightField::GetHeight(unsigned int,unsigned int)const "
+93,0x1500,0x10001500,?GetHeight@THeightField@Toshi@@QBEMMM@Z,"public: float __thiscall Toshi::THeightField::GetHeight(float,float)const "
+94,0x1f70,0x10001f70,?GetHeight@THeightFieldElement@Toshi@@QAEMM@Z,public: float __thiscall Toshi::THeightFieldElement::GetHeight(float)
+95,0x5ea0,0x10005ea0,?GetHeight@TTerrainInterface@Toshi@@QBEMHH@Z,"public: float __thiscall Toshi::TTerrainInterface::GetHeight(int,int)const "
+96,0x5ec0,0x10005ec0,?GetHeight@TTerrainInterface@Toshi@@QBEMII@Z,"public: float __thiscall Toshi::TTerrainInterface::GetHeight(unsigned int,unsigned int)const "
+97,0x5e80,0x10005e80,?GetHeight@TTerrainInterface@Toshi@@QBEMMM@Z,"public: float __thiscall Toshi::TTerrainInterface::GetHeight(float,float)const "
+98,0x5e60,0x10005e60,?GetHeight@TTerrainInterface@Toshi@@QBEXAAVTVector3@2@@Z,public: void __thiscall Toshi::TTerrainInterface::GetHeight(class Toshi::TVector3 &)const 
+99,0xc280,0x1000c280,?GetHeightCache@TTerrainInterface@Toshi@@QAEPAMXZ,public: float * __thiscall Toshi::TTerrainInterface::GetHeightCache(void)
+100,0x5d60,0x10005d60,?GetHeightCacheWidth@TTerrainInterface@Toshi@@QAEIXZ,public: unsigned int __thiscall Toshi::TTerrainInterface::GetHeightCacheWidth(void)
+101,0x1e80,0x10001e80,?GetHeightElems@THeightField@Toshi@@QBEPBVTHeightFieldElement@2@HH@Z,"public: class Toshi::THeightFieldElement const * __thiscall Toshi::THeightField::GetHeightElems(int,int)const "
+102,0x5e00,0x10005e00,?GetHeightField@TTerrainInterface@Toshi@@QBEPAVTHeightField@2@XZ,public: class Toshi::THeightField * __thiscall Toshi::TTerrainInterface::GetHeightField(void)const 
+103,0x73e0,0x100073e0,?GetHighestCurrentLOD@TTerrainSection@Toshi@@QAECXZ,public: signed char __thiscall Toshi::TTerrainSection::GetHighestCurrentLOD(void)
+104,0x5f90,0x10005f90,?GetHighestPossibleLOD@TTerrainSection@Toshi@@QAECXZ,public: signed char __thiscall Toshi::TTerrainSection::GetHighestPossibleLOD(void)
+105,0x5fa0,0x10005fa0,?GetLOD@TTerrainSection@Toshi@@QAECXZ,public: signed char __thiscall Toshi::TTerrainSection::GetLOD(void)
+106,0xc290,0x1000c290,?GetLODDetail@TTerrainInterface@Toshi@@SG?AW4TERRAINLOD@12@XZ,public: static enum Toshi::TTerrainInterface::TERRAINLOD __stdcall Toshi::TTerrainInterface::GetLODDetail(void)
+107,0xaca0,0x1000aca0,?GetLODHeight@TTerrainInterface@Toshi@@QBEMMM@Z,"public: float __thiscall Toshi::TTerrainInterface::GetLODHeight(float,float)const "
+108,0x5e40,0x10005e40,?GetLODHeight@TTerrainInterface@Toshi@@QBEXAAVTVector3@2@@Z,public: void __thiscall Toshi::TTerrainInterface::GetLODHeight(class Toshi::TVector3 &)const 
+109,0xaf10,0x1000af10,?GetLODHeightFromCache@TTerrainInterface@Toshi@@QAEMMM@Z,"public: float __thiscall Toshi::TTerrainInterface::GetLODHeightFromCache(float,float)"
+110,0x5c80,0x10005c80,?GetMaterial@TTerrainDecalSection@Toshi@@IAEPAVTMaterial@2@XZ,protected: class Toshi::TMaterial * __thiscall Toshi::TTerrainDecalSection::GetMaterial(void)
+111,0x5fe0,0x10005fe0,?GetMeshList@TTerrainSection@Toshi@@QBEPAVTTerrainMeshEx@2@XZ,public: class Toshi::TTerrainMeshEx * __thiscall Toshi::TTerrainSection::GetMeshList(void)const 
+112,0x5d40,0x10005d40,?GetNumPolys@TTerrainDecal@Toshi@@QAEIXZ,public: unsigned int __thiscall Toshi::TTerrainDecal::GetNumPolys(void)
+113,0xc2d0,0x1000c2d0,?GetNumThrashedShadow@TTerrainInterface@Toshi@@QAEHXZ,public: int __thiscall Toshi::TTerrainInterface::GetNumThrashedShadow(void)
+114,0xc2e0,0x1000c2e0,?GetNumThrashedStrata@TTerrainInterface@Toshi@@QAEHXZ,public: int __thiscall Toshi::TTerrainInterface::GetNumThrashedStrata(void)
+115,0x5d50,0x10005d50,?GetPolyList@TTerrainDecal@Toshi@@QAEAAV?$TQList@VAPoly@TTerrainDecal@Toshi@@@2@XZ,public: class Toshi::TQList<class Toshi::TTerrainDecal::APoly> & __thiscall Toshi::TTerrainDecal::GetPolyList(void)
+116,0x60f0,0x100060f0,?GetPos@TTerrainSection@Toshi@@QBEXAAI0@Z,"public: void __thiscall Toshi::TTerrainSection::GetPos(unsigned int &,unsigned int &)const "
+117,0x1470,0x10001470,?GetRawOffset@THeightField@Toshi@@QBECII@Z,"public: signed char __thiscall Toshi::THeightField::GetRawOffset(unsigned int,unsigned int)const "
+118,0x1200,0x10001200,?GetRawOffset@THeightField@Toshi@@QBECMM@Z,"public: signed char __thiscall Toshi::THeightField::GetRawOffset(float,float)const "
+119,0x1f40,0x10001f40,?GetRawOffset@THeightFieldElement@Toshi@@QBECXZ,public: signed char __thiscall Toshi::THeightFieldElement::GetRawOffset(void)const 
+120,0x1700,0x10001700,?GetRegionHeights@THeightField@Toshi@@QBEXIIIIPAMI@Z,"public: void __thiscall Toshi::THeightField::GetRegionHeights(unsigned int,unsigned int,unsigned int,unsigned int,float *,unsigned int)const "
+121,0x5f10,0x10005f10,?GetRenderer@TTerrainInterface@Toshi@@QAEPAVTRenderInterface@2@XZ,public: class Toshi::TRenderInterface * __thiscall Toshi::TTerrainInterface::GetRenderer(void)
+122,0x1c90,0x10001c90,?GetSection@THeightField@Toshi@@QBEPAVTHeightFieldSection@2@II@Z,"public: class Toshi::THeightFieldSection * __thiscall Toshi::THeightField::GetSection(unsigned int,unsigned int)const "
+123,0x5dd0,0x10005dd0,?GetSection@TTerrainInterface@Toshi@@QBEPAVTTerrainSection@2@II@Z,"public: class Toshi::TTerrainSection * __thiscall Toshi::TTerrainInterface::GetSection(unsigned int,unsigned int)const "
+124,0x1770,0x10001770,?GetSectionDataRaw@THeightField@Toshi@@QBEXIIAAMPAC@Z,"public: void __thiscall Toshi::THeightField::GetSectionDataRaw(unsigned int,unsigned int,float &,signed char *)const "
+125,0xc3f0,0x1000c3f0,?GetSectionFlags@TTerrainInterface@Toshi@@QBEIII@Z,"public: unsigned int __thiscall Toshi::TTerrainInterface::GetSectionFlags(unsigned int,unsigned int)const "
+126,0x94b0,0x100094b0,?GetSectionSetSphere@TTerrainInterface@Toshi@@UAEXAAVTVector3@2@M0AAVTVector2@2@AAV?$TQList@VTTerrainSectionSetElem@Toshi@@@2@@Z,"public: virtual void __thiscall Toshi::TTerrainInterface::GetSectionSetSphere(class Toshi::TVector3 &,float,class Toshi::TVector3 &,class Toshi::TVector2 &,class Toshi::TQList<class Toshi::TTerrainSectionSetElem> &)"
+127,0xc4d0,0x1000c4d0,?GetShadow@TTerrainInterface@Toshi@@UBEMII@Z,"public: virtual float __thiscall Toshi::TTerrainInterface::GetShadow(unsigned int,unsigned int)const "
+128,0xc470,0x1000c470,?GetShadow@TTerrainInterface@Toshi@@UBEMMM@Z,"public: virtual float __thiscall Toshi::TTerrainInterface::GetShadow(float,float)const "
+129,0x6130,0x10006130,?GetShadowBuffer@TTerrainSection@Toshi@@QBEPAVTShadowFieldBuffer@2@XZ,public: class Toshi::TShadowFieldBuffer * __thiscall Toshi::TTerrainSection::GetShadowBuffer(void)const 
+130,0x5e30,0x10005e30,?GetSizeX@TTerrainInterface@Toshi@@QBEIXZ,public: unsigned int __thiscall Toshi::TTerrainInterface::GetSizeX(void)const 
+131,0x5e20,0x10005e20,?GetSizeZ@TTerrainInterface@Toshi@@QBEIXZ,public: unsigned int __thiscall Toshi::TTerrainInterface::GetSizeZ(void)const 
+132,0x6140,0x10006140,?GetStrataBuffer@TTerrainSection@Toshi@@QBEPAVTStrataFieldBuffer@2@XZ,public: class Toshi::TStrataFieldBuffer * __thiscall Toshi::TTerrainSection::GetStrataBuffer(void)const 
+133,0x5da0,0x10005da0,?GetSunColour@TTerrainInterface@Toshi@@QBEABVTVector3@2@XZ,public: class Toshi::TVector3 const & __thiscall Toshi::TTerrainInterface::GetSunColour(void)const 
+134,0x5d70,0x10005d70,?GetTerrainInterface@TTerrainInterface@Toshi@@SGPAV12@XZ,public: static class Toshi::TTerrainInterface * __stdcall Toshi::TTerrainInterface::GetTerrainInterface(void)
+135,0x5d90,0x10005d90,?GetTerrainShader@TTerrainInterface@Toshi@@QAEPAVTTerrainShader@2@XZ,public: class Toshi::TTerrainShader * __thiscall Toshi::TTerrainInterface::GetTerrainShader(void)
+136,0x5f30,0x10005f30,?GetTimeStamp@TTerrainSection@Toshi@@QBEIXZ,public: unsigned int __thiscall Toshi::TTerrainSection::GetTimeStamp(void)const 
+137,0x5c90,0x10005c90,?GetType@TTerrainDecal@Toshi@@QAEIXZ,public: unsigned int __thiscall Toshi::TTerrainDecal::GetType(void)
+138,0xb960,0x1000b960,?GetUVMatrix@TTerrainInterface@Toshi@@QAEXPAVTMatrix44@2@H@Z,"public: void __thiscall Toshi::TTerrainInterface::GetUVMatrix(class Toshi::TMatrix44 *,int)"
+139,0xc270,0x1000c270,?GetVRemapTable@TTerrainInterface@Toshi@@IAEPAGXZ,protected: unsigned short * __thiscall Toshi::TTerrainInterface::GetVRemapTable(void)
+140,0x5dc0,0x10005dc0,?GetVertexCacheTStamp@TTerrainInterface@Toshi@@QBEIXZ,public: unsigned int __thiscall Toshi::TTerrainInterface::GetVertexCacheTStamp(void)const 
+141,0xc680,0x1000c680,?HasGrass@TTerrainSection@Toshi@@QAE_NXZ,public: bool __thiscall Toshi::TTerrainSection::HasGrass(void)
+142,0xb5f0,0x1000b5f0,?IncreaseVertexCacheTStamp@TTerrainInterface@Toshi@@QAEIXZ,public: unsigned int __thiscall Toshi::TTerrainInterface::IncreaseVertexCacheTStamp(void)
+143,0x1ee0,0x10001ee0,?InitialiseStatic@THeightField@Toshi@@CGXXZ,private: static void __stdcall Toshi::THeightField::InitialiseStatic(void)
+144,0xc550,0x1000c550,?InitialiseStatic@TTerrainInterface@Toshi@@CGXXZ,private: static void __stdcall Toshi::TTerrainInterface::InitialiseStatic(void)
+145,0x6000,0x10006000,?InsertInList@TTerrainSection@Toshi@@QAEXPAPAV12@@Z,public: void __thiscall Toshi::TTerrainSection::InsertInList(class Toshi::TTerrainSection * *)
+146,0x2920,0x10002920,?Invalidate@TTerrainDecal@Toshi@@QAEXXZ,public: void __thiscall Toshi::TTerrainDecal::Invalidate(void)
+147,0x3380,0x10003380,?Invalidate@TTerrainDecalSection@Toshi@@IAEXXZ,protected: void __thiscall Toshi::TTerrainDecalSection::Invalidate(void)
+148,0x7350,0x10007350,?InvalidateDecals@TTerrainSection@Toshi@@QAEXXZ,public: void __thiscall Toshi::TTerrainSection::InvalidateDecals(void)
+149,0xc6d0,0x1000c6d0,?IsActivated@TTerrainSection@Toshi@@QBE_NXZ,public: bool __thiscall Toshi::TTerrainSection::IsActivated(void)const 
+150,0x5f50,0x10005f50,?IsLODUpdatedOthers@TTerrainSection@Toshi@@QBEIXZ,public: unsigned int __thiscall Toshi::TTerrainSection::IsLODUpdatedOthers(void)const 
+151,0x5f70,0x10005f70,?IsLODUpdatedSelf@TTerrainSection@Toshi@@QBEIXZ,public: unsigned int __thiscall Toshi::TTerrainSection::IsLODUpdatedSelf(void)const 
+152,0x1870,0x10001870,?LockBuffer@THeightField@Toshi@@QAEPAVTHeightFieldBuffer@2@II@Z,"public: class Toshi::THeightFieldBuffer * __thiscall Toshi::THeightField::LockBuffer(unsigned int,unsigned int)"
+153,0xc4e0,0x1000c4e0,?LockBuffer@TTerrainInterface@Toshi@@QAEPAVTHeightFieldBuffer@2@II@Z,"public: class Toshi::THeightFieldBuffer * __thiscall Toshi::TTerrainInterface::LockBuffer(unsigned int,unsigned int)"
+154,0x5ff0,0x10005ff0,?NextSection@TTerrainSection@Toshi@@QBEPAV12@XZ,public: class Toshi::TTerrainSection * __thiscall Toshi::TTerrainSection::NextSection(void)const 
+155,0x4540,0x10004540,?NoTesselate@TTerrainDecalSection@Toshi@@AAEXXZ,private: void __thiscall Toshi::TTerrainDecalSection::NoTesselate(void)
+156,0xbc80,0x1000bc80,?OnLostDevice@TTerrainInterface@Toshi@@QAE_NXZ,public: bool __thiscall Toshi::TTerrainInterface::OnLostDevice(void)
+157,0xbda0,0x1000bda0,?OnResetDevice@TTerrainInterface@Toshi@@QAE_NXZ,public: bool __thiscall Toshi::TTerrainInterface::OnResetDevice(void)
+158,0xbe30,0x1000be30,?OutputIndex@TTerrainInterface@Toshi@@AAEXPAVTTPatchStrip@2@AAIPAVTTerrainSection@2@EEEEEEE@Z,"private: void __thiscall Toshi::TTerrainInterface::OutputIndex(class Toshi::TTPatchStrip *,unsigned int &,class Toshi::TTerrainSection *,unsigned char,unsigned char,unsigned char,unsigned char,unsigned char,unsigned char,unsigned char)"
+159,0x2780,0x10002780,?RemoveTrisWithMatchingPos2@TTerrainDecal@Toshi@@QAEXAAVTVector2@2@@Z,public: void __thiscall Toshi::TTerrainDecal::RemoveTrisWithMatchingPos2(class Toshi::TVector2 &)
+160,0x66a0,0x100066a0,?Render@TTerrainDecalMesh@Toshi@@QAEXPAVTTerrainSection@2@@Z,public: void __thiscall Toshi::TTerrainDecalMesh::Render(class Toshi::TTerrainSection *)
+161,0x3420,0x10003420,?Render@TTerrainDecalSection@Toshi@@IAEXXZ,protected: void __thiscall Toshi::TTerrainDecalSection::Render(void)
+162,0x72d0,0x100072d0,?RenderDecals@TTerrainSection@Toshi@@QAEXXZ,public: void __thiscall Toshi::TTerrainSection::RenderDecals(void)
+163,0x7920,0x10007920,?ResetCounter@TTerrainSection@Toshi@@SGXAAVTTerrainInterface@2@@Z,public: static void __stdcall Toshi::TTerrainSection::ResetCounter(class Toshi::TTerrainInterface &)
+164,0xa750,0x1000a750,?ResetSections@TTerrainInterface@Toshi@@QAEXXZ,public: void __thiscall Toshi::TTerrainInterface::ResetSections(void)
+165,0xb140,0x1000b140,?SafeGetHeight@TTerrainInterface@Toshi@@QBE_NAAVTVector3@2@@Z,public: bool __thiscall Toshi::TTerrainInterface::SafeGetHeight(class Toshi::TVector3 &)const 
+166,0xb1e0,0x1000b1e0,?SafeGetHeightPositionSet@TTerrainInterface@Toshi@@QBEXAAVTVector3@2@@Z,public: void __thiscall Toshi::TTerrainInterface::SafeGetHeightPositionSet(class Toshi::TVector3 &)const 
+167,0x7020,0x10007020,?SectionFrustumCheck@TTerrainSection@Toshi@@QAEHPAVTPlane@2@IHH@Z,"public: int __thiscall Toshi::TTerrainSection::SectionFrustumCheck(class Toshi::TPlane *,unsigned int,int,int)"
+168,0x1cd0,0x10001cd0,?Serialise@THeightField@Toshi@@QBE_NPAVTFile@2@@Z,public: bool __thiscall Toshi::THeightField::Serialise(class Toshi::TFile *)const 
+169,0x5cd0,0x10005cd0,?SetAlpha@TTerrainDecal@Toshi@@QAEXM@Z,public: void __thiscall Toshi::TTerrainDecal::SetAlpha(float)
+170,0xb7f0,0x1000b7f0,?SetAmbientColour@TTerrainInterface@Toshi@@QAEXABVTVector3@2@@Z,public: void __thiscall Toshi::TTerrainInterface::SetAmbientColour(class Toshi::TVector3 const &)
+171,0x6020,0x10006020,?SetBounds@TTerrainSection@Toshi@@QAEXCC@Z,"public: void __thiscall Toshi::TTerrainSection::SetBounds(signed char,signed char)"
+172,0x5d10,0x10005d10,?SetColour@TTerrainDecal@Toshi@@QAEXABVTVector3@2@@Z,public: void __thiscall Toshi::TTerrainDecal::SetColour(class Toshi::TVector3 const &)
+173,0x6fe0,0x10006fe0,?SetDirty@TTerrainSection@Toshi@@QAEX_N@Z,public: void __thiscall Toshi::TTerrainSection::SetDirty(bool)
+174,0xc670,0x1000c670,?SetFlags@TTerrainSection@Toshi@@QAEXI@Z,public: void __thiscall Toshi::TTerrainSection::SetFlags(unsigned int)
+175,0xc6a0,0x1000c6a0,?SetGrass@TTerrainSection@Toshi@@QAEX_N@Z,public: void __thiscall Toshi::TTerrainSection::SetGrass(bool)
+176,0x5fb0,0x10005fb0,?SetGrassMesh@TTerrainSection@Toshi@@QAEXPAVTTerrainGrassMesh@2@@Z,public: void __thiscall Toshi::TTerrainSection::SetGrassMesh(class Toshi::TTerrainGrassMesh *)
+177,0xc320,0x1000c320,?SetGrassModulateScale@TTerrainInterface@Toshi@@QAEXM@Z,public: void __thiscall Toshi::TTerrainInterface::SetGrassModulateScale(float)
+178,0x1dc0,0x10001dc0,?SetHeight@THeightFieldElement@Toshi@@QAE_NMM@Z,"public: bool __thiscall Toshi::THeightFieldElement::SetHeight(float,float)"
+179,0xc640,0x1000c640,?SetLOD@TTerrainSection@Toshi@@QAEXC@Z,public: void __thiscall Toshi::TTerrainSection::SetLOD(signed char)
+180,0xba10,0x1000ba10,?SetLODDetail@TTerrainInterface@Toshi@@SGXW4TERRAINLOD@12@@Z,public: static void __stdcall Toshi::TTerrainInterface::SetLODDetail(enum Toshi::TTerrainInterface::TERRAINLOD)
+181,0xb750,0x1000b750,?SetLightColours@TTerrainInterface@Toshi@@QAEXABVTVector3@2@0@Z,"public: void __thiscall Toshi::TTerrainInterface::SetLightColours(class Toshi::TVector3 const &,class Toshi::TVector3 const &)"
+182,0x5cb0,0x10005cb0,?SetLightingNode@TTerrainDecal@Toshi@@QAEXPAVTLightingNode@2@@Z,public: void __thiscall Toshi::TTerrainDecal::SetLightingNode(class Toshi::TLightingNode *)
+183,0xc740,0x1000c740,?SetMasks@TTerrainDecalMesh@Toshi@@QAEXIE@Z,"public: void __thiscall Toshi::TTerrainDecalMesh::SetMasks(unsigned int,unsigned char)"
+184,0x5b70,0x10005b70,?SetMaterial@TTerrainDecal@Toshi@@QAEXPAVTMaterial@2@@Z,public: void __thiscall Toshi::TTerrainDecal::SetMaterial(class Toshi::TMaterial *)
+185,0xc2b0,0x1000c2b0,?SetMaterial@TTerrainInterface@Toshi@@QAEXHPAVTMaterial@2@@Z,"public: void __thiscall Toshi::TTerrainInterface::SetMaterial(int,class Toshi::TMaterial *)"
+186,0xc760,0x1000c760,?SetMaterials@TTerrainDecalMesh@Toshi@@SGXPAVTMaterial@2@0@Z,"public: static void __stdcall Toshi::TTerrainDecalMesh::SetMaterials(class Toshi::TMaterial *,class Toshi::TMaterial *)"
+187,0x5fd0,0x10005fd0,?SetMeshList@TTerrainSection@Toshi@@QAEXPAVTTerrainMeshEx@2@@Z,public: void __thiscall Toshi::TTerrainSection::SetMeshList(class Toshi::TTerrainMeshEx *)
+188,0x6110,0x10006110,?SetPos@TTerrainSection@Toshi@@QAEXII@Z,"public: void __thiscall Toshi::TTerrainSection::SetPos(unsigned int,unsigned int)"
+189,0xc370,0x1000c370,?SetSectionFlags@TTerrainInterface@Toshi@@QAEXIII@Z,"public: void __thiscall Toshi::TTerrainInterface::SetSectionFlags(unsigned int,unsigned int,unsigned int)"
+190,0x60d0,0x100060d0,?SetShadowBuffer@TTerrainSection@Toshi@@QAEXPAVTShadowFieldBuffer@2@@Z,public: void __thiscall Toshi::TTerrainSection::SetShadowBuffer(class Toshi::TShadowFieldBuffer *)
+191,0x60e0,0x100060e0,?SetStrataBuffer@TTerrainSection@Toshi@@QAEXPAVTStrataFieldBuffer@2@@Z,public: void __thiscall Toshi::TTerrainSection::SetStrataBuffer(class Toshi::TStrataFieldBuffer *)
+192,0xb850,0x1000b850,?SetSunColour@TTerrainInterface@Toshi@@QAEXABVTVector3@2@@Z,public: void __thiscall Toshi::TTerrainInterface::SetSunColour(class Toshi::TVector3 const &)
+193,0xc5d0,0x1000c5d0,?SetSystemFlags@TTerrainSection@Toshi@@AAEXI@Z,private: void __thiscall Toshi::TTerrainSection::SetSystemFlags(unsigned int)
+194,0x5f20,0x10005f20,?SetTimeStamp@TTerrainSection@Toshi@@QAEXI@Z,public: void __thiscall Toshi::TTerrainSection::SetTimeStamp(unsigned int)
+195,0xb8b0,0x1000b8b0,?SetUVMatrix@TTerrainInterface@Toshi@@QAEXPAVTMatrix44@2@H@Z,"public: void __thiscall Toshi::TTerrainInterface::SetUVMatrix(class Toshi::TMatrix44 *,int)"
+196,0xc300,0x1000c300,?SetWaterHeight@TTerrainInterface@Toshi@@QAEXM@Z,public: void __thiscall Toshi::TTerrainInterface::SetWaterHeight(float)
+197,0x5cf0,0x10005cf0,?SetZBias@TTerrainDecal@Toshi@@QAEXH@Z,public: void __thiscall Toshi::TTerrainDecal::SetZBias(int)
+198,0x5b40,0x10005b40,?SortDecalsByMaterial@TTerrainDecalSection@Toshi@@AAEXXZ,private: void __thiscall Toshi::TTerrainDecalSection::SortDecalsByMaterial(void)
+199,0x5ee0,0x10005ee0,?StataFromTexture@TTerrainInterface@Toshi@@QBEIM@Z,public: unsigned int __thiscall Toshi::TTerrainInterface::StataFromTexture(float)const 
+200,0x3fb0,0x10003fb0,?Tesselate@TTerrainDecalSection@Toshi@@AAEXXZ,private: void __thiscall Toshi::TTerrainDecalSection::Tesselate(void)
+201,0xc5f0,0x1000c5f0,?TickLODCounter@TTerrainSection@Toshi@@SGXAAVTTerrainInterface@2@@Z,public: static void __stdcall Toshi::TTerrainSection::TickLODCounter(class Toshi::TTerrainInterface &)
+202,0x1ae0,0x10001ae0,?UnlockBuffer@THeightField@Toshi@@QAEXPAVTHeightFieldBuffer@2@@Z,public: void __thiscall Toshi::THeightField::UnlockBuffer(class Toshi::THeightFieldBuffer *)
+203,0xac00,0x1000ac00,?UnlockBuffer@TTerrainInterface@Toshi@@QAEXPAVTHeightFieldBuffer@2@@Z,public: void __thiscall Toshi::TTerrainInterface::UnlockBuffer(class Toshi::THeightFieldBuffer *)
+204,0xc430,0x1000c430,?UpdateQuadTree@TTerrainInterface@Toshi@@QAEXIIII@Z,"public: void __thiscall Toshi::TTerrainInterface::UpdateQuadTree(unsigned int,unsigned int,unsigned int,unsigned int)"
+205,0xb460,0x1000b460,?UpdateWaterDepth@TTerrainInterface@Toshi@@QAEXXZ,public: void __thiscall Toshi::TTerrainInterface::UpdateWaterDepth(void)
+206,0x269c0,0x100269c0,?m_oPolyFreeList@TTerrainDecal@Toshi@@0V?$TQList@VAPoly@TTerrainDecal@Toshi@@@2@A,private: static class Toshi::TQList<class Toshi::TTerrainDecal::APoly> Toshi::TTerrainDecal::m_oPolyFreeList
+207,0x269e0,0x100269e0,?m_sClass@THeightField@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::THeightField::m_sClass
+208,0x12580,0x10012580,?m_sClass@TTerrainInterface@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::TTerrainInterface::m_sClass
+209,0x12530,0x10012530,?ms_pTerrainInterface@TTerrainInterface@Toshi@@0PAV12@A,private: static class Toshi::TTerrainInterface * Toshi::TTerrainInterface::ms_pTerrainInterface
+210,0x1ecc0,0x1001ecc0,?s_avGeomBuffer@TTerrainDecalSection@Toshi@@0PAVTVector2@2@A,private: static class Toshi::TVector2 * Toshi::TTerrainDecalSection::s_avGeomBuffer
+211,0x1e3a0,0x1001e3a0,?s_avSectionUV@TTerrainInterface@Toshi@@1PAVTVector2@2@A,protected: static class Toshi::TVector2 * Toshi::TTerrainInterface::s_avSectionUV
+212,0x22b40,0x10022b40,?s_avUVBuffer@TTerrainDecalSection@Toshi@@0PAVTVector2@2@A,private: static class Toshi::TVector2 * Toshi::TTerrainDecalSection::s_avUVBuffer
+213,0x27054,0x10027054,?s_fSectionHRangeOn128@THeightField@Toshi@@2MB,public: static float const Toshi::THeightField::s_fSectionHRangeOn128
+214,0x125c0,0x100125c0,?s_oTTerrainVertexCache@TTerrainInterface@Toshi@@0PAVTTerrainVertexCache@2@A,private: static class Toshi::TTerrainVertexCache * Toshi::TTerrainInterface::s_oTTerrainVertexCache
+215,0x1e38c,0x1001e38c,?s_ui32DefaultGrassMeshCacheSize@TTerrainInterface@Toshi@@2IA,public: static unsigned int Toshi::TTerrainInterface::s_ui32DefaultGrassMeshCacheSize
+216,0x1e380,0x1001e380,?s_ui32DefaultMeshBufferCacheSize@TTerrainInterface@Toshi@@2IA,public: static unsigned int Toshi::TTerrainInterface::s_ui32DefaultMeshBufferCacheSize
+217,0x1e388,0x1001e388,?s_ui32DefaultShadowBufferCacheSize@TTerrainInterface@Toshi@@2IA,public: static unsigned int Toshi::TTerrainInterface::s_ui32DefaultShadowBufferCacheSize
+218,0x1e384,0x1001e384,?s_ui32DefaultStrataBufferCacheSize@TTerrainInterface@Toshi@@2IA,public: static unsigned int Toshi::TTerrainInterface::s_ui32DefaultStrataBufferCacheSize
+219,0x123f0,0x100123f0,?s_ui32TStamp@TTerrainInterface@Toshi@@0IA,private: static unsigned int Toshi::TTerrainInterface::s_ui32TStamp
+220,0x12550,0x10012550,?sm_apMeshes@TTerrainDecalMesh@Toshi@@0PAPAVTSysMesh@2@A,private: static class Toshi::TSysMesh * * Toshi::TTerrainDecalMesh::sm_apMeshes
+221,0x12554,0x10012554,?sm_bCreated@TTerrainDecalMesh@Toshi@@0_NA,private: static bool Toshi::TTerrainDecalMesh::sm_bCreated
+222,0x123c8,0x100123c8,?sm_eLOD@TTerrainInterface@Toshi@@2W4TERRAINLOD@12@A,public: static enum Toshi::TTerrainInterface::TERRAINLOD Toshi::TTerrainInterface::sm_eLOD
+223,0x123d4,0x100123d4,?sm_fLev1LODDist@TTerrainInterface@Toshi@@2MA,public: static float Toshi::TTerrainInterface::sm_fLev1LODDist
+224,0x123e0,0x100123e0,?sm_fLev1MountLODDist@TTerrainInterface@Toshi@@2MA,public: static float Toshi::TTerrainInterface::sm_fLev1MountLODDist
+225,0x123d0,0x100123d0,?sm_fLev2LODDist@TTerrainInterface@Toshi@@2MA,public: static float Toshi::TTerrainInterface::sm_fLev2LODDist
+226,0x123dc,0x100123dc,?sm_fLev2MountLODDist@TTerrainInterface@Toshi@@2MA,public: static float Toshi::TTerrainInterface::sm_fLev2MountLODDist
+227,0x123cc,0x100123cc,?sm_fLowLODDist@TTerrainInterface@Toshi@@2MA,public: static float Toshi::TTerrainInterface::sm_fLowLODDist
+228,0x123ec,0x100123ec,?sm_fLowLODHeightChange@TTerrainInterface@Toshi@@2MA,public: static float Toshi::TTerrainInterface::sm_fLowLODHeightChange
+229,0x123d8,0x100123d8,?sm_fLowMountLODDist@TTerrainInterface@Toshi@@2MA,public: static float Toshi::TTerrainInterface::sm_fLowMountLODDist
+230,0x123e4,0x100123e4,?sm_fMountainBounds@TTerrainInterface@Toshi@@2MA,public: static float Toshi::TTerrainInterface::sm_fMountainBounds
+231,0x123e8,0x100123e8,?sm_fWaterHeight@TTerrainInterface@Toshi@@2MA,public: static float Toshi::TTerrainInterface::sm_fWaterHeight
+232,0x12548,0x10012548,?sm_pAltMaterial@TTerrainDecalMesh@Toshi@@0PAVTMaterial@2@A,private: static class Toshi::TMaterial * Toshi::TTerrainDecalMesh::sm_pAltMaterial
+233,0x1254c,0x1001254c,?sm_pNormMaterial@TTerrainDecalMesh@Toshi@@0PAVTMaterial@2@A,private: static class Toshi::TMaterial * Toshi::TTerrainDecalMesh::sm_pNormMaterial
+234,0x123c4,0x100123c4,?sm_ui32Counter@TTerrainSection@Toshi@@2IA,public: static unsigned int Toshi::TTerrainSection::sm_ui32Counter

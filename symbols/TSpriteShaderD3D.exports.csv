@@ -1,0 +1,82 @@
+ordinal,rva,va,name,demangled
+1,0x38f0,0x100038f0,??0TSpriteMaterialHAL@Toshi@@QAE@ABV01@@Z,public: __thiscall Toshi::TSpriteMaterialHAL::TSpriteMaterialHAL(class Toshi::TSpriteMaterialHAL const &)
+2,0x3080,0x10003080,??0TSpriteMaterialHAL@Toshi@@QAE@XZ,public: __thiscall Toshi::TSpriteMaterialHAL::TSpriteMaterialHAL(void)
+3,0x3830,0x10003830,??0TSpriteMeshHAL@Toshi@@QAE@ABV01@@Z,public: __thiscall Toshi::TSpriteMeshHAL::TSpriteMeshHAL(class Toshi::TSpriteMeshHAL const &)
+4,0x3490,0x10003490,??0TSpriteMeshHAL@Toshi@@QAE@XZ,public: __thiscall Toshi::TSpriteMeshHAL::TSpriteMeshHAL(void)
+5,0x2610,0x10002610,??0TSpriteShaderHAL@Toshi@@QAE@XZ,public: __thiscall Toshi::TSpriteShaderHAL::TSpriteShaderHAL(void)
+6,0x2530,0x10002530,??0TSpriteShaderOrderTable@Toshi@@QAE@PAVTSpriteShaderHAL@1@II@Z,"public: __thiscall Toshi::TSpriteShaderOrderTable::TSpriteShaderOrderTable(class Toshi::TSpriteShaderHAL *,unsigned int,unsigned int)"
+7,0x3530,0x10003530,??1TSpriteMaterialHAL@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TSpriteMaterialHAL::~TSpriteMaterialHAL(void)
+8,0x3480,0x10003480,??1TSpriteMeshHAL@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TSpriteMeshHAL::~TSpriteMeshHAL(void)
+9,0x3740,0x10003740,??1TSpriteShaderHAL@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TSpriteShaderHAL::~TSpriteShaderHAL(void)
+10,0x3810,0x10003810,??1TSpriteShaderOrderTable@Toshi@@QAE@XZ,public: __thiscall Toshi::TSpriteShaderOrderTable::~TSpriteShaderOrderTable(void)
+11,0xb2e0,0x1000b2e0,??_7TSpriteMaterialHAL@Toshi@@6B@,const Toshi::TSpriteMaterialHAL::`vftable'
+12,0xb320,0x1000b320,??_7TSpriteMeshHAL@Toshi@@6B@,const Toshi::TSpriteMeshHAL::`vftable'
+13,0xb220,0x1000b220,??_7TSpriteShaderHAL@Toshi@@6B@,const Toshi::TSpriteShaderHAL::`vftable'
+14,0x37f0,0x100037f0,?AllocRenderPacket@TSpriteShaderOrderTable@Toshi@@QAEPAVTRenderPacket@2@XZ,public: class Toshi::TRenderPacket * __thiscall Toshi::TSpriteShaderOrderTable::AllocRenderPacket(void)
+15,0x3980,0x10003980,?BatchRenderRectangle@TSpriteShaderHAL@Toshi@@QAEXAAUBatchHandle@12@ABVTVector2@2@1M11@Z,"public: void __thiscall Toshi::TSpriteShaderHAL::BatchRenderRectangle(struct Toshi::TSpriteShaderHAL::BatchHandle &,class Toshi::TVector2 const &,class Toshi::TVector2 const &,float,class Toshi::TVector2 const &,class Toshi::TVector2 const &)"
+16,0x2fb0,0x10002fb0,?BeginMeshGeneration@TSpriteShaderHAL@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TSpriteShaderHAL::BeginMeshGeneration(void)
+17,0x3270,0x10003270,?Create@TSpriteMeshHAL@Toshi@@UAE_NIGG@Z,"public: virtual bool __thiscall Toshi::TSpriteMeshHAL::Create(unsigned int,unsigned short,unsigned short)"
+18,0x27d0,0x100027d0,?Create@TSpriteShaderHAL@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TSpriteShaderHAL::Create(void)
+19,0x2910,0x10002910,?CreateMaterial@TSpriteShaderHAL@Toshi@@UAEPAVTSpriteMaterial@2@PBD@Z,public: virtual class Toshi::TSpriteMaterial * __thiscall Toshi::TSpriteShaderHAL::CreateMaterial(char const *)
+20,0x29a0,0x100029a0,?CreateMesh@TSpriteShaderHAL@Toshi@@UAEPAVTSpriteMesh@2@HAAH@Z,"public: virtual class Toshi::TSpriteMesh * __thiscall Toshi::TSpriteShaderHAL::CreateMesh(int,int &)"
+21,0x2960,0x10002960,?CreateMesh@TSpriteShaderHAL@Toshi@@UAEPAVTSpriteMesh@2@PBD@Z,public: virtual class Toshi::TSpriteMesh * __thiscall Toshi::TSpriteShaderHAL::CreateMesh(char const *)
+22,0x3580,0x10003580,?CreateObject@TSpriteMaterialHAL@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::TSpriteMaterialHAL::CreateObject(void)
+23,0x34f0,0x100034f0,?CreateObject@TSpriteMeshHAL@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::TSpriteMeshHAL::CreateObject(void)
+24,0x37b0,0x100037b0,?CreateObject@TSpriteShaderHAL@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::TSpriteShaderHAL::CreateObject(void)
+25,0x3560,0x10003560,?CreateObjectInPlace@TSpriteMaterialHAL@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::TSpriteMaterialHAL::CreateObjectInPlace(void *)
+26,0x34d0,0x100034d0,?CreateObjectInPlace@TSpriteMeshHAL@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::TSpriteMeshHAL::CreateObjectInPlace(void *)
+27,0x3790,0x10003790,?CreateObjectInPlace@TSpriteShaderHAL@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::TSpriteShaderHAL::CreateObjectInPlace(void *)
+28,0x3540,0x10003540,?DeinitialiseStatic@TSpriteMaterialHAL@Toshi@@CGXXZ,private: static void __stdcall Toshi::TSpriteMaterialHAL::DeinitialiseStatic(void)
+29,0x34b0,0x100034b0,?DeinitialiseStatic@TSpriteMeshHAL@Toshi@@CGXXZ,private: static void __stdcall Toshi::TSpriteMeshHAL::DeinitialiseStatic(void)
+30,0x3770,0x10003770,?DeinitialiseStatic@TSpriteShaderHAL@Toshi@@CGXXZ,private: static void __stdcall Toshi::TSpriteShaderHAL::DeinitialiseStatic(void)
+31,0x2fe0,0x10002fe0,?EndMeshGeneration@TSpriteShaderHAL@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TSpriteShaderHAL::EndMeshGeneration(void)
+32,0x2660,0x10002660,?Flush@TSpriteShaderHAL@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TSpriteShaderHAL::Flush(void)
+33,0x35b0,0x100035b0,?GetClass@TSpriteMaterialHAL@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::TSpriteMaterialHAL::GetClass(void)const 
+34,0x3520,0x10003520,?GetClass@TSpriteMeshHAL@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::TSpriteMeshHAL::GetClass(void)const 
+35,0x37e0,0x100037e0,?GetClass@TSpriteShaderHAL@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::TSpriteShaderHAL::GetClass(void)const 
+36,0x3950,0x10003950,?GetIndexPool@TSpriteShaderHAL@Toshi@@QAEPAVTIndexPoolResourceInterface@2@XZ,public: class Toshi::TIndexPoolResourceInterface * __thiscall Toshi::TSpriteShaderHAL::GetIndexPool(void)
+37,0x38d0,0x100038d0,?GetMaterial@TSpriteMeshHAL@Toshi@@QAEPAVTSpriteMaterialHAL@2@XZ,public: class Toshi::TSpriteMaterialHAL * __thiscall Toshi::TSpriteMeshHAL::GetMaterial(void)
+38,0x39b0,0x100039b0,?GetMaxRendPackets@TSpriteShaderOrderTable@Toshi@@QAEIXZ,public: unsigned int __thiscall Toshi::TSpriteShaderOrderTable::GetMaxRendPackets(void)
+39,0x39a0,0x100039a0,?GetNumRendPackets@TSpriteShaderOrderTable@Toshi@@QAEIXZ,public: unsigned int __thiscall Toshi::TSpriteShaderOrderTable::GetNumRendPackets(void)
+40,0x3970,0x10003970,?GetOrderTable@TSpriteShaderHAL@Toshi@@QAEPAVTSpriteShaderOrderTable@2@XZ,public: class Toshi::TSpriteShaderOrderTable * __thiscall Toshi::TSpriteShaderHAL::GetOrderTable(void)
+41,0x3940,0x10003940,?GetRenderer@TSpriteMaterialHAL@Toshi@@QBEPAVTRenderD3DInterface@2@XZ,public: class Toshi::TRenderD3DInterface * __thiscall Toshi::TSpriteMaterialHAL::GetRenderer(void)const 
+42,0x3990,0x10003990,?GetRenderer@TSpriteShaderHAL@Toshi@@QBEPAVTRenderD3DInterface@2@XZ,public: class Toshi::TRenderD3DInterface * __thiscall Toshi::TSpriteShaderHAL::GetRenderer(void)const 
+43,0x3930,0x10003930,?GetShader@TSpriteMaterialHAL@Toshi@@QAEPAVTSpriteShaderHAL@2@XZ,public: class Toshi::TSpriteShaderHAL * __thiscall Toshi::TSpriteMaterialHAL::GetShader(void)
+44,0x38e0,0x100038e0,?GetShader@TSpriteMeshHAL@Toshi@@QAEPAVTSpriteShaderHAL@2@XZ,public: class Toshi::TSpriteShaderHAL * __thiscall Toshi::TSpriteMeshHAL::GetShader(void)
+45,0x39c0,0x100039c0,?GetShader@TSpriteShaderOrderTable@Toshi@@QAEPAVTSpriteShaderHAL@2@XZ,public: class Toshi::TSpriteShaderHAL * __thiscall Toshi::TSpriteShaderOrderTable::GetShader(void)
+46,0x3960,0x10003960,?GetVertexPool@TSpriteShaderHAL@Toshi@@QAEPAVTVertexPoolResourceInterface@2@XZ,public: class Toshi::TVertexPoolResourceInterface * __thiscall Toshi::TSpriteShaderHAL::GetVertexPool(void)
+47,0x35c0,0x100035c0,?GetVertexShaderHandle@TSpriteShaderHAL@Toshi@@QAEKXZ,public: unsigned long __thiscall Toshi::TSpriteShaderHAL::GetVertexShaderHandle(void)
+48,0x3550,0x10003550,?InitialiseStatic@TSpriteMaterialHAL@Toshi@@CGXXZ,private: static void __stdcall Toshi::TSpriteMaterialHAL::InitialiseStatic(void)
+49,0x34c0,0x100034c0,?InitialiseStatic@TSpriteMeshHAL@Toshi@@CGXXZ,private: static void __stdcall Toshi::TSpriteMeshHAL::InitialiseStatic(void)
+50,0x3780,0x10003780,?InitialiseStatic@TSpriteShaderHAL@Toshi@@CGXXZ,private: static void __stdcall Toshi::TSpriteShaderHAL::InitialiseStatic(void)
+51,0x28c0,0x100028c0,?Invalidate@TSpriteShaderHAL@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TSpriteShaderHAL::Invalidate(void)
+52,0x3730,0x10003730,?OnDestroy@TSpriteShaderHAL@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TSpriteShaderHAL::OnDestroy(void)
+53,0x2e50,0x10002e50,?OnLostDevice@TSpriteShaderHAL@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TSpriteShaderHAL::OnLostDevice(void)
+54,0x2e90,0x10002e90,?OnResetDevice@TSpriteShaderHAL@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TSpriteShaderHAL::OnResetDevice(void)
+55,0x3210,0x10003210,?PostRender@TSpriteMaterialHAL@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TSpriteMaterialHAL::PostRender(void)
+56,0x30a0,0x100030a0,?PreRender@TSpriteMaterialHAL@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TSpriteMaterialHAL::PreRender(void)
+57,0x32a0,0x100032a0,?Render@TSpriteMeshHAL@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TSpriteMeshHAL::Render(void)
+58,0x2a30,0x10002a30,?Render@TSpriteShaderHAL@Toshi@@UAEXPAVTRenderPacket@2@@Z,public: virtual void __thiscall Toshi::TSpriteShaderHAL::Render(class Toshi::TRenderPacket *)
+59,0x25b0,0x100025b0,?Render@TSpriteShaderOrderTable@Toshi@@QAEXXZ,public: void __thiscall Toshi::TSpriteShaderOrderTable::Render(void)
+60,0x3600,0x10003600,?RenderRectangle@TSpriteShaderHAL@Toshi@@UAEXABVTVector2@2@000M@Z,"public: virtual void __thiscall Toshi::TSpriteShaderHAL::RenderRectangle(class Toshi::TVector2 const &,class Toshi::TVector2 const &,class Toshi::TVector2 const &,class Toshi::TVector2 const &,float)"
+61,0x35e0,0x100035e0,?RenderString@TSpriteShaderHAL@Toshi@@UAEXABVTWString@2@ABVTVector2@2@1MM@Z,"public: virtual void __thiscall Toshi::TSpriteShaderHAL::RenderString(class Toshi::TWString const &,class Toshi::TVector2 const &,class Toshi::TVector2 const &,float,float)"
+62,0x35f0,0x100035f0,?RenderString@TSpriteShaderHAL@Toshi@@UAEXABVTWString@2@ABVTVector2@2@@Z,"public: virtual void __thiscall Toshi::TSpriteShaderHAL::RenderString(class Toshi::TWString const &,class Toshi::TVector2 const &)"
+63,0xb1f0,0x1000b1f0,?SHADERDECL@TSpriteShaderHAL@Toshi@@2QBKB,public: static unsigned long const * const Toshi::TSpriteShaderHAL::SHADERDECL
+64,0x3710,0x10003710,?SetAlphaBlendEnabled@TSpriteShaderHAL@Toshi@@UAEX_N@Z,public: virtual void __thiscall Toshi::TSpriteShaderHAL::SetAlphaBlendEnabled(bool)
+65,0x36c0,0x100036c0,?SetAlphaBlendMode@TSpriteShaderHAL@Toshi@@UAEXW4BlendMode@TSpriteShader@2@0@Z,"public: virtual void __thiscall Toshi::TSpriteShaderHAL::SetAlphaBlendMode(enum Toshi::TSpriteShader::BlendMode,enum Toshi::TSpriteShader::BlendMode)"
+66,0x36b0,0x100036b0,?SetAlphaBlendOp@TSpriteShaderHAL@Toshi@@UAEXW4BlendOp@TSpriteShader@2@@Z,public: virtual void __thiscall Toshi::TSpriteShaderHAL::SetAlphaBlendOp(enum Toshi::TSpriteShader::BlendOp)
+67,0x36d0,0x100036d0,?SetAlphaTest@TSpriteShaderHAL@Toshi@@UAEXW4CompareFunction@TSpriteShader@2@M@Z,"public: virtual void __thiscall Toshi::TSpriteShaderHAL::SetAlphaTest(enum Toshi::TSpriteShader::CompareFunction,float)"
+68,0x3720,0x10003720,?SetAlphaTestEnabled@TSpriteShaderHAL@Toshi@@UAEX_N@Z,public: virtual void __thiscall Toshi::TSpriteShaderHAL::SetAlphaTestEnabled(bool)
+69,0x3630,0x10003630,?SetClip@TSpriteShaderHAL@Toshi@@UAEXVTVector2@2@0@Z,"public: virtual void __thiscall Toshi::TSpriteShaderHAL::SetClip(class Toshi::TVector2,class Toshi::TVector2)"
+70,0x36e0,0x100036e0,?SetClipEnabled@TSpriteShaderHAL@Toshi@@UAEX_N@Z,public: virtual void __thiscall Toshi::TSpriteShaderHAL::SetClipEnabled(bool)
+71,0x3660,0x10003660,?SetColour@TSpriteShaderHAL@Toshi@@UAEXABVTGUIColour@2@@Z,public: virtual void __thiscall Toshi::TSpriteShaderHAL::SetColour(class Toshi::TGUIColour const &)
+72,0x36f0,0x100036f0,?SetDepthReadEnabled@TSpriteShaderHAL@Toshi@@UAEX_N@Z,public: virtual void __thiscall Toshi::TSpriteShaderHAL::SetDepthReadEnabled(bool)
+73,0x36a0,0x100036a0,?SetDepthTest@TSpriteShaderHAL@Toshi@@UAEXW4CompareFunction@TSpriteShader@2@@Z,public: virtual void __thiscall Toshi::TSpriteShaderHAL::SetDepthTest(enum Toshi::TSpriteShader::CompareFunction)
+74,0x3700,0x10003700,?SetDepthWriteEnabled@TSpriteShaderHAL@Toshi@@UAEX_N@Z,public: virtual void __thiscall Toshi::TSpriteShaderHAL::SetDepthWriteEnabled(bool)
+75,0x3640,0x10003640,?SetFont@TSpriteShaderHAL@Toshi@@UAEXPAVTGUIFont@2@@Z,public: virtual void __thiscall Toshi::TSpriteShaderHAL::SetFont(class Toshi::TGUIFont *)
+76,0x3680,0x10003680,?SetMaterial@TSpriteShaderHAL@Toshi@@UAEXPAVTSpriteMaterial@2@@Z,public: virtual void __thiscall Toshi::TSpriteShaderHAL::SetMaterial(class Toshi::TSpriteMaterial *)
+77,0x3020,0x10003020,?SupportsMipMapLODBias@TSpriteShaderHAL@Toshi@@IAE_NXZ,protected: bool __thiscall Toshi::TSpriteShaderHAL::SupportsMipMapLODBias(void)
+78,0x2840,0x10002840,?Validate@TSpriteShaderHAL@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TSpriteShaderHAL::Validate(void)
+79,0xa2e0,0x1000a2e0,?m_sClass@TSpriteMaterialHAL@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::TSpriteMaterialHAL::m_sClass
+80,0xa2a0,0x1000a2a0,?m_sClass@TSpriteMeshHAL@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::TSpriteMeshHAL::m_sClass
+81,0xa260,0x1000a260,?m_sClass@TSpriteShaderHAL@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::TSpriteShaderHAL::m_sClass

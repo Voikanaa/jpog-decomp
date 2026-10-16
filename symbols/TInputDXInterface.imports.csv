@@ -1,0 +1,66 @@
+dll,name,iat_rva,demangled
+KERNEL32.dll,DisableThreadLibraryCalls,0x6008,DisableThreadLibraryCalls
+KERNEL32.dll,GetModuleHandleA,0x600c,GetModuleHandleA
+USER32.dll,FindWindowA,0x6114,FindWindowA
+DINPUT8.dll,DirectInput8Create,0x6000,DirectInput8Create
+TInputInterface.dll,?WasDown@TInputDeviceController@Toshi@@UBE_NH@Z,0x6030,public: virtual bool __thiscall Toshi::TInputDeviceController::WasDown(int)const 
+TInputInterface.dll,?m_sClass@TInputDeviceController@Toshi@@2VTClass@2@A,0x6034,public: static class Toshi::TClass Toshi::TInputDeviceController::m_sClass
+TInputInterface.dll,?IsDown@TInputDeviceController@Toshi@@UBE_NH@Z,0x6038,public: virtual bool __thiscall Toshi::TInputDeviceController::IsDown(int)const 
+TInputInterface.dll,?GetDoodadProperties@TInputDeviceController@Toshi@@UBE_NHAAUDoodadProperties@TInputDevice@2@@Z,0x603c,"public: virtual bool __thiscall Toshi::TInputDeviceController::GetDoodadProperties(int,struct Toshi::TInputDevice::DoodadProperties &)const "
+TInputInterface.dll,?StartRepeat@TInputDevice@Toshi@@UAE_NHMM@Z,0x6040,"public: virtual bool __thiscall Toshi::TInputDevice::StartRepeat(int,float,float)"
+TInputInterface.dll,??0InputEvent@TInputInterface@Toshi@@QAE@PAVTInputDevice@2@HW4EventType@12@@Z,0x6044,"public: __thiscall Toshi::TInputInterface::InputEvent::InputEvent(class Toshi::TInputDevice *,int,enum Toshi::TInputInterface::EventType)"
+TInputInterface.dll,??1TInputDeviceController@Toshi@@UAE@XZ,0x6048,public: virtual __thiscall Toshi::TInputDeviceController::~TInputDeviceController(void)
+TInputInterface.dll,?StopAllRepeats@TInputDevice@Toshi@@UAEXXZ,0x604c,public: virtual void __thiscall Toshi::TInputDevice::StopAllRepeats(void)
+TInputInterface.dll,?StopRepeat@TInputDevice@Toshi@@UAEXH@Z,0x6050,public: virtual void __thiscall Toshi::TInputDevice::StopRepeat(int)
+TInputInterface.dll,?ProcessVirtualButtons@TInputDeviceController@Toshi@@MAEHAAV?$TEmitter@VTInputInterface@Toshi@@VInputEvent@12@@2@M@Z,0x6054,"protected: virtual int __thiscall Toshi::TInputDeviceController::ProcessVirtualButtons(class Toshi::TEmitter<class Toshi::TInputInterface,class Toshi::TInputInterface::InputEvent> &,float)"
+TInputInterface.dll,??0TInputDeviceKeyboard@Toshi@@QAE@XZ,0x6058,public: __thiscall Toshi::TInputDeviceKeyboard::TInputDeviceKeyboard(void)
+TInputInterface.dll,?UpdateVirtualButtons@TInputDeviceKeyboard@Toshi@@IAEXXZ,0x605c,protected: void __thiscall Toshi::TInputDeviceKeyboard::UpdateVirtualButtons(void)
+TInputInterface.dll,?m_sClass@TInputDeviceKeyboard@Toshi@@2VTClass@2@A,0x6060,public: static class Toshi::TClass Toshi::TInputDeviceKeyboard::m_sClass
+TInputInterface.dll,??1TInputDeviceKeyboard@Toshi@@UAE@XZ,0x6064,public: virtual __thiscall Toshi::TInputDeviceKeyboard::~TInputDeviceKeyboard(void)
+TInputInterface.dll,?GetAxisCount@TInputDeviceKeyboard@Toshi@@UAEHXZ,0x6068,public: virtual int __thiscall Toshi::TInputDeviceKeyboard::GetAxisCount(void)
+TInputInterface.dll,?ThrowRepeatEvent@TInputDevice@Toshi@@UAEXAAV?$TEmitter@VTInputInterface@Toshi@@VInputEvent@12@@2@PAURepeatInfo@12@M@Z,0x606c,"public: virtual void __thiscall Toshi::TInputDevice::ThrowRepeatEvent(class Toshi::TEmitter<class Toshi::TInputInterface,class Toshi::TInputInterface::InputEvent> &,struct Toshi::TInputDevice::RepeatInfo *,float)"
+TInputInterface.dll,?GetAxisInt@TInputDeviceKeyboard@Toshi@@UBEHHH@Z,0x6070,"public: virtual int __thiscall Toshi::TInputDeviceKeyboard::GetAxisInt(int,int)const "
+TInputInterface.dll,?UpdateVirtualButtons@TInputDeviceController@Toshi@@IAEXXZ,0x6074,protected: void __thiscall Toshi::TInputDeviceController::UpdateVirtualButtons(void)
+TInputInterface.dll,??0InputEvent@TInputInterface@Toshi@@QAE@PAVTInputDevice@2@HW4EventType@12@MM@Z,0x6078,"public: __thiscall Toshi::TInputInterface::InputEvent::InputEvent(class Toshi::TInputDevice *,int,enum Toshi::TInputInterface::EventType,float,float)"
+TInputInterface.dll,??0InputEvent@TInputInterface@Toshi@@QAE@PAVTInputDevice@2@HW4EventType@12@HH@Z,0x607c,"public: __thiscall Toshi::TInputInterface::InputEvent::InputEvent(class Toshi::TInputDevice *,int,enum Toshi::TInputInterface::EventType,int,int)"
+TInputInterface.dll,?m_sClass@TInputDeviceMouse@Toshi@@2VTClass@2@A,0x6080,public: static class Toshi::TClass Toshi::TInputDeviceMouse::m_sClass
+TInputInterface.dll,??1TInputDeviceMouse@Toshi@@UAE@XZ,0x6084,public: virtual __thiscall Toshi::TInputDeviceMouse::~TInputDeviceMouse(void)
+TInputInterface.dll,??0TInputDeviceMouse@Toshi@@QAE@XZ,0x6088,public: __thiscall Toshi::TInputDeviceMouse::TInputDeviceMouse(void)
+TInputInterface.dll,??0TInputDeviceController@Toshi@@QAE@XZ,0x608c,public: __thiscall Toshi::TInputDeviceController::TInputDeviceController(void)
+TInputInterface.dll,?Deinitialise@TInputInterface@Toshi@@UAE_NXZ,0x6090,public: virtual bool __thiscall Toshi::TInputInterface::Deinitialise(void)
+TInputInterface.dll,?RemoveDevice@TInputInterface@Toshi@@QAEXPAVTInputDevice@2@@Z,0x6094,public: void __thiscall Toshi::TInputInterface::RemoveDevice(class Toshi::TInputDevice *)
+TInputInterface.dll,?AddDevice@TInputInterface@Toshi@@QAEXPAVTInputDevice@2@@Z,0x6098,public: void __thiscall Toshi::TInputInterface::AddDevice(class Toshi::TInputDevice *)
+TInputInterface.dll,?m_sClass@TInputInterface@Toshi@@2VTClass@2@A,0x609c,public: static class Toshi::TClass Toshi::TInputInterface::m_sClass
+TInputInterface.dll,??1TInputInterface@Toshi@@UAE@XZ,0x60a0,public: virtual __thiscall Toshi::TInputInterface::~TInputInterface(void)
+TInputInterface.dll,??0TInputInterface@Toshi@@QAE@XZ,0x60a4,public: __thiscall Toshi::TInputInterface::TInputInterface(void)
+TInputInterface.dll,?AcquireAll@TInputInterface@Toshi@@UAE_NXZ,0x60a8,public: virtual bool __thiscall Toshi::TInputInterface::AcquireAll(void)
+TInputInterface.dll,?UnacquireAll@TInputInterface@Toshi@@UAE_NXZ,0x60ac,public: virtual bool __thiscall Toshi::TInputInterface::UnacquireAll(void)
+TInputInterface.dll,?FlushAll@TInputInterface@Toshi@@UAE_NXZ,0x60b0,public: virtual bool __thiscall Toshi::TInputInterface::FlushAll(void)
+TInputInterface.dll,?SetExclusiveMode@TInputInterface@Toshi@@UAEX_N@Z,0x60b4,public: virtual void __thiscall Toshi::TInputInterface::SetExclusiveMode(bool)
+TInputInterface.dll,?GetExclusiveMode@TInputInterface@Toshi@@UBE_NXZ,0x60b8,public: virtual bool __thiscall Toshi::TInputInterface::GetExclusiveMode(void)const 
+TInputInterface.dll,?ProcessEvents@TInputInterface@Toshi@@UAEHM@Z,0x60bc,public: virtual int __thiscall Toshi::TInputInterface::ProcessEvents(float)
+TInputInterface.dll,?StopAllRepeats@TInputInterface@Toshi@@UAEXXZ,0x60c0,public: virtual void __thiscall Toshi::TInputInterface::StopAllRepeats(void)
+TInputInterface.dll,?ProcessRepeats@TInputDevice@Toshi@@IAEHAAV?$TEmitter@VTInputInterface@Toshi@@VInputEvent@12@@2@M@Z,0x60c4,"protected: int __thiscall Toshi::TInputDevice::ProcessRepeats(class Toshi::TEmitter<class Toshi::TInputInterface,class Toshi::TInputInterface::InputEvent> &,float)"
+TInputInterface.dll,?GetAxisFloat@TInputDeviceKeyboard@Toshi@@UBEMHH@Z,0x60c8,"public: virtual float __thiscall Toshi::TInputDeviceKeyboard::GetAxisFloat(int,int)const "
+TInputInterface.dll,??0TInputDeviceChangeEvent@Toshi@@QAE@PAVTInputDevice@1@W4Type@01@@Z,0x60cc,"public: __thiscall Toshi::TInputDeviceChangeEvent::TInputDeviceChangeEvent(class Toshi::TInputDevice *,enum Toshi::TInputDeviceChangeEvent::Type)"
+TInputInterface.dll,?ProcessVirtualButtons@TInputDeviceKeyboard@Toshi@@MAEHAAV?$TEmitter@VTInputInterface@Toshi@@VInputEvent@12@@2@M@Z,0x60d0,"protected: virtual int __thiscall Toshi::TInputDeviceKeyboard::ProcessVirtualButtons(class Toshi::TEmitter<class Toshi::TInputInterface,class Toshi::TInputInterface::InputEvent> &,float)"
+TInputInterface.dll,?GetDoodadProperties@TInputDeviceKeyboard@Toshi@@UBE_NHAAUDoodadProperties@TInputDevice@2@@Z,0x60d4,"public: virtual bool __thiscall Toshi::TInputDeviceKeyboard::GetDoodadProperties(int,struct Toshi::TInputDevice::DoodadProperties &)const "
+TInputInterface.dll,?GetDoodadProperties@TInputDeviceMouse@Toshi@@UBE_NHAAUDoodadProperties@TInputDevice@2@@Z,0x60d8,"public: virtual bool __thiscall Toshi::TInputDeviceMouse::GetDoodadProperties(int,struct Toshi::TInputDevice::DoodadProperties &)const "
+TKernelInterface.dll,?Delete@TObject@Toshi@@UAEXXZ,0x60e0,public: virtual void __thiscall Toshi::TObject::Delete(void)
+TKernelInterface.dll,?Delete@TLocalisedString@Toshi@@AAEXXZ,0x60e4,private: void __thiscall Toshi::TLocalisedString::Delete(void)
+TKernelInterface.dll,?GetLocale@TSystem@Toshi@@SGPAVTLocale@2@XZ,0x60e8,public: static class Toshi::TLocale * __stdcall Toshi::TSystem::GetLocale(void)
+TKernelInterface.dll,??1TWString@Toshi@@QAE@XZ,0x60ec,public: __thiscall Toshi::TWString::~TWString(void)
+TKernelInterface.dll,??0TWString@Toshi@@QAE@PBD@Z,0x60f0,public: __thiscall Toshi::TWString::TWString(char const *)
+TKernelInterface.dll,?IsA@TObject@Toshi@@QBE_NABVTClass@2@@Z,0x60f4,public: bool __thiscall Toshi::TObject::IsA(class Toshi::TClass const &)const 
+TKernelInterface.dll,?GetTemporary@TLocale@Toshi@@QAE?AVTLString@2@ABVTWString@2@@Z,0x60f8,public: class Toshi::TLString __thiscall Toshi::TLocale::GetTemporary(class Toshi::TWString const &)
+TKernelInterface.dll,?tmalloc@@YGPAXHPADH@Z,0x60fc,"void * __stdcall tmalloc(int,char *,int)"
+TKernelInterface.dll,??0TClass@Toshi@@QAE@PBDPAV01@P6GPAVTObject@1@XZP6GPAV21@PAX@ZP6GXXZ5I@Z,0x6100,"public: __thiscall Toshi::TClass::TClass(char const *,class Toshi::TClass *,class Toshi::TObject * (__stdcall*)(void),class Toshi::TObject * (__stdcall*)(void *),void (__stdcall*)(void),void (__stdcall*)(void),unsigned int)"
+TKernelInterface.dll,??1TClass@Toshi@@QAE@XZ,0x6104,public: __thiscall Toshi::TClass::~TClass(void)
+TKernelInterface.dll,?Throw@TGenericEmitter@Toshi@@IAEXPAX@Z,0x6108,protected: void __thiscall Toshi::TGenericEmitter::Throw(void *)
+TKernelInterface.dll,?tfree@@YGXPAX@Z,0x610c,void __stdcall tfree(void *)
+MSVCRT.dll,__dllonexit,0x6014,__dllonexit
+MSVCRT.dll,_initterm,0x6018,_initterm
+MSVCRT.dll,malloc,0x601c,malloc
+MSVCRT.dll,free,0x6020,free
+MSVCRT.dll,_adjust_fdiv,0x6024,_adjust_fdiv
+MSVCRT.dll,_onexit,0x6028,_onexit

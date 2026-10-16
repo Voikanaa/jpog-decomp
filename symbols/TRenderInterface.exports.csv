@@ -1,0 +1,1116 @@
+ordinal,rva,va,name,demangled
+1,0xf5f0,0x1000f5f0,??0BeginRenderEvent@TViewport@Toshi@@QAE@XZ,public: __thiscall Toshi::TViewport::BeginRenderEvent::BeginRenderEvent(void)
+2,0xf650,0x1000f650,??0BeginUpdateEvent@TViewport@Toshi@@QAE@XZ,public: __thiscall Toshi::TViewport::BeginUpdateEvent::BeginUpdateEvent(void)
+3,0x7b40,0x10007b40,??0Device@Mode@TRenderAdapter@Toshi@@QAE@ABV0123@@Z,public: __thiscall Toshi::TRenderAdapter::Mode::Device::Device(class Toshi::TRenderAdapter::Mode::Device const &)
+4,0x7b70,0x10007b70,??0Device@Mode@TRenderAdapter@Toshi@@QAE@XZ,public: __thiscall Toshi::TRenderAdapter::Mode::Device::Device(void)
+5,0xf5c0,0x1000f5c0,??0EndRenderEvent@TViewport@Toshi@@QAE@XZ,public: __thiscall Toshi::TViewport::EndRenderEvent::EndRenderEvent(void)
+6,0xf610,0x1000f610,??0EndUpdateEvent@TViewport@Toshi@@QAE@XZ,public: __thiscall Toshi::TViewport::EndUpdateEvent::EndUpdateEvent(void)
+7,0x13100,0x10013100,??0Item@TResourceNameMap@Toshi@@QAE@XZ,public: __thiscall Toshi::TResourceNameMap::Item::Item(void)
+8,0x7bd0,0x10007bd0,??0Mode@TRenderAdapter@Toshi@@QAE@ABV012@@Z,public: __thiscall Toshi::TRenderAdapter::Mode::Mode(class Toshi::TRenderAdapter::Mode const &)
+9,0x7c00,0x10007c00,??0Mode@TRenderAdapter@Toshi@@QAE@XZ,public: __thiscall Toshi::TRenderAdapter::Mode::Mode(void)
+10,0xc710,0x1000c710,??0NameEntry@TTextureFactory@Toshi@@QAE@PBDPAVTTextureResource@2@@Z,"public: __thiscall Toshi::TTextureFactory::NameEntry::NameEntry(char const *,class Toshi::TTextureResource *)"
+11,0xf5d0,0x1000f5d0,??0RenderEvent@TViewport@Toshi@@QAE@AAVTScene@2@@Z,public: __thiscall Toshi::TViewport::RenderEvent::RenderEvent(class Toshi::TScene &)
+12,0x12bc0,0x10012bc0,??0RenderEvent@TViewport@Toshi@@QAE@ABV012@@Z,public: __thiscall Toshi::TViewport::RenderEvent::RenderEvent(class Toshi::TViewport::RenderEvent const &)
+13,0x8af0,0x10008af0,??0TAnimQuaternion@Toshi@@QAE@ABU01@@Z,public: __thiscall Toshi::TAnimQuaternion::TAnimQuaternion(struct Toshi::TAnimQuaternion const &)
+14,0x8b10,0x10008b10,??0TAnimQuaternion@Toshi@@QAE@XZ,public: __thiscall Toshi::TAnimQuaternion::TAnimQuaternion(void)
+15,0x8a50,0x10008a50,??0TAnimVector@Toshi@@QAE@ABU01@@Z,public: __thiscall Toshi::TAnimVector::TAnimVector(struct Toshi::TAnimVector const &)
+16,0x8a70,0x10008a70,??0TAnimVector@Toshi@@QAE@XZ,public: __thiscall Toshi::TAnimVector::TAnimVector(void)
+17,0x8680,0x10008680,??0TAnimation@Toshi@@QAE@XZ,public: __thiscall Toshi::TAnimation::TAnimation(void)
+18,0x77e0,0x100077e0,??0TAtmosphere@Toshi@@QAE@ABV01@@Z,public: __thiscall Toshi::TAtmosphere::TAtmosphere(class Toshi::TAtmosphere const &)
+19,0x7a80,0x10007a80,??0TAtmosphere@Toshi@@QAE@MMMMM@Z,"public: __thiscall Toshi::TAtmosphere::TAtmosphere(float,float,float,float,float)"
+20,0x18690,0x10018690,??0TAtmosphere@Toshi@@QAE@XZ,public: __thiscall Toshi::TAtmosphere::TAtmosphere(void)
+21,0x8d70,0x10008d70,??0TBone@TDImp@Toshi@@QAE@ABV012@@Z,public: __thiscall Toshi::TDImp::TBone::TBone(class Toshi::TDImp::TBone const &)
+22,0x8fa0,0x10008fa0,??0TBone@TDImp@Toshi@@QAE@PAV12@@Z,public: __thiscall Toshi::TDImp::TBone::TBone(class Toshi::TDImp *)
+23,0x8f90,0x10008f90,??0TBone@TDImp@Toshi@@QAE@XZ,public: __thiscall Toshi::TDImp::TBone::TBone(void)
+24,0xef30,0x1000ef30,??0TCameraObject@Toshi@@QAE@XZ,public: __thiscall Toshi::TCameraObject::TCameraObject(void)
+25,0xeaf0,0x1000eaf0,??0TCameraViewportHandler@Toshi@@QAE@AAVTCameraObject@1@@Z,public: __thiscall Toshi::TCameraViewportHandler::TCameraViewportHandler(class Toshi::TCameraObject &)
+26,0xf430,0x1000f430,??0TCameraViewportHandler@Toshi@@QAE@ABV01@@Z,public: __thiscall Toshi::TCameraViewportHandler::TCameraViewportHandler(class Toshi::TCameraViewportHandler const &)
+27,0x13e80,0x10013e80,??0TDBase@Toshi@@QAE@XZ,public: __thiscall Toshi::TDBase::TDBase(void)
+28,0x14260,0x10014260,??0TDImp@Toshi@@QAE@PBD@Z,public: __thiscall Toshi::TDImp::TDImp(char const *)
+29,0x13f90,0x10013f90,??0TDImp@Toshi@@QAE@XZ,public: __thiscall Toshi::TDImp::TDImp(void)
+30,0x18590,0x10018590,??0TDImpMaterial@TDImp@Toshi@@QAE@ABV012@@Z,public: __thiscall Toshi::TDImp::TDImpMaterial::TDImpMaterial(class Toshi::TDImp::TDImpMaterial const &)
+31,0x9240,0x10009240,??0TDImpMaterial@TDImp@Toshi@@QAE@PAV12@@Z,public: __thiscall Toshi::TDImp::TDImpMaterial::TDImpMaterial(class Toshi::TDImp *)
+32,0x9220,0x10009220,??0TDImpMaterial@TDImp@Toshi@@QAE@XZ,public: __thiscall Toshi::TDImp::TDImpMaterial::TDImpMaterial(void)
+33,0x73a0,0x100073a0,??0TDebugText@Toshi@@IAE@XZ,protected: __thiscall Toshi::TDebugText::TDebugText(void)
+34,0x7360,0x10007360,??0TDebugText@Toshi@@QAE@ABV01@@Z,public: __thiscall Toshi::TDebugText::TDebugText(class Toshi::TDebugText const &)
+35,0xf850,0x1000f850,??0TGFXFileInstanceObject@Toshi@@QAE@XZ,public: __thiscall Toshi::TGFXFileInstanceObject::TGFXFileInstanceObject(void)
+36,0x100c0,0x100100c0,??0TGFXFileObject@Toshi@@QAE@XZ,public: __thiscall Toshi::TGFXFileObject::TGFXFileObject(void)
+37,0xf6b0,0x1000f6b0,??0THandler@TViewport@Toshi@@QAE@AAV12@@Z,public: __thiscall Toshi::TViewport::THandler::THandler(class Toshi::TViewport &)
+38,0xf660,0x1000f660,??0THandler@TViewport@Toshi@@QAE@ABV012@@Z,public: __thiscall Toshi::TViewport::THandler::THandler(class Toshi::TViewport::THandler const &)
+39,0xcc60,0x1000cc60,??0TIndexFactoryResourceInterface@Toshi@@QAE@XZ,public: __thiscall Toshi::TIndexFactoryResourceInterface::TIndexFactoryResourceInterface(void)
+40,0xcd50,0x1000cd50,??0TIndexPoolResourceInterface@Toshi@@QAE@XZ,public: __thiscall Toshi::TIndexPoolResourceInterface::TIndexPoolResourceInterface(void)
+41,0x102f0,0x100102f0,??0TJPShadowFudgeNode@Toshi@@QAE@XZ,public: __thiscall Toshi::TJPShadowFudgeNode::TJPShadowFudgeNode(void)
+42,0x9450,0x10009450,??0TKeyFrame@TDBase@Toshi@@QAE@ABV012@@Z,public: __thiscall Toshi::TDBase::TKeyFrame::TKeyFrame(class Toshi::TDBase::TKeyFrame const &)
+43,0x13e70,0x10013e70,??0TKeyFrame@TDBase@Toshi@@QAE@XZ,public: __thiscall Toshi::TDBase::TKeyFrame::TKeyFrame(void)
+44,0x13d90,0x10013d90,??0TKeySequence@TDBase@Toshi@@QAE@XZ,public: __thiscall Toshi::TDBase::TKeySequence::TKeySequence(void)
+45,0x56a0,0x100056a0,??0TKeyframeLibrary@Toshi@@IAE@XZ,protected: __thiscall Toshi::TKeyframeLibrary::TKeyframeLibrary(void)
+46,0x56c0,0x100056c0,??0TKeyframeLibraryInstance@Toshi@@QAE@XZ,public: __thiscall Toshi::TKeyframeLibraryInstance::TKeyframeLibraryInstance(void)
+47,0x68d0,0x100068d0,??0TKeyframeLibraryManager@Toshi@@QAE@XZ,public: __thiscall Toshi::TKeyframeLibraryManager::TKeyframeLibraryManager(void)
+48,0x10390,0x10010390,??0TLightingNode@Toshi@@QAE@XZ,public: __thiscall Toshi::TLightingNode::TLightingNode(void)
+49,0x6b20,0x10006b20,??0TMaterial@Toshi@@QAE@ABV01@@Z,public: __thiscall Toshi::TMaterial::TMaterial(class Toshi::TMaterial const &)
+50,0xdd80,0x1000dd80,??0TMaterial@Toshi@@QAE@XZ,public: __thiscall Toshi::TMaterial::TMaterial(void)
+51,0xcee0,0x1000cee0,??0TMaterialLibrary@Toshi@@IAE@PAVTMaterialLibraryManager@1@@Z,protected: __thiscall Toshi::TMaterialLibrary::TMaterialLibrary(class Toshi::TMaterialLibraryManager *)
+52,0xd910,0x1000d910,??0TMaterialLibraryManager@Toshi@@QAE@XZ,public: __thiscall Toshi::TMaterialLibraryManager::TMaterialLibraryManager(void)
+53,0x6a70,0x10006a70,??0TMesh@Toshi@@QAE@ABV01@@Z,public: __thiscall Toshi::TMesh::TMesh(class Toshi::TMesh const &)
+54,0xdcc0,0x1000dcc0,??0TMesh@Toshi@@QAE@XZ,public: __thiscall Toshi::TMesh::TMesh(void)
+55,0x96d0,0x100096d0,??0TModel@Toshi@@IAE@XZ,protected: __thiscall Toshi::TModel::TModel(void)
+56,0x9900,0x10009900,??0TModelInstance@Toshi@@IAE@PAVTModel@1@@Z,protected: __thiscall Toshi::TModelInstance::TModelInstance(class Toshi::TModel *)
+57,0x9b00,0x10009b00,??0TModelLOD@Toshi@@QAE@ABV01@@Z,public: __thiscall Toshi::TModelLOD::TModelLOD(class Toshi::TModelLOD const &)
+58,0x9b60,0x10009b60,??0TModelLOD@Toshi@@QAE@XZ,public: __thiscall Toshi::TModelLOD::TModelLOD(void)
+59,0x7cf0,0x10007cf0,??0TNullResource@Toshi@@QAE@ABV01@@Z,public: __thiscall Toshi::TNullResource::TNullResource(class Toshi::TNullResource const &)
+60,0x7d70,0x10007d70,??0TNullResource@Toshi@@QAE@XZ,public: __thiscall Toshi::TNullResource::TNullResource(void)
+61,0x11110,0x10011110,??0TNullSceneResource@Toshi@@QAE@XZ,public: __thiscall Toshi::TNullSceneResource::TNullSceneResource(void)
+62,0x7c30,0x10007c30,??0TRenderAdapter@Toshi@@QAE@XZ,public: __thiscall Toshi::TRenderAdapter::TRenderAdapter(void)
+63,0x9c00,0x10009c00,??0TRenderCapture@Toshi@@QAE@XZ,public: __thiscall Toshi::TRenderCapture::TRenderCapture(void)
+64,0x9c90,0x10009c90,??0TRenderContext@Toshi@@QAE@AAVTRenderInterface@1@@Z,public: __thiscall Toshi::TRenderContext::TRenderContext(class Toshi::TRenderInterface &)
+65,0xab70,0x1000ab70,??0TRenderInterface@Toshi@@QAE@XZ,public: __thiscall Toshi::TRenderInterface::TRenderInterface(void)
+66,0x7d90,0x10007d90,??0TResource@Toshi@@QAE@ABV01@@Z,public: __thiscall Toshi::TResource::TResource(class Toshi::TResource const &)
+67,0x12bd0,0x10012bd0,??0TResource@Toshi@@QAE@XZ,public: __thiscall Toshi::TResource::TResource(void)
+68,0x13190,0x10013190,??0TResourceNameMap@Toshi@@QAE@H@Z,public: __thiscall Toshi::TResourceNameMap::TResourceNameMap(int)
+69,0x10920,0x10010920,??0TScene@Toshi@@QAE@XZ,public: __thiscall Toshi::TScene::TScene(void)
+70,0x11200,0x10011200,??0TSceneObject@Toshi@@QAE@XZ,public: __thiscall Toshi::TSceneObject::TSceneObject(void)
+71,0x19170,0x10019170,??0TSceneSysMesh@Toshi@@QAE@XZ,public: __thiscall Toshi::TSceneSysMesh::TSceneSysMesh(void)
+72,0x13c90,0x10013c90,??0TSequence@TDBase@Toshi@@QAE@XZ,public: __thiscall Toshi::TDBase::TSequence::TSequence(void)
+73,0x6c40,0x10006c40,??0TShader@Toshi@@QAE@ABV01@@Z,public: __thiscall Toshi::TShader::TShader(class Toshi::TShader const &)
+74,0xde20,0x1000de20,??0TShader@Toshi@@QAE@XZ,public: __thiscall Toshi::TShader::TShader(void)
+75,0x8d20,0x10008d20,??0TSkeleton@TDImp@Toshi@@QAE@PAV12@@Z,public: __thiscall Toshi::TDImp::TSkeleton::TSkeleton(class Toshi::TDImp *)
+76,0x8d00,0x10008d00,??0TSkeleton@TDImp@Toshi@@QAE@XZ,public: __thiscall Toshi::TDImp::TSkeleton::TSkeleton(void)
+77,0x6620,0x10006620,??0TSkeleton@Toshi@@IAE@XZ,protected: __thiscall Toshi::TSkeleton::TSkeleton(void)
+78,0x8150,0x10008150,??0TSkeletonBone@Toshi@@QAE@ABV01@@Z,public: __thiscall Toshi::TSkeletonBone::TSkeletonBone(class Toshi::TSkeletonBone const &)
+79,0x82c0,0x100082c0,??0TSkeletonBone@Toshi@@QAE@XZ,public: __thiscall Toshi::TSkeletonBone::TSkeletonBone(void)
+80,0x88d0,0x100088d0,??0TSkeletonInstance@Toshi@@QAE@XZ,public: __thiscall Toshi::TSkeletonInstance::TSkeletonInstance(void)
+81,0x8980,0x10008980,??0TSkeletonInstanceBone@Toshi@@QAE@ABV01@@Z,public: __thiscall Toshi::TSkeletonInstanceBone::TSkeletonInstanceBone(class Toshi::TSkeletonInstanceBone const &)
+82,0x8a20,0x10008a20,??0TSkeletonInstanceBone@Toshi@@QAE@XZ,public: __thiscall Toshi::TSkeletonInstanceBone::TSkeletonInstanceBone(void)
+83,0x9040,0x10009040,??0TSkinMesh@TDImp@Toshi@@QAE@PAV12@@Z,public: __thiscall Toshi::TDImp::TSkinMesh::TSkinMesh(class Toshi::TDImp *)
+84,0x9020,0x10009020,??0TSkinMesh@TDImp@Toshi@@QAE@XZ,public: __thiscall Toshi::TDImp::TSkinMesh::TSkinMesh(void)
+85,0x18540,0x10018540,??0TSubMesh@TDImp@Toshi@@QAE@ABV012@@Z,public: __thiscall Toshi::TDImp::TSubMesh::TSubMesh(class Toshi::TDImp::TSubMesh const &)
+86,0x9110,0x10009110,??0TSubMesh@TDImp@Toshi@@QAE@PAV12@@Z,public: __thiscall Toshi::TDImp::TSubMesh::TSubMesh(class Toshi::TDImp *)
+87,0x90f0,0x100090f0,??0TSubMesh@TDImp@Toshi@@QAE@XZ,public: __thiscall Toshi::TDImp::TSubMesh::TSubMesh(void)
+88,0x7660,0x10007660,??0TSun@Toshi@@QAE@ABV01@@Z,public: __thiscall Toshi::TSun::TSun(class Toshi::TSun const &)
+89,0x7790,0x10007790,??0TSun@Toshi@@QAE@MM@Z,"public: __thiscall Toshi::TSun::TSun(float,float)"
+90,0x18b10,0x10018b10,??0TSun@Toshi@@QAE@XZ,public: __thiscall Toshi::TSun::TSun(void)
+91,0x11840,0x10011840,??0TTerrainObject@Toshi@@QAE@XZ,public: __thiscall Toshi::TTerrainObject::TTerrainObject(void)
+92,0xe360,0x1000e360,??0TTextureFactory@Toshi@@QAE@XZ,public: __thiscall Toshi::TTextureFactory::TTextureFactory(void)
+93,0xe580,0x1000e580,??0TTextureResource@Toshi@@QAE@XZ,public: __thiscall Toshi::TTextureResource::TTextureResource(void)
+94,0x119e0,0x100119e0,??0TTransformObject@Toshi@@QAE@ABV01@@Z,public: __thiscall Toshi::TTransformObject::TTransformObject(class Toshi::TTransformObject const &)
+95,0x11970,0x10011970,??0TTransformObject@Toshi@@QAE@XZ,public: __thiscall Toshi::TTransformObject::TTransformObject(void)
+96,0xe670,0x1000e670,??0TVertexFactoryResourceInterface@Toshi@@QAE@XZ,public: __thiscall Toshi::TVertexFactoryResourceInterface::TVertexFactoryResourceInterface(void)
+97,0xe870,0x1000e870,??0TVertexPoolResourceInterface@Toshi@@QAE@XZ,public: __thiscall Toshi::TVertexPoolResourceInterface::TVertexPoolResourceInterface(void)
+98,0x12190,0x10012190,??0TViewport@Toshi@@QAE@XZ,public: __thiscall Toshi::TViewport::TViewport(void)
+99,0xf630,0x1000f630,??0UpdateEvent@TViewport@Toshi@@QAE@XZ,public: __thiscall Toshi::TViewport::UpdateEvent::UpdateEvent(void)
+100,0x7b90,0x10007b90,??1Device@Mode@TRenderAdapter@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TRenderAdapter::Mode::Device::~Device(void)
+101,0x7c20,0x10007c20,??1Mode@TRenderAdapter@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TRenderAdapter::Mode::~Mode(void)
+102,0xc6e0,0x1000c6e0,??1NameEntry@TTextureFactory@Toshi@@QAE@XZ,public: __thiscall Toshi::TTextureFactory::NameEntry::~NameEntry(void)
+103,0x8660,0x10008660,??1TAnimation@Toshi@@QAE@XZ,public: __thiscall Toshi::TAnimation::~TAnimation(void)
+104,0x77d0,0x100077d0,??1TAtmosphere@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TAtmosphere::~TAtmosphere(void)
+105,0x18070,0x10018070,??1TBone@TDImp@Toshi@@QAE@XZ,public: __thiscall Toshi::TDImp::TBone::~TBone(void)
+106,0xf300,0x1000f300,??1TCameraObject@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TCameraObject::~TCameraObject(void)
+107,0xf400,0x1000f400,??1TCameraViewportHandler@Toshi@@QAE@XZ,public: __thiscall Toshi::TCameraViewportHandler::~TCameraViewportHandler(void)
+108,0x142f0,0x100142f0,??1TDImp@Toshi@@QAE@XZ,public: __thiscall Toshi::TDImp::~TDImp(void)
+109,0x18140,0x10018140,??1TDImpMaterial@TDImp@Toshi@@QAE@XZ,public: __thiscall Toshi::TDImp::TDImpMaterial::~TDImpMaterial(void)
+110,0x7390,0x10007390,??1TDebugText@Toshi@@MAE@XZ,protected: virtual __thiscall Toshi::TDebugText::~TDebugText(void)
+111,0xfd60,0x1000fd60,??1TGFXFileInstanceObject@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TGFXFileInstanceObject::~TGFXFileInstanceObject(void)
+112,0x100b0,0x100100b0,??1TGFXFileObject@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TGFXFileObject::~TGFXFileObject(void)
+113,0xf6a0,0x1000f6a0,??1THandler@TViewport@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TViewport::THandler::~THandler(void)
+114,0xcc50,0x1000cc50,??1TIndexFactoryResourceInterface@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TIndexFactoryResourceInterface::~TIndexFactoryResourceInterface(void)
+115,0xce80,0x1000ce80,??1TIndexPoolResourceInterface@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TIndexPoolResourceInterface::~TIndexPoolResourceInterface(void)
+116,0x102e0,0x100102e0,??1TJPShadowFudgeNode@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TJPShadowFudgeNode::~TJPShadowFudgeNode(void)
+117,0x13e60,0x10013e60,??1TKeyFrame@TDBase@Toshi@@QAE@XZ,public: __thiscall Toshi::TDBase::TKeyFrame::~TKeyFrame(void)
+118,0x13d30,0x10013d30,??1TKeySequence@TDBase@Toshi@@QAE@XZ,public: __thiscall Toshi::TDBase::TKeySequence::~TKeySequence(void)
+119,0x6900,0x10006900,??1TKeyframeLibrary@Toshi@@IAE@XZ,protected: __thiscall Toshi::TKeyframeLibrary::~TKeyframeLibrary(void)
+120,0x68f0,0x100068f0,??1TKeyframeLibraryInstance@Toshi@@QAE@XZ,public: __thiscall Toshi::TKeyframeLibraryInstance::~TKeyframeLibraryInstance(void)
+121,0x6880,0x10006880,??1TKeyframeLibraryManager@Toshi@@QAE@XZ,public: __thiscall Toshi::TKeyframeLibraryManager::~TKeyframeLibraryManager(void)
+122,0x10680,0x10010680,??1TLightingNode@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TLightingNode::~TLightingNode(void)
+123,0xdd70,0x1000dd70,??1TMaterial@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TMaterial::~TMaterial(void)
+124,0xdb00,0x1000db00,??1TMaterialLibrary@Toshi@@IAE@XZ,protected: __thiscall Toshi::TMaterialLibrary::~TMaterialLibrary(void)
+125,0xdab0,0x1000dab0,??1TMaterialLibraryManager@Toshi@@QAE@XZ,public: __thiscall Toshi::TMaterialLibraryManager::~TMaterialLibraryManager(void)
+126,0xdcb0,0x1000dcb0,??1TMesh@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TMesh::~TMesh(void)
+127,0x9940,0x10009940,??1TModel@Toshi@@MAE@XZ,protected: virtual __thiscall Toshi::TModel::~TModel(void)
+128,0x98f0,0x100098f0,??1TModelInstance@Toshi@@IAE@XZ,protected: __thiscall Toshi::TModelInstance::~TModelInstance(void)
+129,0x7ce0,0x10007ce0,??1TNullResource@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TNullResource::~TNullResource(void)
+130,0x11100,0x10011100,??1TNullSceneResource@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TNullSceneResource::~TNullSceneResource(void)
+131,0x7c60,0x10007c60,??1TRenderAdapter@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TRenderAdapter::~TRenderAdapter(void)
+132,0x9bf0,0x10009bf0,??1TRenderCapture@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TRenderCapture::~TRenderCapture(void)
+133,0xa970,0x1000a970,??1TRenderContext@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TRenderContext::~TRenderContext(void)
+134,0xae30,0x1000ae30,??1TRenderInterface@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TRenderInterface::~TRenderInterface(void)
+135,0x12da0,0x10012da0,??1TResource@Toshi@@MAE@XZ,protected: virtual __thiscall Toshi::TResource::~TResource(void)
+136,0x13390,0x10013390,??1TResourceNameMap@Toshi@@QAE@XZ,public: __thiscall Toshi::TResourceNameMap::~TResourceNameMap(void)
+137,0x10d60,0x10010d60,??1TScene@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TScene::~TScene(void)
+138,0x111f0,0x100111f0,??1TSceneObject@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TSceneObject::~TSceneObject(void)
+139,0x192b0,0x100192b0,??1TSceneSysMesh@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TSceneSysMesh::~TSceneSysMesh(void)
+140,0x13be0,0x10013be0,??1TSequence@TDBase@Toshi@@QAE@XZ,public: __thiscall Toshi::TDBase::TSequence::~TSequence(void)
+141,0xde10,0x1000de10,??1TShader@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TShader::~TShader(void)
+142,0x17f20,0x10017f20,??1TSkeleton@TDImp@Toshi@@QAE@XZ,public: __thiscall Toshi::TDImp::TSkeleton::~TSkeleton(void)
+143,0x8020,0x10008020,??1TSkeleton@Toshi@@QAE@XZ,public: __thiscall Toshi::TSkeleton::~TSkeleton(void)
+144,0x8800,0x10008800,??1TSkeletonInstance@Toshi@@QAE@XZ,public: __thiscall Toshi::TSkeletonInstance::~TSkeletonInstance(void)
+145,0x180d0,0x100180d0,??1TSkinMesh@TDImp@Toshi@@QAE@XZ,public: __thiscall Toshi::TDImp::TSkinMesh::~TSkinMesh(void)
+146,0x18130,0x10018130,??1TSubMesh@TDImp@Toshi@@QAE@XZ,public: __thiscall Toshi::TDImp::TSubMesh::~TSubMesh(void)
+147,0x7650,0x10007650,??1TSun@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TSun::~TSun(void)
+148,0x11830,0x10011830,??1TTerrainObject@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TTerrainObject::~TTerrainObject(void)
+149,0xe2e0,0x1000e2e0,??1TTextureFactory@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TTextureFactory::~TTextureFactory(void)
+150,0xe4a0,0x1000e4a0,??1TTextureResource@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TTextureResource::~TTextureResource(void)
+151,0x12080,0x10012080,??1TTransformObject@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TTransformObject::~TTransformObject(void)
+152,0xe790,0x1000e790,??1TVertexFactoryResourceInterface@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TVertexFactoryResourceInterface::~TVertexFactoryResourceInterface(void)
+153,0xe9a0,0x1000e9a0,??1TVertexPoolResourceInterface@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TVertexPoolResourceInterface::~TVertexPoolResourceInterface(void)
+154,0x12250,0x10012250,??1TViewport@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TViewport::~TViewport(void)
+155,0xf5e0,0x1000f5e0,??4BeginRenderEvent@TViewport@Toshi@@QAEAAV012@ABV012@@Z,public: class Toshi::TViewport::BeginRenderEvent & __thiscall Toshi::TViewport::BeginRenderEvent::operator=(class Toshi::TViewport::BeginRenderEvent const &)
+156,0x6e00,0x10006e00,??4BeginSceneEvent@TRenderInterface@Toshi@@QAEAAV012@ABV012@@Z,public: class Toshi::TRenderInterface::BeginSceneEvent & __thiscall Toshi::TRenderInterface::BeginSceneEvent::operator=(class Toshi::TRenderInterface::BeginSceneEvent const &)
+157,0xf640,0x1000f640,??4BeginUpdateEvent@TViewport@Toshi@@QAEAAV012@ABV012@@Z,public: class Toshi::TViewport::BeginUpdateEvent & __thiscall Toshi::TViewport::BeginUpdateEvent::operator=(class Toshi::TViewport::BeginUpdateEvent const &)
+158,0x7b10,0x10007b10,??4Device@Mode@TRenderAdapter@Toshi@@QAEAAV0123@ABV0123@@Z,public: class Toshi::TRenderAdapter::Mode::Device & __thiscall Toshi::TRenderAdapter::Mode::Device::operator=(class Toshi::TRenderAdapter::Mode::Device const &)
+159,0xf5b0,0x1000f5b0,??4EndRenderEvent@TViewport@Toshi@@QAEAAV012@ABV012@@Z,public: class Toshi::TViewport::EndRenderEvent & __thiscall Toshi::TViewport::EndRenderEvent::operator=(class Toshi::TViewport::EndRenderEvent const &)
+160,0x6df0,0x10006df0,??4EndSceneEvent@TRenderInterface@Toshi@@QAEAAV012@ABV012@@Z,public: class Toshi::TRenderInterface::EndSceneEvent & __thiscall Toshi::TRenderInterface::EndSceneEvent::operator=(class Toshi::TRenderInterface::EndSceneEvent const &)
+161,0xf600,0x1000f600,??4EndUpdateEvent@TViewport@Toshi@@QAEAAV012@ABV012@@Z,public: class Toshi::TViewport::EndUpdateEvent & __thiscall Toshi::TViewport::EndUpdateEvent::operator=(class Toshi::TViewport::EndUpdateEvent const &)
+162,0x13360,0x10013360,??4Item@TResourceNameMap@Toshi@@QAEAAV012@ABV012@@Z,public: class Toshi::TResourceNameMap::Item & __thiscall Toshi::TResourceNameMap::Item::operator=(class Toshi::TResourceNameMap::Item const &)
+163,0x7ba0,0x10007ba0,??4Mode@TRenderAdapter@Toshi@@QAEAAV012@ABV012@@Z,public: class Toshi::TRenderAdapter::Mode & __thiscall Toshi::TRenderAdapter::Mode::operator=(class Toshi::TRenderAdapter::Mode const &)
+164,0xc6c0,0x1000c6c0,??4NameEntry@TTextureFactory@Toshi@@QAEAAV012@ABV012@@Z,public: class Toshi::TTextureFactory::NameEntry & __thiscall Toshi::TTextureFactory::NameEntry::operator=(class Toshi::TTextureFactory::NameEntry const &)
+165,0x8b70,0x10008b70,??4ResourceName@Toshi@@QAEAAV01@ABV01@@Z,public: class Toshi::ResourceName & __thiscall Toshi::ResourceName::operator=(class Toshi::ResourceName const &)
+166,0x8ad0,0x10008ad0,??4TAnimQuaternion@Toshi@@QAEAAU01@ABU01@@Z,public: struct Toshi::TAnimQuaternion & __thiscall Toshi::TAnimQuaternion::operator=(struct Toshi::TAnimQuaternion const &)
+167,0x8a30,0x10008a30,??4TAnimVector@Toshi@@QAEAAU01@ABU01@@Z,public: struct Toshi::TAnimVector & __thiscall Toshi::TAnimVector::operator=(struct Toshi::TAnimVector const &)
+168,0x8600,0x10008600,??4TAnimation@Toshi@@QAEAAV01@ABV01@@Z,public: class Toshi::TAnimation & __thiscall Toshi::TAnimation::operator=(class Toshi::TAnimation const &)
+169,0x87f0,0x100087f0,??4TAnimationBone@Toshi@@QAEAAV01@ABV01@@Z,public: class Toshi::TAnimationBone & __thiscall Toshi::TAnimationBone::operator=(class Toshi::TAnimationBone const &)
+170,0x8d50,0x10008d50,??4TBone@TDImp@Toshi@@QAEAAV012@ABV012@@Z,public: class Toshi::TDImp::TBone & __thiscall Toshi::TDImp::TBone::operator=(class Toshi::TDImp::TBone const &)
+171,0x94e0,0x100094e0,??4TDBase@Toshi@@QAEAAV01@ABV01@@Z,public: class Toshi::TDBase & __thiscall Toshi::TDBase::operator=(class Toshi::TDBase const &)
+172,0x9140,0x10009140,??4TDImpMaterial@TDImp@Toshi@@QAEAAV012@ABV012@@Z,public: class Toshi::TDImp::TDImpMaterial & __thiscall Toshi::TDImp::TDImpMaterial::operator=(class Toshi::TDImp::TDImpMaterial const &)
+173,0x7340,0x10007340,??4TDebugText@Toshi@@QAEAAV01@ABV01@@Z,public: class Toshi::TDebugText & __thiscall Toshi::TDebugText::operator=(class Toshi::TDebugText const &)
+174,0x13e20,0x10013e20,??4TKeyFrame@TDBase@Toshi@@QAEAAV012@ABV012@@Z,public: class Toshi::TDBase::TKeyFrame & __thiscall Toshi::TDBase::TKeyFrame::operator=(class Toshi::TDBase::TKeyFrame const &)
+175,0x13cb0,0x10013cb0,??4TKeySequence@TDBase@Toshi@@QAEAAV012@AAV012@@Z,public: class Toshi::TDBase::TKeySequence & __thiscall Toshi::TDBase::TKeySequence::operator=(class Toshi::TDBase::TKeySequence &)
+176,0x84c0,0x100084c0,??4TKeyframeLibrary@Toshi@@QAEAAV01@ABV01@@Z,public: class Toshi::TKeyframeLibrary & __thiscall Toshi::TKeyframeLibrary::operator=(class Toshi::TKeyframeLibrary const &)
+177,0x8360,0x10008360,??4TKeyframeLibraryInstance@Toshi@@QAEAAV01@ABV01@@Z,public: class Toshi::TKeyframeLibraryInstance & __thiscall Toshi::TKeyframeLibraryInstance::operator=(class Toshi::TKeyframeLibraryInstance const &)
+178,0x9ad0,0x10009ad0,??4TModelLOD@Toshi@@QAEAAV01@ABV01@@Z,public: class Toshi::TModelLOD & __thiscall Toshi::TModelLOD::operator=(class Toshi::TModelLOD const &)
+179,0x7fb0,0x10007fb0,??4TSkeleton@Toshi@@QAEAAV01@ABV01@@Z,public: class Toshi::TSkeleton & __thiscall Toshi::TSkeleton::operator=(class Toshi::TSkeleton const &)
+180,0x8130,0x10008130,??4TSkeletonBone@Toshi@@QAEAAV01@ABV01@@Z,public: class Toshi::TSkeletonBone & __thiscall Toshi::TSkeletonBone::operator=(class Toshi::TSkeletonBone const &)
+181,0x8960,0x10008960,??4TSkeletonInstanceBone@Toshi@@QAEAAV01@ABV01@@Z,public: class Toshi::TSkeletonInstanceBone & __thiscall Toshi::TSkeletonInstanceBone::operator=(class Toshi::TSkeletonInstanceBone const &)
+182,0x7ed0,0x10007ed0,??4TSkeletonSequence@Toshi@@QAEAAV01@ABV01@@Z,public: class Toshi::TSkeletonSequence & __thiscall Toshi::TSkeletonSequence::operator=(class Toshi::TSkeletonSequence const &)
+183,0x7e80,0x10007e80,??4TSkeletonSequenceBone@Toshi@@QAEAAV01@ABV01@@Z,public: class Toshi::TSkeletonSequenceBone & __thiscall Toshi::TSkeletonSequenceBone::operator=(class Toshi::TSkeletonSequenceBone const &)
+184,0x9080,0x10009080,??4TSubMesh@TDImp@Toshi@@QAEAAV012@ABV012@@Z,public: class Toshi::TDImp::TSubMesh & __thiscall Toshi::TDImp::TSubMesh::operator=(class Toshi::TDImp::TSubMesh const &)
+185,0x12050,0x10012050,??4TTransformObject@Toshi@@QAEAAV01@ABV01@@Z,public: class Toshi::TTransformObject & __thiscall Toshi::TTransformObject::operator=(class Toshi::TTransformObject const &)
+186,0xf620,0x1000f620,??4UpdateEvent@TViewport@Toshi@@QAEAAV012@ABV012@@Z,public: class Toshi::TViewport::UpdateEvent & __thiscall Toshi::TViewport::UpdateEvent::operator=(class Toshi::TViewport::UpdateEvent const &)
+187,0x2f180,0x1002f180,??_7Device@Mode@TRenderAdapter@Toshi@@6B@,const Toshi::TRenderAdapter::Mode::Device::`vftable'
+188,0x2f140,0x1002f140,??_7Mode@TRenderAdapter@Toshi@@6B@,const Toshi::TRenderAdapter::Mode::`vftable'
+189,0x2f1e0,0x1002f1e0,??_7TAtmosphere@Toshi@@6B@,const Toshi::TAtmosphere::`vftable'
+190,0x310c0,0x100310c0,??_7TCameraObject@Toshi@@6B@,const Toshi::TCameraObject::`vftable'
+191,0x2f220,0x1002f220,??_7TDebugText@Toshi@@6B@,const Toshi::TDebugText::`vftable'
+192,0x311a0,0x100311a0,??_7TGFXFileInstanceObject@Toshi@@6B@,const Toshi::TGFXFileInstanceObject::`vftable'
+193,0x31260,0x10031260,??_7TGFXFileObject@Toshi@@6B@,const Toshi::TGFXFileObject::`vftable'
+194,0x310a0,0x100310a0,??_7THandler@TViewport@Toshi@@6B@,const Toshi::TViewport::THandler::`vftable'
+195,0x303c0,0x100303c0,??_7TIndexFactoryResourceInterface@Toshi@@6B@,const Toshi::TIndexFactoryResourceInterface::`vftable'
+196,0x30480,0x10030480,??_7TIndexPoolResourceInterface@Toshi@@6B@,const Toshi::TIndexPoolResourceInterface::`vftable'
+197,0x312e0,0x100312e0,??_7TJPShadowFudgeNode@Toshi@@6B@,const Toshi::TJPShadowFudgeNode::`vftable'
+198,0x313c0,0x100313c0,??_7TLightingNode@Toshi@@6B@,const Toshi::TLightingNode::`vftable'
+199,0x2f240,0x1002f240,??_7TMaterial@Toshi@@6B@,const Toshi::TMaterial::`vftable'
+200,0x2f280,0x1002f280,??_7TMesh@Toshi@@6B@,const Toshi::TMesh::`vftable'
+201,0x2f760,0x1002f760,??_7TModel@Toshi@@6B@,const Toshi::TModel::`vftable'
+202,0x2f300,0x1002f300,??_7TNullResource@Toshi@@6B@,const Toshi::TNullResource::`vftable'
+203,0x316c0,0x100316c0,??_7TNullSceneResource@Toshi@@6B@,const Toshi::TNullSceneResource::`vftable'
+204,0x2f1a0,0x1002f1a0,??_7TRenderAdapter@Toshi@@6B@,const Toshi::TRenderAdapter::`vftable'
+205,0x2f780,0x1002f780,??_7TRenderCapture@Toshi@@6B@,const Toshi::TRenderCapture::`vftable'
+206,0x2f880,0x1002f880,??_7TRenderContext@Toshi@@6B@,const Toshi::TRenderContext::`vftable'
+207,0x2f940,0x1002f940,??_7TRenderInterface@Toshi@@6B@,const Toshi::TRenderInterface::`vftable'
+208,0x2f100,0x1002f100,??_7TResource@Toshi@@6B@,const Toshi::TResource::`vftable'
+209,0x314a0,0x100314a0,??_7TScene@Toshi@@6B@,const Toshi::TScene::`vftable'
+210,0x31680,0x10031680,??_7TSceneObject@Toshi@@6B@,const Toshi::TSceneObject::`vftable'
+211,0x31ea0,0x10031ea0,??_7TSceneSysMesh@Toshi@@6B@,const Toshi::TSceneSysMesh::`vftable'
+212,0x2f2c0,0x1002f2c0,??_7TShader@Toshi@@6B@,const Toshi::TShader::`vftable'
+213,0x2f200,0x1002f200,??_7TSun@Toshi@@6B@,const Toshi::TSun::`vftable'
+214,0x317c0,0x100317c0,??_7TTerrainObject@Toshi@@6B@,const Toshi::TTerrainObject::`vftable'
+215,0x30c60,0x10030c60,??_7TTextureFactory@Toshi@@6B@,const Toshi::TTextureFactory::`vftable'
+216,0x30dc0,0x10030dc0,??_7TTextureResource@Toshi@@6B@,const Toshi::TTextureResource::`vftable'
+217,0x31880,0x10031880,??_7TTransformObject@Toshi@@6B@,const Toshi::TTransformObject::`vftable'
+218,0x30ea0,0x10030ea0,??_7TVertexFactoryResourceInterface@Toshi@@6B@,const Toshi::TVertexFactoryResourceInterface::`vftable'
+219,0x30f60,0x10030f60,??_7TVertexPoolResourceInterface@Toshi@@6B@,const Toshi::TVertexPoolResourceInterface::`vftable'
+220,0x31960,0x10031960,??_7TViewport@Toshi@@6B@,const Toshi::TViewport::`vftable'
+221,0x133b0,0x100133b0,??_FTResourceNameMap@Toshi@@QAEXXZ,public: void __thiscall Toshi::TResourceNameMap::`default constructor closure'(void)
+222,0x69d0,0x100069d0,?AddAnimation@TSkeletonInstance@Toshi@@QAEPAVTAnimation@2@FMM@Z,"public: class Toshi::TAnimation * __thiscall Toshi::TSkeletonInstance::AddAnimation(short,float,float)"
+223,0x45b0,0x100045b0,?AddAnimationFull@TSkeletonInstance@Toshi@@QAEPAVTAnimation@2@FMMMI@Z,"public: class Toshi::TAnimation * __thiscall Toshi::TSkeletonInstance::AddAnimationFull(short,float,float,float,unsigned int)"
+224,0x12a70,0x10012a70,?AddHandler@TViewport@Toshi@@QAEXAAVTHandler@12@@Z,public: void __thiscall Toshi::TViewport::AddHandler(class Toshi::TViewport::THandler &)
+225,0x13120,0x10013120,?AddItem@TResourceNameMap@Toshi@@QAEPAVItem@12@XZ,public: class Toshi::TResourceNameMap::Item * __thiscall Toshi::TResourceNameMap::AddItem(void)
+226,0x69a0,0x100069a0,?AddManagedAnimation@TSkeletonInstance@Toshi@@QAEPAVTAnimation@2@FMMM@Z,"public: class Toshi::TAnimation * __thiscall Toshi::TSkeletonInstance::AddManagedAnimation(short,float,float,float)"
+227,0x95c0,0x100095c0,?AddString@TDebugText@Toshi@@QAEPAUString@12@PBDG@Z,"public: struct Toshi::TDebugText::String * __thiscall Toshi::TDebugText::AddString(char const *,unsigned short)"
+228,0x129d0,0x100129d0,?AllowBackgroundClear@TViewport@Toshi@@QAE_N_N@Z,public: bool __thiscall Toshi::TViewport::AllowBackgroundClear(bool)
+229,0x129b0,0x100129b0,?AllowDepthClear@TViewport@Toshi@@QAE_N_N@Z,public: bool __thiscall Toshi::TViewport::AllowDepthClear(bool)
+230,0x109b0,0x100109b0,?Begin@TScene@Toshi@@QAE_NXZ,public: bool __thiscall Toshi::TScene::Begin(void)
+231,0xc580,0x1000c580,?BeginScene@TRenderInterface@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TRenderInterface::BeginScene(void)
+232,0x14c00,0x10014c00,?BoneRemap@TDImp@Toshi@@AAEXXZ,private: void __thiscall Toshi::TDImp::BoneRemap(void)
+233,0x14a70,0x10014a70,?BoneSpaceTransform@TDImp@Toshi@@QAEXPAVTBone@12@AAVTVector3@2@AAVTAABox@2@AA_N@Z,"public: void __thiscall Toshi::TDImp::BoneSpaceTransform(class Toshi::TDImp::TBone *,class Toshi::TVector3 &,class Toshi::TAABox &,bool &)"
+234,0x14b40,0x10014b40,?BuildImpParentChildHierarchy@TDImp@Toshi@@AAEXXZ,private: void __thiscall Toshi::TDImp::BuildImpParentChildHierarchy(void)
+235,0x18790,0x10018790,?CalculateScatteringConstants@TAtmosphere@Toshi@@AAEXXZ,private: void __thiscall Toshi::TAtmosphere::CalculateScatteringConstants(void)
+236,0x18970,0x10018970,?CalculateVSConstants@TAtmosphere@Toshi@@AAEXXZ,private: void __thiscall Toshi::TAtmosphere::CalculateVSConstants(void)
+237,0x5400,0x10005400,?ChangeToManaged@TAnimation@Toshi@@QAEXM@Z,public: void __thiscall Toshi::TAnimation::ChangeToManaged(float)
+238,0x7e40,0x10007e40,?Child@TResource@Toshi@@QBEPAV12@XZ,public: class Toshi::TResource * __thiscall Toshi::TResource::Child(void)const 
+239,0x15a50,0x10015a50,?CollapseSequences@TDImp@Toshi@@AAEXPAVTBone@12@AAVTVector4@2@AAVTQuaternion@2@@Z,"private: void __thiscall Toshi::TDImp::CollapseSequences(class Toshi::TDImp::TBone *,class Toshi::TVector4 &,class Toshi::TQuaternion &)"
+240,0x8b90,0x10008b90,?Compare@ResourceName@Toshi@@QAE_NAAV12@@Z,public: bool __thiscall Toshi::ResourceName::Compare(class Toshi::ResourceName &)
+241,0x8c20,0x10008c20,?Compare@ResourceName@Toshi@@QAE_NPBD@Z,public: bool __thiscall Toshi::ResourceName::Compare(char const *)
+242,0x8bd0,0x10008bd0,?Compare@ResourceName@Toshi@@QAE_NPBDH@Z,"public: bool __thiscall Toshi::ResourceName::Compare(char const *,int)"
+243,0x156f0,0x100156f0,?ComposeHierarchy@TDImp@Toshi@@AAEXXZ,private: void __thiscall Toshi::TDImp::ComposeHierarchy(void)
+244,0x17d00,0x10017d00,?ComposeWithParent@TBone@TDImp@Toshi@@QAEXXZ,public: void __thiscall Toshi::TDImp::TBone::ComposeWithParent(void)
+245,0x18da0,0x10018da0,?ComputeAttenuation@TSun@Toshi@@AAEXMAAVTVector4@2@H@Z,"private: void __thiscall Toshi::TSun::ComputeAttenuation(float,class Toshi::TVector4 &,int)"
+246,0x14450,0x10014450,?ComputeBoneBox@TDImp@Toshi@@QAE_NPAV12@PAVTBone@12@_N@Z,"public: bool __thiscall Toshi::TDImp::ComputeBoneBox(class Toshi::TDImp *,class Toshi::TDImp::TBone *,bool)"
+247,0x177d0,0x100177d0,?ComputeManualAndHook@TBone@TDImp@Toshi@@QAE_NPAV23@AAVTVector4@3@AAVTQuaternion@3@@Z,"public: bool __thiscall Toshi::TDImp::TBone::ComputeManualAndHook(class Toshi::TDImp *,class Toshi::TVector4 &,class Toshi::TQuaternion &)"
+248,0xc400,0x1000c400,?ConnectDefaultViewportHandlers@TRenderInterface@Toshi@@UAEXAAVTViewport@2@@Z,public: virtual void __thiscall Toshi::TRenderInterface::ConnectDefaultViewportHandlers(class Toshi::TViewport &)
+249,0xee70,0x1000ee70,?ConnectEventHandlers@TCameraViewportHandler@Toshi@@AAEXXZ,private: void __thiscall Toshi::TCameraViewportHandler::ConnectEventHandlers(void)
+250,0xefc0,0x1000efc0,?Create@TCameraObject@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TCameraObject::Create(void)
+251,0x14010,0x10014010,?Create@TDImp@Toshi@@QAE_NPBD@Z,public: bool __thiscall Toshi::TDImp::Create(char const *)
+252,0xf880,0x1000f880,?Create@TGFXFileInstanceObject@Toshi@@UAE_NPAVTGFXFileObject@2@@Z,public: virtual bool __thiscall Toshi::TGFXFileInstanceObject::Create(class Toshi::TGFXFileObject *)
+253,0xff80,0x1000ff80,?Create@TGFXFileObject@Toshi@@UAE_NPAD@Z,public: virtual bool __thiscall Toshi::TGFXFileObject::Create(char *)
+254,0xcc10,0x1000cc10,?Create@TIndexFactoryResourceInterface@Toshi@@UAE_NGI@Z,"public: virtual bool __thiscall Toshi::TIndexFactoryResourceInterface::Create(unsigned short,unsigned int)"
+255,0xcdf0,0x1000cdf0,?Create@TIndexPoolResourceInterface@Toshi@@MAE_NPAVTIndexFactoryResourceInterface@2@II@Z,"protected: virtual bool __thiscall Toshi::TIndexPoolResourceInterface::Create(class Toshi::TIndexFactoryResourceInterface *,unsigned int,unsigned int)"
+256,0x55e0,0x100055e0,?Create@TKeyframeLibrary@Toshi@@SGPAV12@PBDHHH@Z,"public: static class Toshi::TKeyframeLibrary * __stdcall Toshi::TKeyframeLibrary::Create(char const *,int,int,int)"
+257,0x56f0,0x100056f0,?Create@TKeyframeLibraryInstance@Toshi@@QAEPAVTKeyframeLibrary@2@PAV32@@Z,public: class Toshi::TKeyframeLibrary * __thiscall Toshi::TKeyframeLibraryInstance::Create(class Toshi::TKeyframeLibrary *)
+258,0xcf10,0x1000cf10,?Create@TMaterialLibrary@Toshi@@IAE_NPBD@Z,protected: bool __thiscall Toshi::TMaterialLibrary::Create(char const *)
+259,0xd940,0x1000d940,?Create@TMaterialLibraryManager@Toshi@@QAEXXZ,public: void __thiscall Toshi::TMaterialLibraryManager::Create(void)
+260,0xafb0,0x1000afb0,?Create@TRenderInterface@Toshi@@UAE_NPAVTKernelInterface@2@@Z,public: virtual bool __thiscall Toshi::TRenderInterface::Create(class Toshi::TKernelInterface *)
+261,0x12fa0,0x10012fa0,?Create@TResource@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TResource::Create(void)
+262,0x10bd0,0x10010bd0,?Create@TScene@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TScene::Create(void)
+263,0x19290,0x10019290,?Create@TSceneSysMesh@Toshi@@UAE_NPAVTMesh@2@@Z,public: virtual bool __thiscall Toshi::TSceneSysMesh::Create(class Toshi::TMesh *)
+264,0x6170,0x10006170,?Create@TSkeleton@Toshi@@QAE_NI@Z,public: bool __thiscall Toshi::TSkeleton::Create(unsigned int)
+265,0x5930,0x10005930,?Create@TSkeleton@Toshi@@SGPAV12@PAVTDImp@2@I@Z,"public: static class Toshi::TSkeleton * __stdcall Toshi::TSkeleton::Create(class Toshi::TDImp *,unsigned int)"
+266,0x11810,0x10011810,?Create@TTerrainObject@Toshi@@UAE_NPAVTTerrainInterface@2@@Z,public: virtual bool __thiscall Toshi::TTerrainObject::Create(class Toshi::TTerrainInterface *)
+267,0xe540,0x1000e540,?Create@TTextureResource@Toshi@@MAE_NPAXIIII@Z,"protected: virtual bool __thiscall Toshi::TTextureResource::Create(void *,unsigned int,unsigned int,unsigned int,unsigned int)"
+268,0xe550,0x1000e550,?Create@TTextureResource@Toshi@@MAE_NPBDI@Z,"protected: virtual bool __thiscall Toshi::TTextureResource::Create(char const *,unsigned int)"
+269,0xe6b0,0x1000e6b0,?Create@TVertexFactoryResourceInterface@Toshi@@UAE_NPAVTVertexFactoryFormat@2@GI@Z,"public: virtual bool __thiscall Toshi::TVertexFactoryResourceInterface::Create(class Toshi::TVertexFactoryFormat *,unsigned short,unsigned int)"
+270,0xe910,0x1000e910,?Create@TVertexPoolResourceInterface@Toshi@@MAE_NPAVTVertexFactoryResourceInterface@2@II@Z,"protected: virtual bool __thiscall Toshi::TVertexPoolResourceInterface::Create(class Toshi::TVertexFactoryResourceInterface *,unsigned int,unsigned int)"
+271,0x12340,0x10012340,?Create@TViewport@Toshi@@UAE_N_N@Z,public: virtual bool __thiscall Toshi::TViewport::Create(bool)
+272,0x10c80,0x10010c80,?CreateCamera@TScene@Toshi@@QAEPAVTCameraObject@2@PBDPAVTResource@2@@Z,"public: class Toshi::TCameraObject * __thiscall Toshi::TScene::CreateCamera(char const *,class Toshi::TResource *)"
+273,0xc5c0,0x1000c5c0,?CreateDisplay@TRenderInterface@Toshi@@UAE_NPBVDisplayParams@12@@Z,public: virtual bool __thiscall Toshi::TRenderInterface::CreateDisplay(class Toshi::TRenderInterface::DisplayParams const *)
+274,0x5720,0x10005720,?CreateEx@TKeyframeLibraryInstance@Toshi@@QAEPAVTKeyframeLibrary@2@PAV32@HHHHHH@Z,"public: class Toshi::TKeyframeLibrary * __thiscall Toshi::TKeyframeLibraryInstance::CreateEx(class Toshi::TKeyframeLibrary *,int,int,int,int,int,int)"
+275,0xe530,0x1000e530,?CreateEx@TTextureResource@Toshi@@MAE_NPAXIIIIW4TTEXTURERESOURCEFORMAT@2@I@Z,"protected: virtual bool __thiscall Toshi::TTextureResource::CreateEx(void *,unsigned int,unsigned int,unsigned int,unsigned int,enum Toshi::TTEXTURERESOURCEFORMAT,unsigned int)"
+276,0xc760,0x1000c760,?CreateHAL@TTextureFactory@Toshi@@SGPAV12@PAVTRenderInterface@2@PBDPAVTResource@2@@Z,"public: static class Toshi::TTextureFactory * __stdcall Toshi::TTextureFactory::CreateHAL(class Toshi::TRenderInterface *,char const *,class Toshi::TResource *)"
+277,0xc690,0x1000c690,?CreateHAL@TTextureResource@Toshi@@SGPAV12@PAVTRenderInterface@2@PBDPAVTResource@2@@Z,"public: static class Toshi::TTextureResource * __stdcall Toshi::TTextureResource::CreateHAL(class Toshi::TRenderInterface *,char const *,class Toshi::TResource *)"
+278,0xffb0,0x1000ffb0,?CreateInstance@TGFXFileObject@Toshi@@QAEPAVTGFXFileInstanceObject@2@PBDPAVTResource@2@@Z,"public: class Toshi::TGFXFileInstanceObject * __thiscall Toshi::TGFXFileObject::CreateInstance(char const *,class Toshi::TResource *)"
+279,0x9670,0x10009670,?CreateInstance@TModel@Toshi@@QAEPAVTModelInstance@2@XZ,public: class Toshi::TModelInstance * __thiscall Toshi::TModel::CreateInstance(void)
+280,0x61f0,0x100061f0,?CreateInstance@TSkeleton@Toshi@@QAEPAVTSkeletonInstance@2@_N@Z,public: class Toshi::TSkeletonInstance * __thiscall Toshi::TSkeleton::CreateInstance(bool)
+281,0x72f0,0x100072f0,?CreateMaterialLibraryManager@TRenderInterface@Toshi@@QAEXXZ,public: void __thiscall Toshi::TRenderInterface::CreateMaterialLibraryManager(void)
+282,0x190b0,0x100190b0,?CreateObject@TAtmosphere@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::TAtmosphere::CreateObject(void)
+283,0xf380,0x1000f380,?CreateObject@TCameraObject@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::TCameraObject::CreateObject(void)
+284,0xfdb0,0x1000fdb0,?CreateObject@TGFXFileInstanceObject@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::TGFXFileInstanceObject::CreateObject(void)
+285,0x10120,0x10010120,?CreateObject@TGFXFileObject@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::TGFXFileObject::CreateObject(void)
+286,0xccb0,0x1000ccb0,?CreateObject@TIndexFactoryResourceInterface@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::TIndexFactoryResourceInterface::CreateObject(void)
+287,0xcec0,0x1000cec0,?CreateObject@TIndexPoolResourceInterface@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::TIndexPoolResourceInterface::CreateObject(void)
+288,0x102a0,0x100102a0,?CreateObject@TJPShadowFudgeNode@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::TJPShadowFudgeNode::CreateObject(void)
+289,0x106d0,0x100106d0,?CreateObject@TLightingNode@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::TLightingNode::CreateObject(void)
+290,0xdde0,0x1000dde0,?CreateObject@TMaterial@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::TMaterial::CreateObject(void)
+291,0xdd10,0x1000dd10,?CreateObject@TMesh@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::TMesh::CreateObject(void)
+292,0x12d50,0x10012d50,?CreateObject@TNullResource@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::TNullResource::CreateObject(void)
+293,0x11180,0x10011180,?CreateObject@TNullSceneResource@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::TNullSceneResource::CreateObject(void)
+294,0xc600,0x1000c600,?CreateObject@TRenderInterface@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::TRenderInterface::CreateObject(void)
+295,0x12ff0,0x10012ff0,?CreateObject@TResource@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::TResource::CreateObject(void)
+296,0x10db0,0x10010db0,?CreateObject@TScene@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::TScene::CreateObject(void)
+297,0x11270,0x10011270,?CreateObject@TSceneObject@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::TSceneObject::CreateObject(void)
+298,0x19300,0x10019300,?CreateObject@TSceneSysMesh@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::TSceneSysMesh::CreateObject(void)
+299,0xde70,0x1000de70,?CreateObject@TShader@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::TShader::CreateObject(void)
+300,0x18fb0,0x10018fb0,?CreateObject@TSun@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::TSun::CreateObject(void)
+301,0x118a0,0x100118a0,?CreateObject@TTerrainObject@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::TTerrainObject::CreateObject(void)
+302,0xe3d0,0x1000e3d0,?CreateObject@TTextureFactory@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::TTextureFactory::CreateObject(void)
+303,0xe5d0,0x1000e5d0,?CreateObject@TTextureResource@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::TTextureResource::CreateObject(void)
+304,0x120d0,0x100120d0,?CreateObject@TTransformObject@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::TTransformObject::CreateObject(void)
+305,0xe7d0,0x1000e7d0,?CreateObject@TVertexFactoryResourceInterface@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::TVertexFactoryResourceInterface::CreateObject(void)
+306,0xe9e0,0x1000e9e0,?CreateObject@TVertexPoolResourceInterface@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::TVertexPoolResourceInterface::CreateObject(void)
+307,0x12b80,0x10012b80,?CreateObject@TViewport@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::TViewport::CreateObject(void)
+308,0x19090,0x10019090,?CreateObjectInPlace@TAtmosphere@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::TAtmosphere::CreateObjectInPlace(void *)
+309,0xf360,0x1000f360,?CreateObjectInPlace@TCameraObject@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::TCameraObject::CreateObjectInPlace(void *)
+310,0xfd90,0x1000fd90,?CreateObjectInPlace@TGFXFileInstanceObject@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::TGFXFileInstanceObject::CreateObjectInPlace(void *)
+311,0x10100,0x10010100,?CreateObjectInPlace@TGFXFileObject@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::TGFXFileObject::CreateObjectInPlace(void *)
+312,0xcca0,0x1000cca0,?CreateObjectInPlace@TIndexFactoryResourceInterface@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::TIndexFactoryResourceInterface::CreateObjectInPlace(void *)
+313,0xceb0,0x1000ceb0,?CreateObjectInPlace@TIndexPoolResourceInterface@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::TIndexPoolResourceInterface::CreateObjectInPlace(void *)
+314,0x10280,0x10010280,?CreateObjectInPlace@TJPShadowFudgeNode@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::TJPShadowFudgeNode::CreateObjectInPlace(void *)
+315,0x106b0,0x100106b0,?CreateObjectInPlace@TLightingNode@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::TLightingNode::CreateObjectInPlace(void *)
+316,0xddd0,0x1000ddd0,?CreateObjectInPlace@TMaterial@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::TMaterial::CreateObjectInPlace(void *)
+317,0xdd00,0x1000dd00,?CreateObjectInPlace@TMesh@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::TMesh::CreateObjectInPlace(void *)
+318,0x12d30,0x10012d30,?CreateObjectInPlace@TNullResource@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::TNullResource::CreateObjectInPlace(void *)
+319,0x11160,0x10011160,?CreateObjectInPlace@TNullSceneResource@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::TNullSceneResource::CreateObjectInPlace(void *)
+320,0xc5f0,0x1000c5f0,?CreateObjectInPlace@TRenderInterface@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::TRenderInterface::CreateObjectInPlace(void *)
+321,0x12fd0,0x10012fd0,?CreateObjectInPlace@TResource@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::TResource::CreateObjectInPlace(void *)
+322,0x10d90,0x10010d90,?CreateObjectInPlace@TScene@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::TScene::CreateObjectInPlace(void *)
+323,0x11250,0x10011250,?CreateObjectInPlace@TSceneObject@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::TSceneObject::CreateObjectInPlace(void *)
+324,0x192e0,0x100192e0,?CreateObjectInPlace@TSceneSysMesh@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::TSceneSysMesh::CreateObjectInPlace(void *)
+325,0xde60,0x1000de60,?CreateObjectInPlace@TShader@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::TShader::CreateObjectInPlace(void *)
+326,0x18f90,0x10018f90,?CreateObjectInPlace@TSun@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::TSun::CreateObjectInPlace(void *)
+327,0x11880,0x10011880,?CreateObjectInPlace@TTerrainObject@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::TTerrainObject::CreateObjectInPlace(void *)
+328,0xe3c0,0x1000e3c0,?CreateObjectInPlace@TTextureFactory@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::TTextureFactory::CreateObjectInPlace(void *)
+329,0xe5c0,0x1000e5c0,?CreateObjectInPlace@TTextureResource@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::TTextureResource::CreateObjectInPlace(void *)
+330,0x120b0,0x100120b0,?CreateObjectInPlace@TTransformObject@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::TTransformObject::CreateObjectInPlace(void *)
+331,0xe7c0,0x1000e7c0,?CreateObjectInPlace@TVertexFactoryResourceInterface@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::TVertexFactoryResourceInterface::CreateObjectInPlace(void *)
+332,0xe9d0,0x1000e9d0,?CreateObjectInPlace@TVertexPoolResourceInterface@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::TVertexPoolResourceInterface::CreateObjectInPlace(void *)
+333,0x12b60,0x10012b60,?CreateObjectInPlace@TViewport@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::TViewport::CreateObjectInPlace(void *)
+334,0xcc00,0x1000cc00,?CreatePool@TIndexFactoryResourceInterface@Toshi@@UAEPAVTIndexPoolResourceInterface@2@GI@Z,"public: virtual class Toshi::TIndexPoolResourceInterface * __thiscall Toshi::TIndexFactoryResourceInterface::CreatePool(unsigned short,unsigned int)"
+335,0xe750,0x1000e750,?CreatePool@TVertexFactoryResourceInterface@Toshi@@UAEPAVTVertexPoolResourceInterface@2@GI@Z,"public: virtual class Toshi::TVertexPoolResourceInterface * __thiscall Toshi::TVertexFactoryResourceInterface::CreatePool(unsigned short,unsigned int)"
+336,0xb7b0,0x1000b7b0,?CreateResource@TRenderInterface@Toshi@@QAEPAVTResource@2@PBVTClass@2@PBDPAV32@@Z,"public: class Toshi::TResource * __thiscall Toshi::TRenderInterface::CreateResource(class Toshi::TClass const *,char const *,class Toshi::TResource *)"
+337,0xb8d0,0x1000b8d0,?CreateResourceInPlace@TRenderInterface@Toshi@@QAEPAVTResource@2@PBVTClass@2@PAXPBDPAV32@@Z,"public: class Toshi::TResource * __thiscall Toshi::TRenderInterface::CreateResourceInPlace(class Toshi::TClass const *,void *,char const *,class Toshi::TResource *)"
+338,0xbce0,0x1000bce0,?CreateSystemResources@TRenderInterface@Toshi@@MAE_NXZ,protected: virtual bool __thiscall Toshi::TRenderInterface::CreateSystemResources(void)
+339,0x10cc0,0x10010cc0,?CreateViewport@TScene@Toshi@@QAEPAVTViewport@2@PBDPAVTResource@2@_N@Z,"public: class Toshi::TViewport * __thiscall Toshi::TScene::CreateViewport(char const *,class Toshi::TResource *,bool)"
+340,0xa740,0x1000a740,?CullAABoxToFrustum@TRenderContext@Toshi@@SGHPBVTAABox@2@PBVTPlane@2@HH@Z,"public: static int __stdcall Toshi::TRenderContext::CullAABoxToFrustum(class Toshi::TAABox const *,class Toshi::TPlane const *,int,int)"
+341,0xa6b0,0x1000a6b0,?CullSphereToFrustum@TRenderContext@Toshi@@SGHPBVTSphere@2@PBVTPlane@2@HH@Z,"public: static int __stdcall Toshi::TRenderContext::CullSphereToFrustum(class Toshi::TSphere const *,class Toshi::TPlane const *,int,int)"
+342,0xa7f0,0x1000a7f0,?CullSphereToFrustumSimple@TRenderContext@Toshi@@SG_NABVTSphere@2@PBVTPlane@2@H@Z,"public: static bool __stdcall Toshi::TRenderContext::CullSphereToFrustumSimple(class Toshi::TSphere const &,class Toshi::TPlane const *,int)"
+343,0x5690,0x10005690,?DebugDump@TKeyframeLibrary@Toshi@@QAEX_N@Z,public: void __thiscall Toshi::TKeyframeLibrary::DebugDump(bool)
+344,0x58e0,0x100058e0,?DebugDump@TKeyframeLibraryManager@Toshi@@QAEX_N@Z,public: void __thiscall Toshi::TKeyframeLibraryManager::DebugDump(bool)
+345,0x17eb0,0x10017eb0,?DebugDump@TSkeleton@TDImp@Toshi@@QAEXXZ,public: void __thiscall Toshi::TDImp::TSkeleton::DebugDump(void)
+346,0x6450,0x10006450,?DebugDump@TSkeleton@Toshi@@QAEX_N@Z,public: void __thiscall Toshi::TSkeleton::DebugDump(bool)
+347,0x6990,0x10006990,?DebugRender@TSkeletonInstance@Toshi@@QAEXXZ,public: void __thiscall Toshi::TSkeletonInstance::DebugRender(void)
+348,0x19070,0x10019070,?DeinitialiseStatic@TAtmosphere@Toshi@@CGXXZ,private: static void __stdcall Toshi::TAtmosphere::DeinitialiseStatic(void)
+349,0xf340,0x1000f340,?DeinitialiseStatic@TCameraObject@Toshi@@CGXXZ,private: static void __stdcall Toshi::TCameraObject::DeinitialiseStatic(void)
+350,0xfd70,0x1000fd70,?DeinitialiseStatic@TGFXFileInstanceObject@Toshi@@CGXXZ,private: static void __stdcall Toshi::TGFXFileInstanceObject::DeinitialiseStatic(void)
+351,0x100e0,0x100100e0,?DeinitialiseStatic@TGFXFileObject@Toshi@@CGXXZ,private: static void __stdcall Toshi::TGFXFileObject::DeinitialiseStatic(void)
+352,0xcc80,0x1000cc80,?DeinitialiseStatic@TIndexFactoryResourceInterface@Toshi@@CGXXZ,private: static void __stdcall Toshi::TIndexFactoryResourceInterface::DeinitialiseStatic(void)
+353,0xce90,0x1000ce90,?DeinitialiseStatic@TIndexPoolResourceInterface@Toshi@@CGXXZ,private: static void __stdcall Toshi::TIndexPoolResourceInterface::DeinitialiseStatic(void)
+354,0x10260,0x10010260,?DeinitialiseStatic@TJPShadowFudgeNode@Toshi@@CGXXZ,private: static void __stdcall Toshi::TJPShadowFudgeNode::DeinitialiseStatic(void)
+355,0x10690,0x10010690,?DeinitialiseStatic@TLightingNode@Toshi@@CGXXZ,private: static void __stdcall Toshi::TLightingNode::DeinitialiseStatic(void)
+356,0xddb0,0x1000ddb0,?DeinitialiseStatic@TMaterial@Toshi@@CGXXZ,private: static void __stdcall Toshi::TMaterial::DeinitialiseStatic(void)
+357,0xdce0,0x1000dce0,?DeinitialiseStatic@TMesh@Toshi@@CGXXZ,private: static void __stdcall Toshi::TMesh::DeinitialiseStatic(void)
+358,0x12d10,0x10012d10,?DeinitialiseStatic@TNullResource@Toshi@@CGXXZ,private: static void __stdcall Toshi::TNullResource::DeinitialiseStatic(void)
+359,0x11140,0x10011140,?DeinitialiseStatic@TNullSceneResource@Toshi@@CGXXZ,private: static void __stdcall Toshi::TNullSceneResource::DeinitialiseStatic(void)
+360,0xc5d0,0x1000c5d0,?DeinitialiseStatic@TRenderInterface@Toshi@@CGXXZ,private: static void __stdcall Toshi::TRenderInterface::DeinitialiseStatic(void)
+361,0x12fb0,0x10012fb0,?DeinitialiseStatic@TResource@Toshi@@CGXXZ,private: static void __stdcall Toshi::TResource::DeinitialiseStatic(void)
+362,0x10d70,0x10010d70,?DeinitialiseStatic@TScene@Toshi@@CGXXZ,private: static void __stdcall Toshi::TScene::DeinitialiseStatic(void)
+363,0x11230,0x10011230,?DeinitialiseStatic@TSceneObject@Toshi@@CGXXZ,private: static void __stdcall Toshi::TSceneObject::DeinitialiseStatic(void)
+364,0x192c0,0x100192c0,?DeinitialiseStatic@TSceneSysMesh@Toshi@@CGXXZ,private: static void __stdcall Toshi::TSceneSysMesh::DeinitialiseStatic(void)
+365,0xde40,0x1000de40,?DeinitialiseStatic@TShader@Toshi@@CGXXZ,private: static void __stdcall Toshi::TShader::DeinitialiseStatic(void)
+366,0x18f70,0x10018f70,?DeinitialiseStatic@TSun@Toshi@@CGXXZ,private: static void __stdcall Toshi::TSun::DeinitialiseStatic(void)
+367,0x11860,0x10011860,?DeinitialiseStatic@TTerrainObject@Toshi@@CGXXZ,private: static void __stdcall Toshi::TTerrainObject::DeinitialiseStatic(void)
+368,0xe3a0,0x1000e3a0,?DeinitialiseStatic@TTextureFactory@Toshi@@CGXXZ,private: static void __stdcall Toshi::TTextureFactory::DeinitialiseStatic(void)
+369,0xe5a0,0x1000e5a0,?DeinitialiseStatic@TTextureResource@Toshi@@CGXXZ,private: static void __stdcall Toshi::TTextureResource::DeinitialiseStatic(void)
+370,0x12090,0x10012090,?DeinitialiseStatic@TTransformObject@Toshi@@CGXXZ,private: static void __stdcall Toshi::TTransformObject::DeinitialiseStatic(void)
+371,0xe7a0,0x1000e7a0,?DeinitialiseStatic@TVertexFactoryResourceInterface@Toshi@@CGXXZ,private: static void __stdcall Toshi::TVertexFactoryResourceInterface::DeinitialiseStatic(void)
+372,0xe9b0,0x1000e9b0,?DeinitialiseStatic@TVertexPoolResourceInterface@Toshi@@CGXXZ,private: static void __stdcall Toshi::TVertexPoolResourceInterface::DeinitialiseStatic(void)
+373,0x12b40,0x10012b40,?DeinitialiseStatic@TViewport@Toshi@@CGXXZ,private: static void __stdcall Toshi::TViewport::DeinitialiseStatic(void)
+374,0x6920,0x10006920,?Delete@TKeyframeLibrary@Toshi@@QAEXXZ,public: void __thiscall Toshi::TKeyframeLibrary::Delete(void)
+375,0x9840,0x10009840,?Delete@TModelInstance@Toshi@@QAEXXZ,public: void __thiscall Toshi::TModelInstance::Delete(void)
+376,0x6830,0x10006830,?Delete@TSkeleton@Toshi@@QAEXXZ,public: void __thiscall Toshi::TSkeleton::Delete(void)
+377,0x69f0,0x100069f0,?Delete@TSkeletonInstance@Toshi@@QAEXXZ,public: void __thiscall Toshi::TSkeletonInstance::Delete(void)
+378,0x13a50,0x10013a50,?DeleteData@TKeySequence@TDBase@Toshi@@AAEXXZ,private: void __thiscall Toshi::TDBase::TKeySequence::DeleteData(void)
+379,0x13ab0,0x10013ab0,?DeleteData@TSequence@TDBase@Toshi@@AAEXXZ,private: void __thiscall Toshi::TDBase::TSequence::DeleteData(void)
+380,0x129f0,0x100129f0,?DeleteHandlers@TViewport@Toshi@@QAEXXZ,public: void __thiscall Toshi::TViewport::DeleteHandlers(void)
+381,0xc350,0x1000c350,?DeleteResource@TRenderInterface@Toshi@@AAEXPAVTResource@2@@Z,private: void __thiscall Toshi::TRenderInterface::DeleteResource(class Toshi::TResource *)
+382,0xc120,0x1000c120,?DeleteResourceAtomic@TRenderInterface@Toshi@@AAEXPAVTResource@2@@Z,private: void __thiscall Toshi::TRenderInterface::DeleteResourceAtomic(class Toshi::TResource *)
+383,0xc0d0,0x1000c0d0,?DeleteResourceRecurse@TRenderInterface@Toshi@@AAEXPAVTResource@2@@Z,private: void __thiscall Toshi::TRenderInterface::DeleteResourceRecurse(class Toshi::TResource *)
+384,0x171f0,0x100171f0,?DeleteResources@TDImpMaterial@TDImp@Toshi@@AAEXXZ,private: void __thiscall Toshi::TDImp::TDImpMaterial::DeleteResources(void)
+385,0x17ec0,0x10017ec0,?DeleteResources@TSkeleton@TDImp@Toshi@@AAEXXZ,private: void __thiscall Toshi::TDImp::TSkeleton::DeleteResources(void)
+386,0x17690,0x10017690,?DeleteResources@TSkinMesh@TDImp@Toshi@@AAEXXZ,private: void __thiscall Toshi::TDImp::TSkinMesh::DeleteResources(void)
+387,0x174d0,0x100174d0,?DeleteResources@TSubMesh@TDImp@Toshi@@QAEXXZ,public: void __thiscall Toshi::TDImp::TSubMesh::DeleteResources(void)
+388,0xe110,0x1000e110,?DeregisterTexture@TTextureFactory@Toshi@@QAEXPAVTTextureResource@2@@Z,public: void __thiscall Toshi::TTextureFactory::DeregisterTexture(class Toshi::TTextureResource *)
+389,0x95e0,0x100095e0,?Destroy@TDebugText@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TDebugText::Destroy(void)
+390,0x68e0,0x100068e0,?Destroy@TKeyframeLibraryInstance@Toshi@@QAEXXZ,public: void __thiscall Toshi::TKeyframeLibraryInstance::Destroy(void)
+391,0xcfa0,0x1000cfa0,?Destroy@TMaterialLibrary@Toshi@@IAEXXZ,protected: void __thiscall Toshi::TMaterialLibrary::Destroy(void)
+392,0xda90,0x1000da90,?Destroy@TMaterialLibraryManager@Toshi@@QAEXXZ,public: void __thiscall Toshi::TMaterialLibraryManager::Destroy(void)
+393,0xaff0,0x1000aff0,?Destroy@TRenderInterface@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TRenderInterface::Destroy(void)
+394,0xc3a0,0x1000c3a0,?DestroyAllResources@TRenderInterface@Toshi@@IAEXXZ,protected: void __thiscall Toshi::TRenderInterface::DestroyAllResources(void)
+395,0xc5b0,0x1000c5b0,?DestroyDisplay@TRenderInterface@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TRenderInterface::DestroyDisplay(void)
+396,0xbfc0,0x1000bfc0,?DestroyDyingResources@TRenderInterface@Toshi@@AAEXPAVTResource@2@@Z,private: void __thiscall Toshi::TRenderInterface::DestroyDyingResources(class Toshi::TResource *)
+397,0x72e0,0x100072e0,?DestroyMaterialLibraryManager@TRenderInterface@Toshi@@QAEXXZ,public: void __thiscall Toshi::TRenderInterface::DestroyMaterialLibraryManager(void)
+398,0xfd00,0x1000fd00,?DestroyResource@TGFXFileInstanceObject@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TGFXFileInstanceObject::DestroyResource(void)
+399,0xbaf0,0x1000baf0,?DestroyResource@TRenderInterface@Toshi@@QAEXPAVTResource@2@@Z,public: void __thiscall Toshi::TRenderInterface::DestroyResource(class Toshi::TResource *)
+400,0x12f50,0x10012f50,?DestroyResource@TResource@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TResource::DestroyResource(void)
+401,0xc040,0x1000c040,?DestroyResourceRecurse@TRenderInterface@Toshi@@AAEXPAVTResource@2@@Z,private: void __thiscall Toshi::TRenderInterface::DestroyResourceRecurse(class Toshi::TResource *)
+402,0xc1f0,0x1000c1f0,?DestroyResourceTypeRecurse@TRenderInterface@Toshi@@AAEXABVTClass@2@PAVTResource@2@@Z,"private: void __thiscall Toshi::TRenderInterface::DestroyResourceTypeRecurse(class Toshi::TClass const &,class Toshi::TResource *)"
+403,0xc380,0x1000c380,?DestroyShaders@TRenderInterface@Toshi@@IAEXXZ,protected: void __thiscall Toshi::TRenderInterface::DestroyShaders(void)
+404,0xc3c0,0x1000c3c0,?DestroySystemResources@TRenderInterface@Toshi@@MAEXXZ,protected: virtual void __thiscall Toshi::TRenderInterface::DestroySystemResources(void)
+405,0xef00,0x1000ef00,?DisconnectEventHandlers@TCameraViewportHandler@Toshi@@AAEXXZ,private: void __thiscall Toshi::TCameraViewportHandler::DisconnectEventHandlers(void)
+406,0xdf10,0x1000df10,?Dump@TTextureFactory@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TTextureFactory::Dump(void)
+407,0xb6b0,0x1000b6b0,?DumpResourceTree@TRenderInterface@Toshi@@QAEXPAVTResource@2@@Z,public: void __thiscall Toshi::TRenderInterface::DumpResourceTree(class Toshi::TResource *)
+408,0xb030,0x1000b030,?DumpStats@TRenderInterface@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TRenderInterface::DumpStats(void)
+409,0xf1c0,0x1000f1c0,?Enable@TCameraObject@Toshi@@QAE_N_N@Z,public: bool __thiscall Toshi::TCameraObject::Enable(bool)
+410,0xf770,0x1000f770,?Enable@TViewport@Toshi@@QAEX_N@Z,public: void __thiscall Toshi::TViewport::Enable(bool)
+411,0x12990,0x10012990,?EnableDefaultBeginRender@TViewport@Toshi@@QAE_N_N@Z,public: bool __thiscall Toshi::TViewport::EnableDefaultBeginRender(bool)
+412,0xfe30,0x1000fe30,?EnableDistanceAlphaFade@TGFXFileInstanceObject@Toshi@@QAE_N_N@Z,public: bool __thiscall Toshi::TGFXFileInstanceObject::EnableDistanceAlphaFade(bool)
+413,0xa880,0x1000a880,?EnableFog@TRenderContext@Toshi@@QAEX_N@Z,public: void __thiscall Toshi::TRenderContext::EnableFog(bool)
+414,0x10b50,0x10010b50,?End@TScene@Toshi@@QAE_NXZ,public: bool __thiscall Toshi::TScene::End(void)
+415,0xc570,0x1000c570,?EndScene@TRenderInterface@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TRenderInterface::EndScene(void)
+416,0x6e20,0x10006e20,?FailedD3DMessageBox@TRenderInterface@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TRenderInterface::FailedD3DMessageBox(void)
+417,0x6e10,0x10006e10,?FailedDisplayMessageBox@TRenderInterface@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TRenderInterface::FailedDisplayMessageBox(void)
+418,0x17740,0x10017740,?FileRead@TBone@TDImp@Toshi@@QAE_NPAV23@@Z,public: bool __thiscall Toshi::TDImp::TBone::FileRead(class Toshi::TDImp *)
+419,0x16fa0,0x10016fa0,?FileRead@TDImpMaterial@TDImp@Toshi@@QAE_NPAV23@@Z,public: bool __thiscall Toshi::TDImp::TDImpMaterial::FileRead(class Toshi::TDImp *)
+420,0x17dc0,0x10017dc0,?FileRead@TSkeleton@TDImp@Toshi@@QAE_NPAV23@@Z,public: bool __thiscall Toshi::TDImp::TSkeleton::FileRead(class Toshi::TDImp *)
+421,0x17510,0x10017510,?FileRead@TSkinMesh@TDImp@Toshi@@QAE_NPAV23@@Z,public: bool __thiscall Toshi::TDImp::TSkinMesh::FileRead(class Toshi::TDImp *)
+422,0x17270,0x10017270,?FileRead@TSubMesh@TDImp@Toshi@@QAE_NPAV23@@Z,public: bool __thiscall Toshi::TDImp::TSubMesh::FileRead(class Toshi::TDImp *)
+423,0x17e20,0x10017e20,?FileReadBones@TSkeleton@TDImp@Toshi@@QAE_NPAV23@@Z,public: bool __thiscall Toshi::TDImp::TSkeleton::FileReadBones(class Toshi::TDImp *)
+424,0x175f0,0x100175f0,?FileReadSubMeshes@TSkinMesh@TDImp@Toshi@@QAE_NPAV23@@Z,public: bool __thiscall Toshi::TDImp::TSkinMesh::FileReadSubMeshes(class Toshi::TDImp *)
+425,0x13030,0x10013030,?Find@TResourceNameMap@Toshi@@QAEPAVItem@12@PBD@Z,public: class Toshi::TResourceNameMap::Item * __thiscall Toshi::TResourceNameMap::Find(char const *)
+426,0xb440,0x1000b440,?FindDevice@TRenderInterface@Toshi@@QAEPBVDevice@Mode@TRenderAdapter@2@PBVDisplayParams@12@@Z,public: class Toshi::TRenderAdapter::Mode::Device const * __thiscall Toshi::TRenderInterface::FindDevice(class Toshi::TRenderInterface::DisplayParams const *)
+427,0xc440,0x1000c440,?FindNextResource@TRenderInterface@Toshi@@QAEPAVTResource@2@AAVFindFirstData@12@@Z,public: class Toshi::TResource * __thiscall Toshi::TRenderInterface::FindNextResource(class Toshi::TRenderInterface::FindFirstData &)
+428,0xc4a0,0x1000c4a0,?FindNextResourceInit@TRenderInterface@Toshi@@QAEXAAVFindFirstData@12@PBDPAVTResource@2@@Z,"public: void __thiscall Toshi::TRenderInterface::FindNextResourceInit(class Toshi::TRenderInterface::FindFirstData &,char const *,class Toshi::TResource *)"
+429,0xbc30,0x1000bc30,?FindOrphanedResource@TRenderInterface@Toshi@@QAEPAVTResource@2@PBDPAV32@@Z,"public: class Toshi::TResource * __thiscall Toshi::TRenderInterface::FindOrphanedResource(char const *,class Toshi::TResource *)"
+430,0xc4c0,0x1000c4c0,?FindResource@TRenderInterface@Toshi@@QAEPAVTResource@2@IPAV32@@Z,"public: class Toshi::TResource * __thiscall Toshi::TRenderInterface::FindResource(unsigned int,class Toshi::TResource *)"
+431,0xbb70,0x1000bb70,?FindResource@TRenderInterface@Toshi@@QAEPAVTResource@2@PBDPAV32@@Z,"public: class Toshi::TResource * __thiscall Toshi::TRenderInterface::FindResource(char const *,class Toshi::TResource *)"
+432,0xe0a0,0x1000e0a0,?FindTexture@TTextureFactory@Toshi@@QAEPAVTTextureResource@2@PBD@Z,public: class Toshi::TTextureResource * __thiscall Toshi::TTextureFactory::FindTexture(char const *)
+433,0xde00,0x1000de00,?Flush@TShader@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TShader::Flush(void)
+434,0xbb20,0x1000bb20,?FlushDyingResources@TRenderInterface@Toshi@@QAEXXZ,public: void __thiscall Toshi::TRenderInterface::FlushDyingResources(void)
+435,0xbca0,0x1000bca0,?FlushShaders@TRenderInterface@Toshi@@QAEXXZ,public: void __thiscall Toshi::TRenderInterface::FlushShaders(void)
+436,0xc190,0x1000c190,?FlushShadersRecurse@TRenderInterface@Toshi@@AAEXPAVTResource@2@@Z,private: void __thiscall Toshi::TRenderInterface::FlushShadersRecurse(class Toshi::TResource *)
+437,0xfee0,0x1000fee0,?ForceLowLOD@TGFXFileInstanceObject@Toshi@@SGX_N@Z,public: static void __stdcall Toshi::TGFXFileInstanceObject::ForceLowLOD(bool)
+438,0x136a0,0x100136a0,?GenerateCloseKey@TKeySequence@TDBase@Toshi@@QAEXAAVTKeyFrame@23@M@Z,"public: void __thiscall Toshi::TDBase::TKeySequence::GenerateCloseKey(class Toshi::TDBase::TKeyFrame &,float)"
+439,0x13890,0x10013890,?GenerateExportCloseKey@TKeySequence@TDBase@Toshi@@QAEXAAVTKeyFrame@23@M@Z,"public: void __thiscall Toshi::TDBase::TKeySequence::GenerateExportCloseKey(class Toshi::TDBase::TKeyFrame &,float)"
+440,0x13560,0x10013560,?GenerateKey@TKeySequence@TDBase@Toshi@@QAEXAAVTKeyFrame@23@M@Z,"public: void __thiscall Toshi::TDBase::TKeySequence::GenerateKey(class Toshi::TDBase::TKeyFrame &,float)"
+441,0x8b60,0x10008b60,?Get@TAnimQuaternion@Toshi@@QAEAAVTQuaternion@2@XZ,public: class Toshi::TQuaternion & __thiscall Toshi::TAnimQuaternion::Get(void)
+442,0x8b40,0x10008b40,?Get@TAnimQuaternion@Toshi@@QAEXAAVTQuaternion@2@@Z,public: void __thiscall Toshi::TAnimQuaternion::Get(class Toshi::TQuaternion &)
+443,0x8ac0,0x10008ac0,?Get@TAnimVector@Toshi@@QAEAAVTVector4@2@XZ,public: class Toshi::TVector4 & __thiscall Toshi::TAnimVector::Get(void)
+444,0x8aa0,0x10008aa0,?Get@TAnimVector@Toshi@@QAEXAAVTVector4@2@@Z,public: void __thiscall Toshi::TAnimVector::Get(class Toshi::TVector4 &)
+445,0x133c0,0x100133c0,?Get@TKeyFrame@TDBase@Toshi@@QAEXAAMAAVTQuaternion@3@AAVTVector4@3@@Z,"public: void __thiscall Toshi::TDBase::TKeyFrame::Get(float &,class Toshi::TQuaternion &,class Toshi::TVector4 &)"
+446,0x6dd0,0x10006dd0,?GetAbsoluteTime@TScene@Toshi@@QBEMXZ,public: float __thiscall Toshi::TScene::GetAbsoluteTime(void)const 
+447,0x8950,0x10008950,?GetActiveAnimationCount@TSkeletonInstance@Toshi@@QAEHXZ,public: int __thiscall Toshi::TSkeletonInstance::GetActiveAnimationCount(void)
+448,0xc560,0x1000c560,?GetAdapterList@TRenderInterface@Toshi@@QAEPAV?$TNodeList@VTRenderAdapter@Toshi@@@2@XZ,public: class Toshi::TNodeList<class Toshi::TRenderAdapter> * __thiscall Toshi::TRenderInterface::GetAdapterList(void)
+449,0xc650,0x1000c650,?GetAddressMode@TTextureResource@Toshi@@QAE?AW4ADDRESSMODE@12@XZ,public: enum Toshi::TTextureResource::ADDRESSMODE __thiscall Toshi::TTextureResource::GetAddressMode(void)
+450,0x10710,0x10010710,?GetAmbientColour@TLightingNode@Toshi@@QBEABVTVector4@2@XZ,public: class Toshi::TVector4 const & __thiscall Toshi::TLightingNode::GetAmbientColour(void)const 
+451,0x7590,0x10007590,?GetAmbientColour@TRenderContext@Toshi@@QBEABVTVector4@2@XZ,public: class Toshi::TVector4 const & __thiscall Toshi::TRenderContext::GetAmbientColour(void)const 
+452,0x7560,0x10007560,?GetAmbientColour@TRenderContext@Toshi@@QBEXAAVTVector4@2@@Z,public: void __thiscall Toshi::TRenderContext::GetAmbientColour(class Toshi::TVector4 &)const 
+453,0x6d60,0x10006d60,?GetAmbientColour@TScene@Toshi@@QBEABVTVector4@2@XZ,public: class Toshi::TVector4 const & __thiscall Toshi::TScene::GetAmbientColour(void)const 
+454,0x6d30,0x10006d30,?GetAmbientColour@TScene@Toshi@@QBEXAAVTVector4@2@@Z,public: void __thiscall Toshi::TScene::GetAmbientColour(class Toshi::TVector4 &)const 
+455,0x8040,0x10008040,?GetAnimationMaxCount@TSkeleton@Toshi@@QAEFXZ,public: short __thiscall Toshi::TSkeleton::GetAnimationMaxCount(void)
+456,0x13d10,0x10013d10,?GetAssociatedBoneName@TKeySequence@TDBase@Toshi@@QAEPBDXZ,public: char const * __thiscall Toshi::TDBase::TKeySequence::GetAssociatedBoneName(void)
+457,0x7a60,0x10007a60,?GetAtmBetaMieMult@TAtmosphere@Toshi@@QBEMXZ,public: float __thiscall Toshi::TAtmosphere::GetAtmBetaMieMult(void)const 
+458,0x7a70,0x10007a70,?GetAtmBetaRayMult@TAtmosphere@Toshi@@QBEMXZ,public: float __thiscall Toshi::TAtmosphere::GetAtmBetaRayMult(void)const 
+459,0x7a40,0x10007a40,?GetAtmExtinctionMult@TAtmosphere@Toshi@@QBEMXZ,public: float __thiscall Toshi::TAtmosphere::GetAtmExtinctionMult(void)const 
+460,0x7a30,0x10007a30,?GetAtmHGg@TAtmosphere@Toshi@@QBEMXZ,public: float __thiscall Toshi::TAtmosphere::GetAtmHGg(void)const 
+461,0x7a50,0x10007a50,?GetAtmInscatteringMult@TAtmosphere@Toshi@@QBEMXZ,public: float __thiscall Toshi::TAtmosphere::GetAtmInscatteringMult(void)const 
+462,0x7400,0x10007400,?GetAtmosphere@TRenderContext@Toshi@@QAEAAVTAtmosphere@2@XZ,public: class Toshi::TAtmosphere & __thiscall Toshi::TRenderContext::GetAtmosphere(void)
+463,0x8070,0x10008070,?GetAutoBoneCount@TSkeleton@Toshi@@QAEFXZ,public: short __thiscall Toshi::TSkeleton::GetAutoBoneCount(void)
+464,0x12aa0,0x10012aa0,?GetBackgroundColour@TViewport@Toshi@@QAEXAAE000@Z,"public: void __thiscall Toshi::TViewport::GetBackgroundColour(unsigned char &,unsigned char &,unsigned char &,unsigned char &)"
+465,0x8940,0x10008940,?GetBaseAnimationCount@TSkeletonInstance@Toshi@@QAEHXZ,public: int __thiscall Toshi::TSkeletonInstance::GetBaseAnimationCount(void)
+466,0xf720,0x1000f720,?GetBeginRenderEmitter@TViewport@Toshi@@QAEAAV?$TEmitter@VTViewport@Toshi@@VBeginRenderEvent@12@@2@XZ,"public: class Toshi::TEmitter<class Toshi::TViewport,class Toshi::TViewport::BeginRenderEvent> & __thiscall Toshi::TViewport::GetBeginRenderEmitter(void)"
+467,0x6e70,0x10006e70,?GetBeginSceneEmitter@TRenderInterface@Toshi@@QAEPAV?$TEmitter@VTRenderInterface@Toshi@@VBeginSceneEvent@12@@2@XZ,"public: class Toshi::TEmitter<class Toshi::TRenderInterface,class Toshi::TRenderInterface::BeginSceneEvent> * __thiscall Toshi::TRenderInterface::GetBeginSceneEmitter(void)"
+468,0xf750,0x1000f750,?GetBeginUpdateEmitter@TViewport@Toshi@@QAEAAV?$TEmitter@VTViewport@Toshi@@VBeginUpdateEvent@12@@2@XZ,"public: class Toshi::TEmitter<class Toshi::TViewport,class Toshi::TViewport::BeginUpdateEvent> & __thiscall Toshi::TViewport::GetBeginUpdateEmitter(void)"
+469,0x79f0,0x100079f0,?GetBetaDashMie@TAtmosphere@Toshi@@QBEABVTVector3@2@XZ,public: class Toshi::TVector3 const & __thiscall Toshi::TAtmosphere::GetBetaDashMie(void)const 
+470,0x7a10,0x10007a10,?GetBetaDashRayleigh@TAtmosphere@Toshi@@QBEABVTVector3@2@XZ,public: class Toshi::TVector3 const & __thiscall Toshi::TAtmosphere::GetBetaDashRayleigh(void)const 
+471,0x7a00,0x10007a00,?GetBetaMie@TAtmosphere@Toshi@@QBEABVTVector3@2@XZ,public: class Toshi::TVector3 const & __thiscall Toshi::TAtmosphere::GetBetaMie(void)const 
+472,0x7a20,0x10007a20,?GetBetaRayleigh@TAtmosphere@Toshi@@QBEABVTVector3@2@XZ,public: class Toshi::TVector3 const & __thiscall Toshi::TAtmosphere::GetBetaRayleigh(void)const 
+473,0x7700,0x10007700,?GetBiasColour@TSun@Toshi@@QBEABVTVector3@2@XZ,public: class Toshi::TVector3 const & __thiscall Toshi::TSun::GetBiasColour(void)const 
+474,0x76f0,0x100076f0,?GetBiasInterp@TSun@Toshi@@QBEMXZ,public: float __thiscall Toshi::TSun::GetBiasInterp(void)const 
+475,0x86d0,0x100086d0,?GetBlendInSpeed@TAnimation@Toshi@@QAEMXZ,public: float __thiscall Toshi::TAnimation::GetBlendInSpeed(void)
+476,0x86c0,0x100086c0,?GetBlendOutSpeed@TAnimation@Toshi@@QAEMXZ,public: float __thiscall Toshi::TAnimation::GetBlendOutSpeed(void)
+477,0x8710,0x10008710,?GetBone@TAnimation@Toshi@@QAEPAVTAnimationBone@2@H@Z,public: class Toshi::TAnimationBone * __thiscall Toshi::TAnimation::GetBone(int)
+478,0x80e0,0x100080e0,?GetBone@TSkeleton@Toshi@@QAEPAVTSkeletonBone@2@H@Z,public: class Toshi::TSkeletonBone * __thiscall Toshi::TSkeleton::GetBone(int)
+479,0x80f0,0x100080f0,?GetBone@TSkeleton@Toshi@@QAEPAVTSkeletonBone@2@PBDH@Z,"public: class Toshi::TSkeletonBone * __thiscall Toshi::TSkeleton::GetBone(char const *,int)"
+480,0x88f0,0x100088f0,?GetBone@TSkeletonInstance@Toshi@@QAEPAVTSkeletonInstanceBone@2@H@Z,public: class Toshi::TSkeletonInstanceBone * __thiscall Toshi::TSkeletonInstance::GetBone(int)
+481,0x7f70,0x10007f70,?GetBone@TSkeletonSequence@Toshi@@QAEPAVTSkeletonSequenceBone@2@H@Z,public: class Toshi::TSkeletonSequenceBone * __thiscall Toshi::TSkeletonSequence::GetBone(int)
+482,0x8080,0x10008080,?GetBoneCount@TSkeleton@Toshi@@QAEFXZ,public: short __thiscall Toshi::TSkeleton::GetBoneCount(void)
+483,0x9400,0x10009400,?GetBoneDepth@TKeySequence@TDBase@Toshi@@QBEIXZ,public: unsigned int __thiscall Toshi::TDBase::TKeySequence::GetBoneDepth(void)const 
+484,0x62e0,0x100062e0,?GetBoneID@TSkeleton@Toshi@@QAEHPBDH@Z,"public: int __thiscall Toshi::TSkeleton::GetBoneID(char const *,int)"
+485,0x8ce0,0x10008ce0,?GetBoneList@TSkeleton@TDImp@Toshi@@QAEPAV?$TNodeList@VTBone@TDImp@Toshi@@@3@XZ,public: class Toshi::TNodeList<class Toshi::TDImp::TBone> * __thiscall Toshi::TDImp::TSkeleton::GetBoneList(void)
+486,0x18090,0x10018090,?GetBoneNames@TSkinMesh@TDImp@Toshi@@QAEPBDXZ,public: char const * __thiscall Toshi::TDImp::TSkinMesh::GetBoneNames(void)
+487,0x6580,0x10006580,?GetBoneTransform@TSkeleton@Toshi@@QAEXHHMAAVTMatrix44@2@@Z,"public: void __thiscall Toshi::TSkeleton::GetBoneTransform(int,int,float,class Toshi::TMatrix44 &)"
+488,0x5230,0x10005230,?GetBoneTransformCurrent@TSkeletonInstance@Toshi@@QAEAAVTMatrix44@2@HAAV32@@Z,"public: class Toshi::TMatrix44 & __thiscall Toshi::TSkeletonInstance::GetBoneTransformCurrent(int,class Toshi::TMatrix44 &)"
+489,0x52f0,0x100052f0,?GetBoneTransformCurrent@TSkeletonInstance@Toshi@@QAEABVTMatrix44@2@H@Z,public: class Toshi::TMatrix44 const & __thiscall Toshi::TSkeletonInstance::GetBoneTransformCurrent(int)
+490,0x6460,0x10006460,?GetBoneTransformLocal@TSkeleton@Toshi@@QAEGHHMGAAVTMatrix44@2@@Z,"public: unsigned short __thiscall Toshi::TSkeleton::GetBoneTransformLocal(int,int,float,unsigned short,class Toshi::TMatrix44 &)"
+491,0x8720,0x10008720,?GetBones@TAnimation@Toshi@@QAEPAVTAnimationBone@2@XZ,public: class Toshi::TAnimationBone * __thiscall Toshi::TAnimation::GetBones(void)
+492,0x8110,0x10008110,?GetBones@TSkeleton@Toshi@@QAEPAVTSkeletonBone@2@XZ,public: class Toshi::TSkeletonBone * __thiscall Toshi::TSkeleton::GetBones(void)
+493,0x8900,0x10008900,?GetBones@TSkeletonInstance@Toshi@@QAEPAVTSkeletonInstanceBone@2@XZ,public: class Toshi::TSkeletonInstanceBone * __thiscall Toshi::TSkeletonInstance::GetBones(void)
+494,0x7f80,0x10007f80,?GetBones@TSkeletonSequence@Toshi@@QAEPAPAVTSkeletonSequenceBone@2@XZ,public: class Toshi::TSkeletonSequenceBone * * __thiscall Toshi::TSkeletonSequence::GetBones(void)
+495,0x9310,0x10009310,?GetBoundingCenter@TDImp@Toshi@@QAE?AVTVector3@2@XZ,public: class Toshi::TVector3 __thiscall Toshi::TDImp::GetBoundingCenter(void)
+496,0x92e0,0x100092e0,?GetBoundingRadius@TDImp@Toshi@@QAEMXZ,public: float __thiscall Toshi::TDImp::GetBoundingRadius(void)
+497,0xf3d0,0x1000f3d0,?GetCamera@TCameraViewportHandler@Toshi@@QAEAAVTCameraObject@2@XZ,public: class Toshi::TCameraObject & __thiscall Toshi::TCameraViewportHandler::GetCamera(void)
+498,0xf6e0,0x1000f6e0,?GetChangeEmitter@TViewport@Toshi@@QAEAAV?$TEmitter@VTViewport@Toshi@@VTNullEvent@2@@2@XZ,"public: class Toshi::TEmitter<class Toshi::TViewport,class Toshi::TNullEvent> & __thiscall Toshi::TViewport::GetChangeEmitter(void)"
+499,0x190e0,0x100190e0,?GetClass@TAtmosphere@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::TAtmosphere::GetClass(void)const 
+500,0xf3b0,0x1000f3b0,?GetClass@TCameraObject@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::TCameraObject::GetClass(void)const 
+501,0xfde0,0x1000fde0,?GetClass@TGFXFileInstanceObject@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::TGFXFileInstanceObject::GetClass(void)const 
+502,0x10150,0x10010150,?GetClass@TGFXFileObject@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::TGFXFileObject::GetClass(void)const 
+503,0xccc0,0x1000ccc0,?GetClass@TIndexFactoryResourceInterface@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::TIndexFactoryResourceInterface::GetClass(void)const 
+504,0xced0,0x1000ced0,?GetClass@TIndexPoolResourceInterface@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::TIndexPoolResourceInterface::GetClass(void)const 
+505,0x102d0,0x100102d0,?GetClass@TJPShadowFudgeNode@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::TJPShadowFudgeNode::GetClass(void)const 
+506,0x10700,0x10010700,?GetClass@TLightingNode@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::TLightingNode::GetClass(void)const 
+507,0xddf0,0x1000ddf0,?GetClass@TMaterial@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::TMaterial::GetClass(void)const 
+508,0xdd20,0x1000dd20,?GetClass@TMesh@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::TMesh::GetClass(void)const 
+509,0x12d80,0x10012d80,?GetClass@TNullResource@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::TNullResource::GetClass(void)const 
+510,0x111b0,0x100111b0,?GetClass@TNullSceneResource@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::TNullSceneResource::GetClass(void)const 
+511,0xc610,0x1000c610,?GetClass@TRenderInterface@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::TRenderInterface::GetClass(void)const 
+512,0x13020,0x10013020,?GetClass@TResource@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::TResource::GetClass(void)const 
+513,0x10de0,0x10010de0,?GetClass@TScene@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::TScene::GetClass(void)const 
+514,0x112a0,0x100112a0,?GetClass@TSceneObject@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::TSceneObject::GetClass(void)const 
+515,0x19330,0x10019330,?GetClass@TSceneSysMesh@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::TSceneSysMesh::GetClass(void)const 
+516,0xde80,0x1000de80,?GetClass@TShader@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::TShader::GetClass(void)const 
+517,0x18fe0,0x10018fe0,?GetClass@TSun@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::TSun::GetClass(void)const 
+518,0x118d0,0x100118d0,?GetClass@TTerrainObject@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::TTerrainObject::GetClass(void)const 
+519,0xe3e0,0x1000e3e0,?GetClass@TTextureFactory@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::TTextureFactory::GetClass(void)const 
+520,0xe5e0,0x1000e5e0,?GetClass@TTextureResource@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::TTextureResource::GetClass(void)const 
+521,0x12100,0x10012100,?GetClass@TTransformObject@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::TTransformObject::GetClass(void)const 
+522,0xe7e0,0x1000e7e0,?GetClass@TVertexFactoryResourceInterface@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::TVertexFactoryResourceInterface::GetClass(void)const 
+523,0xe9f0,0x1000e9f0,?GetClass@TVertexPoolResourceInterface@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::TVertexPoolResourceInterface::GetClass(void)const 
+524,0x12bb0,0x10012bb0,?GetClass@TViewport@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::TViewport::GetClass(void)const 
+525,0x75e0,0x100075e0,?GetClipFlags@TRenderContext@Toshi@@QBEHXZ,public: int __thiscall Toshi::TRenderContext::GetClipFlags(void)const 
+526,0x9a30,0x10009a30,?GetCoarseBoundingRadius@TModel@Toshi@@QAEMXZ,public: float __thiscall Toshi::TModel::GetCoarseBoundingRadius(void)
+527,0x9190,0x10009190,?GetCodebook@TDImpMaterial@TDImp@Toshi@@QBEPAXXZ,public: void * __thiscall Toshi::TDImp::TDImpMaterial::GetCodebook(void)const 
+528,0x91b0,0x100091b0,?GetCodebookBytes@TDImpMaterial@TDImp@Toshi@@QBEIXZ,public: unsigned int __thiscall Toshi::TDImp::TDImpMaterial::GetCodebookBytes(void)const 
+529,0x91d0,0x100091d0,?GetCodebookFormat@TDImpMaterial@TDImp@Toshi@@QBEIXZ,public: unsigned int __thiscall Toshi::TDImp::TDImpMaterial::GetCodebookFormat(void)const 
+530,0x91c0,0x100091c0,?GetCodebookSize@TDImpMaterial@TDImp@Toshi@@QBEIXZ,public: unsigned int __thiscall Toshi::TDImp::TDImpMaterial::GetCodebookSize(void)const 
+531,0x7760,0x10007760,?GetColor@TSun@Toshi@@QBEABVTVector4@2@XZ,public: class Toshi::TVector4 const & __thiscall Toshi::TSun::GetColor(void)const 
+532,0x7730,0x10007730,?GetColorAndIntensity@TSun@Toshi@@QBEXAAVTVector4@2@@Z,public: void __thiscall Toshi::TSun::GetColorAndIntensity(class Toshi::TVector4 &)const 
+533,0x7720,0x10007720,?GetColorWithIntensity@TSun@Toshi@@QBEABVTVector4@2@XZ,public: class Toshi::TVector4 const & __thiscall Toshi::TSun::GetColorWithIntensity(void)const 
+534,0xc670,0x1000c670,?GetCreateFlags@TTextureResource@Toshi@@QAEIXZ,public: unsigned int __thiscall Toshi::TTextureResource::GetCreateFlags(void)
+535,0x6d80,0x10006d80,?GetCurrentCamera@TScene@Toshi@@QAEPAVTCameraObject@2@XZ,public: class Toshi::TCameraObject * __thiscall Toshi::TScene::GetCurrentCamera(void)
+536,0xc420,0x1000c420,?GetCurrentRenderContext@TRenderInterface@Toshi@@QAEPAVTRenderContext@2@XZ,public: class Toshi::TRenderContext * __thiscall Toshi::TRenderInterface::GetCurrentRenderContext(void)
+537,0x7e10,0x10007e10,?GetDebugDyingInfo@TResource@Toshi@@QAEPBDXZ,public: char const * __thiscall Toshi::TResource::GetDebugDyingInfo(void)
+538,0x7e20,0x10007e20,?GetDebugInfo@TResource@Toshi@@QAEPBDXZ,public: char const * __thiscall Toshi::TResource::GetDebugInfo(void)
+539,0x9a20,0x10009a20,?GetDebugName@TModel@Toshi@@QAEPBDXZ,public: char const * __thiscall Toshi::TModel::GetDebugName(void)
+540,0x6e50,0x10006e50,?GetDebugText@TRenderInterface@Toshi@@QAEPAVTDebugText@2@XZ,public: class Toshi::TDebugText * __thiscall Toshi::TRenderInterface::GetDebugText(void)
+541,0x6da0,0x10006da0,?GetDefaultCamera@TScene@Toshi@@QAEPAVTCameraObject@2@W4DEFCAMERA@12@@Z,public: class Toshi::TCameraObject * __thiscall Toshi::TScene::GetDefaultCamera(enum Toshi::TScene::DEFCAMERA)
+542,0x6dc0,0x10006dc0,?GetDeltaTime@TScene@Toshi@@QBEMXZ,public: float __thiscall Toshi::TScene::GetDeltaTime(void)const 
+543,0x86e0,0x100086e0,?GetDestWeight@TAnimation@Toshi@@QAEMXZ,public: float __thiscall Toshi::TAnimation::GetDestWeight(void)
+544,0xf6f0,0x1000f6f0,?GetDestroyEmitter@TViewport@Toshi@@QAEAAV?$TEmitter@VTViewport@Toshi@@VTNullEvent@2@@2@XZ,"public: class Toshi::TEmitter<class Toshi::TViewport,class Toshi::TNullEvent> & __thiscall Toshi::TViewport::GetDestroyEmitter(void)"
+545,0x8cf0,0x10008cf0,?GetDimensions@TSkeleton@TDImp@Toshi@@QAEXAAI@Z,public: void __thiscall Toshi::TDImp::TSkeleton::GetDimensions(unsigned int &)
+546,0x180a0,0x100180a0,?GetDimensions@TSkinMesh@TDImp@Toshi@@QAEXAAI000@Z,"public: void __thiscall Toshi::TDImp::TSkinMesh::GetDimensions(unsigned int &,unsigned int &,unsigned int &,unsigned int &)"
+547,0x17230,0x10017230,?GetDimensions@TSubMesh@TDImp@Toshi@@QAEXAAI0QAI@Z,"public: void __thiscall Toshi::TDImp::TSubMesh::GetDimensions(unsigned int &,unsigned int &,unsigned int * const)"
+548,0x7710,0x10007710,?GetDirection@TSun@Toshi@@QBEABVTVector3@2@XZ,public: class Toshi::TVector3 const & __thiscall Toshi::TSun::GetDirection(void)const 
+549,0xfe20,0x1000fe20,?GetDistanceAlphaFadeState@TGFXFileInstanceObject@Toshi@@QAE_NXZ,public: bool __thiscall Toshi::TGFXFileInstanceObject::GetDistanceAlphaFadeState(void)
+550,0xf700,0x1000f700,?GetEndRenderEmitter@TViewport@Toshi@@QAEAAV?$TEmitter@VTViewport@Toshi@@VEndRenderEvent@12@@2@XZ,"public: class Toshi::TEmitter<class Toshi::TViewport,class Toshi::TViewport::EndRenderEvent> & __thiscall Toshi::TViewport::GetEndRenderEmitter(void)"
+551,0x6e60,0x10006e60,?GetEndSceneEmitter@TRenderInterface@Toshi@@QAEPAV?$TEmitter@VTRenderInterface@Toshi@@VEndSceneEvent@12@@2@XZ,"public: class Toshi::TEmitter<class Toshi::TRenderInterface,class Toshi::TRenderInterface::EndSceneEvent> * __thiscall Toshi::TRenderInterface::GetEndSceneEmitter(void)"
+552,0xf730,0x1000f730,?GetEndUpdateEmitter@TViewport@Toshi@@QAEAAV?$TEmitter@VTViewport@Toshi@@VEndUpdateEvent@12@@2@XZ,"public: class Toshi::TEmitter<class Toshi::TViewport,class Toshi::TViewport::EndUpdateEvent> & __thiscall Toshi::TViewport::GetEndUpdateEmitter(void)"
+553,0xf510,0x1000f510,?GetEuler@TTransformObject@Toshi@@QAEABVTVector3@2@XZ,public: class Toshi::TVector3 const & __thiscall Toshi::TTransformObject::GetEuler(void)
+554,0xf220,0x1000f220,?GetFOV@TCameraObject@Toshi@@QAEMXZ,public: float __thiscall Toshi::TCameraObject::GetFOV(void)
+555,0xf230,0x1000f230,?GetFOVMode@TCameraObject@Toshi@@QAE?AW4FOVMODE@12@XZ,public: enum Toshi::TCameraObject::FOVMODE __thiscall Toshi::TCameraObject::GetFOVMode(void)
+556,0xce70,0x1000ce70,?GetFactory@TIndexPoolResourceInterface@Toshi@@QAEPAVTIndexFactoryResourceInterface@2@XZ,public: class Toshi::TIndexFactoryResourceInterface * __thiscall Toshi::TIndexPoolResourceInterface::GetFactory(void)
+557,0xe990,0x1000e990,?GetFactory@TVertexPoolResourceInterface@Toshi@@QAEPAVTVertexFactoryResourceInterface@2@XZ,public: class Toshi::TVertexFactoryResourceInterface * __thiscall Toshi::TVertexPoolResourceInterface::GetFactory(void)
+558,0x7960,0x10007960,?GetFar@TAtmosphere@Toshi@@QBEMXZ,public: float __thiscall Toshi::TAtmosphere::GetFar(void)const 
+559,0xf240,0x1000f240,?GetFar@TCameraObject@Toshi@@QAEMXZ,public: float __thiscall Toshi::TCameraObject::GetFar(void)
+560,0x73d0,0x100073d0,?GetFlag@TRenderContext@Toshi@@IBE_NW4FLAG@12@@Z,protected: bool __thiscall Toshi::TRenderContext::GetFlag(enum Toshi::TRenderContext::FLAG)const 
+561,0x8730,0x10008730,?GetFlags@TAnimation@Toshi@@QAEGXZ,public: unsigned short __thiscall Toshi::TAnimation::GetFlags(void)
+562,0x9170,0x10009170,?GetFlags@TDImpMaterial@TDImp@Toshi@@QBEIXZ,public: unsigned int __thiscall Toshi::TDImp::TDImpMaterial::GetFlags(void)const 
+563,0xcc30,0x1000cc30,?GetFlags@TIndexFactoryResourceInterface@Toshi@@QAEIXZ,public: unsigned int __thiscall Toshi::TIndexFactoryResourceInterface::GetFlags(void)
+564,0xce20,0x1000ce20,?GetFlags@TIndexPoolResourceInterface@Toshi@@QBEIXZ,public: unsigned int __thiscall Toshi::TIndexPoolResourceInterface::GetFlags(void)const 
+565,0x6c30,0x10006c30,?GetFlags@TMaterial@Toshi@@QAEIXZ,public: unsigned int __thiscall Toshi::TMaterial::GetFlags(void)
+566,0x9ac0,0x10009ac0,?GetFlags@TModel@Toshi@@QAEIXZ,public: unsigned int __thiscall Toshi::TModel::GetFlags(void)
+567,0x6cc0,0x10006cc0,?GetFlags@TSceneObject@Toshi@@QAEIXZ,public: unsigned int __thiscall Toshi::TSceneObject::GetFlags(void)
+568,0x8310,0x10008310,?GetFlags@TSkeletonBone@Toshi@@QAEGXZ,public: unsigned short __thiscall Toshi::TSkeletonBone::GetFlags(void)
+569,0x7f90,0x10007f90,?GetFlags@TSkeletonSequence@Toshi@@QAEGXZ,public: unsigned short __thiscall Toshi::TSkeletonSequence::GetFlags(void)
+570,0xe760,0x1000e760,?GetFlags@TVertexFactoryResourceInterface@Toshi@@QAEIXZ,public: unsigned int __thiscall Toshi::TVertexFactoryResourceInterface::GetFlags(void)
+571,0xe940,0x1000e940,?GetFlags@TVertexPoolResourceInterface@Toshi@@QBEIXZ,public: unsigned int __thiscall Toshi::TVertexPoolResourceInterface::GetFlags(void)const 
+572,0x74f0,0x100074f0,?GetFogColour@TRenderContext@Toshi@@QBEABVTVector4@2@XZ,public: class Toshi::TVector4 const & __thiscall Toshi::TRenderContext::GetFogColour(void)const 
+573,0x74c0,0x100074c0,?GetFogColour@TRenderContext@Toshi@@QBEXAAVTVector4@2@@Z,public: void __thiscall Toshi::TRenderContext::GetFogColour(class Toshi::TVector4 &)const 
+574,0x7440,0x10007440,?GetFogDistance@TRenderContext@Toshi@@QBEXAAM0@Z,"public: void __thiscall Toshi::TRenderContext::GetFogDistance(float &,float &)const "
+575,0x6970,0x10006970,?GetFreeAnimation@TSkeletonInstance@Toshi@@IAEPAVTAnimation@2@XZ,protected: class Toshi::TAnimation * __thiscall Toshi::TSkeletonInstance::GetFreeAnimation(void)
+576,0xfed0,0x1000fed0,?GetGFXFile@TGFXFileInstanceObject@Toshi@@QAEPAVTGFXFileObject@2@XZ,public: class Toshi::TGFXFileObject * __thiscall Toshi::TGFXFileInstanceObject::GetGFXFile(void)
+577,0x75c0,0x100075c0,?GetGuardFlags@TRenderContext@Toshi@@QBEHXZ,public: int __thiscall Toshi::TRenderContext::GetGuardFlags(void)const 
+578,0x7410,0x10007410,?GetGuardPlanes@TRenderContext@Toshi@@QBEPBVTPlane@2@XZ,public: class Toshi::TPlane const * __thiscall Toshi::TRenderContext::GetGuardPlanes(void)const 
+579,0xa360,0x1000a360,?GetGuardPlanes@TRenderContext@Toshi@@QBEXPAVTPlane@2@H@Z,"public: void __thiscall Toshi::TRenderContext::GetGuardPlanes(class Toshi::TPlane *,int)const "
+580,0xf7b0,0x1000f7b0,?GetHandlers@TViewport@Toshi@@QAEAAV?$TNodeList@VTHandler@TViewport@Toshi@@@2@XZ,public: class Toshi::TNodeList<class Toshi::TViewport::THandler> & __thiscall Toshi::TViewport::GetHandlers(void)
+581,0x91f0,0x100091f0,?GetHeight@TDImpMaterial@TDImp@Toshi@@QBEIXZ,public: unsigned int __thiscall Toshi::TDImp::TDImpMaterial::GetHeight(void)const 
+582,0x12b00,0x10012b00,?GetHeight@TViewport@Toshi@@QAEMXZ,public: float __thiscall Toshi::TViewport::GetHeight(void)
+583,0x91a0,0x100091a0,?GetImage@TDImpMaterial@TDImp@Toshi@@QBEPAXXZ,public: void * __thiscall Toshi::TDImp::TDImpMaterial::GetImage(void)const 
+584,0x91e0,0x100091e0,?GetImageBytes@TDImpMaterial@TDImp@Toshi@@QBEIXZ,public: unsigned int __thiscall Toshi::TDImp::TDImpMaterial::GetImageBytes(void)const 
+585,0x9210,0x10009210,?GetImageFormat@TDImpMaterial@TDImp@Toshi@@QBEIXZ,public: unsigned int __thiscall Toshi::TDImp::TDImpMaterial::GetImageFormat(void)const 
+586,0x8eb0,0x10008eb0,?GetIndex2@TBone@TDImp@Toshi@@QAEIXZ,public: unsigned int __thiscall Toshi::TDImp::TBone::GetIndex2(void)
+587,0x8ec0,0x10008ec0,?GetIndex@TBone@TDImp@Toshi@@QAEIXZ,public: unsigned int __thiscall Toshi::TDImp::TBone::GetIndex(void)
+588,0xd880,0x1000d880,?GetIndexForName@TMaterialLibrary@Toshi@@IAEHPBDPAPADH@Z,"protected: int __thiscall Toshi::TMaterialLibrary::GetIndexForName(char const *,char * *,int)"
+589,0x90d0,0x100090d0,?GetIndices@TSubMesh@TDImp@Toshi@@QAEPAGXZ,public: unsigned short * __thiscall Toshi::TDImp::TSubMesh::GetIndices(void)
+590,0x9a80,0x10009a80,?GetInstanceCount@TModel@Toshi@@QAEHXZ,public: int __thiscall Toshi::TModel::GetInstanceCount(void)
+591,0x8030,0x10008030,?GetInstanceCount@TSkeleton@Toshi@@QAEFXZ,public: short __thiscall Toshi::TSkeleton::GetInstanceCount(void)
+592,0x7770,0x10007770,?GetIntensity@TSun@Toshi@@QBEMXZ,public: float __thiscall Toshi::TSun::GetIntensity(void)const 
+593,0x13460,0x10013460,?GetInterpolate@TKeyFrame@TDBase@Toshi@@SGXAAV123@00M@Z,"public: static void __stdcall Toshi::TDBase::TKeyFrame::GetInterpolate(class Toshi::TDBase::TKeyFrame &,class Toshi::TDBase::TKeyFrame &,class Toshi::TDBase::TKeyFrame &,float)"
+594,0x93a0,0x100093a0,?GetInvalidMaterial@TMaterialLibraryManager@Toshi@@QAEPAVTMaterial@2@XZ,public: class Toshi::TMaterial * __thiscall Toshi::TMaterialLibraryManager::GetInvalidMaterial(void)
+595,0x7100,0x10007100,?GetInvalidTexture@TRenderInterface@Toshi@@QAEPAVTTextureResource@2@XZ,public: class Toshi::TTextureResource * __thiscall Toshi::TRenderInterface::GetInvalidTexture(void)
+596,0x13110,0x10013110,?GetItemList@TResourceNameMap@Toshi@@QAEAAV?$TArray@VItem@TResourceNameMap@Toshi@@@2@XZ,public: class Toshi::TArray<class Toshi::TResourceNameMap::Item> & __thiscall Toshi::TResourceNameMap::GetItemList(void)
+597,0xc510,0x1000c510,?GetKernelInterface@TRenderInterface@Toshi@@QAEPAVTKernelInterface@2@XZ,public: class Toshi::TKernelInterface * __thiscall Toshi::TRenderInterface::GetKernelInterface(void)
+598,0x7ec0,0x10007ec0,?GetKey@TSkeletonSequenceBone@Toshi@@QAEAAUTAnimationTQKey@2@G@Z,public: struct Toshi::TAnimationTQKey & __thiscall Toshi::TSkeletonSequenceBone::GetKey(unsigned short)
+599,0x7eb0,0x10007eb0,?GetKeyCount@TSkeletonSequenceBone@Toshi@@QAEGXZ,public: unsigned short __thiscall Toshi::TSkeletonSequenceBone::GetKeyCount(void)
+600,0x8120,0x10008120,?GetKeyLibraryInstance@TSkeleton@Toshi@@QAEAAVTKeyframeLibraryInstance@2@XZ,public: class Toshi::TKeyframeLibraryInstance & __thiscall Toshi::TSkeleton::GetKeyLibraryInstance(void)
+601,0x85a0,0x100085a0,?GetKeyMemoryBase@TKeyframeLibrary@Toshi@@QAEPAXXZ,public: void * __thiscall Toshi::TKeyframeLibrary::GetKeyMemoryBase(void)
+602,0x6650,0x10006650,?GetKeyPair@TSkeletonSequenceBone@Toshi@@QAEMMAAGAAI1@Z,"public: float __thiscall Toshi::TSkeletonSequenceBone::GetKeyPair(float,unsigned short &,unsigned int &,unsigned int &)"
+603,0x13b80,0x10013b80,?GetKeySeqs@TSequence@TDBase@Toshi@@QAEAAV?$TNodeList@VTKeySequence@TDBase@Toshi@@@3@XZ,public: class Toshi::TNodeList<class Toshi::TDBase::TKeySequence> & __thiscall Toshi::TDBase::TSequence::GetKeySeqs(void)
+604,0x6e40,0x10006e40,?GetKeyframeLibraryManager@TRenderInterface@Toshi@@QAEAAVTKeyframeLibraryManager@2@XZ,public: class Toshi::TKeyframeLibraryManager & __thiscall Toshi::TRenderInterface::GetKeyframeLibraryManager(void)
+605,0x13cd0,0x10013cd0,?GetKeys@TKeySequence@TDBase@Toshi@@QAEAAV?$TNodeList@VTKeyFrame@TDBase@Toshi@@@3@XZ,public: class Toshi::TNodeList<class Toshi::TDBase::TKeyFrame> & __thiscall Toshi::TDBase::TKeySequence::GetKeys(void)
+606,0x9a50,0x10009a50,?GetLOD@TModel@Toshi@@QAEAAVTModelLOD@2@H@Z,public: class Toshi::TModelLOD & __thiscall Toshi::TModel::GetLOD(int)
+607,0x9330,0x10009330,?GetLODCount@TDImp@Toshi@@QBEIXZ,public: unsigned int __thiscall Toshi::TDImp::GetLODCount(void)const 
+608,0x9a70,0x10009a70,?GetLODCount@TModel@Toshi@@QAEHXZ,public: int __thiscall Toshi::TModel::GetLODCount(void)
+609,0x7f40,0x10007f40,?GetLength@TSkeletonSequence@Toshi@@QAEMXZ,public: float __thiscall Toshi::TSkeletonSequence::GetLength(void)
+610,0x84b0,0x100084b0,?GetLibrary@TKeyframeLibraryInstance@Toshi@@QAEPAVTKeyframeLibrary@2@XZ,public: class Toshi::TKeyframeLibrary * __thiscall Toshi::TKeyframeLibraryInstance::GetLibrary(void)
+611,0x5850,0x10005850,?GetLibrary@TKeyframeLibraryManager@Toshi@@QAEPAVTKeyframeLibrary@2@PBD@Z,public: class Toshi::TKeyframeLibrary * __thiscall Toshi::TKeyframeLibraryManager::GetLibrary(char const *)
+612,0x8340,0x10008340,?GetLibraryCount@TKeyframeLibraryManager@Toshi@@QAEHXZ,public: int __thiscall Toshi::TKeyframeLibraryManager::GetLibraryCount(void)
+613,0x8350,0x10008350,?GetLibraryList@TKeyframeLibraryManager@Toshi@@QAEAAV?$TQList@VTKeyframeLibrary@Toshi@@@2@XZ,public: class Toshi::TQList<class Toshi::TKeyframeLibrary> & __thiscall Toshi::TKeyframeLibraryManager::GetLibraryList(void)
+614,0x10720,0x10010720,?GetLightColourMatrix@TLightingNode@Toshi@@QBEABVTMatrix44@2@XZ,public: class Toshi::TMatrix44 const & __thiscall Toshi::TLightingNode::GetLightColourMatrix(void)const 
+615,0x6fc0,0x10006fc0,?GetLightColourMatrix@TRenderInterface@Toshi@@QBEABVTMatrix44@2@XZ,public: class Toshi::TMatrix44 const & __thiscall Toshi::TRenderInterface::GetLightColourMatrix(void)const 
+616,0x6f20,0x10006f20,?GetLightColourMatrix@TRenderInterface@Toshi@@QBEXAAVTMatrix44@2@@Z,public: void __thiscall Toshi::TRenderInterface::GetLightColourMatrix(class Toshi::TMatrix44 &)const 
+617,0x10730,0x10010730,?GetLightDirectionMatrix@TLightingNode@Toshi@@QBEABVTMatrix44@2@XZ,public: class Toshi::TMatrix44 const & __thiscall Toshi::TLightingNode::GetLightDirectionMatrix(void)const 
+618,0x70f0,0x100070f0,?GetLightDirectionMatrix@TRenderInterface@Toshi@@QBEABVTMatrix44@2@XZ,public: class Toshi::TMatrix44 const & __thiscall Toshi::TRenderInterface::GetLightDirectionMatrix(void)const 
+619,0x7060,0x10007060,?GetLightDirectionMatrix@TRenderInterface@Toshi@@QBEXAAVTMatrix44@2@@Z,public: void __thiscall Toshi::TRenderInterface::GetLightDirectionMatrix(class Toshi::TMatrix44 &)const 
+620,0x111d0,0x100111d0,?GetLocalMatrix@TSceneObject@Toshi@@UAEXAAVTMatrix44@2@@Z,public: virtual void __thiscall Toshi::TSceneObject::GetLocalMatrix(class Toshi::TMatrix44 &)
+621,0x11db0,0x10011db0,?GetLocalMatrix@TTransformObject@Toshi@@UAEXAAVTMatrix44@2@@Z,public: virtual void __thiscall Toshi::TTransformObject::GetLocalMatrix(class Toshi::TMatrix44 &)
+622,0x7f30,0x10007f30,?GetLoopMode@TSkeletonSequence@Toshi@@QAE?AW4LOOPMODE@12@XZ,public: enum Toshi::TSkeletonSequence::LOOPMODE __thiscall Toshi::TSkeletonSequence::GetLoopMode(void)
+623,0x8060,0x10008060,?GetManualBoneCount@TSkeleton@Toshi@@QAEFXZ,public: short __thiscall Toshi::TSkeleton::GetManualBoneCount(void)
+624,0x92c0,0x100092c0,?GetManualCount@TDImp@Toshi@@QBEIXZ,public: unsigned int __thiscall Toshi::TDImp::GetManualCount(void)const 
+625,0x92b0,0x100092b0,?GetManualRemapTable@TDImp@Toshi@@QAEPAIXZ,public: unsigned int * __thiscall Toshi::TDImp::GetManualRemapTable(void)
+626,0x92a0,0x100092a0,?GetManualRemapTableInverse@TDImp@Toshi@@QAEPAIXZ,public: unsigned int * __thiscall Toshi::TDImp::GetManualRemapTableInverse(void)
+627,0xd060,0x1000d060,?GetMaterial@TMaterialLibrary@Toshi@@IAEPAVTMaterial@2@PBD@Z,protected: class Toshi::TMaterial * __thiscall Toshi::TMaterialLibrary::GetMaterial(char const *)
+628,0xda40,0x1000da40,?GetMaterial@TMaterialLibraryManager@Toshi@@QAEPAVTMaterial@2@PBD@Z,public: class Toshi::TMaterial * __thiscall Toshi::TMaterialLibraryManager::GetMaterial(char const *)
+629,0x6b00,0x10006b00,?GetMaterial@TMesh@Toshi@@QAEPAVTMaterial@2@XZ,public: class Toshi::TMaterial * __thiscall Toshi::TMesh::GetMaterial(void)
+630,0x9000,0x10009000,?GetMaterial@TSkinMesh@TDImp@Toshi@@QAEPAVTDImpMaterial@23@XZ,public: class Toshi::TDImp::TDImpMaterial * __thiscall Toshi::TDImp::TSkinMesh::GetMaterial(void)
+631,0x72d0,0x100072d0,?GetMaterialLibraryManager@TRenderInterface@Toshi@@QAEPAVTMaterialLibraryManager@2@XZ,public: class Toshi::TMaterialLibraryManager * __thiscall Toshi::TRenderInterface::GetMaterialLibraryManager(void)
+632,0xf4f0,0x1000f4f0,?GetMatrix@TTransformObject@Toshi@@QAEABVTMatrix44@2@XZ,public: class Toshi::TMatrix44 const & __thiscall Toshi::TTransformObject::GetMatrix(void)
+633,0xce30,0x1000ce30,?GetMaxIndices@TIndexPoolResourceInterface@Toshi@@QBEIXZ,public: unsigned int __thiscall Toshi::TIndexPoolResourceInterface::GetMaxIndices(void)const 
+634,0xcc40,0x1000cc40,?GetMaxStaticIndices@TIndexFactoryResourceInterface@Toshi@@QAEGXZ,public: unsigned short __thiscall Toshi::TIndexFactoryResourceInterface::GetMaxStaticIndices(void)
+635,0xe770,0x1000e770,?GetMaxStaticVertices@TVertexFactoryResourceInterface@Toshi@@QAEGXZ,public: unsigned short __thiscall Toshi::TVertexFactoryResourceInterface::GetMaxStaticVertices(void)
+636,0xe950,0x1000e950,?GetMaxVertices@TVertexPoolResourceInterface@Toshi@@QBEIXZ,public: unsigned int __thiscall Toshi::TVertexPoolResourceInterface::GetMaxVertices(void)const 
+637,0x12ae0,0x10012ae0,?GetMaxZ@TViewport@Toshi@@QAEMXZ,public: float __thiscall Toshi::TViewport::GetMaxZ(void)
+638,0x9b40,0x10009b40,?GetMesh@TModelLOD@Toshi@@QAEPAVTMesh@2@H@Z,public: class Toshi::TMesh * __thiscall Toshi::TModelLOD::GetMesh(int)
+639,0x19340,0x10019340,?GetMesh@TSceneSysMesh@Toshi@@QAEPAVTMesh@2@XZ,public: class Toshi::TMesh * __thiscall Toshi::TSceneSysMesh::GetMesh(void)
+640,0x9b50,0x10009b50,?GetMeshCount@TModelLOD@Toshi@@QAEHXZ,public: int __thiscall Toshi::TModelLOD::GetMeshCount(void)
+641,0x8fe0,0x10008fe0,?GetMeshType@TSkinMesh@TDImp@Toshi@@QAE?AW4TMeshType@TDBase@3@XZ,public: enum Toshi::TDBase::TMeshType __thiscall Toshi::TDImp::TSkinMesh::GetMeshType(void)
+642,0x12af0,0x10012af0,?GetMinZ@TViewport@Toshi@@QAEMXZ,public: float __thiscall Toshi::TViewport::GetMinZ(void)
+643,0x8700,0x10008700,?GetMode@TAnimation@Toshi@@QAE?AW4MODE@12@XZ,public: enum Toshi::TAnimation::MODE __thiscall Toshi::TAnimation::GetMode(void)
+644,0xf520,0x1000f520,?GetMode@TTransformObject@Toshi@@QAE?AW4MODE@TTransformData@2@XZ,public: enum Toshi::TTransformData::MODE __thiscall Toshi::TTransformObject::GetMode(void)
+645,0x9b90,0x10009b90,?GetModeList@TRenderAdapter@Toshi@@QAEPAV?$TNodeList@VMode@TRenderAdapter@Toshi@@@2@XZ,public: class Toshi::TNodeList<class Toshi::TRenderAdapter::Mode> * __thiscall Toshi::TRenderAdapter::GetModeList(void)
+646,0xfef0,0x1000fef0,?GetModel@TGFXFileObject@Toshi@@QAEPAVTModel@2@XZ,public: class Toshi::TModel * __thiscall Toshi::TGFXFileObject::GetModel(void)
+647,0x9a00,0x10009a00,?GetModel@TModelInstance@Toshi@@QAEPAVTModel@2@XZ,public: class Toshi::TModel * __thiscall Toshi::TModelInstance::GetModel(void)
+648,0xfec0,0x1000fec0,?GetModelInstance@TGFXFileInstanceObject@Toshi@@QAEPAVTModelInstance@2@XZ,public: class Toshi::TModelInstance * __thiscall Toshi::TGFXFileInstanceObject::GetModelInstance(void)
+649,0x7630,0x10007630,?GetModelViewMatrix@TRenderContext@Toshi@@QBEABVTMatrix44@2@XZ,public: class Toshi::TMatrix44 const & __thiscall Toshi::TRenderContext::GetModelViewMatrix(void)const 
+650,0xa0d0,0x1000a0d0,?GetModelWorldMatrix@TRenderContext@Toshi@@QAEABVTMatrix44@2@XZ,public: class Toshi::TMatrix44 const & __thiscall Toshi::TRenderContext::GetModelWorldMatrix(void)
+651,0x130f0,0x100130f0,?GetName@Item@TResourceNameMap@Toshi@@QBEPBDXZ,public: char const * __thiscall Toshi::TResourceNameMap::Item::GetName(void)const 
+652,0xc700,0x1000c700,?GetName@NameEntry@TTextureFactory@Toshi@@QBEPBDXZ,public: char const * __thiscall Toshi::TTextureFactory::NameEntry::GetName(void)const 
+653,0x8c80,0x10008c80,?GetName@ResourceName@Toshi@@QAEPBDXZ,public: char const * __thiscall Toshi::ResourceName::GetName(void)
+654,0x8f80,0x10008f80,?GetName@TBone@TDImp@Toshi@@QBEPBDXZ,public: char const * __thiscall Toshi::TDImp::TBone::GetName(void)const 
+655,0x9160,0x10009160,?GetName@TDImpMaterial@TDImp@Toshi@@QAEPBDXZ,public: char const * __thiscall Toshi::TDImp::TDImpMaterial::GetName(void)
+656,0x12ed0,0x10012ed0,?GetName@TResource@Toshi@@QBEPBDXZ,public: char const * __thiscall Toshi::TResource::GetName(void)const 
+657,0xc680,0x1000c680,?GetNameEntry@TTextureResource@Toshi@@QAEPAVNameEntry@TTextureFactory@2@XZ,public: class Toshi::TTextureFactory::NameEntry * __thiscall Toshi::TTextureResource::GetNameEntry(void)
+658,0x8c70,0x10008c70,?GetNameLength@ResourceName@Toshi@@QAEHXZ,public: int __thiscall Toshi::ResourceName::GetNameLength(void)
+659,0x7970,0x10007970,?GetNear@TAtmosphere@Toshi@@QBEMXZ,public: float __thiscall Toshi::TAtmosphere::GetNear(void)const 
+660,0xf250,0x1000f250,?GetNear@TCameraObject@Toshi@@QAEMXZ,public: float __thiscall Toshi::TCameraObject::GetNear(void)
+661,0x8fd0,0x10008fd0,?GetNumBones@TSkinMesh@TDImp@Toshi@@QAEIXZ,public: unsigned int __thiscall Toshi::TDImp::TSkinMesh::GetNumBones(void)
+662,0xce40,0x1000ce40,?GetNumIndices@TIndexPoolResourceInterface@Toshi@@QBEIXZ,public: unsigned int __thiscall Toshi::TIndexPoolResourceInterface::GetNumIndices(void)const 
+663,0x13bd0,0x10013bd0,?GetNumKeySeqs@TSequence@TDBase@Toshi@@QAEXAAI@Z,public: void __thiscall Toshi::TDBase::TSequence::GetNumKeySeqs(unsigned int &)
+664,0x9440,0x10009440,?GetNumKeys@TKeySequence@TDBase@Toshi@@QAEIXZ,public: unsigned int __thiscall Toshi::TDBase::TKeySequence::GetNumKeys(void)
+665,0x13d20,0x10013d20,?GetNumKeys@TKeySequence@TDBase@Toshi@@QAEXAAI@Z,public: void __thiscall Toshi::TDBase::TKeySequence::GetNumKeys(unsigned int &)
+666,0x6bf0,0x10006bf0,?GetNumTextures@TMaterial@Toshi@@QBEIXZ,public: unsigned int __thiscall Toshi::TMaterial::GetNumTextures(void)const 
+667,0xe960,0x1000e960,?GetNumVertices@TVertexPoolResourceInterface@Toshi@@QBEIXZ,public: unsigned int __thiscall Toshi::TVertexPoolResourceInterface::GetNumVertices(void)const 
+668,0x8930,0x10008930,?GetOverlayAnimationCount@TSkeletonInstance@Toshi@@QAEHXZ,public: int __thiscall Toshi::TSkeletonInstance::GetOverlayAnimationCount(void)
+669,0x8e90,0x10008e90,?GetParent@TBone@TDImp@Toshi@@QAEPAV123@XZ,public: class Toshi::TDImp::TBone * __thiscall Toshi::TDImp::TBone::GetParent(void)
+670,0x8320,0x10008320,?GetParent@TSkeletonBone@Toshi@@QAEFXZ,public: short __thiscall Toshi::TSkeletonBone::GetParent(void)
+671,0x8f70,0x10008f70,?GetParentName@TBone@TDImp@Toshi@@QBEPBDXZ,public: char const * __thiscall Toshi::TDImp::TBone::GetParentName(void)const 
+672,0x7310,0x10007310,?GetPixelAspectRatio@TRenderInterface@Toshi@@UAEMXZ,public: virtual float __thiscall Toshi::TRenderInterface::GetPixelAspectRatio(void)
+673,0x17700,0x10017700,?GetPose@TBone@TDImp@Toshi@@QAEXAAVTQuaternion@3@AAVTVector3@3@@Z,"public: void __thiscall Toshi::TDImp::TBone::GetPose(class Toshi::TQuaternion &,class Toshi::TVector3 &)"
+674,0x18030,0x10018030,?GetPose@TBone@TDImp@Toshi@@QAEXAAVTQuaternion@3@AAVTVector4@3@@Z,"public: void __thiscall Toshi::TDImp::TBone::GetPose(class Toshi::TQuaternion &,class Toshi::TVector4 &)"
+675,0x17d80,0x10017d80,?GetPoseC@TBone@TDImp@Toshi@@QAEXAAVTQuaternion@3@AAVTVector3@3@@Z,"public: void __thiscall Toshi::TDImp::TBone::GetPoseC(class Toshi::TQuaternion &,class Toshi::TVector3 &)"
+676,0x17f80,0x10017f80,?GetPoseC@TBone@TDImp@Toshi@@QAEXAAVTQuaternion@3@AAVTVector4@3@@Z,"public: void __thiscall Toshi::TDImp::TBone::GetPoseC(class Toshi::TQuaternion &,class Toshi::TVector4 &)"
+677,0xf3f0,0x1000f3f0,?GetProjType@TCameraObject@Toshi@@QAE?AW4PROJTYPE@12@XZ,public: enum Toshi::TCameraObject::PROJTYPE __thiscall Toshi::TCameraObject::GetProjType(void)
+678,0x7640,0x10007640,?GetProjType@TRenderContext@Toshi@@QBE?AW4PROJTYPE@12@XZ,public: enum Toshi::TRenderContext::PROJTYPE __thiscall Toshi::TRenderContext::GetProjType(void)const 
+679,0xf210,0x1000f210,?GetProjectionCentreX@TCameraObject@Toshi@@QAEMXZ,public: float __thiscall Toshi::TCameraObject::GetProjectionCentreX(void)
+680,0xf200,0x1000f200,?GetProjectionCentreY@TCameraObject@Toshi@@QAEMXZ,public: float __thiscall Toshi::TCameraObject::GetProjectionCentreY(void)
+681,0x7600,0x10007600,?GetProjectionParameters@TRenderContext@Toshi@@QBEABUPROJECTIONPARAMS@12@XZ,public: struct Toshi::TRenderContext::PROJECTIONPARAMS const & __thiscall Toshi::TRenderContext::GetProjectionParameters(void)const 
+682,0x85c0,0x100085c0,?GetQ@TKeyframeLibrary@Toshi@@QAEPAUTAnimQuaternion@2@H@Z,public: struct Toshi::TAnimQuaternion * __thiscall Toshi::TKeyframeLibrary::GetQ(int)
+683,0x8420,0x10008420,?GetQ@TKeyframeLibraryInstance@Toshi@@QAEPAUTAnimQuaternion@2@H@Z,public: struct Toshi::TAnimQuaternion * __thiscall Toshi::TKeyframeLibraryInstance::GetQ(int)
+684,0x8490,0x10008490,?GetQBaseIndex@TKeyframeLibraryInstance@Toshi@@QAEHXZ,public: int __thiscall Toshi::TKeyframeLibraryInstance::GetQBaseIndex(void)
+685,0x8540,0x10008540,?GetQCount@TKeyframeLibrary@Toshi@@QAEHXZ,public: int __thiscall Toshi::TKeyframeLibrary::GetQCount(void)
+686,0x8460,0x10008460,?GetQCount@TKeyframeLibraryInstance@Toshi@@QAEHXZ,public: int __thiscall Toshi::TKeyframeLibraryInstance::GetQCount(void)
+687,0x8580,0x10008580,?GetQKeys@TKeyframeLibrary@Toshi@@QAEPAUTAnimQuaternion@2@XZ,public: struct Toshi::TAnimQuaternion * __thiscall Toshi::TKeyframeLibrary::GetQKeys(void)
+688,0xf500,0x1000f500,?GetQuat@TTransformObject@Toshi@@QAEABVTQuaternion@2@XZ,public: class Toshi::TQuaternion const & __thiscall Toshi::TTransformObject::GetQuat(void)
+689,0x8560,0x10008560,?GetReferenceCount@TKeyframeLibrary@Toshi@@QAEHXZ,public: int __thiscall Toshi::TKeyframeLibrary::GetReferenceCount(void)
+690,0x6bc0,0x10006bc0,?GetRegMaterial@TMaterial@Toshi@@QAEPAVTRegMaterial@2@XZ,public: class Toshi::TRegMaterial * __thiscall Toshi::TMaterial::GetRegMaterial(void)
+691,0xf7c0,0x1000f7c0,?GetRenderContext@TViewport@Toshi@@QAEPAVTRenderContext@2@XZ,public: class Toshi::TRenderContext * __thiscall Toshi::TViewport::GetRenderContext(void)
+692,0xf710,0x1000f710,?GetRenderEmitter@TViewport@Toshi@@QAEAAV?$TEmitter@VTViewport@Toshi@@VRenderEvent@12@@2@XZ,"public: class Toshi::TEmitter<class Toshi::TViewport,class Toshi::TViewport::RenderEvent> & __thiscall Toshi::TViewport::GetRenderEmitter(void)"
+693,0x6e30,0x10006e30,?GetRenderFrameCount@TRenderInterface@Toshi@@QAEIXZ,public: unsigned int __thiscall Toshi::TRenderInterface::GetRenderFrameCount(void)
+694,0x6db0,0x10006db0,?GetRenderMatrixStack@TScene@Toshi@@QAEAAV?$TStack@VTMatrix44@Toshi@@$0BE@@2@XZ,"public: class Toshi::TStack<class Toshi::TMatrix44,20> & __thiscall Toshi::TScene::GetRenderMatrixStack(void)"
+695,0xeb30,0x1000eb30,?GetRenderer@TCameraViewportHandler@Toshi@@QAEPAVTRenderInterface@2@XZ,public: class Toshi::TRenderInterface * __thiscall Toshi::TCameraViewportHandler::GetRenderer(void)
+696,0x75f0,0x100075f0,?GetRenderer@TRenderContext@Toshi@@QBEAAVTRenderInterface@2@XZ,public: class Toshi::TRenderInterface & __thiscall Toshi::TRenderContext::GetRenderer(void)const 
+697,0x7280,0x10007280,?GetRenderer@TRenderInterface@Toshi@@SGPAV12@XZ,public: static class Toshi::TRenderInterface * __stdcall Toshi::TRenderInterface::GetRenderer(void)
+698,0x12ee0,0x10012ee0,?GetRenderer@TResource@Toshi@@QBEPAVTRenderInterface@2@XZ,public: class Toshi::TRenderInterface * __thiscall Toshi::TResource::GetRenderer(void)const 
+699,0x130e0,0x100130e0,?GetResource@Item@TResourceNameMap@Toshi@@QAEPAVTResource@3@XZ,public: class Toshi::TResource * __thiscall Toshi::TResourceNameMap::Item::GetResource(void)
+700,0x85f0,0x100085f0,?GetResourceName@TKeyframeLibrary@Toshi@@QAEAAVResourceName@2@XZ,public: class Toshi::ResourceName & __thiscall Toshi::TKeyframeLibrary::GetResourceName(void)
+701,0x8330,0x10008330,?GetResourceName@TSkeletonBone@Toshi@@QAEAAVResourceName@2@XZ,public: class Toshi::ResourceName & __thiscall Toshi::TSkeletonBone::GetResourceName(void)
+702,0x7fa0,0x10007fa0,?GetResourceName@TSkeletonSequence@Toshi@@QAEAAVResourceName@2@XZ,public: class Toshi::ResourceName & __thiscall Toshi::TSkeletonSequence::GetResourceName(void)
+703,0xc4d0,0x1000c4d0,?GetResourceTree@TRenderInterface@Toshi@@QAEPAV?$TNodeTree@VTResource@Toshi@@@2@XZ,public: class Toshi::TNodeTree<class Toshi::TResource> * __thiscall Toshi::TRenderInterface::GetResourceTree(void)
+704,0x18080,0x10018080,?GetRigidBoneName@TSkinMesh@TDImp@Toshi@@QAEPBDXZ,public: char const * __thiscall Toshi::TDImp::TSkinMesh::GetRigidBoneName(void)
+705,0x94b0,0x100094b0,?GetRotation@TKeyFrame@TDBase@Toshi@@QAEAAVTQuaternion@3@XZ,public: class Toshi::TQuaternion & __thiscall Toshi::TDBase::TKeyFrame::GetRotation(void)
+706,0x85b0,0x100085b0,?GetS@TKeyframeLibrary@Toshi@@QAEMH@Z,public: float __thiscall Toshi::TKeyframeLibrary::GetS(int)
+707,0x8410,0x10008410,?GetS@TKeyframeLibraryInstance@Toshi@@QAEMH@Z,public: float __thiscall Toshi::TKeyframeLibraryInstance::GetS(int)
+708,0x8480,0x10008480,?GetSBaseIndex@TKeyframeLibraryInstance@Toshi@@QAEHXZ,public: int __thiscall Toshi::TKeyframeLibraryInstance::GetSBaseIndex(void)
+709,0x8530,0x10008530,?GetSCount@TKeyframeLibrary@Toshi@@QAEHXZ,public: int __thiscall Toshi::TKeyframeLibrary::GetSCount(void)
+710,0x8450,0x10008450,?GetSCount@TKeyframeLibraryInstance@Toshi@@QAEHXZ,public: int __thiscall Toshi::TKeyframeLibraryInstance::GetSCount(void)
+711,0x8570,0x10008570,?GetSKeys@TKeyframeLibrary@Toshi@@QAEPAMXZ,public: float * __thiscall Toshi::TKeyframeLibrary::GetSKeys(void)
+712,0xf4c0,0x1000f4c0,?GetScale@TTransformObject@Toshi@@QAEABVTVector3@2@XZ,public: class Toshi::TVector3 const & __thiscall Toshi::TTransformObject::GetScale(void)
+713,0x6de0,0x10006de0,?GetSceneStamp@TScene@Toshi@@QAEIXZ,public: unsigned int __thiscall Toshi::TScene::GetSceneStamp(void)
+714,0x7320,0x10007320,?GetScreenAspectRatio@TRenderInterface@Toshi@@UAEMXZ,public: virtual float __thiscall Toshi::TRenderInterface::GetScreenAspectRatio(void)
+715,0xc540,0x1000c540,?GetScreenOffset@TRenderInterface@Toshi@@UAEXAAVTVector2@2@@Z,public: virtual void __thiscall Toshi::TRenderInterface::GetScreenOffset(class Toshi::TVector2 &)
+716,0x13bc0,0x10013bc0,?GetSeqName@TSequence@TDBase@Toshi@@QAEPBDXZ,public: char const * __thiscall Toshi::TDBase::TSequence::GetSeqName(void)
+717,0x9270,0x10009270,?GetSeqShortTranslation@TDImp@Toshi@@AAEPAUtag_TShortVector3@2@XZ,private: struct Toshi::tag_TShortVector3 * __thiscall Toshi::TDImp::GetSeqShortTranslation(void)
+718,0x86a0,0x100086a0,?GetSeqTime@TAnimation@Toshi@@QAEMXZ,public: float __thiscall Toshi::TAnimation::GetSeqTime(void)
+719,0x8760,0x10008760,?GetSequence@TAnimation@Toshi@@QAEFXZ,public: short __thiscall Toshi::TAnimation::GetSequence(void)
+720,0x80a0,0x100080a0,?GetSequence@TSkeleton@Toshi@@QAEPAVTSkeletonSequence@2@H@Z,public: class Toshi::TSkeletonSequence * __thiscall Toshi::TSkeleton::GetSequence(int)
+721,0x80b0,0x100080b0,?GetSequence@TSkeleton@Toshi@@QAEPAVTSkeletonSequence@2@PBDH@Z,"public: class Toshi::TSkeletonSequence * __thiscall Toshi::TSkeleton::GetSequence(char const *,int)"
+722,0x8050,0x10008050,?GetSequenceCount@TSkeleton@Toshi@@QAEFXZ,public: short __thiscall Toshi::TSkeleton::GetSequenceCount(void)
+723,0x63a0,0x100063a0,?GetSequenceID@TSkeleton@Toshi@@QAEHPBDH@Z,"public: int __thiscall Toshi::TSkeleton::GetSequenceID(char const *,int)"
+724,0x9280,0x10009280,?GetSequenceLength@TDImp@Toshi@@AAEMXZ,private: float __thiscall Toshi::TDImp::GetSequenceLength(void)
+725,0x8740,0x10008740,?GetSequencePtr@TAnimation@Toshi@@QAEPAVTSkeletonSequence@2@XZ,public: class Toshi::TSkeletonSequence * __thiscall Toshi::TAnimation::GetSequencePtr(void)
+726,0x9360,0x10009360,?GetSequenceSet@TDImp@Toshi@@QAEPAV?$TNodeList@VTSequence@TDBase@Toshi@@@2@XZ,public: class Toshi::TNodeList<class Toshi::TDBase::TSequence> * __thiscall Toshi::TDImp::GetSequenceSet(void)
+727,0x80d0,0x100080d0,?GetSequences@TSkeleton@Toshi@@QAEPAPAVTSkeletonSequence@2@XZ,public: class Toshi::TSkeletonSequence * * __thiscall Toshi::TSkeleton::GetSequences(void)
+728,0x6c10,0x10006c10,?GetShader@TMaterial@Toshi@@QAEPAVTShader@2@XZ,public: class Toshi::TShader * __thiscall Toshi::TMaterial::GetShader(void)
+729,0x9380,0x10009380,?GetShader@TMaterialLibraryManager@Toshi@@IAEPAVTShader@2@H@Z,protected: class Toshi::TShader * __thiscall Toshi::TMaterialLibraryManager::GetShader(int)
+730,0x6b10,0x10006b10,?GetShader@TMesh@Toshi@@QAEPAVTShader@2@XZ,public: class Toshi::TShader * __thiscall Toshi::TMesh::GetShader(void)
+731,0x8090,0x10008090,?GetSize@TSkeleton@Toshi@@QAEHXZ,public: int __thiscall Toshi::TSkeleton::GetSize(void)
+732,0x8910,0x10008910,?GetSize@TSkeletonInstance@Toshi@@QBEIXZ,public: unsigned int __thiscall Toshi::TSkeletonInstance::GetSize(void)const 
+733,0x9370,0x10009370,?GetSkeleton@TDImp@Toshi@@QAEPAVTSkeleton@12@XZ,public: class Toshi::TDImp::TSkeleton * __thiscall Toshi::TDImp::GetSkeleton(void)
+734,0x9ab0,0x10009ab0,?GetSkeleton@TModel@Toshi@@QAEPAVTSkeleton@2@XZ,public: class Toshi::TSkeleton * __thiscall Toshi::TModel::GetSkeleton(void)
+735,0x8920,0x10008920,?GetSkeleton@TSkeletonInstance@Toshi@@QAEPAVTSkeleton@2@XZ,public: class Toshi::TSkeleton * __thiscall Toshi::TSkeletonInstance::GetSkeleton(void)
+736,0x99f0,0x100099f0,?GetSkeletonInstance@TModelInstance@Toshi@@QAEPAVTSkeletonInstance@2@XZ,public: class Toshi::TSkeletonInstance * __thiscall Toshi::TModelInstance::GetSkeletonInstance(void)
+737,0x75a0,0x100075a0,?GetSkeletonInstance@TRenderContext@Toshi@@QAEPAVTSkeletonInstance@2@XZ,public: class Toshi::TSkeletonInstance * __thiscall Toshi::TRenderContext::GetSkeletonInstance(void)
+738,0x9340,0x10009340,?GetSkinMeshList@TDImp@Toshi@@QAEPAV?$TNodeList@VTSkinMesh@TDImp@Toshi@@@2@I@Z,public: class Toshi::TNodeList<class Toshi::TDImp::TSkinMesh> * __thiscall Toshi::TDImp::GetSkinMeshList(unsigned int)
+739,0x8690,0x10008690,?GetSpeed@TAnimation@Toshi@@QAEMXZ,public: float __thiscall Toshi::TAnimation::GetSpeed(void)
+740,0x9010,0x10009010,?GetSubMeshList@TSkinMesh@TDImp@Toshi@@QAEPAV?$TNodeList@VTSubMesh@TDImp@Toshi@@@3@XZ,public: class Toshi::TNodeList<class Toshi::TDImp::TSubMesh> * __thiscall Toshi::TDImp::TSkinMesh::GetSubMeshList(void)
+741,0x73f0,0x100073f0,?GetSun@TRenderContext@Toshi@@QAEAAVTSun@2@XZ,public: class Toshi::TSun & __thiscall Toshi::TRenderContext::GetSun(void)
+742,0xc430,0x1000c430,?GetSystemResource@TRenderInterface@Toshi@@QAEPAVTResource@2@W4SYSRESOURCES@12@@Z,public: class Toshi::TResource * __thiscall Toshi::TRenderInterface::GetSystemResource(enum Toshi::TRenderInterface::SYSRESOURCES)
+743,0x85d0,0x100085d0,?GetT@TKeyframeLibrary@Toshi@@QAEPAUTAnimVector@2@H@Z,public: struct Toshi::TAnimVector * __thiscall Toshi::TKeyframeLibrary::GetT(int)
+744,0x8430,0x10008430,?GetT@TKeyframeLibraryInstance@Toshi@@QAEPAUTAnimVector@2@H@Z,public: struct Toshi::TAnimVector * __thiscall Toshi::TKeyframeLibraryInstance::GetT(int)
+745,0x84a0,0x100084a0,?GetTBaseIndex@TKeyframeLibraryInstance@Toshi@@QAEHXZ,public: int __thiscall Toshi::TKeyframeLibraryInstance::GetTBaseIndex(void)
+746,0x8550,0x10008550,?GetTCount@TKeyframeLibrary@Toshi@@QAEHXZ,public: int __thiscall Toshi::TKeyframeLibrary::GetTCount(void)
+747,0x8470,0x10008470,?GetTCount@TKeyframeLibraryInstance@Toshi@@QAEHXZ,public: int __thiscall Toshi::TKeyframeLibraryInstance::GetTCount(void)
+748,0x8590,0x10008590,?GetTKeys@TKeyframeLibrary@Toshi@@QAEPAUTAnimVector@2@XZ,public: struct Toshi::TAnimVector * __thiscall Toshi::TKeyframeLibrary::GetTKeys(void)
+749,0x118e0,0x100118e0,?GetTerrain@TTerrainObject@Toshi@@QAEPAVTTerrainInterface@2@XZ,public: class Toshi::TTerrainInterface * __thiscall Toshi::TTerrainObject::GetTerrain(void)
+750,0xc6f0,0x1000c6f0,?GetTexture@NameEntry@TTextureFactory@Toshi@@QAEPAVTTextureResource@3@XZ,public: class Toshi::TTextureResource * __thiscall Toshi::TTextureFactory::NameEntry::GetTexture(void)
+751,0x93b0,0x100093b0,?GetTexture@TMaterialLibrary@Toshi@@IAEPAVTTextureResource@2@H@Z,protected: class Toshi::TTextureResource * __thiscall Toshi::TMaterialLibrary::GetTexture(int)
+752,0xfc40,0x1000fc40,?GetTextureAlphas@TGFXFileInstanceObject@Toshi@@QAEXPAE@Z,public: void __thiscall Toshi::TGFXFileInstanceObject::GetTextureAlphas(unsigned char *)
+753,0xfc00,0x1000fc00,?GetTextureStages@TGFXFileInstanceObject@Toshi@@QAEXPAC@Z,public: void __thiscall Toshi::TGFXFileInstanceObject::GetTextureStages(signed char *)
+754,0x7780,0x10007780,?GetTheta@TSun@Toshi@@QBEMXZ,public: float __thiscall Toshi::TSun::GetTheta(void)const 
+755,0x94d0,0x100094d0,?GetTime@TKeyFrame@TDBase@Toshi@@QBEMXZ,public: float __thiscall Toshi::TDBase::TKeyFrame::GetTime(void)const 
+756,0x9180,0x10009180,?GetToshiMaterial@TDImpMaterial@TDImp@Toshi@@QBEPAVTMaterial@3@XZ,public: class Toshi::TMaterial * __thiscall Toshi::TDImp::TDImpMaterial::GetToshiMaterial(void)const 
+757,0x86b0,0x100086b0,?GetTotalTime@TAnimation@Toshi@@QAEMXZ,public: float __thiscall Toshi::TAnimation::GetTotalTime(void)
+758,0x9500,0x10009500,?GetTransDeviation@TDBase@Toshi@@QAEMXZ,public: float __thiscall Toshi::TDBase::GetTransDeviation(void)
+759,0x9520,0x10009520,?GetTransEpsilon@TDBase@Toshi@@QAEMXZ,public: float __thiscall Toshi::TDBase::GetTransEpsilon(void)
+760,0xf1f0,0x1000f1f0,?GetTransformObject@TCameraObject@Toshi@@QAEPAVTTransformObject@2@XZ,public: class Toshi::TTransformObject * __thiscall Toshi::TCameraObject::GetTransformObject(void)
+761,0xfe10,0x1000fe10,?GetTransformObject@TGFXFileInstanceObject@Toshi@@QAEPAVTTransformObject@2@XZ,public: class Toshi::TTransformObject * __thiscall Toshi::TGFXFileInstanceObject::GetTransformObject(void)
+762,0xf4d0,0x1000f4d0,?GetTranslate@TTransformObject@Toshi@@QAEABVTVector3@2@XZ,public: class Toshi::TVector3 const & __thiscall Toshi::TTransformObject::GetTranslate(void)
+763,0x94a0,0x100094a0,?GetTranslation@TKeyFrame@TDBase@Toshi@@QAEAAVTVector4@3@XZ,public: class Toshi::TVector4 & __thiscall Toshi::TDBase::TKeyFrame::GetTranslation(void)
+764,0x8f20,0x10008f20,?GetType@TBone@TDImp@Toshi@@QAE?AW4TYPE@123@XZ,public: enum Toshi::TDImp::TBone::TYPE __thiscall Toshi::TDImp::TBone::GetType(void)
+765,0x12ec0,0x10012ec0,?GetUId@TResource@Toshi@@QBEIXZ,public: unsigned int __thiscall Toshi::TResource::GetUId(void)const 
+766,0xf740,0x1000f740,?GetUpdateEmitter@TViewport@Toshi@@QAEAAV?$TEmitter@VTViewport@Toshi@@VUpdateEvent@12@@2@XZ,"public: class Toshi::TEmitter<class Toshi::TViewport,class Toshi::TViewport::UpdateEvent> & __thiscall Toshi::TViewport::GetUpdateEmitter(void)"
+767,0x7f10,0x10007f10,?GetUsedBoneCount@TSkeletonSequence@Toshi@@QAEIXZ,public: unsigned int __thiscall Toshi::TSkeletonSequence::GetUsedBoneCount(void)
+768,0x79c0,0x100079c0,?GetVSC_BETA_1_PLUS_2@TAtmosphere@Toshi@@QBEABVTVector4@2@XZ,public: class Toshi::TVector4 const & __thiscall Toshi::TAtmosphere::GetVSC_BETA_1_PLUS_2(void)const 
+769,0x79b0,0x100079b0,?GetVSC_BETA_DASH_1@TAtmosphere@Toshi@@QBEABVTVector4@2@XZ,public: class Toshi::TVector4 const & __thiscall Toshi::TAtmosphere::GetVSC_BETA_DASH_1(void)const 
+770,0x79a0,0x100079a0,?GetVSC_BETA_DASH_2@TAtmosphere@Toshi@@QBEABVTVector4@2@XZ,public: class Toshi::TVector4 const & __thiscall Toshi::TAtmosphere::GetVSC_BETA_DASH_2(void)const 
+771,0x79e0,0x100079e0,?GetVSC_HG@TAtmosphere@Toshi@@QBEABVTVector4@2@XZ,public: class Toshi::TVector4 const & __thiscall Toshi::TAtmosphere::GetVSC_HG(void)const 
+772,0x79d0,0x100079d0,?GetVSC_ONE_OVER_BETA_1_PLUS_2@TAtmosphere@Toshi@@QBEABVTVector4@2@XZ,public: class Toshi::TVector4 const & __thiscall Toshi::TAtmosphere::GetVSC_ONE_OVER_BETA_1_PLUS_2(void)const 
+773,0xe780,0x1000e780,?GetVertexFormat@TVertexFactoryResourceInterface@Toshi@@QAEPAVTVertexFactoryFormat@2@XZ,public: class Toshi::TVertexFactoryFormat * __thiscall Toshi::TVertexFactoryResourceInterface::GetVertexFormat(void)
+774,0x90e0,0x100090e0,?GetVertices@TSubMesh@TDImp@Toshi@@QAEPAUSkinVertex@TDBase@3@XZ,public: struct Toshi::TDBase::SkinVertex * __thiscall Toshi::TDImp::TSubMesh::GetVertices(void)
+775,0xa630,0x1000a630,?GetViewModelMatrix@TRenderContext@Toshi@@QAEABVTMatrix44@2@XZ,public: class Toshi::TMatrix44 const & __thiscall Toshi::TRenderContext::GetViewModelMatrix(void)
+776,0x7420,0x10007420,?GetViewPlanes@TRenderContext@Toshi@@QBEPBVTPlane@2@XZ,public: class Toshi::TPlane const * __thiscall Toshi::TRenderContext::GetViewPlanes(void)const 
+777,0xa250,0x1000a250,?GetViewPlanes@TRenderContext@Toshi@@QBEXPAVTPlane@2@H@Z,"public: void __thiscall Toshi::TRenderContext::GetViewPlanes(class Toshi::TPlane *,int)const "
+778,0xa110,0x1000a110,?GetViewWorldMatrix@TRenderContext@Toshi@@QAEABVTMatrix44@2@XZ,public: class Toshi::TMatrix44 const & __thiscall Toshi::TRenderContext::GetViewWorldMatrix(void)
+779,0xf1e0,0x1000f1e0,?GetViewport@TCameraObject@Toshi@@QBEPAVTViewport@2@XZ,public: class Toshi::TViewport * __thiscall Toshi::TCameraObject::GetViewport(void)const 
+780,0xf690,0x1000f690,?GetViewport@THandler@TViewport@Toshi@@QAEAAV23@XZ,public: class Toshi::TViewport & __thiscall Toshi::TViewport::THandler::GetViewport(void)
+781,0x7610,0x10007610,?GetViewportParameters@TRenderContext@Toshi@@QBEABUVIEWPORTPARAMS@12@XZ,public: struct Toshi::TRenderContext::VIEWPORTPARAMS const & __thiscall Toshi::TRenderContext::GetViewportParameters(void)const 
+782,0x6d90,0x10006d90,?GetViewportRoot@TScene@Toshi@@QAEPAVTNullSceneResource@2@XZ,public: class Toshi::TNullSceneResource * __thiscall Toshi::TScene::GetViewportRoot(void)
+783,0x9a40,0x10009a40,?GetVisSphere@TModel@Toshi@@QAEAAVTSphere@2@XZ,public: class Toshi::TSphere & __thiscall Toshi::TModel::GetVisSphere(void)
+784,0x9b30,0x10009b30,?GetVisSphere@TModelLOD@Toshi@@QAEAAVTSphere@2@XZ,public: class Toshi::TSphere & __thiscall Toshi::TModelLOD::GetVisSphere(void)
+785,0x86f0,0x100086f0,?GetWeight@TAnimation@Toshi@@QAEMXZ,public: float __thiscall Toshi::TAnimation::GetWeight(void)
+786,0x9200,0x10009200,?GetWidth@TDImpMaterial@TDImp@Toshi@@QBEIXZ,public: unsigned int __thiscall Toshi::TDImp::TDImpMaterial::GetWidth(void)const 
+787,0x12b10,0x10012b10,?GetWidth@TViewport@Toshi@@QAEMXZ,public: float __thiscall Toshi::TViewport::GetWidth(void)
+788,0xa1d0,0x1000a1d0,?GetWorldGuardPlanes@TRenderContext@Toshi@@QAEPBVTPlane@2@XZ,public: class Toshi::TPlane const * __thiscall Toshi::TRenderContext::GetWorldGuardPlanes(void)
+789,0xa550,0x1000a550,?GetWorldGuardPlanes@TRenderContext@Toshi@@QAEXPAVTPlane@2@H@Z,"public: void __thiscall Toshi::TRenderContext::GetWorldGuardPlanes(class Toshi::TPlane *,int)"
+790,0x111c0,0x100111c0,?GetWorldMatrix@TSceneObject@Toshi@@QAEXAAVTMatrix44@2@@Z,public: void __thiscall Toshi::TSceneObject::GetWorldMatrix(class Toshi::TMatrix44 &)
+791,0xa670,0x1000a670,?GetWorldModelMatrix@TRenderContext@Toshi@@QAEABVTMatrix44@2@XZ,public: class Toshi::TMatrix44 const & __thiscall Toshi::TRenderContext::GetWorldModelMatrix(void)
+792,0xa150,0x1000a150,?GetWorldPlanes@TRenderContext@Toshi@@QAEPBVTPlane@2@XZ,public: class Toshi::TPlane const * __thiscall Toshi::TRenderContext::GetWorldPlanes(void)
+793,0xa470,0x1000a470,?GetWorldPlanes@TRenderContext@Toshi@@QAEXPAVTPlane@2@H@Z,"public: void __thiscall Toshi::TRenderContext::GetWorldPlanes(class Toshi::TPlane *,int)"
+794,0x7620,0x10007620,?GetWorldViewMatrix@TRenderContext@Toshi@@QBEABVTMatrix44@2@XZ,public: class Toshi::TMatrix44 const & __thiscall Toshi::TRenderContext::GetWorldViewMatrix(void)const 
+795,0x12b30,0x10012b30,?GetX@TViewport@Toshi@@QAEMXZ,public: float __thiscall Toshi::TViewport::GetX(void)
+796,0x12b20,0x10012b20,?GetY@TViewport@Toshi@@QAEMXZ,public: float __thiscall Toshi::TViewport::GetY(void)
+797,0x8e80,0x10008e80,?HasChildren@TBone@TDImp@Toshi@@QAE_NXZ,public: bool __thiscall Toshi::TDImp::TBone::HasChildren(void)
+798,0xe160,0x1000e160,?HashName@TTextureFactory@Toshi@@IAEIPBD@Z,protected: unsigned int __thiscall Toshi::TTextureFactory::HashName(char const *)
+799,0x16720,0x10016720,?ImportKey@TDImp@Toshi@@AAE_NAAVTKeyFrame@TDBase@2@PAV12@@Z,"private: bool __thiscall Toshi::TDImp::ImportKey(class Toshi::TDBase::TKeyFrame &,class Toshi::TDImp *)"
+800,0x16000,0x10016000,?ImportKeySequence@TDImp@Toshi@@AAE_NAAVTKeySequence@TDBase@2@PAV12@@Z,"private: bool __thiscall Toshi::TDImp::ImportKeySequence(class Toshi::TDBase::TKeySequence &,class Toshi::TDImp *)"
+801,0x16a60,0x10016a60,?ImportMeshSet@TDImp@Toshi@@AAE_NAAI0PAV12@@Z,"private: bool __thiscall Toshi::TDImp::ImportMeshSet(unsigned int &,unsigned int &,class Toshi::TDImp *)"
+802,0x15ca0,0x10015ca0,?ImportSequence@TDImp@Toshi@@AAE_NAAVTSequence@TDBase@2@PAV12@@Z,"private: bool __thiscall Toshi::TDImp::ImportSequence(class Toshi::TDBase::TSequence &,class Toshi::TDImp *)"
+803,0x15bb0,0x10015bb0,?ImportSequenceSet@TDImp@Toshi@@AAE_NAAV?$TNodeList@VTSequence@TDBase@Toshi@@@2@PAV12@@Z,"private: bool __thiscall Toshi::TDImp::ImportSequenceSet(class Toshi::TNodeList<class Toshi::TDBase::TSequence> &,class Toshi::TDImp *)"
+804,0x18a50,0x10018a50,?InitVSConstants@TAtmosphere@Toshi@@AAEXXZ,private: void __thiscall Toshi::TAtmosphere::InitVSConstants(void)
+805,0x19080,0x10019080,?InitialiseStatic@TAtmosphere@Toshi@@CGXXZ,private: static void __stdcall Toshi::TAtmosphere::InitialiseStatic(void)
+806,0xf350,0x1000f350,?InitialiseStatic@TCameraObject@Toshi@@CGXXZ,private: static void __stdcall Toshi::TCameraObject::InitialiseStatic(void)
+807,0xfd80,0x1000fd80,?InitialiseStatic@TGFXFileInstanceObject@Toshi@@CGXXZ,private: static void __stdcall Toshi::TGFXFileInstanceObject::InitialiseStatic(void)
+808,0x100f0,0x100100f0,?InitialiseStatic@TGFXFileObject@Toshi@@CGXXZ,private: static void __stdcall Toshi::TGFXFileObject::InitialiseStatic(void)
+809,0xcc90,0x1000cc90,?InitialiseStatic@TIndexFactoryResourceInterface@Toshi@@CGXXZ,private: static void __stdcall Toshi::TIndexFactoryResourceInterface::InitialiseStatic(void)
+810,0xcea0,0x1000cea0,?InitialiseStatic@TIndexPoolResourceInterface@Toshi@@CGXXZ,private: static void __stdcall Toshi::TIndexPoolResourceInterface::InitialiseStatic(void)
+811,0x10270,0x10010270,?InitialiseStatic@TJPShadowFudgeNode@Toshi@@CGXXZ,private: static void __stdcall Toshi::TJPShadowFudgeNode::InitialiseStatic(void)
+812,0x106a0,0x100106a0,?InitialiseStatic@TLightingNode@Toshi@@CGXXZ,private: static void __stdcall Toshi::TLightingNode::InitialiseStatic(void)
+813,0xddc0,0x1000ddc0,?InitialiseStatic@TMaterial@Toshi@@CGXXZ,private: static void __stdcall Toshi::TMaterial::InitialiseStatic(void)
+814,0xdcf0,0x1000dcf0,?InitialiseStatic@TMesh@Toshi@@CGXXZ,private: static void __stdcall Toshi::TMesh::InitialiseStatic(void)
+815,0x12d20,0x10012d20,?InitialiseStatic@TNullResource@Toshi@@CGXXZ,private: static void __stdcall Toshi::TNullResource::InitialiseStatic(void)
+816,0x11150,0x10011150,?InitialiseStatic@TNullSceneResource@Toshi@@CGXXZ,private: static void __stdcall Toshi::TNullSceneResource::InitialiseStatic(void)
+817,0xc5e0,0x1000c5e0,?InitialiseStatic@TRenderInterface@Toshi@@CGXXZ,private: static void __stdcall Toshi::TRenderInterface::InitialiseStatic(void)
+818,0x12fc0,0x10012fc0,?InitialiseStatic@TResource@Toshi@@CGXXZ,private: static void __stdcall Toshi::TResource::InitialiseStatic(void)
+819,0x10d80,0x10010d80,?InitialiseStatic@TScene@Toshi@@CGXXZ,private: static void __stdcall Toshi::TScene::InitialiseStatic(void)
+820,0x11240,0x10011240,?InitialiseStatic@TSceneObject@Toshi@@CGXXZ,private: static void __stdcall Toshi::TSceneObject::InitialiseStatic(void)
+821,0x192d0,0x100192d0,?InitialiseStatic@TSceneSysMesh@Toshi@@CGXXZ,private: static void __stdcall Toshi::TSceneSysMesh::InitialiseStatic(void)
+822,0xde50,0x1000de50,?InitialiseStatic@TShader@Toshi@@CGXXZ,private: static void __stdcall Toshi::TShader::InitialiseStatic(void)
+823,0x18f80,0x10018f80,?InitialiseStatic@TSun@Toshi@@CGXXZ,private: static void __stdcall Toshi::TSun::InitialiseStatic(void)
+824,0x11870,0x10011870,?InitialiseStatic@TTerrainObject@Toshi@@CGXXZ,private: static void __stdcall Toshi::TTerrainObject::InitialiseStatic(void)
+825,0xe3b0,0x1000e3b0,?InitialiseStatic@TTextureFactory@Toshi@@CGXXZ,private: static void __stdcall Toshi::TTextureFactory::InitialiseStatic(void)
+826,0xe5b0,0x1000e5b0,?InitialiseStatic@TTextureResource@Toshi@@CGXXZ,private: static void __stdcall Toshi::TTextureResource::InitialiseStatic(void)
+827,0x120a0,0x100120a0,?InitialiseStatic@TTransformObject@Toshi@@CGXXZ,private: static void __stdcall Toshi::TTransformObject::InitialiseStatic(void)
+828,0xe7b0,0x1000e7b0,?InitialiseStatic@TVertexFactoryResourceInterface@Toshi@@CGXXZ,private: static void __stdcall Toshi::TVertexFactoryResourceInterface::InitialiseStatic(void)
+829,0xe9c0,0x1000e9c0,?InitialiseStatic@TVertexPoolResourceInterface@Toshi@@CGXXZ,private: static void __stdcall Toshi::TVertexPoolResourceInterface::InitialiseStatic(void)
+830,0x12b50,0x10012b50,?InitialiseStatic@TViewport@Toshi@@CGXXZ,private: static void __stdcall Toshi::TViewport::InitialiseStatic(void)
+831,0x6780,0x10006780,?IntraBlend@TSkeletonSequenceBone@Toshi@@QAEXPAVTKeyframeLibraryInstance@2@MAAI1AAVTQuaternion@2@AAVTVector4@2@@Z,"public: void __thiscall Toshi::TSkeletonSequenceBone::IntraBlend(class Toshi::TKeyframeLibraryInstance *,float,unsigned int &,unsigned int &,class Toshi::TQuaternion &,class Toshi::TVector4 &)"
+832,0x12f70,0x10012f70,?Invalidate@TResource@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TResource::Invalidate(void)
+833,0x87d0,0x100087d0,?IsActive@TAnimation@Toshi@@QAE_NXZ,public: bool __thiscall Toshi::TAnimation::IsActive(void)
+834,0x48a0,0x100048a0,?IsAnimating@TSkeletonInstance@Toshi@@QAEPAVTAnimation@2@F@Z,public: class Toshi::TAnimation * __thiscall Toshi::TSkeletonInstance::IsAnimating(short)
+835,0xf7a0,0x1000f7a0,?IsBackgroundClearAllowed@TViewport@Toshi@@QAE_NXZ,public: bool __thiscall Toshi::TViewport::IsBackgroundClearAllowed(void)
+836,0x17cb0,0x10017cb0,?IsBadBone@TBone@TDImp@Toshi@@QAE_NXZ,public: bool __thiscall Toshi::TDImp::TBone::IsBadBone(void)
+837,0x17fc0,0x10017fc0,?IsBadBoneName@TBone@TDImp@Toshi@@QAE_NXZ,public: bool __thiscall Toshi::TDImp::TBone::IsBadBoneName(void)
+838,0x17fe0,0x10017fe0,?IsBoneNode@TBone@TDImp@Toshi@@QAE_NXZ,public: bool __thiscall Toshi::TDImp::TBone::IsBoneNode(void)
+839,0x9aa0,0x10009aa0,?IsCreated@TModel@Toshi@@QAE_NXZ,public: bool __thiscall Toshi::TModel::IsCreated(void)
+840,0xc4f0,0x1000c4f0,?IsCreated@TRenderInterface@Toshi@@QAE_NXZ,public: bool __thiscall Toshi::TRenderInterface::IsCreated(void)
+841,0x12f10,0x10012f10,?IsCreated@TResource@Toshi@@QAE_NXZ,public: bool __thiscall Toshi::TResource::IsCreated(void)
+842,0xf790,0x1000f790,?IsDepthClearAllowed@TViewport@Toshi@@QAE_NXZ,public: bool __thiscall Toshi::TViewport::IsDepthClearAllowed(void)
+843,0xa840,0x1000a840,?IsDirty@TRenderContext@Toshi@@IAE_NXZ,protected: bool __thiscall Toshi::TRenderContext::IsDirty(void)
+844,0xc4e0,0x1000c4e0,?IsDisplayCreated@TRenderInterface@Toshi@@QAE_NXZ,public: bool __thiscall Toshi::TRenderInterface::IsDisplayCreated(void)
+845,0x12f00,0x10012f00,?IsDying@TResource@Toshi@@QAE_NXZ,public: bool __thiscall Toshi::TResource::IsDying(void)
+846,0xf780,0x1000f780,?IsEnableDefaultBeginRender@TViewport@Toshi@@QAE_NXZ,public: bool __thiscall Toshi::TViewport::IsEnableDefaultBeginRender(void)
+847,0xf3e0,0x1000f3e0,?IsEnabled@TCameraObject@Toshi@@QAE_NXZ,public: bool __thiscall Toshi::TCameraObject::IsEnabled(void)
+848,0xf760,0x1000f760,?IsEnabled@TViewport@Toshi@@QAE_NXZ,public: bool __thiscall Toshi::TViewport::IsEnabled(void)
+849,0x7430,0x10007430,?IsFogEnabled@TRenderContext@Toshi@@QBE_NXZ,public: bool __thiscall Toshi::TRenderContext::IsFogEnabled(void)const 
+850,0x13dc0,0x10013dc0,?IsInExclusiveTimeRange@TKeyFrame@TDBase@Toshi@@QAE_NMM@Z,"public: bool __thiscall Toshi::TDBase::TKeyFrame::IsInExclusiveTimeRange(float,float)"
+851,0xc500,0x1000c500,?IsInScene@TRenderInterface@Toshi@@QAE_NXZ,public: bool __thiscall Toshi::TRenderInterface::IsInScene(void)
+852,0x13df0,0x10013df0,?IsInTimeRange@TKeyFrame@TDBase@Toshi@@QAE_NMM@Z,"public: bool __thiscall Toshi::TDBase::TKeyFrame::IsInTimeRange(float,float)"
+853,0x9a90,0x10009a90,?IsLoaded@TModel@Toshi@@QAE_NXZ,public: bool __thiscall Toshi::TModel::IsLoaded(void)
+854,0xce50,0x1000ce50,?IsLocked@TIndexPoolResourceInterface@Toshi@@QBE_NXZ,public: bool __thiscall Toshi::TIndexPoolResourceInterface::IsLocked(void)const 
+855,0x9420,0x10009420,?IsLocked@TKeySequence@TDBase@Toshi@@QBE_NXZ,public: bool __thiscall Toshi::TDBase::TKeySequence::IsLocked(void)const 
+856,0x7e90,0x10007e90,?IsLocked@TSkeletonSequenceBone@Toshi@@QAE_NXZ,public: bool __thiscall Toshi::TSkeletonSequenceBone::IsLocked(void)
+857,0xe970,0x1000e970,?IsLocked@TVertexPoolResourceInterface@Toshi@@QBE_NXZ,public: bool __thiscall Toshi::TVertexPoolResourceInterface::IsLocked(void)const 
+858,0x93c0,0x100093c0,?IsLooping@TSequence@TDBase@Toshi@@QAE_NXZ,public: bool __thiscall Toshi::TDBase::TSequence::IsLooping(void)
+859,0x7f20,0x10007f20,?IsLooping@TSkeletonSequence@Toshi@@QAE_NXZ,public: bool __thiscall Toshi::TSkeletonSequence::IsLooping(void)
+860,0x87b0,0x100087b0,?IsManaged@TAnimation@Toshi@@QAE_NXZ,public: bool __thiscall Toshi::TAnimation::IsManaged(void)
+861,0x8f10,0x10008f10,?IsManual@TBone@TDImp@Toshi@@QAE_NXZ,public: bool __thiscall Toshi::TDImp::TBone::IsManual(void)
+862,0x82d0,0x100082d0,?IsManual@TSkeletonBone@Toshi@@QAE_NXZ,public: bool __thiscall Toshi::TSkeletonBone::IsManual(void)
+863,0x18180,0x10018180,?IsManualRestricted@TDImp@Toshi@@AAE_NPAVTBone@12@@Z,private: bool __thiscall Toshi::TDImp::IsManualRestricted(class Toshi::TDImp::TBone *)
+864,0x7f50,0x10007f50,?IsOverlay@TSkeletonSequence@Toshi@@QAE_NXZ,public: bool __thiscall Toshi::TSkeletonSequence::IsOverlay(void)
+865,0x8f00,0x10008f00,?IsPathHook@TBone@TDImp@Toshi@@QAE_NXZ,public: bool __thiscall Toshi::TDImp::TBone::IsPathHook(void)
+866,0x82f0,0x100082f0,?IsRoot@TSkeletonBone@Toshi@@QAE_NXZ,public: bool __thiscall Toshi::TSkeletonBone::IsRoot(void)
+867,0x18010,0x10018010,?IsRootNode@TBone@TDImp@Toshi@@QAE_NXZ,public: bool __thiscall Toshi::TDImp::TBone::IsRootNode(void)
+868,0x7e70,0x10007e70,?IsSceneObject@TResource@Toshi@@QAE_NXZ,public: bool __thiscall Toshi::TResource::IsSceneObject(void)
+869,0x72c0,0x100072c0,?IsTextureFormatSupported@TRenderInterface@Toshi@@UAE_NW4TTEXTURERESOURCEFORMAT@2@@Z,public: virtual bool __thiscall Toshi::TRenderInterface::IsTextureFormatSupported(enum Toshi::TTEXTURERESOURCEFORMAT)
+870,0x17ff0,0x10017ff0,?IsTransformNode@TBone@TDImp@Toshi@@QAE_NXZ,public: bool __thiscall Toshi::TDImp::TBone::IsTransformNode(void)
+871,0x93f0,0x100093f0,?IsTranslateAnimating@TKeySequence@TDBase@Toshi@@QBE_NXZ,public: bool __thiscall Toshi::TDBase::TKeySequence::IsTranslateAnimating(void)const 
+872,0x7ea0,0x10007ea0,?IsTranslateAnimating@TSkeletonSequenceBone@Toshi@@QAE_NXZ,public: bool __thiscall Toshi::TSkeletonSequenceBone::IsTranslateAnimating(void)
+873,0x8790,0x10008790,?IsUpdateStateOnRemove@TAnimation@Toshi@@QAE_NXZ,public: bool __thiscall Toshi::TAnimation::IsUpdateStateOnRemove(void)
+874,0x130a0,0x100130a0,?IsValid@Item@TResourceNameMap@Toshi@@QAE_NXZ,public: bool __thiscall Toshi::TResourceNameMap::Item::IsValid(void)
+875,0x12f20,0x10012f20,?IsValid@TResource@Toshi@@QAE_NXZ,public: bool __thiscall Toshi::TResource::IsValid(void)
+876,0xfe70,0x1000fe70,?IsVisibile@TGFXFileInstanceObject@Toshi@@QAE_NXZ,public: bool __thiscall Toshi::TGFXFileInstanceObject::IsVisibile(void)
+877,0x57a0,0x100057a0,?LoadLibrary@TKeyframeLibraryManager@Toshi@@QAEPAVTKeyframeLibrary@2@PBD@Z,public: class Toshi::TKeyframeLibrary * __thiscall Toshi::TKeyframeLibraryManager::LoadLibrary(char const *)
+878,0xd340,0x1000d340,?LoadMaterial@TMaterialLibrary@Toshi@@IAE_NHPAVTFile@2@@Z,"protected: bool __thiscall Toshi::TMaterialLibrary::LoadMaterial(int,class Toshi::TFile *)"
+879,0xd980,0x1000d980,?LoadMaterialLibrary@TMaterialLibraryManager@Toshi@@QAEIPBD@Z,public: unsigned int __thiscall Toshi::TMaterialLibraryManager::LoadMaterialLibrary(char const *)
+880,0xd250,0x1000d250,?LoadMaterials@TMaterialLibrary@Toshi@@IAE_NPAVTFile@2@@Z,protected: bool __thiscall Toshi::TMaterialLibrary::LoadMaterials(class Toshi::TFile *)
+881,0xd410,0x1000d410,?LoadSkinMaterial@TMaterialLibrary@Toshi@@IAE_NHPAVTFile@2@AAUTMLDISKMATERIALHEADER@12@@Z,"protected: bool __thiscall Toshi::TMaterialLibrary::LoadSkinMaterial(int,class Toshi::TFile *,struct Toshi::TMaterialLibrary::TMLDISKMATERIALHEADER &)"
+882,0xd7a0,0x1000d7a0,?LoadSpriteMaterial@TMaterialLibrary@Toshi@@IAE_NHPAVTFile@2@AAUTMLDISKMATERIALHEADER@12@@Z,"protected: bool __thiscall Toshi::TMaterialLibrary::LoadSpriteMaterial(int,class Toshi::TFile *,struct Toshi::TMaterialLibrary::TMLDISKMATERIALHEADER &)"
+883,0xd690,0x1000d690,?LoadSystemMaterial@TMaterialLibrary@Toshi@@IAE_NHPAVTFile@2@AAUTMLDISKMATERIALHEADER@12@@Z,"protected: bool __thiscall Toshi::TMaterialLibrary::LoadSystemMaterial(int,class Toshi::TFile *,struct Toshi::TMaterialLibrary::TMLDISKMATERIALHEADER &)"
+884,0x9730,0x10009730,?LoadTMD@TModel@Toshi@@IAE_NPBD@Z,protected: bool __thiscall Toshi::TModel::LoadTMD(char const *)
+885,0xd5f0,0x1000d5f0,?LoadTerrainDecalMaterial@TMaterialLibrary@Toshi@@IAE_NHPAVTFile@2@AAUTMLDISKMATERIALHEADER@12@@Z,"protected: bool __thiscall Toshi::TMaterialLibrary::LoadTerrainDecalMaterial(int,class Toshi::TFile *,struct Toshi::TMaterialLibrary::TMLDISKMATERIALHEADER &)"
+886,0xd550,0x1000d550,?LoadTerrainMaterial@TMaterialLibrary@Toshi@@IAE_NHPAVTFile@2@AAUTMLDISKMATERIALHEADER@12@@Z,"protected: bool __thiscall Toshi::TMaterialLibrary::LoadTerrainMaterial(int,class Toshi::TFile *,struct Toshi::TMaterialLibrary::TMLDISKMATERIALHEADER &)"
+887,0xd170,0x1000d170,?LoadTexture@TMaterialLibrary@Toshi@@IAE_NHPAVTFile@2@@Z,"protected: bool __thiscall Toshi::TMaterialLibrary::LoadTexture(int,class Toshi::TFile *)"
+888,0xd0e0,0x1000d0e0,?LoadTextures@TMaterialLibrary@Toshi@@IAE_NPAVTFile@2@@Z,protected: bool __thiscall Toshi::TMaterialLibrary::LoadTextures(class Toshi::TFile *)
+889,0xe570,0x1000e570,?Lock@TTextureResource@Toshi@@UAE_NAAULOCKSTATE@12@@Z,public: virtual bool __thiscall Toshi::TTextureResource::Lock(struct Toshi::TTextureResource::LOCKSTATE &)
+890,0xb650,0x1000b650,?MakeDepthStencilFormat@TRenderInterface@Toshi@@QAE?AW4DEPTHSTENCILFORMAT@Device@Mode@TRenderAdapter@2@II@Z,"public: enum Toshi::TRenderAdapter::Mode::Device::DEPTHSTENCILFORMAT __thiscall Toshi::TRenderInterface::MakeDepthStencilFormat(unsigned int,unsigned int)"
+891,0x7290,0x10007290,?MakeRGBA@TRenderInterface@Toshi@@SGIHHHH@Z,"public: static unsigned int __stdcall Toshi::TRenderInterface::MakeRGBA(int,int,int,int)"
+892,0x7260,0x10007260,?MakeRGBA@TRenderInterface@Toshi@@SGIIIII@Z,"public: static unsigned int __stdcall Toshi::TRenderInterface::MakeRGBA(unsigned int,unsigned int,unsigned int,unsigned int)"
+893,0x7110,0x10007110,?MakeRGBA@TRenderInterface@Toshi@@SGIMMMM@Z,"public: static unsigned int __stdcall Toshi::TRenderInterface::MakeRGBA(float,float,float,float)"
+894,0x12ef0,0x10012ef0,?MarkAsSceneObject@TResource@Toshi@@QAEXXZ,public: void __thiscall Toshi::TResource::MarkAsSceneObject(void)
+895,0x16b70,0x10016b70,?MarkMeshSet@TDImp@Toshi@@AAEXXZ,private: void __thiscall Toshi::TDImp::MarkMeshSet(void)
+896,0x7e30,0x10007e30,?Next@TResource@Toshi@@QBEPAV12@XZ,public: class Toshi::TResource * __thiscall Toshi::TResource::Next(void)const 
+897,0xeb60,0x1000eb60,?OnBeginRenderEvent@TCameraViewportHandler@Toshi@@SG_NPAV12@PAVTViewport@2@PAVBeginRenderEvent@32@@Z,"public: static bool __stdcall Toshi::TCameraViewportHandler::OnBeginRenderEvent(class Toshi::TCameraViewportHandler *,class Toshi::TViewport *,class Toshi::TViewport::BeginRenderEvent *)"
+898,0xf2f0,0x1000f2f0,?OnDestroy@TCameraObject@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TCameraObject::OnDestroy(void)
+899,0xfd40,0x1000fd40,?OnDestroy@TGFXFileInstanceObject@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TGFXFileInstanceObject::OnDestroy(void)
+900,0x10090,0x10010090,?OnDestroy@TGFXFileObject@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TGFXFileObject::OnDestroy(void)
+901,0xcde0,0x1000cde0,?OnDestroy@TIndexPoolResourceInterface@Toshi@@MAEXXZ,protected: virtual void __thiscall Toshi::TIndexPoolResourceInterface::OnDestroy(void)
+902,0x12d90,0x10012d90,?OnDestroy@TResource@Toshi@@MAEXXZ,protected: virtual void __thiscall Toshi::TResource::OnDestroy(void)
+903,0xe900,0x1000e900,?OnDestroy@TVertexPoolResourceInterface@Toshi@@MAEXXZ,protected: virtual void __thiscall Toshi::TVertexPoolResourceInterface::OnDestroy(void)
+904,0xee30,0x1000ee30,?OnEndRenderEvent@TCameraViewportHandler@Toshi@@SG_NPAV12@PAVTViewport@2@PAVEndRenderEvent@32@@Z,"public: static bool __stdcall Toshi::TCameraViewportHandler::OnEndRenderEvent(class Toshi::TCameraViewportHandler *,class Toshi::TViewport *,class Toshi::TViewport::EndRenderEvent *)"
+905,0x12dd0,0x10012dd0,?OnLostDevice@TResource@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TResource::OnLostDevice(void)
+906,0xed00,0x1000ed00,?OnRenderEvent@TCameraViewportHandler@Toshi@@SG_NPAV12@PAVTViewport@2@PAVRenderEvent@32@@Z,"public: static bool __stdcall Toshi::TCameraViewportHandler::OnRenderEvent(class Toshi::TCameraViewportHandler *,class Toshi::TViewport *,class Toshi::TViewport::RenderEvent *)"
+907,0x12dc0,0x10012dc0,?OnResetDevice@TResource@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TResource::OnResetDevice(void)
+908,0xf3c0,0x1000f3c0,?OnUpdateEvent@TCameraViewportHandler@Toshi@@SG_NPAV12@PAVTViewport@2@PAVUpdateEvent@32@@Z,"public: static bool __stdcall Toshi::TCameraViewportHandler::OnUpdateEvent(class Toshi::TCameraViewportHandler *,class Toshi::TViewport *,class Toshi::TViewport::UpdateEvent *)"
+909,0x7e50,0x10007e50,?Parent@TResource@Toshi@@QBEPAV12@XZ,public: class Toshi::TResource * __thiscall Toshi::TResource::Parent(void)const 
+910,0x11cb0,0x10011cb0,?Pop@TTransformObject@Toshi@@QAEXAAVTScene@2@@Z,public: void __thiscall Toshi::TTransformObject::Pop(class Toshi::TScene &)
+911,0x6bd0,0x10006bd0,?PostRender@TMaterial@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TMaterial::PostRender(void)
+912,0x6be0,0x10006be0,?PreRender@TMaterial@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TMaterial::PreRender(void)
+913,0x9550,0x10009550,?PrintString@TDebugText@Toshi@@QAEPAUString@12@GGPBDG@Z,"public: struct Toshi::TDebugText::String * __thiscall Toshi::TDebugText::PrintString(unsigned short,unsigned short,char const *,unsigned short)"
+914,0x11ac0,0x10011ac0,?Push@TTransformObject@Toshi@@QAEXAAVTScene@2@@Z,public: void __thiscall Toshi::TTransformObject::Push(class Toshi::TScene &)
+915,0xd090,0x1000d090,?ReadHeader@TMaterialLibrary@Toshi@@IAE_NPAVTFile@2@@Z,protected: bool __thiscall Toshi::TMaterialLibrary::ReadHeader(class Toshi::TFile *)
+916,0x10b60,0x10010b60,?Recurse@TScene@Toshi@@QAE_NM@Z,public: bool __thiscall Toshi::TScene::Recurse(float)
+917,0x10ff0,0x10010ff0,?Recurse@TSceneObject@Toshi@@UAE_NAAVTScene@2@@Z,public: virtual bool __thiscall Toshi::TSceneObject::Recurse(class Toshi::TScene &)
+918,0x12de0,0x10012de0,?RecurseSimple@TResource@Toshi@@QAEXP6G_NPAV12@PAX@Z01@Z,"public: void __thiscall Toshi::TResource::RecurseSimple(bool (__stdcall*)(class Toshi::TResource *,void *),class Toshi::TResource *,void *)"
+919,0xe1e0,0x1000e1e0,?RegisterTexture@TTextureFactory@Toshi@@IAEPAVNameEntry@12@PBDPAVTTextureResource@2@@Z,"protected: class Toshi::TTextureFactory::NameEntry * __thiscall Toshi::TTextureFactory::RegisterTexture(char const *,class Toshi::TTextureResource *)"
+920,0x6930,0x10006930,?RemoveAnimation@TAnimation@Toshi@@QAEXM@Z,public: void __thiscall Toshi::TAnimation::RemoveAnimation(float)
+921,0x47c0,0x100047c0,?RemoveAnimation@TSkeletonInstance@Toshi@@QAEXPAVTAnimation@2@M@Z,"public: void __thiscall Toshi::TSkeletonInstance::RemoveAnimation(class Toshi::TAnimation *,float)"
+922,0xf940,0x1000f940,?Render@TGFXFileInstanceObject@Toshi@@UAE_NAAVTScene@2@@Z,public: virtual bool __thiscall Toshi::TGFXFileInstanceObject::Render(class Toshi::TScene &)
+923,0x10050,0x10010050,?Render@TGFXFileObject@Toshi@@UAE_NAAVTScene@2@@Z,public: virtual bool __thiscall Toshi::TGFXFileObject::Render(class Toshi::TScene &)
+924,0x10240,0x10010240,?Render@TJPShadowFudgeNode@Toshi@@UAE_NAAVTScene@2@@Z,public: virtual bool __thiscall Toshi::TJPShadowFudgeNode::Render(class Toshi::TScene &)
+925,0x103d0,0x100103d0,?Render@TLightingNode@Toshi@@UAE_NAAVTScene@2@@Z,public: virtual bool __thiscall Toshi::TLightingNode::Render(class Toshi::TScene &)
+926,0xdca0,0x1000dca0,?Render@TMesh@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TMesh::Render(void)
+927,0x9880,0x10009880,?Render@TModelInstance@Toshi@@QAEXXZ,public: void __thiscall Toshi::TModelInstance::Render(void)
+928,0x10aa0,0x10010aa0,?Render@TScene@Toshi@@QAE_NXZ,public: bool __thiscall Toshi::TScene::Render(void)
+929,0x10f60,0x10010f60,?Render@TSceneObject@Toshi@@UAE_NAAVTScene@2@@Z,public: virtual bool __thiscall Toshi::TSceneObject::Render(class Toshi::TScene &)
+930,0x191a0,0x100191a0,?Render@TSceneSysMesh@Toshi@@UAE_NAAVTScene@2@@Z,public: virtual bool __thiscall Toshi::TSceneSysMesh::Render(class Toshi::TScene &)
+931,0x116a0,0x100116a0,?Render@TTerrainObject@Toshi@@UAE_NAAVTScene@2@@Z,public: virtual bool __thiscall Toshi::TTerrainObject::Render(class Toshi::TScene &)
+932,0x124c0,0x100124c0,?Render@TViewport@Toshi@@UAE_NAAVTScene@2@@Z,public: virtual bool __thiscall Toshi::TViewport::Render(class Toshi::TScene &)
+933,0x7330,0x10007330,?RenderIndexPrimitive@TRenderInterface@Toshi@@UAEXW4PRIMITIVETYPE@12@IIPBGPBXG@Z,"public: virtual void __thiscall Toshi::TRenderInterface::RenderIndexPrimitive(enum Toshi::TRenderInterface::PRIMITIVETYPE,unsigned int,unsigned int,unsigned short const *,void const *,unsigned short)"
+934,0x12020,0x10012020,?RenderOld@TTransformObject@Toshi@@UAE_NAAVTScene@2@@Z,public: virtual bool __thiscall Toshi::TTransformObject::RenderOld(class Toshi::TScene &)
+935,0x10ad0,0x10010ad0,?RenderScene@TScene@Toshi@@QAE_NXZ,public: bool __thiscall Toshi::TScene::RenderScene(void)
+936,0x15730,0x10015730,?ReorderAllKeySeqs@TDImp@Toshi@@AAEXXZ,private: void __thiscall Toshi::TDImp::ReorderAllKeySeqs(void)
+937,0x17bb0,0x10017bb0,?ReorderKeySeqs@TBone@TDImp@Toshi@@QAEXPAV23@@Z,public: void __thiscall Toshi::TDImp::TBone::ReorderKeySeqs(class Toshi::TDImp *)
+938,0x8b20,0x10008b20,?Set@TAnimQuaternion@Toshi@@QAEXABVTQuaternion@2@@Z,public: void __thiscall Toshi::TAnimQuaternion::Set(class Toshi::TQuaternion const &)
+939,0x8a80,0x10008a80,?Set@TAnimVector@Toshi@@QAEXABVTVector4@2@@Z,public: void __thiscall Toshi::TAnimVector::Set(class Toshi::TVector4 const &)
+940,0x13410,0x10013410,?Set@TKeyFrame@TDBase@Toshi@@QAEXABMABVTQuaternion@3@ABVTVector4@3@@Z,"public: void __thiscall Toshi::TDBase::TKeyFrame::Set(float const &,class Toshi::TQuaternion const &,class Toshi::TVector4 const &)"
+941,0x18c60,0x10018c60,?Set@TSun@Toshi@@QAEXMMABVTVector3@2@M@Z,"public: void __thiscall Toshi::TSun::Set(float,float,class Toshi::TVector3 const &,float)"
+942,0xc660,0x1000c660,?SetAddressModeMode@TTextureResource@Toshi@@QAE?AW4ADDRESSMODE@12@W4312@@Z,public: enum Toshi::TTextureResource::ADDRESSMODE __thiscall Toshi::TTextureResource::SetAddressModeMode(enum Toshi::TTextureResource::ADDRESSMODE)
+943,0x18730,0x10018730,?SetAll@TAtmosphere@Toshi@@QAEXMMABVTVector3@2@0MMM@Z,"public: void __thiscall Toshi::TAtmosphere::SetAll(float,float,class Toshi::TVector3 const &,class Toshi::TVector3 const &,float,float,float)"
+944,0x10770,0x10010770,?SetAmbientColour@TLightingNode@Toshi@@QAEXABVTVector4@2@@Z,public: void __thiscall Toshi::TLightingNode::SetAmbientColour(class Toshi::TVector4 const &)
+945,0x10740,0x10010740,?SetAmbientColour@TLightingNode@Toshi@@QAEXMMM@Z,"public: void __thiscall Toshi::TLightingNode::SetAmbientColour(float,float,float)"
+946,0x7530,0x10007530,?SetAmbientColour@TRenderContext@Toshi@@QAEXABVTVector4@2@@Z,public: void __thiscall Toshi::TRenderContext::SetAmbientColour(class Toshi::TVector4 const &)
+947,0x7500,0x10007500,?SetAmbientColour@TRenderContext@Toshi@@QAEXMMM@Z,"public: void __thiscall Toshi::TRenderContext::SetAmbientColour(float,float,float)"
+948,0x6d00,0x10006d00,?SetAmbientColour@TScene@Toshi@@QAEXABVTVector4@2@@Z,public: void __thiscall Toshi::TScene::SetAmbientColour(class Toshi::TVector4 const &)
+949,0x6cd0,0x10006cd0,?SetAmbientColour@TScene@Toshi@@QAEXMMM@Z,"public: void __thiscall Toshi::TScene::SetAmbientColour(float,float,float)"
+950,0xba00,0x1000ba00,?SetAsLastChild@TRenderInterface@Toshi@@QAEXPAVTResource@2@@Z,public: void __thiscall Toshi::TRenderInterface::SetAsLastChild(class Toshi::TResource *)
+951,0x13ce0,0x10013ce0,?SetAssociatedBoneName@TKeySequence@TDBase@Toshi@@QAEXPBD@Z,public: void __thiscall Toshi::TDBase::TKeySequence::SetAssociatedBoneName(char const *)
+952,0x19030,0x10019030,?SetAtmBetaMieMult@TAtmosphere@Toshi@@QAEXM@Z,public: void __thiscall Toshi::TAtmosphere::SetAtmBetaMieMult(float)
+953,0x19050,0x10019050,?SetAtmBetaRayMult@TAtmosphere@Toshi@@QAEXM@Z,public: void __thiscall Toshi::TAtmosphere::SetAtmBetaRayMult(float)
+954,0x18ff0,0x10018ff0,?SetAtmExtinctionMult@TAtmosphere@Toshi@@QAEXM@Z,public: void __thiscall Toshi::TAtmosphere::SetAtmExtinctionMult(float)
+955,0x186f0,0x100186f0,?SetAtmHGg@TAtmosphere@Toshi@@QAEXM@Z,public: void __thiscall Toshi::TAtmosphere::SetAtmHGg(float)
+956,0x19010,0x10019010,?SetAtmInscatteringMult@TAtmosphere@Toshi@@QAEXM@Z,public: void __thiscall Toshi::TAtmosphere::SetAtmInscatteringMult(float)
+957,0x128e0,0x100128e0,?SetBackgroundColour@TViewport@Toshi@@QAEXEEEE@Z,"public: void __thiscall Toshi::TViewport::SetBackgroundColour(unsigned char,unsigned char,unsigned char,unsigned char)"
+958,0x18d40,0x10018d40,?SetBiasColour@TSun@Toshi@@QAEXABVTVector3@2@M@Z,"public: void __thiscall Toshi::TSun::SetBiasColour(class Toshi::TVector3 const &,float)"
+959,0x9410,0x10009410,?SetBoneDepth@TKeySequence@TDBase@Toshi@@QAEXI@Z,public: void __thiscall Toshi::TDBase::TKeySequence::SetBoneDepth(unsigned int)
+960,0x92f0,0x100092f0,?SetBoundingCenter@TDImp@Toshi@@QAEXMMM@Z,"public: void __thiscall Toshi::TDImp::SetBoundingCenter(float,float,float)"
+961,0x92d0,0x100092d0,?SetBoundingRadius@TDImp@Toshi@@QAEXM@Z,public: void __thiscall Toshi::TDImp::SetBoundingRadius(float)
+962,0x75d0,0x100075d0,?SetClipFlags@TRenderContext@Toshi@@QAEXH@Z,public: void __thiscall Toshi::TRenderContext::SetClipFlags(int)
+963,0x6d70,0x10006d70,?SetCurrentCamera@TScene@Toshi@@QAEXPAVTCameraObject@2@@Z,public: void __thiscall Toshi::TScene::SetCurrentCamera(class Toshi::TCameraObject *)
+964,0xc410,0x1000c410,?SetCurrentRenderContext@TRenderInterface@Toshi@@QAEPAVTRenderContext@2@PAV32@@Z,public: class Toshi::TRenderContext * __thiscall Toshi::TRenderInterface::SetCurrentRenderContext(class Toshi::TRenderContext *)
+965,0x9a10,0x10009a10,?SetDebugName@TModel@Toshi@@IAEXPBD@Z,protected: void __thiscall Toshi::TModel::SetDebugName(char const *)
+966,0x5320,0x10005320,?SetDestWeight@TAnimation@Toshi@@QAEMMM@Z,"public: float __thiscall Toshi::TAnimation::SetDestWeight(float,float)"
+967,0xa850,0x1000a850,?SetDirty@TRenderContext@Toshi@@IAEX_N@Z,protected: void __thiscall Toshi::TRenderContext::SetDirty(bool)
+968,0x11ff0,0x10011ff0,?SetEuler@TTransformObject@Toshi@@QAEXABVTVector3@2@@Z,public: void __thiscall Toshi::TTransformObject::SetEuler(class Toshi::TVector3 const &)
+969,0x11f90,0x10011f90,?SetEulerOrder@TTransformObject@Toshi@@QAEXW4EROT@TTransformData@2@00@Z,"public: void __thiscall Toshi::TTransformObject::SetEulerOrder(enum Toshi::TTransformData::EROT,enum Toshi::TTransformData::EROT,enum Toshi::TTransformData::EROT)"
+970,0xf010,0x1000f010,?SetFOV@TCameraObject@Toshi@@QAEMM@Z,public: float __thiscall Toshi::TCameraObject::SetFOV(float)
+971,0xf290,0x1000f290,?SetFOVMode@TCameraObject@Toshi@@QAE?AW4FOVMODE@12@W4312@@Z,public: enum Toshi::TCameraObject::FOVMODE __thiscall Toshi::TCameraObject::SetFOVMode(enum Toshi::TCameraObject::FOVMODE)
+972,0xfdf0,0x1000fdf0,?SetFade@TGFXFileInstanceObject@Toshi@@QAEXMM@Z,"public: void __thiscall Toshi::TGFXFileInstanceObject::SetFade(float,float)"
+973,0x7980,0x10007980,?SetFar@TAtmosphere@Toshi@@QAEXM@Z,public: void __thiscall Toshi::TAtmosphere::SetFar(float)
+974,0xf2b0,0x1000f2b0,?SetFar@TCameraObject@Toshi@@QAEMM@Z,public: float __thiscall Toshi::TCameraObject::SetFar(float)
+975,0xdd50,0x1000dd50,?SetFlag@TMaterial@Toshi@@QAEXI_N@Z,"public: void __thiscall Toshi::TMaterial::SetFlag(unsigned int,bool)"
+976,0x73b0,0x100073b0,?SetFlag@TRenderContext@Toshi@@IAEXW4FLAG@12@_N@Z,"protected: void __thiscall Toshi::TRenderContext::SetFlag(enum Toshi::TRenderContext::FLAG,bool)"
+977,0x13b70,0x10013b70,?SetFlag@TSequence@TDBase@Toshi@@QAEXG@Z,public: void __thiscall Toshi::TDBase::TSequence::SetFlag(unsigned short)
+978,0x6c20,0x10006c20,?SetFlags@TMaterial@Toshi@@QAEXI@Z,public: void __thiscall Toshi::TMaterial::SetFlags(unsigned int)
+979,0x111e0,0x100111e0,?SetFlags@TSceneObject@Toshi@@QAEII@Z,public: unsigned int __thiscall Toshi::TSceneObject::SetFlags(unsigned int)
+980,0x7490,0x10007490,?SetFogColour@TRenderContext@Toshi@@QAEXABVTVector4@2@@Z,public: void __thiscall Toshi::TRenderContext::SetFogColour(class Toshi::TVector4 const &)
+981,0x7460,0x10007460,?SetFogColour@TRenderContext@Toshi@@QAEXMMM@Z,"public: void __thiscall Toshi::TRenderContext::SetFogColour(float,float,float)"
+982,0xa8a0,0x1000a8a0,?SetFogDistance@TRenderContext@Toshi@@QAEXMM@Z,"public: void __thiscall Toshi::TRenderContext::SetFogDistance(float,float)"
+983,0x8e70,0x10008e70,?SetHasChildren@TBone@TDImp@Toshi@@QAEX_N@Z,public: void __thiscall Toshi::TDImp::TBone::SetHasChildren(bool)
+984,0x12790,0x10012790,?SetHeight@TViewport@Toshi@@QAEMM@Z,public: float __thiscall Toshi::TViewport::SetHeight(float)
+985,0x8ed0,0x10008ed0,?SetIndex2@TBone@TDImp@Toshi@@QAEXI@Z,public: void __thiscall Toshi::TDImp::TBone::SetIndex2(unsigned int)
+986,0x8ee0,0x10008ee0,?SetIndex@TBone@TDImp@Toshi@@QAEXI@Z,public: void __thiscall Toshi::TDImp::TBone::SetIndex(unsigned int)
+987,0x18c20,0x10018c20,?SetIntensity@TSun@Toshi@@QAEXM@Z,public: void __thiscall Toshi::TSun::SetIntensity(float)
+988,0x99e0,0x100099e0,?SetLOD@TModelInstance@Toshi@@QAEHH@Z,public: int __thiscall Toshi::TModelInstance::SetLOD(int)
+989,0x107a0,0x100107a0,?SetLightColourMatrix@TLightingNode@Toshi@@QAEXABVTMatrix44@2@@Z,public: void __thiscall Toshi::TLightingNode::SetLightColourMatrix(class Toshi::TMatrix44 const &)
+990,0x6e80,0x10006e80,?SetLightColourMatrix@TRenderInterface@Toshi@@UAEXABVTMatrix44@2@@Z,public: virtual void __thiscall Toshi::TRenderInterface::SetLightColourMatrix(class Toshi::TMatrix44 const &)
+991,0x10830,0x10010830,?SetLightDirectionMatrix@TLightingNode@Toshi@@QAEXABVTMatrix44@2@@Z,public: void __thiscall Toshi::TLightingNode::SetLightDirectionMatrix(class Toshi::TMatrix44 const &)
+992,0x6fd0,0x10006fd0,?SetLightDirectionMatrix@TRenderInterface@Toshi@@UAEXABVTMatrix44@2@@Z,public: virtual void __thiscall Toshi::TRenderInterface::SetLightDirectionMatrix(class Toshi::TMatrix44 const &)
+993,0x9430,0x10009430,?SetLocked@TKeySequence@TDBase@Toshi@@QAEX_N@Z,public: void __thiscall Toshi::TDBase::TKeySequence::SetLocked(bool)
+994,0xf260,0x1000f260,?SetLookatTarget@TCameraObject@Toshi@@QAEPAVTSceneObject@2@PAV32@@Z,public: class Toshi::TSceneObject * __thiscall Toshi::TCameraObject::SetLookatTarget(class Toshi::TSceneObject *)
+995,0x8ef0,0x10008ef0,?SetManual@TBone@TDImp@Toshi@@QAEX_N@Z,public: void __thiscall Toshi::TDImp::TBone::SetManual(bool)
+996,0xdc90,0x1000dc90,?SetMaterial@TMesh@Toshi@@IAEXPAVTMaterial@2@@Z,protected: void __thiscall Toshi::TMesh::SetMaterial(class Toshi::TMaterial *)
+997,0x8ff0,0x10008ff0,?SetMaterial@TSkinMesh@TDImp@Toshi@@QAEXPAVTDImpMaterial@23@@Z,public: void __thiscall Toshi::TDImp::TSkinMesh::SetMaterial(class Toshi::TDImp::TDImpMaterial *)
+998,0x11cf0,0x10011cf0,?SetMatrix@TTransformObject@Toshi@@QAEXABVTMatrix44@2@@Z,public: void __thiscall Toshi::TTransformObject::SetMatrix(class Toshi::TMatrix44 const &)
+999,0x12870,0x10012870,?SetMaxZ@TViewport@Toshi@@QAEMM@Z,public: float __thiscall Toshi::TViewport::SetMaxZ(float)
+1000,0x19280,0x10019280,?SetMesh@TSceneSysMesh@Toshi@@QAE_NPAVTMesh@2@@Z,public: bool __thiscall Toshi::TSceneSysMesh::SetMesh(class Toshi::TMesh *)
+1001,0x12800,0x10012800,?SetMinZ@TViewport@Toshi@@QAEMM@Z,public: float __thiscall Toshi::TViewport::SetMinZ(float)
+1002,0x8780,0x10008780,?SetMode@TAnimation@Toshi@@QAEXW4MODE@12@@Z,public: void __thiscall Toshi::TAnimation::SetMode(enum Toshi::TAnimation::MODE)
+1003,0x12010,0x10012010,?SetMode@TTransformObject@Toshi@@QAE?AW4MODE@TTransformData@2@W4342@@Z,public: enum Toshi::TTransformData::MODE __thiscall Toshi::TTransformObject::SetMode(enum Toshi::TTransformData::MODE)
+1004,0x9f90,0x10009f90,?SetModelViewMatrix@TRenderContext@Toshi@@UAEXABVTMatrix44@2@@Z,public: virtual void __thiscall Toshi::TRenderContext::SetModelViewMatrix(class Toshi::TMatrix44 const &)
+1005,0x130c0,0x100130c0,?SetName@Item@TResourceNameMap@Toshi@@QAEXPBD@Z,public: void __thiscall Toshi::TResourceNameMap::Item::SetName(char const *)
+1006,0x8c90,0x10008c90,?SetName@ResourceName@Toshi@@QAEXPBD@Z,public: void __thiscall Toshi::ResourceName::SetName(char const *)
+1007,0x8cc0,0x10008cc0,?SetName@ResourceName@Toshi@@QAEXPBDH@Z,"public: void __thiscall Toshi::ResourceName::SetName(char const *,int)"
+1008,0x12c10,0x10012c10,?SetName@TResource@Toshi@@QAEXPBD@Z,public: void __thiscall Toshi::TResource::SetName(char const *)
+1009,0x7990,0x10007990,?SetNear@TAtmosphere@Toshi@@QAEXM@Z,public: void __thiscall Toshi::TAtmosphere::SetNear(float)
+1010,0xf2d0,0x1000f2d0,?SetNear@TCameraObject@Toshi@@QAEMM@Z,public: float __thiscall Toshi::TCameraObject::SetNear(float)
+1011,0x13170,0x10013170,?SetNum@TResourceNameMap@Toshi@@QAE_NH@Z,public: bool __thiscall Toshi::TResourceNameMap::SetNum(int)
+1012,0x13bb0,0x10013bb0,?SetNumKeySeqs@TSequence@TDBase@Toshi@@QAEXI@Z,public: void __thiscall Toshi::TDBase::TSequence::SetNumKeySeqs(unsigned int)
+1013,0x13d00,0x10013d00,?SetNumKeys@TKeySequence@TDBase@Toshi@@QAEXI@Z,public: void __thiscall Toshi::TDBase::TKeySequence::SetNumKeys(unsigned int)
+1014,0x6c00,0x10006c00,?SetNumTextures@TMaterial@Toshi@@QAEXI@Z,public: void __thiscall Toshi::TMaterial::SetNumTextures(unsigned int)
+1015,0x8ea0,0x10008ea0,?SetParent@TBone@TDImp@Toshi@@QAEXPAV123@@Z,public: void __thiscall Toshi::TDImp::TBone::SetParent(class Toshi::TDImp::TBone *)
+1016,0x12e20,0x10012e20,?SetParent@TResource@Toshi@@QAEXPAV12@@Z,public: void __thiscall Toshi::TResource::SetParent(class Toshi::TResource *)
+1017,0x7300,0x10007300,?SetPixelAspectRatio@TRenderInterface@Toshi@@UAE_NM@Z,public: virtual bool __thiscall Toshi::TRenderInterface::SetPixelAspectRatio(float)
+1018,0x8f30,0x10008f30,?SetPose@TBone@TDImp@Toshi@@QAEXAAVTQuaternion@3@AAVTVector4@3@@Z,"public: void __thiscall Toshi::TDImp::TBone::SetPose(class Toshi::TQuaternion &,class Toshi::TVector4 &)"
+1019,0xf280,0x1000f280,?SetProjType@TCameraObject@Toshi@@QAEXW4PROJTYPE@12@@Z,public: void __thiscall Toshi::TCameraObject::SetProjType(enum Toshi::TCameraObject::PROJTYPE)
+1020,0xa8d0,0x1000a8d0,?SetProjType@TRenderContext@Toshi@@QAEXW4PROJTYPE@12@@Z,public: void __thiscall Toshi::TRenderContext::SetProjType(enum Toshi::TRenderContext::PROJTYPE)
+1021,0xf080,0x1000f080,?SetProjectionCentreX@TCameraObject@Toshi@@QAEMM@Z,public: float __thiscall Toshi::TCameraObject::SetProjectionCentreX(float)
+1022,0xf0d0,0x1000f0d0,?SetProjectionCentreY@TCameraObject@Toshi@@QAEMM@Z,public: float __thiscall Toshi::TCameraObject::SetProjectionCentreY(float)
+1023,0xa8f0,0x1000a8f0,?SetProjectionParameters@TRenderContext@Toshi@@QAEXABUPROJECTIONPARAMS@12@@Z,public: void __thiscall Toshi::TRenderContext::SetProjectionParameters(struct Toshi::TRenderContext::PROJECTIONPARAMS const &)
+1024,0x83f0,0x100083f0,?SetQBaseIndex@TKeyframeLibraryInstance@Toshi@@QAEXH@Z,public: void __thiscall Toshi::TKeyframeLibraryInstance::SetQBaseIndex(int)
+1025,0x83c0,0x100083c0,?SetQCount@TKeyframeLibraryInstance@Toshi@@QAEXH@Z,public: void __thiscall Toshi::TKeyframeLibraryInstance::SetQCount(int)
+1026,0x11fc0,0x10011fc0,?SetQuat@TTransformObject@Toshi@@QAEXABVTQuaternion@2@@Z,public: void __thiscall Toshi::TTransformObject::SetQuat(class Toshi::TQuaternion const &)
+1027,0xdd40,0x1000dd40,?SetRegMaterial@TMaterial@Toshi@@QAEXPAVTRegMaterial@2@@Z,public: void __thiscall Toshi::TMaterial::SetRegMaterial(class Toshi::TRegMaterial *)
+1028,0x130b0,0x100130b0,?SetResource@Item@TResourceNameMap@Toshi@@QAEXPAVTResource@3@@Z,public: void __thiscall Toshi::TResourceNameMap::Item::SetResource(class Toshi::TResource *)
+1029,0x83e0,0x100083e0,?SetSBaseIndex@TKeyframeLibraryInstance@Toshi@@QAEXH@Z,public: void __thiscall Toshi::TKeyframeLibraryInstance::SetSBaseIndex(int)
+1030,0x83b0,0x100083b0,?SetSCount@TKeyframeLibraryInstance@Toshi@@QAEXH@Z,public: void __thiscall Toshi::TKeyframeLibraryInstance::SetSCount(int)
+1031,0xf580,0x1000f580,?SetScale@TTransformObject@Toshi@@QAEXABVTVector3@2@@Z,public: void __thiscall Toshi::TTransformObject::SetScale(class Toshi::TVector3 const &)
+1032,0xf560,0x1000f560,?SetScale@TTransformObject@Toshi@@QAEXM@Z,public: void __thiscall Toshi::TTransformObject::SetScale(float)
+1033,0xf530,0x1000f530,?SetScale@TTransformObject@Toshi@@QAEXMMM@Z,"public: void __thiscall Toshi::TTransformObject::SetScale(float,float,float)"
+1034,0xc520,0x1000c520,?SetScreenOffset@TRenderInterface@Toshi@@UAEXAAVTVector2@2@@Z,public: virtual void __thiscall Toshi::TRenderInterface::SetScreenOffset(class Toshi::TVector2 &)
+1035,0x13b90,0x10013b90,?SetSeqName@TSequence@TDBase@Toshi@@QAEXPBD@Z,public: void __thiscall Toshi::TDBase::TSequence::SetSeqName(char const *)
+1036,0x18150,0x10018150,?SetSeqShortTranslation@TDImp@Toshi@@AAEXAAUtag_TShortVector3@2@@Z,private: void __thiscall Toshi::TDImp::SetSeqShortTranslation(struct Toshi::tag_TShortVector3 &)
+1037,0x9290,0x10009290,?SetSequenceLength@TDImp@Toshi@@AAEXM@Z,private: void __thiscall Toshi::TDImp::SetSequenceLength(float)
+1038,0xdd30,0x1000dd30,?SetShader@TMaterial@Toshi@@IAEXPAVTShader@2@@Z,protected: void __thiscall Toshi::TMaterial::SetShader(class Toshi::TShader *)
+1039,0x9390,0x10009390,?SetShader@TMaterialLibraryManager@Toshi@@QAEXHPAVTShader@2@@Z,"public: void __thiscall Toshi::TMaterialLibraryManager::SetShader(int,class Toshi::TShader *)"
+1040,0xdc80,0x1000dc80,?SetShader@TMesh@Toshi@@IAEXPAVTShader@2@@Z,protected: void __thiscall Toshi::TMesh::SetShader(class Toshi::TShader *)
+1041,0x75b0,0x100075b0,?SetSkeletonInstance@TRenderContext@Toshi@@QAEXPAVTSkeletonInstance@2@@Z,public: void __thiscall Toshi::TRenderContext::SetSkeletonInstance(class Toshi::TSkeletonInstance *)
+1042,0x8770,0x10008770,?SetSpeed@TAnimation@Toshi@@QAEMM@Z,public: float __thiscall Toshi::TAnimation::SetSpeed(float)
+1043,0x4900,0x10004900,?SetStateFromBasePose@TSkeletonInstance@Toshi@@QAEXXZ,public: void __thiscall Toshi::TSkeletonInstance::SetStateFromBasePose(void)
+1044,0x8400,0x10008400,?SetTBaseIndex@TKeyframeLibraryInstance@Toshi@@QAEXH@Z,public: void __thiscall Toshi::TKeyframeLibraryInstance::SetTBaseIndex(int)
+1045,0x83d0,0x100083d0,?SetTCount@TKeyframeLibraryInstance@Toshi@@QAEXH@Z,public: void __thiscall Toshi::TKeyframeLibraryInstance::SetTCount(int)
+1046,0x11800,0x10011800,?SetTerrain@TTerrainObject@Toshi@@QAE_NPAVTTerrainInterface@2@@Z,public: bool __thiscall Toshi::TTerrainObject::SetTerrain(class Toshi::TTerrainInterface *)
+1047,0xfcc0,0x1000fcc0,?SetTextureAlphas@TGFXFileInstanceObject@Toshi@@QAEXEEEE@Z,"public: void __thiscall Toshi::TGFXFileInstanceObject::SetTextureAlphas(unsigned char,unsigned char,unsigned char,unsigned char)"
+1048,0xfc20,0x1000fc20,?SetTextureAlphasA@TGFXFileInstanceObject@Toshi@@QAEXPAE@Z,public: void __thiscall Toshi::TGFXFileInstanceObject::SetTextureAlphasA(unsigned char *)
+1049,0xfce0,0x1000fce0,?SetTextureStages@TGFXFileInstanceObject@Toshi@@QAEXCCCC@Z,"public: void __thiscall Toshi::TGFXFileInstanceObject::SetTextureStages(signed char,signed char,signed char,signed char)"
+1050,0xfbe0,0x1000fbe0,?SetTextureStagesA@TGFXFileInstanceObject@Toshi@@QAEXPAC@Z,public: void __thiscall Toshi::TGFXFileInstanceObject::SetTextureStagesA(signed char *)
+1051,0x18b60,0x10018b60,?SetTheta@TSun@Toshi@@QAEXM@Z,public: void __thiscall Toshi::TSun::SetTheta(float)
+1052,0x5360,0x10005360,?SetTime@TAnimation@Toshi@@QAEMM@Z,public: float __thiscall Toshi::TAnimation::SetTime(float)
+1053,0x94c0,0x100094c0,?SetTime@TKeyFrame@TDBase@Toshi@@QAEXM@Z,public: void __thiscall Toshi::TDBase::TKeyFrame::SetTime(float)
+1054,0x94f0,0x100094f0,?SetTransDeviation@TDBase@Toshi@@QAEXM@Z,public: void __thiscall Toshi::TDBase::SetTransDeviation(float)
+1055,0x9510,0x10009510,?SetTransEpsilon@TDBase@Toshi@@QAEXM@Z,public: void __thiscall Toshi::TDBase::SetTransEpsilon(float)
+1056,0x11d70,0x10011d70,?SetTranslate@TTransformObject@Toshi@@QAEXABVTVector3@2@@Z,public: void __thiscall Toshi::TTransformObject::SetTranslate(class Toshi::TVector3 const &)
+1057,0x5480,0x10005480,?SetUpdateStateOnRemove@TAnimation@Toshi@@QAE_N_N@Z,public: bool __thiscall Toshi::TAnimation::SetUpdateStateOnRemove(bool)
+1058,0xf120,0x1000f120,?SetViewport@TCameraObject@Toshi@@QAEPAVTViewport@2@PAV32@@Z,public: class Toshi::TViewport * __thiscall Toshi::TCameraObject::SetViewport(class Toshi::TViewport *)
+1059,0xa930,0x1000a930,?SetViewportParameters@TRenderContext@Toshi@@QAEXABUVIEWPORTPARAMS@12@@Z,public: void __thiscall Toshi::TRenderContext::SetViewportParameters(struct Toshi::TRenderContext::VIEWPORTPARAMS const &)
+1060,0xfe80,0x1000fe80,?SetVisible@TGFXFileInstanceObject@Toshi@@QAE_N_N@Z,public: bool __thiscall Toshi::TGFXFileInstanceObject::SetVisible(bool)
+1061,0x6950,0x10006950,?SetWeight@TAnimation@Toshi@@QAEMM@Z,public: float __thiscall Toshi::TAnimation::SetWeight(float)
+1062,0x12720,0x10012720,?SetWidth@TViewport@Toshi@@QAEMM@Z,public: float __thiscall Toshi::TViewport::SetWidth(float)
+1063,0xa020,0x1000a020,?SetWorldViewMatrix@TRenderContext@Toshi@@UAEXABVTMatrix44@2@@Z,public: virtual void __thiscall Toshi::TRenderContext::SetWorldViewMatrix(class Toshi::TMatrix44 const &)
+1064,0x12640,0x10012640,?SetX@TViewport@Toshi@@QAEMM@Z,public: float __thiscall Toshi::TViewport::SetX(float)
+1065,0x126b0,0x100126b0,?SetY@TViewport@Toshi@@QAEMM@Z,public: float __thiscall Toshi::TViewport::SetY(float)
+1066,0x72b0,0x100072b0,?Supports32BitTextures@TRenderInterface@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TRenderInterface::Supports32BitTextures(void)
+1067,0x93e0,0x100093e0,?TranslateAnimating@TKeySequence@TDBase@Toshi@@QAEX_N@Z,public: void __thiscall Toshi::TDBase::TKeySequence::TranslateAnimating(bool)
+1068,0x6850,0x10006850,?UnloadLibrary@TKeyframeLibraryManager@Toshi@@QAEXPAVTKeyframeLibrary@2@@Z,public: void __thiscall Toshi::TKeyframeLibraryManager::UnloadLibrary(class Toshi::TKeyframeLibrary *)
+1069,0xd9f0,0x1000d9f0,?UnloadMaterialLibrary@TMaterialLibraryManager@Toshi@@QAEXI@Z,public: void __thiscall Toshi::TMaterialLibraryManager::UnloadMaterialLibrary(unsigned int)
+1070,0xe560,0x1000e560,?Unlock@TTextureResource@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TTextureResource::Unlock(void)
+1071,0xfd20,0x1000fd20,?Update@TGFXFileInstanceObject@Toshi@@UAE_NAAVTScene@2@@Z,public: virtual bool __thiscall Toshi::TGFXFileInstanceObject::Update(class Toshi::TScene &)
+1072,0x10070,0x10010070,?Update@TGFXFileObject@Toshi@@UAE_NAAVTScene@2@@Z,public: virtual bool __thiscall Toshi::TGFXFileObject::Update(class Toshi::TScene &)
+1073,0x9920,0x10009920,?Update@TModelInstance@Toshi@@QAEXM@Z,public: void __thiscall Toshi::TModelInstance::Update(float)
+1074,0xc590,0x1000c590,?Update@TRenderInterface@Toshi@@UAE_NM@Z,public: virtual bool __thiscall Toshi::TRenderInterface::Update(float)
+1075,0x10a10,0x10010a10,?Update@TScene@Toshi@@QAE_NM@Z,public: bool __thiscall Toshi::TScene::Update(float)
+1076,0x10ef0,0x10010ef0,?Update@TSceneObject@Toshi@@UAE_NAAVTScene@2@@Z,public: virtual bool __thiscall Toshi::TSceneObject::Update(class Toshi::TScene &)
+1077,0x123a0,0x100123a0,?Update@TViewport@Toshi@@UAE_NAAVTScene@2@@Z,public: virtual bool __thiscall Toshi::TViewport::Update(class Toshi::TScene &)
+1078,0x4ac0,0x10004ac0,?UpdateState@TSkeletonInstance@Toshi@@QAEXXZ,public: void __thiscall Toshi::TSkeletonInstance::UpdateState(void)
+1079,0x54c0,0x100054c0,?UpdateTime@TAnimation@Toshi@@QAE_NM@Z,public: bool __thiscall Toshi::TAnimation::UpdateTime(float)
+1080,0x49c0,0x100049c0,?UpdateTime@TSkeletonInstance@Toshi@@QAEXM@Z,public: void __thiscall Toshi::TSkeletonInstance::UpdateTime(float)
+1081,0x12f80,0x10012f80,?Validate@TResource@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TResource::Validate(void)
+1082,0x30538,0x10030538,?gs_aRemapFormat@TMaterialLibrary@Toshi@@0QBW4TTEXTURERESOURCEFORMAT@2@B,private: static enum Toshi::TTEXTURERESOURCEFORMAT const * const Toshi::TMaterialLibrary::gs_aRemapFormat
+1083,0x2cba0,0x1002cba0,?m_sClass@TAtmosphere@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::TAtmosphere::m_sClass
+1084,0x2cf20,0x1002cf20,?m_sClass@TCameraObject@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::TCameraObject::m_sClass
+1085,0x2cee0,0x1002cee0,?m_sClass@TGFXFileInstanceObject@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::TGFXFileInstanceObject::m_sClass
+1086,0x2cea0,0x1002cea0,?m_sClass@TGFXFileObject@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::TGFXFileObject::m_sClass
+1087,0x2d160,0x1002d160,?m_sClass@TIndexFactoryResourceInterface@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::TIndexFactoryResourceInterface::m_sClass
+1088,0x2d120,0x1002d120,?m_sClass@TIndexPoolResourceInterface@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::TIndexPoolResourceInterface::m_sClass
+1089,0x2ce60,0x1002ce60,?m_sClass@TJPShadowFudgeNode@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::TJPShadowFudgeNode::m_sClass
+1090,0x2ce20,0x1002ce20,?m_sClass@TLightingNode@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::TLightingNode::m_sClass
+1091,0x2d0a0,0x1002d0a0,?m_sClass@TMaterial@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::TMaterial::m_sClass
+1092,0x2d0e0,0x1002d0e0,?m_sClass@TMesh@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::TMesh::m_sClass
+1093,0x2cc60,0x1002cc60,?m_sClass@TNullResource@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::TNullResource::m_sClass
+1094,0x2cda0,0x1002cda0,?m_sClass@TNullSceneResource@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::TNullSceneResource::m_sClass
+1095,0x2d1a0,0x1002d1a0,?m_sClass@TRenderInterface@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::TRenderInterface::m_sClass
+1096,0x2cc20,0x1002cc20,?m_sClass@TResource@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::TResource::m_sClass
+1097,0x2cde0,0x1002cde0,?m_sClass@TScene@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::TScene::m_sClass
+1098,0x2cd60,0x1002cd60,?m_sClass@TSceneObject@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::TSceneObject::m_sClass
+1099,0x2cb60,0x1002cb60,?m_sClass@TSceneSysMesh@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::TSceneSysMesh::m_sClass
+1100,0x2d060,0x1002d060,?m_sClass@TShader@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::TShader::m_sClass
+1101,0x2cbe0,0x1002cbe0,?m_sClass@TSun@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::TSun::m_sClass
+1102,0x2cd20,0x1002cd20,?m_sClass@TTerrainObject@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::TTerrainObject::m_sClass
+1103,0x2d020,0x1002d020,?m_sClass@TTextureFactory@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::TTextureFactory::m_sClass
+1104,0x2cfe0,0x1002cfe0,?m_sClass@TTextureResource@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::TTextureResource::m_sClass
+1105,0x2cce0,0x1002cce0,?m_sClass@TTransformObject@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::TTransformObject::m_sClass
+1106,0x2cfa0,0x1002cfa0,?m_sClass@TVertexFactoryResourceInterface@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::TVertexFactoryResourceInterface::m_sClass
+1107,0x2cf60,0x1002cf60,?m_sClass@TVertexPoolResourceInterface@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::TVertexPoolResourceInterface::m_sClass
+1108,0x2cca0,0x1002cca0,?m_sClass@TViewport@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::TViewport::m_sClass
+1109,0x2c860,0x1002c860,?s_BlockNames@TDBase@Toshi@@2PAY04DA,public: static char (* Toshi::TDBase::s_BlockNames)[5]
+1110,0x2d1c8,0x1002d1c8,?s_Interface@TRenderInterface@Toshi@@0PAV12@A,private: static class Toshi::TRenderInterface * Toshi::TRenderInterface::s_Interface
+1111,0x2c8d4,0x1002c8d4,?s_fDeltaTransDeviation@TDBase@Toshi@@2MA,public: static float Toshi::TDBase::s_fDeltaTransDeviation
+1112,0x2c8d0,0x1002c8d0,?s_fDeltaTransEpsilon@TDBase@Toshi@@2MA,public: static float Toshi::TDBase::s_fDeltaTransEpsilon
+1113,0x2c9a0,0x1002c9a0,?s_iHALMemoryUsage@TTextureFactory@Toshi@@2HA,public: static int Toshi::TTextureFactory::s_iHALMemoryUsage
+1114,0x2c9c0,0x1002c9c0,?sm_bForceLowLOD@TGFXFileInstanceObject@Toshi@@0_NA,private: static bool Toshi::TGFXFileInstanceObject::sm_bForceLowLOD
+1115,0xc640,0x1000c640,_TRenderInterface_GetFlushShaderSorted@0,_TRenderInterface_GetFlushShaderSorted@0

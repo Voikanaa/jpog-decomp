@@ -1,0 +1,39 @@
+dll,name,iat_rva,demangled
+TRenderInterface.dll,?DestroyResource@TResource@Toshi@@UAEXXZ,0x2044,public: virtual void __thiscall Toshi::TResource::DestroyResource(void)
+TRenderInterface.dll,?OnLostDevice@TResource@Toshi@@UAE_NXZ,0x2048,public: virtual bool __thiscall Toshi::TResource::OnLostDevice(void)
+TRenderInterface.dll,?Invalidate@TResource@Toshi@@UAEXXZ,0x204c,public: virtual void __thiscall Toshi::TResource::Invalidate(void)
+TRenderInterface.dll,?SetShader@TMaterial@Toshi@@IAEXPAVTShader@2@@Z,0x2050,protected: void __thiscall Toshi::TMaterial::SetShader(class Toshi::TShader *)
+TRenderInterface.dll,?Validate@TResource@Toshi@@UAE_NXZ,0x2054,public: virtual bool __thiscall Toshi::TResource::Validate(void)
+TRenderInterface.dll,?Flush@TShader@Toshi@@UAEXXZ,0x2058,public: virtual void __thiscall Toshi::TShader::Flush(void)
+TRenderInterface.dll,?GetCurrentRenderContext@TRenderInterface@Toshi@@QAEPAVTRenderContext@2@XZ,0x205c,public: class Toshi::TRenderContext * __thiscall Toshi::TRenderInterface::GetCurrentRenderContext(void)
+TRenderInterface.dll,?SetMaterial@TMesh@Toshi@@IAEXPAVTMaterial@2@@Z,0x2060,protected: void __thiscall Toshi::TMesh::SetMaterial(class Toshi::TMaterial *)
+TRenderInterface.dll,?SetShader@TMesh@Toshi@@IAEXPAVTShader@2@@Z,0x2064,protected: void __thiscall Toshi::TMesh::SetShader(class Toshi::TShader *)
+TRenderInterface.dll,??_7TMesh@Toshi@@6B@,0x2068,const Toshi::TMesh::`vftable'
+TRenderInterface.dll,??1TShader@Toshi@@UAE@XZ,0x206c,public: virtual __thiscall Toshi::TShader::~TShader(void)
+TRenderInterface.dll,?Create@TResource@Toshi@@UAE_NXZ,0x2070,public: virtual bool __thiscall Toshi::TResource::Create(void)
+TRenderInterface.dll,??0TShader@Toshi@@QAE@XZ,0x2074,public: __thiscall Toshi::TShader::TShader(void)
+TRenderInterface.dll,??1TMaterial@Toshi@@UAE@XZ,0x2078,public: virtual __thiscall Toshi::TMaterial::~TMaterial(void)
+TRenderInterface.dll,??0TMaterial@Toshi@@QAE@XZ,0x207c,public: __thiscall Toshi::TMaterial::TMaterial(void)
+TRenderInterface.dll,??1TMesh@Toshi@@UAE@XZ,0x2080,public: virtual __thiscall Toshi::TMesh::~TMesh(void)
+TRenderInterface.dll,??0TMesh@Toshi@@QAE@XZ,0x2084,public: __thiscall Toshi::TMesh::TMesh(void)
+TRenderInterface.dll,?m_sClass@TShader@Toshi@@2VTClass@2@A,0x2088,public: static class Toshi::TClass Toshi::TShader::m_sClass
+TRenderInterface.dll,?m_sClass@TMaterial@Toshi@@2VTClass@2@A,0x208c,public: static class Toshi::TClass Toshi::TMaterial::m_sClass
+TRenderInterface.dll,?m_sClass@TMesh@Toshi@@2VTClass@2@A,0x2090,public: static class Toshi::TClass Toshi::TMesh::m_sClass
+TRenderInterface.dll,??_7TMaterial@Toshi@@6B@,0x2094,const Toshi::TMaterial::`vftable'
+TRenderInterface.dll,??_7TResource@Toshi@@6B@,0x2098,const Toshi::TResource::`vftable'
+TRenderInterface.dll,?OnResetDevice@TResource@Toshi@@UAE_NXZ,0x209c,public: virtual bool __thiscall Toshi::TResource::OnResetDevice(void)
+TRenderInterface.dll,?OnDestroy@TResource@Toshi@@MAEXXZ,0x20a0,protected: virtual void __thiscall Toshi::TResource::OnDestroy(void)
+TKernelInterface.dll,?Delete@TObject@Toshi@@UAEXXZ,0x2028,public: virtual void __thiscall Toshi::TObject::Delete(void)
+TKernelInterface.dll,?tmalloc@@YGPAXHPADH@Z,0x202c,"void * __stdcall tmalloc(int,char *,int)"
+TKernelInterface.dll,??1TClass@Toshi@@QAE@XZ,0x2030,public: __thiscall Toshi::TClass::~TClass(void)
+TKernelInterface.dll,??0TClass@Toshi@@QAE@PBDPAV01@P6GPAVTObject@1@XZP6GPAV21@PAX@ZP6GXXZ5I@Z,0x2034,"public: __thiscall Toshi::TClass::TClass(char const *,class Toshi::TClass *,class Toshi::TObject * (__stdcall*)(void),class Toshi::TObject * (__stdcall*)(void *),void (__stdcall*)(void),void (__stdcall*)(void),unsigned int)"
+TKernelInterface.dll,??_7TObject@Toshi@@6B@,0x2038,const Toshi::TObject::`vftable'
+TKernelInterface.dll,?tfree@@YGXPAX@Z,0x203c,void __stdcall tfree(void *)
+MSVCRT.dll,_adjust_fdiv,0x2008,_adjust_fdiv
+MSVCRT.dll,malloc,0x200c,malloc
+MSVCRT.dll,_initterm,0x2010,_initterm
+MSVCRT.dll,free,0x2014,free
+MSVCRT.dll,_onexit,0x2018,_onexit
+MSVCRT.dll,__dllonexit,0x201c,__dllonexit
+MSVCRT.dll,_purecall,0x2020,_purecall
+KERNEL32.dll,DisableThreadLibraryCalls,0x2000,DisableThreadLibraryCalls

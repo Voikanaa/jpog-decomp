@@ -1,0 +1,346 @@
+ordinal,rva,va,name,demangled
+1,0xbd90,0x1000bd90,??0TIndexBlockResource@Toshi@@QAE@ABV01@@Z,public: __thiscall Toshi::TIndexBlockResource::TIndexBlockResource(class Toshi::TIndexBlockResource const &)
+2,0xb720,0x1000b720,??0TIndexBlockResource@Toshi@@QAE@XZ,public: __thiscall Toshi::TIndexBlockResource::TIndexBlockResource(void)
+3,0xc6f0,0x1000c6f0,??0TIndexPoolResource@Toshi@@QAE@XZ,public: __thiscall Toshi::TIndexPoolResource::TIndexPoolResource(void)
+4,0x5810,0x10005810,??0TMSWindow@Toshi@@QAE@XZ,public: __thiscall Toshi::TMSWindow::TMSWindow(void)
+5,0x5500,0x10005500,??0TModelD3D@Toshi@@QAE@XZ,public: __thiscall Toshi::TModelD3D::TModelD3D(void)
+6,0x5c10,0x10005c10,??0TOrderTable@Toshi@@QAE@PAVTShader@1@II@Z,"public: __thiscall Toshi::TOrderTable::TOrderTable(class Toshi::TShader *,unsigned int,unsigned int)"
+7,0x62d0,0x100062d0,??0TRegMaterial@Toshi@@QAE@XZ,public: __thiscall Toshi::TRegMaterial::TRegMaterial(void)
+8,0x6980,0x10006980,??0TRenderCaptureD3D@Toshi@@QAE@XZ,public: __thiscall Toshi::TRenderCaptureD3D::TRenderCaptureD3D(void)
+9,0x71d0,0x100071d0,??0TRenderContextD3D@Toshi@@QAE@AAVTRenderD3DInterface@1@@Z,public: __thiscall Toshi::TRenderContextD3D::TRenderContextD3D(class Toshi::TRenderD3DInterface &)
+10,0x7c70,0x10007c70,??0TRenderD3DInterface@Toshi@@QAE@XZ,public: __thiscall Toshi::TRenderD3DInterface::TRenderD3DInterface(void)
+11,0x6110,0x10006110,??0TRenderPacket@Toshi@@QAE@XZ,public: __thiscall Toshi::TRenderPacket::TRenderPacket(void)
+12,0xca80,0x1000ca80,??0TTextureFactoryHAL@Toshi@@QAE@XZ,public: __thiscall Toshi::TTextureFactoryHAL::TTextureFactoryHAL(void)
+13,0xcba0,0x1000cba0,??0TTextureResourceHAL@Toshi@@QAE@XZ,public: __thiscall Toshi::TTextureResourceHAL::TTextureResourceHAL(void)
+14,0x9f20,0x10009f20,??0TVertexBlockResource@Toshi@@QAE@ABV01@@Z,public: __thiscall Toshi::TVertexBlockResource::TVertexBlockResource(class Toshi::TVertexBlockResource const &)
+15,0xa360,0x1000a360,??0TVertexBlockResource@Toshi@@QAE@XZ,public: __thiscall Toshi::TVertexBlockResource::TVertexBlockResource(void)
+16,0xafc0,0x1000afc0,??0TVertexPoolResource@Toshi@@QAE@XZ,public: __thiscall Toshi::TVertexPoolResource::TVertexPoolResource(void)
+17,0xbd00,0x1000bd00,??1TIndexBlockResource@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TIndexBlockResource::~TIndexBlockResource(void)
+18,0xc6e0,0x1000c6e0,??1TIndexPoolResource@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TIndexPoolResource::~TIndexPoolResource(void)
+19,0x5b50,0x10005b50,??1TMSWindow@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TMSWindow::~TMSWindow(void)
+20,0x54f0,0x100054f0,??1TModelD3D@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TModelD3D::~TModelD3D(void)
+21,0x5d50,0x10005d50,??1TOrderTable@Toshi@@QAE@XZ,public: __thiscall Toshi::TOrderTable::~TOrderTable(void)
+22,0x62c0,0x100062c0,??1TRegMaterial@Toshi@@QAE@XZ,public: __thiscall Toshi::TRegMaterial::~TRegMaterial(void)
+23,0x6960,0x10006960,??1TRenderCaptureD3D@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TRenderCaptureD3D::~TRenderCaptureD3D(void)
+24,0x71c0,0x100071c0,??1TRenderContextD3D@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TRenderContextD3D::~TRenderContextD3D(void)
+25,0x9e20,0x10009e20,??1TRenderD3DInterface@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TRenderD3DInterface::~TRenderD3DInterface(void)
+26,0x6270,0x10006270,??1TRenderPacket@Toshi@@QAE@XZ,public: __thiscall Toshi::TRenderPacket::~TRenderPacket(void)
+27,0xca70,0x1000ca70,??1TTextureFactoryHAL@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TTextureFactoryHAL::~TTextureFactoryHAL(void)
+28,0xd970,0x1000d970,??1TTextureResourceHAL@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TTextureResourceHAL::~TTextureResourceHAL(void)
+29,0xab00,0x1000ab00,??1TVertexBlockResource@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TVertexBlockResource::~TVertexBlockResource(void)
+30,0xb510,0x1000b510,??1TVertexPoolResource@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TVertexPoolResource::~TVertexPoolResource(void)
+31,0xbe30,0x1000be30,??2TIndexBlockResource@Toshi@@SGPAXI@Z,public: static void * __stdcall Toshi::TIndexBlockResource::operator new(unsigned int)
+32,0xbe50,0x1000be50,??2TIndexBlockResource@Toshi@@SGPAXIPADH@Z,"public: static void * __stdcall Toshi::TIndexBlockResource::operator new(unsigned int,char *,int)"
+33,0xbe20,0x1000be20,??2TIndexBlockResource@Toshi@@SGPAXIPAX@Z,"public: static void * __stdcall Toshi::TIndexBlockResource::operator new(unsigned int,void *)"
+34,0x6a00,0x10006a00,??2TTextureResourceHAL@Toshi@@SGPAXI@Z,public: static void * __stdcall Toshi::TTextureResourceHAL::operator new(unsigned int)
+35,0x6a20,0x10006a20,??2TTextureResourceHAL@Toshi@@SGPAXIPADH@Z,"public: static void * __stdcall Toshi::TTextureResourceHAL::operator new(unsigned int,char *,int)"
+36,0x69f0,0x100069f0,??2TTextureResourceHAL@Toshi@@SGPAXIPAX@Z,"public: static void * __stdcall Toshi::TTextureResourceHAL::operator new(unsigned int,void *)"
+37,0x9ff0,0x10009ff0,??2TVertexBlockResource@Toshi@@SGPAXI@Z,public: static void * __stdcall Toshi::TVertexBlockResource::operator new(unsigned int)
+38,0xa010,0x1000a010,??2TVertexBlockResource@Toshi@@SGPAXIPADH@Z,"public: static void * __stdcall Toshi::TVertexBlockResource::operator new(unsigned int,char *,int)"
+39,0x9fe0,0x10009fe0,??2TVertexBlockResource@Toshi@@SGPAXIPAX@Z,"public: static void * __stdcall Toshi::TVertexBlockResource::operator new(unsigned int,void *)"
+40,0xbe00,0x1000be00,??3TIndexBlockResource@Toshi@@SGXPAX@Z,public: static void __stdcall Toshi::TIndexBlockResource::operator delete(void *)
+41,0x69d0,0x100069d0,??3TTextureResourceHAL@Toshi@@SGXPAX@Z,public: static void __stdcall Toshi::TTextureResourceHAL::operator delete(void *)
+42,0x9fc0,0x10009fc0,??3TVertexBlockResource@Toshi@@SGXPAX@Z,public: static void __stdcall Toshi::TVertexBlockResource::operator delete(void *)
+43,0x5ad0,0x10005ad0,??BTMSWindow@Toshi@@QBEPAUHWND__@@XZ,public: __thiscall Toshi::TMSWindow::operator struct HWND__ *(void)const 
+44,0x751c0,0x100751c0,??_7TIndexBlockResource@Toshi@@6B@,const Toshi::TIndexBlockResource::`vftable'
+45,0x75400,0x10075400,??_7TIndexPoolResource@Toshi@@6B@,const Toshi::TIndexPoolResource::`vftable'
+46,0x742e0,0x100742e0,??_7TMSWindow@Toshi@@6B@,const Toshi::TMSWindow::`vftable'
+47,0x74240,0x10074240,??_7TModelD3D@Toshi@@6B@,const Toshi::TModelD3D::`vftable'
+48,0x743c0,0x100743c0,??_7TRenderCaptureD3D@Toshi@@6B@,const Toshi::TRenderCaptureD3D::`vftable'
+49,0x74480,0x10074480,??_7TRenderContextD3D@Toshi@@6B@,const Toshi::TRenderContextD3D::`vftable'
+50,0x747a0,0x100747a0,??_7TRenderD3DInterface@Toshi@@6B@,const Toshi::TRenderD3DInterface::`vftable'
+51,0x75480,0x10075480,??_7TTextureFactoryHAL@Toshi@@6B@,const Toshi::TTextureFactoryHAL::`vftable'
+52,0x75520,0x10075520,??_7TTextureResourceHAL@Toshi@@6B@,const Toshi::TTextureResourceHAL::`vftable'
+53,0x74860,0x10074860,??_7TVertexBlockResource@Toshi@@6B@,const Toshi::TVertexBlockResource::`vftable'
+54,0x75140,0x10075140,??_7TVertexPoolResource@Toshi@@6B@,const Toshi::TVertexPoolResource::`vftable'
+55,0x6060,0x10006060,?AddRenderPacket@TRegMaterial@Toshi@@QAEPAVTRenderPacket@2@PAVTMesh@2@@Z,public: class Toshi::TRenderPacket * __thiscall Toshi::TRegMaterial::AddRenderPacket(class Toshi::TMesh *)
+56,0x8170,0x10008170,?AdjustDisplay@TRenderD3DInterface@Toshi@@UAE_NPBVDisplayParams@TRenderInterface@2@@Z,public: virtual bool __thiscall Toshi::TRenderD3DInterface::AdjustDisplay(class Toshi::TRenderInterface::DisplayParams const *)
+57,0x62f0,0x100062f0,?AllocRenderPacket@TOrderTable@Toshi@@QAEPAVTRenderPacket@2@XZ,public: class Toshi::TRenderPacket * __thiscall Toshi::TOrderTable::AllocRenderPacket(void)
+58,0xb7f0,0x1000b7f0,?AttachPool@TIndexBlockResource@Toshi@@QAE_NPAVTIndexPoolResource@2@@Z,public: bool __thiscall Toshi::TIndexBlockResource::AttachPool(class Toshi::TIndexPoolResource *)
+59,0xa460,0x1000a460,?AttachPool@TVertexBlockResource@Toshi@@QAE_NPAVTVertexPoolResource@2@@Z,public: bool __thiscall Toshi::TVertexBlockResource::AttachPool(class Toshi::TVertexPoolResource *)
+60,0x83b0,0x100083b0,?BeginScene@TRenderD3DInterface@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TRenderD3DInterface::BeginScene(void)
+61,0x97f0,0x100097f0,?BuildAdapterDatabase@TRenderD3DInterface@Toshi@@AAEXXZ,private: void __thiscall Toshi::TRenderD3DInterface::BuildAdapterDatabase(void)
+62,0xb8a0,0x1000b8a0,?CanFit@TIndexBlockResource@Toshi@@QAE_NPAVTIndexPoolResource@2@@Z,public: bool __thiscall Toshi::TIndexBlockResource::CanFit(class Toshi::TIndexPoolResource *)
+63,0xa510,0x1000a510,?CanFit@TVertexBlockResource@Toshi@@QAE_NPAVTVertexPoolResource@2@@Z,public: bool __thiscall Toshi::TVertexBlockResource::CanFit(class Toshi::TVertexPoolResource *)
+64,0xbc10,0x1000bc10,?ChildIndexUsedChanged@TIndexBlockResource@Toshi@@QAEXH@Z,public: void __thiscall Toshi::TIndexBlockResource::ChildIndexUsedChanged(int)
+65,0xaa50,0x1000aa50,?ChildVertexUsedChanged@TVertexBlockResource@Toshi@@QAEXH@Z,public: void __thiscall Toshi::TVertexBlockResource::ChildVertexUsedChanged(int)
+66,0x8aa0,0x10008aa0,?Clear@TRenderD3DInterface@Toshi@@QAEXIIIIIEEEMI@Z,"public: void __thiscall Toshi::TRenderD3DInterface::Clear(unsigned int,unsigned int,unsigned int,unsigned int,unsigned int,unsigned char,unsigned char,unsigned char,float,unsigned int)"
+67,0x6f60,0x10006f60,?ComputeOrthographicFrustum@TRenderContextD3D@Toshi@@AAEXXZ,private: void __thiscall Toshi::TRenderContextD3D::ComputeOrthographicFrustum(void)
+68,0x6e80,0x10006e80,?ComputeOrthographicProjection@TRenderContextD3D@Toshi@@AAEXXZ,private: void __thiscall Toshi::TRenderContextD3D::ComputeOrthographicProjection(void)
+69,0x6bf0,0x10006bf0,?ComputePerspectiveFrustum@TRenderContextD3D@Toshi@@AAEXXZ,private: void __thiscall Toshi::TRenderContextD3D::ComputePerspectiveFrustum(void)
+70,0x6b10,0x10006b10,?ComputePerspectiveProjection@TRenderContextD3D@Toshi@@AAEXXZ,private: void __thiscall Toshi::TRenderContextD3D::ComputePerspectiveProjection(void)
+71,0x93b0,0x100093b0,?ComputeTables@TRenderD3DInterface@Toshi@@AAEXXZ,private: void __thiscall Toshi::TRenderD3DInterface::ComputeTables(void)
+72,0x8a30,0x10008a30,?ConnectDefaultViewportHandlers@TRenderD3DInterface@Toshi@@UAEXAAVTViewport@2@@Z,public: virtual void __thiscall Toshi::TRenderD3DInterface::ConnectDefaultViewportHandlers(class Toshi::TViewport &)
+73,0xbcd0,0x1000bcd0,?Create@TIndexBlockResource@Toshi@@QAE_NPAVTIndexFactoryResource@2@GI@Z,"public: bool __thiscall Toshi::TIndexBlockResource::Create(class Toshi::TIndexFactoryResource *,unsigned short,unsigned int)"
+74,0xc5b0,0x1000c5b0,?Create@TIndexPoolResource@Toshi@@MAE_NPAVTIndexFactoryResourceInterface@2@II@Z,"protected: virtual bool __thiscall Toshi::TIndexPoolResource::Create(class Toshi::TIndexFactoryResourceInterface *,unsigned int,unsigned int)"
+75,0x5860,0x10005860,?Create@TMSWindow@Toshi@@QAE_NPAVTRenderD3DInterface@2@PBD@Z,"public: bool __thiscall Toshi::TMSWindow::Create(class Toshi::TRenderD3DInterface *,char const *)"
+76,0x4f40,0x10004f40,?Create@TModelD3D@Toshi@@UAE_NPBD_N@Z,"public: virtual bool __thiscall Toshi::TModelD3D::Create(char const *,bool)"
+77,0x6940,0x10006940,?Create@TRenderCaptureD3D@Toshi@@UAE_NW4FORMAT@TRenderCapture@2@HH@Z,"public: virtual bool __thiscall Toshi::TRenderCaptureD3D::Create(enum Toshi::TRenderCapture::FORMAT,int,int)"
+78,0x8670,0x10008670,?Create@TRenderD3DInterface@Toshi@@UAE_NPAVTKernelInterface@2@@Z,public: virtual bool __thiscall Toshi::TRenderD3DInterface::Create(class Toshi::TKernelInterface *)
+79,0xce80,0x1000ce80,?Create@TTextureResourceHAL@Toshi@@MAE_NPAXIIII@Z,"protected: virtual bool __thiscall Toshi::TTextureResourceHAL::Create(void *,unsigned int,unsigned int,unsigned int,unsigned int)"
+80,0xd900,0x1000d900,?Create@TTextureResourceHAL@Toshi@@MAE_NPBDI@Z,"protected: virtual bool __thiscall Toshi::TTextureResourceHAL::Create(char const *,unsigned int)"
+81,0xaad0,0x1000aad0,?Create@TVertexBlockResource@Toshi@@QAE_NPAVTVertexFactoryResource@2@GI@Z,"public: bool __thiscall Toshi::TVertexBlockResource::Create(class Toshi::TVertexFactoryResource *,unsigned short,unsigned int)"
+82,0xb3a0,0x1000b3a0,?Create@TVertexPoolResource@Toshi@@MAE_NPAVTVertexFactoryResourceInterface@2@II@Z,"protected: virtual bool __thiscall Toshi::TVertexPoolResource::Create(class Toshi::TVertexFactoryResourceInterface *,unsigned int,unsigned int)"
+83,0x99f0,0x100099f0,?CreateAcceleratorTableA@TRenderD3DInterface@Toshi@@AAEXXZ,private: void __thiscall Toshi::TRenderD3DInterface::CreateAcceleratorTableA(void)
+84,0x9cf0,0x10009cf0,?CreateCapture@TRenderD3DInterface@Toshi@@UAEPAVTRenderCapture@2@XZ,public: virtual class Toshi::TRenderCapture * __thiscall Toshi::TRenderD3DInterface::CreateCapture(void)
+85,0x7d30,0x10007d30,?CreateDisplay@TRenderD3DInterface@Toshi@@UAE_NPBVDisplayParams@TRenderInterface@2@@Z,public: virtual bool __thiscall Toshi::TRenderD3DInterface::CreateDisplay(class Toshi::TRenderInterface::DisplayParams const *)
+86,0xc950,0x1000c950,?CreateEx@TTextureFactoryHAL@Toshi@@UAEPAVTTextureResource@2@PAXIIIIW4TTEXTURERESOURCEFORMAT@2@I@Z,"public: virtual class Toshi::TTextureResource * __thiscall Toshi::TTextureFactoryHAL::CreateEx(void *,unsigned int,unsigned int,unsigned int,unsigned int,enum Toshi::TTEXTURERESOURCEFORMAT,unsigned int)"
+87,0xcf00,0x1000cf00,?CreateEx@TTextureResourceHAL@Toshi@@MAE_NPAXIIIIW4TTEXTURERESOURCEFORMAT@2@I@Z,"protected: virtual bool __thiscall Toshi::TTextureResourceHAL::CreateEx(void *,unsigned int,unsigned int,unsigned int,unsigned int,enum Toshi::TTEXTURERESOURCEFORMAT,unsigned int)"
+88,0xd7b0,0x1000d7b0,?CreateFromFormat@TTextureResourceHAL@Toshi@@AAE_NXZ,private: bool __thiscall Toshi::TTextureResourceHAL::CreateFromFormat(void)
+89,0xd1d0,0x1000d1d0,?CreateFromMemory4444@TTextureResourceHAL@Toshi@@AAE_NIIIPAX@Z,"private: bool __thiscall Toshi::TTextureResourceHAL::CreateFromMemory4444(unsigned int,unsigned int,unsigned int,void *)"
+90,0xcfd0,0x1000cfd0,?CreateFromMemory5551@TTextureResourceHAL@Toshi@@AAE_NIIIPAX@Z,"private: bool __thiscall Toshi::TTextureResourceHAL::CreateFromMemory5551(unsigned int,unsigned int,unsigned int,void *)"
+91,0xd3d0,0x1000d3d0,?CreateFromMemory8888@TTextureResourceHAL@Toshi@@AAE_NIIIPAX@Z,"private: bool __thiscall Toshi::TTextureResourceHAL::CreateFromMemory8888(unsigned int,unsigned int,unsigned int,void *)"
+92,0xd630,0x1000d630,?CreateFromMemory888@TTextureResourceHAL@Toshi@@AAE_NIIIPAX@Z,"private: bool __thiscall Toshi::TTextureResourceHAL::CreateFromMemory888(unsigned int,unsigned int,unsigned int,void *)"
+93,0xd740,0x1000d740,?CreateFromMemoryDDS@TTextureResourceHAL@Toshi@@AAE_NIIIPAX@Z,"private: bool __thiscall Toshi::TTextureResourceHAL::CreateFromMemoryDDS(unsigned int,unsigned int,unsigned int,void *)"
+94,0xd8f0,0x1000d8f0,?CreateFromPPMFile@TTextureResourceHAL@Toshi@@AAE_NPBD@Z,private: bool __thiscall Toshi::TTextureResourceHAL::CreateFromPPMFile(char const *)
+95,0xba50,0x1000ba50,?CreateHAL@TIndexBlockResource@Toshi@@IAE_NXZ,protected: bool __thiscall Toshi::TIndexBlockResource::CreateHAL(void)
+96,0xa7a0,0x1000a7a0,?CreateHAL@TVertexBlockResource@Toshi@@IAE_NXZ,protected: bool __thiscall Toshi::TVertexBlockResource::CreateHAL(void)
+97,0x8e70,0x10008e70,?CreateModel@TRenderD3DInterface@Toshi@@UAEPAVTModel@2@PBD_N@Z,"public: virtual class Toshi::TModel * __thiscall Toshi::TRenderD3DInterface::CreateModel(char const *,bool)"
+98,0xbd50,0x1000bd50,?CreateObject@TIndexBlockResource@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::TIndexBlockResource::CreateObject(void)
+99,0xc760,0x1000c760,?CreateObject@TIndexPoolResource@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::TIndexPoolResource::CreateObject(void)
+100,0x5ba0,0x10005ba0,?CreateObject@TMSWindow@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::TMSWindow::CreateObject(void)
+101,0x9e90,0x10009e90,?CreateObject@TRenderD3DInterface@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::TRenderD3DInterface::CreateObject(void)
+102,0xcae0,0x1000cae0,?CreateObject@TTextureFactoryHAL@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::TTextureFactoryHAL::CreateObject(void)
+103,0xd9c0,0x1000d9c0,?CreateObject@TTextureResourceHAL@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::TTextureResourceHAL::CreateObject(void)
+104,0xab50,0x1000ab50,?CreateObject@TVertexBlockResource@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::TVertexBlockResource::CreateObject(void)
+105,0xb560,0x1000b560,?CreateObject@TVertexPoolResource@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::TVertexPoolResource::CreateObject(void)
+106,0xbd30,0x1000bd30,?CreateObjectInPlace@TIndexBlockResource@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::TIndexBlockResource::CreateObjectInPlace(void *)
+107,0xc740,0x1000c740,?CreateObjectInPlace@TIndexPoolResource@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::TIndexPoolResource::CreateObjectInPlace(void *)
+108,0x5b80,0x10005b80,?CreateObjectInPlace@TMSWindow@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::TMSWindow::CreateObjectInPlace(void *)
+109,0x9e70,0x10009e70,?CreateObjectInPlace@TRenderD3DInterface@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::TRenderD3DInterface::CreateObjectInPlace(void *)
+110,0xcac0,0x1000cac0,?CreateObjectInPlace@TTextureFactoryHAL@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::TTextureFactoryHAL::CreateObjectInPlace(void *)
+111,0xd9a0,0x1000d9a0,?CreateObjectInPlace@TTextureResourceHAL@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::TTextureResourceHAL::CreateObjectInPlace(void *)
+112,0xab30,0x1000ab30,?CreateObjectInPlace@TVertexBlockResource@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::TVertexBlockResource::CreateObjectInPlace(void *)
+113,0xb540,0x1000b540,?CreateObjectInPlace@TVertexPoolResource@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::TVertexPoolResource::CreateObjectInPlace(void *)
+114,0x9d20,0x10009d20,?CreateRenderContext@TRenderD3DInterface@Toshi@@UAEPAVTRenderContext@2@XZ,public: virtual class Toshi::TRenderContext * __thiscall Toshi::TRenderD3DInterface::CreateRenderContext(void)
+115,0xc820,0x1000c820,?CreateTextureFromFile@TTextureFactoryHAL@Toshi@@UAEPAVTTextureResource@2@PBDI@Z,"public: virtual class Toshi::TTextureResource * __thiscall Toshi::TTextureFactoryHAL::CreateTextureFromFile(char const *,unsigned int)"
+116,0xc8a0,0x1000c8a0,?CreateTextureFromMemory@TTextureFactoryHAL@Toshi@@UAEPAVTTextureResource@2@PAXIIII@Z,"public: virtual class Toshi::TTextureResource * __thiscall Toshi::TTextureFactoryHAL::CreateTextureFromMemory(void *,unsigned int,unsigned int,unsigned int,unsigned int)"
+117,0x9d70,0x10009d70,?D3DGetErrorDescriptionString@TRenderD3DInterface@Toshi@@SGPBDJ@Z,public: static char const * __stdcall Toshi::TRenderD3DInterface::D3DGetErrorDescriptionString(long)
+118,0x9d50,0x10009d50,?D3DGetErrorString@TRenderD3DInterface@Toshi@@SGPBDJ@Z,public: static char const * __stdcall Toshi::TRenderD3DInterface::D3DGetErrorString(long)
+119,0x4a60,0x10004a60,?DeNormalizeValue@TRenderD3DInterface@Toshi@@ABEMM@Z,private: float __thiscall Toshi::TRenderD3DInterface::DeNormalizeValue(float)const 
+120,0xbd10,0x1000bd10,?DeinitialiseStatic@TIndexBlockResource@Toshi@@CGXXZ,private: static void __stdcall Toshi::TIndexBlockResource::DeinitialiseStatic(void)
+121,0xc720,0x1000c720,?DeinitialiseStatic@TIndexPoolResource@Toshi@@CGXXZ,private: static void __stdcall Toshi::TIndexPoolResource::DeinitialiseStatic(void)
+122,0x5b60,0x10005b60,?DeinitialiseStatic@TMSWindow@Toshi@@CGXXZ,private: static void __stdcall Toshi::TMSWindow::DeinitialiseStatic(void)
+123,0x9e50,0x10009e50,?DeinitialiseStatic@TRenderD3DInterface@Toshi@@CGXXZ,private: static void __stdcall Toshi::TRenderD3DInterface::DeinitialiseStatic(void)
+124,0xcaa0,0x1000caa0,?DeinitialiseStatic@TTextureFactoryHAL@Toshi@@CGXXZ,private: static void __stdcall Toshi::TTextureFactoryHAL::DeinitialiseStatic(void)
+125,0xd980,0x1000d980,?DeinitialiseStatic@TTextureResourceHAL@Toshi@@CGXXZ,private: static void __stdcall Toshi::TTextureResourceHAL::DeinitialiseStatic(void)
+126,0xab10,0x1000ab10,?DeinitialiseStatic@TVertexBlockResource@Toshi@@CGXXZ,private: static void __stdcall Toshi::TVertexBlockResource::DeinitialiseStatic(void)
+127,0xb520,0x1000b520,?DeinitialiseStatic@TVertexPoolResource@Toshi@@CGXXZ,private: static void __stdcall Toshi::TVertexPoolResource::DeinitialiseStatic(void)
+128,0x4f80,0x10004f80,?Delete@TModelD3D@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TModelD3D::Delete(void)
+129,0x5f60,0x10005f60,?DeregisterAllMaterials@TOrderTable@Toshi@@QAEXXZ,public: void __thiscall Toshi::TOrderTable::DeregisterAllMaterials(void)
+130,0x5ef0,0x10005ef0,?DeregisterMaterial@TOrderTable@Toshi@@QAEXPAVTRegMaterial@2@@Z,public: void __thiscall Toshi::TOrderTable::DeregisterMaterial(class Toshi::TRegMaterial *)
+131,0x5990,0x10005990,?Destroy@TMSWindow@Toshi@@QAEXXZ,public: void __thiscall Toshi::TMSWindow::Destroy(void)
+132,0x6930,0x10006930,?Destroy@TRenderCaptureD3D@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TRenderCaptureD3D::Destroy(void)
+133,0x8730,0x10008730,?Destroy@TRenderD3DInterface@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TRenderD3DInterface::Destroy(void)
+134,0x9ab0,0x10009ab0,?DestroyAcceleratorTable@TRenderD3DInterface@Toshi@@AAEXXZ,private: void __thiscall Toshi::TRenderD3DInterface::DestroyAcceleratorTable(void)
+135,0x9ad0,0x10009ad0,?DestroyAdapterDatabase@TRenderD3DInterface@Toshi@@AAEXXZ,private: void __thiscall Toshi::TRenderD3DInterface::DestroyAdapterDatabase(void)
+136,0x8b60,0x10008b60,?DestroyCapture@TRenderD3DInterface@Toshi@@UAEXPAVTRenderCapture@2@@Z,public: virtual void __thiscall Toshi::TRenderD3DInterface::DestroyCapture(class Toshi::TRenderCapture *)
+137,0x81f0,0x100081f0,?DestroyDisplay@TRenderD3DInterface@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TRenderD3DInterface::DestroyDisplay(void)
+138,0xbb20,0x1000bb20,?DestroyHAL@TIndexBlockResource@Toshi@@IAEXXZ,protected: void __thiscall Toshi::TIndexBlockResource::DestroyHAL(void)
+139,0xa8f0,0x1000a8f0,?DestroyHAL@TVertexBlockResource@Toshi@@IAEXXZ,protected: void __thiscall Toshi::TVertexBlockResource::DestroyHAL(void)
+140,0xd960,0x1000d960,?DestroyResource@TTextureResourceHAL@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TTextureResourceHAL::DestroyResource(void)
+141,0xb830,0x1000b830,?DetachPool@TIndexBlockResource@Toshi@@QAE_NPAVTIndexPoolResource@2@@Z,public: bool __thiscall Toshi::TIndexBlockResource::DetachPool(class Toshi::TIndexPoolResource *)
+142,0xa4a0,0x1000a4a0,?DetachPool@TVertexBlockResource@Toshi@@QAE_NPAVTVertexPoolResource@2@@Z,public: bool __thiscall Toshi::TVertexBlockResource::DetachPool(class Toshi::TVertexPoolResource *)
+143,0x5a40,0x10005a40,?Disable@TMSWindow@Toshi@@QAEXXZ,public: void __thiscall Toshi::TMSWindow::Disable(void)
+144,0xca60,0x1000ca60,?Dump@TTextureFactoryHAL@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TTextureFactoryHAL::Dump(void)
+145,0x5a10,0x10005a10,?Enable@TMSWindow@Toshi@@QAEXXZ,public: void __thiscall Toshi::TMSWindow::Enable(void)
+146,0x8e40,0x10008e40,?EnableColourCorrection@TRenderD3DInterface@Toshi@@UAEX_N@Z,public: virtual void __thiscall Toshi::TRenderD3DInterface::EnableColourCorrection(bool)
+147,0x84b0,0x100084b0,?EndScene@TRenderD3DInterface@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TRenderD3DInterface::EndScene(void)
+148,0x9da0,0x10009da0,?Exit@TRenderD3DInterface@Toshi@@QAEXXZ,public: void __thiscall Toshi::TRenderD3DInterface::Exit(void)
+149,0x8ed0,0x10008ed0,?FailedD3DMessageBox@TRenderD3DInterface@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TRenderD3DInterface::FailedD3DMessageBox(void)
+150,0x8f40,0x10008f40,?FailedDisplayMessageBox@TRenderD3DInterface@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TRenderD3DInterface::FailedDisplayMessageBox(void)
+151,0x9c20,0x10009c20,?ForceEnableColourCorrection@TRenderD3DInterface@Toshi@@UAEX_N@Z,public: virtual void __thiscall Toshi::TRenderD3DInterface::ForceEnableColourCorrection(bool)
+152,0x9db0,0x10009db0,?GetAcceleratorTable@TRenderD3DInterface@Toshi@@QBEPAUHACCEL__@@XZ,public: struct HACCEL__ * __thiscall Toshi::TRenderD3DInterface::GetAcceleratorTable(void)const 
+153,0x6350,0x10006350,?GetAlphaFade@TRenderPacket@Toshi@@QAEMXZ,public: float __thiscall Toshi::TRenderPacket::GetAlphaFade(void)
+154,0x6380,0x10006380,?GetAmbient@TRenderPacket@Toshi@@QAEABVTVector3@2@XZ,public: class Toshi::TVector3 const & __thiscall Toshi::TRenderPacket::GetAmbient(void)
+155,0x4ad0,0x10004ad0,?GetBrightness@TRenderD3DInterface@Toshi@@UBEMXZ,public: virtual float __thiscall Toshi::TRenderD3DInterface::GetBrightness(void)const 
+156,0xbd80,0x1000bd80,?GetClass@TIndexBlockResource@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::TIndexBlockResource::GetClass(void)const 
+157,0xc790,0x1000c790,?GetClass@TIndexPoolResource@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::TIndexPoolResource::GetClass(void)const 
+158,0x5bd0,0x10005bd0,?GetClass@TMSWindow@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::TMSWindow::GetClass(void)const 
+159,0x9ec0,0x10009ec0,?GetClass@TRenderD3DInterface@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::TRenderD3DInterface::GetClass(void)const 
+160,0xcb10,0x1000cb10,?GetClass@TTextureFactoryHAL@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::TTextureFactoryHAL::GetClass(void)const 
+161,0xd9f0,0x1000d9f0,?GetClass@TTextureResourceHAL@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::TTextureResourceHAL::GetClass(void)const 
+162,0xab80,0x1000ab80,?GetClass@TVertexBlockResource@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::TVertexBlockResource::GetClass(void)const 
+163,0xb590,0x1000b590,?GetClass@TVertexPoolResource@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::TVertexPoolResource::GetClass(void)const 
+164,0x4ae0,0x10004ae0,?GetContrast@TRenderD3DInterface@Toshi@@UBEMXZ,public: virtual float __thiscall Toshi::TRenderD3DInterface::GetContrast(void)const 
+165,0x9be0,0x10009be0,?GetCurrentColourRamp@TRenderD3DInterface@Toshi@@AAEPAU_D3DGAMMARAMP@@XZ,private: struct _D3DGAMMARAMP * __thiscall Toshi::TRenderD3DInterface::GetCurrentColourRamp(void)
+166,0x9e10,0x10009e10,?GetCurrentDevice@TRenderD3DInterface@Toshi@@UBEPAVDevice@Mode@TD3DAdapter@2@XZ,public: virtual class Toshi::TD3DAdapter::Mode::Device * __thiscall Toshi::TRenderD3DInterface::GetCurrentDevice(void)const 
+167,0x9e00,0x10009e00,?GetCurrentDisplayParams@TRenderD3DInterface@Toshi@@UBEPBVDisplayParams@TRenderInterface@2@XZ,public: virtual class Toshi::TRenderInterface::DisplayParams const * __thiscall Toshi::TRenderD3DInterface::GetCurrentDisplayParams(void)const 
+168,0x9d90,0x10009d90,?GetD3DDepthStencilFormat@TRenderD3DInterface@Toshi@@QAE?AW4_D3DFORMAT@@W4DEPTHSTENCILFORMAT@Device@Mode@TRenderAdapter@2@@Z,public: enum _D3DFORMAT __thiscall Toshi::TRenderD3DInterface::GetD3DDepthStencilFormat(enum Toshi::TRenderAdapter::Mode::Device::DEPTHSTENCILFORMAT)
+169,0x4bb0,0x10004bb0,?GetD3DDevice@TRenderD3DInterface@Toshi@@QAEPAUIDirect3DDevice8@@XZ,public: struct IDirect3DDevice8 * __thiscall Toshi::TRenderD3DInterface::GetD3DDevice(void)
+170,0x5b30,0x10005b30,?GetD3DInterface@TMSWindow@Toshi@@QBEPAVTRenderD3DInterface@2@XZ,public: class Toshi::TRenderD3DInterface * __thiscall Toshi::TMSWindow::GetD3DInterface(void)const 
+171,0x4bc0,0x10004bc0,?GetD3DInterface@TRenderD3DInterface@Toshi@@QAEPAUIDirect3D8@@XZ,public: struct IDirect3D8 * __thiscall Toshi::TRenderD3DInterface::GetD3DInterface(void)
+172,0x69a0,0x100069a0,?GetD3DTexture@TTextureResourceHAL@Toshi@@QAEPAUIDirect3DTexture8@@XZ,public: struct IDirect3DTexture8 * __thiscall Toshi::TTextureResourceHAL::GetD3DTexture(void)
+173,0x6370,0x10006370,?GetDiffuse@TRenderPacket@Toshi@@QAEABVTVector3@2@XZ,public: class Toshi::TVector3 const & __thiscall Toshi::TRenderPacket::GetDiffuse(void)
+174,0xbcc0,0x1000bcc0,?GetFactory@TIndexBlockResource@Toshi@@QAEPAVTIndexFactoryResource@2@XZ,public: class Toshi::TIndexFactoryResource * __thiscall Toshi::TIndexBlockResource::GetFactory(void)
+175,0xc6d0,0x1000c6d0,?GetFactory@TIndexPoolResource@Toshi@@QAEPAVTIndexFactoryResource@2@XZ,public: class Toshi::TIndexFactoryResource * __thiscall Toshi::TIndexPoolResource::GetFactory(void)
+176,0xaac0,0x1000aac0,?GetFactory@TVertexBlockResource@Toshi@@QAEPAVTVertexFactoryResource@2@XZ,public: class Toshi::TVertexFactoryResource * __thiscall Toshi::TVertexBlockResource::GetFactory(void)
+177,0xb500,0x1000b500,?GetFactory@TVertexPoolResource@Toshi@@QAEPAVTVertexFactoryResource@2@XZ,public: class Toshi::TVertexFactoryResource * __thiscall Toshi::TVertexPoolResource::GetFactory(void)
+178,0xbc60,0x1000bc60,?GetFlags@TIndexBlockResource@Toshi@@QAEIXZ,public: unsigned int __thiscall Toshi::TIndexBlockResource::GetFlags(void)
+179,0x64c0,0x100064c0,?GetFlags@TRegMaterial@Toshi@@QAEIXZ,public: unsigned int __thiscall Toshi::TRegMaterial::GetFlags(void)
+180,0xaa60,0x1000aa60,?GetFlags@TVertexBlockResource@Toshi@@QAEIXZ,public: unsigned int __thiscall Toshi::TVertexBlockResource::GetFlags(void)
+181,0xbdf0,0x1000bdf0,?GetFreeList@TIndexBlockResource@Toshi@@SGAAVTFreeList@2@XZ,public: static class Toshi::TFreeList & __stdcall Toshi::TIndexBlockResource::GetFreeList(void)
+182,0x69c0,0x100069c0,?GetFreeList@TTextureResourceHAL@Toshi@@SGAAVTFreeList@2@XZ,public: static class Toshi::TFreeList & __stdcall Toshi::TTextureResourceHAL::GetFreeList(void)
+183,0x9fb0,0x10009fb0,?GetFreeList@TVertexBlockResource@Toshi@@SGAAVTFreeList@2@XZ,public: static class Toshi::TFreeList & __stdcall Toshi::TVertexBlockResource::GetFreeList(void)
+184,0x4ac0,0x10004ac0,?GetGamma@TRenderD3DInterface@Toshi@@UBEMXZ,public: virtual float __thiscall Toshi::TRenderD3DInterface::GetGamma(void)const 
+185,0xbc20,0x1000bc20,?GetHAL@TIndexBlockResource@Toshi@@QAE_NPAVHALBuffer@12@@Z,public: bool __thiscall Toshi::TIndexBlockResource::GetHAL(class Toshi::TIndexBlockResource::HALBuffer *)
+186,0xc520,0x1000c520,?GetHAL@TIndexPoolResource@Toshi@@QAE_NPAVHALBuffer@TIndexBlockResource@2@@Z,public: bool __thiscall Toshi::TIndexPoolResource::GetHAL(class Toshi::TIndexBlockResource::HALBuffer *)
+187,0xa570,0x1000a570,?GetHAL@TVertexBlockResource@Toshi@@QAE_NPAVHALBuffer@12@@Z,public: bool __thiscall Toshi::TVertexBlockResource::GetHAL(class Toshi::TVertexBlockResource::HALBuffer *)
+188,0xb310,0x1000b310,?GetHAL@TVertexPoolResource@Toshi@@QAE_NPAVHALBuffer@TVertexBlockResource@2@@Z,public: bool __thiscall Toshi::TVertexPoolResource::GetHAL(class Toshi::TVertexBlockResource::HALBuffer *)
+189,0x5b40,0x10005b40,?GetHWND@TMSWindow@Toshi@@QBEPAUHWND__@@XZ,public: struct HWND__ * __thiscall Toshi::TMSWindow::GetHWND(void)const 
+190,0xd940,0x1000d940,?GetHeight@TTextureResourceHAL@Toshi@@UAEHXZ,public: virtual int __thiscall Toshi::TTextureResourceHAL::GetHeight(void)
+191,0xc570,0x1000c570,?GetIndexBlock@TIndexPoolResource@Toshi@@QAEPAVTIndexBlockResource@2@XZ,public: class Toshi::TIndexBlockResource * __thiscall Toshi::TIndexPoolResource::GetIndexBlock(void)
+192,0xbc70,0x1000bc70,?GetIndicesUsed@TIndexBlockResource@Toshi@@QBEIXZ,public: unsigned int __thiscall Toshi::TIndexBlockResource::GetIndicesUsed(void)const 
+193,0x6360,0x10006360,?GetLightDir@TRenderPacket@Toshi@@QAEABVTVector3@2@XZ,public: class Toshi::TVector3 const & __thiscall Toshi::TRenderPacket::GetLightDir(void)
+194,0x9dc0,0x10009dc0,?GetMSWindow@TRenderD3DInterface@Toshi@@QAEPAVTMSWindow@2@XZ,public: class Toshi::TMSWindow * __thiscall Toshi::TRenderD3DInterface::GetMSWindow(void)
+195,0xc6b0,0x1000c6b0,?GetManagedBuffer@TIndexPoolResource@Toshi@@QAEPAGXZ,public: unsigned short * __thiscall Toshi::TIndexPoolResource::GetManagedBuffer(void)
+196,0xb2d0,0x1000b2d0,?GetManagedStream@TVertexPoolResource@Toshi@@QAEPAEI@Z,public: unsigned char * __thiscall Toshi::TVertexPoolResource::GetManagedStream(unsigned int)
+197,0x64a0,0x100064a0,?GetMaterial@TRegMaterial@Toshi@@QAEPAVTMaterial@2@XZ,public: class Toshi::TMaterial * __thiscall Toshi::TRegMaterial::GetMaterial(void)
+198,0xbc80,0x1000bc80,?GetMaxIndices@TIndexBlockResource@Toshi@@QBEGXZ,public: unsigned short __thiscall Toshi::TIndexBlockResource::GetMaxIndices(void)const 
+199,0x6500,0x10006500,?GetMaxMaterials@TOrderTable@Toshi@@QAEIXZ,public: unsigned int __thiscall Toshi::TOrderTable::GetMaxMaterials(void)
+200,0x64e0,0x100064e0,?GetMaxRendPackets@TOrderTable@Toshi@@QAEIXZ,public: unsigned int __thiscall Toshi::TOrderTable::GetMaxRendPackets(void)
+201,0x4bd0,0x10004bd0,?GetMaxTextureHeight@TRenderD3DInterface@Toshi@@QAEIXZ,public: unsigned int __thiscall Toshi::TRenderD3DInterface::GetMaxTextureHeight(void)
+202,0x4bf0,0x10004bf0,?GetMaxTextureWidth@TRenderD3DInterface@Toshi@@QAEIXZ,public: unsigned int __thiscall Toshi::TRenderD3DInterface::GetMaxTextureWidth(void)
+203,0xaa80,0x1000aa80,?GetMaxVertices@TVertexBlockResource@Toshi@@QBEGXZ,public: unsigned short __thiscall Toshi::TVertexBlockResource::GetMaxVertices(void)const 
+204,0x6450,0x10006450,?GetMesh@TRenderPacket@Toshi@@QAEPAVTMesh@2@XZ,public: class Toshi::TMesh * __thiscall Toshi::TRenderPacket::GetMesh(void)
+205,0x6440,0x10006440,?GetModelViewMatrix@TRenderPacket@Toshi@@QAEAAVTMatrix44@2@XZ,public: class Toshi::TMatrix44 & __thiscall Toshi::TRenderPacket::GetModelViewMatrix(void)
+206,0x6480,0x10006480,?GetNexUsedMaterial@TRegMaterial@Toshi@@QAEPAV12@XZ,public: class Toshi::TRegMaterial * __thiscall Toshi::TRegMaterial::GetNexUsedMaterial(void)
+207,0x6470,0x10006470,?GetNext@TRenderPacket@Toshi@@QAEPAV12@XZ,public: class Toshi::TRenderPacket * __thiscall Toshi::TRenderPacket::GetNext(void)
+208,0x9b40,0x10009b40,?GetNumAdapters@TRenderD3DInterface@Toshi@@AAEHXZ,private: int __thiscall Toshi::TRenderD3DInterface::GetNumAdapters(void)
+209,0x64f0,0x100064f0,?GetNumMaterials@TOrderTable@Toshi@@QAEIXZ,public: unsigned int __thiscall Toshi::TOrderTable::GetNumMaterials(void)
+210,0x64d0,0x100064d0,?GetNumRendPackets@TOrderTable@Toshi@@QAEIXZ,public: unsigned int __thiscall Toshi::TOrderTable::GetNumRendPackets(void)
+211,0x64b0,0x100064b0,?GetOrderTable@TRegMaterial@Toshi@@QAEPAVTOrderTable@2@XZ,public: class Toshi::TOrderTable * __thiscall Toshi::TRegMaterial::GetOrderTable(void)
+212,0x9df0,0x10009df0,?GetPixelAspectRatio@TRenderD3DInterface@Toshi@@UAEMXZ,public: virtual float __thiscall Toshi::TRenderD3DInterface::GetPixelAspectRatio(void)
+213,0x6460,0x10006460,?GetRegMat@TRenderPacket@Toshi@@QAEPAVTRegMaterial@2@XZ,public: class Toshi::TRegMaterial * __thiscall Toshi::TRenderPacket::GetRegMat(void)
+214,0x6490,0x10006490,?GetRenderPackets@TRegMaterial@Toshi@@QAEPAVTRenderPacket@2@XZ,public: class Toshi::TRenderPacket * __thiscall Toshi::TRegMaterial::GetRenderPackets(void)
+215,0x7200,0x10007200,?GetRenderer@TRenderContextD3D@Toshi@@QAEAAVTRenderD3DInterface@2@XZ,public: class Toshi::TRenderD3DInterface & __thiscall Toshi::TRenderContextD3D::GetRenderer(void)
+216,0x69b0,0x100069b0,?GetRenderer@TTextureResourceHAL@Toshi@@QBEPAVTRenderD3DInterface@2@XZ,public: class Toshi::TRenderD3DInterface * __thiscall Toshi::TTextureResourceHAL::GetRenderer(void)const 
+217,0x4ab0,0x10004ab0,?GetSaturate@TRenderD3DInterface@Toshi@@UBEMXZ,public: virtual float __thiscall Toshi::TRenderD3DInterface::GetSaturate(void)const 
+218,0x6510,0x10006510,?GetShader@TOrderTable@Toshi@@QAEPAVTShader@2@XZ,public: class Toshi::TShader * __thiscall Toshi::TOrderTable::GetShader(void)
+219,0x6310,0x10006310,?GetSkeletonInstance@TRenderPacket@Toshi@@QAEPAVTSkeletonInstance@2@XZ,public: class Toshi::TSkeletonInstance * __thiscall Toshi::TRenderPacket::GetSkeletonInstance(void)
+220,0x6330,0x10006330,?GetTextureFade@TRenderPacket@Toshi@@QAEMXZ,public: float __thiscall Toshi::TRenderPacket::GetTextureFade(void)
+221,0xb360,0x1000b360,?GetVertexBlock@TVertexPoolResource@Toshi@@QAEPAVTVertexBlockResource@2@XZ,public: class Toshi::TVertexBlockResource * __thiscall Toshi::TVertexPoolResource::GetVertexBlock(void)
+222,0xaa70,0x1000aa70,?GetVerticesUsed@TVertexBlockResource@Toshi@@QBEIXZ,public: unsigned int __thiscall Toshi::TVertexBlockResource::GetVerticesUsed(void)const 
+223,0x71f0,0x100071f0,?GetViewProjectionMatrix@TRenderContextD3D@Toshi@@QAEAAVTMatrix44@2@XZ,public: class Toshi::TMatrix44 & __thiscall Toshi::TRenderContextD3D::GetViewProjectionMatrix(void)
+224,0xd950,0x1000d950,?GetWidth@TTextureResourceHAL@Toshi@@UAEHXZ,public: virtual int __thiscall Toshi::TTextureResourceHAL::GetWidth(void)
+225,0xbd20,0x1000bd20,?InitialiseStatic@TIndexBlockResource@Toshi@@CGXXZ,private: static void __stdcall Toshi::TIndexBlockResource::InitialiseStatic(void)
+226,0xc730,0x1000c730,?InitialiseStatic@TIndexPoolResource@Toshi@@CGXXZ,private: static void __stdcall Toshi::TIndexPoolResource::InitialiseStatic(void)
+227,0x5b70,0x10005b70,?InitialiseStatic@TMSWindow@Toshi@@CGXXZ,private: static void __stdcall Toshi::TMSWindow::InitialiseStatic(void)
+228,0x9e60,0x10009e60,?InitialiseStatic@TRenderD3DInterface@Toshi@@CGXXZ,private: static void __stdcall Toshi::TRenderD3DInterface::InitialiseStatic(void)
+229,0xcab0,0x1000cab0,?InitialiseStatic@TTextureFactoryHAL@Toshi@@CGXXZ,private: static void __stdcall Toshi::TTextureFactoryHAL::InitialiseStatic(void)
+230,0xd990,0x1000d990,?InitialiseStatic@TTextureResourceHAL@Toshi@@CGXXZ,private: static void __stdcall Toshi::TTextureResourceHAL::InitialiseStatic(void)
+231,0xab20,0x1000ab20,?InitialiseStatic@TVertexBlockResource@Toshi@@CGXXZ,private: static void __stdcall Toshi::TVertexBlockResource::InitialiseStatic(void)
+232,0xb530,0x1000b530,?InitialiseStatic@TVertexPoolResource@Toshi@@CGXXZ,private: static void __stdcall Toshi::TVertexPoolResource::InitialiseStatic(void)
+233,0xbc90,0x1000bc90,?Invalidate@TIndexBlockResource@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TIndexBlockResource::Invalidate(void)
+234,0xc360,0x1000c360,?Invalidate@TIndexPoolResource@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TIndexPoolResource::Invalidate(void)
+235,0xcd90,0x1000cd90,?Invalidate@TTextureResourceHAL@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TTextureResourceHAL::Invalidate(void)
+236,0xaa90,0x1000aa90,?Invalidate@TVertexBlockResource@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TVertexBlockResource::Invalidate(void)
+237,0xb0c0,0x1000b0c0,?Invalidate@TVertexPoolResource@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TVertexPoolResource::Invalidate(void)
+238,0x8dc0,0x10008dc0,?IsCapableColourCorrection@TRenderD3DInterface@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TRenderD3DInterface::IsCapableColourCorrection(void)
+239,0x9c10,0x10009c10,?IsColourCorrection@TRenderD3DInterface@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TRenderD3DInterface::IsColourCorrection(void)
+240,0x4aa0,0x10004aa0,?IsDeviceLost@TRenderD3DInterface@Toshi@@QAE_NXZ,public: bool __thiscall Toshi::TRenderD3DInterface::IsDeviceLost(void)
+241,0xbc00,0x1000bc00,?IsLocked@TIndexBlockResource@Toshi@@QAE_NXZ,public: bool __thiscall Toshi::TIndexBlockResource::IsLocked(void)
+242,0xaa40,0x1000aa40,?IsLocked@TVertexBlockResource@Toshi@@QAE_NXZ,public: bool __thiscall Toshi::TVertexBlockResource::IsLocked(void)
+243,0xcf90,0x1000cf90,?IsPPM@TTextureResourceHAL@Toshi@@IAE_NPBD@Z,protected: bool __thiscall Toshi::TTextureResourceHAL::IsPPM(char const *)
+244,0x85b0,0x100085b0,?IsTextureFormatSupported@TRenderD3DInterface@Toshi@@QAE_NW4_D3DFORMAT@@@Z,public: bool __thiscall Toshi::TRenderD3DInterface::IsTextureFormatSupported(enum _D3DFORMAT)
+245,0x8560,0x10008560,?IsTextureFormatSupported@TRenderD3DInterface@Toshi@@UAE_NW4TTEXTURERESOURCEFORMAT@2@@Z,public: virtual bool __thiscall Toshi::TRenderD3DInterface::IsTextureFormatSupported(enum Toshi::TTEXTURERESOURCEFORMAT)
+246,0x4c10,0x10004c10,?IsWindowed@TMSWindow@Toshi@@QAE_NXZ,public: bool __thiscall Toshi::TMSWindow::IsWindowed(void)
+247,0x4fa0,0x10004fa0,?Load@TModelD3D@Toshi@@UAE_NPBD@Z,public: virtual bool __thiscall Toshi::TModelD3D::Load(char const *)
+248,0x8b80,0x10008b80,?LoadAndAssembleShader@TRenderD3DInterface@Toshi@@SGJPAD0PAPAUID3DXBuffer@@@Z,"public: static long __stdcall Toshi::TRenderD3DInterface::LoadAndAssembleShader(char *,char *,struct ID3DXBuffer * *)"
+249,0x9110,0x10009110,?LoadShaders@TRenderD3DInterface@Toshi@@IAE_NXZ,protected: bool __thiscall Toshi::TRenderD3DInterface::LoadShaders(void)
+250,0x50a0,0x100050a0,?LoadTMDHAL@TModelD3D@Toshi@@MAE_NPAVTFile@2@@Z,protected: virtual bool __thiscall Toshi::TModelD3D::LoadTMDHAL(class Toshi::TFile *)
+251,0xb950,0x1000b950,?Lock@TIndexBlockResource@Toshi@@QAE_NPAVLockBuffer@TIndexPoolResourceInterface@2@G@Z,"public: bool __thiscall Toshi::TIndexBlockResource::Lock(class Toshi::TIndexPoolResourceInterface::LockBuffer *,unsigned short)"
+252,0xc390,0x1000c390,?Lock@TIndexPoolResource@Toshi@@UAE_NPAVLockBuffer@TIndexPoolResourceInterface@2@@Z,public: virtual bool __thiscall Toshi::TIndexPoolResource::Lock(class Toshi::TIndexPoolResourceInterface::LockBuffer *)
+253,0xce00,0x1000ce00,?Lock@TTextureResourceHAL@Toshi@@UAE_NAAULOCKSTATE@TTextureResource@2@@Z,public: virtual bool __thiscall Toshi::TTextureResourceHAL::Lock(struct Toshi::TTextureResource::LOCKSTATE &)
+254,0xa620,0x1000a620,?Lock@TVertexBlockResource@Toshi@@QAE_NPAVLockBuffer@TVertexPoolResourceInterface@2@G@Z,"public: bool __thiscall Toshi::TVertexBlockResource::Lock(class Toshi::TVertexPoolResourceInterface::LockBuffer *,unsigned short)"
+255,0xb0f0,0x1000b0f0,?Lock@TVertexPoolResource@Toshi@@UAE_NPAVLockBuffer@TVertexPoolResourceInterface@2@@Z,public: virtual bool __thiscall Toshi::TVertexPoolResource::Lock(class Toshi::TVertexPoolResourceInterface::LockBuffer *)
+256,0x8fb0,0x10008fb0,?LostDevice@TRenderD3DInterface@Toshi@@QAEXXZ,public: void __thiscall Toshi::TRenderD3DInterface::LostDevice(void)
+257,0x4a80,0x10004a80,?NormalizeValue@TRenderD3DInterface@Toshi@@ABEMM@Z,private: float __thiscall Toshi::TRenderD3DInterface::NormalizeValue(float)const 
+258,0x6900,0x10006900,?ObtainBuffer@TRenderCaptureD3D@Toshi@@UAEPAXXZ,public: virtual void * __thiscall Toshi::TRenderCaptureD3D::ObtainBuffer(void)
+259,0xc620,0x1000c620,?OnDestroy@TIndexPoolResource@Toshi@@MAEXXZ,protected: virtual void __thiscall Toshi::TIndexPoolResource::OnDestroy(void)
+260,0xb430,0x1000b430,?OnDestroy@TVertexPoolResource@Toshi@@MAEXXZ,protected: virtual void __thiscall Toshi::TVertexPoolResource::OnDestroy(void)
+261,0xb910,0x1000b910,?OnLostDevice@TIndexBlockResource@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TIndexBlockResource::OnLostDevice(void)
+262,0xa5e0,0x1000a5e0,?OnLostDevice@TVertexBlockResource@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TVertexBlockResource::OnLostDevice(void)
+263,0xb930,0x1000b930,?OnResetDevice@TIndexBlockResource@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TIndexBlockResource::OnResetDevice(void)
+264,0xa600,0x1000a600,?OnResetDevice@TVertexBlockResource@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TVertexBlockResource::OnResetDevice(void)
+265,0x6910,0x10006910,?Poll@TRenderCaptureD3D@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TRenderCaptureD3D::Poll(void)
+266,0x5b00,0x10005b00,?Position@TMSWindow@Toshi@@QAEXHHHH@Z,"public: void __thiscall Toshi::TMSWindow::Position(int,int,int,int)"
+267,0x5e60,0x10005e60,?RegisterMaterial@TOrderTable@Toshi@@QAEPAVTRegMaterial@2@PAVTMaterial@2@@Z,public: class Toshi::TRegMaterial * __thiscall Toshi::TOrderTable::RegisterMaterial(class Toshi::TMaterial *)
+268,0x68e0,0x100068e0,?ReleaseBuffer@TRenderCaptureD3D@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TRenderCaptureD3D::ReleaseBuffer(void)
+269,0x5ff0,0x10005ff0,?Render@TOrderTable@Toshi@@QAEXXZ,public: void __thiscall Toshi::TOrderTable::Render(void)
+270,0x60b0,0x100060b0,?Render@TRegMaterial@Toshi@@QAEXXZ,public: void __thiscall Toshi::TRegMaterial::Render(void)
+271,0x8800,0x10008800,?RenderIndexPrimitive@TRenderD3DInterface@Toshi@@UAEXW4PRIMITIVETYPE@TRenderInterface@2@IIPBGPBXG@Z,"public: virtual void __thiscall Toshi::TRenderD3DInterface::RenderIndexPrimitive(enum Toshi::TRenderInterface::PRIMITIVETYPE,unsigned int,unsigned int,unsigned short const *,void const *,unsigned short)"
+272,0x65a0,0x100065a0,?Request@TRenderCaptureD3D@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TRenderCaptureD3D::Request(void)
+273,0x9050,0x10009050,?ResetDevice@TRenderD3DInterface@Toshi@@QAEXXZ,public: void __thiscall Toshi::TRenderD3DInterface::ResetDevice(void)
+274,0x63d0,0x100063d0,?SetAlphaFade@TRenderPacket@Toshi@@QAEXM@Z,public: void __thiscall Toshi::TRenderPacket::SetAlphaFade(float)
+275,0x6420,0x10006420,?SetAmbient@TRenderPacket@Toshi@@QAEXABVTVector3@2@@Z,public: void __thiscall Toshi::TRenderPacket::SetAmbient(class Toshi::TVector3 const &)
+276,0x9c90,0x10009c90,?SetBrightness@TRenderD3DInterface@Toshi@@UAEXM@Z,public: virtual void __thiscall Toshi::TRenderD3DInterface::SetBrightness(float)
+277,0x9cc0,0x10009cc0,?SetContrast@TRenderD3DInterface@Toshi@@UAEXM@Z,public: virtual void __thiscall Toshi::TRenderD3DInterface::SetContrast(float)
+278,0x9290,0x10009290,?SetDefaultRenderStates@TRenderD3DInterface@Toshi@@IAEXXZ,protected: void __thiscall Toshi::TRenderD3DInterface::SetDefaultRenderStates(void)
+279,0x6400,0x10006400,?SetDiffuse@TRenderPacket@Toshi@@QAEXABVTVector3@2@@Z,public: void __thiscall Toshi::TRenderPacket::SetDiffuse(class Toshi::TVector3 const &)
+280,0x62b0,0x100062b0,?SetFlags@TRegMaterial@Toshi@@QAEXI@Z,public: void __thiscall Toshi::TRegMaterial::SetFlags(unsigned int)
+281,0x5ae0,0x10005ae0,?SetFullscreen@TMSWindow@Toshi@@QAEXXZ,public: void __thiscall Toshi::TMSWindow::SetFullscreen(void)
+282,0x9c60,0x10009c60,?SetGamma@TRenderD3DInterface@Toshi@@UAEXM@Z,public: virtual void __thiscall Toshi::TRenderD3DInterface::SetGamma(float)
+283,0x63e0,0x100063e0,?SetLightDir@TRenderPacket@Toshi@@QAEXABVTVector3@2@@Z,public: void __thiscall Toshi::TRenderPacket::SetLightDir(class Toshi::TVector3 const &)
+284,0x6290,0x10006290,?SetMaterial@TRegMaterial@Toshi@@QAEXPAVTMaterial@2@@Z,public: void __thiscall Toshi::TRegMaterial::SetMaterial(class Toshi::TMaterial *)
+285,0x6240,0x10006240,?SetMesh@TRenderPacket@Toshi@@QAEXPAVTMesh@2@@Z,public: void __thiscall Toshi::TRenderPacket::SetMesh(class Toshi::TMesh *)
+286,0x6170,0x10006170,?SetModelViewMatrix@TRenderPacket@Toshi@@QAEXABVTMatrix44@2@@Z,public: void __thiscall Toshi::TRenderPacket::SetModelViewMatrix(class Toshi::TMatrix44 const &)
+287,0x6280,0x10006280,?SetNexUsedMaterial@TRegMaterial@Toshi@@QAEXPAV12@@Z,public: void __thiscall Toshi::TRegMaterial::SetNexUsedMaterial(class Toshi::TRegMaterial *)
+288,0x6260,0x10006260,?SetNext@TRenderPacket@Toshi@@QAEPAV12@PAV12@@Z,public: class Toshi::TRenderPacket * __thiscall Toshi::TRenderPacket::SetNext(class Toshi::TRenderPacket *)
+289,0x62a0,0x100062a0,?SetOrderTable@TRegMaterial@Toshi@@QAEXPAVTOrderTable@2@@Z,public: void __thiscall Toshi::TRegMaterial::SetOrderTable(class Toshi::TOrderTable *)
+290,0x9dd0,0x10009dd0,?SetPixelAspectRatio@TRenderD3DInterface@Toshi@@UAE_NM@Z,public: virtual bool __thiscall Toshi::TRenderD3DInterface::SetPixelAspectRatio(float)
+291,0x6250,0x10006250,?SetRegMat@TRenderPacket@Toshi@@QAEXPAVTRegMaterial@2@@Z,public: void __thiscall Toshi::TRenderPacket::SetRegMat(class Toshi::TRegMaterial *)
+292,0x7180,0x10007180,?SetRenderMatrices@TRenderContextD3D@Toshi@@AAEXXZ,private: void __thiscall Toshi::TRenderContextD3D::SetRenderMatrices(void)
+293,0x9c30,0x10009c30,?SetSaturate@TRenderD3DInterface@Toshi@@UAEXM@Z,public: virtual void __thiscall Toshi::TRenderD3DInterface::SetSaturate(float)
+294,0x6320,0x10006320,?SetSkeletonInstance@TRenderPacket@Toshi@@QAEXPAVTSkeletonInstance@2@@Z,public: void __thiscall Toshi::TRenderPacket::SetSkeletonInstance(class Toshi::TSkeletonInstance *)
+295,0x8c90,0x10008c90,?SetTextureAddressMode@TRenderD3DInterface@Toshi@@QAEXII@Z,"public: void __thiscall Toshi::TRenderD3DInterface::SetTextureAddressMode(unsigned int,unsigned int)"
+296,0x4af0,0x10004af0,?SetTextureAlphaStage@TRenderD3DInterface@Toshi@@QAEXIIII@Z,"public: void __thiscall Toshi::TRenderD3DInterface::SetTextureAlphaStage(unsigned int,unsigned int,unsigned int,unsigned int)"
+297,0x4b50,0x10004b50,?SetTextureColorStage@TRenderD3DInterface@Toshi@@QAEXIIII@Z,"public: void __thiscall Toshi::TRenderD3DInterface::SetTextureColorStage(unsigned int,unsigned int,unsigned int,unsigned int)"
+298,0x6390,0x10006390,?SetTextureFade@TRenderPacket@Toshi@@QAEXM@Z,public: void __thiscall Toshi::TRenderPacket::SetTextureFade(float)
+299,0x5af0,0x10005af0,?SetWindowed@TMSWindow@Toshi@@QAEXXZ,public: void __thiscall Toshi::TMSWindow::SetWindowed(void)
+300,0x8630,0x10008630,?Supports32BitTextures@TRenderD3DInterface@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TRenderD3DInterface::Supports32BitTextures(void)
+301,0x89a0,0x100089a0,?TD3DAssert@TRenderD3DInterface@Toshi@@SGXJPBD@Z,"public: static void __stdcall Toshi::TRenderD3DInterface::TD3DAssert(long,char const *)"
+302,0x9b50,0x10009b50,?TransformBrightness@TRenderD3DInterface@Toshi@@AAEMMM@Z,"private: float __thiscall Toshi::TRenderD3DInterface::TransformBrightness(float,float)"
+303,0x9b80,0x10009b80,?TransformContrast@TRenderD3DInterface@Toshi@@AAEMMM@Z,"private: float __thiscall Toshi::TRenderD3DInterface::TransformContrast(float,float)"
+304,0x9310,0x10009310,?TransformGamma@TRenderD3DInterface@Toshi@@AAEMMM@Z,"private: float __thiscall Toshi::TRenderD3DInterface::TransformGamma(float,float)"
+305,0x4ff0,0x10004ff0,?Unload@TModelD3D@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TModelD3D::Unload(void)
+306,0x9c00,0x10009c00,?UnloadShaders@TRenderD3DInterface@Toshi@@IAEXXZ,protected: void __thiscall Toshi::TRenderD3DInterface::UnloadShaders(void)
+307,0xba20,0x1000ba20,?Unlock@TIndexBlockResource@Toshi@@QAEXXZ,public: void __thiscall Toshi::TIndexBlockResource::Unlock(void)
+308,0xc460,0x1000c460,?Unlock@TIndexPoolResource@Toshi@@UAEXG@Z,public: virtual void __thiscall Toshi::TIndexPoolResource::Unlock(unsigned short)
+309,0xce60,0x1000ce60,?Unlock@TTextureResourceHAL@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TTextureResourceHAL::Unlock(void)
+310,0xa750,0x1000a750,?Unlock@TVertexBlockResource@Toshi@@QAEXXZ,public: void __thiscall Toshi::TVertexBlockResource::Unlock(void)
+311,0xb210,0x1000b210,?Unlock@TVertexPoolResource@Toshi@@UAEXG@Z,public: virtual void __thiscall Toshi::TVertexPoolResource::Unlock(unsigned short)
+312,0x6ac0,0x10006ac0,?Update@TRenderContextD3D@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TRenderContextD3D::Update(void)
+313,0x8260,0x10008260,?Update@TRenderD3DInterface@Toshi@@UAE_NM@Z,public: virtual bool __thiscall Toshi::TRenderD3DInterface::Update(float)
+314,0x8d80,0x10008d80,?UpdateColourSettings@TRenderD3DInterface@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TRenderD3DInterface::UpdateColourSettings(void)
+315,0x5f90,0x10005f90,?UseMaterial@TOrderTable@Toshi@@QAEXPAVTRegMaterial@2@@Z,public: void __thiscall Toshi::TOrderTable::UseMaterial(class Toshi::TRegMaterial *)
+316,0xb760,0x1000b760,?Validate@TIndexBlockResource@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TIndexBlockResource::Validate(void)
+317,0xc2a0,0x1000c2a0,?Validate@TIndexPoolResource@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TIndexPoolResource::Validate(void)
+318,0xcbd0,0x1000cbd0,?Validate@TTextureResourceHAL@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TTextureResourceHAL::Validate(void)
+319,0xa3b0,0x1000a3b0,?Validate@TVertexBlockResource@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TVertexBlockResource::Validate(void)
+320,0xb000,0x1000b000,?Validate@TVertexPoolResource@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TVertexPoolResource::Validate(void)
+321,0x6920,0x10006920,?Wait@TRenderCaptureD3D@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TRenderCaptureD3D::Wait(void)
+322,0x73220,0x10073220,?m_sClass@TIndexBlockResource@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::TIndexBlockResource::m_sClass
+323,0x731a0,0x100731a0,?m_sClass@TIndexPoolResource@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::TIndexPoolResource::m_sClass
+324,0x733a0,0x100733a0,?m_sClass@TMSWindow@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::TMSWindow::m_sClass
+325,0x73360,0x10073360,?m_sClass@TRenderD3DInterface@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::TRenderD3DInterface::m_sClass
+326,0x73160,0x10073160,?m_sClass@TTextureFactoryHAL@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::TTextureFactoryHAL::m_sClass
+327,0x73100,0x10073100,?m_sClass@TTextureResourceHAL@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::TTextureResourceHAL::m_sClass
+328,0x73300,0x10073300,?m_sClass@TVertexBlockResource@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::TVertexBlockResource::m_sClass
+329,0x73280,0x10073280,?m_sClass@TVertexPoolResource@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::TVertexPoolResource::m_sClass
+330,0x73260,0x10073260,?ms_oFreelist@TIndexBlockResource@Toshi@@0VTFreeList@2@A,private: static class Toshi::TFreeList Toshi::TIndexBlockResource::ms_oFreelist
+331,0x73140,0x10073140,?ms_oFreelist@TTextureResourceHAL@Toshi@@0VTFreeList@2@A,private: static class Toshi::TFreeList Toshi::TTextureResourceHAL::ms_oFreelist
+332,0x73340,0x10073340,?ms_oFreelist@TVertexBlockResource@Toshi@@0VTFreeList@2@A,private: static class Toshi::TFreeList Toshi::TVertexBlockResource::ms_oFreelist
+333,0x72440,0x10072440,?s_iCurrentNumHALCreated@TVertexBlockResource@Toshi@@2HA,public: static int Toshi::TVertexBlockResource::s_iCurrentNumHALCreated
+334,0x72434,0x10072434,?s_iCurrentVertexBufferBytesAllocated@TVertexBlockResource@Toshi@@2HA,public: static int Toshi::TVertexBlockResource::s_iCurrentVertexBufferBytesAllocated
+335,0x7242c,0x1007242c,?s_iCurrentVertexBufferBytesDestroyed@TVertexBlockResource@Toshi@@2HA,public: static int Toshi::TVertexBlockResource::s_iCurrentVertexBufferBytesDestroyed
+336,0x72460,0x10072460,?s_iHALMemoryUsage@TIndexBlockResource@Toshi@@2HA,public: static int Toshi::TIndexBlockResource::s_iHALMemoryUsage
+337,0x72420,0x10072420,?s_iHALMemoryUsage@TVertexBlockResource@Toshi@@2HA,public: static int Toshi::TVertexBlockResource::s_iHALMemoryUsage
+338,0x7243c,0x1007243c,?s_iTotalNumHALCreated@TVertexBlockResource@Toshi@@2HA,public: static int Toshi::TVertexBlockResource::s_iTotalNumHALCreated
+339,0x72438,0x10072438,?s_iTotalNumHALDestroyed@TVertexBlockResource@Toshi@@2HA,public: static int Toshi::TVertexBlockResource::s_iTotalNumHALDestroyed
+340,0x72430,0x10072430,?s_iTotalVertexBufferBytesAllocated@TVertexBlockResource@Toshi@@2HA,public: static int Toshi::TVertexBlockResource::s_iTotalVertexBufferBytesAllocated
+341,0x72428,0x10072428,?s_iTotalVertexBufferBytesDestroyed@TVertexBlockResource@Toshi@@2HA,public: static int Toshi::TVertexBlockResource::s_iTotalVertexBufferBytesDestroyed
+342,0x72424,0x10072424,?s_iWastedVertexBufferBytesAllocated@TVertexBlockResource@Toshi@@2HA,public: static int Toshi::TVertexBlockResource::s_iWastedVertexBufferBytesAllocated
+343,0x74778,0x10074778,?scm_fContrastPeak@TRenderD3DInterface@Toshi@@2MB,public: static float const Toshi::TRenderD3DInterface::scm_fContrastPeak
+344,0x74780,0x10074780,?scm_fGammaMax@TRenderD3DInterface@Toshi@@2MB,public: static float const Toshi::TRenderD3DInterface::scm_fGammaMax
+345,0x7477c,0x1007477c,?scm_fGammaMin@TRenderD3DInterface@Toshi@@2MB,public: static float const Toshi::TRenderD3DInterface::scm_fGammaMin

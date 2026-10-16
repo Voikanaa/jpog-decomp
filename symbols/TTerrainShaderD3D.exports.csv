@@ -1,0 +1,317 @@
+ordinal,rva,va,name,demangled
+1,0x159b0,0x100159b0,??0TGrassMaterialHAL@Toshi@@QAE@ABV01@@Z,public: __thiscall Toshi::TGrassMaterialHAL::TGrassMaterialHAL(class Toshi::TGrassMaterialHAL const &)
+2,0x13d50,0x10013d50,??0TGrassMaterialHAL@Toshi@@QAE@XZ,public: __thiscall Toshi::TGrassMaterialHAL::TGrassMaterialHAL(void)
+3,0x158f0,0x100158f0,??0TGrassMeshHAL@Toshi@@QAE@ABV01@@Z,public: __thiscall Toshi::TGrassMeshHAL::TGrassMeshHAL(class Toshi::TGrassMeshHAL const &)
+4,0x15480,0x10015480,??0TGrassMeshHAL@Toshi@@QAE@XZ,public: __thiscall Toshi::TGrassMeshHAL::TGrassMeshHAL(void)
+5,0x11ec0,0x10011ec0,??0TGrassShaderHAL@Toshi@@QAE@XZ,public: __thiscall Toshi::TGrassShaderHAL::TGrassShaderHAL(void)
+6,0x111f0,0x100111f0,??0TTerrainMaterialHAL@Toshi@@QAE@ABV01@@Z,public: __thiscall Toshi::TTerrainMaterialHAL::TTerrainMaterialHAL(class Toshi::TTerrainMaterialHAL const &)
+7,0x10a10,0x10010a10,??0TTerrainMaterialHAL@Toshi@@QAE@XZ,public: __thiscall Toshi::TTerrainMaterialHAL::TTerrainMaterialHAL(void)
+8,0x11150,0x10011150,??0TTerrainMeshHAL@Toshi@@QAE@ABV01@@Z,public: __thiscall Toshi::TTerrainMeshHAL::TTerrainMeshHAL(class Toshi::TTerrainMeshHAL const &)
+9,0x10960,0x10010960,??0TTerrainMeshHAL@Toshi@@QAE@XZ,public: __thiscall Toshi::TTerrainMeshHAL::TTerrainMeshHAL(void)
+10,0x3f50,0x10003f50,??0TTerrainShaderHAL@Toshi@@QAE@XZ,public: __thiscall Toshi::TTerrainShaderHAL::TTerrainShaderHAL(void)
+11,0x16bc0,0x10016bc0,??0TWaterMaterialHAL@Toshi@@QAE@ABV01@@Z,public: __thiscall Toshi::TWaterMaterialHAL::TWaterMaterialHAL(class Toshi::TWaterMaterialHAL const &)
+12,0x16740,0x10016740,??0TWaterMaterialHAL@Toshi@@QAE@XZ,public: __thiscall Toshi::TWaterMaterialHAL::TWaterMaterialHAL(void)
+13,0x16b00,0x10016b00,??0TWaterMeshHAL@Toshi@@QAE@ABV01@@Z,public: __thiscall Toshi::TWaterMeshHAL::TWaterMeshHAL(class Toshi::TWaterMeshHAL const &)
+14,0x16350,0x10016350,??0TWaterMeshHAL@Toshi@@QAE@XZ,public: __thiscall Toshi::TWaterMeshHAL::TWaterMeshHAL(void)
+15,0x16c10,0x10016c10,??0TWaterShaderHAL@Toshi@@QAE@ABV01@@Z,public: __thiscall Toshi::TWaterShaderHAL::TWaterShaderHAL(class Toshi::TWaterShaderHAL const &)
+16,0x16a60,0x10016a60,??0TWaterShaderHAL@Toshi@@QAE@XZ,public: __thiscall Toshi::TWaterShaderHAL::TWaterShaderHAL(void)
+17,0x13d70,0x10013d70,??1TGrassMaterialHAL@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TGrassMaterialHAL::~TGrassMaterialHAL(void)
+18,0x15470,0x10015470,??1TGrassMeshHAL@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TGrassMeshHAL::~TGrassMeshHAL(void)
+19,0x15850,0x10015850,??1TGrassShaderHAL@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TGrassShaderHAL::~TGrassShaderHAL(void)
+20,0xe420,0x1000e420,??1TTerrainMaterialHAL@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TTerrainMaterialHAL::~TTerrainMaterialHAL(void)
+21,0x10950,0x10010950,??1TTerrainMeshHAL@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TTerrainMeshHAL::~TTerrainMeshHAL(void)
+22,0x43e0,0x100043e0,??1TTerrainShaderHAL@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TTerrainShaderHAL::~TTerrainShaderHAL(void)
+23,0x16730,0x10016730,??1TWaterMaterialHAL@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TWaterMaterialHAL::~TWaterMaterialHAL(void)
+24,0x16680,0x10016680,??1TWaterMeshHAL@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TWaterMeshHAL::~TWaterMeshHAL(void)
+25,0x16a50,0x10016a50,??1TWaterShaderHAL@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TWaterShaderHAL::~TWaterShaderHAL(void)
+26,0x150300,0x10150300,??_7TGrassMaterialHAL@Toshi@@6B@,const Toshi::TGrassMaterialHAL::`vftable'
+27,0x150340,0x10150340,??_7TGrassMeshHAL@Toshi@@6B@,const Toshi::TGrassMeshHAL::`vftable'
+28,0x150240,0x10150240,??_7TGrassShaderHAL@Toshi@@6B@,const Toshi::TGrassShaderHAL::`vftable'
+29,0x14ec80,0x1014ec80,??_7TTerrainMaterialHAL@Toshi@@6B@,const Toshi::TTerrainMaterialHAL::`vftable'
+30,0x14ecc0,0x1014ecc0,??_7TTerrainMeshHAL@Toshi@@6B@,const Toshi::TTerrainMeshHAL::`vftable'
+31,0x14eb20,0x1014eb20,??_7TTerrainShaderHAL@Toshi@@6B@,const Toshi::TTerrainShaderHAL::`vftable'
+32,0x1508c0,0x101508c0,??_7TWaterMaterialHAL@Toshi@@6B@,const Toshi::TWaterMaterialHAL::`vftable'
+33,0x150900,0x10150900,??_7TWaterMeshHAL@Toshi@@6B@,const Toshi::TWaterMeshHAL::`vftable'
+34,0x150800,0x10150800,??_7TWaterShaderHAL@Toshi@@6B@,const Toshi::TWaterShaderHAL::`vftable'
+35,0x10ba0,0x10010ba0,?AddDroplet@TTerrainShaderHAL@Toshi@@AAEXMMM@Z,"private: void __thiscall Toshi::TTerrainShaderHAL::AddDroplet(float,float,float)"
+36,0x10b00,0x10010b00,?AddNoise@TTerrainShaderHAL@Toshi@@AAEXMMM@Z,"private: void __thiscall Toshi::TTerrainShaderHAL::AddNoise(float,float,float)"
+37,0x14430,0x10014430,?Allocate@TGrassMeshHAL@Toshi@@MAE_NXZ,protected: virtual bool __thiscall Toshi::TGrassMeshHAL::Allocate(void)
+38,0xf010,0x1000f010,?Allocate@TTerrainMeshHAL@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TTerrainMeshHAL::Allocate(void)
+39,0x16670,0x10016670,?Allocate@TWaterMeshHAL@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TWaterMeshHAL::Allocate(void)
+40,0x14eae4,0x1014eae4,?BUMPVSHADERDECL@TTerrainShaderHAL@Toshi@@2QBKB,public: static unsigned long const * const Toshi::TTerrainShaderHAL::BUMPVSHADERDECL
+41,0x7930,0x10007930,?CalcFogColour@TTerrainShaderHAL@Toshi@@QAEIXZ,public: unsigned int __thiscall Toshi::TTerrainShaderHAL::CalcFogColour(void)
+42,0x7510,0x10007510,?ClearEnvMap@TTerrainShaderHAL@Toshi@@UAEXI@Z,public: virtual void __thiscall Toshi::TTerrainShaderHAL::ClearEnvMap(unsigned int)
+43,0x13f20,0x10013f20,?ComputeHeightStream@TGrassMeshHAL@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TGrassMeshHAL::ComputeHeightStream(void)
+44,0x16620,0x10016620,?ComputeHeightStream@TWaterMeshHAL@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TWaterMeshHAL::ComputeHeightStream(void)
+45,0xd6c0,0x1000d6c0,?ConvertToA1R5G5B5@TTerrainShaderHAL@Toshi@@AAEGABVTVector3@2@@Z,private: unsigned short __thiscall Toshi::TTerrainShaderHAL::ConvertToA1R5G5B5(class Toshi::TVector3 const &)
+46,0xd760,0x1000d760,?ConvertToA4R4G4B4@TTerrainShaderHAL@Toshi@@AAEGABVTVector3@2@@Z,private: unsigned short __thiscall Toshi::TTerrainShaderHAL::ConvertToA4R4G4B4(class Toshi::TVector3 const &)
+47,0xd620,0x1000d620,?ConvertToR5G6B5@TTerrainShaderHAL@Toshi@@AAEGABVTVector3@2@@Z,private: unsigned short __thiscall Toshi::TTerrainShaderHAL::ConvertToR5G6B5(class Toshi::TVector3 const &)
+48,0x128b0,0x100128b0,?Create@TGrassShaderHAL@Toshi@@UAE_NPAVTTerrainInterface@2@@Z,public: virtual bool __thiscall Toshi::TGrassShaderHAL::Create(class Toshi::TTerrainInterface *)
+49,0x4760,0x10004760,?Create@TTerrainShaderHAL@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TTerrainShaderHAL::Create(void)
+50,0x16a10,0x10016a10,?Create@TWaterShaderHAL@Toshi@@UAE_NPAVTTerrainInterface@2@@Z,public: virtual bool __thiscall Toshi::TWaterShaderHAL::Create(class Toshi::TTerrainInterface *)
+51,0x113e0,0x100113e0,?CreateDecalMaterial@TTerrainShaderHAL@Toshi@@UAEPAVTTerrainMaterial@2@PBD@Z,public: virtual class Toshi::TTerrainMaterial * __thiscall Toshi::TTerrainShaderHAL::CreateDecalMaterial(char const *)
+52,0x91e0,0x100091e0,?CreateLowEndTextures_TerrainSky@TTerrainShaderHAL@Toshi@@QAE_NXZ,public: bool __thiscall Toshi::TTerrainShaderHAL::CreateLowEndTextures_TerrainSky(void)
+53,0x9590,0x10009590,?CreateLowEndTextures_Water@TTerrainShaderHAL@Toshi@@QAE_NXZ,public: bool __thiscall Toshi::TTerrainShaderHAL::CreateLowEndTextures_Water(void)
+54,0x12cf0,0x10012cf0,?CreateMaterial@TGrassShaderHAL@Toshi@@UAEPAVTGrassMaterial@2@PBD@Z,public: virtual class Toshi::TGrassMaterial * __thiscall Toshi::TGrassShaderHAL::CreateMaterial(char const *)
+55,0x56e0,0x100056e0,?CreateMaterial@TTerrainShaderHAL@Toshi@@UAEPAVTTerrainMaterial@2@PBD@Z,public: virtual class Toshi::TTerrainMaterial * __thiscall Toshi::TTerrainShaderHAL::CreateMaterial(char const *)
+56,0x16c90,0x10016c90,?CreateMaterial@TWaterShaderHAL@Toshi@@UAEPAVTWaterMaterial@2@PBD@Z,public: virtual class Toshi::TWaterMaterial * __thiscall Toshi::TWaterShaderHAL::CreateMaterial(char const *)
+57,0x12d30,0x10012d30,?CreateMesh@TGrassShaderHAL@Toshi@@UAEPAVTGrassMesh@2@PBD@Z,public: virtual class Toshi::TGrassMesh * __thiscall Toshi::TGrassShaderHAL::CreateMesh(char const *)
+58,0x5740,0x10005740,?CreateMesh@TTerrainShaderHAL@Toshi@@UAEPAVTTerrainMesh@2@PBD@Z,public: virtual class Toshi::TTerrainMesh * __thiscall Toshi::TTerrainShaderHAL::CreateMesh(char const *)
+59,0x16960,0x10016960,?CreateMesh@TWaterShaderHAL@Toshi@@UAEPAVTWaterMesh@2@PBD@Z,public: virtual class Toshi::TWaterMesh * __thiscall Toshi::TWaterShaderHAL::CreateMesh(char const *)
+60,0x13890,0x10013890,?CreateMeshType1@TGrassShaderHAL@Toshi@@IAEXXZ,protected: void __thiscall Toshi::TGrassShaderHAL::CreateMeshType1(void)
+61,0x15560,0x10015560,?CreateObject@TGrassMaterialHAL@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::TGrassMaterialHAL::CreateObject(void)
+62,0x154e0,0x100154e0,?CreateObject@TGrassMeshHAL@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::TGrassMeshHAL::CreateObject(void)
+63,0x158b0,0x100158b0,?CreateObject@TGrassShaderHAL@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::TGrassShaderHAL::CreateObject(void)
+64,0x10a70,0x10010a70,?CreateObject@TTerrainMaterialHAL@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::TTerrainMaterialHAL::CreateObject(void)
+65,0x109c0,0x100109c0,?CreateObject@TTerrainMeshHAL@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::TTerrainMeshHAL::CreateObject(void)
+66,0x110f0,0x100110f0,?CreateObject@TTerrainShaderHAL@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::TTerrainShaderHAL::CreateObject(void)
+67,0x167a0,0x100167a0,?CreateObject@TWaterMaterialHAL@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::TWaterMaterialHAL::CreateObject(void)
+68,0x166d0,0x100166d0,?CreateObject@TWaterMeshHAL@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::TWaterMeshHAL::CreateObject(void)
+69,0x16ac0,0x10016ac0,?CreateObject@TWaterShaderHAL@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::TWaterShaderHAL::CreateObject(void)
+70,0x15540,0x10015540,?CreateObjectInPlace@TGrassMaterialHAL@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::TGrassMaterialHAL::CreateObjectInPlace(void *)
+71,0x154c0,0x100154c0,?CreateObjectInPlace@TGrassMeshHAL@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::TGrassMeshHAL::CreateObjectInPlace(void *)
+72,0x15890,0x10015890,?CreateObjectInPlace@TGrassShaderHAL@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::TGrassShaderHAL::CreateObjectInPlace(void *)
+73,0x10a50,0x10010a50,?CreateObjectInPlace@TTerrainMaterialHAL@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::TTerrainMaterialHAL::CreateObjectInPlace(void *)
+74,0x109a0,0x100109a0,?CreateObjectInPlace@TTerrainMeshHAL@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::TTerrainMeshHAL::CreateObjectInPlace(void *)
+75,0x110d0,0x100110d0,?CreateObjectInPlace@TTerrainShaderHAL@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::TTerrainShaderHAL::CreateObjectInPlace(void *)
+76,0x16780,0x10016780,?CreateObjectInPlace@TWaterMaterialHAL@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::TWaterMaterialHAL::CreateObjectInPlace(void *)
+77,0x166b0,0x100166b0,?CreateObjectInPlace@TWaterMeshHAL@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::TWaterMeshHAL::CreateObjectInPlace(void *)
+78,0x16aa0,0x10016aa0,?CreateObjectInPlace@TWaterShaderHAL@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::TWaterShaderHAL::CreateObjectInPlace(void *)
+79,0xc450,0x1000c450,?CreateShaders@TTerrainShaderHAL@Toshi@@AAEXXZ,private: void __thiscall Toshi::TTerrainShaderHAL::CreateShaders(void)
+80,0xc180,0x1000c180,?CreateTerrainTextureRenderTargets@TTerrainShaderHAL@Toshi@@AAE_NXZ,private: bool __thiscall Toshi::TTerrainShaderHAL::CreateTerrainTextureRenderTargets(void)
+81,0xbe50,0x1000be50,?CreateTextureRenderTargets@TTerrainShaderHAL@Toshi@@AAE_NHH@Z,"private: bool __thiscall Toshi::TTerrainShaderHAL::CreateTextureRenderTargets(int,int)"
+82,0xe2d0,0x1000e2d0,?CreateUVBlurOffsets@TTerrainShaderHAL@Toshi@@AAEXXZ,private: void __thiscall Toshi::TTerrainShaderHAL::CreateUVBlurOffsets(void)
+83,0xde50,0x1000de50,?CreateUVOffsets@TTerrainShaderHAL@Toshi@@AAEXHH@Z,"private: void __thiscall Toshi::TTerrainShaderHAL::CreateUVOffsets(int,int)"
+84,0xc7f0,0x1000c7f0,?CreateWaterMesh@TTerrainShaderHAL@Toshi@@AAE_N_N@Z,private: bool __thiscall Toshi::TTerrainShaderHAL::CreateWaterMesh(bool)
+85,0x144b0,0x100144b0,?Deallocate@TGrassMeshHAL@Toshi@@MAEXXZ,protected: virtual void __thiscall Toshi::TGrassMeshHAL::Deallocate(void)
+86,0xf060,0x1000f060,?Deallocate@TTerrainMeshHAL@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TTerrainMeshHAL::Deallocate(void)
+87,0x16660,0x10016660,?Deallocate@TWaterMeshHAL@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TWaterMeshHAL::Deallocate(void)
+88,0x15520,0x10015520,?DeinitialiseStatic@TGrassMaterialHAL@Toshi@@CGXXZ,private: static void __stdcall Toshi::TGrassMaterialHAL::DeinitialiseStatic(void)
+89,0x154a0,0x100154a0,?DeinitialiseStatic@TGrassMeshHAL@Toshi@@CGXXZ,private: static void __stdcall Toshi::TGrassMeshHAL::DeinitialiseStatic(void)
+90,0x15870,0x10015870,?DeinitialiseStatic@TGrassShaderHAL@Toshi@@CGXXZ,private: static void __stdcall Toshi::TGrassShaderHAL::DeinitialiseStatic(void)
+91,0x10a30,0x10010a30,?DeinitialiseStatic@TTerrainMaterialHAL@Toshi@@CGXXZ,private: static void __stdcall Toshi::TTerrainMaterialHAL::DeinitialiseStatic(void)
+92,0x10980,0x10010980,?DeinitialiseStatic@TTerrainMeshHAL@Toshi@@CGXXZ,private: static void __stdcall Toshi::TTerrainMeshHAL::DeinitialiseStatic(void)
+93,0x110b0,0x100110b0,?DeinitialiseStatic@TTerrainShaderHAL@Toshi@@CGXXZ,private: static void __stdcall Toshi::TTerrainShaderHAL::DeinitialiseStatic(void)
+94,0x16760,0x10016760,?DeinitialiseStatic@TWaterMaterialHAL@Toshi@@CGXXZ,private: static void __stdcall Toshi::TWaterMaterialHAL::DeinitialiseStatic(void)
+95,0x16690,0x10016690,?DeinitialiseStatic@TWaterMeshHAL@Toshi@@CGXXZ,private: static void __stdcall Toshi::TWaterMeshHAL::DeinitialiseStatic(void)
+96,0x16a80,0x10016a80,?DeinitialiseStatic@TWaterShaderHAL@Toshi@@CGXXZ,private: static void __stdcall Toshi::TWaterShaderHAL::DeinitialiseStatic(void)
+97,0xc420,0x1000c420,?DelPixelShader@TTerrainShaderHAL@Toshi@@AAEXPAK@Z,private: void __thiscall Toshi::TTerrainShaderHAL::DelPixelShader(unsigned long *)
+98,0xc3f0,0x1000c3f0,?DelVertexShader@TTerrainShaderHAL@Toshi@@AAEXPAK@Z,private: void __thiscall Toshi::TTerrainShaderHAL::DelVertexShader(unsigned long *)
+99,0x13c90,0x10013c90,?DestroyMeshType1@TGrassShaderHAL@Toshi@@IAEXXZ,protected: void __thiscall Toshi::TGrassShaderHAL::DestroyMeshType1(void)
+100,0xc700,0x1000c700,?DestroyShaders@TTerrainShaderHAL@Toshi@@AAEXXZ,private: void __thiscall Toshi::TTerrainShaderHAL::DestroyShaders(void)
+101,0xc340,0x1000c340,?DestroyTerrainTextureRenderTargets@TTerrainShaderHAL@Toshi@@AAEXXZ,private: void __thiscall Toshi::TTerrainShaderHAL::DestroyTerrainTextureRenderTargets(void)
+102,0xc110,0x1000c110,?DestroyTextureRenderTargets@TTerrainShaderHAL@Toshi@@AAEXXZ,private: void __thiscall Toshi::TTerrainShaderHAL::DestroyTextureRenderTargets(void)
+103,0xab90,0x1000ab90,?DoSingleTimeStep_Optimized@TTerrainShaderHAL@Toshi@@AAEXXZ,private: void __thiscall Toshi::TTerrainShaderHAL::DoSingleTimeStep_Optimized(void)
+104,0xd840,0x1000d840,?DrawDroplets@TTerrainShaderHAL@Toshi@@AAEXXZ,private: void __thiscall Toshi::TTerrainShaderHAL::DrawDroplets(void)
+105,0xdb10,0x1000db10,?DrawNoise@TTerrainShaderHAL@Toshi@@AAEXXZ,private: void __thiscall Toshi::TTerrainShaderHAL::DrawNoise(void)
+106,0x13360,0x10013360,?EnableGrass@TGrassShaderHAL@Toshi@@UAEX_N@Z,public: virtual void __thiscall Toshi::TGrassShaderHAL::EnableGrass(bool)
+107,0x10cf0,0x10010cf0,?EnableHighEndTerrain@TTerrainShaderHAL@Toshi@@UAEX_N@Z,public: virtual void __thiscall Toshi::TTerrainShaderHAL::EnableHighEndTerrain(bool)
+108,0x10c70,0x10010c70,?EnableHighEndWater@TTerrainShaderHAL@Toshi@@UAEX_N@Z,public: virtual void __thiscall Toshi::TTerrainShaderHAL::EnableHighEndWater(bool)
+109,0x54e0,0x100054e0,?EnableRenderEnvMap@TTerrainShaderHAL@Toshi@@UAEX_N@Z,public: virtual void __thiscall Toshi::TTerrainShaderHAL::EnableRenderEnvMap(bool)
+110,0x10cb0,0x10010cb0,?EnableTerrainDetailPass@TTerrainShaderHAL@Toshi@@UAEX_N@Z,public: virtual void __thiscall Toshi::TTerrainShaderHAL::EnableTerrainDetailPass(bool)
+111,0x11f50,0x10011f50,?Flush@TGrassShaderHAL@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TGrassShaderHAL::Flush(void)
+112,0x4430,0x10004430,?Flush@TTerrainShaderHAL@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TTerrainShaderHAL::Flush(void)
+113,0x16a30,0x10016a30,?Flush@TWaterShaderHAL@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TWaterShaderHAL::Flush(void)
+114,0xb950,0x1000b950,?GenerateNormalInit@TTerrainShaderHAL@Toshi@@AAE_NHH@Z,"private: bool __thiscall Toshi::TTerrainShaderHAL::GenerateNormalInit(int,int)"
+115,0xa9c0,0x1000a9c0,?GenerateNormalMap@TTerrainShaderHAL@Toshi@@AAEXXZ,private: void __thiscall Toshi::TTerrainShaderHAL::GenerateNormalMap(void)
+116,0x155e0,0x100155e0,?GetAlphaFar@TGrassShaderHAL@Toshi@@UAEMXZ,public: virtual float __thiscall Toshi::TGrassShaderHAL::GetAlphaFar(void)
+117,0x155f0,0x100155f0,?GetAlphaNear@TGrassShaderHAL@Toshi@@UAEMXZ,public: virtual float __thiscall Toshi::TGrassShaderHAL::GetAlphaNear(void)
+118,0x10d90,0x10010d90,?GetAtmosphere@TTerrainShaderHAL@Toshi@@UAEPAVTAtmosphere@2@XZ,public: virtual class Toshi::TAtmosphere * __thiscall Toshi::TTerrainShaderHAL::GetAtmosphere(void)
+119,0x15980,0x10015980,?GetAverageWorldspaceCentre@TGrassMeshHAL@Toshi@@QAEAAVTVector3@2@XZ,public: class Toshi::TVector3 & __thiscall Toshi::TGrassMeshHAL::GetAverageWorldspaceCentre(void)
+120,0x16b90,0x10016b90,?GetAverageWorldspaceCentre@TWaterMeshHAL@Toshi@@QAEAAVTVector4@2@XZ,public: class Toshi::TVector4 & __thiscall Toshi::TWaterMeshHAL::GetAverageWorldspaceCentre(void)
+121,0x15740,0x10015740,?GetBetaMieMult@TGrassShaderHAL@Toshi@@UAEMXZ,public: virtual float __thiscall Toshi::TGrassShaderHAL::GetBetaMieMult(void)
+122,0x10e00,0x10010e00,?GetBetaMieMult@TTerrainShaderHAL@Toshi@@UAEMXZ,public: virtual float __thiscall Toshi::TTerrainShaderHAL::GetBetaMieMult(void)
+123,0x16830,0x10016830,?GetBetaMieMult@TWaterShaderHAL@Toshi@@UAEMXZ,public: virtual float __thiscall Toshi::TWaterShaderHAL::GetBetaMieMult(void)
+124,0x15750,0x10015750,?GetBetaRayMult@TGrassShaderHAL@Toshi@@UAEMXZ,public: virtual float __thiscall Toshi::TGrassShaderHAL::GetBetaRayMult(void)
+125,0x10e10,0x10010e10,?GetBetaRayMult@TTerrainShaderHAL@Toshi@@UAEMXZ,public: virtual float __thiscall Toshi::TTerrainShaderHAL::GetBetaRayMult(void)
+126,0x16840,0x10016840,?GetBetaRayMult@TWaterShaderHAL@Toshi@@UAEMXZ,public: virtual float __thiscall Toshi::TWaterShaderHAL::GetBetaRayMult(void)
+127,0x9910,0x10009910,?GetBlendMinMax@TTerrainShaderHAL@Toshi@@QAEXXZ,public: void __thiscall Toshi::TTerrainShaderHAL::GetBlendMinMax(void)
+128,0x15590,0x10015590,?GetClass@TGrassMaterialHAL@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::TGrassMaterialHAL::GetClass(void)const 
+129,0x15510,0x10015510,?GetClass@TGrassMeshHAL@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::TGrassMeshHAL::GetClass(void)const 
+130,0x158e0,0x100158e0,?GetClass@TGrassShaderHAL@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::TGrassShaderHAL::GetClass(void)const 
+131,0x10aa0,0x10010aa0,?GetClass@TTerrainMaterialHAL@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::TTerrainMaterialHAL::GetClass(void)const 
+132,0x109f0,0x100109f0,?GetClass@TTerrainMeshHAL@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::TTerrainMeshHAL::GetClass(void)const 
+133,0x11120,0x10011120,?GetClass@TTerrainShaderHAL@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::TTerrainShaderHAL::GetClass(void)const 
+134,0x167d0,0x100167d0,?GetClass@TWaterMaterialHAL@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::TWaterMaterialHAL::GetClass(void)const 
+135,0x16700,0x10016700,?GetClass@TWaterMeshHAL@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::TWaterMeshHAL::GetClass(void)const 
+136,0x16af0,0x10016af0,?GetClass@TWaterShaderHAL@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::TWaterShaderHAL::GetClass(void)const 
+137,0x10e80,0x10010e80,?GetDropletFreq@TTerrainShaderHAL@Toshi@@UAEMXZ,public: virtual float __thiscall Toshi::TTerrainShaderHAL::GetDropletFreq(void)
+138,0x10e40,0x10010e40,?GetDropletMaxSize@TTerrainShaderHAL@Toshi@@UAEMXZ,public: virtual float __thiscall Toshi::TTerrainShaderHAL::GetDropletMaxSize(void)
+139,0x10e50,0x10010e50,?GetDropletMinSize@TTerrainShaderHAL@Toshi@@UAEMXZ,public: virtual float __thiscall Toshi::TTerrainShaderHAL::GetDropletMinSize(void)
+140,0x15970,0x10015970,?GetDynamicVertexBuffer@TGrassMeshHAL@Toshi@@QAEPAUIDirect3DVertexBuffer8@@XZ,public: struct IDirect3DVertexBuffer8 * __thiscall Toshi::TGrassMeshHAL::GetDynamicVertexBuffer(void)
+141,0x15720,0x10015720,?GetHG@TGrassShaderHAL@Toshi@@UAEMXZ,public: virtual float __thiscall Toshi::TGrassShaderHAL::GetHG(void)
+142,0x10de0,0x10010de0,?GetHG@TTerrainShaderHAL@Toshi@@UAEMXZ,public: virtual float __thiscall Toshi::TTerrainShaderHAL::GetHG(void)
+143,0x16810,0x10016810,?GetHG@TWaterShaderHAL@Toshi@@UAEMXZ,public: virtual float __thiscall Toshi::TWaterShaderHAL::GetHG(void)
+144,0x15730,0x10015730,?GetInscatteringMult@TGrassShaderHAL@Toshi@@UAEMXZ,public: virtual float __thiscall Toshi::TGrassShaderHAL::GetInscatteringMult(void)
+145,0x10df0,0x10010df0,?GetInscatteringMult@TTerrainShaderHAL@Toshi@@UAEMXZ,public: virtual float __thiscall Toshi::TTerrainShaderHAL::GetInscatteringMult(void)
+146,0x16820,0x10016820,?GetInscatteringMult@TWaterShaderHAL@Toshi@@UAEMXZ,public: virtual float __thiscall Toshi::TWaterShaderHAL::GetInscatteringMult(void)
+147,0x9120,0x10009120,?GetLowEndTerrainCaps@TTerrainShaderHAL@Toshi@@QAE_NXZ,public: bool __thiscall Toshi::TTerrainShaderHAL::GetLowEndTerrainCaps(void)
+148,0x15990,0x10015990,?GetMaterial@TGrassMeshHAL@Toshi@@QAEPAVTGrassMaterialHAL@2@XZ,public: class Toshi::TGrassMaterialHAL * __thiscall Toshi::TGrassMeshHAL::GetMaterial(void)
+149,0x111e0,0x100111e0,?GetMaterial@TTerrainMeshHAL@Toshi@@QAEPAVTTerrainMaterialHAL@2@XZ,public: class Toshi::TTerrainMaterialHAL * __thiscall Toshi::TTerrainMeshHAL::GetMaterial(void)
+150,0x16ba0,0x10016ba0,?GetMaterial@TWaterMeshHAL@Toshi@@QAEPAVTWaterMaterialHAL@2@XZ,public: class Toshi::TWaterMaterialHAL * __thiscall Toshi::TWaterMeshHAL::GetMaterial(void)
+151,0x113d0,0x100113d0,?GetNumRendPackets@TTerrainShaderHAL@Toshi@@UAEIXZ,public: virtual unsigned int __thiscall Toshi::TTerrainShaderHAL::GetNumRendPackets(void)
+152,0x15a70,0x10015a70,?GetOrderTable@TGrassShaderHAL@Toshi@@QAEPAVTOrderTable@2@XZ,public: class Toshi::TOrderTable * __thiscall Toshi::TGrassShaderHAL::GetOrderTable(void)
+153,0x113f0,0x100113f0,?GetOrderTable@TTerrainShaderHAL@Toshi@@UAEPAVTOrderTable@2@XZ,public: virtual class Toshi::TOrderTable * __thiscall Toshi::TTerrainShaderHAL::GetOrderTable(void)
+154,0x15a40,0x10015a40,?GetPixelShaderHandle@TGrassShaderHAL@Toshi@@QAEKXZ,public: unsigned long __thiscall Toshi::TGrassShaderHAL::GetPixelShaderHandle(void)
+155,0x10fd0,0x10010fd0,?GetPixelShaderHandle@TTerrainShaderHAL@Toshi@@QAEKXZ,public: unsigned long __thiscall Toshi::TTerrainShaderHAL::GetPixelShaderHandle(void)
+156,0x15710,0x10015710,?GetReflectance@TGrassShaderHAL@Toshi@@UAEMXZ,public: virtual float __thiscall Toshi::TGrassShaderHAL::GetReflectance(void)
+157,0x10dd0,0x10010dd0,?GetReflectance@TTerrainShaderHAL@Toshi@@UAEMXZ,public: virtual float __thiscall Toshi::TTerrainShaderHAL::GetReflectance(void)
+158,0x16800,0x10016800,?GetReflectance@TWaterShaderHAL@Toshi@@UAEMXZ,public: virtual float __thiscall Toshi::TWaterShaderHAL::GetReflectance(void)
+159,0x15a00,0x10015a00,?GetRenderer@TGrassMaterialHAL@Toshi@@QBEPAVTRenderD3DInterface@2@XZ,public: class Toshi::TRenderD3DInterface * __thiscall Toshi::TGrassMaterialHAL::GetRenderer(void)const 
+160,0x15a80,0x10015a80,?GetRenderer@TGrassShaderHAL@Toshi@@QBEPAVTRenderD3DInterface@2@XZ,public: class Toshi::TRenderD3DInterface * __thiscall Toshi::TGrassShaderHAL::GetRenderer(void)const 
+161,0x11240,0x10011240,?GetRenderer@TTerrainMaterialHAL@Toshi@@QBEPAVTRenderD3DInterface@2@XZ,public: class Toshi::TRenderD3DInterface * __thiscall Toshi::TTerrainMaterialHAL::GetRenderer(void)const 
+162,0x11400,0x10011400,?GetRenderer@TTerrainShaderHAL@Toshi@@UBEPAVTRenderD3DInterface@2@XZ,public: virtual class Toshi::TRenderD3DInterface * __thiscall Toshi::TTerrainShaderHAL::GetRenderer(void)const 
+163,0x16c80,0x10016c80,?GetRenderer@TWaterShaderHAL@Toshi@@QBEPAVTRenderD3DInterface@2@XZ,public: class Toshi::TRenderD3DInterface * __thiscall Toshi::TWaterShaderHAL::GetRenderer(void)const 
+164,0x10db0,0x10010db0,?GetScatteringFar@TTerrainShaderHAL@Toshi@@UAEMXZ,public: virtual float __thiscall Toshi::TTerrainShaderHAL::GetScatteringFar(void)
+165,0x10dc0,0x10010dc0,?GetScatteringNear@TTerrainShaderHAL@Toshi@@UAEMXZ,public: virtual float __thiscall Toshi::TTerrainShaderHAL::GetScatteringNear(void)
+166,0x159f0,0x100159f0,?GetShader@TGrassMaterialHAL@Toshi@@QAEPAVTGrassShaderHAL@2@XZ,public: class Toshi::TGrassShaderHAL * __thiscall Toshi::TGrassMaterialHAL::GetShader(void)
+167,0x159a0,0x100159a0,?GetShader@TGrassMeshHAL@Toshi@@QAEPAVTGrassShaderHAL@2@XZ,public: class Toshi::TGrassShaderHAL * __thiscall Toshi::TGrassMeshHAL::GetShader(void)
+168,0x11230,0x10011230,?GetShader@TTerrainMaterialHAL@Toshi@@QAEPAVTTerrainShaderHAL@2@XZ,public: class Toshi::TTerrainShaderHAL * __thiscall Toshi::TTerrainMaterialHAL::GetShader(void)
+169,0x16c00,0x10016c00,?GetShader@TWaterMaterialHAL@Toshi@@QAEPAVTWaterShaderHAL@2@XZ,public: class Toshi::TWaterShaderHAL * __thiscall Toshi::TWaterMaterialHAL::GetShader(void)
+170,0x16bb0,0x10016bb0,?GetShader@TWaterMeshHAL@Toshi@@QAEPAVTWaterShaderHAL@2@XZ,public: class Toshi::TWaterShaderHAL * __thiscall Toshi::TWaterMeshHAL::GetShader(void)
+171,0x10da0,0x10010da0,?GetSun@TTerrainShaderHAL@Toshi@@UAEPAVTSun@2@XZ,public: virtual class Toshi::TSun * __thiscall Toshi::TTerrainShaderHAL::GetSun(void)
+172,0x15760,0x10015760,?GetSunIntensity@TGrassShaderHAL@Toshi@@UAEMXZ,public: virtual float __thiscall Toshi::TGrassShaderHAL::GetSunIntensity(void)
+173,0x10e20,0x10010e20,?GetSunIntensity@TTerrainShaderHAL@Toshi@@UAEMXZ,public: virtual float __thiscall Toshi::TTerrainShaderHAL::GetSunIntensity(void)
+174,0x16850,0x10016850,?GetSunIntensity@TWaterShaderHAL@Toshi@@UAEMXZ,public: virtual float __thiscall Toshi::TWaterShaderHAL::GetSunIntensity(void)
+175,0x15770,0x10015770,?GetSunTheta@TGrassShaderHAL@Toshi@@UAEMXZ,public: virtual float __thiscall Toshi::TGrassShaderHAL::GetSunTheta(void)
+176,0x10e30,0x10010e30,?GetSunTheta@TTerrainShaderHAL@Toshi@@UAEMXZ,public: virtual float __thiscall Toshi::TTerrainShaderHAL::GetSunTheta(void)
+177,0x16860,0x10016860,?GetSunTheta@TWaterShaderHAL@Toshi@@UAEMXZ,public: virtual float __thiscall Toshi::TWaterShaderHAL::GetSunTheta(void)
+178,0x10d60,0x10010d60,?GetTerrainTexture@TTerrainShaderHAL@Toshi@@QAEPAUIDirect3DTexture8@@XZ,public: struct IDirect3DTexture8 * __thiscall Toshi::TTerrainShaderHAL::GetTerrainTexture(void)
+179,0x9090,0x10009090,?GetTexAddrCaps@TTerrainShaderHAL@Toshi@@QAE_NXZ,public: bool __thiscall Toshi::TTerrainShaderHAL::GetTexAddrCaps(void)
+180,0x15a30,0x10015a30,?GetType1CentreArray@TGrassShaderHAL@Toshi@@QAEPAVTVector2@2@XZ,public: class Toshi::TVector2 * __thiscall Toshi::TGrassShaderHAL::GetType1CentreArray(void)
+181,0x155c0,0x100155c0,?GetVertexShaderHandle@TGrassShaderHAL@Toshi@@QAEKXZ,public: unsigned long __thiscall Toshi::TGrassShaderHAL::GetVertexShaderHandle(void)
+182,0x10fe0,0x10010fe0,?GetVertexShaderHandle@TTerrainShaderHAL@Toshi@@QAEKXZ,public: unsigned long __thiscall Toshi::TTerrainShaderHAL::GetVertexShaderHandle(void)
+183,0x10e70,0x10010e70,?GetWindX@TTerrainShaderHAL@Toshi@@UAEMXZ,public: virtual float __thiscall Toshi::TTerrainShaderHAL::GetWindX(void)
+184,0x10e60,0x10010e60,?GetWindY@TTerrainShaderHAL@Toshi@@UAEMXZ,public: virtual float __thiscall Toshi::TTerrainShaderHAL::GetWindY(void)
+185,0x133a0,0x100133a0,?HighEndGrassCapable@TGrassShaderHAL@Toshi@@QAE_NXZ,public: bool __thiscall Toshi::TGrassShaderHAL::HighEndGrassCapable(void)
+186,0x15a50,0x10015a50,?HighEndGrassStatus@TGrassShaderHAL@Toshi@@QAE_NXZ,public: bool __thiscall Toshi::TGrassShaderHAL::HighEndGrassStatus(void)
+187,0xcad0,0x1000cad0,?InitSkyMesh@TTerrainShaderHAL@Toshi@@AAE_NIIMM_NAAI1@Z,"private: bool __thiscall Toshi::TTerrainShaderHAL::InitSkyMesh(unsigned int,unsigned int,float,float,bool,unsigned int &,unsigned int &)"
+188,0x15530,0x10015530,?InitialiseStatic@TGrassMaterialHAL@Toshi@@CGXXZ,private: static void __stdcall Toshi::TGrassMaterialHAL::InitialiseStatic(void)
+189,0x154b0,0x100154b0,?InitialiseStatic@TGrassMeshHAL@Toshi@@CGXXZ,private: static void __stdcall Toshi::TGrassMeshHAL::InitialiseStatic(void)
+190,0x15880,0x10015880,?InitialiseStatic@TGrassShaderHAL@Toshi@@CGXXZ,private: static void __stdcall Toshi::TGrassShaderHAL::InitialiseStatic(void)
+191,0x10a40,0x10010a40,?InitialiseStatic@TTerrainMaterialHAL@Toshi@@CGXXZ,private: static void __stdcall Toshi::TTerrainMaterialHAL::InitialiseStatic(void)
+192,0x10990,0x10010990,?InitialiseStatic@TTerrainMeshHAL@Toshi@@CGXXZ,private: static void __stdcall Toshi::TTerrainMeshHAL::InitialiseStatic(void)
+193,0x110c0,0x100110c0,?InitialiseStatic@TTerrainShaderHAL@Toshi@@CGXXZ,private: static void __stdcall Toshi::TTerrainShaderHAL::InitialiseStatic(void)
+194,0x16770,0x10016770,?InitialiseStatic@TWaterMaterialHAL@Toshi@@CGXXZ,private: static void __stdcall Toshi::TWaterMaterialHAL::InitialiseStatic(void)
+195,0x166a0,0x100166a0,?InitialiseStatic@TWaterMeshHAL@Toshi@@CGXXZ,private: static void __stdcall Toshi::TWaterMeshHAL::InitialiseStatic(void)
+196,0x16a90,0x10016a90,?InitialiseStatic@TWaterShaderHAL@Toshi@@CGXXZ,private: static void __stdcall Toshi::TWaterShaderHAL::InitialiseStatic(void)
+197,0x12c70,0x10012c70,?Invalidate@TGrassShaderHAL@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TGrassShaderHAL::Invalidate(void)
+198,0x51f0,0x100051f0,?Invalidate@TTerrainShaderHAL@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TTerrainShaderHAL::Invalidate(void)
+199,0x169a0,0x100169a0,?Invalidate@TWaterShaderHAL@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TWaterShaderHAL::Invalidate(void)
+200,0x13d20,0x10013d20,?InvalidateMeshType1@TGrassShaderHAL@Toshi@@IAEXXZ,protected: void __thiscall Toshi::TGrassShaderHAL::InvalidateMeshType1(void)
+201,0x132c0,0x100132c0,?IsCapableGrass@TGrassShaderHAL@Toshi@@UAE_NPAVTTerrainShader@2@@Z,public: virtual bool __thiscall Toshi::TGrassShaderHAL::IsCapableGrass(class Toshi::TTerrainShader *)
+202,0x10c40,0x10010c40,?IsCapableGrass@TTerrainShaderHAL@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TTerrainShaderHAL::IsCapableGrass(void)
+203,0x9740,0x10009740,?IsCapableHighEndTerrain@TTerrainShaderHAL@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TTerrainShaderHAL::IsCapableHighEndTerrain(void)
+204,0x9870,0x10009870,?IsCapableHighEndWater@TTerrainShaderHAL@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TTerrainShaderHAL::IsCapableHighEndWater(void)
+205,0x97e0,0x100097e0,?IsCapableTerrainDetailPass@TTerrainShaderHAL@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TTerrainShaderHAL::IsCapableTerrainDetailPass(void)
+206,0x155d0,0x100155d0,?IsGrass@TGrassShaderHAL@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TGrassShaderHAL::IsGrass(void)
+207,0x10d50,0x10010d50,?IsHighEndTerrain@TTerrainShaderHAL@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TTerrainShaderHAL::IsHighEndTerrain(void)
+208,0x10d30,0x10010d30,?IsHighEndWater@TTerrainShaderHAL@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TTerrainShaderHAL::IsHighEndWater(void)
+209,0x15a60,0x10015a60,?IsLightScattering@TGrassShaderHAL@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TGrassShaderHAL::IsLightScattering(void)
+210,0x10d40,0x10010d40,?IsTerrainDetailPass@TTerrainShaderHAL@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TTerrainShaderHAL::IsTerrainDetailPass(void)
+211,0x113c0,0x100113c0,?IsVolumeTextureMipping@TTerrainShaderHAL@Toshi@@QBE_NXZ,public: bool __thiscall Toshi::TTerrainShaderHAL::IsVolumeTextureMipping(void)const 
+212,0x8d30,0x10008d30,?LoadVolumeTextures@TTerrainShaderHAL@Toshi@@QAE_NXZ,public: bool __thiscall Toshi::TTerrainShaderHAL::LoadVolumeTextures(void)
+213,0x16650,0x10016650,?Lock@TWaterMeshHAL@Toshi@@UAE_NPAVTLockBuffer@12@@Z,public: virtual bool __thiscall Toshi::TWaterMeshHAL::Lock(class Toshi::TWaterMeshHAL::TLockBuffer *)
+214,0x12b50,0x10012b50,?OnDestroy@TGrassShaderHAL@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TGrassShaderHAL::OnDestroy(void)
+215,0x110a0,0x100110a0,?OnDestroy@TTerrainShaderHAL@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TTerrainShaderHAL::OnDestroy(void)
+216,0x16320,0x10016320,?OnDestroy@TWaterShaderHAL@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TWaterShaderHAL::OnDestroy(void)
+217,0x155b0,0x100155b0,?OnLostDevice@TGrassShaderHAL@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TGrassShaderHAL::OnLostDevice(void)
+218,0xa8b0,0x1000a8b0,?OnLostDevice@TTerrainShaderHAL@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TTerrainShaderHAL::OnLostDevice(void)
+219,0x155a0,0x100155a0,?OnResetDevice@TGrassShaderHAL@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TGrassShaderHAL::OnResetDevice(void)
+220,0xa910,0x1000a910,?OnResetDevice@TTerrainShaderHAL@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TTerrainShaderHAL::OnResetDevice(void)
+221,0x13e60,0x10013e60,?PostRender@TGrassMaterialHAL@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TGrassMaterialHAL::PostRender(void)
+222,0xeff0,0x1000eff0,?PostRender@TTerrainMaterialHAL@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TTerrainMaterialHAL::PostRender(void)
+223,0x16710,0x10016710,?PostRender@TWaterMaterialHAL@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TWaterMaterialHAL::PostRender(void)
+224,0x13da0,0x10013da0,?PreRender@TGrassMaterialHAL@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TGrassMaterialHAL::PreRender(void)
+225,0xe450,0x1000e450,?PreRender@TTerrainMaterialHAL@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TTerrainMaterialHAL::PreRender(void)
+226,0x16720,0x10016720,?PreRender@TWaterMaterialHAL@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TWaterMaterialHAL::PreRender(void)
+227,0x15a10,0x10015a10,?QuickExp@TGrassShaderHAL@Toshi@@IAEMM@Z,protected: float __thiscall Toshi::TGrassShaderHAL::QuickExp(float)
+228,0x13ed0,0x10013ed0,?Render@TGrassMeshHAL@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TGrassMeshHAL::Render(void)
+229,0x12d70,0x10012d70,?Render@TGrassShaderHAL@Toshi@@UAEXPAVTRenderPacket@2@@Z,public: virtual void __thiscall Toshi::TGrassShaderHAL::Render(class Toshi::TRenderPacket *)
+230,0xf0c0,0x1000f0c0,?Render@TTerrainMeshHAL@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TTerrainMeshHAL::Render(void)
+231,0x5790,0x10005790,?Render@TTerrainShaderHAL@Toshi@@UAEXPAVTRenderPacket@2@@Z,public: virtual void __thiscall Toshi::TTerrainShaderHAL::Render(class Toshi::TRenderPacket *)
+232,0x16630,0x10016630,?Render@TWaterMeshHAL@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TWaterMeshHAL::Render(void)
+233,0x16940,0x10016940,?Render@TWaterShaderHAL@Toshi@@UAEXPAVTRenderPacket@2@@Z,public: virtual void __thiscall Toshi::TWaterShaderHAL::Render(class Toshi::TRenderPacket *)
+234,0x16950,0x10016950,?Render@TWaterShaderHAL@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TWaterShaderHAL::Render(void)
+235,0x10940,0x10010940,?RenderDecal@TTerrainMeshHAL@Toshi@@UAE_NPAVTTerrainDecal@2@@Z,public: virtual bool __thiscall Toshi::TTerrainMeshHAL::RenderDecal(class Toshi::TTerrainDecal *)
+236,0x7a00,0x10007a00,?RenderEnvMap@TTerrainShaderHAL@Toshi@@QAEXXZ,public: void __thiscall Toshi::TTerrainShaderHAL::RenderEnvMap(void)
+237,0x7770,0x10007770,?RenderInscattering@TTerrainShaderHAL@Toshi@@UAEXPAD@Z,public: virtual void __thiscall Toshi::TTerrainShaderHAL::RenderInscattering(char *)
+238,0x9c90,0x10009c90,?RenderSky@TTerrainShaderHAL@Toshi@@QAEXXZ,public: void __thiscall Toshi::TTerrainShaderHAL::RenderSky(void)
+239,0x5e30,0x10005e30,?RenderToTexture@TTerrainShaderHAL@Toshi@@UAEXPAVTTerrainMesh@2@IPAE11@Z,"public: virtual void __thiscall Toshi::TTerrainShaderHAL::RenderToTexture(class Toshi::TTerrainMesh *,unsigned int,unsigned char *,unsigned char *,unsigned char *)"
+240,0x7af0,0x10007af0,?RenderWater@TTerrainShaderHAL@Toshi@@QAEXXZ,public: void __thiscall Toshi::TTerrainShaderHAL::RenderWater(void)
+241,0x12a50,0x10012a50,?ResetGrass@TGrassShaderHAL@Toshi@@UAEXPAVTTerrainInterface@2@@Z,public: virtual void __thiscall Toshi::TGrassShaderHAL::ResetGrass(class Toshi::TTerrainInterface *)
+242,0x150200,0x10150200,?SHADERDECL@TGrassShaderHAL@Toshi@@2QBKB,public: static unsigned long const * const Toshi::TGrassShaderHAL::SHADERDECL
+243,0x14eac4,0x1014eac4,?SHADERDECL@TTerrainShaderHAL@Toshi@@2QBKB,public: static unsigned long const * const Toshi::TTerrainShaderHAL::SHADERDECL
+244,0x14eaf4,0x1014eaf4,?SKYSHADERDECL@TTerrainShaderHAL@Toshi@@2QBKB,public: static unsigned long const * const Toshi::TTerrainShaderHAL::SKYSHADERDECL
+245,0x15600,0x10015600,?SetAlphaFar@TGrassShaderHAL@Toshi@@UAEXM@Z,public: virtual void __thiscall Toshi::TGrassShaderHAL::SetAlphaFar(float)
+246,0x15640,0x10015640,?SetAlphaNear@TGrassShaderHAL@Toshi@@UAEXM@Z,public: virtual void __thiscall Toshi::TGrassShaderHAL::SetAlphaNear(float)
+247,0x156e0,0x100156e0,?SetAmbient@TGrassShaderHAL@Toshi@@UAEXAAVTVector3@2@@Z,public: virtual void __thiscall Toshi::TGrassShaderHAL::SetAmbient(class Toshi::TVector3 &)
+248,0x167f0,0x100167f0,?SetAmbient@TWaterShaderHAL@Toshi@@UAEXAAVTVector3@2@@Z,public: virtual void __thiscall Toshi::TWaterShaderHAL::SetAmbient(class Toshi::TVector3 &)
+249,0x157d0,0x100157d0,?SetBetaMieMult@TGrassShaderHAL@Toshi@@UAEXM@Z,public: virtual void __thiscall Toshi::TGrassShaderHAL::SetBetaMieMult(float)
+250,0x10f00,0x10010f00,?SetBetaMieMult@TTerrainShaderHAL@Toshi@@UAEXM@Z,public: virtual void __thiscall Toshi::TTerrainShaderHAL::SetBetaMieMult(float)
+251,0x168c0,0x100168c0,?SetBetaMieMult@TWaterShaderHAL@Toshi@@UAEXM@Z,public: virtual void __thiscall Toshi::TWaterShaderHAL::SetBetaMieMult(float)
+252,0x157f0,0x100157f0,?SetBetaRayMult@TGrassShaderHAL@Toshi@@UAEXM@Z,public: virtual void __thiscall Toshi::TGrassShaderHAL::SetBetaRayMult(float)
+253,0x10f20,0x10010f20,?SetBetaRayMult@TTerrainShaderHAL@Toshi@@UAEXM@Z,public: virtual void __thiscall Toshi::TTerrainShaderHAL::SetBetaRayMult(float)
+254,0x168e0,0x100168e0,?SetBetaRayMult@TWaterShaderHAL@Toshi@@UAEXM@Z,public: virtual void __thiscall Toshi::TWaterShaderHAL::SetBetaRayMult(float)
+255,0x10fc0,0x10010fc0,?SetDropletFreq@TTerrainShaderHAL@Toshi@@UAEXM@Z,public: virtual void __thiscall Toshi::TTerrainShaderHAL::SetDropletFreq(float)
+256,0x10f80,0x10010f80,?SetDropletMinMaxSize@TTerrainShaderHAL@Toshi@@UAEXMM@Z,"public: virtual void __thiscall Toshi::TTerrainShaderHAL::SetDropletMinMaxSize(float,float)"
+257,0x11050,0x10011050,?SetGrassModulateScale@TTerrainShaderHAL@Toshi@@UAEXM@Z,public: virtual void __thiscall Toshi::TTerrainShaderHAL::SetGrassModulateScale(float)
+258,0x15790,0x10015790,?SetHG@TGrassShaderHAL@Toshi@@UAEXM@Z,public: virtual void __thiscall Toshi::TGrassShaderHAL::SetHG(float)
+259,0x10ec0,0x10010ec0,?SetHG@TTerrainShaderHAL@Toshi@@UAEXM@Z,public: virtual void __thiscall Toshi::TTerrainShaderHAL::SetHG(float)
+260,0x16880,0x10016880,?SetHG@TWaterShaderHAL@Toshi@@UAEXM@Z,public: virtual void __thiscall Toshi::TWaterShaderHAL::SetHG(float)
+261,0x157b0,0x100157b0,?SetInscatteringMult@TGrassShaderHAL@Toshi@@UAEXM@Z,public: virtual void __thiscall Toshi::TGrassShaderHAL::SetInscatteringMult(float)
+262,0x10ee0,0x10010ee0,?SetInscatteringMult@TTerrainShaderHAL@Toshi@@UAEXM@Z,public: virtual void __thiscall Toshi::TTerrainShaderHAL::SetInscatteringMult(float)
+263,0x168a0,0x100168a0,?SetInscatteringMult@TWaterShaderHAL@Toshi@@UAEXM@Z,public: virtual void __thiscall Toshi::TWaterShaderHAL::SetInscatteringMult(float)
+264,0x11060,0x10011060,?SetLightColours@TTerrainShaderHAL@Toshi@@UAEXAAVTVector3@2@0@Z,"public: virtual void __thiscall Toshi::TTerrainShaderHAL::SetLightColours(class Toshi::TVector3 &,class Toshi::TVector3 &)"
+265,0x16990,0x10016990,?SetLightColours@TWaterShaderHAL@Toshi@@UAEXAAVTVector3@2@0@Z,"public: virtual void __thiscall Toshi::TWaterShaderHAL::SetLightColours(class Toshi::TVector3 &,class Toshi::TVector3 &)"
+266,0x15680,0x10015680,?SetLightScattering@TGrassShaderHAL@Toshi@@UAEX_N@Z,public: virtual void __thiscall Toshi::TGrassShaderHAL::SetLightScattering(bool)
+267,0x7590,0x10007590,?SetLowEndSkyCols@TTerrainShaderHAL@Toshi@@UAEXABVTVector3@2@000@Z,"public: virtual void __thiscall Toshi::TTerrainShaderHAL::SetLowEndSkyCols(class Toshi::TVector3 const &,class Toshi::TVector3 const &,class Toshi::TVector3 const &,class Toshi::TVector3 const &)"
+268,0xd800,0x1000d800,?SetOffsets@TTerrainShaderHAL@Toshi@@AAEXH@Z,private: void __thiscall Toshi::TTerrainShaderHAL::SetOffsets(int)
+269,0x10ac0,0x10010ac0,?SetOffsets_Blur@TTerrainShaderHAL@Toshi@@AAEXXZ,private: void __thiscall Toshi::TTerrainShaderHAL::SetOffsets_Blur(void)
+270,0x10ab0,0x10010ab0,?SetOffsets_NearestNeighbors@TTerrainShaderHAL@Toshi@@AAEXXZ,private: void __thiscall Toshi::TTerrainShaderHAL::SetOffsets_NearestNeighbors(void)
+271,0x10ae0,0x10010ae0,?SetOffsets_Step1@TTerrainShaderHAL@Toshi@@AAEXXZ,private: void __thiscall Toshi::TTerrainShaderHAL::SetOffsets_Step1(void)
+272,0x10ad0,0x10010ad0,?SetOffsets_Step2@TTerrainShaderHAL@Toshi@@AAEXXZ,private: void __thiscall Toshi::TTerrainShaderHAL::SetOffsets_Step2(void)
+273,0x10af0,0x10010af0,?SetOffsets_ZeroOffsets@TTerrainShaderHAL@Toshi@@AAEXXZ,private: void __thiscall Toshi::TTerrainShaderHAL::SetOffsets_ZeroOffsets(void)
+274,0x15780,0x10015780,?SetReflectance@TGrassShaderHAL@Toshi@@UAEXM@Z,public: virtual void __thiscall Toshi::TGrassShaderHAL::SetReflectance(float)
+275,0x10eb0,0x10010eb0,?SetReflectance@TTerrainShaderHAL@Toshi@@UAEXM@Z,public: virtual void __thiscall Toshi::TTerrainShaderHAL::SetReflectance(float)
+276,0x16870,0x10016870,?SetReflectance@TWaterShaderHAL@Toshi@@UAEXM@Z,public: virtual void __thiscall Toshi::TWaterShaderHAL::SetReflectance(float)
+277,0x10e90,0x10010e90,?SetScatteringFar@TTerrainShaderHAL@Toshi@@UAEXM@Z,public: virtual void __thiscall Toshi::TTerrainShaderHAL::SetScatteringFar(float)
+278,0x10ea0,0x10010ea0,?SetScatteringNear@TTerrainShaderHAL@Toshi@@UAEXM@Z,public: virtual void __thiscall Toshi::TTerrainShaderHAL::SetScatteringNear(float)
+279,0x10ff0,0x10010ff0,?SetSkyBlend@TTerrainShaderHAL@Toshi@@UAEXHHM@Z,"public: virtual void __thiscall Toshi::TTerrainShaderHAL::SetSkyBlend(int,int,float)"
+280,0x76a0,0x100076a0,?SetSkySize@TTerrainShaderHAL@Toshi@@UAEXIIMM@Z,"public: virtual void __thiscall Toshi::TTerrainShaderHAL::SetSkySize(unsigned int,unsigned int,float,float)"
+281,0x11020,0x10011020,?SetSkyTex@TTerrainShaderHAL@Toshi@@UAEXHPAUIDirect3DTexture8@@@Z,"public: virtual void __thiscall Toshi::TTerrainShaderHAL::SetSkyTex(int,struct IDirect3DTexture8 *)"
+282,0x156b0,0x100156b0,?SetSun@TGrassShaderHAL@Toshi@@UAEXAAVTVector3@2@@Z,public: virtual void __thiscall Toshi::TGrassShaderHAL::SetSun(class Toshi::TVector3 &)
+283,0x167e0,0x100167e0,?SetSun@TWaterShaderHAL@Toshi@@UAEXAAVTVector3@2@@Z,public: virtual void __thiscall Toshi::TWaterShaderHAL::SetSun(class Toshi::TVector3 &)
+284,0x15810,0x10015810,?SetSunIntensity@TGrassShaderHAL@Toshi@@UAEXM@Z,public: virtual void __thiscall Toshi::TGrassShaderHAL::SetSunIntensity(float)
+285,0x10f40,0x10010f40,?SetSunIntensity@TTerrainShaderHAL@Toshi@@UAEXM@Z,public: virtual void __thiscall Toshi::TTerrainShaderHAL::SetSunIntensity(float)
+286,0x16900,0x10016900,?SetSunIntensity@TWaterShaderHAL@Toshi@@UAEXM@Z,public: virtual void __thiscall Toshi::TWaterShaderHAL::SetSunIntensity(float)
+287,0x15830,0x10015830,?SetSunTheta@TGrassShaderHAL@Toshi@@UAEXM@Z,public: virtual void __thiscall Toshi::TGrassShaderHAL::SetSunTheta(float)
+288,0x10f60,0x10010f60,?SetSunTheta@TTerrainShaderHAL@Toshi@@UAEXM@Z,public: virtual void __thiscall Toshi::TTerrainShaderHAL::SetSunTheta(float)
+289,0x16920,0x10016920,?SetSunTheta@TWaterShaderHAL@Toshi@@UAEXM@Z,public: virtual void __thiscall Toshi::TWaterShaderHAL::SetSunTheta(float)
+290,0x9970,0x10009970,?SetTerrainScatteringConstants@TTerrainShaderHAL@Toshi@@QAEXPAUIDirect3DDevice8@@_N@Z,"public: void __thiscall Toshi::TTerrainShaderHAL::SetTerrainScatteringConstants(struct IDirect3DDevice8 *,bool)"
+291,0x13410,0x10013410,?SetTerrainScatteringConstantsGrass@TGrassShaderHAL@Toshi@@QAEXAAVTVector3@2@0PAM@Z,"public: void __thiscall Toshi::TGrassShaderHAL::SetTerrainScatteringConstantsGrass(class Toshi::TVector3 &,class Toshi::TVector3 &,float *)"
+292,0x10a00,0x10010a00,?SetUVMatrix@TTerrainMaterialHAL@Toshi@@UAEXPAVTMatrix44@2@H@Z,"public: virtual void __thiscall Toshi::TTerrainMaterialHAL::SetUVMatrix(class Toshi::TMatrix44 *,int)"
+293,0x11040,0x10011040,?SetWaterHeight@TTerrainShaderHAL@Toshi@@UAEXM@Z,public: virtual void __thiscall Toshi::TTerrainShaderHAL::SetWaterHeight(float)
+294,0x7720,0x10007720,?SetWaterSize@TTerrainShaderHAL@Toshi@@UAEXIIMM@Z,"public: virtual void __thiscall Toshi::TTerrainShaderHAL::SetWaterSize(unsigned int,unsigned int,float,float)"
+295,0x10fb0,0x10010fb0,?SetWindX@TTerrainShaderHAL@Toshi@@UAEXM@Z,public: virtual void __thiscall Toshi::TTerrainShaderHAL::SetWindX(float)
+296,0x10fa0,0x10010fa0,?SetWindY@TTerrainShaderHAL@Toshi@@UAEXM@Z,public: virtual void __thiscall Toshi::TTerrainShaderHAL::SetWindY(float)
+297,0x150220,0x10150220,?TYPE1GHEIGHT@TGrassShaderHAL@Toshi@@2MB,public: static float const Toshi::TGrassShaderHAL::TYPE1GHEIGHT
+298,0x150224,0x10150224,?TYPE1GWIDTH@TGrassShaderHAL@Toshi@@2MB,public: static float const Toshi::TGrassShaderHAL::TYPE1GWIDTH
+299,0x150228,0x10150228,?TYPE1GWIDTHON2@TGrassShaderHAL@Toshi@@2MB,public: static float const Toshi::TGrassShaderHAL::TYPE1GWIDTHON2
+300,0x150218,0x10150218,?TYPE1PATCHSIZEX@TGrassShaderHAL@Toshi@@2MB,public: static float const Toshi::TGrassShaderHAL::TYPE1PATCHSIZEX
+301,0x15021c,0x1015021c,?TYPE1PATCHSIZEZ@TGrassShaderHAL@Toshi@@2MB,public: static float const Toshi::TGrassShaderHAL::TYPE1PATCHSIZEZ
+302,0x16640,0x10016640,?Unlock@TWaterMeshHAL@Toshi@@UAEXII@Z,"public: virtual void __thiscall Toshi::TWaterMeshHAL::Unlock(unsigned int,unsigned int)"
+303,0x12ba0,0x10012ba0,?Validate@TGrassShaderHAL@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TGrassShaderHAL::Validate(void)
+304,0x4830,0x10004830,?Validate@TTerrainShaderHAL@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TTerrainShaderHAL::Validate(void)
+305,0x169e0,0x100169e0,?Validate@TWaterShaderHAL@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TWaterShaderHAL::Validate(void)
+306,0x13cf0,0x10013cf0,?ValidateMeshType1@TGrassShaderHAL@Toshi@@IAEXXZ,protected: void __thiscall Toshi::TGrassShaderHAL::ValidateMeshType1(void)
+307,0x14ead8,0x1014ead8,?WATERSHADERDECL@TTerrainShaderHAL@Toshi@@2QBKB,public: static unsigned long const * const Toshi::TTerrainShaderHAL::WATERSHADERDECL
+308,0x14cfa0,0x1014cfa0,?m_sClass@TGrassMaterialHAL@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::TGrassMaterialHAL::m_sClass
+309,0x14cf60,0x1014cf60,?m_sClass@TGrassMeshHAL@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::TGrassMeshHAL::m_sClass
+310,0x14cf20,0x1014cf20,?m_sClass@TGrassShaderHAL@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::TGrassShaderHAL::m_sClass
+311,0x14da40,0x1014da40,?m_sClass@TTerrainMaterialHAL@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::TTerrainMaterialHAL::m_sClass
+312,0x14d0e0,0x1014d0e0,?m_sClass@TTerrainMeshHAL@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::TTerrainMeshHAL::m_sClass
+313,0x14d0a0,0x1014d0a0,?m_sClass@TTerrainShaderHAL@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::TTerrainShaderHAL::m_sClass
+314,0x14cde0,0x1014cde0,?m_sClass@TWaterMaterialHAL@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::TWaterMaterialHAL::m_sClass
+315,0x14ce20,0x1014ce20,?m_sClass@TWaterMeshHAL@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::TWaterMeshHAL::m_sClass
+316,0x14cda0,0x1014cda0,?m_sClass@TWaterShaderHAL@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::TWaterShaderHAL::m_sClass

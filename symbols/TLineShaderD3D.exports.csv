@@ -1,0 +1,69 @@
+ordinal,rva,va,name,demangled
+1,0x1330,0x10001330,??0TLineMaterial@Toshi@@IAE@XZ,protected: __thiscall Toshi::TLineMaterial::TLineMaterial(void)
+2,0x14d0,0x100014d0,??0TLineMaterial@Toshi@@QAE@ABV01@@Z,public: __thiscall Toshi::TLineMaterial::TLineMaterial(class Toshi::TLineMaterial const &)
+3,0x1bb0,0x10001bb0,??0TLineMaterialHAL@Toshi@@QAE@ABV01@@Z,public: __thiscall Toshi::TLineMaterialHAL::TLineMaterialHAL(class Toshi::TLineMaterialHAL const &)
+4,0x1bd0,0x10001bd0,??0TLineMaterialHAL@Toshi@@QAE@XZ,public: __thiscall Toshi::TLineMaterialHAL::TLineMaterialHAL(void)
+5,0x12b0,0x100012b0,??0TLineMesh@Toshi@@IAE@XZ,protected: __thiscall Toshi::TLineMesh::TLineMesh(void)
+6,0x1440,0x10001440,??0TLineMesh@Toshi@@QAE@ABV01@@Z,public: __thiscall Toshi::TLineMesh::TLineMesh(class Toshi::TLineMesh const &)
+7,0x1b30,0x10001b30,??0TLineMeshHAL@Toshi@@QAE@ABV01@@Z,public: __thiscall Toshi::TLineMeshHAL::TLineMeshHAL(class Toshi::TLineMeshHAL const &)
+8,0x1b70,0x10001b70,??0TLineMeshHAL@Toshi@@QAE@XZ,public: __thiscall Toshi::TLineMeshHAL::TLineMeshHAL(void)
+9,0x1c10,0x10001c10,??0TLineShaderHAL@Toshi@@QAE@ABV01@@Z,public: __thiscall Toshi::TLineShaderHAL::TLineShaderHAL(class Toshi::TLineShaderHAL const &)
+10,0x1a80,0x10001a80,??0TLineShaderHAL@Toshi@@QAE@XZ,public: __thiscall Toshi::TLineShaderHAL::TLineShaderHAL(void)
+11,0x1350,0x10001350,??1TLineMaterial@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TLineMaterial::~TLineMaterial(void)
+12,0x1ba0,0x10001ba0,??1TLineMaterialHAL@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TLineMaterialHAL::~TLineMaterialHAL(void)
+13,0x12d0,0x100012d0,??1TLineMesh@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TLineMesh::~TLineMesh(void)
+14,0x1b20,0x10001b20,??1TLineMeshHAL@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TLineMeshHAL::~TLineMeshHAL(void)
+15,0x1c00,0x10001c00,??1TLineShaderHAL@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TLineShaderHAL::~TLineShaderHAL(void)
+16,0x5060,0x10005060,??_7TLineMaterial@Toshi@@6B@,const Toshi::TLineMaterial::`vftable'
+17,0x51a0,0x100051a0,??_7TLineMaterialHAL@Toshi@@6B@,const Toshi::TLineMaterialHAL::`vftable'
+18,0x50a0,0x100050a0,??_7TLineMesh@Toshi@@6B@,const Toshi::TLineMesh::`vftable'
+19,0x51e0,0x100051e0,??_7TLineMeshHAL@Toshi@@6B@,const Toshi::TLineMeshHAL::`vftable'
+20,0x5160,0x10005160,??_7TLineShaderHAL@Toshi@@6B@,const Toshi::TLineShaderHAL::`vftable'
+21,0x1a70,0x10001a70,?Create@TLineShaderHAL@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TLineShaderHAL::Create(void)
+22,0x1a50,0x10001a50,?CreateMaterial@TLineShaderHAL@Toshi@@UAEPAVTLineMaterial@2@PBD@Z,public: virtual class Toshi::TLineMaterial * __thiscall Toshi::TLineShaderHAL::CreateMaterial(char const *)
+23,0x1a40,0x10001a40,?CreateMesh@TLineShaderHAL@Toshi@@UAEPAVTLineMesh@2@PBD@Z,public: virtual class Toshi::TLineMesh * __thiscall Toshi::TLineShaderHAL::CreateMesh(char const *)
+24,0x1390,0x10001390,?CreateObject@TLineMaterial@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::TLineMaterial::CreateObject(void)
+25,0x1a00,0x10001a00,?CreateObject@TLineMaterialHAL@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::TLineMaterialHAL::CreateObject(void)
+26,0x1310,0x10001310,?CreateObject@TLineMesh@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::TLineMesh::CreateObject(void)
+27,0x1980,0x10001980,?CreateObject@TLineMeshHAL@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::TLineMeshHAL::CreateObject(void)
+28,0x1ae0,0x10001ae0,?CreateObject@TLineShaderHAL@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::TLineShaderHAL::CreateObject(void)
+29,0x1380,0x10001380,?CreateObjectInPlace@TLineMaterial@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::TLineMaterial::CreateObjectInPlace(void *)
+30,0x19e0,0x100019e0,?CreateObjectInPlace@TLineMaterialHAL@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::TLineMaterialHAL::CreateObjectInPlace(void *)
+31,0x1300,0x10001300,?CreateObjectInPlace@TLineMesh@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::TLineMesh::CreateObjectInPlace(void *)
+32,0x1960,0x10001960,?CreateObjectInPlace@TLineMeshHAL@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::TLineMeshHAL::CreateObjectInPlace(void *)
+33,0x1ac0,0x10001ac0,?CreateObjectInPlace@TLineShaderHAL@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::TLineShaderHAL::CreateObjectInPlace(void *)
+34,0x1360,0x10001360,?DeinitialiseStatic@TLineMaterial@Toshi@@CGXXZ,private: static void __stdcall Toshi::TLineMaterial::DeinitialiseStatic(void)
+35,0x19c0,0x100019c0,?DeinitialiseStatic@TLineMaterialHAL@Toshi@@CGXXZ,private: static void __stdcall Toshi::TLineMaterialHAL::DeinitialiseStatic(void)
+36,0x12e0,0x100012e0,?DeinitialiseStatic@TLineMesh@Toshi@@CGXXZ,private: static void __stdcall Toshi::TLineMesh::DeinitialiseStatic(void)
+37,0x1940,0x10001940,?DeinitialiseStatic@TLineMeshHAL@Toshi@@CGXXZ,private: static void __stdcall Toshi::TLineMeshHAL::DeinitialiseStatic(void)
+38,0x1aa0,0x10001aa0,?DeinitialiseStatic@TLineShaderHAL@Toshi@@CGXXZ,private: static void __stdcall Toshi::TLineShaderHAL::DeinitialiseStatic(void)
+39,0x13a0,0x100013a0,?GetClass@TLineMaterial@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::TLineMaterial::GetClass(void)const 
+40,0x1a30,0x10001a30,?GetClass@TLineMaterialHAL@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::TLineMaterialHAL::GetClass(void)const 
+41,0x1320,0x10001320,?GetClass@TLineMesh@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::TLineMesh::GetClass(void)const 
+42,0x19b0,0x100019b0,?GetClass@TLineMeshHAL@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::TLineMeshHAL::GetClass(void)const 
+43,0x1b10,0x10001b10,?GetClass@TLineShaderHAL@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::TLineShaderHAL::GetClass(void)const 
+44,0x14c0,0x100014c0,?GetMaterial@TLineMesh@Toshi@@QAEPAVTLineMaterial@2@XZ,public: class Toshi::TLineMaterial * __thiscall Toshi::TLineMesh::GetMaterial(void)
+45,0x1b90,0x10001b90,?GetMaterial@TLineMeshHAL@Toshi@@QAEPAVTLineMaterialHAL@2@XZ,public: class Toshi::TLineMaterialHAL * __thiscall Toshi::TLineMeshHAL::GetMaterial(void)
+46,0x1c60,0x10001c60,?GetRenderer@TLineShaderHAL@Toshi@@QBEPAVTRenderD3DInterface@2@XZ,public: class Toshi::TRenderD3DInterface * __thiscall Toshi::TLineShaderHAL::GetRenderer(void)const 
+47,0x1500,0x10001500,?GetShader@TLineMaterial@Toshi@@QAEPAVTLineShader@2@XZ,public: class Toshi::TLineShader * __thiscall Toshi::TLineMaterial::GetShader(void)
+48,0x1bf0,0x10001bf0,?GetShader@TLineMaterialHAL@Toshi@@QAEPAVTLineShaderHAL@2@XZ,public: class Toshi::TLineShaderHAL * __thiscall Toshi::TLineMaterialHAL::GetShader(void)
+49,0x14a0,0x100014a0,?GetShader@TLineMesh@Toshi@@QAEPAVTLineShader@2@XZ,public: class Toshi::TLineShader * __thiscall Toshi::TLineMesh::GetShader(void)
+50,0x1370,0x10001370,?InitialiseStatic@TLineMaterial@Toshi@@CGXXZ,private: static void __stdcall Toshi::TLineMaterial::InitialiseStatic(void)
+51,0x19d0,0x100019d0,?InitialiseStatic@TLineMaterialHAL@Toshi@@CGXXZ,private: static void __stdcall Toshi::TLineMaterialHAL::InitialiseStatic(void)
+52,0x12f0,0x100012f0,?InitialiseStatic@TLineMesh@Toshi@@CGXXZ,private: static void __stdcall Toshi::TLineMesh::InitialiseStatic(void)
+53,0x1950,0x10001950,?InitialiseStatic@TLineMeshHAL@Toshi@@CGXXZ,private: static void __stdcall Toshi::TLineMeshHAL::InitialiseStatic(void)
+54,0x1ab0,0x10001ab0,?InitialiseStatic@TLineShaderHAL@Toshi@@CGXXZ,private: static void __stdcall Toshi::TLineShaderHAL::InitialiseStatic(void)
+55,0x1c40,0x10001c40,?Invalidate@TLineShaderHAL@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TLineShaderHAL::Invalidate(void)
+56,0x1a60,0x10001a60,?OnDestroy@TLineShaderHAL@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TLineShaderHAL::OnDestroy(void)
+57,0x1480,0x10001480,?Render@TLineMesh@Toshi@@MAE_NXZ,protected: virtual bool __thiscall Toshi::TLineMesh::Render(void)
+58,0x1c30,0x10001c30,?Render@TLineShaderHAL@Toshi@@UAEXPAVTRenderPacket@2@@Z,public: virtual void __thiscall Toshi::TLineShaderHAL::Render(class Toshi::TRenderPacket *)
+59,0x17c0,0x100017c0,?RenderLine@TLineShaderHAL@Toshi@@UAEXAAVTVector3@2@0II@Z,"public: virtual void __thiscall Toshi::TLineShaderHAL::RenderLine(class Toshi::TVector3 &,class Toshi::TVector3 &,unsigned int,unsigned int)"
+60,0x14b0,0x100014b0,?SetMaterial@TLineMesh@Toshi@@QAEXPAVTLineMaterial@2@@Z,public: void __thiscall Toshi::TLineMesh::SetMaterial(class Toshi::TLineMaterial *)
+61,0x14f0,0x100014f0,?SetShader@TLineMaterial@Toshi@@QAEXPAVTLineShader@2@@Z,public: void __thiscall Toshi::TLineMaterial::SetShader(class Toshi::TLineShader *)
+62,0x1490,0x10001490,?SetShader@TLineMesh@Toshi@@QAEXPAVTLineShader@2@@Z,public: void __thiscall Toshi::TLineMesh::SetShader(class Toshi::TLineShader *)
+63,0x1c50,0x10001c50,?Validate@TLineShaderHAL@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TLineShaderHAL::Validate(void)
+64,0x4240,0x10004240,?m_sClass@TLineMaterial@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::TLineMaterial::m_sClass
+65,0x4180,0x10004180,?m_sClass@TLineMaterialHAL@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::TLineMaterialHAL::m_sClass
+66,0x4280,0x10004280,?m_sClass@TLineMesh@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::TLineMesh::m_sClass
+67,0x41c0,0x100041c0,?m_sClass@TLineMeshHAL@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::TLineMeshHAL::m_sClass
+68,0x4140,0x10004140,?m_sClass@TLineShaderHAL@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::TLineShaderHAL::m_sClass

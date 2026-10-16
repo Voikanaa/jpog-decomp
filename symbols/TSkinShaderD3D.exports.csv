@@ -1,0 +1,89 @@
+ordinal,rva,va,name,demangled
+1,0x5e70,0x10005e70,??0TSkinMaterialHAL@Toshi@@QAE@ABV01@@Z,public: __thiscall Toshi::TSkinMaterialHAL::TSkinMaterialHAL(class Toshi::TSkinMaterialHAL const &)
+2,0x59e0,0x100059e0,??0TSkinMaterialHAL@Toshi@@QAE@XZ,public: __thiscall Toshi::TSkinMaterialHAL::TSkinMaterialHAL(void)
+3,0x5de0,0x10005de0,??0TSkinMeshHAL@Toshi@@QAE@ABV01@@Z,public: __thiscall Toshi::TSkinMeshHAL::TSkinMeshHAL(class Toshi::TSkinMeshHAL const &)
+4,0x5940,0x10005940,??0TSkinMeshHAL@Toshi@@QAE@XZ,public: __thiscall Toshi::TSkinMeshHAL::TSkinMeshHAL(void)
+5,0x1ad0,0x10001ad0,??0TSkinShaderHAL@Toshi@@QAE@XZ,public: __thiscall Toshi::TSkinShaderHAL::TSkinShaderHAL(void)
+6,0x51a0,0x100051a0,??1TSkinMaterialHAL@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TSkinMaterialHAL::~TSkinMaterialHAL(void)
+7,0x5930,0x10005930,??1TSkinMeshHAL@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TSkinMeshHAL::~TSkinMeshHAL(void)
+8,0x5cc0,0x10005cc0,??1TSkinShaderHAL@Toshi@@UAE@XZ,public: virtual __thiscall Toshi::TSkinShaderHAL::~TSkinShaderHAL(void)
+9,0xf440,0x1000f440,??_7TSkinMaterialHAL@Toshi@@6B@,const Toshi::TSkinMaterialHAL::`vftable'
+10,0xf480,0x1000f480,??_7TSkinMeshHAL@Toshi@@6B@,const Toshi::TSkinMeshHAL::`vftable'
+11,0xf380,0x1000f380,??_7TSkinShaderHAL@Toshi@@6B@,const Toshi::TSkinShaderHAL::`vftable'
+12,0x4ed0,0x10004ed0,?CheckForSSE2@TSkinShaderHAL@Toshi@@AAEXXZ,private: void __thiscall Toshi::TSkinShaderHAL::CheckForSSE2(void)
+13,0x4d90,0x10004d90,?CheckForSSE@TSkinShaderHAL@Toshi@@AAEXXZ,private: void __thiscall Toshi::TSkinShaderHAL::CheckForSSE(void)
+14,0x5cb0,0x10005cb0,?Create@TSkinShaderHAL@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TSkinShaderHAL::Create(void)
+15,0x24b0,0x100024b0,?CreateMaterial@TSkinShaderHAL@Toshi@@UAEPAVTSkinMaterial@2@PBD@Z,public: virtual class Toshi::TSkinMaterial * __thiscall Toshi::TSkinShaderHAL::CreateMaterial(char const *)
+16,0x2530,0x10002530,?CreateMesh@TSkinShaderHAL@Toshi@@UAEPAVTSkinMesh@2@PBD@Z,public: virtual class Toshi::TSkinMesh * __thiscall Toshi::TSkinShaderHAL::CreateMesh(char const *)
+17,0x5a40,0x10005a40,?CreateObject@TSkinMaterialHAL@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::TSkinMaterialHAL::CreateObject(void)
+18,0x59a0,0x100059a0,?CreateObject@TSkinMeshHAL@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::TSkinMeshHAL::CreateObject(void)
+19,0x5d60,0x10005d60,?CreateObject@TSkinShaderHAL@Toshi@@CGPAVTObject@2@XZ,private: static class Toshi::TObject * __stdcall Toshi::TSkinShaderHAL::CreateObject(void)
+20,0x5a20,0x10005a20,?CreateObjectInPlace@TSkinMaterialHAL@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::TSkinMaterialHAL::CreateObjectInPlace(void *)
+21,0x5980,0x10005980,?CreateObjectInPlace@TSkinMeshHAL@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::TSkinMeshHAL::CreateObjectInPlace(void *)
+22,0x5d40,0x10005d40,?CreateObjectInPlace@TSkinShaderHAL@Toshi@@CGPAVTObject@2@PAX@Z,private: static class Toshi::TObject * __stdcall Toshi::TSkinShaderHAL::CreateObjectInPlace(void *)
+23,0x5a00,0x10005a00,?DeinitialiseStatic@TSkinMaterialHAL@Toshi@@CGXXZ,private: static void __stdcall Toshi::TSkinMaterialHAL::DeinitialiseStatic(void)
+24,0x5960,0x10005960,?DeinitialiseStatic@TSkinMeshHAL@Toshi@@CGXXZ,private: static void __stdcall Toshi::TSkinMeshHAL::DeinitialiseStatic(void)
+25,0x5d20,0x10005d20,?DeinitialiseStatic@TSkinShaderHAL@Toshi@@CGXXZ,private: static void __stdcall Toshi::TSkinShaderHAL::DeinitialiseStatic(void)
+26,0x20c0,0x100020c0,?EnableHighEndSkinning@TSkinShaderHAL@Toshi@@UAEX_N@Z,public: virtual void __thiscall Toshi::TSkinShaderHAL::EnableHighEndSkinning(bool)
+27,0x5af0,0x10005af0,?EnableRenderEnvMap@TSkinShaderHAL@Toshi@@UAEX_N@Z,public: virtual void __thiscall Toshi::TSkinShaderHAL::EnableRenderEnvMap(bool)
+28,0x1b60,0x10001b60,?Flush@TSkinShaderHAL@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TSkinShaderHAL::Flush(void)
+29,0x5ba0,0x10005ba0,?GetBetaMieMult@TSkinShaderHAL@Toshi@@UAEMXZ,public: virtual float __thiscall Toshi::TSkinShaderHAL::GetBetaMieMult(void)
+30,0x5bb0,0x10005bb0,?GetBetaRayMult@TSkinShaderHAL@Toshi@@UAEMXZ,public: virtual float __thiscall Toshi::TSkinShaderHAL::GetBetaRayMult(void)
+31,0x4d40,0x10004d40,?GetBlendMinMax@TSkinShaderHAL@Toshi@@AAEXXZ,private: void __thiscall Toshi::TSkinShaderHAL::GetBlendMinMax(void)
+32,0x5a70,0x10005a70,?GetClass@TSkinMaterialHAL@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::TSkinMaterialHAL::GetClass(void)const 
+33,0x59d0,0x100059d0,?GetClass@TSkinMeshHAL@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::TSkinMeshHAL::GetClass(void)const 
+34,0x5d90,0x10005d90,?GetClass@TSkinShaderHAL@Toshi@@UBEAAVTClass@2@XZ,public: virtual class Toshi::TClass & __thiscall Toshi::TSkinShaderHAL::GetClass(void)const 
+35,0x5b80,0x10005b80,?GetHG@TSkinShaderHAL@Toshi@@UAEMXZ,public: virtual float __thiscall Toshi::TSkinShaderHAL::GetHG(void)
+36,0x5b90,0x10005b90,?GetInscatteringMult@TSkinShaderHAL@Toshi@@UAEMXZ,public: virtual float __thiscall Toshi::TSkinShaderHAL::GetInscatteringMult(void)
+37,0x5e50,0x10005e50,?GetMaterial@TSkinMeshHAL@Toshi@@QAEPAVTSkinMaterialHAL@2@XZ,public: class Toshi::TSkinMaterialHAL * __thiscall Toshi::TSkinMeshHAL::GetMaterial(void)
+38,0x5f30,0x10005f30,?GetOrderTable@TSkinShaderHAL@Toshi@@QAEPAVTOrderTable@2@XZ,public: class Toshi::TOrderTable * __thiscall Toshi::TSkinShaderHAL::GetOrderTable(void)
+39,0x5f00,0x10005f00,?GetPixelShaderHandle@TSkinShaderHAL@Toshi@@QAEKXZ,public: unsigned long __thiscall Toshi::TSkinShaderHAL::GetPixelShaderHandle(void)
+40,0x5b70,0x10005b70,?GetReflectance@TSkinShaderHAL@Toshi@@UAEMXZ,public: virtual float __thiscall Toshi::TSkinShaderHAL::GetReflectance(void)
+41,0x5ed0,0x10005ed0,?GetRenderer@TSkinMaterialHAL@Toshi@@QBEPAVTRenderD3DInterface@2@XZ,public: class Toshi::TRenderD3DInterface * __thiscall Toshi::TSkinMaterialHAL::GetRenderer(void)const 
+42,0x5f60,0x10005f60,?GetRenderer@TSkinShaderHAL@Toshi@@QBEPAVTRenderD3DInterface@2@XZ,public: class Toshi::TRenderD3DInterface * __thiscall Toshi::TSkinShaderHAL::GetRenderer(void)const 
+43,0x5ec0,0x10005ec0,?GetShader@TSkinMaterialHAL@Toshi@@QAEPAVTSkinShaderHAL@2@XZ,public: class Toshi::TSkinShaderHAL * __thiscall Toshi::TSkinMaterialHAL::GetShader(void)
+44,0x5e60,0x10005e60,?GetShader@TSkinMeshHAL@Toshi@@QAEPAVTSkinShaderHAL@2@XZ,public: class Toshi::TSkinShaderHAL * __thiscall Toshi::TSkinMeshHAL::GetShader(void)
+45,0x5bc0,0x10005bc0,?GetSunIntensity@TSkinShaderHAL@Toshi@@UAEMXZ,public: virtual float __thiscall Toshi::TSkinShaderHAL::GetSunIntensity(void)
+46,0x5bd0,0x10005bd0,?GetSunTheta@TSkinShaderHAL@Toshi@@UAEMXZ,public: virtual float __thiscall Toshi::TSkinShaderHAL::GetSunTheta(void)
+47,0x5a80,0x10005a80,?GetVertexShaderHandle@TSkinShaderHAL@Toshi@@QAEKXZ,public: unsigned long __thiscall Toshi::TSkinShaderHAL::GetVertexShaderHandle(void)
+48,0x5360,0x10005360,?InitAlphaMaterial@TSkinMaterialHAL@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TSkinMaterialHAL::InitAlphaMaterial(void)
+49,0x5a10,0x10005a10,?InitialiseStatic@TSkinMaterialHAL@Toshi@@CGXXZ,private: static void __stdcall Toshi::TSkinMaterialHAL::InitialiseStatic(void)
+50,0x5970,0x10005970,?InitialiseStatic@TSkinMeshHAL@Toshi@@CGXXZ,private: static void __stdcall Toshi::TSkinMeshHAL::InitialiseStatic(void)
+51,0x5d30,0x10005d30,?InitialiseStatic@TSkinShaderHAL@Toshi@@CGXXZ,private: static void __stdcall Toshi::TSkinShaderHAL::InitialiseStatic(void)
+52,0x23b0,0x100023b0,?Invalidate@TSkinShaderHAL@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TSkinShaderHAL::Invalidate(void)
+53,0x5f40,0x10005f40,?IsAlphaBlendMaterial@TSkinShaderHAL@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TSkinShaderHAL::IsAlphaBlendMaterial(void)
+54,0x2120,0x10002120,?IsCapableHighEndSkinning@TSkinShaderHAL@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TSkinShaderHAL::IsCapableHighEndSkinning(void)
+55,0x2190,0x10002190,?IsCapableScattering@TSkinShaderHAL@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TSkinShaderHAL::IsCapableScattering(void)
+56,0x5f20,0x10005f20,?IsEnableRenderEnvMap@TSkinShaderHAL@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TSkinShaderHAL::IsEnableRenderEnvMap(void)
+57,0x5b60,0x10005b60,?IsHighEndSkinning@TSkinShaderHAL@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TSkinShaderHAL::IsHighEndSkinning(void)
+58,0x5f50,0x10005f50,?IsLightScattering@TSkinShaderHAL@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TSkinShaderHAL::IsLightScattering(void)
+59,0x5b00,0x10005b00,?OnDestroy@TSkinShaderHAL@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TSkinShaderHAL::OnDestroy(void)
+60,0x5aa0,0x10005aa0,?OnLostDevice@TSkinShaderHAL@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TSkinShaderHAL::OnLostDevice(void)
+61,0x5a90,0x10005a90,?OnResetDevice@TSkinShaderHAL@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TSkinShaderHAL::OnResetDevice(void)
+62,0x52d0,0x100052d0,?PostRender@TSkinMaterialHAL@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TSkinMaterialHAL::PostRender(void)
+63,0x51d0,0x100051d0,?PreRender@TSkinMaterialHAL@Toshi@@UAEXXZ,public: virtual void __thiscall Toshi::TSkinMaterialHAL::PreRender(void)
+64,0x5ee0,0x10005ee0,?QuickExp@TSkinShaderHAL@Toshi@@IAEMM@Z,protected: float __thiscall Toshi::TSkinShaderHAL::QuickExp(float)
+65,0x53b0,0x100053b0,?Render@TSkinMeshHAL@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TSkinMeshHAL::Render(void)
+66,0x2570,0x10002570,?Render@TSkinShaderHAL@Toshi@@UAEXPAVTRenderPacket@2@@Z,public: virtual void __thiscall Toshi::TSkinShaderHAL::Render(class Toshi::TRenderPacket *)
+67,0xf358,0x1000f358,?SHADERDECL@TSkinShaderHAL@Toshi@@2QBKB,public: static unsigned long const * const Toshi::TSkinShaderHAL::SHADERDECL
+68,0x5080,0x10005080,?SSERotateVector@TSkinShaderHAL@Toshi@@AAEXAAVTVector3@2@ABVTMatrix44@2@ABV32@@Z,"private: void __thiscall Toshi::TSkinShaderHAL::SSERotateVector(class Toshi::TVector3 &,class Toshi::TMatrix44 const &,class Toshi::TVector3 const &)"
+69,0x50f0,0x100050f0,?SSETransformAndRotateVector@TSkinShaderHAL@Toshi@@AAGXAAVTVector3@2@0ABVTMatrix44@2@ABV32@2@Z,"private: void __stdcall Toshi::TSkinShaderHAL::SSETransformAndRotateVector(class Toshi::TVector3 &,class Toshi::TVector3 &,class Toshi::TMatrix44 const &,class Toshi::TVector3 const &,class Toshi::TVector3 const &)"
+70,0x5010,0x10005010,?SSETransformVector@TSkinShaderHAL@Toshi@@AAEXAAVTVector3@2@ABVTMatrix44@2@ABV32@@Z,"private: void __thiscall Toshi::TSkinShaderHAL::SSETransformVector(class Toshi::TVector3 &,class Toshi::TMatrix44 const &,class Toshi::TVector3 const &)"
+71,0x5b10,0x10005b10,?SetAlphaBlendMaterial@TSkinShaderHAL@Toshi@@UAEX_N@Z,public: virtual void __thiscall Toshi::TSkinShaderHAL::SetAlphaBlendMaterial(bool)
+72,0x5c30,0x10005c30,?SetBetaMieMult@TSkinShaderHAL@Toshi@@UAEXM@Z,public: virtual void __thiscall Toshi::TSkinShaderHAL::SetBetaMieMult(float)
+73,0x5c50,0x10005c50,?SetBetaRayMult@TSkinShaderHAL@Toshi@@UAEXM@Z,public: virtual void __thiscall Toshi::TSkinShaderHAL::SetBetaRayMult(float)
+74,0x5f10,0x10005f10,?SetCurAlphaRef@TSkinShaderHAL@Toshi@@QAEXK@Z,public: void __thiscall Toshi::TSkinShaderHAL::SetCurAlphaRef(unsigned long)
+75,0x5bf0,0x10005bf0,?SetHG@TSkinShaderHAL@Toshi@@UAEXM@Z,public: virtual void __thiscall Toshi::TSkinShaderHAL::SetHG(float)
+76,0x5c10,0x10005c10,?SetInscatteringMult@TSkinShaderHAL@Toshi@@UAEXM@Z,public: virtual void __thiscall Toshi::TSkinShaderHAL::SetInscatteringMult(float)
+77,0x5b20,0x10005b20,?SetLightScattering@TSkinShaderHAL@Toshi@@UAEX_N@Z,public: virtual void __thiscall Toshi::TSkinShaderHAL::SetLightScattering(bool)
+78,0x5be0,0x10005be0,?SetReflectance@TSkinShaderHAL@Toshi@@UAEXM@Z,public: virtual void __thiscall Toshi::TSkinShaderHAL::SetReflectance(float)
+79,0x5c70,0x10005c70,?SetSunIntensity@TSkinShaderHAL@Toshi@@UAEXM@Z,public: virtual void __thiscall Toshi::TSkinShaderHAL::SetSunIntensity(float)
+80,0x5c90,0x10005c90,?SetSunTheta@TSkinShaderHAL@Toshi@@UAEXM@Z,public: virtual void __thiscall Toshi::TSkinShaderHAL::SetSunTheta(float)
+81,0x48d0,0x100048d0,?SetTerrainScatteringConstantsSkin@TSkinShaderHAL@Toshi@@AAEXPAUIDirect3DDevice8@@AAVTVector3@2@1@Z,"private: void __thiscall Toshi::TSkinShaderHAL::SetTerrainScatteringConstantsSkin(struct IDirect3DDevice8 *,class Toshi::TVector3 &,class Toshi::TVector3 &)"
+82,0x4840,0x10004840,?SetTextureAlphas@TSkinShaderHAL@Toshi@@UAEIEEEE@Z,"public: virtual unsigned int __thiscall Toshi::TSkinShaderHAL::SetTextureAlphas(unsigned char,unsigned char,unsigned char,unsigned char)"
+83,0x5ab0,0x10005ab0,?SetTextureAlphasDirect@TSkinShaderHAL@Toshi@@UAEXI@Z,public: virtual void __thiscall Toshi::TSkinShaderHAL::SetTextureAlphasDirect(unsigned int)
+84,0x5ac0,0x10005ac0,?SetTextureStages@TSkinShaderHAL@Toshi@@UAEIHHHH@Z,"public: virtual unsigned int __thiscall Toshi::TSkinShaderHAL::SetTextureStages(int,int,int,int)"
+85,0x2200,0x10002200,?Validate@TSkinShaderHAL@Toshi@@UAE_NXZ,public: virtual bool __thiscall Toshi::TSkinShaderHAL::Validate(void)
+86,0xe1c0,0x1000e1c0,?m_sClass@TSkinMaterialHAL@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::TSkinMaterialHAL::m_sClass
+87,0xe180,0x1000e180,?m_sClass@TSkinMeshHAL@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::TSkinMeshHAL::m_sClass
+88,0xe140,0x1000e140,?m_sClass@TSkinShaderHAL@Toshi@@2VTClass@2@A,public: static class Toshi::TClass Toshi::TSkinShaderHAL::m_sClass
