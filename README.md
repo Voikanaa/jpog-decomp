@@ -8,7 +8,7 @@
 
 <p>
 <a href="https://github.com/Voikanaa/jpog-decomp/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/Voikanaa/jpog-decomp/actions/workflows/ci.yml/badge.svg"></a>
-<a href="docs/progress.md"><!-- coverage-badge:begin --><img alt="Reimplemented" src="https://img.shields.io/badge/reimplemented-0.3%25-red?style=flat-square"><!-- coverage-badge:end --></a>
+<a href="docs/progress.md"><!-- coverage-badge:begin --><img alt="Reimplemented" src="https://img.shields.io/badge/reimplemented-0.9%25-red?style=flat-square"><!-- coverage-badge:end --></a>
 <a href="LICENSE"><img alt="License: GPL-3.0-or-later" src="https://img.shields.io/badge/license-GPL--3.0--or--later-blue?style=flat-square"></a>
 <img alt="Status: early development" src="https://img.shields.io/badge/status-early%20development-orange?style=flat-square">
 <br>
@@ -64,7 +64,7 @@ flowchart LR
 | Foundations | Symbols, build system, CI, analysis tooling | ✅ |
 | Runnable original | Retail exe for in-game A/B testing (needs the physical disc) | ⛔ |
 | **M1** | Game boots with the hook DLL (deferred: needs a runnable original) | ⏸️ |
-| **M2** | Toshi kernel fully reimplemented (`TMath` done) | 🚧 |
+| **M2** | Toshi kernel fully reimplemented (`TMath`, `TVector2`, `TVector3` done) | 🚧 |
 | **M3** | A mission loads through our renderer and resource code | ⏳ |
 | **M4** | Full game playable on hooks | ⏳ |
 | **M5** | Native x64 build reaches the main menu | ⏳ |

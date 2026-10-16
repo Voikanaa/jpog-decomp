@@ -8,7 +8,7 @@ an x86 build); do not edit it by hand.
 <!-- coverage:begin -->
 | Module | Functions | Reimplemented | Coverage |
 |---|---:|---:|---:|
-| TKernelInterface | 1627 | 55 | 3.4% |
+| TKernelInterface | 1627 | 174 | 10.7% |
 | TApplication | 16 | 0 | 0.0% |
 | TInputInterface | 93 | 0 | 0.0% |
 | TInputDXInterface | 96 | 0 | 0.0% |
@@ -27,7 +27,7 @@ an x86 build); do not edit it by hand.
 | TSysShaderD3D | 52 | 0 | 0.0% |
 | TTerrainShaderD3D | 288 | 0 | 0.0% |
 | SimJP | 13680 | 0 | 0.0% |
-| **Total** | **20452** | **55** | **0.3%** |
+| **Total** | **20452** | **174** | **0.9%** |
 <!-- coverage:end -->
 
 ## Verification
@@ -36,6 +36,9 @@ original export on the same inputs. Float results must match bit for bit unless 
 justifies a tolerance.
 
 ## Log
+- 2026-10-17: `TVector2` and `TVector3` reimplemented (all 119 exported functions plus the static
+  constants). About 250,000 differential assertions match the original bit for bit. The diagonal
+  constants (`VEC_POSXPOSZ`, ...) turned out to be unit length.
 - 2026-10-17: Phase 0 complete (symbols, build skeleton, repo, CI).
 - 2026-10-17: `Toshi::TMath` scalar functions reimplemented and verified bit for bit against
   the original `TKernelInterface.dll` at gameplay precision. Finding: D3D8 is created without
