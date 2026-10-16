@@ -15,14 +15,14 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        preset: [x86-hook-debug, x64-debug]
+        preset: [x86-debug, x64-debug]
     steps:
       - uses: actions/checkout@v7
       - name: Configure and build
         shell: cmd
         run: tools\build.bat ${{ matrix.preset }}
       - name: Coverage table is up to date
-        if: matrix.preset == 'x86-hook-debug'
+        if: matrix.preset == 'x86-debug'
         run: python tools/coverage.py --check
 
   checks:

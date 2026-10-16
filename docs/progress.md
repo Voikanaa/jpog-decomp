@@ -36,6 +36,9 @@ original export on the same inputs. Float results must match bit for bit unless 
 justifies a tolerance.
 
 ## Log
+- 2026-10-17: **Launch 1.** Our `jpog.exe` (WinMain + `AApplication`) links against the original
+  engine DLLs via generated import libraries and opens the game's Direct3D 8 window. Exiting
+  still crashes in the renderer teardown (tracked in an issue).
 - 2026-10-17: `TVector2` and `TVector3` reimplemented (all 119 exported functions plus the static
   constants). About 250,000 differential assertions match the original bit for bit. The diagonal
   constants (`VEC_POSXPOSZ`, ...) turned out to be unit length.

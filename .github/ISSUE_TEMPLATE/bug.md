@@ -11,4 +11,4 @@ labels: ["bug"]
 **Steps to reproduce**
 
 **Build / preset**
-<!-- x86-hook-debug, x64-debug, ... -->
+<!-- x86-debug, x64-debug, ... -->

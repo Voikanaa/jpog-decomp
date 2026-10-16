@@ -18,3 +18,13 @@ AllowShortIfStatementsOnASingleLine: Never
 AllowShortLoopsOnASingleLine: false
 NamespaceIndentation: None
 FixNamespaceComments: true
+# Keep <windows.h> first among system headers: other Win32 headers (dbghelp.h, ...) depend on it.
+IncludeCategories:
+  - Regex: '^"'
+    Priority: 1
+  - Regex: '^<windows\.h>$'
+    Priority: 2
+    SortPriority: 2
+  - Regex: '^<'
+    Priority: 2
+    SortPriority: 3
