@@ -1,46 +1,133 @@
+<div align="center">
+
+<img src="docs/jpog_logo.png" alt="Jurassic Park: Operation Genesis" width="420">
+
 # jpog-decomp
 
-Reverse engineering of *Jurassic Park: Operation Genesis* (2003, Blue Tongue Software). The goal
-is a **native Windows x86-64** reimplementation that runs the original game data.
+**A clean-room reimplementation of *Jurassic Park: Operation Genesis* (2003) as a native Windows x64 game**
 
-- **Clean room:** all code comes from our own analysis of the shipped binaries and data. No
-  community decompilation sources are used.
-- **No game files in this repo.** Bring your own copy: put the installed game in `JPOG/` (read-only
-  reference) and a working copy in `game/`. Both are gitignored.
+![Platform](https://img.shields.io/badge/platform-Windows%20x64-0078D6?style=flat-square&logo=windows&logoColor=white)
+![Language](https://img.shields.io/badge/C%2B%2B-20-00599C?style=flat-square&logo=cplusplus&logoColor=white)
+![Build](https://img.shields.io/badge/build-CMake%20%2B%20Ninja-064F8C?style=flat-square&logo=cmake&logoColor=white)
+![Renderer](https://img.shields.io/badge/renderer-Direct3D%2011-5C2D91?style=flat-square)
+![Analysis](https://img.shields.io/badge/analysis-Ghidra-C21325?style=flat-square)
+![Status](https://img.shields.io/badge/status-early%20development-orange?style=flat-square)
 
-## Approach
-Hook-based incremental reimplementation. Portable C++ replaces functions of the original 32-bit
-game one at a time, built as an x86 hook DLL, so every piece is verified in the real game. Once
-coverage is complete, the same source builds as a standalone x64 exe:
-Direct3D 11, Raw Input, miniaudio, and FFmpeg for Bink video.
+[Roadmap](docs/plan.md) · [Binary map](docs/modules.md) · [Progress](docs/progress.md) · [Contributing](CONTRIBUTING.md)
 
-## Setup
-- Visual Studio Build Tools 2026 (MSVC x86 + x64, bundled CMake/Ninja, Windows SDK)
-- Python 3
-- Ghidra 12.1.4 in `toolchain/ghidra/` (gitignored), plus a JDK 21+
-- Optional: the REA MCP server for Ghidra-backed analysis from Claude Code. Run
-  `python tools/setup_mcp.py` to generate the machine-specific `.mcp.json` from `.mcp.json.example`.
+</div>
 
-## Build
+---
+
+## About
+
+*Jurassic Park: Operation Genesis* was built by Blue Tongue Software on their in-house **Toshi**
+engine. It shipped as a 32-bit executable with Direct3D 8, FMOD 3, Bink video and SecuROM copy
+protection, all of which are increasingly hard to run on modern systems.
+
+This project rebuilds the game and engine from scratch in modern, portable C++. The goal is a
+**native 64-bit Windows build** that plays the original game data unchanged.
+
+- **Clean room:** every line comes from our own analysis of the shipped binaries and data.
+- **Verified piece by piece:** each function is checked against the original game while it runs.
+- **Bring your own game:** the repository contains no game code, assets or binaries.
+
+## How it works
+
+```mermaid
+flowchart LR
+    A["Original game<br/>32-bit SimJP.exe + Toshi DLLs"] -->|Ghidra analysis| B["Clean-room C++<br/>src/"]
+    B -->|x86 build| C["Hook DLL<br/>replaces original functions<br/>one at a time"]
+    C -->|A/B test in the real game| A
+    B -->|"x64 build (100% coverage)"| D["Native x64 game<br/>D3D11 · miniaudio · FFmpeg"]
 ```
-tools\build.bat x86-hook-debug   # 32-bit hook DLL -> build/x86-hook-debug/
-tools\build.bat x64-debug        # standalone x64 build (later)
+
+1. **Analyse.** Headless Ghidra decompiles every module. More than 22,000 exported C++ symbols
+   give us the original class and method names.
+2. **Reimplement.** Readable, portable C++20 that mirrors the original API (`Toshi::TMath`,
+   `AUnitDinosaur`, …).
+3. **Verify.** Our functions are hooked into the running 32-bit game and differential tests
+   compare them with the original DLL exports.
+4. **Port.** Once everything is replaced, the same source builds as a standalone x64 executable on
+   Direct3D 11, Raw Input, miniaudio and FFmpeg.
+
+## Status
+
+| Milestone | Description | |
+|---|---|:-:|
+| Foundations | Symbols, build system, CI, analysis tooling | ✅ |
+| **M1** | Game boots with the hook DLL | ⏳ |
+| **M2** | Toshi kernel fully reimplemented | 🚧 |
+| **M3** | A mission loads through our renderer and resource code | ⏳ |
+| **M4** | Full game playable on hooks | ⏳ |
+| **M5** | Native x64 build reaches the main menu | ⏳ |
+| **M6** | Native x64 build plays a full mission with original saves | ⏳ |
+
+Detailed per-module coverage is in [docs/progress.md](docs/progress.md).
+
+## Getting started
+
+### Requirements
+| | |
+|---|---|
+| Compiler | Visual Studio 2022+ or Build Tools, with the *C++ x86/x64 build tools* (found automatically via `vswhere`) |
+| Tools | Python 3.10+, Git |
+| Analysis (optional) | Ghidra 12.1.4 in `toolchain/ghidra/` and JDK 21+ |
+| Game | Your own copy of *Jurassic Park: Operation Genesis* (PC) |
+
+### Setup
+```bat
+git clone git@github.com:Voikanaa/jpog-decomp.git
+cd jpog-decomp
+git config core.hooksPath .githooks       :: enable the pre-commit hygiene check
+
 ```
 
-After cloning, enable the repository's git hooks once: `git config core.hooksPath .githooks`.
-See [CONTRIBUTING.md](CONTRIBUTING.md) for the workflow.
+### Build
+```bat
+tools\build.bat x86-hook-debug   :: 32-bit hook DLL + tests  ->  build\x86-hook-debug\
+tools\build.bat x64-debug        :: native x64 build + tests  ->  build\x64-debug\
+```
+
+## Repository layout
+
+```
+├── src/
+│   ├── common/        shared headers (ABI, layout checks)
+│   ├── toshi/         Toshi engine reimplementation, one folder per original DLL
+│   ├── game/          SimJP game code
+│   ├── platform/      Win32, D3D11, audio and video backends
+│   └── hook/          x86 hook DLL injected into the original game
+├── tests/             unit tests + differential tests against the original DLLs
+├── symbols/           demangled export/import tables of every original module
+├── docs/              roadmap, binary map, progress, file formats
+├── tools/             analysis, build and maintenance scripts
+└── third_party/       pinned, vendored dependencies
+```
 
 ## Tools
-- `tools/ghidra_export.py`: headless Ghidra decompilation of the original modules into
-  `analysis/decomp/` (gitignored)
-- `tools/dump_exports.py`: regenerates `symbols/` (demangled exports and imports of every
-  original module, plus `classes.csv`)
-- `tools/check_repo.py`: repository hygiene check (no game files, nothing over 5 MB); runs in CI
-  and in the pre-commit hook
-- `tools/msvc.py`: finds MSVC tools through vswhere (shared helper)
+
+| Script | Purpose |
+|---|---|
+| `tools/build.bat` | Configure, build and test a CMake preset |
+| `tools/ghidra_export.py` | Headless Ghidra decompilation of the original modules into `analysis/` (gitignored) |
+| `tools/decomp_show.py` | Look up decompiled functions by name or address |
+| `tools/dump_exports.py` | Regenerate `symbols/` from the original binaries |
+| `tools/check_repo.py` | Hygiene check: no game files, nothing over 5 MB (CI + pre-commit) |
+| `tools/setup_mcp.py` | Generate the machine-specific `.mcp.json` for the REA MCP server |
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the clean-room rules, workflow, commit conventions and
+code style.
 
 ## Legal
-*Jurassic Park: Operation Genesis* and the Toshi engine are the property of their respective
-rights holders. This repository contains no game code or assets: only original reimplementation
-code, tools and documentation, plus symbol names extracted from the binaries for
-interoperability. You need your own legally obtained copy of the game to use it.
+
+*Jurassic Park*, *Jurassic Park: Operation Genesis* and their logos are trademarks of Universal
+City Studios and Amblin Entertainment. The game and the Toshi engine belong to their respective
+rights holders. This is an unofficial, non-commercial fan project and is not affiliated with or
+endorsed by them.
+
+The repository contains no game code or assets: only original reimplementation code, tools and
+documentation, plus symbol names extracted from the binaries for interoperability. To use it you
+need your own legally obtained copy of the game.
