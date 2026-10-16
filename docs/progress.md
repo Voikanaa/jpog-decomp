@@ -36,6 +36,7 @@ original export on the same inputs. Float results must match bit for bit unless 
 justifies a tolerance.
 
 ## Log
+- 2026-10-17: Phase 0 complete (symbols, build skeleton, repo, CI).
 - 2026-10-17: `Toshi::TMath` scalar functions reimplemented. Differential tests run against the
   original `TKernelInterface.dll`, and all results match bit for bit. Finding: the original's x87
   code runs at 53-bit precision, so computing float expressions with double intermediates and
