@@ -16,8 +16,9 @@ import sys
 import tempfile
 from collections import defaultdict
 
+import msvc
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-UNDNAME = r"C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\bin\Hostx64\x64\undname.exe"
 
 
 class PE:
@@ -91,7 +92,7 @@ def demangle_all(names):
         f.write("\n".join(names) + "\n")
         tmp = f.name
     try:
-        out = subprocess.run([UNDNAME, tmp], capture_output=True, text=True, errors="replace").stdout
+        out = subprocess.run([msvc.tool("undname.exe"), tmp], capture_output=True, text=True, errors="replace").stdout
     finally:
         os.unlink(tmp)
     lines = [l for l in out.splitlines() if l.strip()]

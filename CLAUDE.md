@@ -38,7 +38,9 @@ Reverse engineering / decompilation of *Jurassic Park: Operation Genesis* (2003,
 - Commit in small, logical units with descriptive messages. `symbols/` is committed (regenerate
   it with `tools/dump_exports.py`).
 - Line endings are set in `.gitattributes`: LF for source, docs and CSV; CRLF for `.bat`.
-- Commit or push only when the user asks.
+- **Commit frequently** (user instruction): commit each logical unit as soon as it works and is
+  verified, then push to `origin/main`. Update CLAUDE.md in the same commit whenever structure,
+  tools, findings or workflow change.
 
 ## Layout
 - `JPOG/` — original game install (treat as read-only reference; do not modify originals)
