@@ -1,0 +1,41 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build (${{ matrix.preset }})
+    runs-on: windows-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        preset: [x86-hook-debug, x64-debug]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Configure and build
+        shell: cmd
+        run: tools\build.bat ${{ matrix.preset }}
+
+  checks:
+    name: Repository checks
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: No game binaries or oversized files
+        run: python tools/check_repo.py
+      - name: Python tools compile
+        run: python -m compileall -q tools
+      - name: C++ formatting
+        shell: bash
+        run: |
+          files=$(git ls-files 'src/*.cpp' 'src/*.h' 'src/*.hpp' 'src/*.inl')
+          if [ -n "$files" ]; then
+            clang-format --version
+            clang-format --dry-run -Werror $files
+          fi

@@ -10,6 +10,7 @@ BreakBeforeBraces: Allman
 AccessModifierOffset: -4
 IndentCaseLabels: false
 PointerAlignment: Left
+AlignEscapedNewlines: DontAlign
 SortIncludes: CaseSensitive
 IncludeBlocks: Regroup
 AllowShortFunctionsOnASingleLine: InlineOnly
