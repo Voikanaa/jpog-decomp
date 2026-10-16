@@ -62,6 +62,7 @@ flowchart LR
 | Milestone | Description | |
 |---|---|:-:|
 | Foundations | Symbols, build system, CI, analysis tooling | ✅ |
+| Runnable original | A runnable original for in-game A/B testing (kept outside the repo) | 🚧 |
 | **M1** | Game boots with the hook DLL | ⏳ |
 | **M2** | Toshi kernel fully reimplemented (`TMath` done) | 🚧 |
 | **M3** | A mission loads through our renderer and resource code | ⏳ |
@@ -87,6 +88,9 @@ git clone git@github.com:Voikanaa/jpog-decomp.git
 cd jpog-decomp
 git config core.hooksPath .githooks       :: enable the pre-commit hygiene check
 
+:: Put the installed game in JPOG\ (read-only reference) and a working copy in game\
+python tools\dump_exports.py              :: regenerate symbols\ (optional; already committed)
+python tools\setup_mcp.py                 :: optional: REA/Ghidra MCP config for Claude Code
 ```
 
 ### Build

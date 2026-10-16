@@ -88,6 +88,7 @@ MIT, BSD, zlib, or LGPL linked dynamically.
 - `tools/format.py [--check]` — formats tracked C++ in `src/` and `tests/` with the pinned
   clang-format (version-checked). Runs in CI and in the pre-commit hook. **Run it before committing C++.**
 - `tools/decomp_show.py <Module> <regex>` — print functions from `analysis/decomp/`.
+- `tools/` — `setup_mcp.py` (writes `.mcp.json` for this clone), `check_repo.py` (hygiene: no game files or files over 5 MB), `msvc.py` (finds VS/MSVC tools via vswhere; no hardcoded paths), `dump_exports.py`, `build.bat <preset>` (finds VS via vswhere, sets up the MSVC env per-process, then runs CMake + Ninja)
 - `src/` — reimplementation: `common/` (`abi.h` TSTDCALL, `layout.h`), `toshi/kernel/` (static lib
   `toshi_kernel`: TMath so far), `game/`, `platform/`, `hook/` (x86 DLL)
 - `tests/` — doctest (`third_party/doctest`, v2.4.11) suite `jpog_tests`, run by ctest from

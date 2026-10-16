@@ -16,6 +16,7 @@ GPL-3.0-or-later (see `LICENSE`).
 ```
 git config core.hooksPath .githooks   # enable the pre-commit hygiene check
 ```
+Put your game install in `JPOG/` and a working copy in `game/`. See the README for the toolchain.
 
 ## Workflow
 1. Analyse the function or format in Ghidra (directly, or through REA). Record findings in

@@ -41,6 +41,7 @@ Each milestone has a matching GitHub milestone, with an issue for every work ite
 | # | Phase | Exit criterion | Status |
 |---|---|---|---|
 | 0 | Foundations: symbols, build skeleton, repo/CI | Symbols dumped, skeleton builds in CI | **Done** |
+| 0b | A runnable original for in-game testing | The owner's private runnable copy reaches the main menu | In progress: in-game test pending (copy kept outside the repo; see modules.md) |
 | 1 | Hook framework (x86) | **M1:** the game boots with the hook DLL and zero hooks | Not started |
 | 2 | TKernelInterface (memory → strings → math → RTTI → containers → files → events → scheduler → timers → lexer) | **M2:** the game boots with the kernel fully replaced | In progress: TMath scalar functions done, verified bit-exact |
 | 3 | File formats (tmd/tml/tkl, fsm/inx/nwt, ttx/tto, gui, strpool, saves) | Parsers load every file of each type in `Data/` | Not started |

@@ -24,6 +24,24 @@ its C++ API by mangled name. Full tables, regenerated with `python tools/dump_ex
 | SimJP.exe | 15439 | The game (A* classes: AUnit, AMission, AParkManager, AVisitorInterface, …) | everything |
 | fmod.dll (FMOD 3, UPX), binkw32.dll (Bink 1), libmmd.dll (Intel libm) | – | third-party | – |
 
+## Copy protection
+
+This project does not contain, document or distribute any way of circumventing the protection.
+Analysis is static, plus differential tests against the unprotected engine DLLs. For in-game
+testing the owner uses a privately obtained runnable copy that is not part of this repository.
+The final reimplementation does not use the original executable at all.
+
+Facts relevant to the reimplementation:
+- The game's own import table (IAT) is at `0x739000` in `.rdata`.
+- The runnable copy imports `dsound.dll` and `winmm.dll` directly; these are the candidates for
+  hook-DLL injection via a proxy DLL.
+
+## Game startup (WinMain, 0x484330)
+- Creates the mutex "JPOPERATIONGENESIS" and exits if another instance is running.
+- Parses `-fullscreen` (clears byte `0x83D700`) and `-nonexclusiveinput` (clears byte
+  `0x83D704`), then calls `TApplication::Create(ecx=0x8B8580, "Jurassic Park: Operation Genesis -
+  (c) Blue Tongue Software", argc, argv)`.
+
 ## Largest game classes (exported members)
 AActiveUnit 478, AMission 248, AVisitorInterface 204, AMiniGameState 197, AUnit 169,
 AUnitDinosaur 163, ASafariSteer 154, AParkManager 150, AUnitBuilding 149, ASteer 144.
