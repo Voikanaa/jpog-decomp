@@ -72,7 +72,7 @@ Detailed per-module coverage is in [docs/progress.md](docs/progress.md).
 | | |
 |---|---|
 | Compiler | Visual Studio 2022+ or Build Tools, with the *C++ x86/x64 build tools* (found automatically via `vswhere`) |
-| Tools | Python 3.10+, Git |
+| Tools | Python 3.10+, Git, clang-format 20.1.8 (`pip install clang-format==20.1.8`, or put the exe in `toolchain/clang-format/`) |
 | Analysis (optional) | Ghidra 12.1.4 in `toolchain/ghidra/` and JDK 21+ |
 | Game | Your own copy of *Jurassic Park: Operation Genesis* (PC) |
 
@@ -115,6 +115,7 @@ tools\build.bat x64-debug        :: native x64 build + tests  ->  build\x64-debu
 | `tools/decomp_show.py` | Look up decompiled functions by name or address |
 | `tools/dump_exports.py` | Regenerate `symbols/` from the original binaries |
 | `tools/coverage.py` | Measure reimplementation coverage; regenerates [docs/progress.md](docs/progress.md) and the README badge |
+| `tools/format.py` | Format all C++ with the pinned clang-format 20.1.8 (`--check` in CI and pre-commit) |
 | `tools/check_repo.py` | Hygiene check: no game files, nothing over 5 MB (CI + pre-commit) |
 | `tools/setup_mcp.py` | Generate the machine-specific `.mcp.json` for the REA MCP server |
 

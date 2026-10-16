@@ -61,7 +61,7 @@ Reverse engineering / decompilation of *Jurassic Park: Operation Genesis* (2003,
 - `README.md`, `CONTRIBUTING.md` (workflow, commit and style conventions)
 - `.github/workflows/ci.yml`: CI on windows-latest. It builds the `x86-hook-debug` and `x64-debug`
   presets, then runs `check_repo.py`, a Python compile check and a clang-format check.
-- `.githooks/pre-commit`: runs `check_repo.py --staged`. Enable it with
+- `.githooks/pre-commit`: runs `check_repo.py --staged` and `format.py --check`. Enable it with
   `git config core.hooksPath .githooks` (already set in this clone).
 - `.editorconfig`, `.clang-format` (tabs, Allman braces, 120 columns), `.gitattributes`
   (LF everywhere except `.bat`)
@@ -74,6 +74,8 @@ Reverse engineering / decompilation of *Jurassic Park: Operation Genesis* (2003,
 - `tools/coverage.py` — coverage = original exported functions ∩ symbols defined in our x86 libs
   (identical mangling). It regenerates the table in `docs/progress.md` and the README badge;
   `--check` runs in CI. Map new libraries to modules in its `MODULES` list.
+- `tools/format.py [--check]` — formats tracked C++ in `src/` and `tests/` with the pinned
+  clang-format (version-checked). Runs in CI and in the pre-commit hook. **Run it before committing C++.**
 - `tools/decomp_show.py <Module> <regex>` — print functions from `analysis/decomp/`.
 - `src/` — reimplementation: `common/` (`abi.h` TSTDCALL, `layout.h`), `toshi/kernel/` (static lib
   `toshi_kernel`: TMath so far), `game/`, `platform/`, `hook/` (x86 DLL)
@@ -86,6 +88,8 @@ Reverse engineering / decompilation of *Jurassic Park: Operation Genesis* (2003,
 - `CMakeLists.txt`, `CMakePresets.json` — presets `x86-hook-debug`, `x64-debug`, `x64-release` → `build/<preset>/`
 - `toolchain/` — project-local tools
   - `ghidra/` — Ghidra 12.1.4 (launch via `toolchain/ghidra/ghidraRun.bat`)
+  - `clang-format/` — clang-format 20.1.8 (exe from the official PyPI wheel, SHA-256 verified;
+    LICENSE.md alongside). Pinned: CI installs the same version. Use `python tools/format.py`.
   - `gh/` — GitHub CLI 2.102.0 (official portable zip, SHA-256 verified), used for issues,
     milestones, labels and CI status: `toolchain/gh/bin/gh.exe`. The user logs in once
     (`gh auth login`); gh stores its token in `%APPDATA%\GitHub CLI`.

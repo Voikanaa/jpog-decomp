@@ -26,10 +26,7 @@ public:
 	void* Find(const char* mangledName) const;
 
 	// Typed lookup; the function pointer type must match the original calling convention.
-	template <typename Fn> Fn Get(const char* mangledName) const
-	{
-		return reinterpret_cast<Fn>(Find(mangledName));
-	}
+	template <typename Fn> Fn Get(const char* mangledName) const { return reinterpret_cast<Fn>(Find(mangledName)); }
 
 	static OriginalModule& Kernel();
 

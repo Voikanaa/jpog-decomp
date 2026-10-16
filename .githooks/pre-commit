@@ -1,4 +1,8 @@
 #!/bin/sh
-# Blocks commits containing game binaries/assets or oversized files.
+# Blocks commits containing game binaries/assets or oversized files, and badly formatted C++.
 # Enable once per clone: git config core.hooksPath .githooks
-exec python tools/check_repo.py --staged
+python tools/check_repo.py --staged || exit 1
+python tools/format.py --check || {
+	echo "pre-commit: run 'python tools/format.py' to fix formatting" >&2
+	exit 1
+}
