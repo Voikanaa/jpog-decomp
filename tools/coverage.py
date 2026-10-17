@@ -58,7 +58,7 @@ DEFINED_SYMBOL = re.compile(r"\bSECT[0-9A-F]+\s.*External\s+\|\s+(\S+)")
 # Helpers the compiler emits on its own (scalar/vector deleting destructors); never our code.
 COMPILER_GENERATED = ("??_G", "??_E", "??_R")  # + C++ RTTI descriptors
 # Classes the original defines entirely inline (no exported members), so ours are header-only too.
-HEADER_ONLY_CLASSES = ("@TPWString@Toshi@@",)
+HEADER_ONLY_CLASSES = ("TPWString@Toshi@@", "?$TDList@")
 
 
 def original_exports(module):
