@@ -23,9 +23,10 @@ Put your game install in `JPOG/` and a working copy in `game/`. See the README f
    `docs/`: `modules.md` for binary-level facts, `docs/formats/<ext>.md` for file formats.
 2. Implement clean C++ under `src/`, in the module directory that matches the original DLL.
 3. Verify it with a differential test in `tests/` that calls the original export
-   (`OriginalModule::Kernel().Get<Fn>("<mangled name>")`) and our function on the same inputs.
-   Floats must match exactly unless a comment justifies a tolerance. Once the hook framework
-   lands, also toggle the hook in `game/`.
+   (`Original<Fn>("<mangled name>")` from `tests/support/Differential.h`) and our function on
+   the same inputs. Floats must match exactly unless a comment justifies a tolerance. If a result
+   is off by one ULP, check the operation order in the disassembly (`dumpbin /disasm`): Ghidra
+   prints commutative operands in arbitrary order.
 4. Run `python tools/coverage.py`, which regenerates the coverage table in `docs/progress.md`
    and the README badge (CI checks both are current).
 5. Keep the docs current in the same commit: the log in `docs/progress.md`, `docs/plan.md` if a

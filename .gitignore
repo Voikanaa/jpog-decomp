@@ -1,7 +1,7 @@
 # Original game + working copy (copyrighted, never commit)
 /JPOG/
 /game/
-# Third-party reference projects (cloned, read-only)
+# Reserved; stays empty under the clean-room policy
 /references/
 # Tools and caches
 /toolchain/
