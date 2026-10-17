@@ -8,7 +8,7 @@ an x86 build); do not edit it by hand.
 <!-- coverage:begin -->
 | Module | Functions | Reimplemented | Coverage |
 |---|---:|---:|---:|
-| TKernelInterface | 1627 | 1390 | 85.4% |
+| TKernelInterface | 1627 | 1405 | 86.4% |
 | TApplication | 16 | 0 | 0.0% |
 | TInputInterface | 93 | 0 | 0.0% |
 | TInputDXInterface | 96 | 0 | 0.0% |
@@ -27,7 +27,7 @@ an x86 build); do not edit it by hand.
 | TSysShaderD3D | 52 | 0 | 0.0% |
 | TTerrainShaderD3D | 288 | 0 | 0.0% |
 | SimJP | 13680 | 0 | 0.0% |
-| **Total** | **20452** | **1390** | **6.8%** |
+| **Total** | **20452** | **1405** | **6.9%** |
 <!-- coverage:end -->
 
 ## Verification
@@ -36,6 +36,9 @@ original export on the same inputs. Float results must match bit for bit unless 
 justifies a tolerance.
 
 ## Log
+- 2026-10-17: `TRandom`: ISAAC with a 16-word state; the seed is added to the golden ratio
+  before randinit's scramble (no seed array). State and every getter match the original bit for
+  bit on 50 seeds.
 - 2026-10-17: Scheduler and kernel: `TScheduler`, `TTask` (with the inline `TNodeTree`
   template, whose links keep the original's fake "root as task" pointer), `TRefCounted`,
   `TKernelInterface`, `TKernelInterfaceDLL`, `TDLL`, `TUser` and `TUserHandler`. Verified by
