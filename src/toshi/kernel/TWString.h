@@ -1,5 +1,6 @@
 #pragma once
 
+#include "common/abi.h"
 #include "common/layout.h"
 
 #include <cstdint>
@@ -88,5 +89,7 @@ private:
 };
 
 JPOG_ASSERT_SIZE(TWString, 8);
+
+TWString TSTDCALL operator+(const unsigned short* string, const TWString& other);
 
 } // namespace Toshi

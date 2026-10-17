@@ -5,9 +5,12 @@
 namespace Toshi
 {
 
+class TCStringPool;
+class TWStringPool;
+
 // System helpers (TKernelInterface.dll): memory and string primitives. Wide strings are UTF-16
 // code units (`unsigned short`, as in the original exports). A count of -1 means "whole string".
-// String pools, locale, time and scratch memory follow with their own classes.
+// Locale, time and scratch memory follow with their own classes.
 struct TSystem
 {
 	static void* TSTDCALL MemCopy(void* destination, const void* source, unsigned int size);
@@ -41,6 +44,17 @@ struct TSystem
 	static unsigned int TSTDCALL HashString(const unsigned short* string);
 	// Packed BCD (one decimal digit per nibble) to binary.
 	static unsigned int TSTDCALL BCDToInteger(unsigned int bcd);
+
+	// The global string pools, created on first use. The explicit variants only take effect
+	// before the first use.
+	static TCStringPool* TSTDCALL GetCStringPool();
+	static TCStringPool* TSTDCALL CreateCStringPoolExplicit(int growSize, int capacity);
+	static TCStringPool* TSTDCALL CreateCStringPoolExplicit(const char* fileName, int growSize, int capacity);
+	static TWStringPool* TSTDCALL GetWStringPool();
+
+private:
+	static TCStringPool* ms_poTCStringPool;
+	static TWStringPool* ms_poTWStringPool;
 };
 
 } // namespace Toshi

@@ -541,4 +541,12 @@ void TCString::Reset()
 	m_uiLengthAndExcess = 0;
 }
 
+TCString TSTDCALL operator+(const char* string, const TCString& other)
+{
+	TCString result;
+	result.Copy(string, -1);
+	result.Concat(other, -1);
+	return result;
+}
+
 } // namespace Toshi

@@ -94,6 +94,9 @@ class TCStringPool
 
 public:
 	TCStringPool(int growSize = 0x400, int capacity = 0);
+	// Loads the pool from a file written by WriteFile. Loaded strings are permanent (one extra
+	// reference each) and share one buffer, so a loaded pool must never be destroyed.
+	TCStringPool(const char* fileName, int growSize, int capacity);
 	TCStringPool(const TCStringPool& other);
 	~TCStringPool();
 	TCStringPool& operator=(const TCStringPool& other);
@@ -114,9 +117,14 @@ public:
 	bool IsPresent(const TCString& string);
 	bool IsPresent(int value);
 	void Dump() const;
+	// Format: string count, total size, then every string with its terminator in pool order.
+	bool WriteFile(const char* fileName);
 
 protected:
 	void Remove(TPooledCString& string);
+	// Replaces the entries with the file's strings (the file is not destroyed when its header
+	// is empty, as in the original).
+	bool ReadFile(const char* fileName);
 
 private:
 	int m_iGrowSize;
@@ -126,5 +134,7 @@ private:
 };
 
 JPOG_ASSERT_SIZE(TCStringPool, 16);
+
+TCString TSTDCALL operator+(const TCString& string, const TPCString& other);
 
 } // namespace Toshi

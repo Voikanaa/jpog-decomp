@@ -2,15 +2,19 @@
 #include "support/FloatCompare.h"
 #include "support/OriginalModule.h"
 #include "toshi/kernel/TCStringPool.h"
+#include "toshi/kernel/TNativeFile.h"
 #include "toshi/kernel/TWStringPool.h"
 
 #include <cstring>
 #include <doctest/doctest.h>
+#include <filesystem>
+#include <fstream>
 #include <string>
 #include <vector>
 
 using Toshi::TCString;
 using Toshi::TCStringPool;
+using Toshi::TFileManager;
 using Toshi::TPCString;
 using Toshi::TPWString;
 using Toshi::TWStringPool;
@@ -289,6 +293,122 @@ TEST_SUITE("TCStringPool differential" * doctest::skip(KernelMissing()))
 			REQUIRE(original.count == ours.count);
 			destruct(storage);
 			delete pool;
+		}
+	}
+
+	TEST_CASE("pool files match the original")
+	{
+		namespace fs = std::filesystem;
+		const fs::path directory = fs::current_path() / "jpog_pool_file_diff";
+		fs::create_directories(directory);
+		const auto managerCtor = Original<Method<void>>("??0TFileManager@Toshi@@QAE@XZ");
+		const auto managerDtor = Original<Method<void>>("??1TFileManager@Toshi@@QAE@XZ");
+		const auto nativeCtor = Original<Method<void, const char*>>("??0TNativeFileSystem@Toshi@@QAE@PBD@Z");
+		const auto nativeDtor = Original<Method<void>>("??1TNativeFileSystem@Toshi@@UAE@XZ");
+		const auto setPrefix =
+		    Original<Method<void, const TCString*>>("?SetPrefix@TFileSystem@Toshi@@UAEXABVTCString@2@@Z");
+		const auto construct = Original<Method<void, int, int>>("??0TCStringPool@Toshi@@QAE@HH@Z");
+		const auto constructFromFile =
+		    Original<Method<void, const char*, int, int>>("??0TCStringPool@Toshi@@QAE@PBDHH@Z");
+		const auto get =
+		    Original<Method<void*, void*, const char*>>("?Get@TCStringPool@Toshi@@QAE?AVTPCString@2@PBD@Z");
+		const auto writeFile = Original<Method<bool, const char*>>("?WriteFile@TCStringPool@Toshi@@QAE_NPBD@Z");
+
+		alignas(void*) unsigned char originalManager[sizeof(TFileManager)];
+		alignas(void*) unsigned char originalLocal[sizeof(Toshi::TNativeFileSystem)];
+		managerCtor(originalManager);
+		nativeCtor(originalLocal, "local");
+		const TCString prefix(directory.string().c_str());
+		setPrefix(originalLocal, &prefix);
+		auto* ourManager = new TFileManager();
+		auto* ourLocal = new Toshi::TNativeFileSystem("local");
+		ourLocal->SetPrefix(prefix);
+
+		// Both pools intern the same strings (the handles are dropped without releasing, so
+		// every string keeps one reference) and write them out.
+		InputGenerator gen;
+		alignas(void*) unsigned char originalPool[sizeof(TCStringPool)];
+		construct(originalPool, 16, 0);
+		auto* ourPool = new TCStringPool(16, 0); // leaked with the original's: handles stay alive
+		std::vector<TPCString> ourHandles;
+		for (int i = 0; i < 300; ++i)
+		{
+			std::string text = "s";
+			for (int length = gen.NextInt(0, 12); length > 0; --length)
+				text += static_cast<char>('a' + gen.NextInt(0, 5));
+			void* handle = nullptr;
+			get(originalPool, &handle, text.c_str());
+			ourHandles.push_back(ourPool->Get(text.c_str()));
+		}
+		CHECK(writeFile(originalPool, "local:original.pool"));
+		CHECK(ourPool->WriteFile("local:ours.pool"));
+		auto bytes = [&](const char* name)
+		{
+			std::ifstream in(directory / name, std::ios::binary);
+			return std::string((std::istreambuf_iterator<char>(in)), {});
+		};
+		const std::string written = bytes("original.pool");
+		CHECK(written.size() > 8);
+		CHECK(written == bytes("ours.pool"));
+
+		// Each side loads the other's file. Loaded pools are never destroyed (see ReadFile).
+		alignas(void*) unsigned char originalLoaded[sizeof(TCStringPool)];
+		constructFromFile(originalLoaded, "local:ours.pool", 8, 4);
+		auto* ourLoaded = new TCStringPool("local:original.pool", 8, 4);
+		CheckSamePool(*reinterpret_cast<const PoolView*>(originalLoaded),
+		              *reinterpret_cast<const PoolView*>(ourLoaded));
+		CHECK(ourLoaded->IsPresent(reinterpret_cast<const PoolView*>(originalLoaded)->entries[7].key));
+
+		alignas(void*) unsigned char originalMissing[sizeof(TCStringPool)];
+		constructFromFile(originalMissing, "local:missing.pool", 8, 4);
+		TCStringPool ourMissing("local:missing.pool", 8, 4);
+		CheckSamePool(*reinterpret_cast<const PoolView*>(originalMissing),
+		              *reinterpret_cast<const PoolView*>(&ourMissing));
+
+		delete ourLocal;
+		delete ourManager;
+		nativeDtor(originalLocal);
+		managerDtor(originalManager);
+		fs::remove_all(directory);
+	}
+
+	TEST_CASE("string concatenation operators match the original")
+	{
+		using Narrow = TCString*(__stdcall*)(TCString*, const char*, const TCString*);
+		using NarrowPooled = TCString*(__stdcall*)(TCString*, const TCString*, const Toshi::TPCString*);
+		using Wide = Toshi::TWString*(__stdcall*)(Toshi::TWString*, const unsigned short*, const Toshi::TWString*);
+		const auto narrow = Original<Narrow>("??HToshi@@YG?AVTCString@0@PBDABV10@@Z");
+		const auto narrowPooled = Original<NarrowPooled>("??HToshi@@YG?AVTCString@0@ABV10@ABVTPCString@0@@Z");
+		const auto wide = Original<Wide>("??HToshi@@YG?AVTWString@0@PBGABV10@@Z");
+		const auto destroy = Original<Method<void>>("??1TCString@Toshi@@QAE@XZ");
+		const auto destroyWide = Original<Method<void>>("??1TWString@Toshi@@QAE@XZ");
+
+		TCStringPool pool;
+		const Toshi::TPCString pooled = pool.Get("tail");
+		const Toshi::TPCString empty;
+		for (const char* head : {"", "head", "a longer head string"})
+		{
+			const TCString tail("+tail");
+			alignas(void*) unsigned char storage[sizeof(TCString)];
+			auto* result = reinterpret_cast<TCString*>(storage);
+			narrow(result, head, &tail);
+			CHECK(std::string(static_cast<const char*>(*result)) == static_cast<const char*>(head + tail));
+			destroy(result);
+			const TCString start(head);
+			for (const Toshi::TPCString* handle : {&pooled, &empty})
+			{
+				narrowPooled(result, &start, handle);
+				CHECK(std::string(static_cast<const char*>(*result)) == static_cast<const char*>(start + *handle));
+				destroy(result);
+			}
+
+			const unsigned short wideHead[] = {'w', 'h', 0};
+			const Toshi::TWString wideTail(head);
+			alignas(void*) unsigned char wideStorage[sizeof(Toshi::TWString)];
+			auto* wideResult = reinterpret_cast<Toshi::TWString*>(wideStorage);
+			wide(wideResult, wideHead, &wideTail);
+			CHECK(*wideResult == wideHead + wideTail);
+			destroyWide(wideResult);
 		}
 	}
 }

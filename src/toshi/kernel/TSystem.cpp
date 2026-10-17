@@ -1,5 +1,8 @@
 #include "toshi/kernel/TSystem.h"
 
+#include "toshi/kernel/TCStringPool.h"
+#include "toshi/kernel/TWStringPool.h"
+
 #include <climits>
 #include <cstdarg>
 #include <cstdio>
@@ -207,6 +210,37 @@ unsigned int TSTDCALL TSystem::BCDToInteger(unsigned int bcd)
 		scale *= 10;
 	}
 	return result;
+}
+
+TCStringPool* TSystem::ms_poTCStringPool = nullptr;
+TWStringPool* TSystem::ms_poTWStringPool = nullptr;
+
+TCStringPool* TSystem::GetCStringPool()
+{
+	if (ms_poTCStringPool == nullptr)
+		ms_poTCStringPool = new TCStringPool(0x400, 0);
+	return ms_poTCStringPool;
+}
+
+TCStringPool* TSystem::CreateCStringPoolExplicit(int growSize, int capacity)
+{
+	if (ms_poTCStringPool == nullptr)
+		ms_poTCStringPool = new TCStringPool(growSize, capacity);
+	return ms_poTCStringPool;
+}
+
+TCStringPool* TSystem::CreateCStringPoolExplicit(const char* fileName, int growSize, int capacity)
+{
+	if (ms_poTCStringPool == nullptr)
+		ms_poTCStringPool = new TCStringPool(fileName, growSize, capacity);
+	return ms_poTCStringPool;
+}
+
+TWStringPool* TSystem::GetWStringPool()
+{
+	if (ms_poTWStringPool == nullptr)
+		ms_poTWStringPool = new TWStringPool();
+	return ms_poTWStringPool;
 }
 
 } // namespace Toshi

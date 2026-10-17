@@ -188,4 +188,11 @@ void TWStringPool::Remove(TPooledWString& string)
 	RemoveEntry(m_iCount, m_pEntries, index);
 }
 
+TWString TSTDCALL operator+(const TWString& string, const TPWString& other)
+{
+	TWString result(string);
+	result += other.GetWString();
+	return result;
+}
+
 } // namespace Toshi
