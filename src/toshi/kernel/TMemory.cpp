@@ -293,6 +293,12 @@ void* TSTDCALL tmalloc(int size, char* file, int line)
 	                                             file, line);
 }
 
+void* TSTDCALL tmemalign(int alignment, int size)
+{
+	return Toshi::TMemory::GetMemManager().Alloc(static_cast<unsigned int>(size), static_cast<unsigned int>(alignment),
+	                                             Toshi::TMemory::GetGlobalBlock(), nullptr, -1);
+}
+
 void* TSTDCALL tcalloc(int count, int size)
 {
 	return Toshi::TMemory::GetMemManager().Calloc(static_cast<unsigned int>(size * count), 16,

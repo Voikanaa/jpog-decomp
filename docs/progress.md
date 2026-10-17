@@ -8,7 +8,7 @@ an x86 build); do not edit it by hand.
 <!-- coverage:begin -->
 | Module | Functions | Reimplemented | Coverage |
 |---|---:|---:|---:|
-| TKernelInterface | 1627 | 982 | 60.4% |
+| TKernelInterface | 1627 | 1043 | 64.1% |
 | TApplication | 16 | 0 | 0.0% |
 | TInputInterface | 93 | 0 | 0.0% |
 | TInputDXInterface | 96 | 0 | 0.0% |
@@ -27,7 +27,7 @@ an x86 build); do not edit it by hand.
 | TSysShaderD3D | 52 | 0 | 0.0% |
 | TTerrainShaderD3D | 288 | 0 | 0.0% |
 | SimJP | 13680 | 0 | 0.0% |
-| **Total** | **20452** | **982** | **4.8%** |
+| **Total** | **20452** | **1043** | **5.1%** |
 <!-- coverage:end -->
 
 ## Verification
@@ -36,6 +36,12 @@ original export on the same inputs. Float results must match bit for bit unless 
 justifies a tolerance.
 
 ## Log
+- 2026-10-17: Files, part 4: `TISOFile`/`TISOFileSystem` with its ISO 9660 helpers (PVD, path
+  table, lazily read and selection-sorted directory listings, 8 KB read buffer) and `tmemalign`.
+  Verified on a synthetic image built by the test. Quirks kept: only the low 16 bits of
+  directory and path table locations are used, `TSEEK_END` subtracts the offset, and three PVD
+  ID getters return the volume ID. Name copies are clamped to their buffers (the original
+  overflows on names over 35 characters). The file system (#10) is complete.
 - 2026-10-17: Files, part 3: `TNullFile`/`TNullFileSystem` (counts written bytes) and
   `TMemFile`/`TMemFileSystem` (whole file loaded into memory, resolved via "local"). Quirks
   kept: a path-based `TMemFile` open never destroys its source file, so its handle stays open and

@@ -104,5 +104,6 @@ JPOG_ASSERT_SIZE(TMemory::HALMemInfo, 0x54);
 
 void* TSTDCALL tmalloc(int size, char* file, int line);
 void* TSTDCALL tcalloc(int count, int size);
+void* TSTDCALL tmemalign(int alignment, int size);
 void* TSTDCALL trealloc(void* memory, int size);
 void TSTDCALL tfree(void* memory);
