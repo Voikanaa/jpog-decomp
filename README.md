@@ -35,26 +35,29 @@ This project rebuilds the game and engine from scratch in modern, portable C++. 
 **native 64-bit Windows build** that plays the original game data unchanged.
 
 - **Clean room:** every line comes from our own analysis of the shipped binaries and data.
-- **Verified piece by piece:** each function is checked against the original game while it runs.
+- **Verified bit for bit:** each function is tested against the original DLL export on the same
+  inputs, down to the last floating-point bit.
 - **Bring your own game:** the repository contains no game code, assets or binaries.
 
 ## How it works
 
 ```mermaid
 flowchart LR
-    A["Original game<br/>32-bit SimJP.exe + Toshi DLLs"] -->|Ghidra analysis| B["Clean-room C++<br/>src/"]
-    B -->|x86 build| C["Hook DLL<br/>replaces original functions<br/>one at a time"]
-    C -->|A/B test in the real game| A
-    B -->|"x64 build (100% coverage)"| D["Native x64 game<br/>D3D11 · miniaudio · FFmpeg"]
+    A["Original game<br/>32-bit SimJP.exe + Toshi DLLs"] -->|"Ghidra + exported symbols"| B["Clean-room C++<br/>src/"]
+    B -->|"x86 build"| C["jpog.exe<br/>on the original engine DLLs"]
+    B -->|"x86 build"| T["Differential tests<br/>vs. original exports"]
+    T -.->|"0-ULP match"| B
+    C -->|"replace DLLs module by module"| D["Native x64 game<br/>D3D11 · miniaudio · FFmpeg"]
 ```
 
-1. **Analyse.** Headless Ghidra decompiles every module. More than 22,000 exported C++ symbols
-   give us the original class and method names.
+1. **Analyse.** Headless Ghidra decompiles every module. Over 23,000 exported C++ symbols give us
+   the original class and method names, signatures and virtual method order.
 2. **Reimplement.** Readable, portable C++20 that mirrors the original API (`Toshi::TMath`,
-   `AUnitDinosaur`, …).
-3. **Verify.** Our functions are hooked into the running 32-bit game and differential tests
-   compare them with the original DLL exports.
-4. **Port.** Once everything is replaced, the same source builds as a standalone x64 executable on
+   `Toshi::TQuaternion`, `AUnitDinosaur`, …), with identical mangled names.
+3. **Verify.** Differential tests load the original DLLs and compare every reimplemented function
+   with its original export under the game's own FPU settings. Results must match exactly.
+4. **Run.** Our `jpog.exe` already starts on the original engine DLLs. As modules are replaced,
+   it depends on less of the original, until the same source builds as a standalone x64 game on
    Direct3D 11, Raw Input, miniaudio and FFmpeg.
 
 ## Status
@@ -63,15 +66,15 @@ flowchart LR
 |---|---|:-:|
 | Foundations | Symbols, build system, CI, analysis tooling | ✅ |
 | **Launch 1** | Our `jpog.exe` opens the game window via the original engine DLLs | ✅ |
-| Runnable original | Retail exe for in-game A/B testing (needs the physical disc) | ⛔ |
-| **M1** | Game boots with the hook DLL (deferred: needs a runnable original) | ⏸️ |
-| **M2** | Toshi kernel fully reimplemented (`TMath`, `TVector2`, `TVector3` done) | 🚧 |
+| **M2** | Toshi kernel reimplemented (`TMath`, `TVector2/3/4`, `TQuaternion` done) | 🚧 |
 | **M3** | A mission loads through our renderer and resource code | ⏳ |
-| **M4** | Full game playable on hooks | ⏳ |
+| **M4** | Full game playable on our code | ⏳ |
 | **M5** | Native x64 build reaches the main menu | ⏳ |
 | **M6** | Native x64 build plays a full mission with original saves | ⏳ |
+| M1 | In-game A/B testing through a hook DLL (deferred: needs a runnable original) | ⏸️ |
 
-Detailed per-module coverage is in [docs/progress.md](docs/progress.md).
+Per-module coverage is in [docs/progress.md](docs/progress.md); the test suite currently runs
+over 600,000 bit-exact differential checks.
 
 ## Getting started
 
@@ -96,23 +99,27 @@ python tools\setup_mcp.py                 :: optional: REA/Ghidra MCP config for
 
 ### Build
 ```bat
-tools\build.bat x86-debug   :: jpog.exe (32-bit, uses the original engine DLLs) + tests
-                                :: jpog.exe is copied into game\ and runs from there
-tools\build.bat x64-debug        :: native x64 build + tests  ->  build\x64-debug\
+tools\build.bat x86-debug    :: 32-bit jpog.exe on the original engine DLLs + all tests
+tools\build.bat x64-debug    :: native x64 build + portable tests
 ```
+The x86 build copies `jpog.exe` into `game\`, where it must be run. Differential tests find the
+original DLLs in `JPOG\` (override with the `JPOG_ORIGINAL_DIR` environment variable) and are
+skipped when the game is not present, as in CI.
 
 ## Repository layout
 
 ```
 ├── src/
-│   ├── common/        shared headers (ABI, layout checks)
+│   ├── common/        shared headers (ABI macros, layout checks)
 │   ├── toshi/         Toshi engine reimplementation, one folder per original DLL
-│   ├── game/          SimJP game code
-│   ├── platform/      Win32, D3D11, audio and video backends
-│   └── hook/          x86 hook DLL injected into the original game
-├── tests/             unit tests + differential tests against the original DLLs
-├── symbols/           demangled export/import tables of every original module
-├── docs/              roadmap, binary map, progress, file formats
+│   ├── game/          jpog.exe: WinMain, application, crash handler
+│   └── hook/          x86 hook DLL (deferred)
+├── tests/
+│   ├── kernel/        unit + differential tests per class
+│   └── support/       original-DLL loader, float comparison, test helpers
+├── cmake/             import libraries for the original engine DLLs
+├── symbols/           export/import tables, classes and vtables of every original module
+├── docs/              roadmap, binary map, progress log
 ├── tools/             analysis, build and maintenance scripts
 └── third_party/       pinned, vendored dependencies
 ```
@@ -121,7 +128,7 @@ tools\build.bat x64-debug        :: native x64 build + tests  ->  build\x64-debu
 
 | Script | Purpose |
 |---|---|
-| `tools/build.bat` | Configure, build and test a CMake preset |
+| `tools/build.bat` | Configure, build and test a CMake preset (finds Visual Studio via `vswhere`) |
 | `tools/ghidra_export.py` | Headless Ghidra decompilation of the original modules into `analysis/` (gitignored) |
 | `tools/dump_vtables.py` | Recover the virtual method order of every exported class into `symbols/vtables.csv` |
 | `tools/resolve_imports.py` | Annotate the game's decompilation with the names of the engine functions it calls |
@@ -131,6 +138,7 @@ tools\build.bat x64-debug        :: native x64 build + tests  ->  build\x64-debu
 | `tools/format.py` | Format all C++ with the pinned clang-format 20.1.8 (`--check` in CI and pre-commit) |
 | `tools/make_import_lib.py` | Generate import libraries for the original engine DLLs from `symbols/` (used by CMake) |
 | `tools/check_repo.py` | Hygiene check: no game files, nothing over 5 MB (CI + pre-commit) |
+| `tools/msvc.py` | Locate the MSVC tools (`dumpbin`, `undname`, …) without hardcoded paths |
 | `tools/setup_mcp.py` | Generate the machine-specific `.mcp.json` for the REA MCP server |
 
 ## Contributing
