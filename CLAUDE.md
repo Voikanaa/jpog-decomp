@@ -55,7 +55,7 @@ LGPL linked dynamically).
 - `symbols/` per-module exports/imports CSV, `classes.csv`, `vtables.csv` (generated).
 - `docs/` `plan.md` (roadmap), `modules.md` (binary map), `progress.md` (coverage + log).
 - `src/` `common/` (`abi.h` TSTDCALL, `layout.h`); `toshi/kernel/` (lib `toshi_kernel`; see
-  `docs/progress.md` for what is implemented; TKernelInterface declared only); global
+  `docs/progress.md` for what is implemented; jpog.exe still uses the original DLL); global
   `operator new`/`delete` route to `tmalloc`/`tfree` (as the original);
   `toshi/application/`, `toshi/render/` (declarations); `game/` (**jpog.exe**: WinMain,
   `AApplication`, `CrashHandler`); `hook/` (deferred, `JPOG_HOOK=ON`).

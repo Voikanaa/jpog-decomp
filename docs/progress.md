@@ -8,7 +8,7 @@ an x86 build); do not edit it by hand.
 <!-- coverage:begin -->
 | Module | Functions | Reimplemented | Coverage |
 |---|---:|---:|---:|
-| TKernelInterface | 1627 | 1279 | 78.6% |
+| TKernelInterface | 1627 | 1390 | 85.4% |
 | TApplication | 16 | 0 | 0.0% |
 | TInputInterface | 93 | 0 | 0.0% |
 | TInputDXInterface | 96 | 0 | 0.0% |
@@ -27,7 +27,7 @@ an x86 build); do not edit it by hand.
 | TSysShaderD3D | 52 | 0 | 0.0% |
 | TTerrainShaderD3D | 288 | 0 | 0.0% |
 | SimJP | 13680 | 0 | 0.0% |
-| **Total** | **20452** | **1279** | **6.3%** |
+| **Total** | **20452** | **1390** | **6.8%** |
 <!-- coverage:end -->
 
 ## Verification
@@ -36,6 +36,14 @@ original export on the same inputs. Float results must match bit for bit unless 
 justifies a tolerance.
 
 ## Log
+- 2026-10-17: Scheduler and kernel: `TScheduler`, `TTask` (with the inline `TNodeTree`
+  template, whose links keep the original's fake "root as task" pointer), `TRefCounted`,
+  `TKernelInterface`, `TKernelInterfaceDLL`, `TDLL`, `TUser` and `TUserHandler`. Verified by
+  driving the original scheduler and ours with random task trees (create, activate, destroy,
+  update, paused update), comparing every task hook call and the tree after each step. Quirks
+  kept: `DestroyAllTasks` only destroys the first top-level task's subtree, dying tasks are
+  deleted last-sibling first, and `OnChildDied` gets the deleted child's address. TKernelInterface
+  passes 85%.
 - 2026-10-17: Time: `THPTimer` (QueryPerformanceCounter), `TDateTime` (0-based month, as
   struct tm) and the `TSystem` time, date formatting and 1 KB scratch buffer functions. Dates
   are verified against the original on random values; the timer only by sanity checks, since
