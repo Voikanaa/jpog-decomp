@@ -1,7 +1,9 @@
 #include "support/Differential.h"
 #include "support/FloatCompare.h"
 #include "support/OriginalModule.h"
+#include "toshi/kernel/TBitArray.h"
 #include "toshi/kernel/TGenericDList.h"
+#include "toshi/kernel/TGenericNTree.h"
 #include "toshi/kernel/TGenericNodeList.h"
 #include "toshi/kernel/TGenericPriList.h"
 
@@ -534,6 +536,168 @@ TEST_SUITE("TContainers differential" * doctest::skip(KernelMissing()))
 				}
 				INFO("step ", step);
 				CHECK(describe(o) == describe(m));
+			}
+		}
+	}
+
+	TEST_CASE("TBitArray matches the original")
+	{
+		using Toshi::TBitArray;
+		struct BitView
+		{
+			unsigned int* words;
+			int numBits;
+			unsigned int initial;
+		};
+		const auto construct = Original<Method<void, int, int>>("??0TBitArray@Toshi@@QAE@HH@Z");
+		const auto destruct = Original<Method<void>>("??1TBitArray@Toshi@@QAE@XZ");
+		const auto getBit = Original<Method<int, int>>("?GetBit@TBitArray@Toshi@@QAEHH@Z");
+		const auto setBit = Original<Method<void, int>>("?SetBit@TBitArray@Toshi@@QAEXH@Z");
+		const auto setBitValue = Original<Method<void, int, int>>("?SetBit@TBitArray@Toshi@@QAEXHH@Z");
+		const auto clearBit = Original<Method<void, int>>("?ClearBit@TBitArray@Toshi@@QAEXH@Z");
+		const auto toggleBit = Original<Method<void, int>>("?ToggleBit@TBitArray@Toshi@@QAEXH@Z");
+		const auto reset = Original<Method<void>>("?Reset@TBitArray@Toshi@@QAEXXZ");
+		const auto firstSet = Original<Method<int>>("?FindFirstSetBit@TBitArray@Toshi@@QAEHXZ");
+		const auto firstClear = Original<Method<int>>("?FindFirstClearBit@TBitArray@Toshi@@QAEHXZ");
+
+		InputGenerator gen;
+		for (int round = 0; round < 300; ++round)
+		{
+			const int numBits = gen.NextInt(1, 100);
+			const int initial = gen.NextInt(0, 1) * gen.NextInt(1, 5);
+			BitView original;
+			construct(&original, numBits, initial);
+			TBitArray ours(numBits, initial);
+			const auto& view = reinterpret_cast<const BitView&>(ours);
+			for (int step = 0; step < 50; ++step)
+			{
+				const int bit = gen.NextInt(0, numBits - 1);
+				switch (gen.NextU32() % 6)
+				{
+				case 0:
+					setBit(&original, bit);
+					ours.SetBit(bit);
+					break;
+				case 1:
+				{
+					const int value = gen.NextInt(0, 2);
+					setBitValue(&original, bit, value);
+					ours.SetBit(bit, value);
+					break;
+				}
+				case 2:
+					clearBit(&original, bit);
+					ours.ClearBit(bit);
+					break;
+				case 3:
+					toggleBit(&original, bit);
+					ours.ToggleBit(bit);
+					break;
+				case 4:
+					if (step % 10 == 0)
+					{
+						reset(&original);
+						ours.Reset();
+					}
+					break;
+				default:
+					CHECK(getBit(&original, bit) == ours.GetBit(bit));
+					break;
+				}
+				REQUIRE(original.numBits == view.numBits);
+				CHECK(original.initial == view.initial);
+				for (int w = 0; w < (numBits + 31) / 32; ++w)
+					CHECK(original.words[w] == view.words[w]);
+				CHECK(firstSet(&original) == ours.FindFirstSetBit());
+				CHECK(firstClear(&original) == ours.FindFirstClearBit());
+			}
+			destruct(&original);
+		}
+	}
+
+	TEST_CASE("TGenericNTree matches the original")
+	{
+		constexpr int kChildren = 4;
+		constexpr int kNodes = 9;
+		struct TreeNode
+		{
+			TreeNode* parent;
+			TreeNode* children[kChildren];
+		};
+		struct TTestNode : Toshi::TGenericNTree::TNode
+		{
+			using TNode::FindChild;
+			using TNode::InsertChild;
+			using TNode::Remove;
+			using TNode::RemoveChild;
+			using TNode::Reset;
+		};
+		using P = void*;
+		const auto reset = Original<Method<void, int>>("?Reset@TNode@TGenericNTree@Toshi@@IAEXH@Z");
+		const auto insertChild =
+		    Original<Method<void, int, P>>("?InsertChild@TNode@TGenericNTree@Toshi@@IAEXHPAV123@@Z");
+		const auto removeChildAt = Original<Method<void, int>>("?RemoveChild@TNode@TGenericNTree@Toshi@@IAEXH@Z");
+		const auto removeChild =
+		    Original<Method<void, P, int>>("?RemoveChild@TNode@TGenericNTree@Toshi@@IAEXPAV123@H@Z");
+		const auto remove = Original<Method<void, int>>("?Remove@TNode@TGenericNTree@Toshi@@IAEXH@Z");
+		const auto findChild = Original<Method<int, P, int>>("?FindChild@TNode@TGenericNTree@Toshi@@IBEHPBV123@H@Z");
+
+		auto describe = [&](const TreeNode* base)
+		{
+			auto index = [&](const TreeNode* node) { return node == nullptr ? -1 : static_cast<int>(node - base); };
+			std::vector<int> state;
+			for (int i = 0; i < kNodes; ++i)
+			{
+				state.push_back(index(base[i].parent));
+				for (const TreeNode* child : base[i].children)
+					state.push_back(index(child));
+			}
+			return state;
+		};
+		InputGenerator gen;
+		for (int round = 0; round < 300; ++round)
+		{
+			std::array<TreeNode, kNodes> original{};
+			std::array<TreeNode, kNodes> ours{};
+			auto ourNode = [&](int i) { return reinterpret_cast<TTestNode*>(&ours[i]); };
+			for (int i = 0; i < kNodes; ++i)
+			{
+				reset(&original[i], kChildren);
+				ourNode(i)->Reset(kChildren);
+			}
+			for (int step = 0; step < 40; ++step)
+			{
+				const int a = gen.NextInt(0, kNodes - 1);
+				const int b = gen.NextInt(0, kNodes - 1);
+				const int slot = gen.NextInt(0, kChildren - 1);
+				switch (gen.NextU32() % 5)
+				{
+				case 0:
+					if (a != b && original[b].parent == nullptr && original[a].children[slot] == nullptr)
+					{
+						insertChild(&original[a], slot, &original[b]);
+						ourNode(a)->InsertChild(slot, ourNode(b));
+					}
+					break;
+				case 1:
+					removeChildAt(&original[a], slot);
+					ourNode(a)->RemoveChild(slot);
+					break;
+				case 2:
+					removeChild(&original[a], &original[b], kChildren);
+					ourNode(a)->RemoveChild(ourNode(b), kChildren);
+					break;
+				case 3:
+					remove(&original[a], kChildren);
+					ourNode(a)->Remove(kChildren);
+					break;
+				default:
+					CHECK(findChild(&original[a], &original[b], kChildren) ==
+					      ourNode(a)->FindChild(ourNode(b), kChildren));
+					break;
+				}
+				INFO("step ", step);
+				CHECK(describe(original.data()) == describe(ours.data()));
 			}
 		}
 	}

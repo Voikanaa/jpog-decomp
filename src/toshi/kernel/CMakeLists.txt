@@ -1,5 +1,7 @@
 # TKernelInterface.dll reimplementation.
 add_library(toshi_kernel STATIC
+  TBitArray.cpp
+  TBitArray.h
   StringPoolArray.h
   TCString.cpp
   TCString.h
@@ -10,6 +12,8 @@ add_library(toshi_kernel STATIC
   TGenericDList.cpp
   TGenericDList.h
   TGenericNodeList.cpp
+  TGenericNTree.cpp
+  TGenericNTree.h
   TGenericNodeList.h
   TGenericPriList.cpp
   TGenericPriList.h
