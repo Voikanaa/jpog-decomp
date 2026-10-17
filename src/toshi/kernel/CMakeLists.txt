@@ -7,6 +7,8 @@ add_library(toshi_kernel STATIC
   TCStringPool.h
   TFreeList.cpp
   TFreeList.h
+  TGenericNodeList.cpp
+  TGenericNodeList.h
   TMath.cpp
   TMath.h
   TMatrix44.cpp
