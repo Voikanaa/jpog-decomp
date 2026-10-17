@@ -8,6 +8,7 @@ add_executable(jpog_tests
   kernel/TMathTests.cpp
   kernel/TMatrix44Tests.cpp
   kernel/TMemoryTests.cpp
+  kernel/TObjectTests.cpp
   kernel/TQuaternionTests.cpp
   kernel/TStringTests.cpp
   kernel/TVectorTests.cpp

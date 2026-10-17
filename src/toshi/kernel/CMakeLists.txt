@@ -13,6 +13,8 @@ add_library(toshi_kernel STATIC
   TMatrix44.h
   TMemory.cpp
   TMemory.h
+  TObject.cpp
+  TObject.h
   TPlane.cpp
   TPlane.h
   TQuaternion.cpp
