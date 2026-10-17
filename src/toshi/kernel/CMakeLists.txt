@@ -2,6 +2,7 @@
 add_library(toshi_kernel STATIC
   TBitArray.cpp
   TBitArray.h
+  SortedArray.h
   StringPoolArray.h
   TCString.cpp
   TCString.h
@@ -10,6 +11,8 @@ add_library(toshi_kernel STATIC
   TEvent.cpp
   TEvent.h
   TFile.cpp
+  TFileLexer.cpp
+  TFileLexer.h
   TFile.h
   TFreeList.cpp
   TFreeList.h
