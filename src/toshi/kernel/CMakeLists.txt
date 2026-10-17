@@ -2,6 +2,8 @@
 add_library(toshi_kernel STATIC
   TCString.cpp
   TCString.h
+  TCStringPool.cpp
+  TCStringPool.h
   TFreeList.cpp
   TFreeList.h
   TMath.cpp

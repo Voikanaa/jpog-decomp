@@ -55,6 +55,10 @@ MODULES = [
 DEFINED_SYMBOL = re.compile(r"\bSECT[0-9A-F]+\s.*External\s+\|\s+(\S+)")
 
 
+# Helpers the compiler emits on its own (scalar/vector deleting destructors); never our code.
+COMPILER_GENERATED = ("??_G", "??_E")
+
+
 def original_exports(module):
     """All exported mangled names (functions and data)."""
     path = os.path.join(ROOT, "symbols", f"{module}.exports.csv")
@@ -91,7 +95,8 @@ def measure(build_dir):
             implemented = len(functions & ours)
             exports = original_exports(module)
             unmatched += [f"{module}: {s}" for s in sorted(ours)
-                          if "@Toshi@@" in s and "?A0x" not in s and s not in exports]
+                          if "@Toshi@@" in s and "?A0x" not in s and s not in exports
+                          and not s.startswith(COMPILER_GENERATED)]
         total += len(functions)
         done += implemented
         rows.append(f"| {module} | {len(functions)} | {implemented} | {implemented / len(functions):.1%} |")

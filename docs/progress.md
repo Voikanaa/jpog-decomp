@@ -8,7 +8,7 @@ an x86 build); do not edit it by hand.
 <!-- coverage:begin -->
 | Module | Functions | Reimplemented | Coverage |
 |---|---:|---:|---:|
-| TKernelInterface | 1627 | 594 | 36.5% |
+| TKernelInterface | 1627 | 637 | 39.2% |
 | TApplication | 16 | 0 | 0.0% |
 | TInputInterface | 93 | 0 | 0.0% |
 | TInputDXInterface | 96 | 0 | 0.0% |
@@ -27,7 +27,7 @@ an x86 build); do not edit it by hand.
 | TSysShaderD3D | 52 | 0 | 0.0% |
 | TTerrainShaderD3D | 288 | 0 | 0.0% |
 | SimJP | 13680 | 0 | 0.0% |
-| **Total** | **20452** | **594** | **2.9%** |
+| **Total** | **20452** | **637** | **3.1%** |
 <!-- coverage:end -->
 
 ## Verification
@@ -36,6 +36,10 @@ original export on the same inputs. Float results must match bit for bit unless 
 justifies a tolerance.
 
 ## Log
+- 2026-10-17: Strings, part 2: `TCStringPool`, `TPCString`, `TPooledCString` (string interning
+  with reference counts). Quirk kept: the pool destructor skips every other entry while removing.
+  Fixed an exit-time crash: allocator state is now never destroyed, since static free lists free
+  memory during exit. `ReadFile`/`WriteFile` wait for `TFile` (#10).
 - 2026-10-17: Strings, part 1: `TCString`, `TWString` and the `TSystem` string/memory helpers
   (143 functions). Randomised differential runs compare contents, length and spare capacity after
   every operation. Quirk kept: `TWString` copying onto itself zeroes its characters (no

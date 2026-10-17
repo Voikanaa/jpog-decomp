@@ -33,10 +33,11 @@ struct Statistics
 	unsigned int bytes = 0;
 };
 
+// Never destroyed: static objects (such as free lists) may still free memory during exit.
 Statistics& Stats()
 {
-	static Statistics stats;
-	return stats;
+	static Statistics* stats = new Statistics;
+	return *stats;
 }
 
 // Stored just before every aligned allocation.
@@ -133,7 +134,7 @@ void* TMemory::Recalloc(void*, unsigned int, MemBlock*)
 
 TMemory& TSTDCALL TMemory::GetMemManager()
 {
-	static TMemory manager;
+	static TMemory& manager = *new TMemory; // never destroyed, see Stats()
 	Initialise();
 	return manager;
 }
