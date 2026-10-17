@@ -20,10 +20,14 @@ add_library(toshi_kernel STATIC
   TFreeList.h
   TGenericDList.cpp
   TGenericDList.h
+  TGenericFifo.cpp
+  TGenericFifo.h
   TGenericNodeList.cpp
   TGenericNodeList.h
   TGenericNTree.cpp
   TGenericNTree.h
+  TGenericPool.cpp
+  TGenericPool.h
   TGenericPriList.cpp
   TGenericPriList.h
   THPTimer.cpp
@@ -52,6 +56,8 @@ add_library(toshi_kernel STATIC
   TNullFile.h
   TObject.cpp
   TObject.h
+  TPile.cpp
+  TPile.h
   TPlane.cpp
   TPlane.h
   TQuaternion.cpp

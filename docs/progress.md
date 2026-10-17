@@ -8,7 +8,7 @@ an x86 build); do not edit it by hand.
 <!-- coverage:begin -->
 | Module | Functions | Reimplemented | Coverage |
 |---|---:|---:|---:|
-| TKernelInterface | 1627 | 1405 | 86.4% |
+| TKernelInterface | 1627 | 1430 | 87.9% |
 | TApplication | 16 | 0 | 0.0% |
 | TInputInterface | 93 | 0 | 0.0% |
 | TInputDXInterface | 96 | 0 | 0.0% |
@@ -27,7 +27,7 @@ an x86 build); do not edit it by hand.
 | TSysShaderD3D | 52 | 0 | 0.0% |
 | TTerrainShaderD3D | 288 | 0 | 0.0% |
 | SimJP | 13680 | 0 | 0.0% |
-| **Total** | **20452** | **1405** | **6.9%** |
+| **Total** | **20452** | **1430** | **7.0%** |
 <!-- coverage:end -->
 
 ## Verification
@@ -36,6 +36,12 @@ original export on the same inputs. Float results must match bit for bit unless 
 justifies a tolerance.
 
 ## Log
+- 2026-10-17: Pools: `TPile` (bump allocator over blocks), `TGenericPool` (fixed-size items)
+  and `TGenericFifo` (semaphore ring). Allocation patterns (block and offset of every result),
+  free lists and FIFO contents match the original. Quirks kept: a failed `RawAlloc` still moves
+  the cursor, and `RawIsInside` takes blocks as four times their size. Alignment uses
+  `std::align` (no pointer/int casts); block links are pointer-sized (4 bytes on x86, as the
+  original).
 - 2026-10-17: `TRandom`: ISAAC with a 16-word state; the seed is added to the golden ratio
   before randinit's scramble (no seed array). State and every getter match the original bit for
   bit on 50 seeds.
