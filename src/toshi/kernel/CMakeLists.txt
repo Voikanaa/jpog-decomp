@@ -56,6 +56,8 @@ add_library(toshi_kernel STATIC
   TPlane.h
   TQuaternion.cpp
   TQuaternion.h
+  TRandom.cpp
+  TRandom.h
   TRefCounted.cpp
   TRefCounted.h
   TScheduler.cpp
