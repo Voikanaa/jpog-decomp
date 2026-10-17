@@ -1,12 +1,14 @@
 #include "support/Differential.h"
 #include "support/FloatCompare.h"
 #include "support/OriginalModule.h"
+#include "toshi/kernel/TGenericDList.h"
 #include "toshi/kernel/TGenericNodeList.h"
 
 #include <array>
 #include <doctest/doctest.h>
 #include <vector>
 
+using Toshi::TGenericDList;
 using Toshi::TGenericNodeList;
 using namespace jpog::test;
 
@@ -260,6 +262,155 @@ TEST_SUITE("TContainers differential" * doctest::skip(KernelMissing()))
 			}
 			for (auto& list : originalLists)
 				removeAll(&list);
+		}
+	}
+
+	TEST_CASE("TGenericDList matches the original")
+	{
+		// Exposes the protected interface of the list and its nodes.
+		struct TTestDList : TGenericDList
+		{
+			using TGenericDList::InsertHead;
+			using TGenericDList::InsertSegmentAfter;
+			using TGenericDList::InsertSegmentAtHead;
+			using TGenericDList::InsertSegmentAtTail;
+			using TGenericDList::InsertSegmentBefore;
+			using TGenericDList::InsertTail;
+			using TGenericDList::RemoveAll;
+			using TGenericDList::RemoveHead;
+			using TGenericDList::RemoveSegment;
+			using TGenericDList::RemoveTail;
+		};
+		struct DNode
+		{
+			DNode* next;
+			DNode* prev;
+		};
+		using P = void*;
+		const auto listCtor = Original<Method<void>>("??0TGenericDList@Toshi@@IAE@XZ");
+		const auto nodeCtor = Original<Method<void>>("??0TNode@TGenericDList@Toshi@@IAE@XZ");
+		const auto insertHead = Original<Method<void, P>>("?InsertHead@TGenericDList@Toshi@@IAEXPAVTNode@12@@Z");
+		const auto insertTail = Original<Method<void, P>>("?InsertTail@TGenericDList@Toshi@@IAEXPAVTNode@12@@Z");
+		const auto removeHead = Original<Method<void>>("?RemoveHead@TGenericDList@Toshi@@IAEXXZ");
+		const auto removeTail = Original<Method<void>>("?RemoveTail@TGenericDList@Toshi@@IAEXXZ");
+		const auto removeAll = Original<Method<void>>("?RemoveAll@TGenericDList@Toshi@@IAEXXZ");
+		const auto atHead =
+		    Original<Method<void, P, P>>("?InsertSegmentAtHead@TGenericDList@Toshi@@IAEXPAVTNode@12@0@Z");
+		const auto atTail =
+		    Original<Method<void, P, P>>("?InsertSegmentAtTail@TGenericDList@Toshi@@IAEXPAVTNode@12@0@Z");
+		using Segment3 = void(__stdcall*)(P, P, P);
+		const auto after = Original<Segment3>("?InsertSegmentAfter@TGenericDList@Toshi@@KGXPAVTNode@12@00@Z");
+		const auto before = Original<Segment3>("?InsertSegmentBefore@TGenericDList@Toshi@@KGXPAVTNode@12@00@Z");
+		const auto removeSegment =
+		    Original<void(__stdcall*)(P, P)>("?RemoveSegment@TGenericDList@Toshi@@KGXPAVTNode@12@0@Z");
+
+		constexpr int kNodes = 10;
+		// Index i < kNodes is a node, kNodes is the list sentinel.
+		auto describe = [&](const DNode* base)
+		{
+			std::vector<int> links;
+			for (int i = 0; i <= kNodes; ++i)
+			{
+				links.push_back(static_cast<int>(base[i].next - base));
+				links.push_back(static_cast<int>(base[i].prev - base));
+			}
+			return links;
+		};
+		InputGenerator gen;
+		for (int round = 0; round < 300; ++round)
+		{
+			// The list's sentinel is placed right after the nodes, so that all links are indices.
+			std::array<DNode, kNodes + 1> original{};
+			std::array<DNode, kNodes + 1> ours{};
+			for (int i = 0; i < kNodes; ++i)
+				nodeCtor(&original[i]);
+			listCtor(&original[kNodes]);
+			for (auto& node : ours)
+				node = {&node, &node};
+			auto* ourList = reinterpret_cast<TTestDList*>(&ours[kNodes]);
+			auto* o = original.data();
+			auto* m = ours.data();
+			auto isLinked = [&](int i) { return m[i].next != &m[i]; };
+
+			for (int step = 0; step < 40; ++step)
+			{
+				const int a = gen.NextInt(0, kNodes - 1);
+				switch (gen.NextU32() % 6)
+				{
+				case 0:
+					if (!isLinked(a))
+					{
+						(step & 1) ? insertHead(&o[kNodes], &o[a]) : insertTail(&o[kNodes], &o[a]);
+						(step & 1) ? ourList->InsertHead(reinterpret_cast<TGenericDList::TNode*>(&m[a]))
+						           : ourList->InsertTail(reinterpret_cast<TGenericDList::TNode*>(&m[a]));
+					}
+					break;
+				case 1:
+					(step & 1) ? removeHead(&o[kNodes]) : removeTail(&o[kNodes]);
+					(step & 1) ? ourList->RemoveHead() : ourList->RemoveTail();
+					break;
+				case 2:
+				{
+					// Detach a segment of the list (two linked nodes in list order), then reinsert it.
+					if (!isLinked(a))
+						break;
+					int last = a;
+					if (m[last].next != &m[kNodes] && gen.NextU32() % 2)
+						last = static_cast<int>(m[last].next - m);
+					removeSegment(&o[a], &o[last]);
+					TTestDList::RemoveSegment(reinterpret_cast<TGenericDList::TNode*>(&m[a]),
+					                          reinterpret_cast<TGenericDList::TNode*>(&m[last]));
+					// RemoveSegment only closes the outer ends; reconnect the segment's own ends
+					// into a list by inserting it again.
+					const int where = gen.NextInt(0, 3);
+					if (where == 0)
+					{
+						atHead(&o[kNodes], &o[a], &o[last]);
+						ourList->InsertSegmentAtHead(reinterpret_cast<TGenericDList::TNode*>(&m[a]),
+						                             reinterpret_cast<TGenericDList::TNode*>(&m[last]));
+					}
+					else if (where == 1)
+					{
+						atTail(&o[kNodes], &o[a], &o[last]);
+						ourList->InsertSegmentAtTail(reinterpret_cast<TGenericDList::TNode*>(&m[a]),
+						                             reinterpret_cast<TGenericDList::TNode*>(&m[last]));
+					}
+					else
+					{
+						// Next to the sentinel or a node still in the list.
+						int position = gen.NextInt(0, kNodes);
+						if (position < kNodes && (!isLinked(position) || position == a || position == last))
+							position = kNodes;
+						auto* op = &o[position];
+						auto* mp = reinterpret_cast<TGenericDList::TNode*>(&m[position]);
+						if (where == 2)
+						{
+							after(&o[a], &o[last], op);
+							TTestDList::InsertSegmentAfter(reinterpret_cast<TGenericDList::TNode*>(&m[a]),
+							                               reinterpret_cast<TGenericDList::TNode*>(&m[last]), mp);
+						}
+						else
+						{
+							before(&o[a], &o[last], op);
+							TTestDList::InsertSegmentBefore(reinterpret_cast<TGenericDList::TNode*>(&m[a]),
+							                                reinterpret_cast<TGenericDList::TNode*>(&m[last]), mp);
+						}
+					}
+					break;
+				}
+				case 3:
+					if (step % 15 == 0)
+					{
+						removeAll(&o[kNodes]);
+						ourList->RemoveAll();
+					}
+					break;
+				default:
+					break;
+				}
+				INFO("step ", step);
+				CHECK(describe(o) == describe(m));
+			}
 		}
 	}
 }
