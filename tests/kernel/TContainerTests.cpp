@@ -3,9 +3,11 @@
 #include "support/OriginalModule.h"
 #include "toshi/kernel/TGenericDList.h"
 #include "toshi/kernel/TGenericNodeList.h"
+#include "toshi/kernel/TGenericPriList.h"
 
 #include <array>
 #include <doctest/doctest.h>
+#include <new>
 #include <vector>
 
 using Toshi::TGenericDList;
@@ -406,6 +408,128 @@ TEST_SUITE("TContainers differential" * doctest::skip(KernelMissing()))
 					}
 					break;
 				default:
+					break;
+				}
+				INFO("step ", step);
+				CHECK(describe(o) == describe(m));
+			}
+		}
+	}
+
+	TEST_CASE("TGenericPriList matches the original")
+	{
+		struct TTestPriList : Toshi::TGenericPriList
+		{
+			using TGenericPriList::Insert;
+			using TGenericPriList::InsertHead;
+			using TGenericPriList::InsertTail;
+			using TGenericPriList::RemoveAll;
+			using TGenericPriList::RemoveHead;
+			using TGenericPriList::RemoveTail;
+			using TGenericPriList::SetPriority;
+		};
+		struct PNodeType : Toshi::TGenericPriList::TNode
+		{
+			PNodeType() = default; // the protected TNode() constructor
+		};
+		struct PNode
+		{
+			PNode* next;
+			PNode* prev;
+			int priority;
+		};
+		using P = void*;
+		const auto listCtor = Original<Method<void>>("??0TGenericPriList@Toshi@@QAE@XZ");
+		const auto nodeCtor = Original<Method<void>>("??0TNode@TGenericPriList@Toshi@@IAE@XZ");
+		const auto insert = Original<Method<void, P, int>>("?Insert@TGenericPriList@Toshi@@IAEXPAVTNode@12@H@Z");
+		const auto insertHead = Original<Method<void, P>>("?InsertHead@TGenericPriList@Toshi@@IAEXPAVTNode@12@@Z");
+		const auto insertTail = Original<Method<void, P>>("?InsertTail@TGenericPriList@Toshi@@IAEXPAVTNode@12@@Z");
+		const auto setPriority =
+		    Original<Method<void, P, int>>("?SetPriority@TGenericPriList@Toshi@@IAEXPAVTNode@12@H@Z");
+		const auto removeHead = Original<Method<void>>("?RemoveHead@TGenericPriList@Toshi@@IAEXXZ");
+		const auto removeTail = Original<Method<void>>("?RemoveTail@TGenericPriList@Toshi@@IAEXXZ");
+		const auto removeAll = Original<Method<void>>("?RemoveAll@TGenericPriList@Toshi@@IAEXXZ");
+		const auto nodeRemove = Original<Method<void>>("?Remove@TNode@TGenericPriList@Toshi@@IAEXXZ");
+
+		constexpr int kNodes = 10;
+		auto describe = [&](const PNode* base)
+		{
+			std::vector<int> state;
+			for (int i = 0; i <= kNodes; ++i)
+			{
+				state.push_back(static_cast<int>(base[i].next - base));
+				state.push_back(static_cast<int>(base[i].prev - base));
+				if (i < kNodes)
+					state.push_back(base[i].priority);
+			}
+			return state;
+		};
+		InputGenerator gen;
+		for (int round = 0; round < 300; ++round)
+		{
+			// The 8-byte list occupies the slot after the nodes, so links are array indices.
+			std::array<PNode, kNodes + 1> original{};
+			std::array<PNode, kNodes + 1> ours{};
+			for (int i = 0; i < kNodes; ++i)
+				nodeCtor(&original[i]);
+			listCtor(&original[kNodes]);
+			for (int i = 0; i < kNodes; ++i)
+				new (&ours[i]) PNodeType();
+			auto* ourList = new (&ours[kNodes]) TTestPriList();
+			auto* o = original.data();
+			auto* m = ours.data();
+			auto node = [&](int i)
+			{ return static_cast<Toshi::TGenericPriList::TNode*>(reinterpret_cast<PNodeType*>(&m[i])); };
+			auto isLinked = [&](int i) { return m[i].next != &m[i]; };
+
+			for (int step = 0; step < 40; ++step)
+			{
+				const int a = gen.NextInt(0, kNodes - 1);
+				const int priority = gen.NextInt(-3, 3);
+				switch (gen.NextU32() % 6)
+				{
+				case 0:
+				case 1:
+					if (!isLinked(a))
+					{
+						insert(&o[kNodes], &o[a], priority);
+						ourList->Insert(node(a), priority);
+					}
+					break;
+				case 2:
+					if (!isLinked(a))
+					{
+						(step & 1) ? insertHead(&o[kNodes], &o[a]) : insertTail(&o[kNodes], &o[a]);
+						(step & 1) ? ourList->InsertHead(node(a)) : ourList->InsertTail(node(a));
+					}
+					break;
+				case 3:
+					if (isLinked(a))
+					{
+						setPriority(&o[kNodes], &o[a], priority);
+						ourList->SetPriority(node(a), priority);
+					}
+					break;
+				case 4:
+					if (isLinked(a) && (step & 1))
+					{
+						nodeRemove(&o[a]);
+						m[a].prev->next = m[a].next; // TNode::Remove is protected; same unlink
+						m[a].next->prev = m[a].prev;
+						m[a].next = m[a].prev = &m[a];
+					}
+					else
+					{
+						(step & 2) ? removeHead(&o[kNodes]) : removeTail(&o[kNodes]);
+						(step & 2) ? ourList->RemoveHead() : ourList->RemoveTail();
+					}
+					break;
+				default:
+					if (step % 12 == 0)
+					{
+						removeAll(&o[kNodes]);
+						ourList->RemoveAll();
+					}
 					break;
 				}
 				INFO("step ", step);
