@@ -28,6 +28,9 @@ Reverse engineering / decompilation of *Jurassic Park: Operation Genesis* (2003,
 2. **Need an external tool or dependency? Ask the user first.** Do not download or install anything on your own.
    Approved tools live under `toolchain/`.
 3. **Keep this CLAUDE.md up to date.** Whenever structure, tools, findings, or workflows change, update this file in the same step.
+4. **Token budget:** once 95% of the context/token limit is used, stop starting new work: save
+   the current task (commit and push verified work, note unfinished steps in the relevant issue),
+   then end the task.
 
 ## License
 GPL-3.0-or-later (`LICENSE`, the official GNU text), chosen 2026-10-17. It covers our code, tools
@@ -98,7 +101,7 @@ MIT, BSD, zlib, or LGPL linked dynamically.
   indirect imports; identify them from context (neighbouring identical sequences, arguments).
 - `tools/` — `setup_mcp.py` (writes `.mcp.json` for this clone), `check_repo.py` (hygiene: no game files or files over 5 MB), `msvc.py` (finds VS/MSVC tools via vswhere; no hardcoded paths), `dump_exports.py`, `build.bat <preset>` (finds VS via vswhere, sets up the MSVC env per-process, then runs CMake + Ninja)
 - `src/` — reimplementation: `common/` (`abi.h` TSTDCALL, `layout.h`), `toshi/kernel/` (static lib
-  `toshi_kernel`: TMath, TVector2, TVector3 implemented; TCString/TObject/TClass/TKernelInterface
+  `toshi_kernel`: TMath, TVector2, TVector3, TVector4 implemented; TCString/TObject/TClass/TKernelInterface
   declared only), `toshi/application/` and `toshi/render/` (declarations only), `game/` (**jpog.exe**:
   WinMain, `AApplication`, `CrashHandler`), `hook/` (x86 DLL, deferred, `JPOG_HOOK=ON` only)
 - **Hybrid launch (x86):** `jpog.exe` links against the original, unprotected engine DLLs through
