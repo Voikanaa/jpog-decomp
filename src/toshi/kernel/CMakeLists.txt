@@ -19,6 +19,8 @@ add_library(toshi_kernel STATIC
   TGenericNodeList.h
   TGenericPriList.cpp
   TGenericPriList.h
+  TISOFile.cpp
+  TISOFile.h
   TMath.cpp
   TMath.h
   TMatrix44.cpp
