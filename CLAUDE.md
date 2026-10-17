@@ -55,8 +55,8 @@ LGPL linked dynamically).
 - `symbols/` per-module exports/imports CSV, `classes.csv`, `vtables.csv` (generated).
 - `docs/` `plan.md` (roadmap), `modules.md` (binary map), `progress.md` (coverage + log).
 - `src/` `common/` (`abi.h` TSTDCALL, `layout.h`); `toshi/kernel/` (lib `toshi_kernel`: TMath,
-  TVector2/3/4, TQuaternion implemented; TCString/TObject/TClass/TKernelInterface declared);
-  `toshi/application/`, `toshi/render/` (declarations); `game/` (**jpog.exe**: WinMain,
+  TVector2/3/4, TQuaternion, TMatrix44, TPlane implemented; TCString/TObject/TClass/
+  TKernelInterface declared); `toshi/application/`, `toshi/render/` (declarations); `game/` (**jpog.exe**: WinMain,
   `AApplication`, `CrashHandler`); `hook/` (deferred, `JPOG_HOOK=ON`).
 - `tests/` doctest suite `jpog_tests` (run by ctest). `support/OriginalModule` loads the original
   DLLs from `JPOG_ORIGINAL_DIR` (default `<root>/JPOG`) for differential tests (x86 only, skipped
@@ -82,8 +82,9 @@ LGPL linked dynamically).
   functions. `tools/resolve_imports.py` writes `SimJP.resolved.c` (IAT calls named; use it for
   game code). `tools/dump_vtables.py` → `symbols/vtables.csv` (**class declarations must follow
   it**). Also `dump_exports.py`, `check_repo.py`, `msvc.py`, `setup_mcp.py`.
-- `dumpbin /disasm /range:a,b` (VS, `VC\Tools\MSVC\14.51.36231\bin\Hostx64\x64`) for exact
-  instruction order when Ghidra's operand order is ambiguous.
+- `tools/x87_expr.py <Module> <func|addr> [--args this,a] [--matrix] [--follow ADDR]`: symbolic
+  x87 execution of an original function; prints each store as a fully parenthesised expression
+  (spills become `tN`). **Use it for all float code**; Ghidra's sums are not reliable.
 - Installed system-wide: VS Build Tools 2026 (MSVC 14.51, SDK 10.0.26100, CMake/Ninja), git,
   Python 3.15, JDK 25. Project-local `toolchain/`: Ghidra 12.1.4, clang-format 20.1.8, gh 2.102.0
   (user logs in once with `gh auth login`).
@@ -100,8 +101,8 @@ LGPL linked dynamically).
 - fsin/fcos/fpatan are not affected by precision control: emulate them in double and round
   only the following arithmetic. `TMath::ACos` etc. return their double result in ST0, so callers
   that use the value directly (e.g. `TQuaternion::Slerp`) see a double.
-- Ghidra prints commutative operands in arbitrary order; check grouping in the disassembly when a
-  test is off by 1 ULP.
+- Ghidra prints commutative operands in arbitrary order and reassociates x87 sums: take float
+  evaluation order from `tools/x87_expr.py`.
 - Launch 1 reached (our `jpog.exe` opens the D3D8 window through the original DLLs). Open bug #20:
   crash on exit in `TRenderD3DInterface::DestroyDisplay` (texture at `this+0xF0`).
 - Static constants in the DLLs are BSS, initialised at runtime: verify them through the loaded

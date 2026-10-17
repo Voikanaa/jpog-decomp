@@ -1,6 +1,7 @@
 #include "toshi/kernel/TQuaternion.h"
 
 #include "toshi/kernel/TMath.h"
+#include "toshi/kernel/TMatrix44.h"
 #include "toshi/kernel/TVector4.h"
 
 #include <cmath>
@@ -140,6 +141,34 @@ void TQuaternion::SetFromEulerRollPitchYaw(float roll, float pitch, float yaw)
 	x = MulRounded(MulRounded(cosYaw, cosPitch), sinRoll) - MulRounded(MulRounded(sinYaw, sinPitch), cosRoll);
 	y = MulRounded(MulRounded(cosPitch, sinRoll), sinYaw) + MulRounded(MulRounded(sinPitchF, cosRoll), cosYawF);
 	z = MulRounded(MulRounded(cosRoll, cosPitch), sinYaw) - MulRounded(MulRounded(sinRoll, sinPitchF), cosYawF);
+}
+
+// angles = (x, y, z), read from the rotation matrix. Near gimbal lock (|cos y| <= 0.001) z is 0.
+// The x87 fpatan/asin results are rounded to float only when stored.
+void TQuaternion::GetEulerXYZ(float* angles) const
+{
+	TMatrix44 matrix;
+	matrix.SetFromQuaternion(*this);
+	const auto& m = matrix.m;
+	float sinY = m[2][0];
+	if (sinY < -1.0f)
+		sinY = -1.0f;
+	else if (1.0f < sinY)
+		sinY = 1.0f;
+	float cosY = std::sqrt(1.0f - sinY * sinY);
+	if (m[0][0] < 0.0f && m[2][2] < 0.0f)
+		cosY = -cosY;
+	if (cosY <= 0.001f && -0.001f <= cosY)
+	{
+		angles[0] = static_cast<float>(std::atan2(static_cast<double>(-m[2][1]), static_cast<double>(m[1][1])));
+		angles[1] = static_cast<float>(-std::asin(static_cast<double>(sinY)));
+		angles[2] = 0.0f;
+		return;
+	}
+	const float inv = 1.0f / cosY;
+	angles[0] = static_cast<float>(std::atan2(static_cast<double>(m[2][1] * inv), static_cast<double>(inv * m[2][2])));
+	angles[1] = static_cast<float>(std::atan2(static_cast<double>(sinY), static_cast<double>(cosY)));
+	angles[2] = static_cast<float>(std::atan2(static_cast<double>(m[1][0] * inv), static_cast<double>(inv * m[0][0])));
 }
 
 void TQuaternion::GetVectorDirection(TVector3& direction) const
