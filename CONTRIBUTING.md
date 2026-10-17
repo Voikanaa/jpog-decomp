@@ -24,9 +24,9 @@ Put your game install in `JPOG/` and a working copy in `game/`. See the README f
 2. Implement clean C++ under `src/`, in the module directory that matches the original DLL.
 3. Verify it with a differential test in `tests/` that calls the original export
    (`Original<Fn>("<mangled name>")` from `tests/support/Differential.h`) and our function on
-   the same inputs. Floats must match exactly unless a comment justifies a tolerance. If a result
-   is off by one ULP, check the operation order in the disassembly (`dumpbin /disasm`): Ghidra
-   prints commutative operands in arbitrary order.
+   the same inputs. Floats must match exactly unless a comment justifies a tolerance. Take the
+   evaluation order of float code from `tools/x87_expr.py`, not from Ghidra, which does not
+   preserve the association of x87 sums.
 4. Run `python tools/coverage.py`, which regenerates the coverage table in `docs/progress.md`
    and the README badge (CI checks both are current).
 5. Keep the docs current in the same commit: the log in `docs/progress.md`, `docs/plan.md` if a
