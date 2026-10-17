@@ -8,6 +8,7 @@ add_executable(jpog_tests
   kernel/TMatrix44Tests.cpp
   kernel/TMemoryTests.cpp
   kernel/TQuaternionTests.cpp
+  kernel/TStringTests.cpp
   kernel/TVectorTests.cpp
 )
 target_include_directories(jpog_tests PRIVATE .)
