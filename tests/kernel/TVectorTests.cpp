@@ -2,6 +2,7 @@
 #include "support/OriginalModule.h"
 #include "toshi/kernel/TVector2.h"
 #include "toshi/kernel/TVector3.h"
+#include "toshi/kernel/TVector4.h"
 
 #include <bit>
 #include <cmath>
@@ -9,10 +10,12 @@
 #include <cstdio>
 #include <doctest/doctest.h>
 #include <initializer_list>
+#include <type_traits>
 #include <utility>
 
 using Toshi::TVector2;
 using Toshi::TVector3;
+using Toshi::TVector4;
 using namespace jpog::test;
 
 namespace
@@ -34,6 +37,11 @@ bool Same(const TVector3& a, const TVector3& b)
 	return Same(a.x, b.x) && Same(a.y, b.y) && Same(a.z, b.z);
 }
 
+bool Same(const TVector4& a, const TVector4& b)
+{
+	return Same(a.x, b.x) && Same(a.y, b.y) && Same(a.z, b.z) && Same(a.w, b.w);
+}
+
 doctest::String ToString(const TVector2& v)
 {
 	return doctest::toString(v.x) + ", " + doctest::toString(v.y);
@@ -44,6 +52,12 @@ doctest::String ToString(const TVector3& v)
 	return doctest::toString(v.x) + ", " + doctest::toString(v.y) + ", " + doctest::toString(v.z);
 }
 
+doctest::String ToString(const TVector4& v)
+{
+	return doctest::toString(v.x) + ", " + doctest::toString(v.y) + ", " + doctest::toString(v.z) + ", " +
+	       doctest::toString(v.w);
+}
+
 TVector2 Random2(InputGenerator& gen, float range = 100.0f)
 {
 	return TVector2(gen.NextFloat(-range, range), gen.NextFloat(-range, range));
@@ -52,6 +66,12 @@ TVector2 Random2(InputGenerator& gen, float range = 100.0f)
 TVector3 Random3(InputGenerator& gen, float range = 100.0f)
 {
 	return TVector3(gen.NextFloat(-range, range), gen.NextFloat(-range, range), gen.NextFloat(-range, range));
+}
+
+TVector4 Random4(InputGenerator& gen, float range = 100.0f)
+{
+	return TVector4(gen.NextFloat(-range, range), gen.NextFloat(-range, range), gen.NextFloat(-range, range),
+	                gen.NextFloat(-range, range));
 }
 
 } // namespace
@@ -156,8 +176,12 @@ template <> TVector3 MakeRandom<TVector3>(InputGenerator& gen)
 {
 	return Random3(gen);
 }
+template <> TVector4 MakeRandom<TVector4>(InputGenerator& gen)
+{
+	return Random4(gen);
+}
 
-// Shared checks for the members TVector2 and TVector3 have in common. `names` holds the
+// Shared checks for the members TVector2, TVector3 and TVector4 have in common. `names` holds the
 // class-specific part of each mangled name.
 template <typename V> void CheckCommonMembers(const char* cls)
 {
@@ -447,7 +471,10 @@ template <typename V> void CheckCommonMembers(const char* cls)
 	const auto isEqual = Original<QueryBoolVec<V>>(name("?IsEqual@%s@Toshi@@QBE_NABV12@@Z"));
 	const auto equal = Original<QueryBoolVec<V>>(name("??8%s@Toshi@@QBE_NABV01@@Z"));
 	const auto notEqual = Original<QueryBoolVec<V>>(name("??9%s@Toshi@@QBE_NABV01@@Z"));
-	const auto isNormalised = Original<QueryBoolFloat<V>>(name("?IsNormalised@%s@Toshi@@QBE_NM@Z"));
+	constexpr bool hasIsNormalised = !std::is_same_v<V, TVector4>;
+	QueryBoolFloat<V> isNormalised{};
+	if constexpr (hasIsNormalised)
+		isNormalised = Original<QueryBoolFloat<V>>(name("?IsNormalised@%s@Toshi@@QBE_NM@Z"));
 	InputGenerator gen;
 	for (int i = 0; i < kIterations; ++i)
 	{
@@ -466,8 +493,11 @@ template <typename V> void CheckCommonMembers(const char* cls)
 		CHECK(isEqual(&a, &b) == a.IsEqual(b));
 		CHECK(equal(&a, &b) == (a == b));
 		CHECK(notEqual(&a, &b) == (a != b));
-		CHECK(isNormalised(&unitish, tolerance) == unitish.IsNormalised(tolerance));
-		CHECK(isNormalised(&a, tolerance) == a.IsNormalised(tolerance));
+		if constexpr (hasIsNormalised)
+		{
+			CHECK(isNormalised(&unitish, tolerance) == unitish.IsNormalised(tolerance));
+			CHECK(isNormalised(&a, tolerance) == a.IsNormalised(tolerance));
+		}
 	}
 }
 
@@ -684,6 +714,218 @@ TEST_SUITE("TVector differential" * doctest::skip(KernelMissing()))
 		                                            {"VEC_POSXNEGZ", &TVector3::VEC_POSXNEGZ},
 		                                            {"VEC_NEGXPOSZ", &TVector3::VEC_NEGXPOSZ},
 		                                            {"VEC_NEGXNEGZ", &TVector3::VEC_NEGXNEGZ}});
+	}
+	TEST_CASE("TVector4 common members")
+	{
+		GamePrecisionScope precision;
+		CheckCommonMembers<TVector4>("TVector4");
+	}
+
+	TEST_CASE("TVector4 specific members")
+	{
+		GamePrecisionScope precision;
+		auto rand = [](InputGenerator& g) { return Random4(g); };
+		// Some inputs share components (or are signed zeros) to exercise the Max/Min tie cases.
+		auto withTies = [](InputGenerator& g, const TVector4& like)
+		{
+			TVector4 v = Random4(g);
+			for (unsigned int i = 0; i < 4; ++i)
+			{
+				const uint32_t pick = g.NextU32() % 4;
+				if (pick == 0)
+					v(i) = like(i);
+				else if (pick == 1)
+					v(i) = -0.0f;
+				else if (pick == 2)
+					v(i) = 0.0f;
+			}
+			return v;
+		};
+
+		const struct
+		{
+			const char* mangled;
+			void (TVector4::*ours)();
+		} unary[] = {
+		    {"?Negate3@TVector4@Toshi@@QAEXXZ", &TVector4::Negate3},
+		    {"?Negate4@TVector4@Toshi@@QAEXXZ", &TVector4::Negate4},
+		};
+		for (const auto& c : unary)
+		{
+			const auto fn = Original<Unary<TVector4>>(c.mangled);
+			CheckMutator<TVector4>(c.mangled, rand,
+			                       [&](InputGenerator&, TVector4& o, TVector4& m)
+			                       {
+				                       fn(&o);
+				                       (m.*c.ours)();
+			                       });
+		}
+
+		const struct
+		{
+			const char* mangled;
+			void (TVector4::*ours)(const TVector4&);
+		} withVec[] = {
+		    {"?Negate3@TVector4@Toshi@@QAEXABV12@@Z", &TVector4::Negate3},
+		    {"?Negate4@TVector4@Toshi@@QAEXABV12@@Z", &TVector4::Negate4},
+		    {"?Multiply4@TVector4@Toshi@@QAEXABV12@@Z", &TVector4::Multiply4},
+		    {"?Sin@TVector4@Toshi@@QAEXABV12@@Z", &TVector4::Sin},
+		    {"?Cos@TVector4@Toshi@@QAEXABV12@@Z", &TVector4::Cos},
+		    {"?Max@TVector4@Toshi@@QAEXABV12@@Z", &TVector4::Max},
+		    {"?Min@TVector4@Toshi@@QAEXABV12@@Z", &TVector4::Min},
+		};
+		for (const auto& c : withVec)
+		{
+			const auto fn = Original<WithVec<TVector4>>(c.mangled);
+			CheckMutator<TVector4>(c.mangled, rand,
+			                       [&](InputGenerator& g, TVector4& o, TVector4& m)
+			                       {
+				                       const TVector4 v = withTies(g, o);
+				                       fn(&o, &v);
+				                       (m.*c.ours)(v);
+			                       });
+		}
+
+		const struct
+		{
+			const char* mangled;
+			void (TVector4::*ours)(const TVector4&, const TVector4&);
+		} withTwoVecs[] = {
+		    {"?Subtract4@TVector4@Toshi@@QAEXABV12@0@Z", &TVector4::Subtract4},
+		    {"?CrossProduct@TVector4@Toshi@@QAEXABV12@0@Z", &TVector4::CrossProduct},
+		    {"?Max@TVector4@Toshi@@QAEXABV12@0@Z", &TVector4::Max},
+		    {"?Min@TVector4@Toshi@@QAEXABV12@0@Z", &TVector4::Min},
+		};
+		for (const auto& c : withTwoVecs)
+		{
+			const auto fn = Original<WithTwoVecs<TVector4>>(c.mangled);
+			CheckMutator<TVector4>(c.mangled, rand,
+			                       [&](InputGenerator& g, TVector4& o, TVector4& m)
+			                       {
+				                       const TVector4 a = Random4(g);
+				                       const TVector4 b = withTies(g, a);
+				                       fn(&o, &a, &b);
+				                       (m.*c.ours)(a, b);
+			                       });
+		}
+
+		const struct
+		{
+			const char* mangled;
+			void (TVector4::*ours)(float);
+		} withFloat[] = {
+		    {"?Max@TVector4@Toshi@@QAEXM@Z", &TVector4::Max},
+		    {"?Min@TVector4@Toshi@@QAEXM@Z", &TVector4::Min},
+		    {"?RotateX@TVector4@Toshi@@QAEXM@Z", &TVector4::RotateX},
+		    {"?RotateY@TVector4@Toshi@@QAEXM@Z", &TVector4::RotateY},
+		    {"?RotateZ@TVector4@Toshi@@QAEXM@Z", &TVector4::RotateZ},
+		};
+		for (const auto& c : withFloat)
+		{
+			const auto fn = Original<WithFloat<TVector4>>(c.mangled);
+			CheckMutator<TVector4>(c.mangled, rand,
+			                       [&](InputGenerator& g, TVector4& o, TVector4& m)
+			                       {
+				                       const float s = (g.NextU32() % 4 == 0) ? o.y : g.NextFloat(-10.0f, 10.0f);
+				                       fn(&o, s);
+				                       (m.*c.ours)(s);
+			                       });
+		}
+
+		const struct
+		{
+			const char* mangled;
+			void (TVector4::*ours)(const TVector4&, float);
+		} withVecFloat[] = {
+		    {"?Max@TVector4@Toshi@@QAEXABV12@M@Z", &TVector4::Max},
+		    {"?Min@TVector4@Toshi@@QAEXABV12@M@Z", &TVector4::Min},
+		    {"?Lerp@TVector4@Toshi@@QAEXABV12@M@Z", &TVector4::Lerp},
+		    {"?Lerp3@TVector4@Toshi@@QAEXABV12@M@Z", &TVector4::Lerp3},
+		};
+		for (const auto& c : withVecFloat)
+		{
+			const auto fn = Original<WithVecFloat<TVector4>>(c.mangled);
+			CheckMutator<TVector4>(c.mangled, rand,
+			                       [&](InputGenerator& g, TVector4& o, TVector4& m)
+			                       {
+				                       const TVector4 v = Random4(g);
+				                       const float s = (g.NextU32() % 4 == 0) ? v.x : g.NextFloat(-1.0f, 1.0f);
+				                       fn(&o, &v, s);
+				                       (m.*c.ours)(v, s);
+			                       });
+		}
+
+		{
+			const auto fn = Original<WithTwoVecsFloat<TVector4>>("?Lerp3@TVector4@Toshi@@QAEXABV12@0M@Z");
+			CheckMutator<TVector4>("Lerp3(a,b,t)", rand,
+			                       [&](InputGenerator& g, TVector4& o, TVector4& m)
+			                       {
+				                       const TVector4 a = Random4(g), b = Random4(g);
+				                       const float t = g.NextFloat(0.0f, 1.0f);
+				                       fn(&o, &a, &b, t);
+				                       m.Lerp3(a, b, t);
+			                       });
+		}
+		{
+			using SetV3 = Method<void, const TVector3*>;
+			using SetArray = Method<void, const float*>;
+			using SetFloats = Method<void, float, float, float, float>;
+			const auto setV3 = Original<SetV3>("?Set@TVector4@Toshi@@QAEXABVTVector3@2@@Z");
+			const auto setArray = Original<SetArray>("?Set@TVector4@Toshi@@QAEXQBM@Z");
+			const auto setFloats = Original<SetFloats>("?Set@TVector4@Toshi@@QAEXMMMM@Z");
+			CheckMutator<TVector4>("Set", rand,
+			                       [&](InputGenerator& g, TVector4& o, TVector4& m)
+			                       {
+				                       const TVector4 v = Random4(g);
+				                       const TVector3 v3 = Random3(g);
+				                       switch (g.NextU32() % 3)
+				                       {
+				                       case 0:
+					                       setV3(&o, &v3);
+					                       m.Set(v3);
+					                       break;
+				                       case 1:
+					                       setArray(&o, &v.x);
+					                       m.Set(&v.x);
+					                       break;
+				                       default:
+					                       setFloats(&o, v.x, v.y, v.z, v.w);
+					                       m.Set(v.x, v.y, v.z, v.w);
+					                       break;
+				                       }
+			                       });
+		}
+
+		const auto dot3 = Original<QueryFloatVec<TVector4>>("?DotProduct3@TVector4@Toshi@@QBEMABV12@@Z");
+		const auto dot4 = Original<QueryFloatVec<TVector4>>("?DotProduct4@TVector4@Toshi@@QBEMABV12@@Z");
+		const auto dot3Static = Original<StaticFloatVecVec<TVector4>>("?DotProduct3@TVector4@Toshi@@SGMABV12@0@Z");
+		const auto dot4Static = Original<StaticFloatVecVec<TVector4>>("?DotProduct4@TVector4@Toshi@@SGMABV12@0@Z");
+		using AsV3 = Method<const TVector3*>;
+		using Index = Method<const float*, unsigned int>;
+		const auto asV3 = Original<AsV3>("?AsVector3@TVector4@Toshi@@QBEABVTVector3@2@XZ");
+		const auto index = Original<Index>("??RTVector4@Toshi@@QBEABMI@Z");
+		InputGenerator gen;
+		for (int i = 0; i < kIterations; ++i)
+		{
+			const TVector4 a = Random4(gen), b = Random4(gen);
+			INFO("a=(", ToString(a), ") b=(", ToString(b), ")");
+			CHECK(Same(dot3(&a, &b), a.DotProduct3(b)));
+			CHECK(Same(dot4(&a, &b), a.DotProduct4(b)));
+			CHECK(Same(dot3Static(&a, &b), TVector4::DotProduct3(a, b)));
+			CHECK(Same(dot4Static(&a, &b), TVector4::DotProduct4(a, b)));
+		}
+		const TVector4 v(1.0f, 2.0f, 3.0f, 4.0f);
+		CHECK(asV3(&v) == &v.AsVector3());
+		for (unsigned int i = 0; i < 4; ++i)
+			CHECK(index(&v, i) == &v(i));
+
+		CheckStaticConstants<TVector4>("TVector4", {{"VEC_ZERO", &TVector4::VEC_ZERO},
+		                                            {"VEC_POSX", &TVector4::VEC_POSX},
+		                                            {"VEC_POSY", &TVector4::VEC_POSY},
+		                                            {"VEC_POSZ", &TVector4::VEC_POSZ},
+		                                            {"VEC_NEGX", &TVector4::VEC_NEGX},
+		                                            {"VEC_NEGY", &TVector4::VEC_NEGY},
+		                                            {"VEC_NEGZ", &TVector4::VEC_NEGZ}});
 	}
 }
 

@@ -8,7 +8,7 @@ an x86 build); do not edit it by hand.
 <!-- coverage:begin -->
 | Module | Functions | Reimplemented | Coverage |
 |---|---:|---:|---:|
-| TKernelInterface | 1627 | 174 | 10.7% |
+| TKernelInterface | 1627 | 252 | 15.5% |
 | TApplication | 16 | 0 | 0.0% |
 | TInputInterface | 93 | 0 | 0.0% |
 | TInputDXInterface | 96 | 0 | 0.0% |
@@ -27,7 +27,7 @@ an x86 build); do not edit it by hand.
 | TSysShaderD3D | 52 | 0 | 0.0% |
 | TTerrainShaderD3D | 288 | 0 | 0.0% |
 | SimJP | 13680 | 0 | 0.0% |
-| **Total** | **20452** | **174** | **0.9%** |
+| **Total** | **20452** | **252** | **1.2%** |
 <!-- coverage:end -->
 
 ## Verification
@@ -36,6 +36,10 @@ original export on the same inputs. Float results must match bit for bit unless 
 justifies a tolerance.
 
 ## Log
+- 2026-10-17: `TVector4` reimplemented (all 78 exported members and the 7 constants). Most
+  operations only touch x, y and z; two-operand forms copy w from the first operand. Max/Min tie
+  handling matches the original's comparisons; about 160,000 new differential assertions match
+  bit for bit.
 - 2026-10-17: **Launch 1.** Our `jpog.exe` (WinMain + `AApplication`) links against the original
   engine DLLs via generated import libraries and opens the game's Direct3D 8 window. Exiting
   still crashes in the renderer teardown (tracked in an issue).
