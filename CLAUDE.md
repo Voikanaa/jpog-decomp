@@ -55,7 +55,7 @@ LGPL linked dynamically).
 - `symbols/` per-module exports/imports CSV, `classes.csv`, `vtables.csv` (generated).
 - `docs/` `plan.md` (roadmap), `modules.md` (binary map), `progress.md` (coverage + log).
 - `src/` `common/` (`abi.h` TSTDCALL, `layout.h`); `toshi/kernel/` (lib `toshi_kernel`: TMath,
-  TVector2/3/4, TQuaternion, TMatrix44, TPlane implemented; TCString/TObject/TClass/
+  TVector2/3/4, TQuaternion, TMatrix44, TPlane, TFreeList, TMemory core implemented; TCString/TObject/TClass/
   TKernelInterface declared); `toshi/application/`, `toshi/render/` (declarations); `game/` (**jpog.exe**: WinMain,
   `AApplication`, `CrashHandler`); `hook/` (deferred, `JPOG_HOOK=ON`).
 - `tests/` doctest suite `jpog_tests` (run by ctest). `support/OriginalModule` loads the original
