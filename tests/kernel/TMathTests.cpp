@@ -1,3 +1,4 @@
+#include "support/Differential.h"
 #include "support/FloatCompare.h"
 #include "support/OriginalModule.h"
 #include "toshi/kernel/TMath.h"
@@ -98,18 +99,6 @@ TEST_SUITE("TMath")
 
 namespace
 {
-
-bool KernelMissing()
-{
-	return !OriginalModule::Kernel().IsLoaded();
-}
-
-template <typename Fn> Fn Original(const char* mangledName)
-{
-	Fn fn = OriginalModule::Kernel().Get<Fn>(mangledName);
-	REQUIRE_MESSAGE(fn != nullptr, "export not found: " << mangledName);
-	return fn;
-}
 
 std::vector<float> FloatInputs(float min, float max, int randomCount = 2000)
 {

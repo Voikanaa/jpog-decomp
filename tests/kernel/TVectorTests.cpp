@@ -1,3 +1,4 @@
+#include "support/Differential.h"
 #include "support/FloatCompare.h"
 #include "support/OriginalModule.h"
 #include "toshi/kernel/TVector2.h"
@@ -21,11 +22,7 @@ using namespace jpog::test;
 namespace
 {
 
-// Bitwise equality (also distinguishes +0/-0); any two NaNs compare equal.
-bool Same(float a, float b)
-{
-	return std::bit_cast<uint32_t>(a) == std::bit_cast<uint32_t>(b) || (std::isnan(a) && std::isnan(b));
-}
+using jpog::test::Same;
 
 bool Same(const TVector2& a, const TVector2& b)
 {
@@ -118,18 +115,6 @@ TEST_SUITE("TVector")
 
 namespace
 {
-
-bool KernelMissing()
-{
-	return !OriginalModule::Kernel().IsLoaded();
-}
-
-template <typename Fn> Fn Original(const char* mangledName)
-{
-	const Fn fn = OriginalModule::Kernel().Get<Fn>(mangledName);
-	REQUIRE_MESSAGE(fn != nullptr, "export not found: " << mangledName);
-	return fn;
-}
 
 constexpr int kIterations = 2000;
 

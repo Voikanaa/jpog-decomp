@@ -8,7 +8,7 @@ an x86 build); do not edit it by hand.
 <!-- coverage:begin -->
 | Module | Functions | Reimplemented | Coverage |
 |---|---:|---:|---:|
-| TKernelInterface | 1627 | 252 | 15.5% |
+| TKernelInterface | 1627 | 298 | 18.3% |
 | TApplication | 16 | 0 | 0.0% |
 | TInputInterface | 93 | 0 | 0.0% |
 | TInputDXInterface | 96 | 0 | 0.0% |
@@ -27,7 +27,7 @@ an x86 build); do not edit it by hand.
 | TSysShaderD3D | 52 | 0 | 0.0% |
 | TTerrainShaderD3D | 288 | 0 | 0.0% |
 | SimJP | 13680 | 0 | 0.0% |
-| **Total** | **20452** | **252** | **1.2%** |
+| **Total** | **20452** | **298** | **1.5%** |
 <!-- coverage:end -->
 
 ## Verification
@@ -36,6 +36,11 @@ original export on the same inputs. Float results must match bit for bit unless 
 justifies a tolerance.
 
 ## Log
+- 2026-10-17: `TQuaternion` reimplemented (46 functions and its constants; `GetEulerXYZ` follows
+  with `TMatrix44`). Findings: `operator/=(TQuaternion)` divides z by y (an original bug, kept);
+  `TMath::ACos` and friends return their double result in ST0, so callers that use it directly
+  (Slerp) see a double, not a float; fsin/fcos results are extended precision. About 100,000
+  differential assertions match bit for bit.
 - 2026-10-17: `TVector4` reimplemented (all 78 exported members and the 7 constants). Most
   operations only touch x, y and z; two-operand forms copy w from the first operand. Max/Min tie
   handling matches the original's comparisons; about 160,000 new differential assertions match

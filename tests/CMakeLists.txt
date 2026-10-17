@@ -1,9 +1,11 @@
 add_executable(jpog_tests
   main.cpp
+  support/Differential.h
   support/FloatCompare.h
   support/OriginalModule.cpp
   support/OriginalModule.h
   kernel/TMathTests.cpp
+  kernel/TQuaternionTests.cpp
   kernel/TVectorTests.cpp
 )
 target_include_directories(jpog_tests PRIVATE .)
