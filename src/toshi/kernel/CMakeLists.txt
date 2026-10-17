@@ -24,6 +24,8 @@ add_library(toshi_kernel STATIC
   TGenericNodeList.h
   TGenericPriList.cpp
   TGenericPriList.h
+  THPTimer.cpp
+  THPTimer.h
   TISOFile.cpp
   TISOFile.h
   TLocale.cpp

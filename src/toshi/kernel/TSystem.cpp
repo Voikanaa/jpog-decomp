@@ -1,5 +1,6 @@
 #include "toshi/kernel/TSystem.h"
 
+#include "toshi/kernel/TCString.h"
 #include "toshi/kernel/TCStringPool.h"
 #include "toshi/kernel/TLocale.h"
 #include "toshi/kernel/TWStringPool.h"
@@ -8,6 +9,7 @@
 #include <cstdarg>
 #include <cstdio>
 #include <cstring>
+#include <ctime>
 #include <cwchar>
 #include <string.h> // _stricmp, _strnicmp
 #include <wchar.h>  // _wcsicmp, _wcsnicmp
@@ -250,6 +252,79 @@ TLocale* TSystem::GetLocale()
 	if (ms_poLocale == nullptr)
 		ms_poLocale = new TLocale();
 	return ms_poLocale;
+}
+
+// --- TDateTime -----------------------------------------------------------------------------
+
+TDateTime& TDateTime::operator=(const TDateTime& other)
+{
+	m_usYear = other.m_usYear;
+	m_ucMonth = other.m_ucMonth;
+	m_ucHour = other.m_ucHour;
+	m_ucMinute = other.m_ucMinute;
+	m_ucSecond = other.m_ucSecond;
+	m_ucDay = other.m_ucDay;
+	return *this;
+}
+
+void TDateTime::Pack(unsigned int& date, unsigned int& time)
+{
+	date = static_cast<unsigned int>(m_usYear) << 16 | static_cast<unsigned int>(m_ucMonth) << 8 | m_ucDay;
+	time = static_cast<unsigned int>(m_ucHour) << 24 | static_cast<unsigned int>(m_ucMinute) << 16 |
+	       static_cast<unsigned int>(m_ucSecond) << 8;
+}
+
+void TDateTime::UnPack(unsigned int& date, unsigned int& time)
+{
+	m_usYear = static_cast<unsigned short>(date >> 16);
+	m_ucMonth = static_cast<unsigned char>(date >> 8);
+	m_ucDay = static_cast<unsigned char>(date);
+	m_ucHour = static_cast<unsigned char>(time >> 24);
+	m_ucMinute = static_cast<unsigned char>(time >> 16);
+	m_ucSecond = static_cast<unsigned char>(time >> 8);
+}
+
+// --- TSystem: scratch memory and time ------------------------------------------------------
+
+unsigned char TSystem::ms_aScratchMem[0x400];
+
+TSystem& TSystem::operator=(const TSystem&)
+{
+	return *this;
+}
+
+unsigned char* TSystem::GetScratchMem()
+{
+	return ms_aScratchMem;
+}
+
+char* TSystem::GetTempCString()
+{
+	return reinterpret_cast<char*>(ms_aScratchMem);
+}
+
+unsigned short* TSystem::GetTempWString()
+{
+	return reinterpret_cast<unsigned short*>(ms_aScratchMem);
+}
+
+bool TSystem::GetLocalTime(TDateTime& dateTime)
+{
+	const std::time_t now = std::time(nullptr);
+	const std::tm* local = std::localtime(&now);
+	dateTime.m_ucHour = static_cast<unsigned char>(local->tm_hour);
+	dateTime.m_ucMinute = static_cast<unsigned char>(local->tm_min);
+	dateTime.m_ucSecond = static_cast<unsigned char>(local->tm_sec);
+	dateTime.m_ucDay = static_cast<unsigned char>(local->tm_mday);
+	dateTime.m_ucMonth = static_cast<unsigned char>(local->tm_mon);
+	dateTime.m_usYear = static_cast<unsigned short>(local->tm_year + 1900);
+	return true;
+}
+
+void TSystem::StringFormatDateTime(const TDateTime& dateTime, TCString& string)
+{
+	string.Format("%2d:%02d:%02d %d/%d/%d", dateTime.m_ucHour, dateTime.m_ucMinute, dateTime.m_ucSecond,
+	              dateTime.m_ucDay, dateTime.m_ucMonth, dateTime.m_usYear);
 }
 
 } // namespace Toshi

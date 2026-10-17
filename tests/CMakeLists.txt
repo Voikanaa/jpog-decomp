@@ -17,6 +17,7 @@ add_executable(jpog_tests
   kernel/TObjectTests.cpp
   kernel/TQuaternionTests.cpp
   kernel/TStringTests.cpp
+  kernel/TTimeTests.cpp
   kernel/TVectorTests.cpp
 )
 target_include_directories(jpog_tests PRIVATE .)
