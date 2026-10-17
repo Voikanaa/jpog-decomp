@@ -70,6 +70,8 @@ add_library(toshi_kernel STATIC
   TScheduler.h
   TSystem.cpp
   TSystem.h
+  TThread.cpp
+  TThread.h
   TUser.cpp
   TUser.h
   TVector2.cpp
