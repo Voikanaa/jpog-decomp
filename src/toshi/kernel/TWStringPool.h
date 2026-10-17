@@ -41,66 +41,36 @@ private:
 
 JPOG_ASSERT_SIZE(TPooledWString, 16);
 
-// Handle to a pooled wide string. The original defines it entirely inline (only ms_sEmpty is
-// exported), so it stays header-only here; tools/coverage.py knows its members are not exports.
+// Handle to a pooled wide string, like TPCString. A null handle reads as the empty string.
 class TPWString
 {
 	friend class TWStringPool;
 
 public:
-	TPWString() : m_pString(nullptr) {}
-	TPWString(const TPWString& other) : m_pString(other.m_pString)
-	{
-		if (m_pString != nullptr)
-			++m_pString->m_iRefCount;
-	}
-	~TPWString()
-	{
-		if (m_pString != nullptr && --m_pString->m_iRefCount == 0)
-			m_pString->Delete();
-		m_pString = nullptr;
-	}
-	TPWString& operator=(const TPWString& other)
-	{
-		if (m_pString != other.m_pString)
-		{
-			if (m_pString != nullptr && --m_pString->m_iRefCount == 0)
-				m_pString->Delete();
-			m_pString = other.m_pString;
-			if (m_pString != nullptr)
-				++m_pString->m_iRefCount;
-		}
-		return *this;
-	}
+	TPWString();
+	TPWString(const TPWString& other);
+	~TPWString();
+	TPWString& operator=(const TPWString& other);
 
-	int Compare(const TPWString& other) const
-	{
-		if (m_pString == nullptr)
-			return other.m_pString != nullptr ? -1 : 0;
-		if (other.m_pString == nullptr)
-			return 1;
-		if (m_pString == other.m_pString)
-			return 0;
-		return m_pString->m_oString.Compare(other.m_pString->m_oString.GetString(0), -1);
-	}
-	bool IsEmpty() const { return m_pString == nullptr || m_pString->m_oString.IsEmpty(); }
-	const TWString& GetWString() const { return m_pString == nullptr ? ms_sEmpty : m_pString->m_oString; }
-	TWStringPool* GetStringPool() const { return m_pString->m_pPool; }
+	// Orders by string content (null first); equal handles compare equal without a string compare.
+	int Compare(const TPWString& other) const;
+	const TWString& GetWString() const;
+	// The string itself; the handle must not be null.
+	TWString& GetVolatileWString() const;
+	// The owning pool; the handle must not be null.
+	TWStringPool* GetStringPool() const;
 
-	bool operator==(const TPWString& other) const { return m_pString == other.m_pString; }
-	bool operator!=(const TPWString& other) const { return m_pString != other.m_pString; }
-	bool operator<(const TPWString& other) const { return Compare(other) < 0; }
-	const TWString* operator->() const { return &GetWString(); }
-	const TWString& operator*() const { return GetWString(); }
+	bool operator==(const TPWString& other) const;
+	bool operator!=(const TPWString& other) const;
+	bool operator<(const TPWString& other) const;
+	operator const TWString*() const;
+	const TWString* operator->() const;
+	const TWString& operator*() const;
 
 	static const TWString ms_sEmpty;
 
 private:
-	explicit TPWString(TPooledWString* string) : m_pString(string)
-	{
-		if (string != nullptr)
-			++string->m_iRefCount;
-	}
+	explicit TPWString(TPooledWString* string);
 
 	TPooledWString* m_pString;
 };

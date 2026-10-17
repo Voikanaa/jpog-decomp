@@ -1,6 +1,7 @@
 #include "toshi/kernel/TSystem.h"
 
 #include "toshi/kernel/TCStringPool.h"
+#include "toshi/kernel/TLocale.h"
 #include "toshi/kernel/TWStringPool.h"
 
 #include <climits>
@@ -214,6 +215,7 @@ unsigned int TSTDCALL TSystem::BCDToInteger(unsigned int bcd)
 
 TCStringPool* TSystem::ms_poTCStringPool = nullptr;
 TWStringPool* TSystem::ms_poTWStringPool = nullptr;
+TLocale* TSystem::ms_poLocale = nullptr;
 
 TCStringPool* TSystem::GetCStringPool()
 {
@@ -241,6 +243,13 @@ TWStringPool* TSystem::GetWStringPool()
 	if (ms_poTWStringPool == nullptr)
 		ms_poTWStringPool = new TWStringPool();
 	return ms_poTWStringPool;
+}
+
+TLocale* TSystem::GetLocale()
+{
+	if (ms_poLocale == nullptr)
+		ms_poLocale = new TLocale();
+	return ms_poLocale;
 }
 
 } // namespace Toshi

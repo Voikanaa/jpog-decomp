@@ -8,7 +8,7 @@ an x86 build); do not edit it by hand.
 <!-- coverage:begin -->
 | Module | Functions | Reimplemented | Coverage |
 |---|---:|---:|---:|
-| TKernelInterface | 1627 | 1172 | 72.0% |
+| TKernelInterface | 1627 | 1262 | 77.6% |
 | TApplication | 16 | 0 | 0.0% |
 | TInputInterface | 93 | 0 | 0.0% |
 | TInputDXInterface | 96 | 0 | 0.0% |
@@ -27,7 +27,7 @@ an x86 build); do not edit it by hand.
 | TSysShaderD3D | 52 | 0 | 0.0% |
 | TTerrainShaderD3D | 288 | 0 | 0.0% |
 | SimJP | 13680 | 0 | 0.0% |
-| **Total** | **20452** | **1172** | **5.7%** |
+| **Total** | **20452** | **1262** | **6.2%** |
 <!-- coverage:end -->
 
 ## Verification
@@ -36,6 +36,14 @@ original export on the same inputs. Float results must match bit for bit unless 
 justifies a tolerance.
 
 ## Log
+- 2026-10-17: Locale: `TLocale`, `TLocaleInfo`, `TLocalisedString`, `TLString`,
+  `TLocaleChangeEvent`, `TSystem::GetLocale` and the inline `TMap`/`TComparator` templates.
+  Verified on synthetic files and on the game's own `Data/GUI/Locales` (every language, 2469
+  named strings). Quirks kept: `Format` passes its argument list pointer as the only argument
+  (so `%d` prints an address), the destructor and `Reset` skip every other string while
+  deleting, and unknown names in `ChangeLocale` pass a null info. Missing string files end a
+  load instead of crashing. `TPWString`'s members turned out to be exported after all and are
+  now out of line. Strings and locale (#7) are complete.
 - 2026-10-17: File lexers: `TFileLexerUTF8` and `TFileLexerUTF16` (one shared template core;
   `SortedArray.h` models the original's inline sorted arrays). Tokens, lookahead rings,
   comments, strings, numbers and the line-start preprocessor match the original on 36k random

@@ -107,14 +107,28 @@ template <typename T> struct SortedArray
 		count += slots;
 	}
 
-	// Removes the element at `index` by shifting the rest down (no range check, as the
-	// original).
+	// Removes the element at `index` by shifting the rest down. As in the original there is no
+	// range check: -1 (not found) shifts out the first element (the original also writes the
+	// slot before the array, which is skipped here).
 	void RemoveAt(int index)
 	{
 		const int last = count - 1;
 		for (; index < last; ++index)
-			data[index] = data[index + 1];
+			if (index >= 0)
+				data[index] = data[index + 1];
 		count = last;
+	}
+
+	// A copy sized to the other's count (its capacity becomes that count).
+	void CopyFrom(const SortedArray& other)
+	{
+		delete[] data;
+		count = other.count;
+		growSize = other.growSize;
+		capacity = other.count;
+		data = new T[static_cast<std::size_t>(capacity)];
+		for (int i = 0; i < count; ++i)
+			data[i] = other.data[i];
 	}
 };
 

@@ -77,6 +77,100 @@ void TPooledWString::Delete()
 	ms_oFreelist.Delete(this);
 }
 
+// --- TPWString ----------------------------------------------------------------------------
+
+TPWString::TPWString() : m_pString(nullptr)
+{
+}
+
+TPWString::TPWString(TPooledWString* string) : m_pString(string)
+{
+	if (string != nullptr)
+		++string->m_iRefCount;
+}
+
+TPWString::TPWString(const TPWString& other) : m_pString(other.m_pString)
+{
+	if (m_pString != nullptr)
+		++m_pString->m_iRefCount;
+}
+
+TPWString::~TPWString()
+{
+	if (m_pString != nullptr && --m_pString->m_iRefCount == 0)
+		m_pString->Delete();
+	m_pString = nullptr;
+}
+
+TPWString& TPWString::operator=(const TPWString& other)
+{
+	if (m_pString != other.m_pString)
+	{
+		if (m_pString != nullptr && --m_pString->m_iRefCount == 0)
+			m_pString->Delete();
+		m_pString = other.m_pString;
+		if (m_pString != nullptr)
+			++m_pString->m_iRefCount;
+	}
+	return *this;
+}
+
+int TPWString::Compare(const TPWString& other) const
+{
+	if (m_pString == nullptr)
+		return other.m_pString != nullptr ? -1 : 0;
+	if (other.m_pString == nullptr)
+		return 1;
+	if (m_pString == other.m_pString)
+		return 0;
+	return m_pString->m_oString.Compare(other.m_pString->m_oString.GetString(0), -1);
+}
+
+const TWString& TPWString::GetWString() const
+{
+	return m_pString == nullptr ? ms_sEmpty : m_pString->m_oString;
+}
+
+TWString& TPWString::GetVolatileWString() const
+{
+	return m_pString->m_oString;
+}
+
+TWStringPool* TPWString::GetStringPool() const
+{
+	return m_pString->m_pPool;
+}
+
+bool TPWString::operator==(const TPWString& other) const
+{
+	return m_pString == other.m_pString;
+}
+
+bool TPWString::operator!=(const TPWString& other) const
+{
+	return m_pString != other.m_pString;
+}
+
+bool TPWString::operator<(const TPWString& other) const
+{
+	return Compare(other) < 0;
+}
+
+TPWString::operator const TWString*() const
+{
+	return &GetWString();
+}
+
+const TWString* TPWString::operator->() const
+{
+	return &GetWString();
+}
+
+const TWString& TPWString::operator*() const
+{
+	return GetWString();
+}
+
 // --- TWStringPool --------------------------------------------------------------------------
 
 TWStringPool::TWStringPool() : m_iGrowSize(0x80), m_iCount(0), m_iCapacity(4000), m_pEntries(AllocEntries<Entry>(4000))
