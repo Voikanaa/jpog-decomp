@@ -8,7 +8,7 @@ an x86 build); do not edit it by hand.
 <!-- coverage:begin -->
 | Module | Functions | Reimplemented | Coverage |
 |---|---:|---:|---:|
-| TKernelInterface | 1627 | 1262 | 77.6% |
+| TKernelInterface | 1627 | 1279 | 78.6% |
 | TApplication | 16 | 0 | 0.0% |
 | TInputInterface | 93 | 0 | 0.0% |
 | TInputDXInterface | 96 | 0 | 0.0% |
@@ -27,7 +27,7 @@ an x86 build); do not edit it by hand.
 | TSysShaderD3D | 52 | 0 | 0.0% |
 | TTerrainShaderD3D | 288 | 0 | 0.0% |
 | SimJP | 13680 | 0 | 0.0% |
-| **Total** | **20452** | **1262** | **6.2%** |
+| **Total** | **20452** | **1279** | **6.3%** |
 <!-- coverage:end -->
 
 ## Verification
@@ -36,6 +36,10 @@ original export on the same inputs. Float results must match bit for bit unless 
 justifies a tolerance.
 
 ## Log
+- 2026-10-17: Time: `THPTimer` (QueryPerformanceCounter), `TDateTime` (0-based month, as
+  struct tm) and the `TSystem` time, date formatting and 1 KB scratch buffer functions. Dates
+  are verified against the original on random values; the timer only by sanity checks, since
+  its values depend on the clock.
 - 2026-10-17: Locale: `TLocale`, `TLocaleInfo`, `TLocalisedString`, `TLString`,
   `TLocaleChangeEvent`, `TSystem::GetLocale` and the inline `TMap`/`TComparator` templates.
   Verified on synthetic files and on the game's own `Data/GUI/Locales` (every language, 2469
