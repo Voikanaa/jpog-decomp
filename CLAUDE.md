@@ -1,173 +1,108 @@
 # JPOG Decompilation Project
 
-Reverse engineering / decompilation of *Jurassic Park: Operation Genesis* (2003, Blue Tongue / Vivendi).
-**Goal:** a native Windows x86-64 build of the game that runs the original `Data/`.
+Reverse engineering of *Jurassic Park: Operation Genesis* (2003, Blue Tongue / Vivendi).
+**Goal:** a native Windows x86-64 build of the game that runs the original `Data/`. Full plan:
+`docs/plan.md`.
 
 ## Strategy (agreed with the user)
-- Hook-based incremental reimplementation (re3/OpenJPOG style): portable C++ replaces original
-  functions inside the running 32-bit game (`game/`), one at a time, toggled per function for A/B
-  testing. When coverage reaches 100%, the same source builds as a standalone x64 exe.
-- Clean-room: no community decomp sources (see Status).
+- Incremental reimplementation (re3/OpenJPOG style): portable C++ replaces original functions one
+  at a time; at 100% coverage the same source builds as a standalone x64 exe.
 - Order: TKernelInterface → file formats → other engine modules → SimJP game code → platform swap.
-- Platform targets for x64: **Direct3D 11** (replaces D3D8 + shader DLLs), Raw Input (replaces
-  DInput8), **miniaudio** (replaces FMOD 3), **FFmpeg/libavcodec** DLL (replaces Bink 1).
-  Ask the user before downloading any of these.
-- Code rules: no pointer↔int casts and no 32-bit-pointer assumptions. Parse file formats
-  explicitly (never cast raw file bytes onto structs that contain pointers). In the x86 build,
-  `static_assert` class layouts against the original (`src/common/layout.h`).
-- Names come from the exported mangled symbols (`symbols/`). Notes live in `docs/` (REA cannot
+- x64 platform targets: Direct3D 11, Raw Input, miniaudio (replaces FMOD 3), FFmpeg DLL (replaces
+  Bink). Ask before downloading any of these.
+- Code rules: no pointer↔int casts, no 32-bit-pointer assumptions, parse file formats explicitly
+  (never cast file bytes onto structs with pointers). x86 build: `static_assert` layouts
+  (`src/common/layout.h`).
+- Names come from the exported mangled symbols (`symbols/`). Notes go in `docs/` (REA cannot
   rename items in the Ghidra database on Windows).
-- Full plan: `docs/plan.md`.
 
 ## Ground rules (from the user — always follow)
-1. **Never modify the system.** Only create/modify/delete files inside the project root (this repo's folder).
-   No global installs (pip/npm/choco/winget -g etc.), no registry/env-var/PATH changes,
-   no writes to user profile or system directories. Session scratch/temp files are the only exception.
-   Exception: files that tools write on their own while running (Ghidra settings in `%APPDATA%`,
-   npm/npx caches, temp files, etc.) are fine — no need to redirect or ask about those.
-2. **Need an external tool or dependency? Ask the user first.** Do not download or install anything on your own.
-   Approved tools live under `toolchain/`.
-3. **Keep this CLAUDE.md up to date.** Whenever structure, tools, findings, or workflows change, update this file in the same step.
-4. **Token budget:** once 95% of the context/token limit is used, stop starting new work: save
-   the current task (commit and push verified work, note unfinished steps in the relevant issue),
-   then end the task.
+1. **Never modify the system.** Only touch files inside this repo. No global installs, registry,
+   env-var/PATH changes or writes to user/system dirs. Exceptions: session temp files and files
+   tools write on their own (Ghidra settings in `%APPDATA%`, npm caches, temp).
+2. **Ask before adding any external tool or dependency.** Approved tools live in `toolchain/`.
+3. **Keep this CLAUDE.md current** in the same step as any structure/tool/finding/workflow change,
+   and **keep it under 150 lines**: condense or move detail to `docs/` instead of growing it.
+4. **Token budget:** at 95% of the context/token limit, start no new work: commit and push verified
+   work, note unfinished steps in the relevant issue, then end the task.
+5. **Clean room:** code derives only from our own analysis of the shipped binaries/data. Never read
+   or copy community decomp sources (OpenJPOG, OpenBarnyard/OpenToshi, jpog-blender, ...).
+   `references/` stays empty.
 
 ## License
-GPL-3.0-or-later (`LICENSE`, the official GNU text), chosen 2026-10-17. It covers our code, tools
-and docs only: not the game, its assets, the *Jurassic Park* trademarks or logo, or vendored
-third-party code (which keeps its own license). New dependencies must be GPLv3-compatible:
-MIT, BSD, zlib, or LGPL linked dynamically.
+GPL-3.0-or-later (`LICENSE`), covering our code/tools/docs only: not the game, its assets or
+trademarks, or vendored third-party code. New deps must be GPLv3-compatible (MIT, BSD, zlib,
+LGPL linked dynamically).
 
-## Version control
-- Remote: `git@github.com:Voikanaa/jpog-decomp.git` (private, SSH key authenticates as
-  Voikanaa). Branch `main`.
-- **Never commit** game binaries or data (`JPOG/`, `game/`, the ISO, any `.exe`/`.dll`/assets),
-  `toolchain/`, `build/`, `.rea-tmp/`, `rea-ghidra-*/`, `.claude/settings.local.json` or `.mcp.json` (machine-specific).
-  `.gitignore` covers these; run `git add -A --dry-run` before larger commits to double-check.
-- Commit in small, logical units with descriptive messages. `symbols/` is committed (regenerate
-  it with `tools/dump_exports.py`).
-- Line endings are set in `.gitattributes`: LF for source, docs and CSV; CRLF for `.bat`.
-- **Issues** (user instruction: keep them current). Use `toolchain/gh/bin/gh.exe -R Voikanaa/jpog-decomp`.
-  Milestones M0b to M6 mirror `docs/plan.md`; labels are `area: *`, `type: research` and `needs: owner decision`.
-  Every work item has an issue. Reference it in commits (`Refs #n`; `Fixes #n` closes it), tick
-  checklists as work lands, open new issues for discovered work, and close finished ones with
-  the commit hash. Templates are in `.github/ISSUE_TEMPLATE/`.
-- **Keep README.md up to date** (user instruction): status table, tools table, layout and setup
-  must reflect reality in the same commit that changes them.
-- **Commit frequently** (user instruction): commit each logical unit as soon as it works and is
-  verified, then push to `origin/main`. Update CLAUDE.md in the same commit whenever structure,
-  tools, findings or workflow change.
+## Version control and issues
+- Remote `git@github.com:Voikanaa/jpog-decomp.git` (private), branch `main`.
+- **Never commit** game files (`JPOG/`, `game/`, ISO, any `.exe`/`.dll`/assets), `toolchain/`,
+  `build/`, `analysis/`, `.rea-tmp/`, `rea-ghidra-*/`, `.claude/settings.local.json`, `.mcp.json`.
+  Check with `git add -A --dry-run` before larger commits.
+- **Commit frequently** in small logical units once verified, then push. Update README.md (status,
+  tools, layout, setup) and this file in the same commit when they change.
+- **Issues:** `toolchain/gh/bin/gh.exe -R Voikanaa/jpog-decomp`. Every work item has an issue;
+  reference it (`Refs #n` / `Fixes #n`), tick checklists, open issues for new work, close finished
+  ones with the hash. Milestones M0b–M6 mirror `docs/plan.md`.
+- LF line endings except `.bat` (`.gitattributes`). Pre-commit hook (`.githooks/`, enabled) runs
+  `check_repo.py --staged` and `format.py --check`. CI (`.github/workflows/ci.yml`) builds
+  `x86-debug` + `x64-debug` and runs the same checks.
 
 ## Layout
-- `JPOG/` — original game install (treat as read-only reference; do not modify originals)
-  - `SimJP.exe` — main executable
-  - `T*Interface.dll`, `TApplication.dll` — engine modules (kernel, render D3D, input, GUI, terrain)
-  - `Units.dll`, `SimJPTerrain.dll`, `PGUICore.dll`, `PGUIRenderer.dll`, `PPropertyParser.dll` — game/UI modules
-  - Third-party: `binkw32.dll` (Bink video), `fmod.dll` (audio), `libmmd.dll` (Intel math lib)
-  - `Data/` — game data (ini configs, Models, Terrain, Units, GUI, Missions, Sound…)
-  - `Shaders/D3D/`, `Jurassic Park Operation Genesis.iso` (original disc image)
-- `game/` — working copy of `JPOG/` without the .iso; the hook DLL is tested here (gitignored)
-- `references/` — reserved; unused under the clean-room policy (gitignored)
-- `symbols/` — generated by `tools/dump_exports.py`: per-module exports/imports CSV (mangled +
-  demangled, RVA/VA) and `classes.csv`
-- `docs/` — `plan.md` (living roadmap: decisions, phases, status), `modules.md` (binary map +
-  protection notes), `progress.md` (coverage + log), later `formats/`, `classes/`
-- `README.md`, `CONTRIBUTING.md` (workflow, commit and style conventions)
-- `.github/workflows/ci.yml`: CI on windows-latest. It builds the `x86-debug` and `x64-debug`
-  presets, then runs `check_repo.py`, a Python compile check and a clang-format check.
-- `.githooks/pre-commit`: runs `check_repo.py --staged` and `format.py --check`. Enable it with
-  `git config core.hooksPath .githooks` (already set in this clone).
-- `.editorconfig`, `.clang-format` (tabs, Allman braces, 120 columns), `.gitattributes`
-  (LF everywhere except `.bat`)
-- `tools/ghidra_export.py <module.dll>|--all` + `tools/ghidra/ExportDecompilation.java`: headless
-  Ghidra decompilation of every function into `analysis/decomp/<Module>.c` (one
-  `// ==== <addr> <name>` block per function) and `.tsv` (index). Ghidra projects are kept in
-  `analysis/ghidra/`. `analysis/` is gitignored because it is derived from the binaries. **Prefer
-  grepping these exports over REA for bulk work** (REA's JSON responses are large); use REA for
-  targeted queries (xrefs, bytes, single functions).
-- `tools/coverage.py` — coverage = original exported functions ∩ symbols defined in our x86 libs
-  (identical mangling). It regenerates the table in `docs/progress.md` and the README badge;
-  `--check` runs in CI and also fails on *unmatched* symbols (our `Toshi::` symbols with no
-  original export), which catches signature drift. Map new libraries to modules in its `MODULES` list.
-- `tools/format.py [--check]` — formats tracked C++ in `src/` and `tests/` with the pinned
-  clang-format (version-checked). Runs in CI and in the pre-commit hook. **Run it before committing C++.**
-- `tools/decomp_show.py <Module> <regex>` — print functions from `analysis/decomp/`.
-- `tools/dump_vtables.py` — writes `symbols/vtables.csv`: the virtual method order of all 704
-  exported vtables (entries resolved per module, including import thunks and `_purecall`).
-  **Our class declarations must reproduce this order.**
-- `tools/resolve_imports.py` — writes `analysis/decomp/SimJP.resolved.c`, the SimJP decompilation
-  with calls through the game's own IAT (0x739000) annotated with import names (about 21k sites).
-  **Use `SimJP.resolved` when reading game code.** The remaining `(*DAT_00d8cec0)(...)` calls are
-  indirect imports; identify them from context (neighbouring identical sequences, arguments).
-- `tools/` — `setup_mcp.py` (writes `.mcp.json` for this clone), `check_repo.py` (hygiene: no game files or files over 5 MB), `msvc.py` (finds VS/MSVC tools via vswhere; no hardcoded paths), `dump_exports.py`, `build.bat <preset>` (finds VS via vswhere, sets up the MSVC env per-process, then runs CMake + Ninja)
-- `src/` — reimplementation: `common/` (`abi.h` TSTDCALL, `layout.h`), `toshi/kernel/` (static lib
-  `toshi_kernel`: TMath, TVector2, TVector3, TVector4 implemented; TCString/TObject/TClass/TKernelInterface
-  declared only), `toshi/application/` and `toshi/render/` (declarations only), `game/` (**jpog.exe**:
-  WinMain, `AApplication`, `CrashHandler`), `hook/` (x86 DLL, deferred, `JPOG_HOOK=ON` only)
-- **Hybrid launch (x86):** `jpog.exe` links against the original, unprotected engine DLLs through
-  import libs generated from `symbols/` (`tools/make_import_lib.py`, `cmake/OriginalModules.cmake`,
-  `jpog_original_module(Name)` -> `original::Name`). Declarations in `src/toshi/` must match the
-  original signatures and vtable order (`symbols/vtables.csv`). The post-build step copies
-  `jpog.exe` into `game/`, and it must run from there. On a crash it writes `game/jpog_crash.log`
-  (exception, module+offset, stack).
-- `tests/` — doctest (`third_party/doctest`, v2.4.11) suite `jpog_tests`, run by ctest from
-  `tools/build.bat`. `support/OriginalModule` loads the original DLLs from `JPOG_ORIGINAL_DIR`
-  (CMake cache var or env var; default `<root>/JPOG`) for **differential tests** (x86 only;
-  skipped when the game is absent, e.g. in CI). `support/FloatCompare.h` provides the ULP
-  comparison and a deterministic input generator. Call original `__thiscall` members through
-  `Method<R, Args...>` (`OriginalModule.h`), which goes via `__fastcall` with `this` in ECX; for
-  members returning a class by value, the hidden result pointer is the first argument.
-- `third_party/` — vendored, pinned deps with versions, licenses and hashes in `third_party/README.md`
-- `CMakeLists.txt`, `CMakePresets.json` — presets `x86-debug`, `x64-debug`, `x64-release` → `build/<preset>/`
-- `toolchain/` — project-local tools
-  - `ghidra/` — Ghidra 12.1.4 (launch via `toolchain/ghidra/ghidraRun.bat`)
-  - `clang-format/` — clang-format 20.1.8 (exe from the official PyPI wheel, SHA-256 verified;
-    LICENSE.md alongside). Pinned: CI installs the same version. Use `python tools/format.py`.
-  - `gh/` — GitHub CLI 2.102.0 (official portable zip, SHA-256 verified), used for issues,
-    milestones, labels and CI status: `toolchain/gh/bin/gh.exe`. The user logs in once
-    (`gh auth login`); gh stores its token in `%APPDATA%\GitHub CLI`.
-- `.mcp.json` — project-scoped REA MCP registration, machine-specific and gitignored. Generate it
-  from `.mcp.json.example` with `python tools/setup_mcp.py`, then restart Claude Code.
-- `.rea-tmp/` — REA/Ghidra temp projects + npm cache (disposable)
-- `.claude/settings.local.json` — enables the project `.mcp.json` server (`enabledMcpjsonServers: ["rea"]`)
+- `JPOG/` original install (read-only reference): `SimJP.exe`, engine DLLs (`T*Interface.dll`,
+  `TApplication.dll`), game DLLs (`Units`, `SimJPTerrain`, `PGUI*`, `PPropertyParser`), third-party
+  (`binkw32`, `fmod`, `libmmd`), `Data/`, `Shaders/D3D/`, ISO. `game/` = working copy (gitignored).
+- `symbols/` per-module exports/imports CSV, `classes.csv`, `vtables.csv` (generated).
+- `docs/` `plan.md` (roadmap), `modules.md` (binary map), `progress.md` (coverage + log).
+- `src/` `common/` (`abi.h` TSTDCALL, `layout.h`); `toshi/kernel/` (lib `toshi_kernel`: TMath,
+  TVector2/3/4, TQuaternion implemented; TCString/TObject/TClass/TKernelInterface declared);
+  `toshi/application/`, `toshi/render/` (declarations); `game/` (**jpog.exe**: WinMain,
+  `AApplication`, `CrashHandler`); `hook/` (deferred, `JPOG_HOOK=ON`).
+- `tests/` doctest suite `jpog_tests` (run by ctest). `support/OriginalModule` loads the original
+  DLLs from `JPOG_ORIGINAL_DIR` (default `<root>/JPOG`) for differential tests (x86 only, skipped
+  without the game). `support/Differential.h`: `Same`, `Original<Fn>`, `KernelMissing`.
+  `support/FloatCompare.h`: ULP compare + `InputGenerator`. Call `__thiscall` originals via
+  `Method<R, Args...>`; by-value class returns pass the hidden result pointer first.
+- `third_party/` vendored pinned deps (versions/licenses/hashes in its README).
+- `CMakePresets.json`: `x86-debug`, `x64-debug`, `x64-release` → `build/<preset>/`.
+- **Hybrid launch (x86):** `jpog.exe` links the original engine DLLs via import libs generated from
+  `symbols/` (`tools/make_import_lib.py`, `cmake/OriginalModules.cmake`,
+  `jpog_original_module(Name)`). Declarations in `src/toshi/` must match original signatures and
+  vtable order. Post-build copies `jpog.exe` to `game/`; it must run there. Crashes write
+  `game/jpog_crash.log`.
 
-## Tools available
-- VS Build Tools 2026 (MSVC 14.51, x86 + x64), with bundled CMake/Ninja and Windows SDK
-  10.0.26100, already installed system-wide. `undname.exe`/`dumpbin.exe` are under
-  `VC\Tools\MSVC\14.51.36231\bin\Hostx64\x64`. git, Python 3.15.
-- Ghidra 12.1.4 (local, in `toolchain/ghidra`). Java: system JDK 25 (Eclipse Adoptium), already installed.
-- **REA MCP server** (`rea-agents@6.5.0`) — use the `reverse-engineer-anything` skill.
-  - Registered per-project in `.mcp.json` (overrides the user-level `rea` entry) with:
-    - `GHIDRA_INSTALL_DIR` → `toolchain\ghidra` (enables the Ghidra provider)
-    - `TEMP`/`TMP` → `.rea-tmp` so Ghidra's ephemeral projects stay inside this folder
-    - `npm_config_cache` → `.rea-tmp\npm-cache` so npx doesn't write to the user profile
-  - Ghidra provider on Windows: native x86 PE exe/DLL analysis (decompile, xrefs, strings, etc.);
-    database annotation/renaming is NOT supported on Windows ("P0"), so keep names/notes in project files.
-  - Usage: `open_binary` with absolute path (e.g. `<project root>\JPOG\SimJP.exe`), then
-    `binary_overview`, `search_procedures`, `analyze_function`, `procedure_pseudo_code`… `close_binary` when done.
+## Tools
+- `tools/build.bat <preset>`: finds VS via vswhere, CMake + Ninja + ctest.
+- `tools/format.py [--check]`: pinned clang-format over `src/`, `tests/`. **Run before committing.**
+- `tools/coverage.py [--check]`: original exports ∩ our x86 symbols; regenerates the
+  `docs/progress.md` table and README badge; `--check` (CI) also fails on unmatched `Toshi::`
+  symbols (signature drift). Map new libs in its `MODULES` list.
+- `tools/ghidra_export.py <dll>|--all`: headless decompilation to `analysis/decomp/<Module>.c`/`.tsv`.
+  **Prefer grepping these over REA for bulk work**; `tools/decomp_show.py <Module> <regex>` prints
+  functions. `tools/resolve_imports.py` writes `SimJP.resolved.c` (IAT calls named; use it for
+  game code). `tools/dump_vtables.py` → `symbols/vtables.csv` (**class declarations must follow
+  it**). Also `dump_exports.py`, `check_repo.py`, `msvc.py`, `setup_mcp.py`.
+- `dumpbin /disasm /range:a,b` (VS, `VC\Tools\MSVC\14.51.36231\bin\Hostx64\x64`) for exact
+  instruction order when Ghidra's operand order is ambiguous.
+- Installed system-wide: VS Build Tools 2026 (MSVC 14.51, SDK 10.0.26100, CMake/Ninja), git,
+  Python 3.15, JDK 25. Project-local `toolchain/`: Ghidra 12.1.4, clang-format 20.1.8, gh 2.102.0
+  (user logs in once with `gh auth login`).
+- **REA MCP** (`rea-agents@6.5.0`, skill `reverse-engineer-anything`) for targeted queries
+  (xrefs, bytes, single functions). `.mcp.json` from `.mcp.json.example` via
+  `python tools/setup_mcp.py`, then fully restart Claude Code. It points `GHIDRA_INSTALL_DIR` at
+  `toolchain\ghidra` and TEMP/npm cache at `.rea-tmp\`. Usage: `open_binary` (absolute path) →
+  `binary_overview`/`search_procedures`/`procedure_pseudo_code` → `close_binary`.
 
-## Status / notes
-- REA configured via `.mcp.json` + enabled in `.claude/settings.local.json`. Needs a full Claude Code
-  restart (not just `/mcp` reconnect) to pick it up. Verify with `binary_session`: the ghidra provider
-  candidate should not say "GHIDRA_INSTALL_DIR is not set".
-- 2026-10-17: verified — `binary_session` reports Ghidra provider `available` (12.1.4, JDK 25.0.4,
-  headless + native decompiler checks all OK).
-- **Key finding (precision):** JPOG creates its D3D8 device without `D3DCREATE_FPU_PRESERVE`
-  (behaviour flags are only 0x20/0x40/0x80, set in TRenderD3DInterface), so gameplay runs the x87
-  at 24-bit precision. Implement float code as plain float ops; transcendentals and CRT calls go
-  through double with one rounding. Differential tests wrap the original in `GamePrecisionScope`
-  (`tests/support/OriginalModule.h`) and use 0-ULP tolerance.
-- 2026-10-17 **Launch 1 reached:** our `jpog.exe` opens the 640x480 `TRenderD3DInterface` window with
-  a D3D8 device through the original DLLs and runs the frame loop. Open problem (issue): crash on
-  exit. The renderer's `DestroyDisplay` calls through a broken object at `this+0xF0` (a texture
-  made from system resource 18, `TextureFactory`, in `CreateDisplay`). The shader DLLs *are*
-  loaded, so the cause is still open; compare with the game's full init (ARootTask::OnCreate:
-  ARenderer, material libraries, ...).
-- 2026-10-17: Phase 2 started. TMath scalar functions are done (55 functions; differential tests
-  are exact). All modules are decompiled to `analysis/decomp/` (~27k functions).
-- 2026-10-17 Phase 0: game copied to `game/`; symbols dumped (923 classes); CMake skeleton builds
-  `jpog_hook.dll` (x86) OK. Binary map + protection notes are in `docs/modules.md`.
-- **Clean-room policy (user decision, 2026-10-17):** the code is derived ONLY from our own analysis
-  of the shipped binaries and data. Do NOT clone, read or copy community decomp source
-  (AdventureT/OpenJPOG, InfiniteC0re/OpenBarnyard/OpenToshi, jpog-blender, etc.), so their
-  licenses never apply to this project. `references/` stays empty unless the user changes this.
+## Key findings
+- **FPU precision:** D3D8 is created without `D3DCREATE_FPU_PRESERVE`, so gameplay x87 runs at
+  24-bit precision. Plain float ops reproduce it. Differential tests wrap originals in
+  `GamePrecisionScope` and require 0 ULP.
+- fsin/fcos/fpatan are not affected by precision control: emulate them in double and round
+  only the following arithmetic. `TMath::ACos` etc. return their double result in ST0, so callers
+  that use the value directly (e.g. `TQuaternion::Slerp`) see a double.
+- Ghidra prints commutative operands in arbitrary order; check grouping in the disassembly when a
+  test is off by 1 ULP.
+- Launch 1 reached (our `jpog.exe` opens the D3D8 window through the original DLLs). Open bug #20:
+  crash on exit in `TRenderD3DInterface::DestroyDisplay` (texture at `this+0xF0`).
+- Static constants in the DLLs are BSS, initialised at runtime: verify them through the loaded
+  module, not the file.
