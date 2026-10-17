@@ -8,7 +8,7 @@ an x86 build); do not edit it by hand.
 <!-- coverage:begin -->
 | Module | Functions | Reimplemented | Coverage |
 |---|---:|---:|---:|
-| TKernelInterface | 1627 | 1043 | 64.1% |
+| TKernelInterface | 1627 | 1057 | 65.0% |
 | TApplication | 16 | 0 | 0.0% |
 | TInputInterface | 93 | 0 | 0.0% |
 | TInputDXInterface | 96 | 0 | 0.0% |
@@ -27,7 +27,7 @@ an x86 build); do not edit it by hand.
 | TSysShaderD3D | 52 | 0 | 0.0% |
 | TTerrainShaderD3D | 288 | 0 | 0.0% |
 | SimJP | 13680 | 0 | 0.0% |
-| **Total** | **20452** | **1043** | **5.1%** |
+| **Total** | **20452** | **1057** | **5.2%** |
 <!-- coverage:end -->
 
 ## Verification
@@ -36,6 +36,12 @@ original export on the same inputs. Float results must match bit for bit unless 
 justifies a tolerance.
 
 ## Log
+- 2026-10-17: Events: `TGenericEmitter` (a priority list of listeners plus an owner),
+  `TGenericListener`, `TNullEvent` and the inline `TEmitter<Owner, Event>` template. `Throw`
+  saves the next listener before each callback, so callbacks may disconnect themselves; verified
+  with randomised connect/disconnect/throw runs. Not covered: the emitter's `??_F` default
+  constructor closure, which MSVC only emits for dllexported classes. `TLocaleChangeEvent`
+  goes with `TLocale` (#7).
 - 2026-10-17: Files, part 4: `TISOFile`/`TISOFileSystem` with its ISO 9660 helpers (PVD, path
   table, lazily read and selection-sorted directory listings, 8 KB read buffer) and `tmemalign`.
   Verified on a synthetic image built by the test. Quirks kept: only the low 16 bits of
