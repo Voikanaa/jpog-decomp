@@ -57,6 +57,8 @@ DEFINED_SYMBOL = re.compile(r"\bSECT[0-9A-F]+\s.*External\s+\|\s+(\S+)")
 
 # Helpers the compiler emits on its own (scalar/vector deleting destructors); never our code.
 COMPILER_GENERATED = ("??_G", "??_E")
+# Classes the original defines entirely inline (no exported members), so ours are header-only too.
+HEADER_ONLY_CLASSES = ("@TPWString@Toshi@@",)
 
 
 def original_exports(module):
@@ -96,7 +98,9 @@ def measure(build_dir):
             exports = original_exports(module)
             unmatched += [f"{module}: {s}" for s in sorted(ours)
                           if "@Toshi@@" in s and "?A0x" not in s and s not in exports
-                          and not s.startswith(COMPILER_GENERATED)]
+                          and not s.startswith(COMPILER_GENERATED)
+                          and not any(c in s for c in HEADER_ONLY_CLASSES)
+                          and "@jpog@@" not in s]  # our own helpers (namespace jpog)
         total += len(functions)
         done += implemented
         rows.append(f"| {module} | {len(functions)} | {implemented} | {implemented / len(functions):.1%} |")

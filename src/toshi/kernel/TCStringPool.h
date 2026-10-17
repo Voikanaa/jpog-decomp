@@ -2,6 +2,7 @@
 
 #include "common/abi.h"
 #include "common/layout.h"
+#include "toshi/kernel/StringPoolArray.h"
 #include "toshi/kernel/TCString.h"
 #include "toshi/kernel/TFreeList.h"
 
@@ -11,17 +12,6 @@ namespace Toshi
 {
 class TPooledCString;
 }
-
-namespace jpog::kernel
-{
-// One TCStringPool entry: the string's characters (the sort key) and its pooled string. Outside
-// namespace Toshi so that no symbol without an original counterpart is added there.
-struct StringPoolEntry
-{
-	const char* key;
-	Toshi::TPooledCString* string;
-};
-} // namespace jpog::kernel
 
 namespace Toshi
 {
@@ -132,7 +122,7 @@ private:
 	int m_iGrowSize;
 	int m_iCount;
 	int m_iCapacity;
-	jpog::kernel::StringPoolEntry* m_pEntries; // sorted by content
+	jpog::kernel::PoolEntry<char, TPooledCString>* m_pEntries; // sorted by content
 };
 
 JPOG_ASSERT_SIZE(TCStringPool, 16);

@@ -1,5 +1,6 @@
 # TKernelInterface.dll reimplementation.
 add_library(toshi_kernel STATIC
+  StringPoolArray.h
   TCString.cpp
   TCString.h
   TCStringPool.cpp
@@ -26,6 +27,8 @@ add_library(toshi_kernel STATIC
   TVector4.h
   TWString.cpp
   TWString.h
+  TWStringPool.cpp
+  TWStringPool.h
 )
 target_link_libraries(toshi_kernel PUBLIC jpog_common)
 # The original relies on strncpy/wcsncpy semantics (zero padding, no forced terminator).
