@@ -23,8 +23,8 @@ Reverse engineering of *Jurassic Park: Operation Genesis* (2003, Blue Tongue / V
 2. **Ask before adding any external tool or dependency.** Approved tools live in `toolchain/`.
 3. **Keep this CLAUDE.md current** in the same step as any structure/tool/finding/workflow change,
    and **keep it under 150 lines**: condense or move detail to `docs/` instead of growing it.
-4. **Token budget:** at 95% of the context/token limit, start no new work: commit and push verified
-   work, note unfinished steps in the relevant issue, then end the task.
+4. **Token budget:** at 90% of the context/token limit, stop and save: start no new work, commit
+   and push verified work, note unfinished steps in the relevant issue, then end the task.
 5. **Clean room:** code derives only from our own analysis of the shipped binaries/data. Never read
    or copy community decomp sources (OpenJPOG, OpenBarnyard/OpenToshi, jpog-blender, ...).
    `references/` stays empty.
