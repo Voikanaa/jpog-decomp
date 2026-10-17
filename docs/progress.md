@@ -8,7 +8,7 @@ an x86 build); do not edit it by hand.
 <!-- coverage:begin -->
 | Module | Functions | Reimplemented | Coverage |
 |---|---:|---:|---:|
-| TKernelInterface | 1627 | 1069 | 65.7% |
+| TKernelInterface | 1627 | 1172 | 72.0% |
 | TApplication | 16 | 0 | 0.0% |
 | TInputInterface | 93 | 0 | 0.0% |
 | TInputDXInterface | 96 | 0 | 0.0% |
@@ -27,7 +27,7 @@ an x86 build); do not edit it by hand.
 | TSysShaderD3D | 52 | 0 | 0.0% |
 | TTerrainShaderD3D | 288 | 0 | 0.0% |
 | SimJP | 13680 | 0 | 0.0% |
-| **Total** | **20452** | **1069** | **5.2%** |
+| **Total** | **20452** | **1172** | **5.7%** |
 <!-- coverage:end -->
 
 ## Verification
@@ -36,6 +36,13 @@ original export on the same inputs. Float results must match bit for bit unless 
 justifies a tolerance.
 
 ## Log
+- 2026-10-17: File lexers: `TFileLexerUTF8` and `TFileLexerUTF16` (one shared template core;
+  `SortedArray.h` models the original's inline sorted arrays). Tokens, lookahead rings,
+  comments, strings, numbers and the line-start preprocessor match the original on 36k random
+  tokens per lexer. Deviations only where the original hangs (EOF inside a disabled block, an
+  unterminated string, an output line comment) or overruns a buffer (token text over 2047
+  characters, #if nesting of 32+, token rings for lookahead sizes other than 2 and 4). Both
+  classes register with the name "LexerT", as in the original.
 - 2026-10-17: Strings, part 4: `TCStringPool` file I/O (`WriteFile`, `ReadFile` and the
   loading constructor), the global pools in `TSystem` and the free `operator+` overloads.
   Loaded strings share one buffer and are pinned with an extra reference, so a loaded pool must
