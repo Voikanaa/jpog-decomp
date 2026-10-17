@@ -8,7 +8,7 @@ an x86 build); do not edit it by hand.
 <!-- coverage:begin -->
 | Module | Functions | Reimplemented | Coverage |
 |---|---:|---:|---:|
-| TKernelInterface | 1627 | 805 | 49.5% |
+| TKernelInterface | 1627 | 833 | 51.2% |
 | TApplication | 16 | 0 | 0.0% |
 | TInputInterface | 93 | 0 | 0.0% |
 | TInputDXInterface | 96 | 0 | 0.0% |
@@ -27,7 +27,7 @@ an x86 build); do not edit it by hand.
 | TSysShaderD3D | 52 | 0 | 0.0% |
 | TTerrainShaderD3D | 288 | 0 | 0.0% |
 | SimJP | 13680 | 0 | 0.0% |
-| **Total** | **20452** | **805** | **3.9%** |
+| **Total** | **20452** | **833** | **4.1%** |
 <!-- coverage:end -->
 
 ## Verification
@@ -36,6 +36,9 @@ original export on the same inputs. Float results must match bit for bit unless 
 justifies a tolerance.
 
 ## Log
+- 2026-10-17: Containers complete: `TGenericDList`, `TGenericPriList`, `TGenericNTree`, `TBitArray`
+  (with `TGenericNodeList` earlier). Template containers (`TMap`, ...) are inline in the original
+  and will be added header-only where they are used. TKernelInterface passes 50% coverage.
 - 2026-10-17: Containers, part 1: `TGenericNodeList` (intrusive circular list with a sentinel
   node) with its `TNode` and `Iterator`, verified by randomised insert/remove/append runs.
 - 2026-10-17: RTTI: `TObject` and `TClass` (class tree, lookup, IsA, common base, tree walks),
