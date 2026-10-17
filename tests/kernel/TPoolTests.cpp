@@ -4,6 +4,7 @@
 #include "toshi/kernel/TGenericFifo.h"
 #include "toshi/kernel/TGenericPool.h"
 #include "toshi/kernel/TPile.h"
+#include "toshi/kernel/TThread.h"
 
 #include <cstring>
 #include <doctest/doctest.h>
@@ -101,6 +102,36 @@ TEST_SUITE("TPool")
 		pool.Free(items[3]);
 		CHECK(pool.Alloc() == items[3]);
 		pool.Reinit();
+	}
+
+	TEST_CASE("threads and semaphores")
+	{
+		Toshi::TThreadManager manager;
+		CHECK(Toshi::TThreadManager::GetThreadManager() == &manager);
+		struct TCounter : Toshi::TThread
+		{
+			Toshi::TSemaphore* done = nullptr;
+			int runs = 0;
+			void Main() override
+			{
+				++runs;
+				done->Signal();
+			}
+		};
+		Toshi::TSemaphore done;
+		done.Create(0, 1);
+		CHECK_FALSE(done.Poll());
+		TCounter thread;
+		thread.done = &done;
+		CHECK(thread.Create(Toshi::TThread::STACKSIZE_DEFAULT, Toshi::TThread::PRIORITY_NORMAL, 1));
+		Toshi::TThread::PRIORITY priority;
+		CHECK(thread.GetPriority(priority));
+		CHECK(priority == Toshi::TThread::PRIORITY_NORMAL);
+		CHECK(thread.Resume()); // created suspended
+		CHECK(done.Wait());
+		CHECK(thread.runs == 1);
+		CHECK(Toshi::TThread::Yield());
+		done.Destroy();
 	}
 
 	TEST_CASE("fifo")
