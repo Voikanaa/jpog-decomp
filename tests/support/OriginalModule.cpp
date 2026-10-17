@@ -9,10 +9,7 @@
 namespace jpog::test
 {
 
-namespace
-{
-
-std::filesystem::path OriginalDirectory()
+std::filesystem::path OriginalModuleDirectory()
 {
 #pragma warning(suppress : 4996) // getenv is fine here: read-only, single-threaded test setup
 	if (const char* overrideDir = std::getenv("JPOG_ORIGINAL_DIR"); overrideDir && *overrideDir)
@@ -20,11 +17,9 @@ std::filesystem::path OriginalDirectory()
 	return JPOG_ORIGINAL_DIR;
 }
 
-} // namespace
-
 OriginalModule::OriginalModule(const char* fileName)
 {
-	const std::filesystem::path path = OriginalDirectory() / fileName;
+	const std::filesystem::path path = OriginalModuleDirectory() / fileName;
 	if (!std::filesystem::exists(path))
 		return;
 

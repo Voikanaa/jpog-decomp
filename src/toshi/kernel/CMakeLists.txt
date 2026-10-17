@@ -26,6 +26,9 @@ add_library(toshi_kernel STATIC
   TGenericPriList.h
   TISOFile.cpp
   TISOFile.h
+  TLocale.cpp
+  TLocale.h
+  TMap.h
   TMath.cpp
   TMath.h
   TMatrix44.cpp

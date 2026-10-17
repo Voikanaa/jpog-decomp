@@ -7,12 +7,16 @@
 #if defined(_M_IX86)
 
 #include <cstddef>
+#include <filesystem>
 #include <float.h>
 #include <string>
 #include <type_traits>
 
 namespace jpog::test
 {
+
+// JPOG_ORIGINAL_DIR (or the environment override): the original install with the DLLs and Data.
+std::filesystem::path OriginalModuleDirectory();
 
 // Callable wrapper for an original __thiscall member function: R Class::fn(Args...).
 // MSVC does not allow __thiscall on plain function pointer types, so the call goes through

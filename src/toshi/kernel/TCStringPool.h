@@ -55,6 +55,12 @@ class TPCString
 	friend class TCStringPool;
 
 public:
+	// Map ordering by content (TMap); inline in the original.
+	struct Comparator
+	{
+		static int Compare(const TPCString& a, const TPCString& b) { return a.Compare(b); }
+	};
+
 	TPCString();
 	TPCString(const TPCString& other);
 	~TPCString();

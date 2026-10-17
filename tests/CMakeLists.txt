@@ -10,6 +10,7 @@ add_executable(jpog_tests
   kernel/TFileLexerTests.cpp
   kernel/TFileTests.cpp
   kernel/TISOFileTests.cpp
+  kernel/TLocaleTests.cpp
   kernel/TMathTests.cpp
   kernel/TMatrix44Tests.cpp
   kernel/TMemoryTests.cpp
