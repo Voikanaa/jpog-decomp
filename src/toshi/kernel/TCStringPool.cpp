@@ -1,5 +1,6 @@
 #include "toshi/kernel/TCStringPool.h"
 
+#include "toshi/kernel/TFile.h"
 #include "toshi/kernel/TMemory.h"
 #include "toshi/kernel/TSystem.h"
 
@@ -179,6 +180,13 @@ TCStringPool::TCStringPool(int growSize, int capacity)
 {
 }
 
+TCStringPool::TCStringPool(const char* fileName, int growSize, int capacity)
+    : m_iGrowSize(growSize), m_iCount(0), m_iCapacity(capacity),
+      m_pEntries(capacity < 1 ? nullptr : AllocEntries<Entry>(capacity))
+{
+	ReadFile(fileName);
+}
+
 TCStringPool::TCStringPool(const TCStringPool& other) : m_pEntries(nullptr)
 {
 	*this = other;
@@ -313,9 +321,81 @@ void TCStringPool::Dump() const
 
 // Shifts the entries after the string's slot down by one. As in the original there is no check
 // that the string is present.
+bool TCStringPool::WriteFile(const char* fileName)
+{
+	TFile* file = TFileManager::GetFileManager()->CreateFile(fileName, 2 | 8);
+	if (file == nullptr)
+		return false;
+	file->Write(&m_iCount, 4);
+	int size = 0;
+	for (int i = 0; i < m_iCount; ++i)
+		size += m_pEntries[i].string->m_oString.Length() + 1;
+	file->Write(&size, 4);
+	for (int i = 0; i < m_iCount; ++i)
+	{
+		const TCString& string = m_pEntries[i].string->m_oString;
+		file->Write(string.GetString(0), string.Length() + 1);
+	}
+	TFileManager::GetFileManager()->DestroyFile(file);
+	return true;
+}
+
+bool TCStringPool::ReadFile(const char* fileName)
+{
+	TFile* file = TFileManager::GetFileManager()->CreateFile(fileName, 1);
+	if (file == nullptr)
+		return false;
+	int count = 0, size = 0;
+	file->Read(&count, 4);
+	file->Read(&size, 4);
+	if (count == 0 || size == 0)
+		return false;
+	auto* data = static_cast<char*>(tmalloc(size, nullptr, -1));
+	const int read = file->Read(data, size);
+	TFileManager::GetFileManager()->DestroyFile(file);
+	if (read != size)
+	{
+		tfree(data);
+		return false;
+	}
+	if (count > m_iCapacity)
+	{
+		Entry* entries = AllocEntries<Entry>(count);
+		for (int i = 0; i < m_iCount; ++i)
+			entries[i] = m_pEntries[i];
+		if (m_pEntries != nullptr)
+			FreeEntries(m_pEntries);
+		m_pEntries = entries;
+		m_iCapacity = count;
+	}
+	m_iCount = count;
+	auto* strings = new TPooledCString[static_cast<std::size_t>(count)];
+	int offset = 0;
+	for (int i = 0; i < count; ++i)
+	{
+		char* string = data + offset;
+		int end = offset;
+		while (data[end] != '\0')
+			++end;
+		m_pEntries[i] = {string, &strings[i]};
+		strings[i].m_oString.ForceSetData(string, end - offset);
+		strings[i].m_pPool = this;
+		++strings[i].m_iRefCount;
+		offset = end + 1;
+	}
+	return true;
+}
+
 void TCStringPool::Remove(TPooledCString& string)
 {
 	RemoveEntry(m_iCount, m_pEntries, FindFirstEntry(m_pEntries, m_iCount, string.m_oString.GetString(0)));
+}
+
+TCString TSTDCALL operator+(const TCString& string, const TPCString& other)
+{
+	TCString result(string);
+	result += other.GetCString();
+	return result;
 }
 
 } // namespace Toshi

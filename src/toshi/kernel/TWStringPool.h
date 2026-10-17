@@ -139,4 +139,6 @@ private:
 
 JPOG_ASSERT_SIZE(TWStringPool, 16);
 
+TWString TSTDCALL operator+(const TWString& string, const TPWString& other);
+
 } // namespace Toshi

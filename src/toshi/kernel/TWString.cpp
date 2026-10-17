@@ -474,4 +474,12 @@ void TWString::Reset()
 	m_uiLengthAndExcess = 0;
 }
 
+TWString TSTDCALL operator+(const unsigned short* string, const TWString& other)
+{
+	TWString result;
+	result.Copy(string, -1);
+	result.Concat(other, -1);
+	return result;
+}
+
 } // namespace Toshi
