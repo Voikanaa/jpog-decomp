@@ -23,12 +23,16 @@ add_library(toshi_kernel STATIC
   TMath.h
   TMatrix44.cpp
   TMatrix44.h
+  TMemFile.cpp
+  TMemFile.h
   TMemory.cpp
   TMemory.h
   TMutex.cpp
   TMutex.h
   TNativeFile.cpp
   TNativeFile.h
+  TNullFile.cpp
+  TNullFile.h
   TObject.cpp
   TObject.h
   TPlane.cpp

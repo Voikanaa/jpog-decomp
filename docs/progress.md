@@ -8,7 +8,7 @@ an x86 build); do not edit it by hand.
 <!-- coverage:begin -->
 | Module | Functions | Reimplemented | Coverage |
 |---|---:|---:|---:|
-| TKernelInterface | 1627 | 927 | 57.0% |
+| TKernelInterface | 1627 | 982 | 60.4% |
 | TApplication | 16 | 0 | 0.0% |
 | TInputInterface | 93 | 0 | 0.0% |
 | TInputDXInterface | 96 | 0 | 0.0% |
@@ -27,7 +27,7 @@ an x86 build); do not edit it by hand.
 | TSysShaderD3D | 52 | 0 | 0.0% |
 | TTerrainShaderD3D | 288 | 0 | 0.0% |
 | SimJP | 13680 | 0 | 0.0% |
-| **Total** | **20452** | **927** | **4.5%** |
+| **Total** | **20452** | **982** | **4.8%** |
 <!-- coverage:end -->
 
 ## Verification
@@ -36,6 +36,11 @@ original export on the same inputs. Float results must match bit for bit unless 
 justifies a tolerance.
 
 ## Log
+- 2026-10-17: Files, part 3: `TNullFile`/`TNullFileSystem` (counts written bytes) and
+  `TMemFile`/`TMemFileSystem` (whole file loaded into memory, resolved via "local"). Quirks
+  kept: a path-based `TMemFile` open never destroys its source file, so its handle stays open and
+  a missing file opens as empty; seeking past the end returns to the start. Ghidra drops the
+  `Put*Char` return value (they return the character, checked in the disassembly).
 - 2026-10-17: Files, part 2: `TNativeFile`/`TNativeFileSystem` (Win32 files with a 2 KB sector
   read buffer). Quirks kept: `Open` disables write buffering, `GetSize` moves the OS file
   pointer, directory scans leak the find handle. Verified against the original on real files.

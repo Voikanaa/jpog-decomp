@@ -2,7 +2,9 @@
 #include "support/FloatCompare.h"
 #include "support/OriginalModule.h"
 #include "toshi/kernel/TFile.h"
+#include "toshi/kernel/TMemFile.h"
 #include "toshi/kernel/TNativeFile.h"
+#include "toshi/kernel/TNullFile.h"
 
 #include <cstring>
 #include <doctest/doctest.h>
@@ -101,6 +103,62 @@ TEST_SUITE("TFile")
 		CHECK(manager.FindFileSystem("b") == &b);
 		manager.UnmountFileSystem(&a);
 		manager.UnmountFileSystem(&b);
+	}
+
+	TEST_CASE("null files")
+	{
+		TFileManager manager;
+		Toshi::TNullFileSystem system("null");
+		CHECK(Toshi::TNullFileSystem::GetNullFileSystem() == &system);
+		auto* file = static_cast<Toshi::TNullFile*>(system.CreateFile("anything", 2));
+		REQUIRE(file != nullptr);
+		CHECK(file->Write("abc", 3) == 3);
+		CHECK(file->PutCChar('x') == 'x');
+		CHECK(file->CPrintf("%d", 1234) == 4);
+		CHECK(file->GetBytesWritten() == 8);
+		char buffer[4];
+		CHECK(file->Read(buffer, 4) == -1);
+		CHECK(file->GetCChar() == -1);
+		CHECK(file->Tell() == 0);
+		CHECK(system.MakeInternalPath("x") == "");
+		system.DestroyFile(file);
+	}
+
+	TEST_CASE("memory files")
+	{
+		namespace fs = std::filesystem;
+		const fs::path directory = fs::current_path() / "jpog_mem_file_test";
+		fs::create_directories(directory);
+		{
+			std::ofstream out(directory / "data.bin", std::ios::binary);
+			out << "0123456789";
+		}
+		TFileManager manager;
+		Toshi::TNativeFileSystem local("local");
+		local.SetPrefix(directory.string().c_str());
+		Toshi::TMemFileSystem memory("mem");
+		CHECK(memory.MakeInternalPath("a") == local.MakeInternalPath("a"));
+
+		TFile* source = local.CreateFile("data.bin", 1);
+		REQUIRE(source != nullptr);
+		source->Seek(4, TFile::TSEEK_SET);
+		TFile* file = memory.CreateFile(source); // copies from the start
+		local.DestroyFile(source);
+		REQUIRE(file != nullptr);
+		CHECK(file->GetSize() == 10);
+		char buffer[8] = {};
+		CHECK(file->Read(buffer, 3) == 3);
+		CHECK(std::string(buffer, 3) == "012");
+		CHECK(file->Read(buffer, 8) == -1); // all or nothing
+		CHECK(file->Tell() == 3);
+		CHECK(file->Seek(20, TFile::TSEEK_SET));
+		CHECK(file->Tell() == 0); // past the end goes back to the start
+		file->Seek(0, TFile::TSEEK_END);
+		CHECK(file->Tell() == 10);
+		CHECK(file->GetCChar() == -1);
+		CHECK(file->PutCChar('a') == 'a');
+		memory.DestroyFile(file);
+		fs::remove_all(directory);
 	}
 }
 
@@ -414,6 +472,137 @@ TEST_SUITE("TFile differential" * doctest::skip(KernelMissing()))
 		fsDtor(originalSystem);
 		managerDtor(originalManager);
 		fs::remove_all(directory);
+	}
+
+	TEST_CASE("memory files match the original")
+	{
+		namespace fs = std::filesystem;
+		const fs::path directory = fs::current_path() / "jpog_mem_file_diff";
+		fs::create_directories(directory);
+		InputGenerator gen;
+		std::vector<unsigned char> content(3000 + gen.NextInt(0, 2000));
+		for (auto& byte : content)
+			byte = static_cast<unsigned char>(gen.NextU32());
+		// Path-based opens leak the source handle (share mode 0), so each side gets its own files.
+		for (const char* file : {"src_original.bin", "src_ours.bin", "path_original.bin", "path_ours.bin"})
+		{
+			std::ofstream out(directory / file, std::ios::binary);
+			out.write(reinterpret_cast<const char*>(content.data()), static_cast<std::streamsize>(content.size()));
+		}
+
+		const auto managerCtor = Original<Method<void>>("??0TFileManager@Toshi@@QAE@XZ");
+		const auto managerDtor = Original<Method<void>>("??1TFileManager@Toshi@@QAE@XZ");
+		const auto nativeCtor = Original<Method<void, const char*>>("??0TNativeFileSystem@Toshi@@QAE@PBD@Z");
+		const auto nativeDtor = Original<Method<void>>("??1TNativeFileSystem@Toshi@@UAE@XZ");
+		const auto memCtor = Original<Method<void, const char*>>("??0TMemFileSystem@Toshi@@QAE@PBD@Z");
+		const auto memDtor = Original<Method<void>>("??1TMemFileSystem@Toshi@@UAE@XZ");
+		const auto setPrefix =
+		    Original<Method<void, const TCString*>>("?SetPrefix@TFileSystem@Toshi@@UAEXABVTCString@2@@Z");
+		const auto nativeCreate = Original<Method<TFile*, const TCString*, unsigned int>>(
+		    "?CreateFile@TNativeFileSystem@Toshi@@UAEPAVTFile@2@ABVTCString@2@I@Z");
+		const auto nativeDestroy =
+		    Original<Method<void, TFile*>>("?DestroyFile@TNativeFileSystem@Toshi@@UAEXPAVTFile@2@@Z");
+		const auto memCreatePath = Original<Method<TFile*, const TCString*, unsigned int>>(
+		    "?CreateFile@TMemFileSystem@Toshi@@UAEPAVTFile@2@ABVTCString@2@I@Z");
+		const auto memCreateCopy =
+		    Original<Method<TFile*, TFile*>>("?CreateFile@TMemFileSystem@Toshi@@QAEPAVTFile@2@PAV32@@Z");
+		const auto memDestroy = Original<Method<void, TFile*>>("?DestroyFile@TMemFileSystem@Toshi@@UAEXPAVTFile@2@@Z");
+
+		alignas(void*) unsigned char originalManager[sizeof(TFileManager)];
+		alignas(void*) unsigned char originalLocal[sizeof(Toshi::TNativeFileSystem)];
+		alignas(void*) unsigned char originalMemory[sizeof(Toshi::TMemFileSystem)];
+		managerCtor(originalManager);
+		nativeCtor(originalLocal, "local");
+		const TCString prefix(directory.string().c_str());
+		setPrefix(originalLocal, &prefix);
+		memCtor(originalMemory, "mem");
+		auto* ourManager = new TFileManager();
+		auto* ourLocal = new Toshi::TNativeFileSystem("local");
+		ourLocal->SetPrefix(prefix);
+		auto* ourMemory = new Toshi::TMemFileSystem("mem");
+
+		auto exercise = [&](TFile* original, TFile* ours)
+		{
+			REQUIRE(original != nullptr);
+			REQUIRE(ours != nullptr);
+			CHECK(original->GetSize() == ours->GetSize());
+			std::vector<unsigned char> a(4000), b(4000);
+			for (int step = 0; step < 300; ++step)
+			{
+				INFO("step ", step);
+				switch (gen.NextU32() % 5)
+				{
+				case 0:
+				case 1:
+				{
+					const int size = gen.NextInt(-1, 1500);
+					const int readOriginal = original->Read(a.data(), size);
+					REQUIRE(readOriginal == ours->Read(b.data(), size));
+					CHECK(std::memcmp(a.data(), b.data(), readOriginal > 0 ? readOriginal : 0) == 0);
+					break;
+				}
+				case 2:
+				{
+					// Negative positions are not clamped and would read outside the buffer.
+					const auto origin = static_cast<TFile::TSEEK>(gen.NextInt(0, 2));
+					const int offset = origin == TFile::TSEEK_CUR
+					                       ? gen.NextInt(-original->Tell(), 2000)
+					                       : gen.NextInt(0, static_cast<int>(content.size()) + 200);
+					CHECK(original->Seek(offset, origin) == ours->Seek(offset, origin));
+					break;
+				}
+				case 3:
+					CHECK(original->GetCChar() == ours->GetCChar());
+					CHECK(original->GetWChar() == ours->GetWChar());
+					CHECK(original->PutWChar(7) == ours->PutWChar(7));
+					break;
+				default:
+					CHECK(original->CPrintf("%d", step) == ours->CPrintf("%d", step));
+					break;
+				}
+				CHECK(original->Tell() == ours->Tell());
+			}
+		};
+
+		const TCString originalSource("src_original.bin"), ourSource("src_ours.bin");
+		for (int round = 0; round < 5; ++round)
+		{
+			TFile* originalNative = nativeCreate(originalLocal, &originalSource, 1);
+			TFile* ourNative = ourLocal->CreateFile(ourSource, 1);
+			REQUIRE(originalNative != nullptr);
+			REQUIRE(ourNative != nullptr);
+			const int position = gen.NextInt(0, 1000);
+			originalNative->Seek(position, TFile::TSEEK_SET);
+			ourNative->Seek(position, TFile::TSEEK_SET);
+			TFile* original = memCreateCopy(originalMemory, originalNative);
+			TFile* ours = ourMemory->CreateFile(ourNative);
+			nativeDestroy(originalLocal, originalNative);
+			ourLocal->DestroyFile(ourNative);
+			exercise(original, ours);
+			memDestroy(originalMemory, original);
+			ourMemory->DestroyFile(ours);
+		}
+
+		// The first path-based open loads the file; the leaked handle makes the second one empty.
+		const TCString originalPath("local:path_original.bin"), ourPath("local:path_ours.bin");
+		for (int round = 0; round < 2; ++round)
+		{
+			TFile* original = memCreatePath(originalMemory, &originalPath, 1);
+			TFile* ours = ourMemory->CreateFile(ourPath, 1);
+			exercise(original, ours);
+			CHECK(ours->GetSize() == (round == 0 ? static_cast<int>(content.size()) : 0));
+			memDestroy(originalMemory, original);
+			ourMemory->DestroyFile(ours);
+		}
+
+		delete ourMemory;
+		delete ourLocal;
+		delete ourManager;
+		memDtor(originalMemory);
+		nativeDtor(originalLocal);
+		managerDtor(originalManager);
+		std::error_code ignored; // the leaked handles keep the path files open
+		fs::remove_all(directory, ignored);
 	}
 }
 
