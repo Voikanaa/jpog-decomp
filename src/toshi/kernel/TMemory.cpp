@@ -7,6 +7,7 @@
 #include <map>
 #include <memory>
 #include <mutex>
+#include <new>
 
 namespace Toshi
 {
@@ -24,11 +25,25 @@ namespace
 TMemory::MemBlock s_globalBlock;
 int s_dumpCount = 0;
 
+// Allocator for the statistics map. It must bypass operator new, which itself allocates
+// through TMemory (see the global operators at the end of this file).
+template <typename T> struct SystemAllocator
+{
+	using value_type = T;
+	SystemAllocator() = default;
+	template <typename U> SystemAllocator(const SystemAllocator<U>&) {}
+	T* allocate(std::size_t count) { return static_cast<T*>(std::malloc(count * sizeof(T))); }
+	void deallocate(T* memory, std::size_t) { std::free(memory); }
+	template <typename U> bool operator==(const SystemAllocator<U>&) const { return true; }
+};
+
 // Live allocation statistics for GetMemInfo.
 struct Statistics
 {
 	std::mutex mutex;
-	std::map<unsigned int, unsigned int> sizes; // size -> number of live allocations
+	// size -> number of live allocations
+	std::map<unsigned int, unsigned int, std::less<>, SystemAllocator<std::pair<const unsigned int, unsigned int>>>
+	    sizes;
 	unsigned int count = 0;
 	unsigned int bytes = 0;
 };
@@ -36,7 +51,7 @@ struct Statistics
 // Never destroyed: static objects (such as free lists) may still free memory during exit.
 Statistics& Stats()
 {
-	static Statistics* stats = new Statistics;
+	static Statistics* stats = new (std::malloc(sizeof(Statistics))) Statistics;
 	return *stats;
 }
 
@@ -134,7 +149,7 @@ void* TMemory::Recalloc(void*, unsigned int, MemBlock*)
 
 TMemory& TSTDCALL TMemory::GetMemManager()
 {
-	static TMemory& manager = *new TMemory; // never destroyed, see Stats()
+	static TMemory& manager = *new (std::malloc(sizeof(TMemory))) TMemory; // never destroyed
 	Initialise();
 	return manager;
 }
@@ -293,4 +308,37 @@ void* TSTDCALL trealloc(void* memory, int size)
 void TSTDCALL tfree(void* memory)
 {
 	Toshi::TMemory::GetMemManager().Free(memory);
+}
+
+// Toshi code allocates with operator new and frees with operator delete, which the original
+// inlines as tmalloc/tfree (TObject's deleting destructor calls tfree directly). Objects from
+// TClass::CreateObject (tmalloc) are therefore released by delete.
+void* operator new(std::size_t size)
+{
+	return tmalloc(static_cast<int>(size), nullptr, -1);
+}
+
+void* operator new[](std::size_t size)
+{
+	return tmalloc(static_cast<int>(size), nullptr, -1);
+}
+
+void operator delete(void* memory) noexcept
+{
+	tfree(memory);
+}
+
+void operator delete[](void* memory) noexcept
+{
+	tfree(memory);
+}
+
+void operator delete(void* memory, std::size_t) noexcept
+{
+	tfree(memory);
+}
+
+void operator delete[](void* memory, std::size_t) noexcept
+{
+	tfree(memory);
 }

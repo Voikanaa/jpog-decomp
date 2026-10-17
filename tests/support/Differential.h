@@ -30,7 +30,7 @@ inline bool KernelMissing()
 template <typename Fn> Fn Original(const char* mangledName)
 {
 	const Fn fn = OriginalModule::Kernel().Get<Fn>(mangledName);
-	REQUIRE_MESSAGE(fn != nullptr, "export not found: " << mangledName);
+	REQUIRE_MESSAGE(fn != nullptr, "export not found: " << doctest::String(mangledName));
 	return fn;
 }
 

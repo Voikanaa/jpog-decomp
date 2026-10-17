@@ -8,7 +8,7 @@ an x86 build); do not edit it by hand.
 <!-- coverage:begin -->
 | Module | Functions | Reimplemented | Coverage |
 |---|---:|---:|---:|
-| TKernelInterface | 1627 | 660 | 40.6% |
+| TKernelInterface | 1627 | 696 | 42.8% |
 | TApplication | 16 | 0 | 0.0% |
 | TInputInterface | 93 | 0 | 0.0% |
 | TInputDXInterface | 96 | 0 | 0.0% |
@@ -27,7 +27,7 @@ an x86 build); do not edit it by hand.
 | TSysShaderD3D | 52 | 0 | 0.0% |
 | TTerrainShaderD3D | 288 | 0 | 0.0% |
 | SimJP | 13680 | 0 | 0.0% |
-| **Total** | **20452** | **660** | **3.2%** |
+| **Total** | **20452** | **696** | **3.4%** |
 <!-- coverage:end -->
 
 ## Verification
@@ -36,6 +36,10 @@ original export on the same inputs. Float results must match bit for bit unless 
 justifies a tolerance.
 
 ## Log
+- 2026-10-17: RTTI: `TObject` and `TClass` (class tree, lookup, IsA, common base, tree walks),
+  verified on randomised class trees built by the original. Global `operator new`/`delete` now
+  route to `tmalloc`/`tfree`, as the original inlines them (TObject's deleting destructor calls
+  `tfree`). Localised strings and `TLocale` wait for containers, files and events (#7 blocked).
 - 2026-10-17: Strings, part 3: `TWStringPool`, `TPooledWString` and the inline `TPWString`; both
   pools now share one sorted-array helper (`StringPoolArray.h`). `coverage.py` ignores header-only
   classes (the original inlines `TPWString`) and our `jpog::` helpers.
