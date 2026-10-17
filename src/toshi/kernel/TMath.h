@@ -95,6 +95,11 @@ public:
 	static float TSTDCALL Gain(float gain, float t);
 	static float TSTDCALL Gain075(float t);
 
+	// x87 control word (precision, rounding, exception masks). The game itself never calls these.
+	// On x64, where float math uses SSE, the word is only stored and returned.
+	static unsigned short TSTDCALL GetFPUControlWord();
+	static void TSTDCALL SetFPUControlWord(unsigned short controlWord);
+
 private:
 	static float TSTDCALL Bias(float bias, float t);
 };
