@@ -27,6 +27,8 @@ add_library(toshi_kernel STATIC
   TMemory.h
   TMutex.cpp
   TMutex.h
+  TNativeFile.cpp
+  TNativeFile.h
   TObject.cpp
   TObject.h
   TPlane.cpp

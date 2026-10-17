@@ -2,9 +2,12 @@
 #include "support/FloatCompare.h"
 #include "support/OriginalModule.h"
 #include "toshi/kernel/TFile.h"
+#include "toshi/kernel/TNativeFile.h"
 
 #include <cstring>
 #include <doctest/doctest.h>
+#include <filesystem>
+#include <fstream>
 #include <string>
 #include <vector>
 
@@ -264,6 +267,153 @@ TEST_SUITE("TFile differential" * doctest::skip(KernelMissing()))
 				delete ourSystems[i];
 			}
 		}
+	}
+
+	TEST_CASE("native files match the original")
+	{
+		namespace fs = std::filesystem;
+		const fs::path directory = fs::current_path() / "jpog_native_file_test";
+		fs::create_directories(directory);
+		InputGenerator gen;
+		std::vector<unsigned char> content(5000 + gen.NextInt(0, 3000));
+		for (auto& byte : content)
+			byte = static_cast<unsigned char>(gen.NextU32());
+		// One copy per side: files are opened exclusively (share mode 0).
+		for (const char* file : {"data_original.bin", "data_ours.bin"})
+		{
+			std::ofstream out(directory / file, std::ios::binary);
+			out.write(reinterpret_cast<const char*>(content.data()), static_cast<std::streamsize>(content.size()));
+		}
+
+		using P = void*;
+		const auto managerCtor = Original<Method<void>>("??0TFileManager@Toshi@@QAE@XZ");
+		const auto managerDtor = Original<Method<void>>("??1TFileManager@Toshi@@QAE@XZ");
+		const auto fsCtor = Original<Method<void, const char*>>("??0TNativeFileSystem@Toshi@@QAE@PBD@Z");
+		const auto fsDtor = Original<Method<void>>("??1TNativeFileSystem@Toshi@@UAE@XZ");
+		const auto setPrefix =
+		    Original<Method<void, const TCString*>>("?SetPrefix@TFileSystem@Toshi@@UAEXABVTCString@2@@Z");
+		const auto createFile = Original<Method<TFile*, const TCString*, unsigned int>>(
+		    "?CreateFile@TNativeFileSystem@Toshi@@UAEPAVTFile@2@ABVTCString@2@I@Z");
+		const auto destroyFile =
+		    Original<Method<void, TFile*>>("?DestroyFile@TNativeFileSystem@Toshi@@UAEXPAVTFile@2@@Z");
+
+		alignas(void*) unsigned char originalManager[sizeof(TFileManager)];
+		alignas(void*) unsigned char originalSystem[sizeof(Toshi::TNativeFileSystem)];
+		managerCtor(originalManager);
+		fsCtor(originalSystem, "local");
+		const TCString prefix(directory.string().c_str());
+		setPrefix(originalSystem, &prefix);
+		auto* ourManager = new TFileManager();
+		auto* ourSystem = new Toshi::TNativeFileSystem("local");
+		ourSystem->SetPrefix(prefix);
+
+		struct NativeView
+		{
+			void* vtable;
+			void* system;
+			void* handle;
+			int position, filePointer, bufferStart, bufferSize;
+			void *readBuffer, *writeBuffer;
+			int writeUsed;
+			bool writeBuffered;
+		};
+		auto sameState = [](const TFile* a, const TFile* b)
+		{
+			const auto* x = reinterpret_cast<const NativeView*>(a);
+			const auto* y = reinterpret_cast<const NativeView*>(b);
+			return x->position == y->position && x->filePointer == y->filePointer && x->bufferStart == y->bufferStart &&
+			       x->bufferSize == y->bufferSize && x->writeUsed == y->writeUsed &&
+			       x->writeBuffered == y->writeBuffered;
+		};
+
+		const TCString originalData("data_original.bin"), ourData("data_ours.bin");
+		for (int round = 0; round < 20; ++round)
+		{
+			const unsigned int flags = (round % 4 == 3) ? 0x11 : 1; // also unbuffered
+			TFile* original = createFile(originalSystem, &originalData, flags);
+			TFile* ours = ourSystem->CreateFile(ourData, flags);
+			REQUIRE(original != nullptr);
+			REQUIRE(ours != nullptr);
+			CHECK(sameState(original, ours));
+			std::vector<unsigned char> a(4000), b(4000);
+			for (int step = 0; step < 200; ++step)
+			{
+				INFO("round ", round, " step ", step);
+				switch (gen.NextU32() % 6)
+				{
+				case 0:
+				case 1:
+				{
+					const int size = gen.NextInt(-1, 3000);
+					const int readOriginal = original->Read(a.data(), size);
+					const int readOurs = ours->Read(b.data(), size);
+					REQUIRE(readOriginal == readOurs);
+					CHECK(std::memcmp(a.data(), b.data(), readOurs > 0 ? readOurs : 0) == 0);
+					break;
+				}
+				case 2:
+				{
+					const int offset = gen.NextInt(-200, static_cast<int>(content.size()) + 200);
+					const auto origin = static_cast<TFile::TSEEK>(gen.NextInt(0, 2));
+					const int adjusted =
+					    origin == TFile::TSEEK_SET ? offset : offset - static_cast<int>(content.size());
+					CHECK(original->Seek(adjusted, origin) == ours->Seek(adjusted, origin));
+					break;
+				}
+				case 3:
+					CHECK(original->GetCChar() == ours->GetCChar());
+					break;
+				case 4:
+					CHECK(original->GetWChar() == ours->GetWChar());
+					break;
+				default:
+					CHECK(original->Tell() == ours->Tell());
+					if (step % 20 == 0)
+						CHECK(original->GetSize() == ours->GetSize());
+					break;
+				}
+				CHECK(sameState(original, ours));
+			}
+			destroyFile(originalSystem, original);
+			ourSystem->DestroyFile(ours);
+		}
+
+		// Writing: both create their own file from the same calls; compare the results.
+		for (int round = 0; round < 10; ++round)
+		{
+			const TCString originalName("out_original.bin"), ourName("out_ours.bin");
+			TFile* original = createFile(originalSystem, &originalName, 2 | 8);
+			TFile* ours = ourSystem->CreateFile(ourName, 2 | 8);
+			REQUIRE(original != nullptr);
+			REQUIRE(ours != nullptr);
+			for (int step = 0; step < 50; ++step)
+			{
+				const int size = gen.NextInt(0, 3000);
+				const int offset = gen.NextInt(0, static_cast<int>(content.size()) - size);
+				if (step % 7 == 0)
+				{
+					const int position = gen.NextInt(0, 4000);
+					original->Seek(position, TFile::TSEEK_SET);
+					ours->Seek(position, TFile::TSEEK_SET);
+				}
+				CHECK(original->Write(content.data() + offset, size) == ours->Write(content.data() + offset, size));
+				CHECK(original->PutCChar(static_cast<char>(step)) == ours->PutCChar(static_cast<char>(step)));
+				CHECK(original->CPrintf("%d|", step) == ours->CPrintf("%d|", step));
+				CHECK(sameState(original, ours));
+			}
+			destroyFile(originalSystem, original);
+			ourSystem->DestroyFile(ours);
+			std::ifstream x(directory / "out_original.bin", std::ios::binary),
+			    y(directory / "out_ours.bin", std::ios::binary);
+			const std::string xs((std::istreambuf_iterator<char>(x)), {}), ys((std::istreambuf_iterator<char>(y)), {});
+			CHECK(xs == ys);
+		}
+
+		delete ourSystem;
+		delete ourManager;
+		fsDtor(originalSystem);
+		managerDtor(originalManager);
+		fs::remove_all(directory);
 	}
 }
 
