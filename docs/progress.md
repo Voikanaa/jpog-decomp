@@ -8,7 +8,7 @@ an x86 build); do not edit it by hand.
 <!-- coverage:begin -->
 | Module | Functions | Reimplemented | Coverage |
 |---|---:|---:|---:|
-| TKernelInterface | 1627 | 451 | 27.7% |
+| TKernelInterface | 1627 | 594 | 36.5% |
 | TApplication | 16 | 0 | 0.0% |
 | TInputInterface | 93 | 0 | 0.0% |
 | TInputDXInterface | 96 | 0 | 0.0% |
@@ -27,7 +27,7 @@ an x86 build); do not edit it by hand.
 | TSysShaderD3D | 52 | 0 | 0.0% |
 | TTerrainShaderD3D | 288 | 0 | 0.0% |
 | SimJP | 13680 | 0 | 0.0% |
-| **Total** | **20452** | **451** | **2.2%** |
+| **Total** | **20452** | **594** | **2.9%** |
 <!-- coverage:end -->
 
 ## Verification
@@ -36,6 +36,10 @@ original export on the same inputs. Float results must match bit for bit unless 
 justifies a tolerance.
 
 ## Log
+- 2026-10-17: Strings, part 1: `TCString`, `TWString` and the `TSystem` string/memory helpers
+  (143 functions). Randomised differential runs compare contents, length and spare capacity after
+  every operation. Quirk kept: `TWString` copying onto itself zeroes its characters (no
+  self-assignment check, unlike `TCString`).
 - 2026-10-17: Memory, part 2: TMemory statistics (`GetMemInfo` reports live allocations) and the
   debug/HAL functions, most of which are empty stubs in the shipped original.
 - 2026-10-17: Memory, part 1: `tmalloc`/`tcalloc`/`trealloc`/`tfree`, the core `TMemory` API and

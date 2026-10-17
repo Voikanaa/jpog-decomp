@@ -54,9 +54,9 @@ LGPL linked dynamically).
   (`binkw32`, `fmod`, `libmmd`), `Data/`, `Shaders/D3D/`, ISO. `game/` = working copy (gitignored).
 - `symbols/` per-module exports/imports CSV, `classes.csv`, `vtables.csv` (generated).
 - `docs/` `plan.md` (roadmap), `modules.md` (binary map), `progress.md` (coverage + log).
-- `src/` `common/` (`abi.h` TSTDCALL, `layout.h`); `toshi/kernel/` (lib `toshi_kernel`: TMath,
-  TVector2/3/4, TQuaternion, TMatrix44, TPlane, TFreeList, TMemory core implemented; TCString/TObject/TClass/
-  TKernelInterface declared); `toshi/application/`, `toshi/render/` (declarations); `game/` (**jpog.exe**: WinMain,
+- `src/` `common/` (`abi.h` TSTDCALL, `layout.h`); `toshi/kernel/` (lib `toshi_kernel`; see
+  `docs/progress.md` for what is implemented; TObject/TClass/TKernelInterface declared only);
+  `toshi/application/`, `toshi/render/` (declarations); `game/` (**jpog.exe**: WinMain,
   `AApplication`, `CrashHandler`); `hook/` (deferred, `JPOG_HOOK=ON`).
 - `tests/` doctest suite `jpog_tests` (run by ctest). `support/OriginalModule` loads the original
   DLLs from `JPOG_ORIGINAL_DIR` (default `<root>/JPOG`) for differential tests (x86 only, skipped
