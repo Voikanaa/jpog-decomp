@@ -7,6 +7,8 @@ add_library(toshi_kernel STATIC
   TCString.h
   TCStringPool.cpp
   TCStringPool.h
+  TEvent.cpp
+  TEvent.h
   TFile.cpp
   TFile.h
   TFreeList.cpp

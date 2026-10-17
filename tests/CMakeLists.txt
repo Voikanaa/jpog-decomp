@@ -6,6 +6,7 @@ add_executable(jpog_tests
   support/OriginalModule.h
   kernel/TCStringPoolTests.cpp
   kernel/TContainerTests.cpp
+  kernel/TEventTests.cpp
   kernel/TFileTests.cpp
   kernel/TISOFileTests.cpp
   kernel/TMathTests.cpp
