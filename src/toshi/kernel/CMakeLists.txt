@@ -1,9 +1,13 @@
 # TKernelInterface.dll reimplementation.
 add_library(toshi_kernel STATIC
+  TFreeList.cpp
+  TFreeList.h
   TMath.cpp
   TMath.h
   TMatrix44.cpp
   TMatrix44.h
+  TMemory.cpp
+  TMemory.h
   TPlane.cpp
   TPlane.h
   TQuaternion.cpp

@@ -8,7 +8,7 @@ an x86 build); do not edit it by hand.
 <!-- coverage:begin -->
 | Module | Functions | Reimplemented | Coverage |
 |---|---:|---:|---:|
-| TKernelInterface | 1627 | 408 | 25.1% |
+| TKernelInterface | 1627 | 437 | 26.9% |
 | TApplication | 16 | 0 | 0.0% |
 | TInputInterface | 93 | 0 | 0.0% |
 | TInputDXInterface | 96 | 0 | 0.0% |
@@ -27,7 +27,7 @@ an x86 build); do not edit it by hand.
 | TSysShaderD3D | 52 | 0 | 0.0% |
 | TTerrainShaderD3D | 288 | 0 | 0.0% |
 | SimJP | 13680 | 0 | 0.0% |
-| **Total** | **20452** | **408** | **2.0%** |
+| **Total** | **20452** | **437** | **2.1%** |
 <!-- coverage:end -->
 
 ## Verification
@@ -36,6 +36,9 @@ original export on the same inputs. Float results must match bit for bit unless 
 justifies a tolerance.
 
 ## Log
+- 2026-10-17: Memory, part 1: `tmalloc`/`tcalloc`/`trealloc`/`tfree`, the core `TMemory` API and
+  `TFreeList` (exact; its pool layout matches the original in randomised differential runs).
+  Finding: the original `TMemory::Realloc`/`Recalloc` are stubs returning null.
 - 2026-10-17: `TMath::Get/SetFPUControlWord` reimplemented (x86: real `fnstcw`/`fldcw`; x64: stored
   value). Contrary to the earlier note, Set is not a no-op. No module imports either function.
 - 2026-10-17: `TMatrix44`, `TPlane` and `TQuaternion::GetEulerXYZ` reimplemented (108 functions);
