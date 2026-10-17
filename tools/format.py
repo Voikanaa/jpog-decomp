@@ -36,7 +36,9 @@ def find_clang_format():
 
 
 def tracked_sources():
-    out = subprocess.run(["git", "ls-files", "-z", "--", *PATTERNS], cwd=ROOT,
+    """Tracked sources plus new files that are not ignored (so fresh files are formatted too)."""
+    out = subprocess.run(["git", "ls-files", "-z", "--cached", "--others", "--exclude-standard", "--", *PATTERNS],
+                         cwd=ROOT,
                          capture_output=True, check=True).stdout.decode("utf-8")
     return [f for f in out.split("\0") if f]
 
