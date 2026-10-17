@@ -6,6 +6,8 @@
 namespace Toshi
 {
 
+template <typename T, int C> class TDList;
+
 // Minimal intrusive circular doubly linked list (TKernelInterface.dll): nodes only hold their
 // links (no owner, no count, no vtable). The list is a sentinel node; a "segment" is a chain
 // of linked nodes from `first` to `last`.
@@ -15,6 +17,7 @@ public:
 	class TNode
 	{
 		friend class TGenericDList;
+		template <typename T, int C> friend class TDList;
 
 	public:
 		TNode& operator=(const TNode& other);
@@ -77,5 +80,26 @@ private:
 
 JPOG_ASSERT_SIZE(TGenericDList::TNode, 8);
 JPOG_ASSERT_SIZE(TGenericDList, 8);
+
+// Typed TGenericDList. T derives from TGenericDList::TNode; the original inlines this template
+// (no exported members), so it is header-only here. C distinguishes lists of the same type.
+template <typename T, int C = 0> class TDList : public TGenericDList
+{
+public:
+	using Node = TGenericDList::TNode;
+
+	static T* FromNode(Node* node) { return static_cast<T*>(node); }
+
+	T* Head() const { return FromNode(TGenericDList::Head()); }
+	T* Tail() const { return FromNode(TGenericDList::Tail()); }
+	bool IsEnd(const Node* node) const { return node == TGenericDList::End(); }
+	static T* NextOf(T* item) { return FromNode(static_cast<Node*>(item)->m_pNext); }
+	static T* PrevOf(T* item) { return FromNode(static_cast<Node*>(item)->m_pPrev); }
+	bool IsEmpty() const { return TGenericDList::IsEmpty(); }
+	void InsertHead(T* item) { TGenericDList::InsertHead(item); }
+	void InsertTail(T* item) { TGenericDList::InsertTail(item); }
+	void RemoveAll() { TGenericDList::RemoveAll(); }
+	static void Remove(T* item) { static_cast<Node*>(item)->Remove(); }
+};
 
 } // namespace Toshi

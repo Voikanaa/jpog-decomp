@@ -8,7 +8,7 @@ an x86 build); do not edit it by hand.
 <!-- coverage:begin -->
 | Module | Functions | Reimplemented | Coverage |
 |---|---:|---:|---:|
-| TKernelInterface | 1627 | 833 | 51.2% |
+| TKernelInterface | 1627 | 894 | 54.9% |
 | TApplication | 16 | 0 | 0.0% |
 | TInputInterface | 93 | 0 | 0.0% |
 | TInputDXInterface | 96 | 0 | 0.0% |
@@ -27,7 +27,7 @@ an x86 build); do not edit it by hand.
 | TSysShaderD3D | 52 | 0 | 0.0% |
 | TTerrainShaderD3D | 288 | 0 | 0.0% |
 | SimJP | 13680 | 0 | 0.0% |
-| **Total** | **20452** | **833** | **4.1%** |
+| **Total** | **20452** | **894** | **4.4%** |
 <!-- coverage:end -->
 
 ## Verification
@@ -36,6 +36,9 @@ original export on the same inputs. Float results must match bit for bit unless 
 justifies a tolerance.
 
 ## Log
+- 2026-10-17: Files, part 1: `TFile`, `TFileSystem`, `TFileManager` (mounting, system path,
+  name resolution, path helpers), `TMutex`/`TMutexLock` and the inline `TDList<T>` template.
+  The original manager drives our C++ file systems in the differential test (same vtables).
 - 2026-10-17: Containers complete: `TGenericDList`, `TGenericPriList`, `TGenericNTree`, `TBitArray`
   (with `TGenericNodeList` earlier). Template containers (`TMap`, ...) are inline in the original
   and will be added header-only where they are used. TKernelInterface passes 50% coverage.
