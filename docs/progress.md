@@ -8,7 +8,7 @@ an x86 build); do not edit it by hand.
 <!-- coverage:begin -->
 | Module | Functions | Reimplemented | Coverage |
 |---|---:|---:|---:|
-| TKernelInterface | 1627 | 637 | 39.2% |
+| TKernelInterface | 1627 | 660 | 40.6% |
 | TApplication | 16 | 0 | 0.0% |
 | TInputInterface | 93 | 0 | 0.0% |
 | TInputDXInterface | 96 | 0 | 0.0% |
@@ -27,7 +27,7 @@ an x86 build); do not edit it by hand.
 | TSysShaderD3D | 52 | 0 | 0.0% |
 | TTerrainShaderD3D | 288 | 0 | 0.0% |
 | SimJP | 13680 | 0 | 0.0% |
-| **Total** | **20452** | **637** | **3.1%** |
+| **Total** | **20452** | **660** | **3.2%** |
 <!-- coverage:end -->
 
 ## Verification
@@ -36,6 +36,9 @@ original export on the same inputs. Float results must match bit for bit unless 
 justifies a tolerance.
 
 ## Log
+- 2026-10-17: Strings, part 3: `TWStringPool`, `TPooledWString` and the inline `TPWString`; both
+  pools now share one sorted-array helper (`StringPoolArray.h`). `coverage.py` ignores header-only
+  classes (the original inlines `TPWString`) and our `jpog::` helpers.
 - 2026-10-17: Strings, part 2: `TCStringPool`, `TPCString`, `TPooledCString` (string interning
   with reference counts). Quirk kept: the pool destructor skips every other entry while removing.
   Fixed an exit-time crash: allocator state is now never destroyed, since static free lists free

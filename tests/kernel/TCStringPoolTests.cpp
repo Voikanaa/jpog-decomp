@@ -2,6 +2,7 @@
 #include "support/FloatCompare.h"
 #include "support/OriginalModule.h"
 #include "toshi/kernel/TCStringPool.h"
+#include "toshi/kernel/TWStringPool.h"
 
 #include <cstring>
 #include <doctest/doctest.h>
@@ -11,6 +12,8 @@
 using Toshi::TCString;
 using Toshi::TCStringPool;
 using Toshi::TPCString;
+using Toshi::TPWString;
+using Toshi::TWStringPool;
 using namespace jpog::test;
 
 namespace
@@ -203,6 +206,87 @@ TEST_SUITE("TCStringPool differential" * doctest::skip(KernelMissing()))
 				release(&handle);
 			ourHandles.clear();
 			CheckSamePool(original, ours); // released strings left both pools
+			destruct(storage);
+			delete pool;
+		}
+	}
+
+	TEST_CASE("wide pool operations match the original")
+	{
+		using Handle = void*;
+		using U16 = unsigned short;
+		const auto construct = Original<Method<void>>("??0TWStringPool@Toshi@@QAE@XZ");
+		const auto destruct = Original<Method<void>>("??1TWStringPool@Toshi@@QAE@XZ");
+		const auto get =
+		    Original<Method<Handle*, Handle*, const U16*>>("?Get@TWStringPool@Toshi@@QAE?AVTPWString@2@PBG@Z");
+		const auto getInt = Original<Method<Handle*, Handle*, int>>("?Get@TWStringPool@Toshi@@QAE?AVTPWString@2@H@Z");
+		// TPWString is inline in the original: release a handle by hand (refcount at offset 0).
+		const auto deleteString = Original<Method<void>>("?Delete@TPooledWString@Toshi@@AAEXXZ");
+		auto release = [&](Handle& handle)
+		{
+			if (handle != nullptr && --*static_cast<int*>(handle) == 0)
+				deleteString(handle);
+			handle = nullptr;
+		};
+
+		InputGenerator gen;
+		for (int round = 0; round < 30; ++round)
+		{
+			alignas(void*) unsigned char storage[sizeof(TWStringPool)];
+			construct(storage);
+			auto& original = *reinterpret_cast<PoolView*>(storage);
+			auto* pool = new TWStringPool();
+			auto& ours = *reinterpret_cast<PoolView*>(pool);
+			std::vector<Handle> originalHandles;
+			std::vector<TPWString> ourHandles;
+			for (int step = 0; step < 120; ++step)
+			{
+				const std::string word = RandomWord(gen);
+				const std::u16string wide(word.begin(), word.end());
+				const auto* text = reinterpret_cast<const U16*>(wide.c_str());
+				Handle handle = nullptr;
+				switch (gen.NextU32() % 4)
+				{
+				case 0:
+				case 1:
+					get(storage, &handle, text);
+					originalHandles.push_back(handle);
+					ourHandles.push_back(pool->Get(text));
+					break;
+				case 2:
+				{
+					const int value = gen.NextInt(-3, 3);
+					getInt(storage, &handle, value);
+					originalHandles.push_back(handle);
+					ourHandles.push_back(pool->Get(value));
+					break;
+				}
+				default:
+					if (!originalHandles.empty())
+					{
+						const std::size_t index = gen.NextU32() % originalHandles.size();
+						release(originalHandles[index]);
+						originalHandles.erase(originalHandles.begin() + static_cast<std::ptrdiff_t>(index));
+						ourHandles.erase(ourHandles.begin() + static_cast<std::ptrdiff_t>(index));
+					}
+					break;
+				}
+				REQUIRE(original.growSize == ours.growSize);
+				REQUIRE(original.count == ours.count);
+				REQUIRE(original.capacity == ours.capacity);
+				for (int i = 0; i < ours.count; ++i)
+				{
+					const auto* a = reinterpret_cast<const U16*>(original.entries[i].key);
+					const auto* b = reinterpret_cast<const U16*>(ours.entries[i].key);
+					CHECK(std::u16string(reinterpret_cast<const char16_t*>(a)) ==
+					      std::u16string(reinterpret_cast<const char16_t*>(b)));
+					CHECK(original.entries[i].string->refCount == ours.entries[i].string->refCount);
+				}
+			}
+			for (Handle& handle : originalHandles)
+				release(handle);
+			ourHandles.clear();
+			REQUIRE(original.count == ours.count);
 			destruct(storage);
 			delete pool;
 		}

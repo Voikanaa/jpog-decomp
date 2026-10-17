@@ -3,113 +3,20 @@
 #include "toshi/kernel/TMemory.h"
 #include "toshi/kernel/TSystem.h"
 
-#include <cstddef>
-#include <new>
-
 namespace Toshi
 {
 
-using Entry = jpog::kernel::StringPoolEntry;
+using Entry = jpog::kernel::PoolEntry<char, TPooledCString>;
 
 TFreeList TPooledCString::ms_oFreelist(sizeof(TPooledCString), 0, 8, nullptr);
 const TCString TPCString::ms_sEmpty;
 
-namespace
-{
-
-// Entry arrays carry their element count in front, like the original's array new.
-constexpr std::size_t kCookie = alignof(Entry) > sizeof(int) ? alignof(Entry) : sizeof(int);
-
-Entry* AllocEntries(int count)
-{
-	auto* raw = static_cast<unsigned char*>(tmalloc(static_cast<int>(count * sizeof(Entry) + kCookie), nullptr, -1));
-	if (raw == nullptr)
-		return nullptr;
-	*reinterpret_cast<int*>(raw) = count;
-	return reinterpret_cast<Entry*>(raw + kCookie);
-}
-
-void FreeEntries(Entry* entries)
-{
-	tfree(reinterpret_cast<unsigned char*>(entries) - kCookie);
-}
-
-// Binary search for `key`. Returns the insertion index, or (with `found`) one past the last
-// entry equal to `key`.
-int Search(const Entry* entries, int count, const char* key, bool& found)
-{
-	found = false;
-	int low = 0;
-	int high = count - 1;
-	while (low <= high)
-	{
-		int middle = (low + high) / 2;
-		const int order = TSystem::StringCompare(key, entries[middle].key, -1);
-		if (order < 0)
-			high = middle - 1;
-		else if (order > 0)
-			low = middle + 1;
-		else
-		{
-			do
-				++middle;
-			while (middle <= high && TSystem::StringCompare(key, entries[middle].key, -1) == 0);
-			found = true;
-			return middle;
-		}
-	}
-	return low;
-}
-
-// Index of the first entry equal to `key`, or -1.
-int FindFirst(const Entry* entries, int count, const char* key)
-{
-	int low = 0;
-	int high = count - 1;
-	while (low <= high)
-	{
-		int middle = (low + high) / 2;
-		const int order = TSystem::StringCompare(key, entries[middle].key, -1);
-		if (order < 0)
-			high = middle - 1;
-		else if (order > 0)
-			low = middle + 1;
-		else
-		{
-			while (middle - 1 >= low && TSystem::StringCompare(key, entries[middle - 1].key, -1) == 0)
-				--middle;
-			return middle;
-		}
-	}
-	return -1;
-}
-
-// Opens `slots` entries at `index`, growing the array by max(growSize, slots) when full.
-void InsertSlots(int growSize, int& count, int& capacity, Entry*& entries, int index, int slots)
-{
-	if (capacity < count + slots)
-	{
-		const int newCapacity = capacity + (growSize <= slots ? slots : growSize);
-		Entry* grown = AllocEntries(newCapacity);
-		if (entries != nullptr)
-		{
-			for (int i = 0; i < index; ++i)
-				grown[i] = entries[i];
-			for (int i = index; i < count; ++i)
-				grown[i + slots] = entries[i];
-			FreeEntries(entries);
-		}
-		capacity = newCapacity;
-		entries = grown;
-		count += slots;
-		return;
-	}
-	for (int i = count - 1; i >= index; --i)
-		entries[i + slots] = entries[i];
-	count += slots;
-}
-
-} // namespace
+using jpog::kernel::AllocEntries;
+using jpog::kernel::FindFirstEntry;
+using jpog::kernel::FreeEntries;
+using jpog::kernel::InsertEntrySlots;
+using jpog::kernel::RemoveEntry;
+using jpog::kernel::SearchEntries;
 
 // --- TPooledCString ------------------------------------------------------------------------
 
@@ -268,7 +175,7 @@ const TCString& TPCString::operator*() const
 
 TCStringPool::TCStringPool(int growSize, int capacity)
     : m_iGrowSize(growSize), m_iCount(0), m_iCapacity(capacity),
-      m_pEntries(capacity < 1 ? nullptr : AllocEntries(capacity))
+      m_pEntries(capacity < 1 ? nullptr : AllocEntries<Entry>(capacity))
 {
 }
 
@@ -308,7 +215,7 @@ TCStringPool& TCStringPool::operator=(const TCStringPool& other)
 	m_iCount = other.m_iCount;
 	m_iGrowSize = other.m_iGrowSize;
 	m_iCapacity = other.m_iCount;
-	m_pEntries = AllocEntries(m_iCapacity);
+	m_pEntries = AllocEntries<Entry>(m_iCapacity);
 	for (int i = 0; i < m_iCount; ++i)
 		m_pEntries[i] = other.m_pEntries[i];
 	return *this;
@@ -319,11 +226,11 @@ TPCString TCStringPool::Get(const char* string)
 	if (string == nullptr || TSystem::StringLength(string) == 0)
 		return TPCString();
 	bool found;
-	const int index = Search(m_pEntries, m_iCount, string, found);
+	const int index = SearchEntries(m_pEntries, m_iCount, string, found);
 	if (found)
 		return TPCString(m_pEntries[index - 1].string);
 	auto* pooled = new TPooledCString(string, this);
-	InsertSlots(m_iGrowSize, m_iCount, m_iCapacity, m_pEntries, index, 1);
+	InsertEntrySlots(m_iGrowSize, m_iCount, m_iCapacity, m_pEntries, index, 1);
 	m_pEntries[index] = {pooled->m_oString.GetString(0), pooled};
 	return TPCString(pooled);
 }
@@ -345,7 +252,7 @@ TPCString TCStringPool::GetOptional(const char* string)
 	if (string == nullptr || TSystem::StringLength(string) == 0)
 		return TPCString();
 	bool found;
-	const int index = Search(m_pEntries, m_iCount, string, found);
+	const int index = SearchEntries(m_pEntries, m_iCount, string, found);
 	return found ? TPCString(m_pEntries[index - 1].string) : TPCString();
 }
 
@@ -383,7 +290,7 @@ bool TCStringPool::IsPresent(const char* string)
 	if (string == nullptr || TSystem::StringLength(string) == 0)
 		return false;
 	bool found;
-	Search(m_pEntries, m_iCount, string, found);
+	SearchEntries(m_pEntries, m_iCount, string, found);
 	return found;
 }
 
@@ -408,11 +315,7 @@ void TCStringPool::Dump() const
 // that the string is present.
 void TCStringPool::Remove(TPooledCString& string)
 {
-	int index = FindFirst(m_pEntries, m_iCount, string.m_oString.GetString(0));
-	const int last = m_iCount - 1;
-	for (; index < last; ++index)
-		m_pEntries[index] = m_pEntries[index + 1];
-	m_iCount = last;
+	RemoveEntry(m_iCount, m_pEntries, FindFirstEntry(m_pEntries, m_iCount, string.m_oString.GetString(0)));
 }
 
 } // namespace Toshi
