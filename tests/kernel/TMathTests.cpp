@@ -145,6 +145,25 @@ void CompareUnary(const char* name, FloatToFloat original, float(TSTDCALL* ours)
 
 TEST_SUITE("TMath differential" * doctest::skip(KernelMissing()))
 {
+	TEST_CASE("FPU control word round-trips with the original")
+	{
+		using GetFn = unsigned short(__stdcall*)();
+		using SetFn = void(__stdcall*)(unsigned short);
+		const auto get = Original<GetFn>("?GetFPUControlWord@TMath@Toshi@@SGGXZ");
+		const auto set = Original<SetFn>("?SetFPUControlWord@TMath@Toshi@@SGXG@Z");
+		const unsigned short saved = TMath::GetFPUControlWord();
+		for (const unsigned short word : {0x007F, 0x027F, 0x0C7F, 0x047F})
+		{
+			TMath::SetFPUControlWord(word);
+			CHECK(get() == word);
+			set(saved);
+			set(word);
+			CHECK(TMath::GetFPUControlWord() == word);
+		}
+		TMath::SetFPUControlWord(saved);
+		CHECK(get() == saved);
+	}
+
 	TEST_CASE("float to int conversions match exactly")
 	{
 		GamePrecisionScope precision;

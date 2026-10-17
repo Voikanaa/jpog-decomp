@@ -382,4 +382,35 @@ float TSTDCALL TMath::Gain075(float t)
 	       1.0f;
 }
 
+#if defined(_M_IX86)
+// clang-format off
+unsigned short TSTDCALL TMath::GetFPUControlWord()
+{
+	unsigned short controlWord;
+	__asm { fnstcw controlWord }
+	return controlWord;
+}
+
+void TSTDCALL TMath::SetFPUControlWord(unsigned short controlWord)
+{
+	__asm { fldcw controlWord }
+}
+// clang-format on
+#else
+namespace
+{
+unsigned short s_controlWord = 0x027F; // x87 default: 53-bit precision, round to nearest, all masked
+}
+
+unsigned short TSTDCALL TMath::GetFPUControlWord()
+{
+	return s_controlWord;
+}
+
+void TSTDCALL TMath::SetFPUControlWord(unsigned short controlWord)
+{
+	s_controlWord = controlWord;
+}
+#endif
+
 } // namespace Toshi
