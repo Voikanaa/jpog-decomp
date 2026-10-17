@@ -10,8 +10,12 @@
 // (minimum size, alignment, zeroing, failure cases) on top of the C runtime heap. See
 // docs/plan.md ("Memory").
 
+#include "common/layout.h"
+
 namespace Toshi
 {
+
+class TFile;
 
 class TMemory
 {
@@ -19,6 +23,27 @@ public:
 	// Heap regions and nodes of the original allocator. Opaque here: callers only pass them back.
 	class MemBlock;
 	class MemNode;
+
+	// Heap statistics. Sizes are in bytes; "holes" are free regions and "processes" allocations.
+	// On this heap there are no holes: only live allocations are reported.
+	struct MemInfo
+	{
+		unsigned int totalSize;
+		unsigned int totalFree;
+		unsigned int totalUsed;
+		unsigned int numHoles;
+		unsigned int numProcesses;
+		unsigned int largestHole;
+		unsigned int largestProcess;
+		unsigned int smallestHole;    // 0 when there are no holes
+		unsigned int smallestProcess; // 0xFFFFFFFF when there are no allocations
+	};
+
+	// Platform memory statistics; always zero on PC (the original only clears it).
+	struct HALMemInfo
+	{
+		unsigned int values[21];
+	};
 
 	TMemory();
 	~TMemory();
@@ -44,14 +69,36 @@ public:
 	static void* TSTDCALL SysAlloc(unsigned int size);
 	static void TSTDCALL SysFree(void* memory);
 
+	static void TSTDCALL GetMemInfo(MemInfo& info, MemBlock* block);
+	static void TSTDCALL GetHALMemInfo(HALMemInfo& info);
+	// Always true here: the heap is the C runtime's.
+	static bool TSTDCALL TestMemIntegrity(MemBlock* block);
+	// Allocation/free stress test with integrity checks (returns true, as the original).
+	static bool TSTDCALL DebugTestMemoryBlock(MemBlock* block);
+	static unsigned int TSTDCALL GetMarkedHALPhysical();
+	static void TSTDCALL MarkHALPhysical();
+	// Debug output; empty in the shipped original except for DumpMemInfo's dump counter.
+	static void TSTDCALL DumpMemInfo(MemInfo& info);
+	static void TSTDCALL DebugPrintFreeMemoryAt(const char* label);
+	static void TSTDCALL DebugPrintHALMemInfo(const char* label);
+	static void TSTDCALL DebugPrintHALMemInfoToFile(HALMemInfo& info, TFile* file, const char* label);
+	static void TSTDCALL DumpAllocations(MemBlock* block, int flags);
+	static void TSTDCALL DumpAllocationsToFile(TFile* file, MemBlock* block, int flags);
+
 protected:
 	static bool TSTDCALL Initialise();
+	// A fixed 128 MB in the original.
+	static unsigned int TSTDCALL GetFreePhysicalMemory();
+	static void TSTDCALL DumpSKUMemoryInfo();
 	void Deinitialise();
 
 private:
 	static bool m_bInitialised;
 	static bool m_bIsDebug;
 };
+
+JPOG_ASSERT_SIZE(TMemory::MemInfo, 0x24);
+JPOG_ASSERT_SIZE(TMemory::HALMemInfo, 0x54);
 
 } // namespace Toshi
 

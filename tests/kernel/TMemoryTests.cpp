@@ -57,6 +57,29 @@ TEST_SUITE("TMemory")
 		tfree(block);
 	}
 
+	TEST_CASE("statistics track live allocations")
+	{
+		TMemory::MemInfo before;
+		TMemory::GetMemInfo(before, nullptr);
+		void* a = tmalloc(13, nullptr, -1); // rounded to 16
+		void* b = tmalloc(1000, nullptr, -1);
+		TMemory::MemInfo during;
+		TMemory::GetMemInfo(during, nullptr);
+		CHECK(during.numProcesses == before.numProcesses + 2);
+		CHECK(during.totalUsed == before.totalUsed + 16 + 1000);
+		CHECK(during.largestProcess >= 1000);
+		CHECK(during.smallestProcess <= 16);
+		CHECK(during.numHoles == 0);
+		tfree(a);
+		tfree(b);
+		TMemory::MemInfo after;
+		TMemory::GetMemInfo(after, nullptr);
+		CHECK(after.numProcesses == before.numProcesses);
+		CHECK(after.totalUsed == before.totalUsed);
+		CHECK(TMemory::DebugTestMemoryBlock(nullptr));
+		CHECK(TMemory::TestMemIntegrity(nullptr));
+	}
+
 	TEST_CASE("TFreeList reuses items")
 	{
 		TFreeList list(24, 4, 0, nullptr);
@@ -137,6 +160,18 @@ TEST_SUITE("TMemory differential" * doctest::skip(KernelMissing()))
 		CHECK(free(original, nullptr) == TMemory::GetMemManager().Free(nullptr));
 		CHECK(free(original, buffer + 1) == TMemory::GetMemManager().Free(buffer + 1));
 		CHECK(realloc(original, buffer, 64, nullptr) == TMemory::GetMemManager().Realloc(buffer, 64, nullptr));
+
+		using HalFn = void(__stdcall*)(TMemory::HALMemInfo*);
+		TMemory::HALMemInfo originalHal, ourHal;
+		std::memset(&originalHal, 0xCD, sizeof(originalHal));
+		std::memset(&ourHal, 0xCD, sizeof(ourHal));
+		Original<HalFn>("?GetHALMemInfo@TMemory@Toshi@@SGXAAUHALMemInfo@12@@Z")(&originalHal);
+		TMemory::GetHALMemInfo(ourHal);
+		CHECK(std::memcmp(&originalHal, &ourHal, sizeof(ourHal)) == 0);
+		CHECK(Original<unsigned int(__stdcall*)()>("?GetMarkedHALPhysical@TMemory@Toshi@@SGIXZ")() ==
+		      TMemory::GetMarkedHALPhysical());
+		CHECK(Original<bool(__stdcall*)(TMemory::MemBlock*)>("?TestMemIntegrity@TMemory@Toshi@@SG_NPAVMemBlock@12@@Z")(
+		          nullptr) == TMemory::TestMemIntegrity(nullptr));
 	}
 
 	TEST_CASE("TFreeList behaves like the original")

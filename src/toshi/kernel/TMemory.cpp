@@ -4,7 +4,9 @@
 #include <cstdint>
 #include <cstdlib>
 #include <cstring>
+#include <map>
 #include <memory>
+#include <mutex>
 
 namespace Toshi
 {
@@ -20,11 +22,33 @@ namespace
 {
 
 TMemory::MemBlock s_globalBlock;
+int s_dumpCount = 0;
 
-// Each allocation stores the pointer returned by malloc just before the aligned address.
-void*& BaseSlot(void* memory)
+// Live allocation statistics for GetMemInfo.
+struct Statistics
 {
-	return static_cast<void**>(memory)[-1];
+	std::mutex mutex;
+	std::map<unsigned int, unsigned int> sizes; // size -> number of live allocations
+	unsigned int count = 0;
+	unsigned int bytes = 0;
+};
+
+Statistics& Stats()
+{
+	static Statistics stats;
+	return stats;
+}
+
+// Stored just before every aligned allocation.
+struct Header
+{
+	void* base;
+	unsigned int size;
+};
+
+Header& HeaderOf(void* memory)
+{
+	return reinterpret_cast<Header*>(memory)[-1];
 }
 
 bool IsAligned(const void* memory, std::size_t alignment)
@@ -49,17 +73,24 @@ void* TMemory::Alloc(unsigned int size, unsigned int alignment, MemBlock*, char*
 		size = 8;
 	if (alignment < 4)
 		return nullptr; // the original reports "Out of Toshi memory" and fails
-	if (alignment < alignof(void*))
-		alignment = alignof(void*);
+	if (alignment < alignof(Header))
+		alignment = alignof(Header);
+	size = (size + 3) & ~3u; // the original rounds sizes to 4 bytes
 
-	const std::size_t total = std::size_t{size} + alignment + sizeof(void*);
+	const std::size_t total = std::size_t{size} + alignment + sizeof(Header);
 	void* base = std::malloc(total);
 	if (base == nullptr)
 		return nullptr;
-	void* aligned = static_cast<char*>(base) + sizeof(void*);
-	std::size_t space = total - sizeof(void*);
+	void* aligned = static_cast<char*>(base) + sizeof(Header);
+	std::size_t space = total - sizeof(Header);
 	aligned = std::align(alignment, size, aligned, space);
-	BaseSlot(aligned) = base;
+	HeaderOf(aligned) = {base, size};
+
+	Statistics& stats = Stats();
+	const std::lock_guard lock(stats.mutex);
+	++stats.sizes[size];
+	++stats.count;
+	stats.bytes += size;
 	return aligned;
 }
 
@@ -76,7 +107,17 @@ bool TMemory::Free(void* memory)
 	Initialise();
 	if (memory == nullptr || !IsAligned(memory, 4))
 		return false;
-	std::free(BaseSlot(memory));
+	const Header header = HeaderOf(memory);
+	{
+		Statistics& stats = Stats();
+		const std::lock_guard lock(stats.mutex);
+		const auto it = stats.sizes.find(header.size);
+		if (it != stats.sizes.end() && --it->second == 0)
+			stats.sizes.erase(it);
+		--stats.count;
+		stats.bytes -= header.size;
+	}
+	std::free(header.base);
 	return true;
 }
 
@@ -121,6 +162,100 @@ void* TSTDCALL TMemory::SysAlloc(unsigned int size)
 void TSTDCALL TMemory::SysFree(void* memory)
 {
 	std::free(memory);
+}
+
+void TSTDCALL TMemory::GetMemInfo(MemInfo& info, MemBlock*)
+{
+	Initialise();
+	Statistics& stats = Stats();
+	const std::lock_guard lock(stats.mutex);
+	info = {};
+	info.totalSize = stats.bytes;
+	info.totalUsed = stats.bytes;
+	info.numProcesses = stats.count;
+	info.smallestProcess = 0xFFFFFFFF;
+	if (!stats.sizes.empty())
+	{
+		info.smallestProcess = stats.sizes.begin()->first;
+		info.largestProcess = stats.sizes.rbegin()->first;
+	}
+}
+
+void TSTDCALL TMemory::GetHALMemInfo(HALMemInfo& info)
+{
+	info = {};
+}
+
+bool TSTDCALL TMemory::TestMemIntegrity(MemBlock*)
+{
+	Initialise();
+	return true;
+}
+
+bool TSTDCALL TMemory::DebugTestMemoryBlock(MemBlock* block)
+{
+	MemInfo info;
+	GetMemInfo(info, block);
+	void* allocations[200];
+	const unsigned int size = info.totalFree / 150 + 8;
+	for (int pass = 0; pass < 2; ++pass)
+	{
+		for (void*& allocation : allocations)
+			allocation = tmalloc(static_cast<int>(size), nullptr, -1);
+		TestMemIntegrity(nullptr);
+		for (void*& allocation : allocations)
+		{
+			GetMemManager().Free(allocation);
+			allocation = nullptr;
+		}
+		TestMemIntegrity(nullptr);
+	}
+	return true;
+}
+
+unsigned int TSTDCALL TMemory::GetMarkedHALPhysical()
+{
+	Initialise();
+	return 0;
+}
+
+void TSTDCALL TMemory::MarkHALPhysical()
+{
+	Initialise();
+}
+
+void TSTDCALL TMemory::DumpMemInfo(MemInfo&)
+{
+	++s_dumpCount;
+}
+
+void TSTDCALL TMemory::DebugPrintFreeMemoryAt(const char*)
+{
+}
+
+void TSTDCALL TMemory::DebugPrintHALMemInfo(const char*)
+{
+}
+
+void TSTDCALL TMemory::DebugPrintHALMemInfoToFile(HALMemInfo&, TFile*, const char*)
+{
+}
+
+void TSTDCALL TMemory::DumpAllocations(MemBlock*, int)
+{
+}
+
+void TSTDCALL TMemory::DumpAllocationsToFile(TFile*, MemBlock*, int)
+{
+}
+
+unsigned int TSTDCALL TMemory::GetFreePhysicalMemory()
+{
+	return 0x8000000;
+}
+
+void TSTDCALL TMemory::DumpSKUMemoryInfo()
+{
 }
 
 bool TSTDCALL TMemory::Initialise()
