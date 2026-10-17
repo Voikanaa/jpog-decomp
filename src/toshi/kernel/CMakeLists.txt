@@ -1,33 +1,37 @@
 # TKernelInterface.dll reimplementation.
 add_library(toshi_kernel STATIC
-  TBitArray.cpp
-  TBitArray.h
   SortedArray.h
   StringPoolArray.h
+  TBitArray.cpp
+  TBitArray.h
   TCString.cpp
   TCString.h
   TCStringPool.cpp
   TCStringPool.h
+  TDLL.cpp
+  TDLL.h
   TEvent.cpp
   TEvent.h
   TFile.cpp
+  TFile.h
   TFileLexer.cpp
   TFileLexer.h
-  TFile.h
   TFreeList.cpp
   TFreeList.h
   TGenericDList.cpp
   TGenericDList.h
   TGenericNodeList.cpp
+  TGenericNodeList.h
   TGenericNTree.cpp
   TGenericNTree.h
-  TGenericNodeList.h
   TGenericPriList.cpp
   TGenericPriList.h
   THPTimer.cpp
   THPTimer.h
   TISOFile.cpp
   TISOFile.h
+  TKernelInterface.cpp
+  TKernelInterface.h
   TLocale.cpp
   TLocale.h
   TMap.h
@@ -43,6 +47,7 @@ add_library(toshi_kernel STATIC
   TMutex.h
   TNativeFile.cpp
   TNativeFile.h
+  TNodeTree.h
   TNullFile.cpp
   TNullFile.h
   TObject.cpp
@@ -51,8 +56,14 @@ add_library(toshi_kernel STATIC
   TPlane.h
   TQuaternion.cpp
   TQuaternion.h
+  TRefCounted.cpp
+  TRefCounted.h
+  TScheduler.cpp
+  TScheduler.h
   TSystem.cpp
   TSystem.h
+  TUser.cpp
+  TUser.h
   TVector2.cpp
   TVector2.h
   TVector3.cpp

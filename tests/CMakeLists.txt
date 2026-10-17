@@ -16,6 +16,7 @@ add_executable(jpog_tests
   kernel/TMemoryTests.cpp
   kernel/TObjectTests.cpp
   kernel/TQuaternionTests.cpp
+  kernel/TSchedulerTests.cpp
   kernel/TStringTests.cpp
   kernel/TTimeTests.cpp
   kernel/TVectorTests.cpp
