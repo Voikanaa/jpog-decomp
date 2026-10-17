@@ -5,6 +5,7 @@ add_executable(jpog_tests
   support/OriginalModule.cpp
   support/OriginalModule.h
   kernel/TMathTests.cpp
+  kernel/TMatrix44Tests.cpp
   kernel/TQuaternionTests.cpp
   kernel/TVectorTests.cpp
 )

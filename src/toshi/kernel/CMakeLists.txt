@@ -2,6 +2,10 @@
 add_library(toshi_kernel STATIC
   TMath.cpp
   TMath.h
+  TMatrix44.cpp
+  TMatrix44.h
+  TPlane.cpp
+  TPlane.h
   TQuaternion.cpp
   TQuaternion.h
   TVector2.cpp

@@ -8,7 +8,7 @@
 
 <p>
 <a href="https://github.com/Voikanaa/jpog-decomp/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/Voikanaa/jpog-decomp/actions/workflows/ci.yml/badge.svg"></a>
-<a href="docs/progress.md"><!-- coverage-badge:begin --><img alt="Reimplemented" src="https://img.shields.io/badge/reimplemented-1.5%25-red?style=flat-square"><!-- coverage-badge:end --></a>
+<a href="docs/progress.md"><!-- coverage-badge:begin --><img alt="Reimplemented" src="https://img.shields.io/badge/reimplemented-2.0%25-red?style=flat-square"><!-- coverage-badge:end --></a>
 <a href="LICENSE"><img alt="License: GPL-3.0-or-later" src="https://img.shields.io/badge/license-GPL--3.0--or--later-blue?style=flat-square"></a>
 <img alt="Status: early development" src="https://img.shields.io/badge/status-early%20development-orange?style=flat-square">
 <br>
@@ -66,7 +66,7 @@ flowchart LR
 |---|---|:-:|
 | Foundations | Symbols, build system, CI, analysis tooling | ✅ |
 | **Launch 1** | Our `jpog.exe` opens the game window via the original engine DLLs | ✅ |
-| **M2** | Toshi kernel reimplemented (`TMath`, `TVector2/3/4`, `TQuaternion` done) | 🚧 |
+| **M2** | Toshi kernel reimplemented (math complete: `TMath`, vectors, `TQuaternion`, `TMatrix44`, `TPlane`) | 🚧 |
 | **M3** | A mission loads through our renderer and resource code | ⏳ |
 | **M4** | Full game playable on our code | ⏳ |
 | **M5** | Native x64 build reaches the main menu | ⏳ |
@@ -74,7 +74,7 @@ flowchart LR
 | M1 | In-game A/B testing through a hook DLL (deferred: needs a runnable original) | ⏸️ |
 
 Per-module coverage is in [docs/progress.md](docs/progress.md); the test suite currently runs
-over 600,000 bit-exact differential checks.
+almost 800,000 bit-exact differential checks.
 
 ## Getting started
 
@@ -132,6 +132,7 @@ skipped when the game is not present, as in CI.
 | `tools/ghidra_export.py` | Headless Ghidra decompilation of the original modules into `analysis/` (gitignored) |
 | `tools/dump_vtables.py` | Recover the virtual method order of every exported class into `symbols/vtables.csv` |
 | `tools/resolve_imports.py` | Annotate the game's decompilation with the names of the engine functions it calls |
+| `tools/x87_expr.py` | Recover the exact floating-point evaluation order of an original function from its x87 code |
 | `tools/decomp_show.py` | Look up decompiled functions by name or address |
 | `tools/dump_exports.py` | Regenerate `symbols/` from the original binaries |
 | `tools/coverage.py` | Measure reimplementation coverage; regenerates [docs/progress.md](docs/progress.md) and the README badge |
