@@ -17,22 +17,23 @@ class TMath
 public:
 	TMath& operator=(const TMath& other);
 
-	static constexpr float PI = 3.14159274f;
-	static constexpr float HALF_PI = 1.57079637f;
-	static constexpr float TWO_PI = 6.28318548f;
-	static constexpr float ONEOVER_PI = 0.318309873f;
-	static constexpr float ONEOVERTWO_PI = 0.159154937f;
-	static constexpr float E = 2.71828175f;
-	static constexpr float SQRT_TWO = 1.41421354f;
-	static constexpr float ONEOVER_SQRT_TWO = 0.707106769f;
-	static constexpr float MINFLOAT = 1.17549435e-38f;
-	static constexpr float MAXFLOAT = 3.40282347e+38f;
-	static constexpr float FLOATEPSILON = 1.1920929e-07f;
-	static constexpr int MININT = INT32_MIN;
-	static constexpr int MAXINT = INT32_MAX;
-	static constexpr unsigned int MAXUINT = UINT32_MAX;
-	static constexpr char MAXCCHAR = 127;
-	static constexpr unsigned short MAXWCHAR = 0xFFFF;
+	// Exported data, as in the original (not constexpr, so other modules can import them).
+	static const float PI;
+	static const float HALF_PI;
+	static const float TWO_PI;
+	static const float ONEOVER_PI;
+	static const float ONEOVERTWO_PI;
+	static const float E;
+	static const float SQRT_TWO;
+	static const float ONEOVER_SQRT_TWO;
+	static const float MINFLOAT;
+	static const float MAXFLOAT;
+	static const float FLOATEPSILON;
+	static const int MININT;
+	static const int MAXINT;
+	static const unsigned int MAXUINT;
+	static const char MAXCCHAR;
+	static const unsigned short MAXWCHAR;
 
 	// Rounding and conversion. The *ToInt functions expect values within int range.
 	static int TSTDCALL FloorToInt(float value);

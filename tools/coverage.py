@@ -69,7 +69,8 @@ SUPERSEDED = {
         "?GetProcessMemBlock@TMemory@", "?GetSlotIndex@TMemory@", "?IsAllocMB@TMemory@",
         "?IsMemNodeMB@TMemory@", "?IsProcess@TMemory@", "?MapSizeToFreeList@TMemory@",
         "?MemRecurse@TMemory@", "?MemRecurseR@TMemory@", "?SetHoleSize@TMemory@",
-        "?SetProcess@TMemory@",
+        "?SetProcess@TMemory@", "?m_szInvalidMemoryBlockId@TMemory@", "?m_szUnsedMemory@TMemory@",
+        "?m_szValidMemoryBlockId@TMemory@",
     ),
 }
 # Compiler-generated "default constructor closures" (emitted only where a class with default

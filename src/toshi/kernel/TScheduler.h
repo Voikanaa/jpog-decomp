@@ -118,6 +118,10 @@ private:
 	static void TSTDCALL InitialiseStatic();
 	static void TSTDCALL DeinitialiseStatic();
 
+	// Time delta limits (normal, debug slow time).
+	static const float sm_cfMaxTimeDeltaAllowed;
+	static const float sm_cfDebugSlowMaxTimeDeltaAllowed;
+
 	TKernelInterface* m_pKernel;
 	TNodeTree<TTask> m_oTree;
 	float m_fCurrentTimeDelta;

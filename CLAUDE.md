@@ -66,14 +66,14 @@ LGPL linked dynamically).
   `Method<R, Args...>`; by-value class returns pass the hidden result pointer first.
 - `third_party/` vendored pinned deps (versions/licenses/hashes in its README).
 - `CMakePresets.json`: `x86-debug`, `x64-debug`, `x64-release` → `build/<preset>/`.
-- **Hybrid launch (x86):** `jpog.exe` links the original engine DLLs via import libs generated from
+- **Hybrid launch (x86):** `jpog.exe` links the engine DLLs via import libs generated from
   `symbols/` (`tools/make_import_lib.py`, `cmake/OriginalModules.cmake`,
   `jpog_original_module(Name)`). Declarations in `src/toshi/` must match original signatures and
   vtable order. Post-build copies `jpog.exe` to `game/`; it must run there. Crashes write
   `game/jpog_crash.log`.
 
 ## Tools
-- `tools/build.bat <preset>`: finds VS via vswhere, CMake + Ninja + ctest.
+- `tools/build.bat <preset> ["-DOPT=VAL"...]`: finds VS via vswhere, CMake + Ninja + ctest.
 - `tools/format.py [--check]`: pinned clang-format over `src/`, `tests/`. **Run before committing.**
 - `tools/coverage.py [--check]`: original exports ∩ our x86 symbols; regenerates the
   `docs/progress.md` table and README badge; `--check` (CI) also fails on unmatched `Toshi::`
@@ -105,7 +105,9 @@ LGPL linked dynamically).
   that use the value directly (e.g. `TQuaternion::Slerp`) see a double.
 - Ghidra prints commutative operands in arbitrary order and reassociates x87 sums: take float
   evaluation order from `tools/x87_expr.py`.
-- Launch 1 reached (our `jpog.exe` opens the D3D8 window through the original DLLs). Open bug #20:
-  crash on exit in `TRenderD3DInterface::DestroyDisplay` (texture at `this+0xF0`).
+- Launch 1 reached, also on **our kernel**: x86 builds `TKernelInterface.dll` (exports from
+  `tools/make_module_def.py`) and installs it into `game/` (`JPOG_REPLACE_KERNEL`, default ON;
+  `"-DJPOG_REPLACE_KERNEL=OFF"` restores the original). Open bug #20: crash on exit in
+  `TRenderD3DInterface::DestroyDisplay` (uninitialised member, same on both kernels).
 - Static constants in the DLLs are BSS, initialised at runtime: verify them through the loaded
   module, not the file.

@@ -9,6 +9,8 @@ TClass TTask::m_sClass("TTask", &TObject::m_sClass, CreateObject, CreateObjectIn
                        DeinitialiseStatic, 0x10000);
 TClass TScheduler::m_sClass("TScheduler", &TObject::m_sClass, CreateObject, CreateObjectInPlace, InitialiseStatic,
                             DeinitialiseStatic, 0x10000);
+const float TScheduler::sm_cfMaxTimeDeltaAllowed = 1.0f;
+const float TScheduler::sm_cfDebugSlowMaxTimeDeltaAllowed = 0.01f;
 
 namespace
 {
@@ -182,7 +184,8 @@ void TSTDCALL TTask::DeinitialiseStatic()
 // --- TScheduler ----------------------------------------------------------------------------
 
 TScheduler::TScheduler(TKernelInterface* kernel)
-    : m_pKernel(kernel), m_fCurrentTimeDelta(0.0f), m_fTotalTime(0.0f), m_fMaxTimeDelta(1.0f), m_iFrameCount(0)
+    : m_pKernel(kernel), m_fCurrentTimeDelta(0.0f), m_fTotalTime(0.0f), m_fMaxTimeDelta(sm_cfMaxTimeDeltaAllowed),
+      m_iFrameCount(0)
 {
 }
 
@@ -265,7 +268,7 @@ void TScheduler::UpdateKernelPaused()
 
 void TScheduler::SetDebugSlowTime(bool slow)
 {
-	m_fMaxTimeDelta = slow ? 0.01f : 1.0f;
+	m_fMaxTimeDelta = slow ? sm_cfDebugSlowMaxTimeDeltaAllowed : sm_cfMaxTimeDeltaAllowed;
 }
 
 void TScheduler::Debug_PrintTaskTree() const

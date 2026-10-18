@@ -44,7 +44,7 @@ This project rebuilds the game and engine from scratch in modern, portable C++. 
 ```mermaid
 flowchart LR
     A["Original game<br/>32-bit SimJP.exe + Toshi DLLs"] -->|"Ghidra + exported symbols"| B["Clean-room C++<br/>src/"]
-    B -->|"x86 build"| C["jpog.exe<br/>on the original engine DLLs"]
+    B -->|"x86 build"| C["jpog.exe + our kernel DLL<br/>on the other original DLLs"]
     B -->|"x86 build"| T["Differential tests<br/>vs. original exports"]
     T -.->|"0-ULP match"| B
     C -->|"replace DLLs module by module"| D["Native x64 game<br/>D3D11 · miniaudio · FFmpeg"]
@@ -56,17 +56,17 @@ flowchart LR
    `Toshi::TQuaternion`, `AUnitDinosaur`, …), with identical mangled names.
 3. **Verify.** Differential tests load the original DLLs and compare every reimplemented function
    with its original export under the game's own FPU settings. Results must match exactly.
-4. **Run.** Our `jpog.exe` already starts on the original engine DLLs. As modules are replaced,
-   it depends on less of the original, until the same source builds as a standalone x64 game on
-   Direct3D 11, Raw Input, miniaudio and FFmpeg.
+4. **Run.** Our `jpog.exe` already starts on our own Toshi kernel plus the remaining original
+   engine DLLs. As modules are replaced, it depends on less of the original, until the same
+   source builds as a standalone x64 game on Direct3D 11, Raw Input, miniaudio and FFmpeg.
 
 ## Status
 
 | Milestone | Description | |
 |---|---|:-:|
 | Foundations | Symbols, build system, CI, analysis tooling | ✅ |
-| **Launch 1** | Our `jpog.exe` opens the game window via the original engine DLLs | ✅ |
-| **M2** | Toshi kernel replaced (all `TKernelInterface` exports reimplemented and verified; next: boot the game on it) | 🚧 |
+| **Launch 1** | Our `jpog.exe` opens the game window via the engine DLLs, on our own kernel | ✅ |
+| **M2** | Toshi kernel replaced: all `TKernelInterface` exports reimplemented and verified; our `TKernelInterface.dll` runs Launch 1 | 🚧 |
 | **M3** | A mission loads through our renderer and resource code | ⏳ |
 | **M4** | Full game playable on our code | ⏳ |
 | **M5** | Native x64 build reaches the main menu | ⏳ |
@@ -99,10 +99,12 @@ python tools\setup_mcp.py                 :: optional: REA/Ghidra MCP config for
 
 ### Build
 ```bat
-tools\build.bat x86-debug    :: 32-bit jpog.exe on the original engine DLLs + all tests
+tools\build.bat x86-debug    :: 32-bit jpog.exe + our TKernelInterface.dll + all tests
 tools\build.bat x64-debug    :: native x64 build + portable tests
 ```
-The x86 build copies `jpog.exe` into `game\`, where it must be run. Differential tests find the
+The x86 build copies `jpog.exe` and our `TKernelInterface.dll` into `game\`, where the game must
+be run (`tools\build.bat x86-debug "-DJPOG_REPLACE_KERNEL=OFF"` puts the original kernel back).
+Differential tests find the
 original DLLs in `JPOG\` (override with the `JPOG_ORIGINAL_DIR` environment variable) and are
 skipped when the game is not present, as in CI.
 

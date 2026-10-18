@@ -196,6 +196,7 @@ TEST_SUITE("TScheduler")
 		CHECK(kernel->Update());
 		CHECK(kernel->GetScheduler()->GetFrameCount() == 1);
 		CHECK(Toshi::TFileManager::GetFileManager()->FindFileSystem("mem") != nullptr);
+		kernel->DumpInfo(); // only queries the system (debug run-time checks catch buffer overruns)
 
 		const Toshi::TCString name("version.dll");
 		Toshi::TKernelInterfaceDLL* module = kernel->LoadInterface(name);
@@ -294,6 +295,15 @@ TObject* TSTDCALL CreateOriginalTask()
 
 TEST_SUITE("TScheduler differential" * doctest::skip(KernelMissing()))
 {
+	TEST_CASE("time delta limits match the original")
+	{
+		CHECK(
+		    Same(*static_cast<const float*>(Original<void*>("?sm_cfMaxTimeDeltaAllowed@TScheduler@Toshi@@0MB")), 1.0f));
+		CHECK(Same(
+		    *static_cast<const float*>(Original<void*>("?sm_cfDebugSlowMaxTimeDeltaAllowed@TScheduler@Toshi@@0MB")),
+		    0.01f));
+	}
+
 	TEST_CASE("scheduler and tasks match the original")
 	{
 		s_originalAllocate = Original<Allocate>("?tmalloc@@YGPAXHPADH@Z");
