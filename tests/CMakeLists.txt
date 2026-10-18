@@ -27,9 +27,10 @@ add_executable(jpog_tests
   kernel/TTimerTests.cpp
   kernel/TTimeTests.cpp
   kernel/TVectorTests.cpp
+  ppropertyparser/PPropertyNameTests.cpp
 )
 target_include_directories(jpog_tests PRIVATE .)
-target_link_libraries(jpog_tests PRIVATE toshi_kernel doctest)
+target_link_libraries(jpog_tests PRIVATE toshi_kernel ppropertyparser doctest)
 target_compile_definitions(jpog_tests PRIVATE JPOG_ORIGINAL_DIR="${JPOG_ORIGINAL_DIR}")
 
 add_test(NAME jpog_tests COMMAND jpog_tests)

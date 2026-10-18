@@ -46,6 +46,13 @@ OriginalModule& OriginalModule::Kernel()
 	return s_module;
 }
 
+OriginalModule& OriginalModule::PPropertyParser()
+{
+	Kernel(); // its dependency, loaded from the same directory first
+	static OriginalModule s_module("PPropertyParser.dll");
+	return s_module;
+}
+
 } // namespace jpog::test
 
 #endif

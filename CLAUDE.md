@@ -54,12 +54,12 @@ LGPL linked dynamically).
 - `src/` `common/` (`abi.h` TSTDCALL, `TIMPORT_DATA` for data jpog.exe imports; `layout.h`);
   `toshi/kernel/` (lib `toshi_kernel`: every TKernelInterface export except the superseded heap
   internals); global `operator new`/`delete` route to `tmalloc`/`tfree` (as the original, also in
-  jpog.exe); declarations only: `toshi/application/`, `toshi/render/`, `toshi/renderd3d/`,
-  `toshi/gui/`, `ppropertyparser/`; `game/` (**jpog.exe**: WinMain, `AApplication` with the
+  jpog.exe); `ppropertyparser/` (lib `ppropertyparser`, in progress, #25); declarations only:
+  `toshi/application/`, `toshi/render/`, `toshi/renderd3d/`, `toshi/gui/`; `game/` (**jpog.exe**: WinMain, `AApplication` with the
   original task tree, `ARootTask`/`ARenderer` skeletons, `CrashHandler`); `hook/` (deferred).
 - `tests/` doctest suite `jpog_tests` (run by ctest). `support/OriginalModule` loads the original
   DLLs from `JPOG_ORIGINAL_DIR` (default `<root>/JPOG`) for differential tests (x86 only, skipped
-  without the game). `support/Differential.h`: `Same`, `Original<Fn>`, `KernelMissing`.
+  without the game). `support/Differential.h`: `Same`, `Original<Fn>`/`OriginalPP<Fn>`, `KernelMissing`.
   `support/FloatCompare.h`: ULP compare + `InputGenerator`. Call `__thiscall` originals via
   `Method<R, Args...>`; by-value class returns pass the hidden result pointer first.
 - `third_party/` vendored pinned deps (versions/licenses/hashes in its README).

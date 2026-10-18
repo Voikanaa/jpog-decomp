@@ -37,6 +37,7 @@ target_include_directories(jpog_common INTERFACE src)
 
 add_subdirectory(third_party)
 add_subdirectory(src/toshi/kernel)
+add_subdirectory(src/ppropertyparser)
 
 if(JPOG_X86)
   include(cmake/OriginalModules.cmake)

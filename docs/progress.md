@@ -15,7 +15,7 @@ an x86 build); do not edit it by hand.
 | TRenderInterface | 1048 | 1 | 0 | 0.0% |
 | TRenderD3DInterface | 310 | 0 | 0 | 0.0% |
 | TTerrainInterface | 203 | 0 | 0 | 0.0% |
-| PPropertyParser | 245 | 0 | 0 | 0.0% |
+| PPropertyParser | 245 | 0 | 16 | 6.5% |
 | TGuiInterface | 1157 | 1 | 0 | 0.0% |
 | PGUICore | 823 | 0 | 0 | 0.0% |
 | PGUIRenderer | 144 | 0 | 0 | 0.0% |
@@ -27,7 +27,7 @@ an x86 build); do not edit it by hand.
 | TSysShaderD3D | 52 | 0 | 0 | 0.0% |
 | TTerrainShaderD3D | 288 | 0 | 0 | 0.0% |
 | SimJP | 13680 | 12 | 0 | 0.0% |
-| **Total** | **20452** | **38** | **1604** | **7.9%** |
+| **Total** | **20452** | **38** | **1620** | **7.9%** |
 <!-- coverage:end -->
 
 ## Verification
@@ -36,6 +36,10 @@ original export on the same inputs. Float results must match bit for bit unless 
 justifies a tolerance.
 
 ## Log
+- 2026-10-18: PPropertyParser started (#25): module lib `ppropertyparser`, test access to the
+  original DLL, coverage mapping (the drift check now covers non-`Toshi::` modules too), and
+  `PPropertyName` ("name[sub]" split, string form, ordering) matching the original on tricky
+  bracket placements.
 - 2026-10-18: Faithful `AApplication::OnCreate`/`OnDestroy` (SimJP.exe 0x4846C0/0x484DC0):
   string pool from `data/strpool.dat`, the nine free-list capacities (PProperties, GUI, kernel
   strings, D3D resources; the exact targets come from the game's IAT slots, now resolvable with

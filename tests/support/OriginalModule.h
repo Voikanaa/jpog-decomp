@@ -68,6 +68,7 @@ public:
 	}
 
 	static OriginalModule& Kernel();
+	static OriginalModule& PPropertyParser();
 
 private:
 	void* m_handle = nullptr;

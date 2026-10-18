@@ -34,6 +34,19 @@ template <typename Fn> Fn Original(const char* mangledName)
 	return fn;
 }
 
+// The same for PPropertyParser.dll.
+inline bool PPropertyParserMissing()
+{
+	return !OriginalModule::PPropertyParser().IsLoaded();
+}
+
+template <typename Fn> Fn OriginalPP(const char* mangledName)
+{
+	const Fn fn = OriginalModule::PPropertyParser().Get<Fn>(mangledName);
+	REQUIRE_MESSAGE(fn != nullptr, "export not found: " << doctest::String(mangledName));
+	return fn;
+}
+
 #endif // JPOG_HAS_ORIGINAL_MODULES
 
 } // namespace jpog::test
