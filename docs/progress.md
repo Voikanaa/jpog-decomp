@@ -8,7 +8,7 @@ an x86 build); do not edit it by hand.
 <!-- coverage:begin -->
 | Module | Functions | Reimplemented | Coverage |
 |---|---:|---:|---:|
-| TKernelInterface | 1627 | 1462 | 89.9% |
+| TKernelInterface | 1627 | 1502 | 92.3% |
 | TApplication | 16 | 0 | 0.0% |
 | TInputInterface | 93 | 0 | 0.0% |
 | TInputDXInterface | 96 | 0 | 0.0% |
@@ -27,7 +27,7 @@ an x86 build); do not edit it by hand.
 | TSysShaderD3D | 52 | 0 | 0.0% |
 | TTerrainShaderD3D | 288 | 0 | 0.0% |
 | SimJP | 13680 | 0 | 0.0% |
-| **Total** | **20452** | **1462** | **7.1%** |
+| **Total** | **20452** | **1502** | **7.3%** |
 <!-- coverage:end -->
 
 ## Verification
@@ -36,6 +36,12 @@ original export on the same inputs. Float results must match bit for bit unless 
 justifies a tolerance.
 
 ## Log
+- 2026-10-18: `TTimer` (task emitting `TriggerEvent`s: once, loop, wait-for, continuous) and
+  `TProfiler`/`TProfilerStarter` (QPC timing, child time, recursion credited once, appended
+  report in `Profile.txt`). Timer state and events match the original over 2000 random steps;
+  the profiler is unit-tested (timing is not reproducible). Quirks kept: the first parent seen is
+  stored as a marker (the original's value 1), `m_sProgramTime` is never set (shares print as
+  inf/NaN); null-dereferencing paths are guarded.
 - 2026-10-17: Threads: `TThread` (`_beginthreadex`, created suspended then resumed unless
   flag 1), `TThreadManager` (critical-section-guarded list) and `TSemaphore`. Thin Win32
   wrappers, covered by unit tests (no meaningful differential test for OS threads).
