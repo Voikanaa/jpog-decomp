@@ -152,7 +152,8 @@ TEST_SUITE("TMath differential" * doctest::skip(KernelMissing()))
 		const auto get = Original<GetFn>("?GetFPUControlWord@TMath@Toshi@@SGGXZ");
 		const auto set = Original<SetFn>("?SetFPUControlWord@TMath@Toshi@@SGXG@Z");
 		const unsigned short saved = TMath::GetFPUControlWord();
-		for (const unsigned short word : {0x007F, 0x027F, 0x0C7F, 0x047F})
+		const unsigned short words[] = {0x007F, 0x027F, 0x0C7F, 0x047F};
+		for (const unsigned short word : words)
 		{
 			TMath::SetFPUControlWord(word);
 			CHECK(get() == word);

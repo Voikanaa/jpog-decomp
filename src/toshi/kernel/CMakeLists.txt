@@ -46,6 +46,7 @@ add_library(toshi_kernel STATIC
   TMap.h
   TMath.cpp
   TMath.h
+  TMathGeometry.cpp
   TMinterm.cpp
   TMinterm.h
   TMatrix44.cpp
