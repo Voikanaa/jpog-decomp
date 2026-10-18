@@ -153,12 +153,22 @@ public:
 	// Capsules are a segment from `start` to `end` plus a radius.
 	static void TSTDCALL CalculateCapsuleNormal2D(const TVector2& start, const TVector2& end, const TVector2& point,
 	                                              TVector2& normal);
+	// Ray from `origin` along `direction` up to parameter `t` against the capsule; on a hit `t` is
+	// lowered to the hit parameter.
+	static bool TSTDCALL RayVsCapsule2D(const TVector2& origin, const TVector2& direction, float& t,
+	                                    const TVector2& start, const TVector2& end, float radius);
 	static bool TSTDCALL PointInsideCapsule2D(const TVector2& start, const TVector2& end, float radius,
 	                                          const TVector2& point);
 	// `to`, or `from` rotated towards it by `angle` radians (clamped to [-pi, pi]) when the two
 	// unit vectors differ by more; `fallbackAxis` gives the rotation plane when they are parallel.
 	static void TSTDCALL GetAxisChangeLimit3D(const TVector3& from, const TVector3& to, const TVector3& fallbackAxis,
 	                                          float angle, TVector3& result);
+	// Distance along `direction` that moves `point` (inside the capsule) out of it, written to
+	// `distance` plus a 0.01 margin; `normal` is the unit side normal to test against. Returns
+	// 1, or 0 (distance 0) when the point is outside or not moving out.
+	static float TSTDCALL PushPointOutOfCapsule2D(const TVector2& start, const TVector2& end, float radius,
+	                                              const TVector2& normal, const TVector2& direction, TVector2& point,
+	                                              float& distance);
 
 private:
 	static float TSTDCALL Bias(float bias, float t);

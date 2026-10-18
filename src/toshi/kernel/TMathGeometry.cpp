@@ -362,6 +362,129 @@ void TSTDCALL TMath::GetAxisChangeLimit3D(const TVector3& from, const TVector3& 
 	result.Add(tangent);
 }
 
+namespace
+{
+
+// The larger hit parameter (the first for NaN).
+float LaterHit(float t0, float t1)
+{
+	return t1 >= t0 ? t1 : t0;
+}
+
+} // namespace
+
+// The ray's zones (see GetCapsuleZone) select the parts to test: the sides when either end of the
+// ray lies between the caps or the ray crosses from cap to cap, and each cap whose zone it
+// touches. Quirks kept: side hits are accepted up to twice the ray length, and a side hit's `t`
+// is the ray's length times the parameter (only right for a unit direction).
+bool TSTDCALL TMath::RayVsCapsule2D(const TVector2& origin, const TVector2& direction, float& t, const TVector2& start,
+                                    const TVector2& end, float radius)
+{
+	const TVector2 step = direction * t;
+	const TVector2 rayEnd = step + origin;
+	bool zones[3] = {false, false, false};
+	zones[GetCapsuleZone(origin, start, end, radius)] = true;
+	zones[GetCapsuleZone(rayEnd, start, end, radius)] = true;
+	if (zones[1] && zones[2])
+		zones[0] = true;
+	bool hit = false;
+	if (zones[0])
+	{
+		TVector2 axis = end;
+		axis.Subtract(start);
+		axis.Normalise();
+		TVector2 side = axis;
+		side.SetPerpendicular();
+		side.Multiply(radius);
+		const TVector2 startLeft = start + side;
+		const TVector2 startRight = start - side;
+		const TVector2 endLeft = end + side;
+		const TVector2 endRight = end - side;
+		float best = 2.0f;
+		bool sideHit = false;
+		float along, across;
+		if (LineVsLine2D(origin, rayEnd, startLeft, endLeft, along, across) && across >= 0.0f && !(across > 1.0f) &&
+		    along >= 0.0f && !(along >= best))
+		{
+			best = along;
+			sideHit = true;
+		}
+		if (LineVsLine2D(origin, rayEnd, startRight, endRight, along, across) && across >= 0.0f && !(across > 1.0f) &&
+		    along >= 0.0f && !(along >= best))
+		{
+			best = along;
+			sideHit = true;
+		}
+		if (sideHit)
+		{
+			TVector2 ray = rayEnd;
+			ray.Subtract(origin);
+			hit = true;
+			t = ray.Magnitude() * best;
+		}
+	}
+	float t0, t1;
+	if (zones[1] && RayVsCircle2D(origin, direction, start, radius, t0, t1) > 0 && !(t0 >= t) && t0 >= 0.0f)
+	{
+		hit = true;
+		t = t0;
+	}
+	if (zones[2] && RayVsCircle2D(origin, direction, end, radius, t0, t1) > 0 && !(t0 >= t) && t0 >= 0.0f)
+	{
+		hit = true;
+		t = t0;
+	}
+	return hit;
+}
+
+// In the middle zone the first ray test (against the offset side) only lowers the limit for the
+// cap tests; its result is ignored, as in the original.
+float TSTDCALL TMath::PushPointOutOfCapsule2D(const TVector2& start, const TVector2& end, float radius,
+                                              const TVector2& normal, const TVector2& direction, TVector2& point,
+                                              float& distance)
+{
+	float limit = 999999.875f;
+	TVector2 axis = end;
+	axis.Subtract(start);
+	distance = 0.0f;
+	float t0, t1;
+	float hit;
+	const bool beyondEnd = PointVsPlane2DF(axis, end, point) > 0.0f;
+	if (beyondEnd || !(PointVsPlane2DF(axis, start, point) >= 0.0f))
+	{
+		// Beyond one of the ends: push out of that end's circle.
+		const TVector2& centre = beyondEnd ? end : start;
+		TVector2 offset = point;
+		offset.Subtract(centre);
+		if (!(radius * radius >= offset.MagnitudeSq()))
+			return 0.0f;
+		if (RayVsCircle2D(point, direction, centre, radius, t0, t1) == 0)
+			return 0.0f;
+		hit = LaterHit(t0, t1);
+	}
+	else
+	{
+		TVector2 side = normal;
+		side.Multiply(radius);
+		side.Add(start);
+		if (PointVsPlane2D(normal, side, point))
+			return 0.0f;
+		RaySegmentVsLine2D(point, direction, side, axis, limit);
+		const TVector2* cap = nullptr;
+		if (RaySegmentVsLine2D(point, direction, start, normal, limit))
+			cap = &start;
+		else if (RaySegmentVsLine2D(point, direction, end, normal, limit))
+			cap = &end;
+		hit = limit;
+		if (cap != nullptr && RayVsCircle2D(point, direction, *cap, radius, t0, t1) > 0)
+			hit = LaterHit(t0, t1);
+	}
+	if (hit > 0.0f)
+		hit += 0.01f;
+	distance = hit;
+	return 1.0f;
+}
+
 int TSTDCALL TMath::GetCapsuleZone(const TVector2& point, const TVector2& start, const TVector2& end, float)
 {
 	TVector2 axis = end;
