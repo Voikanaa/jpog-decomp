@@ -3,7 +3,6 @@
 #include "toshi/kernel/TCString.h"
 #include "toshi/kernel/TKernelInterface.h"
 #include "toshi/kernel/TObject.h"
-#include "toshi/render/TRenderInterface.h"
 
 using namespace Toshi;
 
@@ -56,14 +55,16 @@ bool AApplication::OnUpdate(float deltaTime)
 	return TApplication::OnUpdate(deltaTime);
 }
 
+// The game releases its renderer reference only in ~ARootTask, when the kernel is torn down at
+// process exit, and never calls Destroy() or DestroyDisplay() itself. Deleting the renderer cannot
+// work (issue #20): its teardown frees every resource (DestroyAllResources) before DestroyDisplay
+// uses the display texture, and DestroyDisplay cannot run twice. So as the last holder we keep it
+// alive and leave the device and window to process exit. Fix this properly in our own
+// TRenderD3DInterface.
 bool AApplication::OnDestroy()
 {
-	// Like ~ARootTask: the game never calls Destroy()/DestroyDisplay() on the renderer, it only
-	// releases its reference, and the last release deletes the object (which tears itself down).
-	if (m_pRenderInterface)
-	{
-		m_pRenderInterface->Delete();
-		m_pRenderInterface = nullptr;
-	}
+	if (m_pRenderInterface && m_pRenderInterface->GetRefCount() == 1)
+		m_pRenderInterface->IncRefCount(nullptr); // deliberately never released
+	m_pRenderInterface.Release();
 	return TApplication::OnDestroy();
 }

@@ -1,11 +1,8 @@
 #pragma once
 
 #include "toshi/application/TApplication.h"
-
-namespace Toshi
-{
-class TRenderInterface;
-}
+#include "toshi/kernel/TManagedPtr.h"
+#include "toshi/render/TRenderInterface.h"
 
 // The game's application object (SimJP.exe: AApplication, global g_oTheApp).
 //
@@ -24,7 +21,7 @@ public:
 private:
 	bool CreateRenderInterface();
 
-	Toshi::TRenderInterface* m_pRenderInterface = nullptr;
+	Toshi::TManagedPtr<Toshi::TRenderInterface> m_pRenderInterface; // ARootTask+0xD0
 };
 
 extern AApplication g_oTheApp;

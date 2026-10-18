@@ -2,6 +2,7 @@
 
 #include "common/layout.h"
 #include "toshi/kernel/TObject.h"
+#include "toshi/kernel/TRefCounted.h"
 
 namespace Toshi
 {
@@ -11,8 +12,9 @@ class TKernelInterface;
 // Abstract renderer (TRenderInterface.dll); TRenderD3DInterface.dll implements it.
 // Declaration only so far. The virtual order matches the original vtable (symbols/vtables.csv);
 // only the leading entries we call are declared, since instances are always created by the
-// engine (TClass::CreateObject), never by us.
-class TRenderInterface : public TObject
+// engine (TClass::CreateObject), never by us. Holders count references in the TRefCounted part
+// (offset 4) and delete the renderer when the count drops to zero.
+class TRenderInterface : public TObject, public TRefCounted
 {
 public:
 	class DisplayParams

@@ -104,7 +104,8 @@ LGPL linked dynamically).
   evaluation order from `tools/x87_expr.py`.
 - Launch 1 reached, also on **our kernel**: x86 builds `TKernelInterface.dll` (exports from
   `tools/make_module_def.py`) and installs it into `game/` (`JPOG_REPLACE_KERNEL`, default ON;
-  `"-DJPOG_REPLACE_KERNEL=OFF"` restores the original). Open bug #20: crash on exit in
-  `TRenderD3DInterface::DestroyDisplay` (uninitialised member, same on both kernels).
+  `"-DJPOG_REPLACE_KERNEL=OFF"` restores the original). The engine cannot delete its renderer
+  (teardown frees the display texture before `DestroyDisplay` uses it, #20): `AApplication` keeps
+  it alive until process exit; fix this in our own `TRenderD3DInterface`.
 - Static constants in the DLLs are BSS, initialised at runtime: verify them through the loaded
   module, not the file.
