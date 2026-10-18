@@ -86,7 +86,7 @@ def superseded(module, name):
 # Helpers the compiler emits on its own (scalar/vector deleting destructors); never our code.
 COMPILER_GENERATED = ("??_G", "??_E", "??_R")  # + C++ RTTI descriptors
 # Classes the original defines entirely inline (no exported members), so ours are header-only too.
-HEADER_ONLY_CLASSES = ("?$TArray@", "?$TDList@", "?$TEmitter@", "?$TMap@", "?$TNodeTree@", "?$TComparator@", "Comparator@TPCString@")
+HEADER_ONLY_CLASSES = ("?$TArray@", "?$TQList@", "?$TManagedPtr@", "?$TDList@", "?$TEmitter@", "?$TMap@", "?$TNodeTree@", "?$TComparator@", "Comparator@TPCString@")
 
 
 def original_exports(module):
@@ -94,6 +94,16 @@ def original_exports(module):
     path = os.path.join(ROOT, "symbols", f"{module}.exports.csv")
     with open(path, newline="", encoding="utf-8") as f:
         return {row["name"] for row in csv.DictReader(f)}
+
+
+# Library and compiler symbols that can appear in a module's library.
+NOT_MODULE_SYMBOLS = ("@std@@", "__empty_global_delete", "??2@Y", "??3@Y", "??_U@Y", "??_V@Y")
+
+
+def original_name(symbol):
+    """The original (VC6) mangling of one of our symbols. VC6 encodes a const pointer static data
+    member (`static const T* const x`) as `2PB...B`, modern MSVC as `2QB...B`."""
+    return symbol.replace("@@2QB", "@@2PB")
 
 
 def other_exports(module):
@@ -144,7 +154,9 @@ def measure(build_dir):
             # another module exports, e.g. inline kernel code, are not this module's).
             unmatched += [f"{module}: {s}" for s in sorted(ours)
                           if s.startswith("?") and (module != "TKernelInterface" or "@Toshi@@" in s)
-                          and "?A0x" not in s and s not in exports and s not in other_exports(module)
+                          and "?A0x" not in s and original_name(s) not in exports
+                          and original_name(s) not in other_exports(module)
+                          and not any(x in s for x in NOT_MODULE_SYMBOLS)
                           and not s.startswith(COMPILER_GENERATED)
                           and not any(c in s for c in HEADER_ONLY_CLASSES)
                           and "@jpog@@" not in s]  # our own helpers (namespace jpog)

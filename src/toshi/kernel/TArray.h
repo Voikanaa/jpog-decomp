@@ -32,6 +32,10 @@ public:
 	}
 
 	int GetNumElements() const { return m_iNumElements; }
+	int GetSize() const { return m_iSize; }
+	// The storage, including slots beyond the element count.
+	T* Data() { return m_pData; }
+	const T* Data() const { return m_pData; }
 	T& operator[](int index) { return m_pData[index]; }
 	const T& operator[](int index) const { return m_pData[index]; }
 
