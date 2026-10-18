@@ -129,4 +129,21 @@ public:
 
 JPOG_ASSERT_SIZE(TMatrix44, 64);
 
+// A matrix tagged with an ID.
+class TMatrix44ID : public TMatrix44
+{
+public:
+	TMatrix44ID();
+	TMatrix44ID(const TMatrix44ID& other);
+	TMatrix44ID& operator=(const TMatrix44ID& other);
+
+	unsigned int GetID();
+	void SetID(unsigned int id);
+
+private:
+	unsigned int m_uiID;
+};
+
+JPOG_ASSERT_SIZE(TMatrix44ID, 0x44);
+
 } // namespace Toshi

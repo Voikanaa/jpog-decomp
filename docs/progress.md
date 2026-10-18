@@ -8,7 +8,7 @@ an x86 build); do not edit it by hand.
 <!-- coverage:begin -->
 | Module | Functions | Reimplemented | Coverage |
 |---|---:|---:|---:|
-| TKernelInterface | 1627 | 1548 | 95.1% |
+| TKernelInterface | 1627 | 1579 | 97.0% |
 | TApplication | 16 | 0 | 0.0% |
 | TInputInterface | 93 | 0 | 0.0% |
 | TInputDXInterface | 96 | 0 | 0.0% |
@@ -27,7 +27,7 @@ an x86 build); do not edit it by hand.
 | TSysShaderD3D | 52 | 0 | 0.0% |
 | TTerrainShaderD3D | 288 | 0 | 0.0% |
 | SimJP | 13680 | 0 | 0.0% |
-| **Total** | **20452** | **1548** | **7.6%** |
+| **Total** | **20452** | **1579** | **7.7%** |
 <!-- coverage:end -->
 
 ## Verification
@@ -36,6 +36,11 @@ original export on the same inputs. Float results must match bit for bit unless 
 justifies a tolerance.
 
 ## Log
+- 2026-10-18: `TSphere`, `TAABox` and `TMatrix44ID`. Union, BoxUnion and both ComparePlane
+  match the original bit for bit (0 ULP, game precision) over 20000 random cases, including
+  `this` aliasing an input. Quirks kept: the two ComparePlane use opposite sign conventions,
+  NaN comparisons fall to the "negative" result, BoxUnion ties take the new value and bounds are
+  `max - centre` (not half the extent).
 - 2026-10-18: `TDebug` (debug file, message level 2, `TDebug_Message`; call-stack functions,
   `IsValidAddress` and indent/reset are stubs in the shipped build) and the free
   `const char*`/`const unsigned short*` comparison operators, which compare reversed in the

@@ -3,6 +3,8 @@ add_library(toshi_kernel STATIC
   SortedArray.h
   StringPoolArray.h
   TArray.h
+  TAABox.cpp
+  TAABox.h
   TBitArray.cpp
   TBitArray.h
   TCString.cpp
@@ -75,6 +77,8 @@ add_library(toshi_kernel STATIC
   TRefCounted.h
   TScheduler.cpp
   TScheduler.h
+  TSphere.cpp
+  TSphere.h
   TSystem.cpp
   TSystem.h
   TThread.cpp
