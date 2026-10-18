@@ -4,8 +4,11 @@
 
 // The game's render task (SimJP.exe), under AApplication's render task. Placeholder: it only
 // pumps the window and presents empty frames; the original renders the world, GUI and movies
-// (issue #21). Ending the game when the window closes is ours too: the original's path for that
-// is not traced yet.
+// (issue #21).
+//
+// Deviation: closing the window ends the game here. In the original, WM_CLOSE only calls
+// TRenderD3DInterface::Exit (Update then returns false, which ARenderer::OnUpdate ignores); the
+// game quits through its menu (AFrontEndMainMenuState::OnQuitResponse -> TApplication::Destroy).
 class ARenderer : public Toshi::TTask
 {
 public:
