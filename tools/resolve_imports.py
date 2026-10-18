@@ -1,6 +1,7 @@
 """Annotate the SimJP decompilation with the game's own import names.
 
 Usage: python tools/resolve_imports.py
+       python tools/resolve_imports.py --slots 0x739A14 0x73932C ...   (name IAT slots from disassembly)
 
 Ghidra reads the retail SimJP.exe through its outer import directory, so calls through the
 game's own import address table (0x739000, see docs/modules.md) show up as calls to raw
@@ -64,6 +65,7 @@ def main():
     demangled = demangled_names()
     # Map hint/name RVA -> import name, for every slot of the game's own IAT.
     by_rva = {}
+    by_slot = {}
     o = offset(IAT_START - IMAGE_BASE)
     for slot in range(IAT_START, IAT_END, 4):
         value = struct.unpack_from("<I", data, o + slot - IAT_START)[0]
@@ -76,6 +78,13 @@ def main():
         name = data[name_offset + 2:end].decode("latin-1")
         if name:
             by_rva[value] = short_name(demangled.get(name, name))
+            by_slot[slot] = demangled.get(name, name)
+
+    if len(sys.argv) > 1 and sys.argv[1] == "--slots":
+        # Disassembly reads imports as `call dword ptr [slot]` / `mov reg, [slot]` (data imports).
+        for arg in sys.argv[2:]:
+            print(f"{int(arg, 16):#x}  {by_slot.get(int(arg, 16), '(not an import slot)')}")
+        return
 
     src = os.path.join(ROOT, "analysis", "decomp", "SimJP.c")
     if not os.path.exists(src):

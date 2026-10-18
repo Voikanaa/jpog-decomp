@@ -36,6 +36,14 @@ original export on the same inputs. Float results must match bit for bit unless 
 justifies a tolerance.
 
 ## Log
+- 2026-10-18: Faithful `AApplication::OnCreate`/`OnDestroy` (SimJP.exe 0x4846C0/0x484DC0):
+  string pool from `data/strpool.dat`, the nine free-list capacities (PProperties, GUI, kernel
+  strings, D3D resources; the exact targets come from the game's IAT slots, now resolvable with
+  `tools/resolve_imports.py --slots`), locales, measurement system, the GUI modules, the five
+  `ADummyTask` groups and `ARootTask` under Update2. `ARootTask` (TClass version 0x20000)
+  allocates the renderer and `ARenderer` in its constructor and creates them in `OnCreate`;
+  `ARenderer` is a placeholder that presents empty frames. `jpog.exe` now routes `new`/`delete`
+  to the kernel heap like the game. Runs and exits cleanly on both kernels.
 - 2026-10-18: Clean exit (#20). Root cause: an engine bug. `TRenderD3DInterface::Destroy` frees
   every resource (`DestroySystemResources` -> `DestroyAllResources`) and only then calls
   `DestroyDisplay`, which uses the display texture at `this+0xF0` (a use-after-free: null on the

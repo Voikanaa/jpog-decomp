@@ -1,27 +1,35 @@
 #pragma once
 
 #include "toshi/application/TApplication.h"
-#include "toshi/kernel/TManagedPtr.h"
-#include "toshi/render/TRenderInterface.h"
 
-// The game's application object (SimJP.exe: AApplication, global g_oTheApp).
-//
-// Stage-1 bootstrap: the original OnCreate builds the string pool, locales, GUI modules and the
-// task tree rooted at ARootTask, which creates the renderer and loads the front end. For now
-// OnCreate only does the renderer part of ARootTask::CreateRenderInterface (load
-// TRenderD3DInterface, create it, open the display), and OnUpdate presents empty frames. The
-// remaining steps get reimplemented one by one on top of this.
+class ADummyTask;
+class ARootTask;
+
+// The game's application object (SimJP.exe: AApplication, global g_oTheApp). OnCreate prepares
+// the engine (string pool, free lists, locales, GUI modules), builds the task tree (five
+// ADummyTask groups and ARootTask, which brings up the game) and OnDestroy tears it down.
 class AApplication : public Toshi::TApplication
 {
 public:
 	bool OnCreate(int argc, char** const argv) override;
-	bool OnUpdate(float deltaTime) override;
 	bool OnDestroy() override;
 
-private:
-	bool CreateRenderInterface();
+	ARootTask* GetRootTask() const;
+	ADummyTask* GetInputRootTask();
+	ADummyTask* GetUpdate1RootTask();
+	ADummyTask* GetUpdate2RootTask();
+	ADummyTask* GetUpdate3RootTask();
+	ADummyTask* GetRenderRootTask();
 
-	Toshi::TManagedPtr<Toshi::TRenderInterface> m_pRenderInterface; // ARootTask+0xD0
+private:
+	ADummyTask* CreateRootTask(char* name);
+
+	ARootTask* m_pRootTask = nullptr;
+	ADummyTask* m_pInputTask = nullptr;
+	ADummyTask* m_pUpdate1Task = nullptr;
+	ADummyTask* m_pUpdate2Task = nullptr;
+	ADummyTask* m_pUpdate3Task = nullptr;
+	ADummyTask* m_pRenderTask = nullptr;
 };
 
 extern AApplication g_oTheApp;

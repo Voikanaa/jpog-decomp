@@ -8,3 +8,12 @@
 #else
 #define TSTDCALL
 #endif
+
+// Data (not functions) that our x86 jpog.exe imports from an engine DLL must be declared
+// dllimport; functions go through import thunks. Only jpog.exe defines JPOG_IMPORT_ENGINE_DATA:
+// in our own kernel the same declarations define the data.
+#if defined(JPOG_IMPORT_ENGINE_DATA)
+#define TIMPORT_DATA __declspec(dllimport)
+#else
+#define TIMPORT_DATA
+#endif
