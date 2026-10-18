@@ -6,6 +6,23 @@
 namespace Toshi
 {
 
+const float TMath::PI = 3.14159274f;
+const float TMath::HALF_PI = 1.57079637f;
+const float TMath::TWO_PI = 6.28318548f;
+const float TMath::ONEOVER_PI = 0.318309873f;
+const float TMath::ONEOVERTWO_PI = 0.159154937f;
+const float TMath::E = 2.71828175f;
+const float TMath::SQRT_TWO = 1.41421354f;
+const float TMath::ONEOVER_SQRT_TWO = 0.707106769f;
+const float TMath::MINFLOAT = 1.17549435e-38f;
+const float TMath::MAXFLOAT = 3.40282347e+38f;
+const float TMath::FLOATEPSILON = 1.1920929e-07f;
+const int TMath::MININT = INT32_MIN;
+const int TMath::MAXINT = INT32_MAX;
+const unsigned int TMath::MAXUINT = UINT32_MAX;
+const char TMath::MAXCCHAR = 127;
+const unsigned short TMath::MAXWCHAR = 0xFFFF;
+
 namespace
 {
 

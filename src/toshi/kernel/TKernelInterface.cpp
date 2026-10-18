@@ -183,14 +183,16 @@ void TKernelInterface::UnloadInterface(const TCString& name)
 
 void TKernelInterface::DumpInfo()
 {
-	OSVERSIONINFOA version = {};
+	// The extended structure first, then the basic one (the buffer must hold the larger).
+	OSVERSIONINFOEXA version = {};
 	version.dwOSVersionInfoSize = sizeof(OSVERSIONINFOEXA);
+	auto* basic = reinterpret_cast<OSVERSIONINFOA*>(&version);
 #pragma warning(suppress : 4996) // GetVersionExA is what the original calls
-	if (!GetVersionExA(&version))
+	if (!GetVersionExA(basic))
 	{
 		version.dwOSVersionInfoSize = sizeof(OSVERSIONINFOA);
 #pragma warning(suppress : 4996)
-		GetVersionExA(&version);
+		GetVersionExA(basic);
 	}
 	char windowsDirectory[0x104];
 	GetWindowsDirectoryA(windowsDirectory, sizeof(windowsDirectory));

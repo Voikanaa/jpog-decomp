@@ -145,6 +145,27 @@ void CompareUnary(const char* name, FloatToFloat original, float(TSTDCALL* ours)
 
 TEST_SUITE("TMath differential" * doctest::skip(KernelMissing()))
 {
+	TEST_CASE("constants match the original (initialised when the DLL loads)")
+	{
+		const auto value = [](const char* name) { return *static_cast<const float*>(Original<void*>(name)); };
+		CHECK(Same(value("?PI@TMath@Toshi@@2MB"), TMath::PI));
+		CHECK(Same(value("?HALF_PI@TMath@Toshi@@2MB"), TMath::HALF_PI));
+		CHECK(Same(value("?TWO_PI@TMath@Toshi@@2MB"), TMath::TWO_PI));
+		CHECK(Same(value("?ONEOVER_PI@TMath@Toshi@@2MB"), TMath::ONEOVER_PI));
+		CHECK(Same(value("?ONEOVERTWO_PI@TMath@Toshi@@2MB"), TMath::ONEOVERTWO_PI));
+		CHECK(Same(value("?E@TMath@Toshi@@2MB"), TMath::E));
+		CHECK(Same(value("?SQRT_TWO@TMath@Toshi@@2MB"), TMath::SQRT_TWO));
+		CHECK(Same(value("?ONEOVER_SQRT_TWO@TMath@Toshi@@2MB"), TMath::ONEOVER_SQRT_TWO));
+		CHECK(Same(value("?MINFLOAT@TMath@Toshi@@2MB"), TMath::MINFLOAT));
+		CHECK(Same(value("?MAXFLOAT@TMath@Toshi@@2MB"), TMath::MAXFLOAT));
+		CHECK(Same(value("?FLOATEPSILON@TMath@Toshi@@2MB"), TMath::FLOATEPSILON));
+		CHECK(*static_cast<const int*>(Original<void*>("?MININT@TMath@Toshi@@2HB")) == TMath::MININT);
+		CHECK(*static_cast<const int*>(Original<void*>("?MAXINT@TMath@Toshi@@2HB")) == TMath::MAXINT);
+		CHECK(*static_cast<const unsigned int*>(Original<void*>("?MAXUINT@TMath@Toshi@@2IB")) == TMath::MAXUINT);
+		CHECK(*static_cast<const char*>(Original<void*>("?MAXCCHAR@TMath@Toshi@@2DB")) == TMath::MAXCCHAR);
+		CHECK(*static_cast<const unsigned short*>(Original<void*>("?MAXWCHAR@TMath@Toshi@@2GB")) == TMath::MAXWCHAR);
+	}
+
 	TEST_CASE("FPU control word round-trips with the original")
 	{
 		using GetFn = unsigned short(__stdcall*)();

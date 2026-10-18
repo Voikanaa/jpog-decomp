@@ -18,6 +18,9 @@ if(JPOG_HOOK AND NOT JPOG_X86)
 endif()
 
 option(JPOG_BUILD_TESTS "Build the unit and differential tests" ON)
+# x86: install our TKernelInterface.dll into the game copy instead of the original (issue #24);
+# OFF restores the original there.
+option(JPOG_REPLACE_KERNEL "Run the game copy on our TKernelInterface.dll" ON)
 
 # Location of the original game install. Differential tests load the original DLLs from here
 # (overridable at run time with the JPOG_ORIGINAL_DIR environment variable); they are skipped

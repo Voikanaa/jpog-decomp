@@ -36,6 +36,14 @@ original export on the same inputs. Float results must match bit for bit unless 
 justifies a tolerance.
 
 ## Log
+- 2026-10-18: **Our kernel runs the game.** x86 builds a drop-in `TKernelInterface.dll` (the
+  original names and ordinals from `tools/make_module_def.py`; all 428 names the other modules
+  import are exported) and installs it into `game/`. `jpog.exe` reaches Launch 1 on it, with the
+  same exit crash (#20) as on the original: the renderer calls through a member it never
+  initialises (null on the original heap, `0xCDCDCDCD` on the debug CRT heap). Bringing it up
+  found a stack overrun in `TKernelInterface::DumpInfo` (`OSVERSIONINFOA` passed as the larger
+  `OSVERSIONINFOEXA`). The `TMath` and `TScheduler` constants are now exported data, checked
+  against the original.
 - 2026-10-18: TKernelInterface complete: all 1604 non-superseded exports are reimplemented
   (`TMath::operator=` was the last). The 20 heap-internal exports and compiler-generated default
   constructor closures are now listed as superseded in `tools/coverage.py` (issue #22).
