@@ -5,6 +5,7 @@
 #include "toshi/kernel/TSystem.h"
 
 #include <new>
+#include <vector>
 
 using namespace Toshi;
 
@@ -282,6 +283,69 @@ const PProperties::PProperty* PProperties::FindProperty(const TPCString& name,
 		}
 	position = m_oProperties.End();
 	return nullptr;
+}
+
+namespace
+{
+
+// The original's sort order: by name, then sub-name. Quirk: a key without a sub-name sorts before
+// every entry with the same name (even one without a sub-name), so such duplicates end up in
+// reverse order.
+int CompareForSort(const PPropertyName& key, const PPropertyName& entry)
+{
+	const int order = key.GetName().Compare(entry.GetName());
+	if (order != 0)
+		return order;
+	if (key.GetSubName().GetCString().IsEmpty())
+		return -1;
+	if (entry.GetSubName().GetCString().IsEmpty())
+		return 1;
+	return key.GetSubName().Compare(entry.GetSubName());
+}
+
+} // namespace
+
+// Moves every property into a sorted array (binary search; a match is inserted after the run of
+// equal entries) and relinks them in that order.
+void PProperties::Sort()
+{
+	struct Entry
+	{
+		PPropertyName name;
+		PProperty* property;
+	};
+	std::vector<Entry> sorted;
+	while (!m_oProperties.IsEmpty())
+	{
+		PProperty* property = m_oProperties.Begin().Get();
+		m_oProperties.Remove(property);
+		const PPropertyName key(property->m_oName);
+
+		int low = 0;
+		int high = static_cast<int>(sorted.size()) - 1;
+		int index = -1;
+		while (low <= high)
+		{
+			const int middle = (low + high) / 2;
+			const int order = CompareForSort(key, sorted[middle].name);
+			if (order < 0)
+				high = middle - 1;
+			else if (order > 0)
+				low = middle + 1;
+			else
+			{
+				index = middle + 1;
+				while (index <= high && CompareForSort(key, sorted[index].name) == 0)
+					++index;
+				break;
+			}
+		}
+		if (index == -1)
+			index = low;
+		sorted.insert(sorted.begin() + index, Entry{key, property});
+	}
+	for (const Entry& entry : sorted)
+		m_oProperties.PushBack(entry.property);
 }
 
 void* TSTDCALL PProperties::operator new(std::size_t size)

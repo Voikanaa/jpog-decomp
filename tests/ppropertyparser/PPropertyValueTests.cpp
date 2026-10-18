@@ -211,4 +211,98 @@ TEST_SUITE("PPropertyValue differential" * doctest::skip(PPropertyParserMissing(
 	}
 }
 
+TEST_SUITE("PProperties differential" * doctest::skip(PPropertyParserMissing()))
+{
+	TEST_CASE("puts, lookups and sorting match the original")
+	{
+		using P = void*;
+		const auto pool = Original<P(__stdcall*)()>("?GetCStringPool@TSystem@Toshi@@SGPAVTCStringPool@2@XZ");
+		const auto get = Original<Method<P*, P*, const char*>>("?Get@TCStringPool@Toshi@@QAE?AVTPCString@2@PBD@Z");
+		const auto construct = OriginalPP<Method<void>>("??0PProperties@@QAE@XZ");
+		const auto destruct = OriginalPP<Method<void>>("??1PProperties@@UAE@XZ");
+		const auto constructInt = OriginalPP<Method<void, int>>("??0PPropertyValue@@QAE@H@Z");
+		const auto destructValue = OriginalPP<Method<void>>("??1PPropertyValue@@QAE@XZ");
+		const auto put = OriginalPP<Method<void, P*, const RawValue*>>(
+		    "?PutProperty@PProperties@@QAEXABVTPCString@Toshi@@ABVPPropertyValue@@@Z");
+		const auto putUnique = OriginalPP<Method<void, P*, const RawValue*>>(
+		    "?PutPropertyUnique@PProperties@@QAEXABVTPCString@Toshi@@ABVPPropertyValue@@@Z");
+		const auto sort = OriginalPP<Method<void>>("?Sort@PProperties@@QAEXXZ");
+		const auto getProperty = OriginalPP<Method<const RawValue*, P*>>(
+		    "?GetProperty@PProperties@@QBEPBVPPropertyValue@@ABVTPCString@Toshi@@@Z");
+
+		const char* const names[] = {"a", "b", "a[x]", "a[y]", "b[x]", "c", "a[x]", "B", "a[", "c[z]"};
+		const auto text = [](const void* handle) -> std::string
+		{
+			if (handle == nullptr)
+				return "";
+			const char* buffer = *reinterpret_cast<const char* const*>(static_cast<const char*>(handle) + 4);
+			return buffer ? buffer : "";
+		};
+		// The list from raw memory (both layouts): node {next, prev, name, sub, value type, value}.
+		const auto describeOriginal = [&](const unsigned char* properties)
+		{
+			std::string out;
+			const auto* root = properties + 0xC;
+			for (auto* node = *reinterpret_cast<unsigned char* const*>(root); node != root;
+			     node = *reinterpret_cast<unsigned char* const*>(node))
+				out += text(*reinterpret_cast<void* const*>(node + 8)) + "[" +
+				       text(*reinterpret_cast<void* const*>(node + 0xC)) +
+				       "]=" + std::to_string(*reinterpret_cast<const int*>(node + 0x14)) + " ";
+			return out + "#" + std::to_string(*reinterpret_cast<const int*>(properties + 0x14));
+		};
+		const auto describeOurs = [](const PProperties& properties)
+		{
+			std::string out;
+			for (auto it = properties.Begin(); it != properties.End(); ++it)
+				out += std::string(it->GetName().GetName().GetCString().GetString(0)) + "[" +
+				       it->GetName().GetSubName().GetCString().GetString(0) +
+				       "]=" + std::to_string(it->GetValue()->GetInteger()) + " ";
+			return out + "#" + std::to_string(properties.GetPropertyCount());
+		};
+
+		InputGenerator gen;
+		for (int round = 0; round < 100; ++round)
+		{
+			alignas(void*) unsigned char original[0x18];
+			construct(original);
+			PProperties ours;
+			for (int step = 0; step < 40; ++step)
+			{
+				INFO("round ", round, " step ", step);
+				const int op = static_cast<int>(gen.NextU32() % 6);
+				const char* name = names[gen.NextU32() % std::size(names)];
+				const int number = step;
+				P handle = nullptr;
+				get(pool(), &handle, name);
+				if (op == 5)
+				{
+					sort(original);
+					ours.Sort();
+				}
+				else
+				{
+					RawValue value;
+					constructInt(&value, number);
+					if (op == 4)
+						putUnique(original, &handle, &value);
+					else
+						put(original, &handle, &value);
+					destructValue(&value);
+					if (op == 4)
+						ours.PutPropertyUnique(Pooled(name), PPropertyValue(number));
+					else
+						ours.PutProperty(Pooled(name), PPropertyValue(number));
+				}
+				REQUIRE(describeOriginal(original) == describeOurs(ours));
+				const RawValue* found = getProperty(original, &handle);
+				const PPropertyValue* ourFound = ours.GetProperty(Pooled(name));
+				REQUIRE((found == nullptr) == (ourFound == nullptr));
+				if (found != nullptr)
+					CHECK(static_cast<int>(found->value) == ourFound->GetInteger());
+			}
+			destruct(original);
+		}
+	}
+}
+
 #endif // JPOG_HAS_ORIGINAL_MODULES

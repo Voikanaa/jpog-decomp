@@ -97,7 +97,7 @@ def original_exports(module):
 
 
 # Library and compiler symbols that can appear in a module's library.
-NOT_MODULE_SYMBOLS = ("@std@@", "__empty_global_delete", "??2@Y", "??3@Y", "??_U@Y", "??_V@Y")
+NOT_MODULE_SYMBOLS = ("@std@@", "??_C@", "__empty_global_delete", "??2@Y", "??3@Y", "??_U@Y", "??_V@Y")
 
 
 def original_name(symbol):

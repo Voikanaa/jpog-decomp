@@ -15,7 +15,7 @@ an x86 build); do not edit it by hand.
 | TRenderInterface | 1048 | 1 | 0 | 0.0% |
 | TRenderD3DInterface | 310 | 0 | 0 | 0.0% |
 | TTerrainInterface | 203 | 0 | 0 | 0.0% |
-| PPropertyParser | 245 | 0 | 159 | 64.9% |
+| PPropertyParser | 245 | 0 | 160 | 65.3% |
 | TGuiInterface | 1157 | 1 | 0 | 0.0% |
 | PGUICore | 823 | 0 | 0 | 0.0% |
 | PGUIRenderer | 144 | 0 | 0 | 0.0% |
@@ -27,7 +27,7 @@ an x86 build); do not edit it by hand.
 | TSysShaderD3D | 52 | 0 | 0 | 0.0% |
 | TTerrainShaderD3D | 288 | 0 | 0 | 0.0% |
 | SimJP | 13680 | 12 | 0 | 0.0% |
-| **Total** | **20452** | **38** | **1763** | **8.6%** |
+| **Total** | **20452** | **38** | **1764** | **8.6%** |
 <!-- coverage:end -->
 
 ## Verification
@@ -43,7 +43,9 @@ justifies a tolerance.
   past 2^31), `GetUINT32` truncates through 64 bits, NaN compares as equal (`CanBeType`) and is
   false (`GetBoolean`), the array copy constructor leaves the element count at 0, assigning a
   name to a name leaks. New header-only `TQList`. Coverage now maps VC6's `2PB` mangling of
-  const pointer statics to modern MSVC's `2QB`. `PProperties::Sort` is still missing.
+  const pointer statics to modern MSVC's `2QB`. `PProperties::Sort` reproduces the original's
+  binary insertion (a name without sub-name sorts before its equals, reversing such duplicates);
+  random put/unique-put/sort sequences match the original list for list.
 - 2026-10-18: PPropertyParser started (#25): module lib `ppropertyparser`, test access to the
   original DLL, coverage mapping (the drift check now covers non-`Toshi::` modules too), and
   `PPropertyName` ("name[sub]" split, string form, ordering) matching the original on tricky
