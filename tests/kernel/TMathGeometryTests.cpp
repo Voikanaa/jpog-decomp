@@ -5,6 +5,7 @@
 #include "toshi/kernel/TVector2.h"
 #include "toshi/kernel/TVector3.h"
 
+#include <cmath>
 #include <doctest/doctest.h>
 
 using Toshi::TMath;
@@ -158,6 +159,93 @@ TEST_SUITE("TMath geometry differential" * doctest::skip(KernelMissing()))
 			float limit[2] = {std::abs(time) * 4.0f, std::abs(time) * 4.0f};
 			CHECK(ray(a, b, c, d, limit[0]) == TMath::RaySegmentVsLine2D(a, b, c, d, limit[1]));
 			CHECK(Same(limit[0], limit[1]));
+		}
+	}
+
+	TEST_CASE("circles, spheres and capsules match the original")
+	{
+		using Circle2D = int(__stdcall*)(V2, V2, V2, float, float&, float&);
+		using Circle3D = int(__stdcall*)(V3, V3, V3, float, float&, float&);
+		using Spheres = bool(__stdcall*)(V3, float, V3, float, float*, TVector3*, float*);
+		const auto circle2D = Original<Circle2D>("?RayVsCircle2D@TMath@Toshi@@SGHABVTVector2@2@00MAAM1@Z");
+		const auto circle3D = Original<Circle3D>("?RayVsCircle3D@TMath@Toshi@@SGHABVTVector3@2@00MAAM1@Z");
+		const auto spheres = Original<Spheres>("?SphereIntersection@TMath@Toshi@@SG_NABVTVector3@2@M0MPAMPAV32@1@Z");
+		const auto planar =
+		    Original<Spheres>("?SphereIntersectionPlanar@TMath@Toshi@@SG_NABVTVector3@2@M0MPAMPAV32@1@Z");
+		const auto dynamic = Original<float(__stdcall*)(V3, float, V3, V3, float, V3)>(
+		    "?SphereIntersectionDynamic@TMath@Toshi@@SGMABVTVector3@2@M00M0@Z");
+		const auto capsuleNormal = Original<void(__stdcall*)(V2, V2, V2, TVector2&)>(
+		    "?CalculateCapsuleNormal2D@TMath@Toshi@@SGXABVTVector2@2@00AAV32@@Z");
+		const auto insideCapsule =
+		    Original<bool(__stdcall*)(V2, V2, float, V2)>("?PointInsideCapsule2D@TMath@Toshi@@SG_NABVTVector2@2@0M0@Z");
+		const auto axisLimit = Original<void(__stdcall*)(V3, V3, V3, float, TVector3&)>(
+		    "?GetAxisChangeLimit3D@TMath@Toshi@@SGXABVTVector3@2@00MAAV32@@Z");
+
+		GeometryInputs in;
+		GamePrecisionScope precision;
+		for (int i = 0; i < 20000; ++i)
+		{
+			INFO("iteration ", i);
+			TVector2 direction2 = in.Vector2(1.0f);
+			if (in.Gen().NextU32() % 4 != 0)
+				direction2.Normalise();
+			const TVector2 a = in.Vector2(), b = in.Vector2(), c = in.Vector2();
+			const float radius = std::abs(in.Value(10.0f));
+			float t0[2] = {1.5f, 1.5f}, t1[2] = {-1.5f, -1.5f};
+			CHECK(circle2D(a, direction2, b, radius, t0[0], t1[0]) ==
+			      TMath::RayVsCircle2D(a, direction2, b, radius, t0[1], t1[1]));
+			CHECK(Same(t0[0], t0[1]));
+			CHECK(Same(t1[0], t1[1]));
+
+			TVector3 direction3 = in.Vector3(1.0f);
+			if (in.Gen().NextU32() % 4 != 0)
+				direction3.Normalise();
+			const TVector3 p = in.Vector3(), q = in.Vector3(), v = in.Vector3(2.0f), w = in.Vector3(2.0f);
+			CHECK(circle3D(p, direction3, q, radius, t0[0], t1[0]) ==
+			      TMath::RayVsCircle3D(p, direction3, q, radius, t0[1], t1[1]));
+			CHECK(Same(t0[0], t0[1]));
+			CHECK(Same(t1[0], t1[1]));
+
+			const float radiusB = std::abs(in.Value(10.0f));
+			const unsigned int outputs = in.Gen().NextU32();
+			float extra[2] = {7.0f, 7.0f}, depth[2] = {7.0f, 7.0f};
+			TVector3 separation[2] = {w, w};
+			const auto run = [&](Spheres original, auto ours)
+			{
+				const bool first =
+				    original(p, radius, q, radiusB, (outputs & 1) ? &extra[0] : nullptr,
+				             (outputs & 2) ? &separation[0] : nullptr, (outputs & 4) ? &depth[0] : nullptr);
+				const bool second = ours(p, radius, q, radiusB, (outputs & 1) ? &extra[1] : nullptr,
+				                         (outputs & 2) ? &separation[1] : nullptr, (outputs & 4) ? &depth[1] : nullptr);
+				CHECK(first == second);
+				CHECK(Same(extra[0], extra[1]));
+				CHECK(Same(depth[0], depth[1]));
+				CHECK(Same(separation[0].x, separation[1].x));
+				CHECK(Same(separation[0].y, separation[1].y));
+				CHECK(Same(separation[0].z, separation[1].z));
+			};
+			run(spheres, TMath::SphereIntersection);
+			run(planar, TMath::SphereIntersectionPlanar);
+			CHECK(Same(dynamic(p, radius, v, q, radiusB, w),
+			           TMath::SphereIntersectionDynamic(p, radius, v, q, radiusB, w)));
+
+			TVector2 normal[2] = {c, c};
+			capsuleNormal(a, b, c, normal[0]);
+			TMath::CalculateCapsuleNormal2D(a, b, c, normal[1]);
+			CHECK(Same(normal[0], normal[1]));
+			CHECK(insideCapsule(a, b, radius, c) == TMath::PointInsideCapsule2D(a, b, radius, c));
+
+			TVector3 from = in.Vector3(1.0f), to = in.Vector3(1.0f);
+			from.Normalise();
+			to = in.Gen().NextU32() % 8 == 0 ? from : to;
+			to.Normalise();
+			const float angle = in.Value(4.0f);
+			TVector3 limited[2] = {q, q};
+			axisLimit(from, to, direction3, angle, limited[0]);
+			TMath::GetAxisChangeLimit3D(from, to, direction3, angle, limited[1]);
+			CHECK(Same(limited[0].x, limited[1].x));
+			CHECK(Same(limited[0].y, limited[1].y));
+			CHECK(Same(limited[0].z, limited[1].z));
 		}
 	}
 }

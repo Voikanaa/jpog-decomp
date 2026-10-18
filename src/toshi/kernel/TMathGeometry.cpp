@@ -168,6 +168,200 @@ bool TSTDCALL TMath::RaySegmentVsLine2D(const TVector2& origin, const TVector2& 
 	return true;
 }
 
+int TSTDCALL TMath::RayVsCircle2D(const TVector2& origin, const TVector2& direction, const TVector2& centre,
+                                  float radius, float& t0, float& t1)
+{
+	TVector2 offset = centre;
+	offset.Subtract(origin);
+	const float radiusSq = radius * radius;
+	const float distanceSq = offset.MagnitudeSq();
+	if (distanceSq >= radiusSq)
+	{
+		// Outside: the circle must be ahead and close enough to the ray.
+		const float along = TVector2::DotProduct(offset, direction);
+		if (!(along >= 0.0f) || !(radiusSq >= distanceSq - along * along))
+			return 0;
+	}
+	offset.Multiply(-1.0f);
+	const float b = TVector2::DotProduct(offset, direction) + TVector2::DotProduct(offset, direction);
+	const float discriminant = b * b + (distanceSq - radiusSq) * -4.0f;
+	if (!(discriminant >= 0.0f))
+		return 0;
+	const float root = std::sqrt(discriminant);
+	t0 = -(root + b) * 0.5f;
+	t1 = (root - b) * 0.5f;
+	return 2;
+}
+
+int TSTDCALL TMath::RayVsCircle3D(const TVector3& origin, const TVector3& direction, const TVector3& centre,
+                                  float radius, float& t0, float& t1)
+{
+	TVector3 offset = centre;
+	offset.Subtract(origin);
+	const float radiusSq = radius * radius;
+	const float distanceSq = offset.MagnitudeSq();
+	if (distanceSq >= radiusSq)
+	{
+		const float along = TVector3::DotProduct(offset, direction);
+		if (!(along >= 0.0f) || !(radiusSq >= distanceSq - along * along))
+			return 0;
+	}
+	offset.Multiply(-1.0f);
+	const float b = TVector3::DotProduct(offset, direction) + TVector3::DotProduct(offset, direction);
+	const float discriminant = b * b + (distanceSq - radiusSq) * -4.0f;
+	if (!(discriminant >= 0.0f))
+		return 0;
+	const float root = std::sqrt(discriminant);
+	t0 = -(root + b) * 0.5f;
+	t1 = (root - b) * 0.5f;
+	return 2;
+}
+
+// A NaN distance counts as overlapping here (but not in the planar version), as in the original.
+bool TSTDCALL TMath::SphereIntersection(const TVector3& centreA, float radiusA, const TVector3& centreB, float radiusB,
+                                        float* distanceSqMinusRadiusSq, TVector3* separation, float* penetration)
+{
+	const float radiusSum = radiusB + radiusA;
+	TVector3 offset;
+	offset.Subtract(centreB, centreA);
+	const float radiusSumSq = radiusSum * radiusSum;
+	const float distanceSq = offset.MagnitudeSq();
+	if (distanceSq > radiusSumSq)
+		return false;
+	const float depth = radiusSum - std::sqrt(distanceSq);
+	if (penetration != nullptr)
+		*penetration = depth;
+	if (separation != nullptr)
+		separation->Multiply(offset, depth / radiusSum);
+	if (distanceSqMinusRadiusSq != nullptr)
+		*distanceSqMinusRadiusSq = distanceSq - radiusB * radiusB;
+	return true;
+}
+
+bool TSTDCALL TMath::SphereIntersectionPlanar(const TVector3& centreA, float radiusA, const TVector3& centreB,
+                                              float radiusB, float* distanceSqMinusRadiusSq, TVector3* separation,
+                                              float* penetration)
+{
+	const float radiusSum = radiusB + radiusA;
+	const float dx = centreB.x - centreA.x;
+	const float dz = centreB.z - centreA.z;
+	const float distanceSq = dx * dx + dz * dz;
+	if (!(radiusSum * radiusSum >= distanceSq))
+		return false;
+	const float depth = radiusSum - std::sqrt(distanceSq);
+	if (penetration != nullptr)
+		*penetration = depth;
+	if (separation != nullptr)
+	{
+		const float scale = depth / radiusSum;
+		separation->x = dx * scale;
+		separation->z = dz * scale;
+		separation->y = 0.0f;
+	}
+	if (distanceSqMinusRadiusSq != nullptr)
+		*distanceSqMinusRadiusSq = distanceSq - radiusB * radiusB;
+	return true;
+}
+
+float TSTDCALL TMath::SphereIntersectionDynamic(const TVector3& centreA, float radiusA, const TVector3& velocityA,
+                                                const TVector3& centreB, float radiusB, const TVector3& velocityB)
+{
+	const TVector3 velocity = velocityA - velocityB;
+	const float speed = velocity.Magnitude();
+	const TVector3 direction = velocity / speed;
+	const TVector3 offset = centreB - centreA;
+	const float distance = offset.Magnitude();
+	const float radiusSum = radiusB + radiusA;
+	if (!(distance > radiusSum))
+		return 0.0f;
+	if (!(speed >= TMath::FLOATEPSILON))
+		return -1.0f;
+	if (!(TVector3::DotProduct(offset, velocity) >= 0.0f))
+		return -1.0f;
+	const float along = TVector3::DotProduct(offset, direction);
+	const float missSq = distance * distance - along * along;
+	const float radiusSumSq = radiusSum * radiusSum;
+	if (!(radiusSumSq >= missSq))
+		return -1.0f;
+	const float inside = radiusSumSq - missSq;
+	if (!(inside >= 0.0f))
+		return -1.0f;
+	return (along - std::sqrt(inside)) / speed;
+}
+
+// A NaN projection is treated as before the start.
+void TSTDCALL TMath::CalculateCapsuleNormal2D(const TVector2& start, const TVector2& end, const TVector2& point,
+                                              TVector2& normal)
+{
+	const float t = ClosestPointOnLine2D(start, end, point);
+	if (!(t >= 0.0f))
+	{
+		normal = point;
+		normal.Subtract(start);
+		normal.Normalise();
+		return;
+	}
+	if (t > 1.0f)
+	{
+		normal = point;
+		normal.Subtract(end);
+		normal.Normalise();
+		return;
+	}
+	normal = end;
+	normal.Subtract(start);
+	normal.Normalise();
+	normal.SetPerpendicular();
+	if (!PointVsPlane2D(normal, start, point))
+		normal.Negate();
+}
+
+bool TSTDCALL TMath::PointInsideCapsule2D(const TVector2& start, const TVector2& end, float radius,
+                                          const TVector2& point)
+{
+	float t = ClosestPointOnLine2D(start, end, point);
+	Clip(t, 0.0f, 1.0f);
+	TVector2 closest;
+	closest.Lerp(start, end, t);
+	const TVector2 offset = closest - point;
+	return radius * radius >= offset.MagnitudeSq();
+}
+
+// fsin/fcos ignore the 24-bit precision: their double results are rounded to float only where
+// the original stores them (see TMath.cpp).
+void TSTDCALL TMath::GetAxisChangeLimit3D(const TVector3& from, const TVector3& to, const TVector3& fallbackAxis,
+                                          float angle, TVector3& result)
+{
+	const float dot = TVector3::DotProduct(from, to);
+	if (!(angle > -PI))
+		angle = -PI;
+	else if (!(angle < PI))
+		angle = PI;
+	const double cosine = std::cos(static_cast<double>(angle));
+	if (!(cosine > static_cast<double>(dot)))
+	{
+		result = to;
+		return;
+	}
+	const double sine = std::sin(static_cast<double>(angle));
+	TVector3 axis;
+	axis.CrossProduct(to, from);
+	const float length = axis.Magnitude();
+	if (length >= 1e-6f)
+		axis.Multiply(1.0f / length);
+	else
+	{
+		axis.CrossProduct(fallbackAxis, from);
+		axis.Normalise();
+	}
+	TVector3 tangent;
+	tangent.CrossProduct(from, axis);
+	tangent.Multiply(static_cast<float>(sine));
+	result = from;
+	result.Multiply(static_cast<float>(cosine));
+	result.Add(tangent);
+}
+
 int TSTDCALL TMath::GetCapsuleZone(const TVector2& point, const TVector2& start, const TVector2& end, float)
 {
 	TVector2 axis = end;

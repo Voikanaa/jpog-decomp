@@ -277,15 +277,20 @@ TEST_SUITE("TMath differential" * doctest::skip(KernelMissing()))
 			TMath::Clip(intOurs, -20, 20);
 			CHECK(intOriginal == intOurs);
 
-			float floatOriginal = a, floatOurs = a;
+			// Every 50th input is NaN (Clip turns it into the minimum).
+			const float nan = std::numeric_limits<float>::quiet_NaN();
+			const float clipped = i % 50 == 0 ? nan : a;
+			float floatOriginal = clipped, floatOurs = clipped;
 			clipFloat(floatOriginal, -20.0f, 20.0f);
 			TMath::Clip(floatOurs, -20.0f, 20.0f);
-			CHECK(floatOriginal == floatOurs);
+			CHECK(Same(floatOriginal, floatOurs));
 
 			INFO("a=", a, " b=", b, " c=", c, " t=", t);
 			CHECK(NearlyEqual(lerp(a, b, t), TMath::LERP(a, b, t), 0));
 			CHECK(NearlyEqual(decrMinf(a, b, c), TMath::DecrMinf(a, b, c), 0));
 			CHECK(NearlyEqual(incrMaxf(a, b, c), TMath::IncrMaxf(a, b, c), 0));
+			CHECK(Same(decrMinf(clipped, b, c), TMath::DecrMinf(clipped, b, c)));
+			CHECK(Same(incrMaxf(clipped, b, c), TMath::IncrMaxf(clipped, b, c)));
 		}
 	}
 
