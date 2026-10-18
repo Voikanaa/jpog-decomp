@@ -2,12 +2,9 @@
 
 #include "toshi/kernel/TMemory.h"
 
+#include <windows.h>
 #include <cstdio>
 #include <cwchar>
-
-#define WIN32_LEAN_AND_MEAN
-#define NOMINMAX
-#include <windows.h>
 
 #undef CreateFile
 

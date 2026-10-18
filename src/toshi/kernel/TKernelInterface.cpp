@@ -8,11 +8,8 @@
 #include "toshi/kernel/TScheduler.h"
 #include "toshi/kernel/TUser.h"
 
-#include <direct.h>
-
-#define WIN32_LEAN_AND_MEAN
-#define NOMINMAX
 #include <windows.h>
+#include <direct.h>
 
 namespace Toshi
 {
