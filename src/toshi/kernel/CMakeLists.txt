@@ -2,6 +2,7 @@
 add_library(toshi_kernel STATIC
   SortedArray.h
   StringPoolArray.h
+  TArray.h
   TBitArray.cpp
   TBitArray.h
   TCString.cpp
@@ -41,6 +42,8 @@ add_library(toshi_kernel STATIC
   TMap.h
   TMath.cpp
   TMath.h
+  TMinterm.cpp
+  TMinterm.h
   TMatrix44.cpp
   TMatrix44.h
   TMemFile.cpp
