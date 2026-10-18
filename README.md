@@ -65,7 +65,7 @@ flowchart LR
 |---|---|:-:|
 | Foundations | Symbols, build system, CI, analysis tooling | ✅ |
 | **Launch 1** | Our `jpog.exe` opens the game window via the engine DLLs, on our own kernel | ✅ |
-| **M2** | Toshi kernel replaced: all `TKernelInterface` exports reimplemented and verified; our `TKernelInterface.dll` runs Launch 1 | 🚧 |
+| **M2** | Toshi kernel replaced: every `TKernelInterface` export reimplemented and verified; the game boots on our DLL up to Launch 1 | 🚧 |
 | **M3** | A mission loads through our renderer and resource code | ⏳ |
 | **M4** | Full game playable on our code | ⏳ |
 | **M5** | Native x64 build reaches the main menu | ⏳ |
@@ -103,16 +103,15 @@ tools\build.bat x64-debug    :: native x64 build + portable tests
 ```
 The x86 build copies `jpog.exe` and our `TKernelInterface.dll` into `game\`, where the game must
 be run (`tools\build.bat x86-debug "-DJPOG_REPLACE_KERNEL=OFF"` puts the original kernel back).
-Differential tests find the
-original DLLs in `JPOG\` (override with the `JPOG_ORIGINAL_DIR` environment variable) and are
-skipped when the game is not present, as in CI.
+Differential tests find the original DLLs in `JPOG\` (override with the `JPOG_ORIGINAL_DIR`
+environment variable) and are skipped when the game is not present, as in CI.
 
 ## Repository layout
 
 ```
 ├── src/
 │   ├── common/        shared headers (ABI macros, layout checks)
-│   ├── toshi/         Toshi engine reimplementation, one folder per original DLL
+│   ├── toshi/         Toshi engine, one folder per original DLL (kernel → TKernelInterface.dll)
 │   ├── game/          jpog.exe: WinMain, application, crash handler
 │   └── hook/          x86 hook DLL (deferred)
 ├── tests/
@@ -129,7 +128,7 @@ skipped when the game is not present, as in CI.
 
 | Script | Purpose |
 |---|---|
-| `tools/build.bat` | Configure, build and test a CMake preset (finds Visual Studio via `vswhere`) |
+| `tools/build.bat` | Configure, build and test a CMake preset, optionally with `"-DOPTION=VALUE"` arguments (finds Visual Studio via `vswhere`) |
 | `tools/ghidra_export.py` | Headless Ghidra decompilation of the original modules into `analysis/` (gitignored) |
 | `tools/dump_vtables.py` | Recover the virtual method order of every exported class into `symbols/vtables.csv` |
 | `tools/resolve_imports.py` | Annotate the game's decompilation with the names of the engine functions it calls |
@@ -139,6 +138,7 @@ skipped when the game is not present, as in CI.
 | `tools/coverage.py` | Measure reimplementation coverage; regenerates [docs/progress.md](docs/progress.md) and the README badge |
 | `tools/format.py` | Format all C++ with the pinned clang-format 20.1.8 (`--check` in CI and pre-commit) |
 | `tools/make_import_lib.py` | Generate import libraries for the original engine DLLs from `symbols/` (used by CMake) |
+| `tools/make_module_def.py` | Generate the export table (`.def`) of our drop-in DLLs from `symbols/` (used by CMake) |
 | `tools/check_repo.py` | Hygiene check: no game files, nothing over 5 MB (CI + pre-commit) |
 | `tools/msvc.py` | Locate the MSVC tools (`dumpbin`, `undname`, …) without hardcoded paths |
 | `tools/setup_mcp.py` | Generate the machine-specific `.mcp.json` for the REA MCP server |

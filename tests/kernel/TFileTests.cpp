@@ -127,7 +127,7 @@ TEST_SUITE("TFile")
 	TEST_CASE("memory files")
 	{
 		namespace fs = std::filesystem;
-		const fs::path directory = fs::current_path() / "jpog_mem_file_test";
+		const fs::path directory = fs::temp_directory_path() / "jpog_mem_file_test";
 		fs::create_directories(directory);
 		{
 			std::ofstream out(directory / "data.bin", std::ios::binary);
@@ -330,7 +330,7 @@ TEST_SUITE("TFile differential" * doctest::skip(KernelMissing()))
 	TEST_CASE("native files match the original")
 	{
 		namespace fs = std::filesystem;
-		const fs::path directory = fs::current_path() / "jpog_native_file_test";
+		const fs::path directory = fs::temp_directory_path() / "jpog_native_file_test";
 		fs::create_directories(directory);
 		InputGenerator gen;
 		std::vector<unsigned char> content(5000 + gen.NextInt(0, 3000));
@@ -477,7 +477,7 @@ TEST_SUITE("TFile differential" * doctest::skip(KernelMissing()))
 	TEST_CASE("memory files match the original")
 	{
 		namespace fs = std::filesystem;
-		const fs::path directory = fs::current_path() / "jpog_mem_file_diff";
+		const fs::path directory = fs::temp_directory_path() / "jpog_mem_file_diff";
 		fs::create_directories(directory);
 		InputGenerator gen;
 		std::vector<unsigned char> content(3000 + gen.NextInt(0, 2000));

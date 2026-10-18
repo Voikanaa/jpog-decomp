@@ -173,7 +173,7 @@ TEST_SUITE("TISOFile")
 	TEST_CASE("reads files from an image")
 	{
 		namespace fs = std::filesystem;
-		const fs::path directory = fs::current_path() / "jpog_iso_file_test";
+		const fs::path directory = fs::temp_directory_path() / "jpog_iso_file_test";
 		fs::create_directories(directory);
 		WriteImage(directory / "test.iso");
 		{
@@ -222,7 +222,7 @@ TEST_SUITE("TISOFile differential" * doctest::skip(KernelMissing()))
 	TEST_CASE("ISO files match the original")
 	{
 		namespace fs = std::filesystem;
-		const fs::path directory = fs::current_path() / "jpog_iso_file_diff";
+		const fs::path directory = fs::temp_directory_path() / "jpog_iso_file_diff";
 		fs::create_directories(directory);
 		// One image per side: the native file system opens files exclusively.
 		WriteImage(directory / "original.iso");
