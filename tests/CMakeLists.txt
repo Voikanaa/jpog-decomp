@@ -20,6 +20,7 @@ add_executable(jpog_tests
   kernel/TRandomTests.cpp
   kernel/TSchedulerTests.cpp
   kernel/TStringTests.cpp
+  kernel/TTimerTests.cpp
   kernel/TTimeTests.cpp
   kernel/TVectorTests.cpp
 )

@@ -60,6 +60,8 @@ add_library(toshi_kernel STATIC
   TPile.h
   TPlane.cpp
   TPlane.h
+  TProfiler.cpp
+  TProfiler.h
   TQuaternion.cpp
   TQuaternion.h
   TRandom.cpp
@@ -72,6 +74,8 @@ add_library(toshi_kernel STATIC
   TSystem.h
   TThread.cpp
   TThread.h
+  TTimer.cpp
+  TTimer.h
   TUser.cpp
   TUser.h
   TVector2.cpp
