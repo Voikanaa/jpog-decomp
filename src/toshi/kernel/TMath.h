@@ -7,8 +7,11 @@
 namespace Toshi
 {
 
-// Scalar math helpers (TKernelInterface.dll). All members are static, as in the original.
-// Geometry helpers operating on TVector2/TVector3 live with the vector classes.
+class TVector2;
+class TVector3;
+
+// Math helpers (TKernelInterface.dll). All members are static, as in the original. The 2D/3D
+// geometry tests are implemented in TMathGeometry.cpp.
 class TMath
 {
 public:
@@ -100,8 +103,40 @@ public:
 	static unsigned short TSTDCALL GetFPUControlWord();
 	static void TSTDCALL SetFPUControlWord(unsigned short controlWord);
 
+	// Geometry. Lines are given by two points unless noted; parameters are along the first line.
+	// True when `point` lies on the side of the plane through `planePoint` that `normal` points to
+	// (or on it).
+	static bool TSTDCALL PointVsPlane2D(const TVector2& normal, const TVector2& planePoint, const TVector2& point);
+	// The signed distance along `normal` (scaled by its length).
+	static float TSTDCALL PointVsPlane2DF(const TVector2& normal, const TVector2& planePoint, const TVector2& point);
+	static bool TSTDCALL PointVsPlane3D(const TVector3& normal, const TVector3& planePoint, const TVector3& point);
+	// Parameter of the projection of `point` on the line from `start` to `end`.
+	static float TSTDCALL ClosestPointOnLine2D(const TVector2& start, const TVector2& end, const TVector2& point);
+	// Squared distance from `point` to the line through `start` and `end`.
+	static float TSTDCALL DistancePointToLineSq(const TVector2& point, const TVector2& start, const TVector2& end);
+	static float TSTDCALL DistancePointToLine(const TVector2& point, const TVector2& start, const TVector2& end);
+	static float TSTDCALL ClosestPointOnLineOverTime2D(const TVector2& a, const TVector2& b, const TVector2& c,
+	                                                   const TVector2& d, float time);
+	// Intersection of lines a0-a1 and b0-b1: false when parallel.
+	static bool TSTDCALL LineVsLine2D(const TVector2& a0, const TVector2& a1, const TVector2& b0, const TVector2& b1,
+	                                  float& t);
+	static bool TSTDCALL LineVsLine2D(const TVector2& a0, const TVector2& a1, const TVector2& b0, const TVector2& b1,
+	                                  float& t, float& u);
+	static bool TSTDCALL LineVsLine2D(const TVector2& a0, const TVector2& a1, const TVector2& b0, const TVector2& b1,
+	                                  TVector2& intersection);
+	static bool TSTDCALL LineSegmentVsLineSegment2D(const TVector2& a0, const TVector2& a1, const TVector2& b0,
+	                                                const TVector2& b1, TVector2& intersection);
+	static bool TSTDCALL LineSegmentVsLine2D(const TVector2& a0, const TVector2& a1, const TVector2& b0,
+	                                         const TVector2& b1, TVector2& intersection);
+	// Ray from `origin` along `direction` against the line through `point` along `lineDirection`;
+	// updates `t` only for a hit in [0, t).
+	static bool TSTDCALL RaySegmentVsLine2D(const TVector2& origin, const TVector2& direction, const TVector2& point,
+	                                        const TVector2& lineDirection, float& t);
+
 private:
 	static float TSTDCALL Bias(float bias, float t);
+	// 2: beyond `end`, 1: before `start`, 0: in between (the radius is unused).
+	static int TSTDCALL GetCapsuleZone(const TVector2& point, const TVector2& start, const TVector2& end, float radius);
 };
 
 } // namespace Toshi

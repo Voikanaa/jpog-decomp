@@ -13,6 +13,7 @@ add_executable(jpog_tests
   kernel/TFileTests.cpp
   kernel/TISOFileTests.cpp
   kernel/TLocaleTests.cpp
+  kernel/TMathGeometryTests.cpp
   kernel/TMathTests.cpp
   kernel/TMatrix44Tests.cpp
   kernel/TMemoryTests.cpp
