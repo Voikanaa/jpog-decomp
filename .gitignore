@@ -16,6 +16,3 @@ __pycache__/
 /.mcp.json
 # Ghidra projects and decompilation exports (derived from the binaries)
 /analysis/
-# Scratch directories the tests create in their working directory
-/jpog_*_test*/
-/jpog_*_diff/

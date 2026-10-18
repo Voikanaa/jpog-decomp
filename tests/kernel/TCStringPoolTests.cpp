@@ -299,7 +299,7 @@ TEST_SUITE("TCStringPool differential" * doctest::skip(KernelMissing()))
 	TEST_CASE("pool files match the original")
 	{
 		namespace fs = std::filesystem;
-		const fs::path directory = fs::current_path() / "jpog_pool_file_diff";
+		const fs::path directory = fs::temp_directory_path() / "jpog_pool_file_diff";
 		fs::create_directories(directory);
 		const auto managerCtor = Original<Method<void>>("??0TFileManager@Toshi@@QAE@XZ");
 		const auto managerDtor = Original<Method<void>>("??1TFileManager@Toshi@@QAE@XZ");

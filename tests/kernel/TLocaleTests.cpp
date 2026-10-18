@@ -184,7 +184,7 @@ TEST_SUITE("TLocale")
 {
 	TEST_CASE("loading and lookups")
 	{
-		const fs::path directory = fs::current_path() / "jpog_locale_test";
+		const fs::path directory = fs::temp_directory_path() / "jpog_locale_test";
 		fs::create_directories(directory);
 		WriteLocaleFiles(directory);
 		{
@@ -223,7 +223,7 @@ TEST_SUITE("TLocale differential" * doctest::skip(KernelMissing()))
 {
 	TEST_CASE("locale matches the original")
 	{
-		const fs::path directory = fs::current_path() / "jpog_locale_diff";
+		const fs::path directory = fs::temp_directory_path() / "jpog_locale_diff";
 		fs::create_directories(directory);
 		WriteLocaleFiles(directory);
 
