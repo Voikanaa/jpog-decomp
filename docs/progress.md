@@ -15,7 +15,7 @@ an x86 build); do not edit it by hand.
 | TRenderInterface | 1048 | 1 | 0 | 0.0% |
 | TRenderD3DInterface | 310 | 0 | 0 | 0.0% |
 | TTerrainInterface | 203 | 0 | 0 | 0.0% |
-| PPropertyParser | 245 | 0 | 16 | 6.5% |
+| PPropertyParser | 245 | 0 | 159 | 64.9% |
 | TGuiInterface | 1157 | 1 | 0 | 0.0% |
 | PGUICore | 823 | 0 | 0 | 0.0% |
 | PGUIRenderer | 144 | 0 | 0 | 0.0% |
@@ -27,7 +27,7 @@ an x86 build); do not edit it by hand.
 | TSysShaderD3D | 52 | 0 | 0 | 0.0% |
 | TTerrainShaderD3D | 288 | 0 | 0 | 0.0% |
 | SimJP | 13680 | 12 | 0 | 0.0% |
-| **Total** | **20452** | **38** | **1620** | **7.9%** |
+| **Total** | **20452** | **38** | **1763** | **8.6%** |
 <!-- coverage:end -->
 
 ## Verification
@@ -36,6 +36,14 @@ original export on the same inputs. Float results must match bit for bit unless 
 justifies a tolerance.
 
 ## Log
+- 2026-10-18: PPropertyParser: `PPropertyValue` (type tags are nine unattached TClasses plus
+  `PProperties::m_sClass`), `PPropertyValueArray` (ref count + `TArray`), `PProperties` and
+  `PProperty` (free-list allocated, `TQList` in file order). Numeric conversions match the
+  original on 81k cases, quirks included: float-to-int truncates on the double's bits (wrapping
+  past 2^31), `GetUINT32` truncates through 64 bits, NaN compares as equal (`CanBeType`) and is
+  false (`GetBoolean`), the array copy constructor leaves the element count at 0, assigning a
+  name to a name leaks. New header-only `TQList`. Coverage now maps VC6's `2PB` mangling of
+  const pointer statics to modern MSVC's `2QB`. `PProperties::Sort` is still missing.
 - 2026-10-18: PPropertyParser started (#25): module lib `ppropertyparser`, test access to the
   original DLL, coverage mapping (the drift check now covers non-`Toshi::` modules too), and
   `PPropertyName` ("name[sub]" split, string form, ordering) matching the original on tricky
