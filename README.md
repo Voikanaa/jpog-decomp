@@ -4,7 +4,7 @@
 
 # jpog-decomp
 
-**A clean-room reimplementation of *Jurassic Park: Operation Genesis* (2003) as a native Windows x64 game**
+**A reimplementation of *Jurassic Park: Operation Genesis* (2003) as a native Windows x64 game**
 
 <p>
 <a href="https://github.com/Voikanaa/jpog-decomp/actions/workflows/ci.yml"><img alt="CI" src="https://img.shields.io/github/actions/workflow/status/Voikanaa/jpog-decomp/ci.yml?branch=main&label=CI&style=flat-square&logo=githubactions&logoColor=white"></a>
@@ -34,7 +34,6 @@ protection, all of which are increasingly hard to run on modern systems.
 This project rebuilds the game and engine from scratch in modern, portable C++. The goal is a
 **native 64-bit Windows build** that plays the original game data unchanged.
 
-- **Clean room:** every line comes from our own analysis of the shipped binaries and data.
 - **Verified bit for bit:** each function is tested against the original DLL export on the same
   inputs, down to the last floating-point bit.
 - **Bring your own game:** the repository contains no game code, assets or binaries.
@@ -43,7 +42,7 @@ This project rebuilds the game and engine from scratch in modern, portable C++. 
 
 ```mermaid
 flowchart LR
-    A["Original game<br/>32-bit SimJP.exe + Toshi DLLs"] -->|"Ghidra + exported symbols"| B["Clean-room C++<br/>src/"]
+    A["Original game<br/>32-bit SimJP.exe + Toshi DLLs"] -->|"Ghidra + exported symbols"| B["Portable C++<br/>src/"]
     B -->|"x86 build"| C["jpog.exe + our kernel DLL<br/>on the other original DLLs"]
     B -->|"x86 build"| T["Differential tests<br/>vs. original exports"]
     T -.->|"0-ULP match"| B
@@ -146,7 +145,7 @@ skipped when the game is not present, as in CI.
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for the clean-room rules, workflow, commit conventions and
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the ground rules, workflow, commit conventions and
 code style.
 
 ## License

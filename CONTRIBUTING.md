@@ -5,8 +5,6 @@ By contributing you agree that your contribution is licensed under the project l
 GPL-3.0-or-later (see `LICENSE`).
 
 ## Ground rules
-- **Clean room.** Derive everything from your own analysis of the shipped binaries and data.
-  Do not read, copy or port code from other decompilation projects.
 - **No game files in git.** Never commit binaries, assets, saves or the ISO. CI and the pre-commit
   hook enforce this.
 - **New third-party dependencies need explicit approval.** This covers libraries, tools and

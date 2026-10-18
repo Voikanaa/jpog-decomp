@@ -14,7 +14,7 @@ FORBIDDEN_EXTENSIONS = {
     ".tmd", ".tml", ".tkl", ".fsm", ".inx", ".nwt", ".ttx", ".tto", ".mis", ".sav",
     ".s00", ".s01", ".s02", ".raw", ".hm", ".pdb", ".obj", ".lib",
 }
-FORBIDDEN_PREFIXES = ("JPOG/", "game/", "toolchain/", "references/", "build/", ".rea-tmp/")
+FORBIDDEN_PREFIXES = ("JPOG/", "game/", "toolchain/", "build/", ".rea-tmp/")
 
 
 def git_files(staged):
