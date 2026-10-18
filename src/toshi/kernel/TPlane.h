@@ -12,6 +12,15 @@ class TVector4;
 class TPlane
 {
 public:
+	// Result of TSphere/TAABox::ComparePlane. The sign convention differs between the two (see
+	// there), as in the original.
+	enum PlaneComparison
+	{
+		PlaneComparison_Negative = -1,
+		PlaneComparison_Intersects = 0,
+		PlaneComparison_Positive = 1,
+	};
+
 	TPlane();
 	TPlane(float x, float y, float z, float d);
 	TPlane(const TVector3& normal, float d);

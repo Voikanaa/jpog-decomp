@@ -4,6 +4,7 @@ add_executable(jpog_tests
   support/FloatCompare.h
   support/OriginalModule.cpp
   support/OriginalModule.h
+  kernel/TBoundsTests.cpp
   kernel/TCStringPoolTests.cpp
   kernel/TContainerTests.cpp
   kernel/TDebugTests.cpp

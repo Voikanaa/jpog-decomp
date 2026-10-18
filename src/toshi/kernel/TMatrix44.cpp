@@ -782,4 +782,24 @@ void TSTDCALL TMatrix44::MatToQuat(TQuaternion& result, const TMatrix44& matrix)
 	}
 }
 
+// --- TMatrix44ID ----------------------------------------------------------------------------
+
+TMatrix44ID::TMatrix44ID()
+{
+}
+
+TMatrix44ID::TMatrix44ID(const TMatrix44ID& other) = default;
+
+TMatrix44ID& TMatrix44ID::operator=(const TMatrix44ID& other) = default;
+
+unsigned int TMatrix44ID::GetID()
+{
+	return m_uiID;
+}
+
+void TMatrix44ID::SetID(unsigned int id)
+{
+	m_uiID = id;
+}
+
 } // namespace Toshi
