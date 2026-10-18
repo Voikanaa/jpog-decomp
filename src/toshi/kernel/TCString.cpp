@@ -549,4 +549,34 @@ TCString TSTDCALL operator+(const char* string, const TCString& other)
 	return result;
 }
 
+bool TSTDCALL operator==(const char* string, const TCString& other)
+{
+	return other.Compare(string, -1) == 0;
+}
+
+bool TSTDCALL operator!=(const char* string, const TCString& other)
+{
+	return other.Compare(string, -1) != 0;
+}
+
+bool TSTDCALL operator<(const char* string, const TCString& other)
+{
+	return other.Compare(string, -1) < 0;
+}
+
+bool TSTDCALL operator<=(const char* string, const TCString& other)
+{
+	return other.Compare(string, -1) <= 0;
+}
+
+bool TSTDCALL operator>(const char* string, const TCString& other)
+{
+	return other.Compare(string, -1) > 0;
+}
+
+bool TSTDCALL operator>=(const char* string, const TCString& other)
+{
+	return other.Compare(string, -1) >= 0;
+}
+
 } // namespace Toshi

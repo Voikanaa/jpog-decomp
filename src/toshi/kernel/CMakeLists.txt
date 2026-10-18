@@ -9,6 +9,8 @@ add_library(toshi_kernel STATIC
   TCString.h
   TCStringPool.cpp
   TCStringPool.h
+  TDebug.cpp
+  TDebug.h
   TDLL.cpp
   TDLL.h
   TEvent.cpp

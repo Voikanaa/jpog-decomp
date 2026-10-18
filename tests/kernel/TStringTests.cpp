@@ -88,6 +88,22 @@ TEST_SUITE("TString")
 		CHECK(TSystem::HashString("ab") == static_cast<unsigned int>('a' * 5 + 'b'));
 		CHECK(TSystem::BCDToInteger(0x1234) == 1234);
 	}
+
+	TEST_CASE("free comparison operators are reversed")
+	{
+		const TCString b("b");
+		CHECK("b" == b);
+		CHECK("a" != b);
+		CHECK("a" > b); // b > "a"
+		CHECK("c" < b);
+		CHECK("b" <= b);
+		CHECK("b" >= b);
+		const U16 wa[] = {'a', 0};
+		const TWString wb("b");
+		CHECK(wa > wb);
+		CHECK(wa != wb);
+		CHECK_FALSE(wa == wb);
+	}
 }
 
 // ---------------------------------------------------------------------------------------------
@@ -401,6 +417,36 @@ TEST_SUITE("TString differential" * doctest::skip(KernelMissing()))
 			ctorNarrow(fromNarrow.storage, "Mixed Case 123");
 			CheckSame(fromNarrow, TWString("Mixed Case 123"), "TWString(const char*)");
 			dtor(fromNarrow.storage);
+		}
+	}
+
+	TEST_CASE("free comparison operators match the original")
+	{
+		using Op = bool(__stdcall*)(const char*, const TCString*);
+		using WideOp = bool(__stdcall*)(const U16*, const TWString*);
+		const char* codes[] = {"8", "9", "M", "N", "O", "P"};
+		const char* texts[] = {"", "a", "b", "ab", "B", "abc"};
+		const U16 wide[][4] = {{0}, {'a', 0}, {'b', 0}, {'a', 'b', 0}, {'B', 0}, {'a', 'b', 'c', 0}};
+		for (int op = 0; op < 6; ++op)
+		{
+			const auto original =
+			    Original<Op>((std::string("??") + codes[op] + "Toshi@@YG_NPBDABVTCString@0@@Z").c_str());
+			const auto originalWide =
+			    Original<WideOp>((std::string("??") + codes[op] + "Toshi@@YG_NPBGABVTWString@0@@Z").c_str());
+			for (int i = 0; i < 6; ++i)
+				for (int j = 0; j < 6; ++j)
+				{
+					INFO("op ", op, " ", texts[i], " vs ", texts[j]);
+					const TCString other(texts[j]);
+					const TWString otherWide(wide[j]);
+					const bool ours[] = {texts[i] == other, texts[i] != other,
+					                     texts[i]<other, texts[i] <= other, texts[i]> other, texts[i] >= other};
+					const bool oursWide[] = {wide[i] == otherWide, wide[i] != otherWide,
+					                         wide[i]<otherWide, wide[i] <= otherWide, wide[i]> otherWide,
+					                         wide[i] >= otherWide};
+					CHECK(original(texts[i], &other) == ours[op]);
+					CHECK(originalWide(wide[i], &otherWide) == oursWide[op]);
+				}
 		}
 	}
 }

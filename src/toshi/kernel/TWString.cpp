@@ -482,4 +482,34 @@ TWString TSTDCALL operator+(const unsigned short* string, const TWString& other)
 	return result;
 }
 
+bool TSTDCALL operator==(const unsigned short* string, const TWString& other)
+{
+	return other.Compare(string, -1) == 0;
+}
+
+bool TSTDCALL operator!=(const unsigned short* string, const TWString& other)
+{
+	return other.Compare(string, -1) != 0;
+}
+
+bool TSTDCALL operator<(const unsigned short* string, const TWString& other)
+{
+	return other.Compare(string, -1) < 0;
+}
+
+bool TSTDCALL operator<=(const unsigned short* string, const TWString& other)
+{
+	return other.Compare(string, -1) <= 0;
+}
+
+bool TSTDCALL operator>(const unsigned short* string, const TWString& other)
+{
+	return other.Compare(string, -1) > 0;
+}
+
+bool TSTDCALL operator>=(const unsigned short* string, const TWString& other)
+{
+	return other.Compare(string, -1) >= 0;
+}
+
 } // namespace Toshi
