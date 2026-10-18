@@ -1,70 +1,113 @@
 #include "game/AApplication.h"
 
+#include "game/ADummyTask.h"
+#include "game/ALocale.h"
+#include "game/ARootTask.h"
+#include "ppropertyparser/PProperties.h"
+#include "toshi/gui/TGUIWidgetAction.h"
 #include "toshi/kernel/TCString.h"
+#include "toshi/kernel/TCStringPool.h"
+#include "toshi/kernel/TFreeList.h"
 #include "toshi/kernel/TKernelInterface.h"
-#include "toshi/kernel/TObject.h"
+#include "toshi/kernel/TLocale.h"
+#include "toshi/kernel/TMemory.h"
+#include "toshi/kernel/TSystem.h"
+#include "toshi/kernel/TWStringPool.h"
+#include "toshi/renderd3d/TRenderD3DResources.h"
 
 using namespace Toshi;
 
 AApplication g_oTheApp;
 
+// SimJP.exe 0x4846C0. The original sizes the free lists through inline access to their static
+// members; the exported GetFreeList functions reach the same objects.
 bool AApplication::OnCreate(int argc, char** const argv)
 {
-	if (!CreateRenderInterface())
-		return false;
+	TSystem::CreateCStringPoolExplicit("data/strpool.dat", 0x400, 12000);
+	PProperties::GetFreeList().SetCapacity(5500);
+	PProperties::GetFreeList().SetGrowSize(250);
+	PProperties::PProperty::GetFreeList().SetCapacity(40000);
+	PProperties::PProperty::GetFreeList().SetGrowSize(2000);
+	TGUIWidgetAction::GetFreeList().SetCapacity(32);
+	TLocalisedString::GetFreeList().SetCapacity(5000);
+	TPooledCString::GetFreeList().SetCapacity(2000);
+	TPooledWString::GetFreeList().SetCapacity(4000);
+	TTextureResourceHAL::GetFreeList().SetCapacity(256);
+	TIndexBlockResource::GetFreeList().SetCapacity(200);
+	TVertexBlockResource::GetFreeList().SetCapacity(450);
 
+	TSystem::GetLocale()->LoadInfo(TCString("Data/GUI/Locales/Locales.txt"));
+	TMemory::DebugPrintHALMemInfo(nullptr);
+	ALocale::SetMeasurementSystem(ALocale::MeasurementSystem_Metric);
+
+	GetKernel()->LoadInterface(TCString("TGUIInterface"));
+	GetKernel()->LoadInterface(TCString("PGUICore"));
+	const_cast<TClass*>(TClass::Find("TGUIInterface", nullptr))->InitialiseStatic();
+
+	m_pRenderTask = CreateRootTask(const_cast<char*>("RenderTask"));
+	m_pUpdate3Task = CreateRootTask(const_cast<char*>("Update3"));
+	m_pUpdate2Task = CreateRootTask(const_cast<char*>("Update2"));
+	m_pUpdate1Task = CreateRootTask(const_cast<char*>("Update1"));
+	m_pInputTask = CreateRootTask(const_cast<char*>("InputTask"));
+
+	TScheduler* scheduler = GetKernel()->GetScheduler();
+	m_pRootTask = static_cast<ARootTask*>(scheduler->CreateTask(ARootTask::m_sClass, m_pUpdate2Task));
+	if (m_pRootTask != nullptr)
+	{
+		if (!m_pRootTask->Create())
+			return false;
+		m_pRootTask->Activate(true);
+	}
+	scheduler->Debug_PrintTaskTree();
 	return TApplication::OnCreate(argc, argv);
 }
 
-// Mirrors ARootTask::AllocateRenderInterface and the display part of
-// ARootTask::CreateRenderInterface, with the defaults the game uses before options are loaded
-// (640x480, 32-bit).
-bool AApplication::CreateRenderInterface()
+// Creates, activates and names one of the top-level task groups.
+ADummyTask* AApplication::CreateRootTask(char* name)
 {
-	GetKernel()->LoadInterface(TCString("TRenderD3DInterface"));
-
-	const TClass* renderClass = TClass::Find("TRenderD3DInterface", nullptr);
-	if (!renderClass)
-		return false;
-
-	m_pRenderInterface = static_cast<TRenderInterface*>(renderClass->CreateObject());
-	if (!m_pRenderInterface || !m_pRenderInterface->Create(GetKernel()))
-		return false;
-
-	TRenderInterface::DisplayParams params{};
-	params.uiWidth = 640;
-	params.uiHeight = 480;
-	params.uiColourDepth = 32;
-	params.eDepthStencilFormat = 0;
-	params.bWindowed = true;
-	if (m_pRenderInterface->CreateDisplay(&params))
-		return true;
-
-	// Like the game, fall back to 16-bit colour if 32-bit is unavailable.
-	params.uiColourDepth = 16;
-	return m_pRenderInterface->CreateDisplay(&params);
+	auto* task = static_cast<ADummyTask*>(GetKernel()->GetScheduler()->CreateTask(ADummyTask::m_sClass, nullptr));
+	task->Create();
+	task->Activate(true);
+	task->SetName(name);
+	return task;
 }
 
-bool AApplication::OnUpdate(float deltaTime)
-{
-	if (!m_pRenderInterface->Update(deltaTime))
-		return false;
-
-	m_pRenderInterface->BeginScene();
-	m_pRenderInterface->EndScene();
-	return TApplication::OnUpdate(deltaTime);
-}
-
-// The game releases its renderer reference only in ~ARootTask, when the kernel is torn down at
-// process exit, and never calls Destroy() or DestroyDisplay() itself. Deleting the renderer cannot
-// work (issue #20): its teardown frees every resource (DestroyAllResources) before DestroyDisplay
-// uses the display texture, and DestroyDisplay cannot run twice. So as the last holder we keep it
-// alive and leave the device and window to process exit. Fix this properly in our own
-// TRenderD3DInterface.
+// SimJP.exe 0x484DC0. The tasks are only marked dying; the scheduler deletes them with the kernel
+// when the application object goes away at process exit.
 bool AApplication::OnDestroy()
 {
-	if (m_pRenderInterface && m_pRenderInterface->GetRefCount() == 1)
-		m_pRenderInterface->IncRefCount(nullptr); // deliberately never released
-	m_pRenderInterface.Release();
-	return TApplication::OnDestroy();
+	m_pRootTask->DestroyTask();
+	m_pInputTask->DestroyTask();
+	m_pRenderTask->DestroyTask();
+	return true;
+}
+
+ARootTask* AApplication::GetRootTask() const
+{
+	return m_pRootTask;
+}
+
+ADummyTask* AApplication::GetInputRootTask()
+{
+	return m_pInputTask;
+}
+
+ADummyTask* AApplication::GetUpdate1RootTask()
+{
+	return m_pUpdate1Task;
+}
+
+ADummyTask* AApplication::GetUpdate2RootTask()
+{
+	return m_pUpdate2Task;
+}
+
+ADummyTask* AApplication::GetUpdate3RootTask()
+{
+	return m_pUpdate3Task;
+}
+
+ADummyTask* AApplication::GetRenderRootTask()
+{
+	return m_pRenderTask;
 }

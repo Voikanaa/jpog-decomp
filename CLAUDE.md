@@ -51,11 +51,12 @@ LGPL linked dynamically).
   (`binkw32`, `fmod`, `libmmd`), `Data/`, `Shaders/D3D/`, ISO. `game/` = working copy (gitignored).
 - `symbols/` per-module exports/imports CSV, `classes.csv`, `vtables.csv` (generated).
 - `docs/` `plan.md` (roadmap), `modules.md` (binary map), `progress.md` (coverage + log).
-- `src/` `common/` (`abi.h` TSTDCALL, `layout.h`); `toshi/kernel/` (lib `toshi_kernel`: every
-  TKernelInterface export except the superseded heap internals; jpog.exe still uses the
-  original DLL); global `operator new`/`delete` route to `tmalloc`/`tfree` (as the original);
-  `toshi/application/`, `toshi/render/` (declarations); `game/` (**jpog.exe**: WinMain,
-  `AApplication`, `CrashHandler`); `hook/` (deferred, `JPOG_HOOK=ON`).
+- `src/` `common/` (`abi.h` TSTDCALL, `TIMPORT_DATA` for data jpog.exe imports; `layout.h`);
+  `toshi/kernel/` (lib `toshi_kernel`: every TKernelInterface export except the superseded heap
+  internals); global `operator new`/`delete` route to `tmalloc`/`tfree` (as the original, also in
+  jpog.exe); declarations only: `toshi/application/`, `toshi/render/`, `toshi/renderd3d/`,
+  `toshi/gui/`, `ppropertyparser/`; `game/` (**jpog.exe**: WinMain, `AApplication` with the
+  original task tree, `ARootTask`/`ARenderer` skeletons, `CrashHandler`); `hook/` (deferred).
 - `tests/` doctest suite `jpog_tests` (run by ctest). `support/OriginalModule` loads the original
   DLLs from `JPOG_ORIGINAL_DIR` (default `<root>/JPOG`) for differential tests (x86 only, skipped
   without the game). `support/Differential.h`: `Same`, `Original<Fn>`, `KernelMissing`.
@@ -79,7 +80,7 @@ LGPL linked dynamically).
 - `tools/ghidra_export.py <dll>|--all`: headless decompilation to `analysis/decomp/<Module>.c`/`.tsv`.
   **Prefer grepping these over REA for bulk work**; `tools/decomp_show.py <Module> <regex>` prints
   functions. `tools/resolve_imports.py` writes `SimJP.resolved.c` (IAT calls named; use it for
-  game code). `tools/dump_vtables.py` → `symbols/vtables.csv` (**class declarations must follow
+  game code; `--slots ADDR...` names IAT slots seen in disassembly). `tools/dump_vtables.py` → `symbols/vtables.csv` (**class declarations must follow
   it**). Also `dump_exports.py`, `check_repo.py`, `msvc.py`, `setup_mcp.py`.
 - `tools/x87_expr.py <Module> <func|addr> [--args this,a] [--matrix] [--follow ADDR]`: symbolic
   x87 execution of an original function; prints each store as a fully parenthesised expression

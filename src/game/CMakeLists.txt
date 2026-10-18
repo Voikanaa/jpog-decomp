@@ -3,11 +3,25 @@
 add_executable(jpog WIN32
   AApplication.cpp
   AApplication.h
+  ADummyTask.cpp
+  ADummyTask.h
+  ALocale.cpp
+  ALocale.h
+  ARenderer.cpp
+  ARenderer.h
+  ARootTask.cpp
+  ARootTask.h
   CrashHandler.cpp
   CrashHandler.h
   main.cpp
+  Memory.cpp
 )
-target_link_libraries(jpog PRIVATE jpog_common original::TKernelInterface original::TApplication dbghelp)
+# Like SimJP.exe, jpog.exe links the engine modules it uses directly (our kernel DLL replaces the
+# original TKernelInterface.dll at run time) and imports their data explicitly.
+target_link_libraries(jpog PRIVATE jpog_common original::TKernelInterface original::TApplication
+                                   original::TRenderD3DInterface original::TGuiInterface original::PPropertyParser
+                                   dbghelp)
+target_compile_definitions(jpog PRIVATE JPOG_IMPORT_ENGINE_DATA)
 
 # The engine loads its modules, shaders and data relative to the working directory, so the game
 # runs from the local game copy (gitignored). Copy the exe there after each build when it exists.

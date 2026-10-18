@@ -44,7 +44,7 @@ public:
 	TScheduler* GetScheduler();
 	TKernelInterface* GetKernel();
 
-	static TClass m_sClass;
+	TIMPORT_DATA static TClass m_sClass;
 
 protected:
 	virtual bool OnCreate();
