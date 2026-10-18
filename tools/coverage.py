@@ -39,7 +39,7 @@ MODULES = [
     ("TRenderInterface", None),
     ("TRenderD3DInterface", None),
     ("TTerrainInterface", None),
-    ("PPropertyParser", None),
+    ("PPropertyParser", "src/ppropertyparser/ppropertyparser.lib"),
     ("TGuiInterface", None),
     ("PGUICore", None),
     ("PGUIRenderer", None),
@@ -96,6 +96,16 @@ def original_exports(module):
         return {row["name"] for row in csv.DictReader(f)}
 
 
+def other_exports(module):
+    """Exports of every other module (cached)."""
+    if module not in _OTHER_EXPORTS:
+        _OTHER_EXPORTS[module] = set().union(*(original_exports(m) for m, _ in MODULES if m != module))
+    return _OTHER_EXPORTS[module]
+
+
+_OTHER_EXPORTS = {}
+
+
 def original_functions(module):
     """Mangled names of exported functions (data symbols such as vtables are excluded)."""
     path = os.path.join(ROOT, "symbols", f"{module}.exports.csv")
@@ -130,8 +140,11 @@ def measure(build_dir):
             ours = defined_symbols(lib_path)
             implemented = len(counted & ours)
             exports = original_exports(module)
+            # C++ symbols of this module (Toshi:: for the kernel, all for the others; symbols
+            # another module exports, e.g. inline kernel code, are not this module's).
             unmatched += [f"{module}: {s}" for s in sorted(ours)
-                          if "@Toshi@@" in s and "?A0x" not in s and s not in exports
+                          if s.startswith("?") and (module != "TKernelInterface" or "@Toshi@@" in s)
+                          and "?A0x" not in s and s not in exports and s not in other_exports(module)
                           and not s.startswith(COMPILER_GENERATED)
                           and not any(c in s for c in HEADER_ONLY_CLASSES)
                           and "@jpog@@" not in s]  # our own helpers (namespace jpog)
