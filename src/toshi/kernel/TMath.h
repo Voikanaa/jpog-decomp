@@ -15,6 +15,8 @@ class TVector3;
 class TMath
 {
 public:
+	TMath& operator=(const TMath& other);
+
 	static constexpr float PI = 3.14159274f;
 	static constexpr float HALF_PI = 1.57079637f;
 	static constexpr float TWO_PI = 6.28318548f;

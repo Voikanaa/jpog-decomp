@@ -8,7 +8,7 @@
 
 <p>
 <a href="https://github.com/Voikanaa/jpog-decomp/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/Voikanaa/jpog-decomp/actions/workflows/ci.yml/badge.svg"></a>
-<a href="docs/progress.md"><!-- coverage-badge:begin --><img alt="Reimplemented" src="https://img.shields.io/badge/reimplemented-7.8%25-red?style=flat-square"><!-- coverage-badge:end --></a>
+<a href="docs/progress.md"><!-- coverage-badge:begin --><img alt="Reimplemented" src="https://img.shields.io/badge/reimplemented-7.9%25-red?style=flat-square"><!-- coverage-badge:end --></a>
 <a href="LICENSE"><img alt="License: GPL-3.0-or-later" src="https://img.shields.io/badge/license-GPL--3.0--or--later-blue?style=flat-square"></a>
 <img alt="Status: early development" src="https://img.shields.io/badge/status-early%20development-orange?style=flat-square">
 <br>
@@ -66,7 +66,7 @@ flowchart LR
 |---|---|:-:|
 | Foundations | Symbols, build system, CI, analysis tooling | ✅ |
 | **Launch 1** | Our `jpog.exe` opens the game window via the original engine DLLs | ✅ |
-| **M2** | Toshi kernel reimplemented (math complete: `TMath`, vectors, `TQuaternion`, `TMatrix44`, `TPlane`) | 🚧 |
+| **M2** | Toshi kernel replaced (all `TKernelInterface` exports reimplemented and verified; next: boot the game on it) | 🚧 |
 | **M3** | A mission loads through our renderer and resource code | ⏳ |
 | **M4** | Full game playable on our code | ⏳ |
 | **M5** | Native x64 build reaches the main menu | ⏳ |
@@ -74,7 +74,7 @@ flowchart LR
 | M1 | In-game A/B testing through a hook DLL (deferred: needs a runnable original) | ⏸️ |
 
 Per-module coverage is in [docs/progress.md](docs/progress.md); the test suite currently runs
-almost 800,000 bit-exact differential checks.
+almost 3 million differential checks, bit-exact for all float code.
 
 ## Getting started
 

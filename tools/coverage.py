@@ -5,7 +5,8 @@ Usage: python tools/coverage.py [--build build/x86-debug] [--check]
 On x86, our reimplemented functions have the same signatures and calling conventions as the
 originals, so MSVC mangles them to the same names. Coverage is therefore the set of original
 exported functions (symbols/<Module>.exports.csv) that are also defined in our static library
-for that module. Requires an up-to-date x86 build.
+for that module. Exports our design deliberately replaces (SUPERSEDED) are listed separately and
+left out of the percentage. Requires an up-to-date x86 build.
 
 It also reports "unmatched" symbols: Toshi:: symbols we define that match no original export.
 These usually mean a signature drifted from the original (e.g. `const float*` vs
@@ -55,6 +56,32 @@ MODULES = [
 DEFINED_SYMBOL = re.compile(r"\bSECT[0-9A-F]+\s.*External\s+\|\s+(\S+)")
 
 
+# Exports deliberately not reimplemented because our design replaces them, so they are left out
+# of the coverage denominator and listed in their own column. Patterns are substrings of the
+# mangled name.
+SUPERSEDED = {
+    # The original 32-bit packed heap: TMemory runs on the C runtime heap instead (docs/plan.md,
+    # "Memory"). No other module imports these.
+    "TKernelInterface": (
+        "MemBlockSlot@TMemory@Toshi@@", "?AllocMem@TMemory@", "?ConvertProcessToHole@TMemory@",
+        "?DumpMemInfoToFile@TMemory@", "?ExtendNodeSize@TMemory@", "?FreeMem@TMemory@",
+        "?GetGlobalFlags@TMemory@", "?GetMemNodeFromAddress@TMemory@", "?GetNodeSize@TMemory@",
+        "?GetProcessMemBlock@TMemory@", "?GetSlotIndex@TMemory@", "?IsAllocMB@TMemory@",
+        "?IsMemNodeMB@TMemory@", "?IsProcess@TMemory@", "?MapSizeToFreeList@TMemory@",
+        "?MemRecurse@TMemory@", "?MemRecurseR@TMemory@", "?SetHoleSize@TMemory@",
+        "?SetProcess@TMemory@",
+    ),
+}
+# Compiler-generated "default constructor closures" (emitted only where a class with default
+# arguments is default-constructed in an array); superseded in every module.
+SUPERSEDED_EVERYWHERE = ("??_F",)
+
+
+def superseded(module, name):
+    patterns = SUPERSEDED.get(module, ()) + SUPERSEDED_EVERYWHERE
+    return any(p in name for p in patterns)
+
+
 # Helpers the compiler emits on its own (scalar/vector deleting destructors); never our code.
 COMPILER_GENERATED = ("??_G", "??_E", "??_R")  # + C++ RTTI descriptors
 # Classes the original defines entirely inline (no exported members), so ours are header-only too.
@@ -81,30 +108,38 @@ def defined_symbols(lib_path):
     return {m.group(1) for m in map(DEFINED_SYMBOL.search, out.splitlines()) if m}
 
 
+def total_skipped(modules):
+    return sum(len({f for f in original_functions(m) if superseded(m, f)}) for m, _ in modules)
+
+
 def measure(build_dir):
     """Returns the markdown table, the overall percentage and the unmatched symbols."""
-    rows = ["| Module | Functions | Reimplemented | Coverage |", "|---|---:|---:|---:|"]
+    rows = ["| Module | Functions | Superseded | Reimplemented | Coverage |", "|---|---:|---:|---:|---:|"]
     total = done = 0
     unmatched = []
     for module, lib in MODULES:
         functions = original_functions(module)
+        skipped = {f for f in functions if superseded(module, f)}
+        counted = functions - skipped
         implemented = 0
         if lib:
             lib_path = os.path.join(build_dir, lib)
             if not os.path.exists(lib_path):
                 sys.exit(f"{lib_path} not found; build the x86-debug preset first")
             ours = defined_symbols(lib_path)
-            implemented = len(functions & ours)
+            implemented = len(counted & ours)
             exports = original_exports(module)
             unmatched += [f"{module}: {s}" for s in sorted(ours)
                           if "@Toshi@@" in s and "?A0x" not in s and s not in exports
                           and not s.startswith(COMPILER_GENERATED)
                           and not any(c in s for c in HEADER_ONLY_CLASSES)
                           and "@jpog@@" not in s]  # our own helpers (namespace jpog)
-        total += len(functions)
+        total += len(counted)
         done += implemented
-        rows.append(f"| {module} | {len(functions)} | {implemented} | {implemented / len(functions):.1%} |")
-    rows.append(f"| **Total** | **{total}** | **{done}** | **{done / total:.1%}** |")
+        rows.append(f"| {module} | {len(functions)} | {len(skipped)} | {implemented} | "
+                    f"{implemented / len(counted):.1%} |")
+    rows.append(f"| **Total** | **{total + total_skipped(MODULES)}** | **{total_skipped(MODULES)}** | **{done}** | "
+                f"**{done / total:.1%}** |")
     return "\n".join(rows), 100.0 * done / total, unmatched
 
 

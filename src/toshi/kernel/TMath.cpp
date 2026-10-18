@@ -218,6 +218,11 @@ float TSTDCALL TMath::Sqrt(float value)
 	return std::sqrt(value);
 }
 
+TMath& TMath::operator=(const TMath&)
+{
+	return *this;
+}
+
 float TSTDCALL TMath::RSqrt(float value)
 {
 	return 1.0f / std::sqrt(value);
