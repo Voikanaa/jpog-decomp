@@ -178,11 +178,16 @@ TEST_SUITE("TMath geometry differential" * doctest::skip(KernelMissing()))
 		    "?CalculateCapsuleNormal2D@TMath@Toshi@@SGXABVTVector2@2@00AAV32@@Z");
 		const auto insideCapsule =
 		    Original<bool(__stdcall*)(V2, V2, float, V2)>("?PointInsideCapsule2D@TMath@Toshi@@SG_NABVTVector2@2@0M0@Z");
+		const auto rayCapsule = Original<bool(__stdcall*)(V2, V2, float&, V2, V2, float)>(
+		    "?RayVsCapsule2D@TMath@Toshi@@SG_NABVTVector2@2@0AAM00M@Z");
+		const auto pushOut = Original<float(__stdcall*)(V2, V2, float, V2, V2, TVector2&, float&)>(
+		    "?PushPointOutOfCapsule2D@TMath@Toshi@@SGMABVTVector2@2@0M00AAV32@AAM@Z");
 		const auto axisLimit = Original<void(__stdcall*)(V3, V3, V3, float, TVector3&)>(
 		    "?GetAxisChangeLimit3D@TMath@Toshi@@SGXABVTVector3@2@00MAAV32@@Z");
 
 		GeometryInputs in;
 		GamePrecisionScope precision;
+		int capsuleHits = 0, pushes = 0; // make sure the hit paths are exercised
 		for (int i = 0; i < 20000; ++i)
 		{
 			INFO("iteration ", i);
@@ -234,6 +239,26 @@ TEST_SUITE("TMath geometry differential" * doctest::skip(KernelMissing()))
 			TMath::CalculateCapsuleNormal2D(a, b, c, normal[1]);
 			CHECK(Same(normal[0], normal[1]));
 			CHECK(insideCapsule(a, b, radius, c) == TMath::PointInsideCapsule2D(a, b, radius, c));
+			float limit[2];
+			limit[0] = limit[1] = std::abs(in.Value(30.0f));
+			const bool capsuleHit = rayCapsule(c, direction2, limit[0], a, b, radius);
+			capsuleHits += capsuleHit ? 1 : 0;
+			CHECK(capsuleHit == TMath::RayVsCapsule2D(c, direction2, limit[1], a, b, radius));
+			CHECK(Same(limit[0], limit[1]));
+			TVector2 side = b - a;
+			if (in.Gen().NextU32() % 4 != 0)
+			{
+				side.Normalise();
+				side.SetPerpendicular();
+			}
+			TVector2 point[2] = {c, c};
+			float pushed[2] = {5.0f, 5.0f};
+			const float pushResult = pushOut(a, b, radius, side, direction2, point[0], pushed[0]);
+			pushes += pushResult != 0.0f ? 1 : 0;
+			CHECK(
+			    Same(pushResult, TMath::PushPointOutOfCapsule2D(a, b, radius, side, direction2, point[1], pushed[1])));
+			CHECK(Same(pushed[0], pushed[1]));
+			CHECK(Same(point[0], point[1]));
 
 			TVector3 from = in.Vector3(1.0f), to = in.Vector3(1.0f);
 			from.Normalise();
@@ -247,6 +272,9 @@ TEST_SUITE("TMath geometry differential" * doctest::skip(KernelMissing()))
 			CHECK(Same(limited[0].y, limited[1].y));
 			CHECK(Same(limited[0].z, limited[1].z));
 		}
+		MESSAGE("capsule hits ", capsuleHits, ", pushes ", pushes);
+		CHECK(capsuleHits > 1000);
+		CHECK(pushes > 1000);
 	}
 }
 
