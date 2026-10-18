@@ -187,11 +187,12 @@ bool TSTDCALL TMath::IsFinite(float value)
 	return std::isfinite(value);
 }
 
+// NaN becomes `min`, as in the original.
 void TSTDCALL TMath::Clip(float& value, float min, float max)
 {
 	if (value > max)
 		value = max;
-	else if (value < min)
+	else if (!(value >= min))
 		value = min;
 }
 

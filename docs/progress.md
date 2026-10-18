@@ -8,7 +8,7 @@ an x86 build); do not edit it by hand.
 <!-- coverage:begin -->
 | Module | Functions | Reimplemented | Coverage |
 |---|---:|---:|---:|
-| TKernelInterface | 1627 | 1593 | 97.9% |
+| TKernelInterface | 1627 | 1601 | 98.4% |
 | TApplication | 16 | 0 | 0.0% |
 | TInputInterface | 93 | 0 | 0.0% |
 | TInputDXInterface | 96 | 0 | 0.0% |
@@ -27,7 +27,7 @@ an x86 build); do not edit it by hand.
 | TSysShaderD3D | 52 | 0 | 0.0% |
 | TTerrainShaderD3D | 288 | 0 | 0.0% |
 | SimJP | 13680 | 0 | 0.0% |
-| **Total** | **20452** | **1593** | **7.8%** |
+| **Total** | **20452** | **1601** | **7.8%** |
 <!-- coverage:end -->
 
 ## Verification
@@ -36,6 +36,11 @@ original export on the same inputs. Float results must match bit for bit unless 
 justifies a tolerance.
 
 ## Log
+- 2026-10-18: TMath geometry, batch 2: `RayVsCircle2D/3D`, `SphereIntersection` (+`Planar`,
+  `Dynamic`), `CalculateCapsuleNormal2D`, `PointInsideCapsule2D`, `GetAxisChangeLimit3D`
+  (fsin/fcos emulated in double). 0 ULP over 20000 random cases. Found and fixed a NaN bug in
+  the earlier `TMath::Clip(float&)`: the original turns NaN into the minimum (a zero-length
+  capsule relies on it); NaN inputs are now part of the Clip/DecrMinf/IncrMaxf tests.
 - 2026-10-18: TMath geometry, batch 1 (`TMathGeometry.cpp`): point/plane tests, closest point
   and distance to a line, the three `LineVsLine2D`, segment intersections, `RaySegmentVsLine2D`,
   `ClosestPointOnLineOverTime2D` and `GetCapsuleZone`. 0 ULP against the original over 20000

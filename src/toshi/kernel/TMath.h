@@ -132,6 +132,33 @@ public:
 	// updates `t` only for a hit in [0, t).
 	static bool TSTDCALL RaySegmentVsLine2D(const TVector2& origin, const TVector2& direction, const TVector2& point,
 	                                        const TVector2& lineDirection, float& t);
+	// Ray (origin, direction) against a circle/sphere: 2 with both hit parameters, 0 for a miss
+	// (outputs untouched). The parameters assume a unit direction.
+	static int TSTDCALL RayVsCircle2D(const TVector2& origin, const TVector2& direction, const TVector2& centre,
+	                                  float radius, float& t0, float& t1);
+	static int TSTDCALL RayVsCircle3D(const TVector3& origin, const TVector3& direction, const TVector3& centre,
+	                                  float radius, float& t0, float& t1);
+	// True when the spheres overlap. Optional outputs: `distanceSqMinusRadiusSq` (squared centre
+	// distance minus radiusB squared), `separation` (offset A to B scaled by penetration over the
+	// radius sum) and `penetration`. Planar ignores Y.
+	static bool TSTDCALL SphereIntersection(const TVector3& centreA, float radiusA, const TVector3& centreB,
+	                                        float radiusB, float* distanceSqMinusRadiusSq, TVector3* separation,
+	                                        float* penetration);
+	static bool TSTDCALL SphereIntersectionPlanar(const TVector3& centreA, float radiusA, const TVector3& centreB,
+	                                              float radiusB, float* distanceSqMinusRadiusSq, TVector3* separation,
+	                                              float* penetration);
+	// Time until two moving spheres touch: 0 when already touching, -1 when they never do.
+	static float TSTDCALL SphereIntersectionDynamic(const TVector3& centreA, float radiusA, const TVector3& velocityA,
+	                                                const TVector3& centreB, float radiusB, const TVector3& velocityB);
+	// Capsules are a segment from `start` to `end` plus a radius.
+	static void TSTDCALL CalculateCapsuleNormal2D(const TVector2& start, const TVector2& end, const TVector2& point,
+	                                              TVector2& normal);
+	static bool TSTDCALL PointInsideCapsule2D(const TVector2& start, const TVector2& end, float radius,
+	                                          const TVector2& point);
+	// `to`, or `from` rotated towards it by `angle` radians (clamped to [-pi, pi]) when the two
+	// unit vectors differ by more; `fallbackAxis` gives the rotation plane when they are parallel.
+	static void TSTDCALL GetAxisChangeLimit3D(const TVector3& from, const TVector3& to, const TVector3& fallbackAxis,
+	                                          float angle, TVector3& result);
 
 private:
 	static float TSTDCALL Bias(float bias, float t);
