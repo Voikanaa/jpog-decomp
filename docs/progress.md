@@ -36,6 +36,14 @@ original export on the same inputs. Float results must match bit for bit unless 
 justifies a tolerance.
 
 ## Log
+- 2026-10-18: Clean exit (#20). Root cause: an engine bug. `TRenderD3DInterface::Destroy` frees
+  every resource (`DestroySystemResources` -> `DestroyAllResources`) and only then calls
+  `DestroyDisplay`, which uses the display texture at `this+0xF0` (a use-after-free: null on the
+  original heap, `0xCDCDCDCD` on ours); calling `DestroyDisplay` first does not help either, since
+  it then releases its debug text twice. The game only drops its reference in `~ARootTask` at
+  process exit (`TApplication::Destroy` merely sets a flag). `AApplication` now holds the
+  renderer in the game's `TManagedPtr` and, as the last holder, keeps it alive until process
+  exit. `TRenderInterface` is declared as `TObject` + `TRefCounted` (count at offset 4).
 - 2026-10-18: **Our kernel runs the game.** x86 builds a drop-in `TKernelInterface.dll` (the
   original names and ordinals from `tools/make_module_def.py`; all 428 names the other modules
   import are exported) and installs it into `game/`. `jpog.exe` reaches Launch 1 on it, with the
