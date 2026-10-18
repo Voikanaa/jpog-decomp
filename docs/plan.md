@@ -48,7 +48,7 @@ Each milestone has a matching GitHub milestone, with an issue for every work ite
 | 0 | Foundations: symbols, build skeleton, repo/CI | Symbols dumped, skeleton builds in CI | **Done** |
 | 0b | A runnable original for in-game testing | The retail exe runs with the physical disc | Blocked: no physical disc available; not required for engine work |
 | 1 | Hook framework (x86) | **M1:** the game boots with the hook DLL and zero hooks | Deferred: needs a legitimately runnable original (0b) |
-| L1 | Launch: our exe on the engine DLLs | `jpog.exe` opens the game window | **Done**, also on our kernel (crash on exit open, #20) |
+| L1 | Launch: our exe on the engine DLLs | `jpog.exe` opens the game window | **Done**, also on our kernel, with a clean exit |
 | L2 | Launch: front end | Intro and main menu render from the original data | Not started |
 | 2 | TKernelInterface (memory → strings → math → RTTI → containers → files → events → scheduler → timers → lexer) | **M2:** the game boots with the kernel fully replaced | In progress: every export reimplemented and verified (heap internals superseded); our `TKernelInterface.dll` runs L1; done when L2 boots on it |
 | 3 | File formats (tmd/tml/tkl, fsm/inx/nwt, ttx/tto, gui, strpool, saves) | Parsers load every file of each type in `Data/` | Not started |
