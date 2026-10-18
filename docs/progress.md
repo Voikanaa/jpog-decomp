@@ -8,7 +8,7 @@ an x86 build); do not edit it by hand.
 <!-- coverage:begin -->
 | Module | Functions | Reimplemented | Coverage |
 |---|---:|---:|---:|
-| TKernelInterface | 1627 | 1522 | 93.5% |
+| TKernelInterface | 1627 | 1548 | 95.1% |
 | TApplication | 16 | 0 | 0.0% |
 | TInputInterface | 93 | 0 | 0.0% |
 | TInputDXInterface | 96 | 0 | 0.0% |
@@ -27,7 +27,7 @@ an x86 build); do not edit it by hand.
 | TSysShaderD3D | 52 | 0 | 0.0% |
 | TTerrainShaderD3D | 288 | 0 | 0.0% |
 | SimJP | 13680 | 0 | 0.0% |
-| **Total** | **20452** | **1522** | **7.4%** |
+| **Total** | **20452** | **1548** | **7.6%** |
 <!-- coverage:end -->
 
 ## Verification
@@ -36,6 +36,10 @@ original export on the same inputs. Float results must match bit for bit unless 
 justifies a tolerance.
 
 ## Log
+- 2026-10-18: `TDebug` (debug file, message level 2, `TDebug_Message`; call-stack functions,
+  `IsValidAddress` and indent/reset are stubs in the shipped build) and the free
+  `const char*`/`const unsigned short*` comparison operators, which compare reversed in the
+  original (`"a" < x` means `x < "a"`); all twelve match the original.
 - 2026-10-18: `TMinterm`/`TSumOfMinterms` (boolean product/sum terms, function strings with the
   English and math op tables) and a header-only `TArray<T>` (the original inlines it; grow size,
   count, capacity, data). Layouts, truth over random inputs and both strings match the original

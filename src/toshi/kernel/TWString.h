@@ -91,5 +91,13 @@ private:
 JPOG_ASSERT_SIZE(TWString, 8);
 
 TWString TSTDCALL operator+(const unsigned short* string, const TWString& other);
+// The original compares `other` against `string`, so the ordering operators are reversed
+// ("a" < x is x < "a").
+bool TSTDCALL operator==(const unsigned short* string, const TWString& other);
+bool TSTDCALL operator!=(const unsigned short* string, const TWString& other);
+bool TSTDCALL operator<(const unsigned short* string, const TWString& other);
+bool TSTDCALL operator<=(const unsigned short* string, const TWString& other);
+bool TSTDCALL operator>(const unsigned short* string, const TWString& other);
+bool TSTDCALL operator>=(const unsigned short* string, const TWString& other);
 
 } // namespace Toshi

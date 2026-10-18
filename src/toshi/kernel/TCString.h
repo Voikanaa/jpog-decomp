@@ -108,5 +108,13 @@ private:
 JPOG_ASSERT_SIZE(TCString, 8);
 
 TCString TSTDCALL operator+(const char* string, const TCString& other);
+// The original compares `other` against `string`, so the ordering operators are reversed
+// ("a" < x is x < "a").
+bool TSTDCALL operator==(const char* string, const TCString& other);
+bool TSTDCALL operator!=(const char* string, const TCString& other);
+bool TSTDCALL operator<(const char* string, const TCString& other);
+bool TSTDCALL operator<=(const char* string, const TCString& other);
+bool TSTDCALL operator>(const char* string, const TCString& other);
+bool TSTDCALL operator>=(const char* string, const TCString& other);
 
 } // namespace Toshi
