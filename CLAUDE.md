@@ -25,9 +25,6 @@ Reverse engineering of *Jurassic Park: Operation Genesis* (2003, Blue Tongue / V
    and **keep it under 150 lines**: condense or move detail to `docs/` instead of growing it.
 4. **Token budget:** at 90% of the context/token limit, stop and save: start no new work, commit
    and push verified work, note unfinished steps in the relevant issue, then end the task.
-5. **Clean room:** code derives only from our own analysis of the shipped binaries/data. Never read
-   or copy community decomp sources (OpenJPOG, OpenBarnyard/OpenToshi, jpog-blender, ...).
-   `references/` stays empty.
 
 ## License
 GPL-3.0-or-later (`LICENSE`), covering our code/tools/docs only: not the game, its assets or

@@ -1,8 +1,6 @@
 # Original game + working copy (copyrighted, never commit)
 /JPOG/
 /game/
-# Reserved; stays empty under the clean-room policy
-/references/
 # Tools and caches
 /toolchain/
 /.rea-tmp/

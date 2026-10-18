@@ -6,13 +6,12 @@ A living document: update it whenever a phase advances or a decision changes. Fi
 
 ## Goal
 A native Windows x86-64 build of *Jurassic Park: Operation Genesis* that runs the original
-`Data/`, built from a clean-room reimplementation of the game and its Toshi engine.
+`Data/`, built from a reimplementation of the game and its Toshi engine.
 
 ## Decisions
 | Topic | Decision |
 |---|---|
 | Strategy | Incremental reimplementation. Our x86 `jpog.exe` runs on the original engine DLLs (linked through generated import libraries), and modules are replaced one by one; every function is verified by differential tests against its original export. An x86 hook DLL for in-game A/B testing is deferred until a runnable original exists. At 100% coverage the same source builds as a standalone x64 exe. |
-| Sources | Clean room. Only our own analysis of the shipped binaries and data; no community decomp code. |
 | Names | Taken from the exported mangled symbols (`symbols/`, 923 classes); class declarations follow the recovered vtable order (`symbols/vtables.csv`). |
 | Memory | `TMemory` keeps its public API and observable behaviour (minimum size 8, alignment, zeroing, failure cases, `Realloc` returning null as in the original) on the C runtime heap instead of the original 32-bit packed heap, which cannot work on x64 and whose layout no other module uses. `TFreeList` is exact. In the hybrid x86 launch our kernel is not linked into `jpog.exe`, so the two heaps never mix; the switch happens when the whole kernel DLL is replaced. |
 | Renderer | Direct3D 11 replaces D3D8 and the five shader DLLs. |
