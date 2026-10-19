@@ -49,6 +49,13 @@ public:
 		return m_pData[m_iNumElements++];
 	}
 
+	// Drops the last element (nothing when empty).
+	void Pop()
+	{
+		if (m_iNumElements > 0)
+			--m_iNumElements;
+	}
+
 	// Shrinking keeps the element count, as in the original; size 0 empties the array.
 	void Resize(int size)
 	{
