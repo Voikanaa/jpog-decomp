@@ -10,6 +10,9 @@
 
 #include <cstddef>
 
+// PPropertyParser.dll reads a string's numeric id inline.
+class PPropertyWriter;
+
 namespace Toshi
 {
 
@@ -87,6 +90,8 @@ JPOG_ASSERT_SIZE(TLocalisedString, 0x14);
 // Handle to a localised string; a null handle reads as empty strings.
 class TLString
 {
+	friend class ::PPropertyWriter;
+
 public:
 	TLString();
 	TLString(TLocalisedString* string);

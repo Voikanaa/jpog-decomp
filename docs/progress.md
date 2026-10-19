@@ -15,7 +15,7 @@ an x86 build); do not edit it by hand.
 | TRenderInterface | 1048 | 1 | 0 | 0.0% |
 | TRenderD3DInterface | 310 | 0 | 0 | 0.0% |
 | TTerrainInterface | 203 | 0 | 0 | 0.0% |
-| PPropertyParser | 245 | 0 | 204 | 83.3% |
+| PPropertyParser | 245 | 0 | 245 | 100.0% |
 | TGuiInterface | 1157 | 1 | 0 | 0.0% |
 | PGUICore | 823 | 0 | 0 | 0.0% |
 | PGUIRenderer | 144 | 0 | 0 | 0.0% |
@@ -27,7 +27,7 @@ an x86 build); do not edit it by hand.
 | TSysShaderD3D | 52 | 0 | 0 | 0.0% |
 | TTerrainShaderD3D | 288 | 0 | 0 | 0.0% |
 | SimJP | 13680 | 12 | 0 | 0.0% |
-| **Total** | **20452** | **38** | **1808** | **8.9%** |
+| **Total** | **20452** | **38** | **1849** | **9.1%** |
 <!-- coverage:end -->
 
 ## Verification
@@ -36,6 +36,13 @@ original export on the same inputs. Float results must match bit for bit unless 
 justifies a tolerance.
 
 ## Log
+- 2026-10-19: PPropertyParser complete as a library (245/245 exports): `PPropertyWriter` (16 KB
+  character buffer, flushed before every printf-style write; definition blocks saved in priority
+  order) and `operator+(TCString, PPropertyName)`. Written property sets, scalars (strings,
+  quoting, repeated characters, unsigned in hex or `%du`, floats) and block order match the
+  original byte for byte. Quirks kept: integer sub-names are written quoted, characters from 0x80
+  make `Put(char, n)` fail after buffering them, unsigned values default to hex. Deviation: a null
+  `TLString` crashes the original writer; ours writes `$` and fails.
 - 2026-10-19: PPropertyParser: `PPropertyReader`, `PPropertyReaderParseError`, `PPropertyBlock`
   (definition blocks in a `TMap` by name; parse errors and the lexer's errors go through one
   emitter, via a new header-only `TListener`). 4,500 generated property sets (half of them

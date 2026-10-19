@@ -47,6 +47,8 @@ TEST_SUITE("PPropertyName")
 		CHECK(Text(split.GetName()) == "Screen");
 		CHECK(Text(split.GetSubName()) == "Width");
 		CHECK(Text(split.GetString()) == "Screen[Width]");
+		CHECK(std::string(Toshi::TCString("x ") + split) == "x Screen[Width]");
+		CHECK(std::string(Toshi::TCString("x ") + plain) == "x Width");
 
 		const PPropertyName open(Pooled("Screen[Width"));
 		CHECK(Text(open.GetName()) == "Screen");
@@ -104,6 +106,10 @@ TEST_SUITE("PPropertyName differential" * doctest::skip(PPropertyParserMissing()
 		const auto notEqual = OriginalPP<Method<bool, const RawName*>>("??9PPropertyName@@QBE_NABV0@@Z");
 		const auto less = OriginalPP<Method<bool, const RawName*>>("??MPPropertyName@@QBE_NABV0@@Z");
 		const auto greater = OriginalPP<Method<bool, const RawName*>>("??OPPropertyName@@QBE_NABV0@@Z");
+		const auto constructString = Original<Method<void, const char*>>("??0TCString@Toshi@@QAE@PBD@Z");
+		const auto destructString = Original<Method<void>>("??1TCString@Toshi@@QAE@XZ");
+		const auto append = OriginalPP<void*(__stdcall*)(void*, const void*, const RawName*)>(
+		    "??H@YG?AVTCString@Toshi@@ABV01@ABVPPropertyName@@@Z");
 
 		// The original names are leaked: their handles belong to the original kernel's pool.
 		RawName originals[std::size(kNames)];
@@ -119,6 +125,14 @@ TEST_SUITE("PPropertyName differential" * doctest::skip(PPropertyParserMissing()
 			P string = nullptr;
 			getString(&originals[i], &string);
 			CHECK(RawText(string) == Text(ours.GetString()));
+
+			alignas(void*) unsigned char prefix[8], appended[8];
+			constructString(prefix, "p:");
+			append(appended, prefix, &originals[i]);
+			CHECK(std::string(*reinterpret_cast<const char* const*>(appended)) ==
+			      static_cast<const char*>(Toshi::TCString("p:") + ours));
+			destructString(appended);
+			destructString(prefix);
 		}
 		for (size_t i = 0; i < std::size(kNames); ++i)
 			for (size_t j = 0; j < std::size(kNames); ++j)
