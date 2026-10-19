@@ -64,7 +64,7 @@ flowchart LR
 | Milestone | Description | |
 |---|---|:-:|
 | Foundations | Symbols, build system, CI, analysis tooling | ✅ |
-| **Launch 1** | Our `jpog.exe` opens the game window via the engine DLLs, on our own kernel | ✅ |
+| **Launch 1** | Our `jpog.exe` opens the game window via the engine DLLs, on our own kernel and `PPropertyParser.dll` | ✅ |
 | **M2** | Toshi kernel replaced: every `TKernelInterface` export reimplemented and verified; the game boots on our DLL up to Launch 1 | 🚧 |
 | **M3** | A mission loads through our renderer and resource code | ⏳ |
 | **M4** | Full game playable on our code | ⏳ |
@@ -98,11 +98,12 @@ python tools\setup_mcp.py                 :: optional: REA/Ghidra MCP config for
 
 ### Build
 ```bat
-tools\build.bat x86-debug    :: 32-bit jpog.exe + our TKernelInterface.dll + all tests
+tools\build.bat x86-debug    :: 32-bit jpog.exe + our engine DLLs + all tests
 tools\build.bat x64-debug    :: native x64 build + portable tests
 ```
-The x86 build copies `jpog.exe` and our `TKernelInterface.dll` into `game\`, where the game must
-be run (`tools\build.bat x86-debug "-DJPOG_REPLACE_KERNEL=OFF"` puts the original kernel back).
+The x86 build copies `jpog.exe` and our `TKernelInterface.dll` and `PPropertyParser.dll` into
+`game\`, where the game must be run (`tools\build.bat x86-debug "-DJPOG_REPLACE_KERNEL=OFF"` or
+`"-DJPOG_REPLACE_PPROPERTYPARSER=OFF"` puts the original DLL back).
 Differential tests find the original DLLs in `JPOG\` (override with the `JPOG_ORIGINAL_DIR`
 environment variable) and are skipped when the game is not present, as in CI.
 
