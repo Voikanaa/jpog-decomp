@@ -1,5 +1,6 @@
 #pragma once
 
+#include "common/abi.h"
 #include "common/layout.h"
 #include "toshi/kernel/TCStringPool.h"
 
@@ -39,3 +40,6 @@ private:
 };
 
 JPOG_ASSERT_SIZE(PPropertyName, 8);
+
+// `string` followed by "name" or "name[sub]".
+Toshi::TCString TSTDCALL operator+(const Toshi::TCString& string, const PPropertyName& name);

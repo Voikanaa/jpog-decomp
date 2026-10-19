@@ -8,7 +8,7 @@
 
 <p>
 <a href="https://github.com/Voikanaa/jpog-decomp/actions/workflows/ci.yml"><img alt="CI" src="https://img.shields.io/github/actions/workflow/status/Voikanaa/jpog-decomp/ci.yml?branch=main&label=CI&style=flat-square&logo=githubactions&logoColor=white"></a>
-<a href="docs/progress.md"><!-- coverage-badge:begin --><img alt="Reimplemented" src="https://img.shields.io/badge/reimplemented-8.9%25-red?style=flat-square"><!-- coverage-badge:end --></a>
+<a href="docs/progress.md"><!-- coverage-badge:begin --><img alt="Reimplemented" src="https://img.shields.io/badge/reimplemented-9.1%25-red?style=flat-square"><!-- coverage-badge:end --></a>
 <a href="LICENSE"><img alt="License: GPL-3.0-or-later" src="https://img.shields.io/badge/license-GPL--3.0--or--later-blue?style=flat-square"></a>
 <img alt="Status: early development" src="https://img.shields.io/badge/status-early%20development-orange?style=flat-square">
 <br>

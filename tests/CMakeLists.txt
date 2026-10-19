@@ -30,6 +30,7 @@ add_executable(jpog_tests
   ppropertyparser/PPropertyNameTests.cpp
   ppropertyparser/PPropertyReaderTests.cpp
   ppropertyparser/PPropertyValueTests.cpp
+  ppropertyparser/PPropertyWriterTests.cpp
 )
 target_include_directories(jpog_tests PRIVATE .)
 target_link_libraries(jpog_tests PRIVATE toshi_kernel ppropertyparser doctest)

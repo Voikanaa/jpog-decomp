@@ -10,5 +10,7 @@ add_library(ppropertyparser STATIC
   PPropertyReader.h
   PPropertyValue.cpp
   PPropertyValue.h
+  PPropertyWriter.cpp
+  PPropertyWriter.h
 )
 target_link_libraries(ppropertyparser PUBLIC toshi_kernel)

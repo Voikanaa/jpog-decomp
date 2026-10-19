@@ -109,3 +109,13 @@ void PPropertyName::Split(const TPCString& string)
 	if (close != -1)
 		m_oSubName = TSystem::GetCStringPool()->Get(text.Mid(open + 1, close - open - 1));
 }
+
+TCString TSTDCALL operator+(const TCString& string, const PPropertyName& name)
+{
+	TCString result(string);
+	result += name.GetName().GetCString().GetString(0);
+	const TCString& subName = name.GetSubName().GetCString();
+	if (!subName.IsEmpty())
+		result += TCString("[") + subName.GetString(0) + "]";
+	return result;
+}
