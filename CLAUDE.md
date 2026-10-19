@@ -54,7 +54,7 @@ LGPL linked dynamically).
 - `src/` `common/` (`abi.h` TSTDCALL, `TIMPORT_DATA` for data jpog.exe imports; `layout.h`);
   `toshi/kernel/` (lib `toshi_kernel`: every TKernelInterface export except the superseded heap
   internals); global `operator new`/`delete` route to `tmalloc`/`tfree` (as the original, also in
-  jpog.exe); `ppropertyparser/` (lib `ppropertyparser`, all exports; drop-in DLL pending, #25); declarations only:
+  jpog.exe); `ppropertyparser/` (lib `ppropertyparser` + drop-in DLL, complete); declarations only:
   `toshi/application/`, `toshi/render/`, `toshi/renderd3d/`, `toshi/gui/`; `game/` (**jpog.exe**: WinMain, `AApplication` with the
   original task tree, `ARootTask`/`ARenderer` skeletons, `CrashHandler`); `hook/` (deferred).
 - `tests/` doctest suite `jpog_tests` (run by ctest). `support/OriginalModule` loads the original
@@ -103,9 +103,11 @@ LGPL linked dynamically).
   that use the value directly (e.g. `TQuaternion::Slerp`) see a double.
 - Ghidra prints commutative operands in arbitrary order and reassociates x87 sums: take float
   evaluation order from `tools/x87_expr.py`.
-- Launch 1 reached, also on **our kernel**: x86 builds `TKernelInterface.dll` (exports from
-  `tools/make_module_def.py`) and installs it into `game/` (`JPOG_REPLACE_KERNEL`, default ON;
-  `"-DJPOG_REPLACE_KERNEL=OFF"` restores the original). The engine cannot delete its renderer
+- Launch 1 reached, also on **our DLLs**: x86 builds `TKernelInterface.dll` and
+  `PPropertyParser.dll` (exports from `tools/make_module_def.py`) and installs them into `game/`
+  (`JPOG_REPLACE_KERNEL` / `JPOG_REPLACE_PPROPERTYPARSER`, default ON; `=OFF` restores the
+  original). Drop-in DLLs other than the kernel import it: kernel data they use must be
+  `TIMPORT_DATA` (`JPOG_IMPORT_ENGINE_DATA`). The engine cannot delete its renderer
   (teardown frees the display texture before `DestroyDisplay` uses it, #20): `AApplication` keeps
   it alive until process exit; fix this in our own `TRenderD3DInterface`.
 - Static constants in the DLLs are BSS, initialised at runtime: verify them through the loaded

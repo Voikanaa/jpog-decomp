@@ -36,6 +36,11 @@ original export on the same inputs. Float results must match bit for bit unless 
 justifies a tolerance.
 
 ## Log
+- 2026-10-19: **Drop-in `PPropertyParser.dll`** (#25): all 266 exports with the original names
+  and ordinals (VC6's `2PB` names of the `TYPE_*` constants are aliased to our `2QB` symbols in
+  the `.def`). It imports the kernel from `TKernelInterface.dll` instead of linking a copy, so
+  kernel data it uses is dllimport (`TObject::m_sClass`). `jpog.exe` reaches Launch 1 on our
+  kernel and parser DLLs and exits cleanly.
 - 2026-10-19: PPropertyParser complete as a library (245/245 exports): `PPropertyWriter` (16 KB
   character buffer, flushed before every printf-style write; definition blocks saved in priority
   order) and `operator+(TCString, PPropertyName)`. Written property sets, scalars (strings,

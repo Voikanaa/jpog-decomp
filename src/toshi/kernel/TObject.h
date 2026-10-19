@@ -22,7 +22,7 @@ public:
 	bool IsA(const TClass& cls) const;
 	bool IsExactly(const TClass& cls) const;
 
-	static TClass m_sClass;
+	TIMPORT_DATA static TClass m_sClass;
 
 protected:
 	TObject();

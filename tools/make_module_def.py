@@ -16,6 +16,14 @@ from coverage import superseded
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
+def internal_name(name):
+    """"=<our name>" when our compiler mangles the symbol differently from VC6: a const pointer
+    static data member (`static const T* const x`) is `2PB...B` in VC6 and `2QB...B` today."""
+    if "@@2PB" in name and name.endswith("B"):
+        return "=" + name.replace("@@2PB", "@@2QB")
+    return ""
+
+
 def main():
     if len(sys.argv) != 3:
         sys.exit(__doc__)
@@ -29,7 +37,7 @@ def main():
         if not row["name"] or superseded(module, row["name"]):
             continue
         kind = "" if "(" in row["demangled"] else " DATA"
-        lines.append(f"    {row['name']} @{row['ordinal']}{kind}")
+        lines.append(f"    {row['name']}{internal_name(row['name'])} @{row['ordinal']}{kind}")
     text = "\n".join(lines) + "\n"
     # Rewrite only on change so the DLL does not relink needlessly.
     if not os.path.exists(output) or open(output, encoding="utf-8").read() != text:
