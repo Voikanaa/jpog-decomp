@@ -17,3 +17,11 @@
 #else
 #define TIMPORT_DATA
 #endif
+
+// Likewise for data jpog.exe imports from PPropertyParser.dll (JPOG_IMPORT_PPROPERTYPARSER_DATA);
+// in the parser itself (library or DLL) the same declarations define the data.
+#if defined(JPOG_IMPORT_PPROPERTYPARSER_DATA)
+#define PIMPORT_DATA __declspec(dllimport)
+#else
+#define PIMPORT_DATA
+#endif

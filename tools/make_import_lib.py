@@ -14,6 +14,7 @@ import subprocess
 import sys
 
 import msvc
+from coverage import our_name
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -34,7 +35,11 @@ def main():
                 continue  # exported by ordinal only
             # Variables (vtables, static members) must be imported as data.
             kind = "" if "(" in row["demangled"] else " DATA"
-            f.write(f"    {row['name']} @{row['ordinal']}{kind}\n")
+            # Where our compiler mangles a name differently from VC6, import it by ordinal under
+            # our name.
+            ours = our_name(row["name"])
+            noname = " NONAME" if ours != row["name"] else ""
+            f.write(f"    {ours} @{row['ordinal']}{noname}{kind}\n")
 
     lib_exe = shutil.which("lib.exe") or msvc.tool("lib.exe")
     result = subprocess.run([lib_exe, "/nologo", f"/def:{def_path}", "/machine:x86", f"/out:{output}"],

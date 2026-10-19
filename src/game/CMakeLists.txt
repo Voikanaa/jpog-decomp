@@ -7,6 +7,8 @@ add_executable(jpog WIN32
   ADummyTask.h
   ALocale.cpp
   ALocale.h
+  AOptions.cpp
+  AOptions.h
   ARenderer.cpp
   ARenderer.h
   ARootTask.cpp
@@ -21,7 +23,7 @@ add_executable(jpog WIN32
 target_link_libraries(jpog PRIVATE jpog_common original::TKernelInterface original::TApplication
                                    original::TRenderD3DInterface original::TGuiInterface original::PPropertyParser
                                    dbghelp)
-target_compile_definitions(jpog PRIVATE JPOG_IMPORT_ENGINE_DATA)
+target_compile_definitions(jpog PRIVATE JPOG_IMPORT_ENGINE_DATA JPOG_IMPORT_PPROPERTYPARSER_DATA)
 
 # The engine loads its modules, shaders and data relative to the working directory, so the game
 # runs from the local game copy (gitignored). Copy the exe there after each build when it exists.

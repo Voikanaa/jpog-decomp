@@ -36,6 +36,12 @@ original export on the same inputs. Float results must match bit for bit unless 
 justifies a tolerance.
 
 ## Log
+- 2026-10-19: Game: `AOptions` (SimJP.exe 0x474C40..0x4762F0), the options store on top of
+  PProperties: "/Options.ini" (empty directory + "Options"), groups, typed get/put with change
+  and load events, the "Locale" option choosing the locale. Unit-tested (round trip through a
+  native file). Deviation: reading an integer array option stops at the array's length. Our
+  `PPropertyValue::TYPE_*` constants are imported by ordinal under modern names (VC6 mangles
+  them `2PB`), and the drop-in `.def` aliases them the other way.
 - 2026-10-19: **Drop-in `PPropertyParser.dll`** (#25): all 266 exports with the original names
   and ordinals (VC6's `2PB` names of the `TYPE_*` constants are aliased to our `2QB` symbols in
   the `.def`). It imports the kernel from `TKernelInterface.dll` instead of linking a copy, so
