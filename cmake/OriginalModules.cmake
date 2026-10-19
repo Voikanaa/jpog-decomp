@@ -12,6 +12,7 @@ function(jpog_original_module module)
     OUTPUT "${lib}"
     COMMAND Python3::Interpreter "${CMAKE_SOURCE_DIR}/tools/make_import_lib.py" ${module} "${lib}"
     DEPENDS "${CMAKE_SOURCE_DIR}/symbols/${module}.exports.csv" "${CMAKE_SOURCE_DIR}/tools/make_import_lib.py"
+            "${CMAKE_SOURCE_DIR}/tools/coverage.py"
     COMMENT "Generating import library for original ${module}.dll"
     VERBATIM)
   add_custom_target(original_${module}_lib DEPENDS "${lib}")

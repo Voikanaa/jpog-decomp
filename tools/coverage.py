@@ -106,6 +106,13 @@ def original_name(symbol):
     return symbol.replace("@@2QB", "@@2PB")
 
 
+def our_name(name):
+    """Our compiler's mangling of an original (VC6) export name; the inverse of original_name."""
+    if "@@2PB" in name and name.endswith("B"):
+        return name.replace("@@2PB", "@@2QB")
+    return name
+
+
 def other_exports(module):
     """Exports of every other module (cached)."""
     if module not in _OTHER_EXPORTS:

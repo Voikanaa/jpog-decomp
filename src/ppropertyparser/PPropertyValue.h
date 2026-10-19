@@ -1,5 +1,6 @@
 #pragma once
 
+#include "common/abi.h"
 #include "common/layout.h"
 #include "toshi/kernel/TArray.h"
 #include "toshi/kernel/TCStringPool.h"
@@ -111,17 +112,17 @@ public:
 	// The type's class name, "TNULL" for undefined.
 	static const char* TSTDCALL ToString(const Toshi::TClass* type);
 
-	static const Toshi::TClass* const TYPE_UNDEF;
-	static const Toshi::TClass* const TYPE_INT;
-	static const Toshi::TClass* const TYPE_UINT32;
-	static const Toshi::TClass* const TYPE_FLOAT;
-	static const Toshi::TClass* const TYPE_BOOL;
-	static const Toshi::TClass* const TYPE_TPCSTRING;
-	static const Toshi::TClass* const TYPE_TPWSTRING;
-	static const Toshi::TClass* const TYPE_TLSTRING;
-	static const Toshi::TClass* const TYPE_PROPS;
-	static const Toshi::TClass* const TYPE_PROPNAME;
-	static const Toshi::TClass* const TYPE_ARRAY;
+	PIMPORT_DATA static const Toshi::TClass* const TYPE_UNDEF;
+	PIMPORT_DATA static const Toshi::TClass* const TYPE_INT;
+	PIMPORT_DATA static const Toshi::TClass* const TYPE_UINT32;
+	PIMPORT_DATA static const Toshi::TClass* const TYPE_FLOAT;
+	PIMPORT_DATA static const Toshi::TClass* const TYPE_BOOL;
+	PIMPORT_DATA static const Toshi::TClass* const TYPE_TPCSTRING;
+	PIMPORT_DATA static const Toshi::TClass* const TYPE_TPWSTRING;
+	PIMPORT_DATA static const Toshi::TClass* const TYPE_TLSTRING;
+	PIMPORT_DATA static const Toshi::TClass* const TYPE_PROPS;
+	PIMPORT_DATA static const Toshi::TClass* const TYPE_PROPNAME;
+	PIMPORT_DATA static const Toshi::TClass* const TYPE_ARRAY;
 
 protected:
 	// Copies `other`'s type and value.
