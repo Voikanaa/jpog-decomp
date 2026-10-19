@@ -110,5 +110,8 @@ LGPL linked dynamically).
   `TIMPORT_DATA` (`JPOG_IMPORT_ENGINE_DATA`). The engine cannot delete its renderer
   (teardown frees the display texture before `DestroyDisplay` uses it, #20): `AApplication` keeps
   it alive until process exit; fix this in our own `TRenderD3DInterface`.
+- SimJP.exe: many calls go through one pointer Ghidra cannot resolve (`DAT_00d8cec0`) and its
+  locals are often merged; infer those calls from context and read the assembly (REA
+  `procedure_assembly`, jump tables from the file) for anything that matters.
 - Static constants in the DLLs are BSS, initialised at runtime: verify them through the loaded
   module, not the file.
