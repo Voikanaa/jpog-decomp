@@ -67,6 +67,23 @@ public:
 	void Throw(Event* event) { TGenericEmitter::Throw(event); }
 };
 
+// Typed listener; the original defines it inline. The callback receives the receiver, the
+// emitter's owner and the event, called through the generic signature as in the original.
+template <class Receiver, class Owner, class Event> class TListener : public TGenericListener
+{
+public:
+	using TypedCallback = bool(TSTDCALL*)(Receiver* receiver, Owner* owner, Event* event);
+
+	TListener() = default;
+	~TListener() = default;
+
+	void Connect(TEmitter<Owner, Event>* emitter, Receiver* receiver, TypedCallback callback, int priority)
+	{
+		TGenericListener::Connect(emitter, receiver, reinterpret_cast<Callback>(callback), priority);
+	}
+	void Disconnect() { TGenericListener::Disconnect(); }
+};
+
 // Event type without data.
 class TNullEvent
 {

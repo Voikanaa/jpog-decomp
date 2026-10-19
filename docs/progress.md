@@ -15,7 +15,7 @@ an x86 build); do not edit it by hand.
 | TRenderInterface | 1048 | 1 | 0 | 0.0% |
 | TRenderD3DInterface | 310 | 0 | 0 | 0.0% |
 | TTerrainInterface | 203 | 0 | 0 | 0.0% |
-| PPropertyParser | 245 | 0 | 160 | 65.3% |
+| PPropertyParser | 245 | 0 | 204 | 83.3% |
 | TGuiInterface | 1157 | 1 | 0 | 0.0% |
 | PGUICore | 823 | 0 | 0 | 0.0% |
 | PGUIRenderer | 144 | 0 | 0 | 0.0% |
@@ -27,7 +27,7 @@ an x86 build); do not edit it by hand.
 | TSysShaderD3D | 52 | 0 | 0 | 0.0% |
 | TTerrainShaderD3D | 288 | 0 | 0 | 0.0% |
 | SimJP | 13680 | 12 | 0 | 0.0% |
-| **Total** | **20452** | **38** | **1764** | **8.6%** |
+| **Total** | **20452** | **38** | **1808** | **8.9%** |
 <!-- coverage:end -->
 
 ## Verification
@@ -36,6 +36,14 @@ original export on the same inputs. Float results must match bit for bit unless 
 justifies a tolerance.
 
 ## Log
+- 2026-10-19: PPropertyParser: `PPropertyReader`, `PPropertyReaderParseError`, `PPropertyBlock`
+  (definition blocks in a `TMap` by name; parse errors and the lexer's errors go through one
+  emitter, via a new header-only `TListener`). 4,500 generated property sets (half of them
+  failing) and 500 block files match the original value for value and event for event. Quirks
+  kept: only an assignment returns to the outer set after `a.b` / `a;` / a nested set, warnings
+  without a token are dropped, `SkipBlock` carries its brace depth across statements, the
+  `Open(name, file)` overload is vtable slot 3. One deviation: dotting into a property that is
+  not a set (`a = 1; a.b = 2;`) crashes the original; ours reports an error and stops.
 - 2026-10-18: PPropertyParser: `PPropertyValue` (type tags are nine unattached TClasses plus
   `PProperties::m_sClass`), `PPropertyValueArray` (ref count + `TArray`), `PProperties` and
   `PProperty` (free-list allocated, `TQList` in file order). Numeric conversions match the

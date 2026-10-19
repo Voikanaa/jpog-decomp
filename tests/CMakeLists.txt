@@ -28,6 +28,7 @@ add_executable(jpog_tests
   kernel/TTimeTests.cpp
   kernel/TVectorTests.cpp
   ppropertyparser/PPropertyNameTests.cpp
+  ppropertyparser/PPropertyReaderTests.cpp
   ppropertyparser/PPropertyValueTests.cpp
 )
 target_include_directories(jpog_tests PRIVATE .)

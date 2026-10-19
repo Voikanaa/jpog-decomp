@@ -86,7 +86,7 @@ def superseded(module, name):
 # Helpers the compiler emits on its own (scalar/vector deleting destructors); never our code.
 COMPILER_GENERATED = ("??_G", "??_E", "??_R")  # + C++ RTTI descriptors
 # Classes the original defines entirely inline (no exported members), so ours are header-only too.
-HEADER_ONLY_CLASSES = ("?$TArray@", "?$TQList@", "?$TManagedPtr@", "?$TDList@", "?$TEmitter@", "?$TMap@", "?$TNodeTree@", "?$TComparator@", "Comparator@TPCString@")
+HEADER_ONLY_CLASSES = ("?$TArray@", "?$TQList@", "?$TManagedPtr@", "?$TDList@", "?$TEmitter@", "?$TListener@", "?$TMap@", "?$TNodeTree@", "?$TComparator@", "Comparator@TPCString@")
 
 
 def original_exports(module):
