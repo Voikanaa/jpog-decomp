@@ -36,6 +36,20 @@ original export on the same inputs. Float results must match bit for bit unless 
 justifies a tolerance.
 
 ## Log
+- 2026-10-19: Game: options drive the display (#21). `AOptionLogic` (SimJP.exe 0x473710..0x474A60):
+  4:3 hardware modes from 640x480 enumerated from the renderer's adapters, the graphics settings
+  in statics applied to the renderer's colour correction and the terrain/grass/skin shaders
+  (created on first use, as the original), cases taken from the assembly (Ghidra mixes up the
+  shader locals). `ARootTask` now owns `AOptions`, and `OnCreate` enumerates modes, loads,
+  deserialises and serialises the options, opens the display in the options' mode (defaults
+  640x480x32 fullscreen; device search over depth/stencil formats, 16-bit fallback) and saves
+  `Options.ini`. Quirks kept: getting `Windowed` falls through and returns the brightness;
+  `ScreenBrightess` is read, `ScreenBrightness` written; screen sizes are saved as unsigned
+  (`0x00000280u`). New declarations: `TNodeList`, `TRenderAdapter` (modes, devices),
+  `TResource`/`TShader` and the terrain, grass and skin shader interfaces, `TRenderInterface`
+  slots 12-31 and its resource functions, `TRenderD3DInterface` slots 32-45. Verified by
+  launching: `Options.ini` is written with the shader and gamma values, and an edited mode
+  (800x600) is used. Deviation: the mode array is bounded (64).
 - 2026-10-19: Game: `AOptions` (SimJP.exe 0x474C40..0x4762F0), the options store on top of
   PProperties: "/Options.ini" (empty directory + "Options"), groups, typed get/put with change
   and load events, the "Locale" option choosing the locale. Unit-tested (round trip through a
