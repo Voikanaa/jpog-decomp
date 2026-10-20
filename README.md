@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="docs/jpog_logo.png" alt="Jurassic Park: Operation Genesis" width="420">
+<img src="docs/jpog_decomp.png" alt="Jurassic Park: Operation Genesis" width="600">
 
 # jpog-decomp
 
