@@ -2,8 +2,6 @@
 
 <img src="docs/jpog_decomp.png" alt="Jurassic Park: Operation Genesis" width="600">
 
-# jpog-decomp
-
 **A reimplementation of *Jurassic Park: Operation Genesis* (2003) as a native Windows x64 game**
 
 <p>
