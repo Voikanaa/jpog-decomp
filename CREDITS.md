@@ -16,8 +16,7 @@ combined with our GPL-3.0-or-later. Third-party libraries that we vendor are cre
 ## Original game
 
 - **Blue Tongue Entertainment** developed *Jurassic Park: Operation Genesis* and the Toshi
-  engine. Universal Interactive / Vivendi Universal Games published it in 2003. The Toshi engine
-  now belongs to **THQ Nordic**.
+  engine. Universal Interactive / Vivendi Universal Games published it in 2003.
 
 ## Decompilation and engine research
 
@@ -51,7 +50,7 @@ combined with our GPL-3.0-or-later. Third-party libraries that we vendor are cre
 - [Jurassic-Pedia](https://www.jurassic-pedia.com/jurassic-park-operation-genesis-film-canon-mod-2-0/):
   Film Canon mod notes on `.tml` skin editing.
 - zoli456: [Widescreen & FOV fix](https://community.pcgamingwiki.com/files/file/3976-jurassic-park-operation-genesis-widescreen-fix/).
-  BudgieGames: RTX Remix path-tracing mod (2026).
+  BudgieGames: [RTX Remix path-tracing mod](https://www.dsogaming.com/?p=197000) (2026).
 - Mod hubs: [ModDB](https://www.moddb.com/games/jurassic-park-operation-genesis),
   [Nexus Mods](https://www.nexusmods.com/jurassicparkopgen), [JPOG Wiki](https://jpog.fandom.com).
 
