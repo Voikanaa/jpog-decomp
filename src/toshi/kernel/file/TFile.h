@@ -6,6 +6,8 @@
 #include "toshi/kernel/strings/TCString.h"
 #include "toshi/kernel/thread/TMutex.h"
 
+#include <cstdarg>
+
 namespace Toshi
 {
 
@@ -32,16 +34,16 @@ public:
 	virtual int Tell() = 0;
 	virtual int GetSize() = 0;
 	// 0 unless the file system knows the date.
-	virtual unsigned __int64 GetDate();
+	virtual unsigned long long GetDate();
 	virtual int GetCChar() = 0;
 	virtual int GetWChar() = 0;
 	virtual int PutCChar(char character) = 0;
 	virtual int PutWChar(unsigned short character) = 0;
-	virtual int VCPrintf(const char* format, char* args) = 0;
-	virtual int VWPrintf(const unsigned short* format, char* args) = 0;
+	virtual int VCPrintf(const char* format, va_list args) = 0;
+	virtual int VWPrintf(const unsigned short* format, va_list args) = 0;
 
-	int __cdecl CPrintf(const char* format, ...);
-	int __cdecl WPrintf(const unsigned short* format, ...);
+	int CPrintf(const char* format, ...);
+	int WPrintf(const unsigned short* format, ...);
 	TFileSystem* GetFileSystem() const;
 	// Returns the file to its file system.
 	void Destroy();

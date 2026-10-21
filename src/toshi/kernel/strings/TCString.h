@@ -3,6 +3,7 @@
 #include "common/abi.h"
 #include "common/layout.h"
 
+#include <cstdarg>
 #include <cstdint>
 
 namespace Toshi
@@ -40,8 +41,8 @@ public:
 	TCString& Concat(const TWString& other, int count);
 	TCString& Concat(const char* string, int count);
 	// Formats into a 1024-character buffer.
-	TCString& __cdecl Format(const char* format, ...);
-	TCString& VFormat(const char* format, char* args);
+	TCString& Format(const char* format, ...);
+	TCString& VFormat(const char* format, va_list args);
 	void Truncate(int length);
 	// Characters [start, start + count), clamped.
 	TCString Mid(int start, int count) const;

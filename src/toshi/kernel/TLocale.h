@@ -185,9 +185,9 @@ public:
 	TLString GetVolatile(const TWString& text);
 	TLString GetVolatile(int value);
 	// The named or numbered string formatted with the arguments, as a temporary string.
-	TLString __cdecl Format(const TPCString& name, ...);
-	TLString __cdecl Format(const char* name, ...);
-	TLString __cdecl Format(int id, ...);
+	TLString Format(const TPCString& name, ...);
+	TLString Format(const char* name, ...);
+	TLString Format(int id, ...);
 	// Sets the text of the named or numbered string, creating it if needed.
 	TLocalisedString* Insert(const TPCString& name, const TPWString& text);
 	TLocalisedString* Insert(const char* name, const TPWString& text);

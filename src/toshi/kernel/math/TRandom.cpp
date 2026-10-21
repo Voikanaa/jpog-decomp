@@ -137,13 +137,13 @@ int TRandom::GetInt()
 
 int TRandom::GetInt(int range)
 {
-	return static_cast<int>((static_cast<unsigned __int64>(static_cast<unsigned int>(range)) * RandRaw()) >> 32);
+	return static_cast<int>((static_cast<unsigned long long>(static_cast<unsigned int>(range)) * RandRaw()) >> 32);
 }
 
 int TRandom::GetInt(int min, int max)
 {
 	const auto span = static_cast<unsigned int>(max - min);
-	return min + static_cast<int>((static_cast<unsigned __int64>(span) * RandRaw()) >> 32);
+	return min + static_cast<int>((static_cast<unsigned long long>(span) * RandRaw()) >> 32);
 }
 
 // The scale factors are powers of two, so float arithmetic matches the original's x87 code.

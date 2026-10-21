@@ -2,6 +2,7 @@
 
 #include "common/abi.h"
 #include "common/layout.h"
+#include "platform/Thread.h"
 #include "toshi/kernel/containers/TGenericDList.h"
 
 namespace Toshi
@@ -82,8 +83,8 @@ public:
 private:
 	static TThreadManager* s_pThreadManager;
 
-	// A CRITICAL_SECTION (kept opaque so the header needs no windows.h).
-	alignas(void*) unsigned char m_aLock[sizeof(void*) == 4 ? 24 : 40];
+	// A CRITICAL_SECTION on Windows (kept opaque so the header needs no windows.h).
+	alignas(void*) unsigned char m_aLock[jpog::platform::kLockStorageSize];
 	TDList<TThread> m_oThreads;
 };
 

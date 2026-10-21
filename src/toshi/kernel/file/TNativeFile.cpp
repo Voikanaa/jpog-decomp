@@ -1,15 +1,15 @@
 #include "toshi/kernel/file/TNativeFile.h"
 
+#include "platform/CRuntime.h"
+#include "platform/System.h"
 #include "toshi/kernel/memory/TMemory.h"
 
-#include <windows.h>
 #include <cstdio>
-#include <cwchar>
-
-#undef CreateFile
 
 namespace Toshi
 {
+
+using namespace jpog::platform;
 
 namespace
 {
@@ -17,9 +17,9 @@ namespace
 constexpr int kSectorSize = 0x800;
 constexpr int kSectorMask = ~(kSectorSize - 1);
 
-int SetPointer(void* file, int offset, DWORD method)
+int SetPointer(void* file, int offset, FileOrigin origin)
 {
-	return static_cast<int>(SetFilePointer(file, offset, nullptr, method));
+	return FileSeek(file, offset, origin);
 }
 
 } // namespace
@@ -27,7 +27,7 @@ int SetPointer(void* file, int offset, DWORD method)
 // --- TNativeFile ---------------------------------------------------------------------------
 
 TNativeFile::TNativeFile(TNativeFileSystem* fileSystem)
-    : TFile(fileSystem), m_hFile(INVALID_HANDLE_VALUE), m_iPosition(-1), m_iFilePointer(-1), m_iBufferStart(-1),
+    : TFile(fileSystem), m_hFile(FileInvalid()), m_iPosition(-1), m_iFilePointer(-1), m_iBufferStart(-1),
       m_iBufferSize(0), m_pReadBuffer(nullptr), m_pWriteBuffer(nullptr), m_iWriteBufferUsed(0), m_bWriteBuffered(true)
 {
 }
@@ -67,22 +67,18 @@ TNativeFileSystem* TNativeFile::GetFileSystem() const
 bool TNativeFile::Open(const TCString& path, unsigned int flags)
 {
 	const TCString internalPath = GetFileSystem()->MakeInternalPath(path);
-	DWORD access = 0;
+	unsigned int access = 0;
 	if (flags & 1)
-		access = GENERIC_READ;
+		access = static_cast<unsigned int>(FileAccess::Read);
 	if (flags & 2)
-		access |= GENERIC_WRITE;
+		access |= static_cast<unsigned int>(FileAccess::Write);
 	if (flags & 4)
-		access = GENERIC_READ | GENERIC_WRITE;
-	DWORD disposition = OPEN_EXISTING;
-	if (flags & 8)
-	{
-		disposition = CREATE_ALWAYS;
-		if (access == 0)
-			access = GENERIC_WRITE;
-	}
-	void* handle = CreateFileA(internalPath.GetString(0), access, 0, nullptr, disposition, 0, nullptr);
-	if (handle == INVALID_HANDLE_VALUE)
+		access = static_cast<unsigned int>(FileAccess::ReadWrite);
+	const bool create = (flags & 8) != 0;
+	if (create && access == 0)
+		access = static_cast<unsigned int>(FileAccess::Write);
+	void* handle = FileOpen(internalPath.GetString(0), static_cast<FileAccess>(access), create);
+	if (handle == FileInvalid())
 		return false;
 	m_hFile = handle;
 	m_iPosition = 0;
@@ -98,8 +94,8 @@ bool TNativeFile::Open(const TCString& path, unsigned int flags)
 void TNativeFile::Close()
 {
 	FlushWriteBuffer();
-	CloseHandle(m_hFile);
-	m_hFile = INVALID_HANDLE_VALUE;
+	FileClose(m_hFile);
+	m_hFile = FileInvalid();
 	m_iPosition = -1;
 	m_iFilePointer = -1;
 	m_iBufferStart = -1;
@@ -120,14 +116,14 @@ int TNativeFile::ReadUnbuffered(void* buffer, int size)
 {
 	if (m_iPosition != m_iFilePointer)
 	{
-		m_iFilePointer = SetPointer(m_hFile, m_iPosition, FILE_BEGIN);
+		m_iFilePointer = SetPointer(m_hFile, m_iPosition, FileOrigin::Begin);
 		m_iPosition = m_iFilePointer;
 	}
-	DWORD read = 0;
-	ReadFile(m_hFile, buffer, static_cast<DWORD>(size), &read, nullptr);
-	m_iFilePointer += static_cast<int>(read);
+	int read = 0;
+	FileRead(m_hFile, buffer, size, read);
+	m_iFilePointer += read;
 	m_iPosition = m_iFilePointer;
-	return static_cast<int>(read);
+	return read;
 }
 
 bool TNativeFile::LoadBuffer(int sectorStart)
@@ -136,15 +132,15 @@ bool TNativeFile::LoadBuffer(int sectorStart)
 		return true;
 	if (sectorStart != m_iFilePointer)
 	{
-		m_iFilePointer = SetPointer(m_hFile, sectorStart, FILE_BEGIN);
+		m_iFilePointer = SetPointer(m_hFile, sectorStart, FileOrigin::Begin);
 		if (m_iFilePointer != sectorStart)
 			return false;
 	}
-	DWORD read = 0;
-	if (!ReadFile(m_hFile, m_pReadBuffer, kSectorSize, &read, nullptr))
+	int read = 0;
+	if (!FileRead(m_hFile, m_pReadBuffer, kSectorSize, read))
 		return false;
-	m_iFilePointer += static_cast<int>(read);
-	m_iBufferSize = static_cast<int>(read);
+	m_iFilePointer += read;
+	m_iBufferSize = read;
 	m_iBufferStart = sectorStart;
 	return true;
 }
@@ -153,15 +149,15 @@ int TNativeFile::FlushWriteBuffer()
 {
 	if (m_iPosition != m_iFilePointer)
 	{
-		m_iFilePointer = SetPointer(m_hFile, m_iPosition, FILE_BEGIN);
+		m_iFilePointer = SetPointer(m_hFile, m_iPosition, FileOrigin::Begin);
 		m_iPosition = m_iFilePointer;
 	}
-	DWORD written = 0;
-	WriteFile(m_hFile, m_pWriteBuffer, static_cast<DWORD>(m_iWriteBufferUsed), &written, nullptr);
-	m_iFilePointer += static_cast<int>(written);
+	int written = 0;
+	FileWrite(m_hFile, m_pWriteBuffer, m_iWriteBufferUsed, written);
+	m_iFilePointer += written;
 	m_iPosition = m_iFilePointer;
 	m_iWriteBufferUsed = 0;
-	return static_cast<int>(written);
+	return written;
 }
 
 // Bytes before the sector of the end position are copied from the buffer (if it holds the
@@ -226,7 +222,7 @@ int TNativeFile::Write(const void* buffer, int size)
 {
 	if (m_iPosition != m_iFilePointer)
 	{
-		m_iFilePointer = SetPointer(m_hFile, m_iPosition, FILE_BEGIN);
+		m_iFilePointer = SetPointer(m_hFile, m_iPosition, FileOrigin::Begin);
 		m_iPosition = m_iFilePointer;
 	}
 	if (m_bWriteBuffered)
@@ -235,11 +231,11 @@ int TNativeFile::Write(const void* buffer, int size)
 			FlushWriteBuffer();
 		if (size >= kSectorSize)
 		{
-			DWORD written = 0;
-			WriteFile(m_hFile, buffer, static_cast<DWORD>(size), &written, nullptr);
-			m_iFilePointer += static_cast<int>(written);
+			int written = 0;
+			FileWrite(m_hFile, buffer, size, written);
+			m_iFilePointer += written;
 			m_iPosition = m_iFilePointer;
-			return static_cast<int>(written);
+			return written;
 		}
 		const auto* in = static_cast<const unsigned char*>(buffer);
 		for (int i = 0; i < size; ++i)
@@ -247,12 +243,12 @@ int TNativeFile::Write(const void* buffer, int size)
 		m_iWriteBufferUsed += size;
 		return size;
 	}
-	DWORD written = 0;
-	if (!WriteFile(m_hFile, buffer, static_cast<DWORD>(size), &written, nullptr))
+	int written = 0;
+	if (!FileWrite(m_hFile, buffer, size, written))
 		return 0;
-	m_iFilePointer += static_cast<int>(written);
+	m_iFilePointer += written;
 	m_iPosition = m_iFilePointer;
-	return static_cast<int>(written);
+	return written;
 }
 
 bool TNativeFile::Seek(int offset, TSEEK origin)
@@ -266,8 +262,8 @@ bool TNativeFile::Seek(int offset, TSEEK origin)
 		m_iPosition = m_iPosition + offset < 0 ? 0 : m_iPosition + offset;
 		break;
 	case TSEEK_END:
-		m_iFilePointer = SetPointer(m_hFile, offset, FILE_END);
-		if (m_iFilePointer == -1 && GetLastError() != NO_ERROR)
+		m_iFilePointer = SetPointer(m_hFile, offset, FileOrigin::End);
+		if (m_iFilePointer == -1 && FileSeekFailed())
 			return false;
 		m_iPosition = m_iFilePointer;
 		break;
@@ -282,17 +278,15 @@ int TNativeFile::Tell()
 
 int TNativeFile::GetSize()
 {
-	m_iFilePointer = SetPointer(m_hFile, 0, FILE_END);
+	m_iFilePointer = SetPointer(m_hFile, 0, FileOrigin::End);
 	return m_iFilePointer;
 }
 
-unsigned __int64 TNativeFile::GetDate()
+unsigned long long TNativeFile::GetDate()
 {
-	if (m_hFile == INVALID_HANDLE_VALUE)
+	if (m_hFile == FileInvalid())
 		return 0;
-	FILETIME created, accessed, written;
-	GetFileTime(m_hFile, &created, &accessed, &written);
-	return (static_cast<unsigned __int64>(written.dwHighDateTime) << 32) | written.dwLowDateTime;
+	return FileWriteTime(m_hFile);
 }
 
 int TNativeFile::GetCChar()
@@ -345,19 +339,19 @@ int TNativeFile::PutWChar(unsigned short character)
 	return character;
 }
 
-int TNativeFile::VCPrintf(const char* format, char* args)
+int TNativeFile::VCPrintf(const char* format, va_list args)
 {
 	char buffer[0x200];
-	int length = _vsnprintf(buffer, sizeof(buffer), format, args);
+	int length = jpog::platform::VSNPrintf(buffer, sizeof(buffer), format, args);
 	if (length < 0)
 		length = 0x200;
 	return Write(buffer, length);
 }
 
-int TNativeFile::VWPrintf(const unsigned short* format, char* args)
+int TNativeFile::VWPrintf(const unsigned short* format, va_list args)
 {
-	wchar_t buffer[0x200];
-	int length = _vsnwprintf(buffer, 0x200, reinterpret_cast<const wchar_t*>(format), args);
+	unsigned short buffer[0x200];
+	int length = jpog::platform::VSNWPrintf(buffer, 0x200, format, args);
 	if (length < 0)
 		length = 0x200;
 	const int written = Write(buffer, length * 2);
@@ -366,7 +360,7 @@ int TNativeFile::VWPrintf(const unsigned short* format, char* args)
 
 // --- TNativeFileSystem ---------------------------------------------------------------------
 
-TNativeFileSystem::TNativeFileSystem(const char* name) : TFileSystem(name), m_hFind(INVALID_HANDLE_VALUE)
+TNativeFileSystem::TNativeFileSystem(const char* name) : TFileSystem(name), m_hFind(FileInvalid())
 {
 	TFileManager::GetFileManager()->MountFileSystem(this);
 }
@@ -407,7 +401,7 @@ void TNativeFileSystem::DestroyFile(TFile* file)
 
 bool TNativeFileSystem::RemoveFile(const TCString& path)
 {
-	return DeleteFileA(path.GetString(0)) != FALSE;
+	return FileDelete(path.GetString(0));
 }
 
 TCString TNativeFileSystem::MakeInternalPath(const TCString& path) const
@@ -427,12 +421,11 @@ namespace
 {
 
 // Applies the file/directory filter to a find result.
-bool Accept(const WIN32_FIND_DATAA& data, unsigned int flags, TCString& name)
+bool Accept(const FindEntry& entry, unsigned int flags, TCString& name)
 {
-	const bool directory = (data.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY) != 0;
-	if (directory ? (flags & 2) == 0 : (flags & 1) == 0)
+	if (entry.directory ? (flags & 2) == 0 : (flags & 1) == 0)
 		return false;
-	name = data.cFileName;
+	name = entry.name;
 	return true;
 }
 
@@ -444,27 +437,27 @@ bool TNativeFileSystem::GetFirstFile(const TCString& path, TCString& name, unsig
 	const TCString last = path.Mid(path.Length() - 1, 1);
 	const bool endsWithSeparator = last.Compare("\\", -1) == 0 || last.Compare("/", -1) == 0;
 	pattern.Concat(endsWithSeparator ? "*" : "\\*", -1);
-	WIN32_FIND_DATAA data;
-	m_hFind = FindFirstFileA(pattern.GetString(0), &data);
-	return m_hFind != INVALID_HANDLE_VALUE && Accept(data, flags, name);
+	FindEntry entry;
+	m_hFind = FindFirst(pattern.GetString(0), entry);
+	return m_hFind != FileInvalid() && Accept(entry, flags, name);
 }
 
 bool TNativeFileSystem::GetNextFile(TCString& name, unsigned int flags)
 {
-	if (m_hFind == INVALID_HANDLE_VALUE)
+	if (m_hFind == FileInvalid())
 		return false;
-	WIN32_FIND_DATAA data;
-	if (!FindNextFileA(m_hFind, &data))
+	FindEntry entry;
+	if (!FindNext(m_hFind, entry))
 	{
-		m_hFind = INVALID_HANDLE_VALUE;
+		m_hFind = FileInvalid();
 		return false;
 	}
-	return Accept(data, flags, name);
+	return Accept(entry, flags, name);
 }
 
 bool TNativeFileSystem::MakeDirectory(const TCString& path)
 {
-	return CreateDirectoryA(path.GetString(0), nullptr) != FALSE;
+	return DirectoryMake(path.GetString(0));
 }
 
 } // namespace Toshi

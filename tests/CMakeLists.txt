@@ -29,6 +29,7 @@ add_executable(jpog_tests
   kernel/strings/TStringTests.cpp
   kernel/time/TTimerTests.cpp
   kernel/time/TTimeTests.cpp
+  platform/PlatformTests.cpp
   ppropertyparser/PPropertyNameTests.cpp
   ppropertyparser/PPropertyReaderTests.cpp
   ppropertyparser/PPropertyValueTests.cpp

@@ -2,6 +2,8 @@
 
 #include "toshi/kernel/file/TFile.h"
 
+#include <cstdarg>
+
 namespace Toshi
 {
 
@@ -26,14 +28,14 @@ public:
 	// Moves the OS file pointer to the end (the logical position is kept).
 	int GetSize() override;
 	// Last write time as a FILETIME value.
-	unsigned __int64 GetDate() override;
+	unsigned long long GetDate() override;
 	int GetCChar() override;
 	int GetWChar() override;
 	int PutCChar(char character) override;
 	int PutWChar(unsigned short character) override;
 	// Formats into a 512-character buffer and writes it.
-	int VCPrintf(const char* format, char* args) override;
-	int VWPrintf(const unsigned short* format, char* args) override;
+	int VCPrintf(const char* format, va_list args) override;
+	int VWPrintf(const unsigned short* format, va_list args) override;
 
 	TNativeFileSystem* GetFileSystem() const;
 

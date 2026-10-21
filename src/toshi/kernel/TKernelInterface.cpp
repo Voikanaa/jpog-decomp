@@ -1,5 +1,6 @@
 #include "toshi/kernel/TKernelInterface.h"
 
+#include "platform/System.h"
 #include "toshi/kernel/TDLL.h"
 #include "toshi/kernel/TScheduler.h"
 #include "toshi/kernel/TUser.h"
@@ -7,9 +8,6 @@
 #include "toshi/kernel/file/TMemFile.h"
 #include "toshi/kernel/file/TNativeFile.h"
 #include "toshi/kernel/file/TNullFile.h"
-
-#include <windows.h>
-#include <direct.h>
 
 namespace Toshi
 {
@@ -64,7 +62,7 @@ TKernelInterface::TKernelInterface(int, char** const, bool verbose)
 
 	TCString workingDirectory;
 	char buffer[0x104];
-	if (_getcwd(buffer, sizeof(buffer)) != nullptr)
+	if (jpog::platform::WorkingDirectory(buffer, sizeof(buffer)))
 		workingDirectory = buffer;
 	auto* manager = new TFileManager();
 	(new TNativeFileSystem("local"))->SetPrefix(workingDirectory);
@@ -183,32 +181,7 @@ void TKernelInterface::UnloadInterface(const TCString& name)
 
 void TKernelInterface::DumpInfo()
 {
-	// The extended structure first, then the basic one (the buffer must hold the larger).
-	OSVERSIONINFOEXA version = {};
-	version.dwOSVersionInfoSize = sizeof(OSVERSIONINFOEXA);
-	auto* basic = reinterpret_cast<OSVERSIONINFOA*>(&version);
-#pragma warning(suppress : 4996) // GetVersionExA is what the original calls
-	if (!GetVersionExA(basic))
-	{
-		version.dwOSVersionInfoSize = sizeof(OSVERSIONINFOA);
-#pragma warning(suppress : 4996)
-		GetVersionExA(basic);
-	}
-	char windowsDirectory[0x104];
-	GetWindowsDirectoryA(windowsDirectory, sizeof(windowsDirectory));
-	char systemDirectory[0x104];
-	GetSystemDirectoryA(systemDirectory, sizeof(systemDirectory));
-	char computerName[0x10];
-	DWORD computerNameLength = sizeof(computerName);
-	GetComputerNameA(computerName, &computerNameLength);
-	char userName[0x100];
-	DWORD userNameLength = sizeof(userName);
-	GetUserNameA(userName, &userNameLength);
-	SYSTEM_INFO systemInfo;
-	GetSystemInfo(&systemInfo);
-	MEMORYSTATUS memory = {};
-	memory.dwLength = sizeof(memory);
-	GlobalMemoryStatus(&memory);
+	jpog::platform::QuerySystemInfo();
 }
 
 THPTimer* TKernelInterface::GetSystemTimer()

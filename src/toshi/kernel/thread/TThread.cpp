@@ -1,25 +1,13 @@
 #include "toshi/kernel/thread/TThread.h"
 
-#include <windows.h>
-#include <process.h>
-
-#undef Yield
+#include "platform/Thread.h"
 
 namespace Toshi
 {
 
+using namespace jpog::platform;
+
 TThreadManager* TThreadManager::s_pThreadManager = nullptr;
-
-namespace
-{
-
-CRITICAL_SECTION* Lock(unsigned char* storage)
-{
-	static_assert(sizeof(CRITICAL_SECTION) == (sizeof(void*) == 4 ? 24 : 40));
-	return reinterpret_cast<CRITICAL_SECTION*>(storage);
-}
-
-} // namespace
 
 // --- TThread -------------------------------------------------------------------------------
 
@@ -43,13 +31,11 @@ bool TThread::Create(STACKSIZE stackSize, PRIORITY priority, unsigned int flags)
 {
 	m_hThread = nullptr;
 	m_uiThreadID = 0xFFFFFFFF;
-	// _beginthreadex returns the handle as an integer.
-	m_hThread = reinterpret_cast<void*>(
-	    _beginthreadex(nullptr, static_cast<unsigned int>(stackSize), Entry, this, CREATE_SUSPENDED, &m_uiThreadID));
-	SetThreadPriority(m_hThread, priority);
+	m_hThread = ThreadCreate(static_cast<unsigned int>(stackSize), Entry, this, true, m_uiThreadID);
+	ThreadSetPriority(m_hThread, priority);
 	TThreadManager::GetThreadManager()->InsertThread(this);
 	if ((flags & 1) == 0)
-		ResumeThread(m_hThread);
+		ThreadResume(m_hThread);
 	return true;
 }
 
@@ -57,9 +43,8 @@ bool TThread::Destroy()
 {
 	if (m_hThread == nullptr)
 		return false;
-#pragma warning(suppress : 6258) // TerminateThread is what the original does
-	TerminateThread(m_hThread, 0);
-	CloseHandle(m_hThread);
+	ThreadTerminate(m_hThread);
+	ThreadClose(m_hThread);
 	TThreadManager::GetThreadManager()->RemoveThread(this);
 	m_hThread = nullptr;
 	m_uiThreadID = 0xFFFFFFFF;
@@ -68,12 +53,12 @@ bool TThread::Destroy()
 
 bool TThread::Suspend()
 {
-	return SuspendThread(m_hThread) != 0xFFFFFFFF;
+	return ThreadSuspend(m_hThread);
 }
 
 bool TThread::Resume()
 {
-	return ResumeThread(m_hThread) != 0xFFFFFFFF;
+	return ThreadResume(m_hThread);
 }
 
 bool TThread::GetPriority(PRIORITY& priority)
@@ -88,35 +73,35 @@ bool TThread::SetPriority(PRIORITY priority)
 
 bool TSTDCALL TThread::GetPriority(void* handle, PRIORITY& priority)
 {
-	priority = static_cast<PRIORITY>(GetThreadPriority(handle));
+	priority = static_cast<PRIORITY>(ThreadGetPriority(handle));
 	return true;
 }
 
 bool TSTDCALL TThread::SetPriority(void* handle, PRIORITY priority)
 {
-	SetThreadPriority(handle, priority);
+	ThreadSetPriority(handle, priority);
 	return true;
 }
 
 bool TSTDCALL TThread::GetCurrentPriority(PRIORITY& priority)
 {
-	return GetPriority(GetCurrentThread(), priority);
+	return GetPriority(ThreadCurrent(), priority);
 }
 
 bool TSTDCALL TThread::SetCurrentPriority(PRIORITY priority)
 {
-	return SetPriority(GetCurrentThread(), priority);
+	return SetPriority(ThreadCurrent(), priority);
 }
 
 bool TSTDCALL TThread::Yield()
 {
-	Sleep(0);
+	ThreadYield();
 	return true;
 }
 
 void TSTDCALL TThread::Exit()
 {
-	Exit(TThreadManager::GetThreadManager()->FindThread(GetCurrentThreadId()));
+	Exit(TThreadManager::GetThreadManager()->FindThread(ThreadCurrentId()));
 }
 
 unsigned int TSTDCALL TThread::Entry(void* thread)
@@ -128,11 +113,11 @@ unsigned int TSTDCALL TThread::Entry(void* thread)
 
 void TSTDCALL TThread::Exit(TThread* thread)
 {
-	CloseHandle(thread->m_hThread);
+	ThreadClose(thread->m_hThread);
 	TThreadManager::GetThreadManager()->RemoveThread(thread);
 	thread->m_hThread = nullptr;
 	thread->m_uiThreadID = 0xFFFFFFFF;
-	_endthreadex(0);
+	ThreadExit();
 }
 
 // --- TThreadManager ------------------------------------------------------------------------
@@ -158,32 +143,32 @@ TThreadManager& TThreadManager::operator=(const TThreadManager& other)
 void TThreadManager::Create()
 {
 	s_pThreadManager = this;
-	InitializeCriticalSection(Lock(m_aLock));
+	LockInit(m_aLock);
 }
 
 void TThreadManager::Destroy()
 {
 	s_pThreadManager = nullptr;
-	DeleteCriticalSection(Lock(m_aLock));
+	LockDestroy(m_aLock);
 }
 
 void TThreadManager::InsertThread(TThread* thread)
 {
-	EnterCriticalSection(Lock(m_aLock));
+	LockEnter(m_aLock);
 	m_oThreads.InsertHead(thread);
-	LeaveCriticalSection(Lock(m_aLock));
+	LockLeave(m_aLock);
 }
 
 void TThreadManager::RemoveThread(TThread* thread)
 {
-	EnterCriticalSection(Lock(m_aLock));
+	LockEnter(m_aLock);
 	TDList<TThread>::Remove(thread);
-	LeaveCriticalSection(Lock(m_aLock));
+	LockLeave(m_aLock);
 }
 
 TThread* TThreadManager::FindThread(unsigned int threadID)
 {
-	EnterCriticalSection(Lock(m_aLock));
+	LockEnter(m_aLock);
 	TThread* found = nullptr;
 	for (TThread* thread = m_oThreads.Head(); !m_oThreads.IsEnd(thread); thread = TDList<TThread>::NextOf(thread))
 		if (thread->m_uiThreadID == threadID)
@@ -191,7 +176,7 @@ TThread* TThreadManager::FindThread(unsigned int threadID)
 			found = thread;
 			break;
 		}
-	LeaveCriticalSection(Lock(m_aLock));
+	LockLeave(m_aLock);
 	return found;
 }
 
@@ -210,30 +195,30 @@ TSemaphore& TSemaphore::operator=(const TSemaphore& other)
 
 bool TSemaphore::Create(int initialCount, int maxCount)
 {
-	m_hSemaphore = CreateSemaphoreA(nullptr, initialCount, maxCount, nullptr);
+	m_hSemaphore = SemaphoreCreate(initialCount, maxCount);
 	return true;
 }
 
 bool TSemaphore::Destroy()
 {
-	const BOOL closed = CloseHandle(m_hSemaphore);
+	const bool closed = SemaphoreDestroy(m_hSemaphore);
 	m_hSemaphore = nullptr;
-	return closed != FALSE;
+	return closed;
 }
 
 bool TSemaphore::Signal()
 {
-	return ReleaseSemaphore(m_hSemaphore, 1, nullptr) != FALSE;
+	return SemaphoreSignal(m_hSemaphore);
 }
 
 bool TSemaphore::Wait()
 {
-	return WaitForSingleObject(m_hSemaphore, INFINITE) == WAIT_OBJECT_0;
+	return SemaphoreWait(m_hSemaphore, false);
 }
 
 bool TSemaphore::Poll()
 {
-	return WaitForSingleObject(m_hSemaphore, 0) == WAIT_OBJECT_0;
+	return SemaphoreWait(m_hSemaphore, true);
 }
 
 } // namespace Toshi

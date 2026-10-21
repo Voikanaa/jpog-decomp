@@ -78,7 +78,7 @@ void TSTDCALL TDebug::ResetOutput()
 {
 }
 
-void __cdecl TDebug_Message(TDebug::MSGLEVEL level, const char* format, ...)
+void TDebug_Message(TDebug::MSGLEVEL level, const char* format, ...)
 {
 	if (level < TDebug::s_iMessageLevel)
 		return;

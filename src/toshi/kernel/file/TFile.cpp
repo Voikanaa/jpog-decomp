@@ -28,12 +28,12 @@ TFile& TFile::operator=(const TFile& other)
 	return *this;
 }
 
-unsigned __int64 TFile::GetDate()
+unsigned long long TFile::GetDate()
 {
 	return 0;
 }
 
-int __cdecl TFile::CPrintf(const char* format, ...)
+int TFile::CPrintf(const char* format, ...)
 {
 	va_list args;
 	va_start(args, format);
@@ -42,7 +42,7 @@ int __cdecl TFile::CPrintf(const char* format, ...)
 	return result;
 }
 
-int __cdecl TFile::WPrintf(const unsigned short* format, ...)
+int TFile::WPrintf(const unsigned short* format, ...)
 {
 	va_list args;
 	va_start(args, format);

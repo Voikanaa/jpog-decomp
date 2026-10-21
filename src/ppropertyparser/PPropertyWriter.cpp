@@ -343,7 +343,7 @@ int PPropertyWriter::BufferCChar(const char& character)
 	return result;
 }
 
-int __cdecl PPropertyWriter::BufferCPrintf(const char* format, ...)
+int PPropertyWriter::BufferCPrintf(const char* format, ...)
 {
 	FlushWriteBuffer();
 	va_list args;

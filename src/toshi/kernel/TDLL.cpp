@@ -1,6 +1,6 @@
 #include "toshi/kernel/TDLL.h"
 
-#include <windows.h>
+#include "platform/System.h"
 
 namespace Toshi
 {
@@ -31,7 +31,7 @@ bool TDLL::Load(const TCString& fileName)
 {
 	Unload();
 	m_oFileName = static_cast<const char*>(fileName);
-	m_hModule = LoadLibraryA(fileName.GetString(0));
+	m_hModule = jpog::platform::LibraryLoad(fileName.GetString(0));
 	return m_hModule != nullptr;
 }
 
@@ -39,7 +39,7 @@ void TDLL::Unload()
 {
 	if (m_hModule == nullptr)
 		return;
-	FreeLibrary(static_cast<HMODULE>(m_hModule));
+	jpog::platform::LibraryFree(m_hModule);
 	m_oFileName = "";
 	m_hModule = nullptr;
 }
@@ -56,8 +56,7 @@ const TCString& TDLL::GetFilename()
 
 void* TDLL::GetAddress(const TCString& name)
 {
-	return reinterpret_cast<void*>(
-	    GetProcAddress(static_cast<HMODULE>(const_cast<void*>(GetDLL())), static_cast<const char*>(name)));
+	return jpog::platform::LibrarySymbol(const_cast<void*>(GetDLL()), static_cast<const char*>(name));
 }
 
 // --- TKernelInterfaceDLL -------------------------------------------------------------------

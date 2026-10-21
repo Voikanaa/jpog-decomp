@@ -1,9 +1,9 @@
 #include "toshi/kernel/TProfiler.h"
 
+#include "platform/System.h"
 #include "toshi/kernel/file/TFile.h"
 #include "toshi/kernel/strings/TCString.h"
 
-#include <windows.h>
 #include <cstdio>
 #include <cstring>
 
@@ -19,8 +19,8 @@ int TProfiler::m_sOutFileMaxSize = 20000;
 bool TProfiler::m_sStartImmediately = false;
 TProfiler_Sorting TProfiler::m_sSortBy = TProfiler_SortNone;
 TProfiler* TProfiler::m_sChainHead = nullptr;
-__int64 TProfiler::m_sFrequency = 0;
-__int64 TProfiler::m_sProgramTime = 0;
+long long TProfiler::m_sFrequency = 0;
+long long TProfiler::m_sProgramTime = 0;
 bool TProfiler::m_sProfilerStopped = true;
 TProfilerStarter* TProfilerStarter::m_sLastActive = nullptr;
 
@@ -35,18 +35,14 @@ TProfiler* FirstParentMarker()
 	return reinterpret_cast<TProfiler*>(&s_firstParentMarker);
 }
 
-__int64 Counter()
+long long Counter()
 {
-	LARGE_INTEGER value;
-	QueryPerformanceCounter(&value);
-	return value.QuadPart;
+	return jpog::platform::PerformanceCounter();
 }
 
-__int64 Frequency()
+long long Frequency()
 {
-	LARGE_INTEGER value;
-	QueryPerformanceFrequency(&value);
-	return value.QuadPart;
+	return jpog::platform::PerformanceFrequency();
 }
 
 bool IsRealParent(const TProfiler* parent)
@@ -54,7 +50,7 @@ bool IsRealParent(const TProfiler* parent)
 	return parent != nullptr && parent != FirstParentMarker();
 }
 
-constexpr __int64 kNoMinimum = 0x7FFFFFFFFFFFFFFF;
+constexpr long long kNoMinimum = 0x7FFFFFFFFFFFFFFF;
 
 } // namespace
 
@@ -120,7 +116,7 @@ bool TProfiler::IsRunning()
 	return !m_sProfilerStopped;
 }
 
-void TProfiler::Add(__int64& time, __int64& childTime)
+void TProfiler::Add(long long& time, long long& childTime)
 {
 	m_iTotalTime += time;
 	m_iChildTime += childTime;
@@ -261,7 +257,7 @@ void TProfiler::Report(int indent)
 	}
 	if ((m_sOutputFilter & 8) == 0)
 	{
-		std::sprintf(line, "|%8I64d", m_iHits);
+		std::sprintf(line, "|%8lld", m_iHits);
 		Out(line, nullptr);
 	}
 	if ((m_sOutputFilter & 4) == 0)
@@ -343,7 +339,7 @@ TProfilerStarter::~TProfilerStarter()
 		return;
 	COUNTER_STRUCT now = {};
 	TProfiler::GetHardwareCounterValues(now);
-	const __int64 elapsed = now.m_iPerformanceCounter - m_oStart.m_iPerformanceCounter;
+	const long long elapsed = now.m_iPerformanceCounter - m_oStart.m_iPerformanceCounter;
 	COUNTER_STRUCT counters = {0, now.m_iCounter0 - m_oStart.m_iCounter0, now.m_iCounter1 - m_oStart.m_iCounter1};
 	m_sLastActive = m_pPrevious;
 	TProfiler& profiler = *m_pProfiler;
@@ -364,7 +360,7 @@ TProfilerStarter::~TProfilerStarter()
 		profiler.m_oChildCounters.m_iCounter0 += m_oChildCounters.m_iCounter0;
 		profiler.m_oChildCounters.m_iCounter1 += m_oChildCounters.m_iCounter1;
 	};
-	auto addChild = [](TProfilerStarter& to, __int64 time, const COUNTER_STRUCT& values)
+	auto addChild = [](TProfilerStarter& to, long long time, const COUNTER_STRUCT& values)
 	{
 		to.m_iChildTime += time;
 		to.m_oChildCounters.m_iCounter0 += values.m_iCounter0;

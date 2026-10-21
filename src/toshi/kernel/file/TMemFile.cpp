@@ -1,10 +1,10 @@
 #include "toshi/kernel/file/TMemFile.h"
 
+#include "platform/CRuntime.h"
 #include "toshi/kernel/TSystem.h"
 #include "toshi/kernel/memory/TMemory.h"
 
 #include <cstdio>
-#include <cwchar>
 
 namespace Toshi
 {
@@ -150,19 +150,19 @@ int TMemFile::PutWChar(unsigned short character)
 	return character;
 }
 
-int TMemFile::VCPrintf(const char* format, char* args)
+int TMemFile::VCPrintf(const char* format, va_list args)
 {
 	char buffer[0x200];
-	int length = _vsnprintf(buffer, sizeof(buffer), format, args);
+	int length = jpog::platform::VSNPrintf(buffer, sizeof(buffer), format, args);
 	if (length < 0)
 		length = 0x200;
 	return Write(buffer, length);
 }
 
-int TMemFile::VWPrintf(const unsigned short* format, char* args)
+int TMemFile::VWPrintf(const unsigned short* format, va_list args)
 {
-	wchar_t buffer[0x200];
-	int length = _vsnwprintf(buffer, 0x200, reinterpret_cast<const wchar_t*>(format), args);
+	unsigned short buffer[0x200];
+	int length = jpog::platform::VSNWPrintf(buffer, 0x200, format, args);
 	if (length < 0)
 		length = 0x200;
 	const int written = Write(buffer, length * 2);

@@ -2,6 +2,8 @@
 
 #include "toshi/kernel/file/TFile.h"
 
+#include <cstdarg>
+
 namespace Toshi
 {
 
@@ -27,8 +29,8 @@ public:
 	int GetWChar() override;
 	int PutCChar(char character) override;
 	int PutWChar(unsigned short character) override;
-	int VCPrintf(const char* format, char* args) override;
-	int VWPrintf(const unsigned short* format, char* args) override;
+	int VCPrintf(const char* format, va_list args) override;
+	int VWPrintf(const unsigned short* format, va_list args) override;
 
 	int GetBytesWritten();
 
