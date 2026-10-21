@@ -26,10 +26,8 @@ OUTPUT = os.path.join(ROOT, "analysis", "decomp")
 
 
 def ghidra_dir():
-    # $GHIDRA_INSTALL_DIR, then the install configured by tools/setup_mcp.py, then the legacy
-    # project-local copy.
-    for candidate in (os.environ.get("GHIDRA_INSTALL_DIR"), setup_mcp.configured_ghidra(),
-                      os.path.join(ROOT, "toolchain", "ghidra")):
+    # $GHIDRA_INSTALL_DIR, then the install configured by tools/setup_mcp.py.
+    for candidate in (os.environ.get("GHIDRA_INSTALL_DIR"), setup_mcp.configured_ghidra()):
         if setup_mcp.is_ghidra(candidate):
             return candidate
     sys.exit("Ghidra not found: run tools/setup_mcp.py --ghidra <dir> or set GHIDRA_INSTALL_DIR")
