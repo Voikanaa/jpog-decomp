@@ -19,6 +19,8 @@ runs the original `Data/`. Full plan: `docs/plan.md`.
   paths, no fast-math or FMA contraction. x86: `static_assert` layouts (`src/common/layout.h`).
 - Names come from the exported mangled symbols (`symbols/`). Notes go in `docs/` (REA cannot
   rename items in the Ghidra database on Windows).
+- Other JPOG/Toshi projects (OpenJPOG etc.): **facts only, never copy/port code** (licenses are
+  non-commercial or absent). Credit every source in `CREDITS.md`.
 
 ## Ground rules (from the user — always follow)
 1. **Never modify the system.** Only touch files inside this repo. No global installs, registry,
@@ -59,7 +61,8 @@ Apache-2.0, LGPL linked dynamically).
   `TApplication.dll`), game DLLs (`Units`, `SimJPTerrain`, `PGUI*`, `PPropertyParser`), third-party
   (`binkw32`, `fmod`, `libmmd`), `Data/`, `Shaders/D3D/`, ISO. `game/` = working copy (gitignored).
 - `symbols/` per-module exports/imports CSV, `classes.csv`, `vtables.csv` (generated).
-- `docs/` `plan.md` (roadmap), `modules.md` (binary map), `progress.md` (coverage + log).
+- `docs/` `plan.md` (roadmap), `modules.md` (binary map), `progress.md` (coverage + log),
+  `formats/README.md` (catalogue of every `Data/` format: magic, status, sources, issue).
 - `src/` `common/` (`abi.h` TSTDCALL, `TIMPORT_DATA` for data jpog.exe imports; `layout.h`);
   `toshi/kernel/` (lib `toshi_kernel`: every TKernelInterface export except the superseded heap
   internals; core classes at its root, the rest in `math/ containers/ strings/ file/ memory/

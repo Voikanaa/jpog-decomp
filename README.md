@@ -17,7 +17,7 @@
 <img alt="Ghidra" src="https://img.shields.io/badge/analysis-Ghidra-C21325?style=flat-square">
 </p>
 
-[Roadmap](docs/plan.md) · [Binary map](docs/modules.md) · [Progress](docs/progress.md) · [Issues](https://github.com/Voikanaa/jpog-decomp/issues) · [Milestones](https://github.com/Voikanaa/jpog-decomp/milestones) · [Contributing](CONTRIBUTING.md)
+[Roadmap](docs/plan.md) · [Binary map](docs/modules.md) · [Progress](docs/progress.md) · [Issues](https://github.com/Voikanaa/jpog-decomp/issues) · [Milestones](https://github.com/Voikanaa/jpog-decomp/milestones) · [File formats](docs/formats/README.md) · [Contributing](CONTRIBUTING.md) · [Credits](CREDITS.md)
 
 </div>
 
@@ -125,7 +125,7 @@ environment variable) and are skipped when the game is not present, as in CI.
 │   └── support/       original-DLL loader, float comparison, test helpers
 ├── cmake/             import libraries for the original engine DLLs
 ├── symbols/           export/import tables, classes and vtables of every original module
-├── docs/              roadmap, binary map, progress log
+├── docs/              roadmap, binary map, progress log, file formats
 ├── tools/             analysis, build and maintenance scripts
 └── third_party/       pinned, vendored dependencies
 ```
@@ -153,6 +153,13 @@ environment variable) and are skipped when the game is not present, as in CI.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for the ground rules, workflow, commit conventions and
 code style.
+
+## Acknowledgements
+
+This project builds on community research: Andres James' 2003 format notes, equinox-'s and
+HENDRIX-ZT2's JPOG tools, the OpenJPOG / OpenBarnyard decompilations by InfiniteC0re and
+AdventureT, and many modders. See [CREDITS.md](CREDITS.md) for the full list and how we use
+their work.
 
 ## License
 
