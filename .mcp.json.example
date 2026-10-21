@@ -4,7 +4,7 @@
       "command": "cmd.exe",
       "args": ["/d", "/c", "npx", "-y", "rea-agents@6.5.0", "mcp"],
       "env": {
-        "GHIDRA_INSTALL_DIR": "${PROJECT_DIR}\\toolchain\\ghidra",
+        "GHIDRA_INSTALL_DIR": "${GHIDRA_DIR}",
         "TEMP": "${PROJECT_DIR}\\.rea-tmp",
         "TMP": "${PROJECT_DIR}\\.rea-tmp",
         "npm_config_cache": "${PROJECT_DIR}\\.rea-tmp\\npm-cache"
