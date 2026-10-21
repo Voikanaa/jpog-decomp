@@ -1,103 +1,103 @@
 # TKernelInterface.dll reimplementation.
 add_library(toshi_kernel STATIC
-  SortedArray.h
-  StringPoolArray.h
-  TArray.h
-  TAABox.cpp
-  TAABox.h
-  TBitArray.cpp
-  TBitArray.h
-  TCString.cpp
-  TCString.h
-  TCStringPool.cpp
-  TCStringPool.h
   TDebug.cpp
   TDebug.h
   TDLL.cpp
   TDLL.h
   TEvent.cpp
   TEvent.h
-  TFile.cpp
-  TFile.h
-  TFileLexer.cpp
-  TFileLexer.h
-  TFreeList.cpp
-  TFreeList.h
-  TGenericDList.cpp
-  TGenericDList.h
-  TGenericFifo.cpp
-  TGenericFifo.h
-  TGenericNodeList.cpp
-  TGenericNodeList.h
-  TGenericNTree.cpp
-  TGenericNTree.h
-  TGenericPool.cpp
-  TGenericPool.h
-  TGenericPriList.cpp
-  TGenericPriList.h
-  THPTimer.cpp
-  THPTimer.h
-  TISOFile.cpp
-  TISOFile.h
   TKernelInterface.cpp
   TKernelInterface.h
   TLocale.cpp
   TLocale.h
-  TMap.h
-  TMath.cpp
-  TMath.h
-  TMathGeometry.cpp
   TMinterm.cpp
   TMinterm.h
-  TMatrix44.cpp
-  TMatrix44.h
-  TMemFile.cpp
-  TMemFile.h
-  TMemory.cpp
-  TMemory.h
-  TMutex.cpp
-  TMutex.h
-  TNativeFile.cpp
-  TNativeFile.h
-  TNodeTree.h
-  TNullFile.cpp
-  TNullFile.h
   TObject.cpp
   TObject.h
-  TPile.cpp
-  TPile.h
-  TPlane.cpp
-  TPlane.h
   TProfiler.cpp
   TProfiler.h
-  TQuaternion.cpp
-  TQuaternion.h
-  TRandom.cpp
-  TRandom.h
   TRefCounted.cpp
   TRefCounted.h
   TScheduler.cpp
   TScheduler.h
-  TSphere.cpp
-  TSphere.h
   TSystem.cpp
   TSystem.h
-  TThread.cpp
-  TThread.h
-  TTimer.cpp
-  TTimer.h
   TUser.cpp
   TUser.h
-  TVector2.cpp
-  TVector2.h
-  TVector3.cpp
-  TVector3.h
-  TVector4.cpp
-  TVector4.h
-  TWString.cpp
-  TWString.h
-  TWStringPool.cpp
-  TWStringPool.h
+  containers/SortedArray.h
+  containers/TArray.h
+  containers/TBitArray.cpp
+  containers/TBitArray.h
+  containers/TGenericDList.cpp
+  containers/TGenericDList.h
+  containers/TGenericFifo.cpp
+  containers/TGenericFifo.h
+  containers/TGenericNodeList.cpp
+  containers/TGenericNodeList.h
+  containers/TGenericNTree.cpp
+  containers/TGenericNTree.h
+  containers/TGenericPool.cpp
+  containers/TGenericPool.h
+  containers/TGenericPriList.cpp
+  containers/TGenericPriList.h
+  containers/TMap.h
+  containers/TNodeTree.h
+  file/TFile.cpp
+  file/TFile.h
+  file/TFileLexer.cpp
+  file/TFileLexer.h
+  file/TISOFile.cpp
+  file/TISOFile.h
+  file/TMemFile.cpp
+  file/TMemFile.h
+  file/TNativeFile.cpp
+  file/TNativeFile.h
+  file/TNullFile.cpp
+  file/TNullFile.h
+  math/TAABox.cpp
+  math/TAABox.h
+  math/TMath.cpp
+  math/TMath.h
+  math/TMathGeometry.cpp
+  math/TMatrix44.cpp
+  math/TMatrix44.h
+  math/TPlane.cpp
+  math/TPlane.h
+  math/TQuaternion.cpp
+  math/TQuaternion.h
+  math/TRandom.cpp
+  math/TRandom.h
+  math/TSphere.cpp
+  math/TSphere.h
+  math/TVector2.cpp
+  math/TVector2.h
+  math/TVector3.cpp
+  math/TVector3.h
+  math/TVector4.cpp
+  math/TVector4.h
+  memory/TFreeList.cpp
+  memory/TFreeList.h
+  memory/TMemory.cpp
+  memory/TMemory.h
+  memory/TPile.cpp
+  memory/TPile.h
+  strings/StringPoolArray.h
+  strings/TCString.cpp
+  strings/TCString.h
+  strings/TCStringPool.cpp
+  strings/TCStringPool.h
+  strings/TWString.cpp
+  strings/TWString.h
+  strings/TWStringPool.cpp
+  strings/TWStringPool.h
+  thread/TMutex.cpp
+  thread/TMutex.h
+  thread/TThread.cpp
+  thread/TThread.h
+  time/THPTimer.cpp
+  time/THPTimer.h
+  time/TTimer.cpp
+  time/TTimer.h
 )
 target_link_libraries(toshi_kernel PUBLIC jpog_common)
 # The original relies on strncpy/wcsncpy semantics (zero padding, no forced terminator).

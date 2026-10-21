@@ -6,9 +6,9 @@
 #include "ppropertyparser/PPropertyWriter.h"
 #include "toshi/kernel/TLocale.h"
 #include "toshi/kernel/TSystem.h"
-#include "toshi/kernel/TVector2.h"
-#include "toshi/kernel/TVector3.h"
-#include "toshi/kernel/TWString.h"
+#include "toshi/kernel/math/TVector2.h"
+#include "toshi/kernel/math/TVector3.h"
+#include "toshi/kernel/strings/TWString.h"
 
 using namespace Toshi;
 

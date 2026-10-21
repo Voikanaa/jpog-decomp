@@ -54,7 +54,8 @@ LGPL linked dynamically).
 - `docs/` `plan.md` (roadmap), `modules.md` (binary map), `progress.md` (coverage + log).
 - `src/` `common/` (`abi.h` TSTDCALL, `TIMPORT_DATA` for data jpog.exe imports; `layout.h`);
   `toshi/kernel/` (lib `toshi_kernel`: every TKernelInterface export except the superseded heap
-  internals); global `operator new`/`delete` route to `tmalloc`/`tfree` (as the original, also in
+  internals; core classes at its root, the rest in `math/ containers/ strings/ file/ memory/
+  thread/ time/`, mirrored by `tests/kernel/`); global `operator new`/`delete` route to `tmalloc`/`tfree` (as the original, also in
   jpog.exe); `ppropertyparser/` (lib `ppropertyparser` + drop-in DLL, complete); declarations only:
   `toshi/application/`, `toshi/render/`, `toshi/renderd3d/`, `toshi/gui/`; `game/` (**jpog.exe**: WinMain, `AApplication` with the
   original task tree, `ARootTask`/`ARenderer` skeletons, `CrashHandler`); `hook/` (deferred).

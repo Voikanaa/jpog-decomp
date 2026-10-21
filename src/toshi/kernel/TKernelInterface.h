@@ -1,9 +1,9 @@
 #pragma once
 
 #include "common/layout.h"
-#include "toshi/kernel/THPTimer.h"
 #include "toshi/kernel/TObject.h"
 #include "toshi/kernel/TRefCounted.h"
+#include "toshi/kernel/time/THPTimer.h"
 
 struct HINSTANCE__;
 

@@ -4,7 +4,7 @@
 #include "support/FloatCompare.h"
 #include "support/OriginalModule.h"
 #include "toshi/kernel/TSystem.h"
-#include "toshi/kernel/TVector3.h"
+#include "toshi/kernel/math/TVector3.h"
 
 #include <cmath>
 #include <doctest/doctest.h>

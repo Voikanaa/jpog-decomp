@@ -1,9 +1,9 @@
 #include "ppropertyparser/PPropertyReader.h"
 
 #include "ppropertyparser/PProperties.h"
-#include "toshi/kernel/TFile.h"
 #include "toshi/kernel/TLocale.h"
 #include "toshi/kernel/TSystem.h"
+#include "toshi/kernel/file/TFile.h"
 
 #include <new>
 

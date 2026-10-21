@@ -1,8 +1,8 @@
 #include "toshi/kernel/TMinterm.h"
 
-#include "toshi/kernel/TCString.h"
-#include "toshi/kernel/TCStringPool.h"
 #include "toshi/kernel/TSystem.h"
+#include "toshi/kernel/strings/TCString.h"
+#include "toshi/kernel/strings/TCStringPool.h"
 
 namespace Toshi
 {

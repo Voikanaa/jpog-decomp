@@ -1,9 +1,9 @@
 #pragma once
 
-#include "toshi/kernel/TCString.h"
-#include "toshi/kernel/TCStringPool.h"
 #include "toshi/kernel/TEvent.h"
-#include "toshi/kernel/TWStringPool.h"
+#include "toshi/kernel/strings/TCString.h"
+#include "toshi/kernel/strings/TCStringPool.h"
+#include "toshi/kernel/strings/TWStringPool.h"
 
 class PProperties;
 class PPropertyValue;

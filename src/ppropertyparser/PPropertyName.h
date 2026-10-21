@@ -2,7 +2,7 @@
 
 #include "common/abi.h"
 #include "common/layout.h"
-#include "toshi/kernel/TCStringPool.h"
+#include "toshi/kernel/strings/TCStringPool.h"
 
 // A property name with an optional sub-name, written "name[sub]" (PPropertyParser.dll).
 class PPropertyName

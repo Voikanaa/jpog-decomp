@@ -1,11 +1,11 @@
 #include "game/AOptions.h"
 #include "ppropertyparser/PProperties.h"
 #include "ppropertyparser/PPropertyValue.h"
-#include "toshi/kernel/TFile.h"
-#include "toshi/kernel/TNativeFile.h"
 #include "toshi/kernel/TSystem.h"
-#include "toshi/kernel/TVector2.h"
-#include "toshi/kernel/TVector3.h"
+#include "toshi/kernel/file/TFile.h"
+#include "toshi/kernel/file/TNativeFile.h"
+#include "toshi/kernel/math/TVector2.h"
+#include "toshi/kernel/math/TVector3.h"
 
 #include <doctest/doctest.h>
 #include <filesystem>

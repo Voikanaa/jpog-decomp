@@ -2,9 +2,9 @@
 
 #include "common/abi.h"
 #include "common/layout.h"
-#include "toshi/kernel/TCStringPool.h"
 #include "toshi/kernel/TObject.h"
 #include "toshi/kernel/TRefCounted.h"
+#include "toshi/kernel/strings/TCStringPool.h"
 
 class PPropertyReader;
 class PPropertyWriter;

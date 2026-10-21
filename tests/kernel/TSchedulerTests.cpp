@@ -2,10 +2,10 @@
 #include "support/FloatCompare.h"
 #include "support/OriginalModule.h"
 #include "toshi/kernel/TDLL.h"
-#include "toshi/kernel/TFile.h"
 #include "toshi/kernel/TKernelInterface.h"
 #include "toshi/kernel/TScheduler.h"
 #include "toshi/kernel/TUser.h"
+#include "toshi/kernel/file/TFile.h"
 
 #include <cstring>
 #include <doctest/doctest.h>

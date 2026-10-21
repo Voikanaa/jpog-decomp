@@ -1,7 +1,7 @@
 #include "support/Differential.h"
 #include "support/OriginalModule.h"
 #include "toshi/kernel/TLocale.h"
-#include "toshi/kernel/TNativeFile.h"
+#include "toshi/kernel/file/TNativeFile.h"
 
 #include <cstring>
 #include <doctest/doctest.h>

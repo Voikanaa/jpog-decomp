@@ -1,7 +1,7 @@
 // Like SimJP.exe, the game allocates through the kernel heap: global new/delete go to the
 // kernel's tmalloc/tfree, so objects can be created by the kernel (TClass::CreateObject) and
 // deleted by the game or the other way round.
-#include "toshi/kernel/TMemory.h"
+#include "toshi/kernel/memory/TMemory.h"
 
 #include <cstddef>
 

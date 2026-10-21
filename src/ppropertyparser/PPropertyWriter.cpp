@@ -3,10 +3,10 @@
 #include "ppropertyparser/PProperties.h"
 #include "ppropertyparser/PPropertyName.h"
 #include "ppropertyparser/PPropertyValue.h"
-#include "toshi/kernel/TFile.h"
 #include "toshi/kernel/TLocale.h"
 #include "toshi/kernel/TSystem.h"
-#include "toshi/kernel/TWStringPool.h"
+#include "toshi/kernel/file/TFile.h"
+#include "toshi/kernel/strings/TWStringPool.h"
 
 #include <cstdarg>
 #include <new>

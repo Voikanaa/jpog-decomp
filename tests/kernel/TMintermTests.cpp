@@ -1,9 +1,9 @@
 #include "support/Differential.h"
 #include "support/FloatCompare.h"
 #include "support/OriginalModule.h"
-#include "toshi/kernel/TCString.h"
-#include "toshi/kernel/TCStringPool.h"
 #include "toshi/kernel/TMinterm.h"
+#include "toshi/kernel/strings/TCString.h"
+#include "toshi/kernel/strings/TCStringPool.h"
 
 #include <cstring>
 #include <doctest/doctest.h>

@@ -1,7 +1,7 @@
 #pragma once
 
 #include "common/layout.h"
-#include "toshi/kernel/TCString.h"
+#include "toshi/kernel/strings/TCString.h"
 
 namespace Toshi
 {

@@ -2,7 +2,7 @@
 
 #include "common/abi.h"
 #include "common/layout.h"
-#include "toshi/kernel/TGenericPriList.h"
+#include "toshi/kernel/containers/TGenericPriList.h"
 
 namespace Toshi
 {

@@ -1,7 +1,7 @@
 #include "toshi/kernel/TDebug.h"
 
-#include "toshi/kernel/TCString.h"
-#include "toshi/kernel/TFile.h"
+#include "toshi/kernel/file/TFile.h"
+#include "toshi/kernel/strings/TCString.h"
 
 #include <cstdarg>
 #include <cstdio>

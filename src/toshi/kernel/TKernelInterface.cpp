@@ -1,12 +1,12 @@
 #include "toshi/kernel/TKernelInterface.h"
 
 #include "toshi/kernel/TDLL.h"
-#include "toshi/kernel/TFile.h"
-#include "toshi/kernel/TMemFile.h"
-#include "toshi/kernel/TNativeFile.h"
-#include "toshi/kernel/TNullFile.h"
 #include "toshi/kernel/TScheduler.h"
 #include "toshi/kernel/TUser.h"
+#include "toshi/kernel/file/TFile.h"
+#include "toshi/kernel/file/TMemFile.h"
+#include "toshi/kernel/file/TNativeFile.h"
+#include "toshi/kernel/file/TNullFile.h"
 
 #include <windows.h>
 #include <direct.h>
