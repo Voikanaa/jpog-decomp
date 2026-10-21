@@ -80,7 +80,7 @@ almost 3 million differential checks, bit-exact for all float code.
 |---|---|
 | Compiler | Visual Studio 2022+ or Build Tools, with the *C++ x86/x64 build tools* (found automatically via `vswhere`) |
 | Tools | Python 3.10+, Git, clang-format 20.1.8 (`pip install clang-format==20.1.8`, or put the exe in `toolchain/clang-format/`) |
-| Analysis (optional) | Ghidra 12.1.4 in `toolchain/ghidra/` and JDK 21+ |
+| Analysis (optional) | Ghidra 12.1.4 (any location: `python tools/setup_mcp.py --ghidra <dir>`) and JDK 21+ |
 | Game | Your own copy of *Jurassic Park: Operation Genesis* (PC) |
 
 ### Setup

@@ -20,7 +20,7 @@ Reverse engineering of *Jurassic Park: Operation Genesis* (2003, Blue Tongue / V
 1. **Never modify the system.** Only touch files inside this repo. No global installs, registry,
    env-var/PATH changes or writes to user/system dirs. Exceptions: session temp files and files
    tools write on their own (Ghidra settings in `%APPDATA%`, npm caches, temp).
-2. **Ask before adding any external tool or dependency.** Approved tools live in `toolchain/`.
+2. **Ask before adding any external tool or dependency.** Approved tools are listed under Tools.
 3. **Keep this CLAUDE.md current** in the same step as any structure/tool/finding/workflow change,
    and **keep it under 150 lines**: condense or move detail to `docs/` instead of growing it.
 4. **Token budget:** at 90% of the context/token limit, stop and save: start no new work, commit
@@ -38,7 +38,7 @@ LGPL linked dynamically).
   Check with `git add -A --dry-run` before larger commits.
 - **Commit frequently** in small logical units once verified, then push. Update README.md (status,
   tools, layout, setup) and this file in the same commit when they change.
-- **Issues:** `toolchain/gh/bin/gh.exe -R Voikanaa/jpog-decomp`. Every work item has an issue;
+- **Issues:** `gh -R Voikanaa/jpog-decomp`. Every work item has an issue;
   reference it (`Refs #n` / `Fixes #n`), tick checklists, open issues for new work, close finished
   ones with the hash. Milestones M0b–M6 mirror `docs/plan.md`.
 - LF line endings except `.bat` (`.gitattributes`). Pre-commit hook (`.githooks/`, enabled) runs
@@ -86,13 +86,14 @@ LGPL linked dynamically).
   x87 execution of an original function; prints each store as a fully parenthesised expression
   (spills become `tN`). **Use it for all float code**; Ghidra's sums are not reliable.
 - Installed system-wide: VS Build Tools 2026 (MSVC 14.51, SDK 10.0.26100, CMake/Ninja), git,
-  Python 3.15, JDK 25. Project-local `toolchain/`: Ghidra 12.1.4, clang-format 20.1.8, gh 2.102.0
-  (user logs in once with `gh auth login`).
+  Python 3.15, JDK 25, gh 2.102.0 (global; user logs in once with `gh auth login`). Ghidra 12.1.4
+  outside the repo (here `<ghidra-dir>`; set via `setup_mcp.py --ghidra`). Project-local
+  `toolchain/`: clang-format 20.1.8.
 - **REA MCP** (`rea-agents@6.5.0`, skill `reverse-engineer-anything`) for targeted queries
   (xrefs, bytes, single functions). `.mcp.json` from `.mcp.json.example` via
-  `python tools/setup_mcp.py`, then fully restart Claude Code. It points `GHIDRA_INSTALL_DIR` at
-  `toolchain\ghidra` and TEMP/npm cache at `.rea-tmp\`. Usage: `open_binary` (absolute path) →
-  `binary_overview`/`search_procedures`/`procedure_pseudo_code` → `close_binary`.
+  `python tools/setup_mcp.py --ghidra <dir>` (remembered; `ghidra_export.py` reads it too), then
+  fully restart Claude Code. It sets `GHIDRA_INSTALL_DIR` and TEMP/npm cache at `.rea-tmp\`.
+  Usage: `open_binary` (absolute path) → `binary_overview`/`search_procedures`/`procedure_pseudo_code` → `close_binary`.
 
 ## Key findings
 - **FPU precision:** D3D8 is created without `D3DCREATE_FPU_PRESERVE`, so gameplay x87 runs at

@@ -16,6 +16,8 @@ import os
 import subprocess
 import sys
 
+import setup_mcp
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 GAME = os.path.join(ROOT, "JPOG")
 SCRIPT_DIR = os.path.join(ROOT, "tools", "ghidra")
@@ -24,10 +26,13 @@ OUTPUT = os.path.join(ROOT, "analysis", "decomp")
 
 
 def ghidra_dir():
-    for candidate in (os.environ.get("GHIDRA_INSTALL_DIR"), os.path.join(ROOT, "toolchain", "ghidra")):
-        if candidate and os.path.exists(os.path.join(candidate, "support", "analyzeHeadless.bat")):
+    # $GHIDRA_INSTALL_DIR, then the install configured by tools/setup_mcp.py, then the legacy
+    # project-local copy.
+    for candidate in (os.environ.get("GHIDRA_INSTALL_DIR"), setup_mcp.configured_ghidra(),
+                      os.path.join(ROOT, "toolchain", "ghidra")):
+        if setup_mcp.is_ghidra(candidate):
             return candidate
-    sys.exit("Ghidra not found: set GHIDRA_INSTALL_DIR or install it to toolchain/ghidra")
+    sys.exit("Ghidra not found: run tools/setup_mcp.py --ghidra <dir> or set GHIDRA_INSTALL_DIR")
 
 
 def all_modules():
