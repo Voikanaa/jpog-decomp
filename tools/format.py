@@ -4,7 +4,7 @@ Usage:
   python tools/format.py           reformat src/ and tests/ in place
   python tools/format.py --check   report violations and exit non-zero (used in CI)
 
-clang-format is looked up in $CLANG_FORMAT, the project .venv (requirements-dev.txt), then PATH, and must be
+clang-format is looked up in $CLANG_FORMAT, the project .venv (`uv sync`), then PATH, and must be
 exactly the pinned version: formatting differs between releases, so local runs and CI must agree.
 """
 import argparse
@@ -32,8 +32,8 @@ def find_clang_format():
         if f"version {PINNED_VERSION}" in version:
             return exe
         print(f"skipping {exe}: {version.strip()} (need {PINNED_VERSION})", file=sys.stderr)
-    sys.exit(f"clang-format {PINNED_VERSION} not found; run `python -m venv .venv` and "
-             f"`.venv\\Scripts\\pip install -r requirements-dev.txt`")
+    sys.exit(f"clang-format {PINNED_VERSION} not found; run `uv sync` (or `python -m venv .venv` and "
+             f"`.venv\\Scripts\\pip install -r requirements-dev.txt`)")
 
 
 def tracked_sources():

@@ -1,0 +1,16 @@
+# Python tooling for tools/ (all scripts are stdlib-only; this pins the dev tools).
+# Setup: `uv sync` (or the pip fallback: requirements-dev.txt).
+[project]
+name = "jpog-decomp-tools"
+version = "0"
+requires-python = ">=3.10"
+dependencies = []
+
+[dependency-groups]
+dev = ["clang-format==20.1.8"]
+
+[tool.uv]
+package = false
+# Keep uv's cache inside the repo and never download interpreters into user directories.
+cache-dir = ".cache/uv"
+python-preference = "only-system"
