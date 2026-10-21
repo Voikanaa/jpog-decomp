@@ -25,6 +25,10 @@ Reverse engineering of *Jurassic Park: Operation Genesis* (2003, Blue Tongue / V
    and **keep it under 150 lines**: condense or move detail to `docs/` instead of growing it.
 4. **Token budget:** at 90% of the context/token limit, stop and save: start no new work, commit
    and push verified work, note unfinished steps in the relevant issue, then end the task.
+5. **Copy protection:** retail SimJP.exe is SecuROM-protected. Never add, document or distribute
+   circumvention (tools, internals, patched/no-CD exes), and don't help run a cracked exe. There is
+   no runnable original: verify with differential tests against the unprotected engine DLLs and
+   static analysis.
 
 ## License
 GPL-3.0-or-later (`LICENSE`), covering our code/tools/docs only: not the game, its assets or
@@ -89,7 +93,7 @@ LGPL linked dynamically).
   (spills become `tN`). **Use it for all float code**; Ghidra's sums are not reliable.
 - Installed system-wide: VS Build Tools 2026 (MSVC 14.51, SDK 10.0.26100, CMake/Ninja), git,
   Python 3.15, JDK 25, gh 2.102.0 (global; user logs in once with `gh auth login`). Ghidra 12.1.4
-  outside the repo (here `<ghidra-dir>`; set via `setup_mcp.py --ghidra`). uv 0.12
+  outside the repo (path set once via `setup_mcp.py --ghidra`). uv 0.12
   (user-installed). Project `.venv/` from `uv sync` (`pyproject.toml`/`uv.lock`; this machine needs
   `--system-certs`): clang-format 20.1.8, ruff 0.17.1 (config in `pyproject.toml`). After dep
   changes: `uv lock` and regenerate the pip fallback with
