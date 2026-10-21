@@ -2,7 +2,7 @@
 
 <img src="docs/jpog_decomp.png" alt="Jurassic Park: Operation Genesis" width="600">
 
-**A reimplementation of *Jurassic Park: Operation Genesis* (2003) as a native Windows x64 game**
+**A reimplementation of *Jurassic Park: Operation Genesis* (2003) as a native cross-platform game**
 
 <p>
 <a href="https://github.com/Voikanaa/jpog-decomp/actions/workflows/ci.yml"><img alt="CI" src="https://img.shields.io/github/actions/workflow/status/Voikanaa/jpog-decomp/ci.yml?branch=main&label=CI&style=flat-square&logo=githubactions&logoColor=white"></a>
@@ -10,10 +10,10 @@
 <a href="LICENSE"><img alt="License: GPL-3.0-or-later" src="https://img.shields.io/badge/license-GPL--3.0--or--later-blue?style=flat-square"></a>
 <img alt="Status: early development" src="https://img.shields.io/badge/status-early%20development-orange?style=flat-square">
 <br>
-<img alt="Platform: Windows x64" src="https://img.shields.io/badge/platform-Windows%20x64-0078D6?style=flat-square">
+<img alt="Platforms: Windows, Linux, macOS" src="https://img.shields.io/badge/platforms-Windows%20%C2%B7%20Linux%20%C2%B7%20macOS-0078D6?style=flat-square">
 <img alt="C++20" src="https://img.shields.io/badge/C%2B%2B-20-00599C?style=flat-square&logo=cplusplus&logoColor=white">
 <img alt="CMake + Ninja" src="https://img.shields.io/badge/build-CMake%20%2B%20Ninja-064F8C?style=flat-square&logo=cmake&logoColor=white">
-<img alt="Direct3D 11" src="https://img.shields.io/badge/renderer-Direct3D%2011-5C2D91?style=flat-square">
+<img alt="bgfx + SDL3" src="https://img.shields.io/badge/stack-bgfx%20%C2%B7%20SDL3-5C2D91?style=flat-square">
 <img alt="Ghidra" src="https://img.shields.io/badge/analysis-Ghidra-C21325?style=flat-square">
 </p>
 
@@ -30,7 +30,7 @@ engine. It shipped as a 32-bit executable with Direct3D 8, FMOD 3, Bink video an
 protection, all of which are increasingly hard to run on modern systems.
 
 This project rebuilds the game and engine from scratch in modern, portable C++. The goal is a
-**native 64-bit Windows build** that plays the original game data unchanged.
+**native build for Windows, Linux and macOS** that plays the original game data unchanged.
 
 - **Verified bit for bit:** each function is tested against the original DLL export on the same
   inputs, down to the last floating-point bit.
@@ -44,7 +44,7 @@ flowchart LR
     B -->|"x86 build"| C["jpog.exe + our kernel DLL<br/>on the other original DLLs"]
     B -->|"x86 build"| T["Differential tests<br/>vs. original exports"]
     T -.->|"0-ULP match"| B
-    C -->|"replace DLLs module by module"| D["Native x64 game<br/>D3D11 · miniaudio · FFmpeg"]
+    C -->|"replace DLLs module by module"| D["Native game: Windows · Linux · macOS<br/>SDL3 · bgfx · miniaudio · FFmpeg"]
 ```
 
 1. **Analyse.** Headless Ghidra decompiles every module. Over 23,000 exported C++ symbols give us
@@ -55,7 +55,8 @@ flowchart LR
    with its original export under the game's own FPU settings. Results must match exactly.
 4. **Run.** Our `jpog.exe` already starts on our own Toshi kernel plus the remaining original
    engine DLLs. As modules are replaced, it depends on less of the original, until the same
-   source builds as a standalone x64 game on Direct3D 11, Raw Input, miniaudio and FFmpeg.
+   source builds as a standalone game for Windows, Linux and macOS on SDL3, bgfx, miniaudio and
+   FFmpeg, with a Dear ImGui dev menu.
 
 ## Status
 
@@ -66,8 +67,9 @@ flowchart LR
 | **M2** | Toshi kernel replaced: every `TKernelInterface` export reimplemented and verified; the game boots on our DLL up to Launch 1 | 🚧 |
 | **M3** | A mission loads through our renderer and resource code | ⏳ |
 | **M4** | Full game playable on our code | ⏳ |
-| **M5** | Native x64 build reaches the main menu | ⏳ |
-| **M6** | Native x64 build plays a full mission with original saves | ⏳ |
+| **P** | Portable foundation: kernel and tests on Windows, Linux and macOS; SDL3 + bgfx shell | ⏳ |
+| **M5** | Portable build reaches the main menu on Windows, Linux and macOS | ⏳ |
+| **M6** | Portable build plays a full mission with original saves | ⏳ |
 | M1 | In-game A/B testing through a hook DLL (deferred: needs a runnable original) | ⏸️ |
 
 Per-module coverage is in [docs/progress.md](docs/progress.md); the test suite currently runs
