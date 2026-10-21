@@ -36,6 +36,8 @@ original export on the same inputs. Float results must match bit for bit unless 
 justifies a tolerance.
 
 ## Log
+- 2026-10-21: History rewritten (#32): one author identity, personal paths and old analysis
+  tooling removed. All commit hashes changed; re-clone other checkouts.
 - 2026-10-19: Game: options drive the display (#21). `AOptionLogic` (SimJP.exe 0x473710..0x474A60):
   4:3 hardware modes from 640x480 enumerated from the renderer's adapters, the graphics settings
   in statics applied to the renderer's colour correction and the terrain/grass/skin shaders
