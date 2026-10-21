@@ -35,7 +35,9 @@ jobs:
       - name: Python tools compile
         run: python -m compileall -q tools
       - uses: astral-sh/setup-uv@v10.3.0
-      - name: Install pinned clang-format
+      - name: Install pinned dev tools
         run: uv sync --locked
       - name: C++ formatting
         run: uv run tools/format.py --check
+      - name: Python lint
+        run: uv run ruff check tools

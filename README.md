@@ -79,7 +79,7 @@ almost 3 million differential checks, bit-exact for all float code.
 | | |
 |---|---|
 | Compiler | Visual Studio 2022+ or Build Tools, with the *C++ x86/x64 build tools* (found automatically via `vswhere`) |
-| Tools | Python 3.10+, Git, [uv](https://docs.astral.sh/uv/) (recommended), clang-format 20.1.8 (installed into the project `.venv`, see Setup) |
+| Tools | Python 3.10+, Git, [uv](https://docs.astral.sh/uv/) (recommended), clang-format 20.1.8 and ruff 0.17.1 (installed into the project `.venv`, see Setup) |
 | Analysis (optional) | Ghidra 12.1.4 (any location: `python tools/setup_mcp.py --ghidra <dir>`) and JDK 21+ |
 | Game | Your own copy of *Jurassic Park: Operation Genesis* (PC) |
 
@@ -88,7 +88,7 @@ almost 3 million differential checks, bit-exact for all float code.
 git clone git@github.com:Voikanaa/jpog-decomp.git
 cd jpog-decomp
 git config core.hooksPath .githooks       :: enable the pre-commit hygiene check
-uv sync                                   :: project .venv with pinned clang-format (uv.lock)
+uv sync                                   :: project .venv with pinned clang-format + ruff (uv.lock)
 :: without uv: python -m venv .venv && .venv\Scripts\pip install -r requirements-dev.txt
 
 :: Put the installed game in JPOG\ (read-only reference) and a working copy in game\

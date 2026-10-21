@@ -4,7 +4,7 @@ import glob
 import os
 import subprocess
 
-VSWHERE = os.path.join(os.environ.get("ProgramFiles(x86)", r"C:\Program Files (x86)"),
+VSWHERE = os.path.join(os.environ.get("PROGRAMFILES(X86)", r"C:\Program Files (x86)"),
                        "Microsoft Visual Studio", "Installer", "vswhere.exe")
 
 

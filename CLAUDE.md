@@ -42,8 +42,9 @@ LGPL linked dynamically).
   reference it (`Refs #n` / `Fixes #n`), tick checklists, open issues for new work, close finished
   ones with the hash. Milestones M0b–M6 mirror `docs/plan.md`.
 - LF line endings except `.bat` (`.gitattributes`). Pre-commit hook (`.githooks/`, enabled) runs
-  `check_repo.py --staged` and `format.py --check`. CI (`.github/workflows/ci.yml`) builds
-  every preset with `JPOG_WERROR=ON` (`/WX`; keep code warning-free) and runs the same checks.
+  `check_repo.py --staged`, `format.py --check` and `ruff check tools`. CI
+  (`.github/workflows/ci.yml`) builds every preset with `JPOG_WERROR=ON` (`/WX`; keep code
+  warning-free) and runs the same checks.
 
 ## Layout
 - `JPOG/` original install (read-only reference): `SimJP.exe`, engine DLLs (`T*Interface.dll`,
@@ -89,8 +90,9 @@ LGPL linked dynamically).
   Python 3.15, JDK 25, gh 2.102.0 (global; user logs in once with `gh auth login`). Ghidra 12.1.4
   outside the repo (here `<ghidra-dir>`; set via `setup_mcp.py --ghidra`). uv 0.12
   (user-installed). Project `.venv/` from `uv sync` (`pyproject.toml`/`uv.lock`; this machine needs
-  `--system-certs`): clang-format 20.1.8. After dep changes: `uv lock` and regenerate the pip
-  fallback with `uv export --only-group dev --no-hashes --no-header -o requirements-dev.txt`.
+  `--system-certs`): clang-format 20.1.8, ruff 0.17.1 (config in `pyproject.toml`). After dep
+  changes: `uv lock` and regenerate the pip fallback with
+  `uv export --only-group dev --no-hashes --no-header -o requirements-dev.txt`.
 - **REA MCP** (`rea-agents@6.5.0`, skill `reverse-engineer-anything`) for targeted queries
   (xrefs, bytes, single functions). `.mcp.json` from `.mcp.json.example` via
   `python tools/setup_mcp.py --ghidra <dir>` (remembered; `ghidra_export.py` reads it too), then
