@@ -1,9 +1,9 @@
 #include "toshi/kernel/TSystem.h"
 
-#include "toshi/kernel/TCString.h"
-#include "toshi/kernel/TCStringPool.h"
 #include "toshi/kernel/TLocale.h"
-#include "toshi/kernel/TWStringPool.h"
+#include "toshi/kernel/strings/TCString.h"
+#include "toshi/kernel/strings/TCStringPool.h"
+#include "toshi/kernel/strings/TWStringPool.h"
 
 #include <climits>
 #include <cstdarg>

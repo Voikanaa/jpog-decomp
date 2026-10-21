@@ -1,8 +1,8 @@
 #include "support/Differential.h"
 #include "support/OriginalModule.h"
 #include "toshi/kernel/TDebug.h"
-#include "toshi/kernel/TFile.h"
-#include "toshi/kernel/TNullFile.h"
+#include "toshi/kernel/file/TFile.h"
+#include "toshi/kernel/file/TNullFile.h"
 
 #include <doctest/doctest.h>
 

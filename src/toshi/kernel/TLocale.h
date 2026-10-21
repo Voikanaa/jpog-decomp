@@ -2,11 +2,11 @@
 
 #include "common/abi.h"
 #include "common/layout.h"
-#include "toshi/kernel/TCStringPool.h"
 #include "toshi/kernel/TEvent.h"
-#include "toshi/kernel/TFreeList.h"
-#include "toshi/kernel/TMap.h"
-#include "toshi/kernel/TWStringPool.h"
+#include "toshi/kernel/containers/TMap.h"
+#include "toshi/kernel/memory/TFreeList.h"
+#include "toshi/kernel/strings/TCStringPool.h"
+#include "toshi/kernel/strings/TWStringPool.h"
 
 #include <cstddef>
 

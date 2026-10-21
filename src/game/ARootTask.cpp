@@ -5,8 +5,8 @@
 #include "game/AOptionLogic.h"
 #include "game/AOptions.h"
 #include "game/ARenderer.h"
-#include "toshi/kernel/TCString.h"
 #include "toshi/kernel/TKernelInterface.h"
+#include "toshi/kernel/strings/TCString.h"
 
 #include <new>
 

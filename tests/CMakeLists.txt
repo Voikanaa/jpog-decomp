@@ -6,29 +6,29 @@ add_executable(jpog_tests
   support/OriginalModule.h
   game/AOptionsTests.cpp
   ../src/game/AOptions.cpp
-  kernel/TBoundsTests.cpp
-  kernel/TCStringPoolTests.cpp
-  kernel/TContainerTests.cpp
   kernel/TDebugTests.cpp
   kernel/TEventTests.cpp
-  kernel/TFileLexerTests.cpp
-  kernel/TFileTests.cpp
-  kernel/TISOFileTests.cpp
   kernel/TLocaleTests.cpp
-  kernel/TMathGeometryTests.cpp
-  kernel/TMathTests.cpp
-  kernel/TMatrix44Tests.cpp
-  kernel/TMemoryTests.cpp
   kernel/TMintermTests.cpp
   kernel/TObjectTests.cpp
-  kernel/TPoolTests.cpp
-  kernel/TQuaternionTests.cpp
-  kernel/TRandomTests.cpp
   kernel/TSchedulerTests.cpp
-  kernel/TStringTests.cpp
-  kernel/TTimerTests.cpp
-  kernel/TTimeTests.cpp
-  kernel/TVectorTests.cpp
+  kernel/containers/TContainerTests.cpp
+  kernel/containers/TPoolTests.cpp
+  kernel/file/TFileLexerTests.cpp
+  kernel/file/TFileTests.cpp
+  kernel/file/TISOFileTests.cpp
+  kernel/math/TBoundsTests.cpp
+  kernel/math/TMathGeometryTests.cpp
+  kernel/math/TMathTests.cpp
+  kernel/math/TMatrix44Tests.cpp
+  kernel/math/TQuaternionTests.cpp
+  kernel/math/TRandomTests.cpp
+  kernel/math/TVectorTests.cpp
+  kernel/memory/TMemoryTests.cpp
+  kernel/strings/TCStringPoolTests.cpp
+  kernel/strings/TStringTests.cpp
+  kernel/time/TTimerTests.cpp
+  kernel/time/TTimeTests.cpp
   ppropertyparser/PPropertyNameTests.cpp
   ppropertyparser/PPropertyReaderTests.cpp
   ppropertyparser/PPropertyValueTests.cpp

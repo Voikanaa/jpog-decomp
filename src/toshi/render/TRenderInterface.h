@@ -2,10 +2,10 @@
 
 #include "common/abi.h"
 #include "common/layout.h"
-#include "toshi/kernel/TNodeList.h"
-#include "toshi/kernel/TNodeTree.h"
 #include "toshi/kernel/TObject.h"
 #include "toshi/kernel/TRefCounted.h"
+#include "toshi/kernel/containers/TNodeList.h"
+#include "toshi/kernel/containers/TNodeTree.h"
 #include "toshi/render/TRenderAdapter.h"
 
 namespace Toshi

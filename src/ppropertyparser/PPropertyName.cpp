@@ -1,8 +1,8 @@
 #include "ppropertyparser/PPropertyName.h"
 
-#include "toshi/kernel/TCString.h"
 #include "toshi/kernel/TSystem.h"
-#include "toshi/kernel/TWString.h"
+#include "toshi/kernel/strings/TCString.h"
+#include "toshi/kernel/strings/TWString.h"
 
 using namespace Toshi;
 

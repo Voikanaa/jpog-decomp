@@ -5,8 +5,8 @@
 #include "ppropertyparser/PPropertyName.h"
 #include "ppropertyparser/PPropertyValue.h"
 #include "toshi/kernel/TObject.h"
-#include "toshi/kernel/TQList.h"
 #include "toshi/kernel/TRefCounted.h"
+#include "toshi/kernel/containers/TQList.h"
 
 #include <cstddef>
 

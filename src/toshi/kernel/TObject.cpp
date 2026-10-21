@@ -1,7 +1,7 @@
 #include "toshi/kernel/TObject.h"
 
-#include "toshi/kernel/TCString.h"
 #include "toshi/kernel/TSystem.h"
+#include "toshi/kernel/strings/TCString.h"
 
 #include <new>
 

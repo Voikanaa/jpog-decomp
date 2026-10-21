@@ -1,8 +1,8 @@
 #include "ppropertyparser/PProperties.h"
 
-#include "toshi/kernel/TCString.h"
-#include "toshi/kernel/TFreeList.h"
 #include "toshi/kernel/TSystem.h"
+#include "toshi/kernel/memory/TFreeList.h"
+#include "toshi/kernel/strings/TCString.h"
 
 #include <new>
 #include <vector>

@@ -113,11 +113,13 @@ environment variable) and are skipped when the game is not present, as in CI.
 ```
 ├── src/
 │   ├── common/        shared headers (ABI macros, layout checks)
-│   ├── toshi/         Toshi engine, one folder per original DLL (kernel → TKernelInterface.dll)
+│   ├── toshi/         Toshi engine, one folder per original DLL (kernel → TKernelInterface.dll;
+│   │                  core classes at its root, then math/ containers/ strings/ file/ memory/ thread/ time/)
+│   ├── ppropertyparser/  PPropertyParser.dll
 │   ├── game/          jpog.exe: WinMain, application, crash handler
 │   └── hook/          x86 hook DLL (deferred)
 ├── tests/
-│   ├── kernel/        unit + differential tests per class
+│   ├── kernel/        unit + differential tests per class, same subfolders as src/toshi/kernel
 │   └── support/       original-DLL loader, float comparison, test helpers
 ├── cmake/             import libraries for the original engine DLLs
 ├── symbols/           export/import tables, classes and vtables of every original module

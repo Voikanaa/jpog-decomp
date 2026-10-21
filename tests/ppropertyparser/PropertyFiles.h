@@ -7,8 +7,8 @@
 #include "support/Differential.h"
 #include "support/FloatCompare.h"
 #include "support/OriginalModule.h"
-#include "toshi/kernel/TFile.h"
 #include "toshi/kernel/TSystem.h"
+#include "toshi/kernel/file/TFile.h"
 
 #include <cstdarg>
 #include <cstdio>

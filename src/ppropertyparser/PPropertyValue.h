@@ -2,12 +2,12 @@
 
 #include "common/abi.h"
 #include "common/layout.h"
-#include "toshi/kernel/TArray.h"
-#include "toshi/kernel/TCStringPool.h"
 #include "toshi/kernel/TLocale.h"
-#include "toshi/kernel/TManagedPtr.h"
 #include "toshi/kernel/TRefCounted.h"
-#include "toshi/kernel/TWStringPool.h"
+#include "toshi/kernel/containers/TArray.h"
+#include "toshi/kernel/containers/TManagedPtr.h"
+#include "toshi/kernel/strings/TCStringPool.h"
+#include "toshi/kernel/strings/TWStringPool.h"
 
 namespace Toshi
 {

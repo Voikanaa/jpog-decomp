@@ -2,12 +2,12 @@
 
 #include "ppropertyparser/PProperties.h"
 #include "ppropertyparser/PPropertyName.h"
-#include "toshi/kernel/TCString.h"
 #include "toshi/kernel/TObject.h"
-#include "toshi/kernel/TQuaternion.h"
-#include "toshi/kernel/TVector2.h"
-#include "toshi/kernel/TVector3.h"
-#include "toshi/kernel/TWString.h"
+#include "toshi/kernel/math/TQuaternion.h"
+#include "toshi/kernel/math/TVector2.h"
+#include "toshi/kernel/math/TVector3.h"
+#include "toshi/kernel/strings/TCString.h"
+#include "toshi/kernel/strings/TWString.h"
 
 #include <bit>
 #include <cmath>

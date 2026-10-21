@@ -1,7 +1,7 @@
 #pragma once
 
-#include "toshi/kernel/TManagedPtr.h"
 #include "toshi/kernel/TScheduler.h"
+#include "toshi/kernel/containers/TManagedPtr.h"
 #include "toshi/render/TRenderInterface.h"
 
 class AOptions;

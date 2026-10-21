@@ -1,7 +1,7 @@
 #pragma once
 
 #include "common/layout.h"
-#include "toshi/kernel/TNodeList.h"
+#include "toshi/kernel/containers/TNodeList.h"
 
 namespace Toshi
 {

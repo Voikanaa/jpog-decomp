@@ -3,12 +3,12 @@
 #include "common/abi.h"
 #include "common/layout.h"
 #include "ppropertyparser/PPropertyBlock.h"
-#include "toshi/kernel/SortedArray.h"
-#include "toshi/kernel/TCString.h"
-#include "toshi/kernel/TFileLexer.h"
-#include "toshi/kernel/TManagedPtr.h"
 #include "toshi/kernel/TObject.h"
-#include "toshi/kernel/TWString.h"
+#include "toshi/kernel/containers/SortedArray.h"
+#include "toshi/kernel/containers/TManagedPtr.h"
+#include "toshi/kernel/file/TFileLexer.h"
+#include "toshi/kernel/strings/TCString.h"
+#include "toshi/kernel/strings/TWString.h"
 
 namespace Toshi
 {

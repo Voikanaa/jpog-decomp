@@ -1,7 +1,7 @@
 #pragma once
 
-#include "toshi/kernel/TNodeTree.h"
 #include "toshi/kernel/TObject.h"
+#include "toshi/kernel/containers/TNodeTree.h"
 
 namespace Toshi
 {

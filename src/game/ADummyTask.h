@@ -1,7 +1,7 @@
 #pragma once
 
-#include "toshi/kernel/TCString.h"
 #include "toshi/kernel/TScheduler.h"
+#include "toshi/kernel/strings/TCString.h"
 
 // A named task with no behaviour of its own (SimJP.exe): AApplication groups the game's tasks
 // under five of these (render, three update stages, input).

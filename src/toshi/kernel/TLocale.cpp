@@ -1,8 +1,8 @@
 #include "toshi/kernel/TLocale.h"
 
-#include "toshi/kernel/TFile.h"
-#include "toshi/kernel/TFileLexer.h"
 #include "toshi/kernel/TSystem.h"
+#include "toshi/kernel/file/TFile.h"
+#include "toshi/kernel/file/TFileLexer.h"
 
 #include <cstdarg>
 #include <intrin.h>

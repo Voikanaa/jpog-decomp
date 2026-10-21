@@ -4,13 +4,13 @@
 #include "common/layout.h"
 #include "ppropertyparser/PPropertyBlock.h"
 #include "ppropertyparser/PPropertyValue.h"
-#include "toshi/kernel/TArray.h"
-#include "toshi/kernel/TCString.h"
 #include "toshi/kernel/TEvent.h"
-#include "toshi/kernel/TFileLexer.h"
-#include "toshi/kernel/TManagedPtr.h"
-#include "toshi/kernel/TMap.h"
 #include "toshi/kernel/TObject.h"
+#include "toshi/kernel/containers/TArray.h"
+#include "toshi/kernel/containers/TManagedPtr.h"
+#include "toshi/kernel/containers/TMap.h"
+#include "toshi/kernel/file/TFileLexer.h"
+#include "toshi/kernel/strings/TCString.h"
 
 namespace Toshi
 {

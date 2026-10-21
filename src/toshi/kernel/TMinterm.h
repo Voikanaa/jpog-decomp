@@ -1,7 +1,7 @@
 #pragma once
 
 #include "common/layout.h"
-#include "toshi/kernel/TArray.h"
+#include "toshi/kernel/containers/TArray.h"
 
 namespace Toshi
 {
