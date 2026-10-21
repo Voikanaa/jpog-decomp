@@ -34,7 +34,7 @@ jobs:
         run: python tools/check_repo.py
       - name: Python tools compile
         run: python -m compileall -q tools
-      - uses: astral-sh/setup-uv@v10
+      - uses: astral-sh/setup-uv@v10.3.0
       - name: Install pinned clang-format
         run: uv sync --locked
       - name: C++ formatting
