@@ -43,7 +43,7 @@ LGPL linked dynamically).
   ones with the hash. Milestones M0b–M6 mirror `docs/plan.md`.
 - LF line endings except `.bat` (`.gitattributes`). Pre-commit hook (`.githooks/`, enabled) runs
   `check_repo.py --staged` and `format.py --check`. CI (`.github/workflows/ci.yml`) builds
-  `x86-debug` + `x64-debug` and runs the same checks.
+  every preset with `JPOG_WERROR=ON` (`/WX`; keep code warning-free) and runs the same checks.
 
 ## Layout
 - `JPOG/` original install (read-only reference): `SimJP.exe`, engine DLLs (`T*Interface.dll`,

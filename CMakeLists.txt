@@ -38,6 +38,13 @@ add_library(jpog_common INTERFACE)
 target_include_directories(jpog_common INTERFACE src)
 
 add_subdirectory(third_party)
+
+# Treat warnings as errors in our own code (CI turns this on); vendored code above is exempt.
+option(JPOG_WERROR "Treat compiler warnings as errors" OFF)
+if(JPOG_WERROR)
+  add_compile_options(/WX)
+endif()
+
 add_subdirectory(src/toshi/kernel)
 add_subdirectory(src/ppropertyparser)
 

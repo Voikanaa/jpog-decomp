@@ -104,6 +104,7 @@ tools\build.bat x64-debug    :: native x64 build + portable tests
 The x86 build copies `jpog.exe` and our `TKernelInterface.dll` and `PPropertyParser.dll` into
 `game\`, where the game must be run (`tools\build.bat x86-debug "-DJPOG_REPLACE_KERNEL=OFF"` or
 `"-DJPOG_REPLACE_PPROPERTYPARSER=OFF"` puts the original DLL back).
+CI builds every preset with `"-DJPOG_WERROR=ON"` (warnings as errors); pass it locally to match.
 Differential tests find the original DLLs in `JPOG\` (override with the `JPOG_ORIGINAL_DIR`
 environment variable) and are skipped when the game is not present, as in CI.
 
