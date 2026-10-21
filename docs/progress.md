@@ -36,6 +36,9 @@ original export on the same inputs. Float results must match bit for bit unless 
 justifies a tolerance.
 
 ## Log
+- 2026-10-21: Retargeted to a cross-platform build (Windows x64, Linux x64, macOS arm64/x64) on
+  SDL3, bgfx, miniaudio, FFmpeg and Dear ImGui, all vendored; new phase P (#34-#37). The x86
+  verification build stays.
 - 2026-10-21: History rewritten (#32): one author identity, personal paths and old analysis
   tooling removed. All commit hashes changed; re-clone other checkouts.
 - 2026-10-19: Game: options drive the display (#21). `AOptionLogic` (SimJP.exe 0x473710..0x474A60):

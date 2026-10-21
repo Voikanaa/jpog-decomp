@@ -1,18 +1,22 @@
 # JPOG Decompilation Project
 
 Reverse engineering of *Jurassic Park: Operation Genesis* (2003, Blue Tongue / Vivendi).
-**Goal:** a native Windows x86-64 build of the game that runs the original `Data/`. Full plan:
-`docs/plan.md`.
+**Goal:** a modern native cross-platform build (Windows x64, Linux x64, macOS arm64/x64) that
+runs the original `Data/`. Full plan: `docs/plan.md`.
 
 ## Strategy (agreed with the user)
 - Incremental reimplementation (re3/OpenJPOG style): portable C++ replaces original functions one
-  at a time; at 100% coverage the same source builds as a standalone x64 exe.
-- Order: TKernelInterface → file formats → other engine modules → SimJP game code → platform swap.
-- x64 platform targets: Direct3D 11, Raw Input, miniaudio (replaces FMOD 3), FFmpeg DLL (replaces
-  Bink). Ask before downloading any of these.
+  at a time, verified in the x86 Windows build; the same source builds the portable `jpog`.
+- Order: TKernelInterface → file formats → other engine modules → SimJP game code → platform swap;
+  the portable foundation (phase P: multi-OS CI, `src/platform/`, shell) runs in parallel.
+- Portable stack: SDL3 (window/input/paths), bgfx (+ `shaderc`), miniaudio (for FMOD 3), FFmpeg
+  loaded at run time (Bink), Dear ImGui (dev menu), Tracy (`JPOG_TRACY`), stb_image_write,
+  doctest. All vendored in `third_party/` (pinned, unmodified); ask before downloading each. The
+  kernel stays SDL-free: its OS calls go through `src/platform/` (Win32/POSIX).
 - Code rules: no pointer↔int casts, no 32-bit-pointer assumptions, parse file formats explicitly
-  (never cast file bytes onto structs with pointers). x86 build: `static_assert` layouts
-  (`src/common/layout.h`).
+  (never cast file bytes onto structs with pointers); fixed-width ints (`long` is 64-bit on
+  Linux/macOS), UTF-16 game strings (`wchar_t` is 32-bit off Windows), case-insensitive `\` data
+  paths, no fast-math or FMA contraction. x86: `static_assert` layouts (`src/common/layout.h`).
 - Names come from the exported mangled symbols (`symbols/`). Notes go in `docs/` (REA cannot
   rename items in the Ghidra database on Windows).
 
@@ -33,7 +37,7 @@ Reverse engineering of *Jurassic Park: Operation Genesis* (2003, Blue Tongue / V
 ## License
 GPL-3.0-or-later (`LICENSE`), covering our code/tools/docs only: not the game, its assets or
 trademarks, or vendored third-party code. New deps must be GPLv3-compatible (MIT, BSD, zlib,
-LGPL linked dynamically).
+Apache-2.0, LGPL linked dynamically).
 
 ## Version control and issues
 - Remote `git@github.com:Voikanaa/jpog-decomp.git` (private), branch `main`.
