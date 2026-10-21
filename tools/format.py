@@ -4,7 +4,7 @@ Usage:
   python tools/format.py           reformat src/ and tests/ in place
   python tools/format.py --check   report violations and exit non-zero (used in CI)
 
-clang-format is looked up in $CLANG_FORMAT, toolchain/clang-format/, then PATH, and must be
+clang-format is looked up in $CLANG_FORMAT, the project .venv (requirements-dev.txt), then PATH, and must be
 exactly the pinned version: formatting differs between releases, so local runs and CI must agree.
 """
 import argparse
@@ -21,7 +21,8 @@ PATTERNS = ["src/*.cpp", "src/*.h", "src/*.hpp", "src/*.inl", "tests/*.cpp", "te
 def find_clang_format():
     candidates = [
         os.environ.get("CLANG_FORMAT"),
-        os.path.join(ROOT, "toolchain", "clang-format", "clang-format.exe"),
+        os.path.join(ROOT, ".venv", "Scripts", "clang-format.exe"),
+        os.path.join(ROOT, ".venv", "bin", "clang-format"),
         shutil.which("clang-format"),
     ]
     for exe in filter(None, candidates):
@@ -31,8 +32,8 @@ def find_clang_format():
         if f"version {PINNED_VERSION}" in version:
             return exe
         print(f"skipping {exe}: {version.strip()} (need {PINNED_VERSION})", file=sys.stderr)
-    sys.exit(f"clang-format {PINNED_VERSION} not found; see toolchain/ in CLAUDE.md or "
-             f"`pip install clang-format=={PINNED_VERSION}`")
+    sys.exit(f"clang-format {PINNED_VERSION} not found; run `python -m venv .venv` and "
+             f"`.venv\\Scripts\\pip install -r requirements-dev.txt`")
 
 
 def tracked_sources():

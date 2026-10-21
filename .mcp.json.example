@@ -5,9 +5,9 @@
       "args": ["/d", "/c", "npx", "-y", "rea-agents@6.5.0", "mcp"],
       "env": {
         "GHIDRA_INSTALL_DIR": "${GHIDRA_DIR}",
-        "TEMP": "${PROJECT_DIR}\\.rea-tmp",
-        "TMP": "${PROJECT_DIR}\\.rea-tmp",
-        "npm_config_cache": "${PROJECT_DIR}\\.rea-tmp\\npm-cache"
+        "TEMP": "${PROJECT_DIR}\\.cache\\rea",
+        "TMP": "${PROJECT_DIR}\\.cache\\rea",
+        "npm_config_cache": "${PROJECT_DIR}\\.cache\\rea\\npm-cache"
       }
     }
   }

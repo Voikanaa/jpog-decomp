@@ -79,7 +79,7 @@ almost 3 million differential checks, bit-exact for all float code.
 | | |
 |---|---|
 | Compiler | Visual Studio 2022+ or Build Tools, with the *C++ x86/x64 build tools* (found automatically via `vswhere`) |
-| Tools | Python 3.10+, Git, clang-format 20.1.8 (`pip install clang-format==20.1.8`, or put the exe in `toolchain/clang-format/`) |
+| Tools | Python 3.10+, Git, clang-format 20.1.8 (installed into the project `.venv`, see Setup) |
 | Analysis (optional) | Ghidra 12.1.4 (any location: `python tools/setup_mcp.py --ghidra <dir>`) and JDK 21+ |
 | Game | Your own copy of *Jurassic Park: Operation Genesis* (PC) |
 
@@ -88,6 +88,8 @@ almost 3 million differential checks, bit-exact for all float code.
 git clone git@github.com:Voikanaa/jpog-decomp.git
 cd jpog-decomp
 git config core.hooksPath .githooks       :: enable the pre-commit hygiene check
+python -m venv .venv                      :: project-local Python env (gitignored)
+.venv\Scripts\pip install -r requirements-dev.txt   :: pinned clang-format
 
 :: Put the installed game in JPOG\ (read-only reference) and a working copy in game\
 python tools\dump_exports.py              :: regenerate symbols\ (optional; already committed)

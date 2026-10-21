@@ -2,8 +2,8 @@
 /JPOG/
 /game/
 # Tools and caches
-/toolchain/
-/.rea-tmp/
+/.venv/
+/.cache/
 /build/
 /out/
 __pycache__/

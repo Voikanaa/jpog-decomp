@@ -33,8 +33,8 @@ LGPL linked dynamically).
 
 ## Version control and issues
 - Remote `git@github.com:Voikanaa/jpog-decomp.git` (private), branch `main`.
-- **Never commit** game files (`JPOG/`, `game/`, ISO, any `.exe`/`.dll`/assets), `toolchain/`,
-  `build/`, `analysis/`, `.rea-tmp/`, `rea-ghidra-*/`, `.claude/settings.local.json`, `.mcp.json`.
+- **Never commit** game files (`JPOG/`, `game/`, ISO, any `.exe`/`.dll`/assets), `.venv/`,
+  `.cache/`, `build/`, `analysis/`, `rea-ghidra-*/`, `.claude/settings.local.json`, `.mcp.json`.
   Check with `git add -A --dry-run` before larger commits.
 - **Commit frequently** in small logical units once verified, then push. Update README.md (status,
   tools, layout, setup) and this file in the same commit when they change.
@@ -87,12 +87,12 @@ LGPL linked dynamically).
   (spills become `tN`). **Use it for all float code**; Ghidra's sums are not reliable.
 - Installed system-wide: VS Build Tools 2026 (MSVC 14.51, SDK 10.0.26100, CMake/Ninja), git,
   Python 3.15, JDK 25, gh 2.102.0 (global; user logs in once with `gh auth login`). Ghidra 12.1.4
-  outside the repo (here `<ghidra-dir>`; set via `setup_mcp.py --ghidra`). Project-local
-  `toolchain/`: clang-format 20.1.8.
+  outside the repo (here `<ghidra-dir>`; set via `setup_mcp.py --ghidra`). Project `.venv/`
+  (`requirements-dev.txt`): clang-format 20.1.8.
 - **REA MCP** (`rea-agents@6.5.0`, skill `reverse-engineer-anything`) for targeted queries
   (xrefs, bytes, single functions). `.mcp.json` from `.mcp.json.example` via
   `python tools/setup_mcp.py --ghidra <dir>` (remembered; `ghidra_export.py` reads it too), then
-  fully restart Claude Code. It sets `GHIDRA_INSTALL_DIR` and TEMP/npm cache at `.rea-tmp\`.
+  fully restart Claude Code. It sets `GHIDRA_INSTALL_DIR` and TEMP/npm cache at `.cache\rea\`.
   Usage: `open_binary` (absolute path) → `binary_overview`/`search_procedures`/`procedure_pseudo_code` → `close_binary`.
 
 ## Key findings
