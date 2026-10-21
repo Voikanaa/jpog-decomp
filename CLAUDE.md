@@ -48,6 +48,8 @@ Apache-2.0, LGPL linked dynamically).
   Check with `git add -A --dry-run` before larger commits.
 - **Commit frequently** in small logical units once verified, then push. Update README.md (status,
   tools, layout, setup) and this file in the same commit when they change.
+- **Pull requests are always merged with squash and merge** (`gh pr merge --squash`), never a
+  merge commit or rebase.
 - **Issues:** `gh -R Voikanaa/jpog-decomp`. Every work item has an issue;
   reference it (`Refs #n` / `Fixes #n`), tick checklists, open issues for new work, close finished
   ones with the hash. Milestones M0b–M6 mirror `docs/plan.md`.
