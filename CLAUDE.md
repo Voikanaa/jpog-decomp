@@ -87,8 +87,10 @@ LGPL linked dynamically).
   (spills become `tN`). **Use it for all float code**; Ghidra's sums are not reliable.
 - Installed system-wide: VS Build Tools 2026 (MSVC 14.51, SDK 10.0.26100, CMake/Ninja), git,
   Python 3.15, JDK 25, gh 2.102.0 (global; user logs in once with `gh auth login`). Ghidra 12.1.4
-  outside the repo (here `<ghidra-dir>`; set via `setup_mcp.py --ghidra`). Project `.venv/`
-  (`requirements-dev.txt`): clang-format 20.1.8.
+  outside the repo (here `<ghidra-dir>`; set via `setup_mcp.py --ghidra`). uv 0.12
+  (user-installed). Project `.venv/` from `uv sync` (`pyproject.toml`/`uv.lock`; this machine needs
+  `--system-certs`): clang-format 20.1.8. After dep changes: `uv lock` and regenerate the pip
+  fallback with `uv export --only-group dev --no-hashes --no-header -o requirements-dev.txt`.
 - **REA MCP** (`rea-agents@6.5.0`, skill `reverse-engineer-anything`) for targeted queries
   (xrefs, bytes, single functions). `.mcp.json` from `.mcp.json.example` via
   `python tools/setup_mcp.py --ghidra <dir>` (remembered; `ghidra_export.py` reads it too), then
