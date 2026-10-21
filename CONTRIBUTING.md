@@ -9,6 +9,8 @@ GPL-3.0-or-later (see `LICENSE`).
   hook enforce this.
 - **New third-party dependencies need explicit approval.** This covers libraries, tools and
   GitHub Actions beyond `actions/checkout`.
+- **Other projects: facts only.** Cite and verify findings from OpenJPOG, modding tools etc.,
+  but never copy, translate or port their code. Credit new sources in [CREDITS.md](CREDITS.md).
 
 ## One-time setup per clone
 ```
