@@ -6,6 +6,7 @@ from. Statuses:
 - **external:** documented elsewhere but not verified by us yet.
 - **partial:** magic or structure seen, not understood.
 - **unknown:** nothing beyond the extension.
+- **standard:** a public format (DDS, TGA, WAV, Ogg, Bink); no project research needed.
 
 The "Seen in" column lists the original binaries whose strings mention the extension (SimJP.exe
 is packed, so it is incomplete). Sources are explained in [CREDITS.md](../../CREDITS.md).
