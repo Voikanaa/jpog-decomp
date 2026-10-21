@@ -179,8 +179,10 @@ The repository contains no game code or assets: only original reimplementation c
 documentation, plus symbol names extracted from the binaries for interoperability. To use it you
 need your own legally obtained copy of the game.
 
+#
+
 <div align="center">
 
-<img src="docs/dennis_nedry.gif" alt="Dennis Nedry" width="300">
+<img src="docs/dennis_nedry.gif" alt="Dennis Nedry">
 
 </div>
