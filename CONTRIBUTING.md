@@ -48,6 +48,8 @@ issues for work discovered along the way.
 - C++20, formatted by `.clang-format` (tabs, Allman braces, 120 columns). Run
   `python tools/format.py` before committing; it uses the pinned clang-format 20.1.8, and CI and
   the pre-commit hook reject unformatted code.
+- Python tools target 3.10+, use only the standard library, and must pass `ruff check tools`
+  (pinned ruff 0.17.1; CI and the pre-commit hook run it).
 - Names follow the original symbols (`Toshi::TCString`, `AUnitDinosaur::...`), and member
   variables keep the original's `m_` prefix where known.
 - Signatures must match the original exports exactly, including quirks such as non-const

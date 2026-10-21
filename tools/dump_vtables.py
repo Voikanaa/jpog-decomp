@@ -53,7 +53,7 @@ def main():
         imports = load_imports(stem)
         text = [(va + pe.image_base, va + pe.image_base + size) for va, size, _ in pe.sections[:1]]
 
-        def resolve(target):
+        def resolve(target, functions=functions, pe=pe, imports=imports, stem=stem):
             if target in functions:
                 return functions[target]
             try:

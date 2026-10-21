@@ -7,10 +7,23 @@ requires-python = ">=3.10"
 dependencies = []
 
 [dependency-groups]
-dev = ["clang-format==20.1.8"]
+dev = [
+    "clang-format==20.1.8",
+    "ruff==0.17.1",
+]
 
 [tool.uv]
 package = false
 # Keep uv's cache inside the repo and never download interpreters into user directories.
 cache-dir = ".cache/uv"
 python-preference = "only-system"
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+# pyflakes, pycodestyle, bugbear, pyupgrade, simplify.
+select = ["F", "E", "W", "B", "UP", "SIM"]
+# One-shot `open(path).read()` reads are fine in these short-lived scripts.
+ignore = ["SIM115"]

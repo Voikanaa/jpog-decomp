@@ -185,9 +185,9 @@ class Machine:
         addr = self.address(operand)
         # Arithmetic already rounds to float at gameplay precision, but transcendental and call
         # results carry extended precision until they are spilled to a float local.
-        if addr[0] == "sp" and MEM.match(operand).group(1) == "dword" and value[0] == "sym":
-            if value[1].startswith(("sin(", "cos(", "atan2(", "sqrt(")) or value[1].endswith("()"):
-                value = ("sym", f"float({value[1]})")
+        if (addr[0] == "sp" and MEM.match(operand).group(1) == "dword" and value[0] == "sym"
+                and (value[1].startswith(("sin(", "cos(", "atan2(", "sqrt(")) or value[1].endswith("()"))):
+            value = ("sym", f"float({value[1]})")
         # Name compound values spilled to the stack, so long expressions stay readable.
         if addr[0] == "sp" and value[0] == "sym" and " " in value[1]:
             name = f"t{self.temps}"
@@ -312,7 +312,8 @@ class Machine:
             self.st[-1] = f"atan2({self.text(('sym', y))}, {self.text(('sym', x))})"
         elif mnem in ("fcom", "fcomp", "fcompp", "fucom", "fucomp", "fucompp", "ftst"):
             other = self.operand_expr(ops) if ops else (self.st[self.sti(1)] if mnem != "ftst" else "0.0")
-            self.events.append(f"; {addr:08X} compare {self.text(('sym', self.st[-1]))} with {self.text(('sym', other))}")
+            self.events.append(
+                f"; {addr:08X} compare {self.text(('sym', self.st[-1]))} with {self.text(('sym', other))}")
             for _ in range(mnem.count("p")):
                 self.pop()
         elif mnem in ("fnstsw", "sahf", "test", "cmp", "fldcw", "fnstcw", "fwait", "nop", "int3"):
@@ -336,7 +337,8 @@ class Machine:
             regs["esp"] = ("ptr", "sp", regs["esp"][2] + (-amount if mnem == "sub" else amount))
         elif mnem == "xor" and parts[0] == parts[1] and parts[0] in regs:
             regs[parts[0]] = ("int", 0)
-        elif mnem in ("add", "sub", "inc", "dec", "shl") and parts and parts[0] in regs and regs[parts[0]][0] in ("int", "ptr"):
+        elif (mnem in ("add", "sub", "inc", "dec", "shl") and parts and parts[0] in regs
+              and regs[parts[0]][0] in ("int", "ptr")):
             reg = parts[0]
             amount = 1 if mnem in ("inc", "dec") else (
                 int(parts[1].rstrip("h"), 16) if parts[1].endswith("h") else int(parts[1]))
@@ -377,7 +379,8 @@ class Machine:
         name = next((n for a, _, n in self.rows if a == target), ops)
         esp = self.regs["esp"][2]
         args = [self.text(self.memory.get(("sp", esp + 4 * k), ("sym", "?"))) for k in range(4)]
-        self.events.append(f"; {addr:08X} call {name} (ecx={self.text(self.regs['ecx'])}, stack: {', '.join(args)}, ...)")
+        self.events.append(
+            f"; {addr:08X} call {name} (ecx={self.text(self.regs['ecx'])}, stack: {', '.join(args)}, ...)")
         # The callee pops its own arguments for __stdcall/__thiscall: take the count from its ret.
         popped = 0
         entry = next((r for r in self.rows if r[0] == target), None)

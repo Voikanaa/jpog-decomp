@@ -55,7 +55,7 @@ def export(module_path, headless):
            "-scriptPath", SCRIPT_DIR, "-postScript", "ExportDecompilation.java", OUTPUT]
     print(f"== {stem}", flush=True)
     result = subprocess.run(cmd, capture_output=True, text=True, errors="replace")
-    summary = [l for l in result.stdout.splitlines() if "ExportDecompilation:" in l]
+    summary = [line for line in result.stdout.splitlines() if "ExportDecompilation:" in line]
     if result.returncode != 0 or not summary:
         sys.stderr.write(result.stdout[-4000:] + result.stderr[-4000:])
         sys.exit(f"Ghidra export failed for {stem} (exit {result.returncode})")

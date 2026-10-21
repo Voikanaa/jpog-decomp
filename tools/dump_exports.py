@@ -57,7 +57,7 @@ class PE:
         funcs = struct.unpack_from(f"<{nfun}I", self.data, self.off(afun)) if nfun else ()
         names = struct.unpack_from(f"<{nnames}I", self.data, self.off(anames)) if nnames else ()
         ords = struct.unpack_from(f"<{nnames}H", self.data, self.off(aords)) if nnames else ()
-        by_index = {i: self.cstr(n) for n, i in zip(names, ords)}
+        by_index = {i: self.cstr(n) for n, i in zip(names, ords, strict=True)}
         return [(base + i, f, by_index.get(i, "")) for i, f in enumerate(funcs) if f]
 
     def imports(self):
@@ -95,10 +95,10 @@ def demangle_all(names):
         out = subprocess.run([msvc.tool("undname.exe"), tmp], capture_output=True, text=True, errors="replace").stdout
     finally:
         os.unlink(tmp)
-    lines = [l for l in out.splitlines() if l.strip()]
+    lines = [line for line in out.splitlines() if line.strip()]
     # undname echoes a banner first; the final len(names) lines are the results in order.
     lines = lines[-len(names):]
-    return dict(zip(names, lines))
+    return dict(zip(names, lines, strict=True))
 
 
 def class_of(mangled):
