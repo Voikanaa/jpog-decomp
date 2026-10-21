@@ -41,6 +41,10 @@ if(MSVC)
 else()
   # No FMA contraction or fast-math: float results must match the original's (docs/plan.md).
   add_compile_options(-Wall -Wextra -ffp-contract=off -fno-fast-math)
+  # Fields kept only for the original layout are often unused.
+  if(CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+    add_compile_options(-Wno-unused-private-field)
+  endif()
 endif()
 if(WIN32)
   add_compile_definitions(WIN32_LEAN_AND_MEAN NOMINMAX)
