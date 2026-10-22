@@ -10,5 +10,5 @@ labels: ["bug"]
 
 **Steps to reproduce**
 
-**Build / preset**
-<!-- x86-debug, x64-debug, ... -->
+**Build / preset and system**
+<!-- Preset (x86-debug, x64-debug, ...), OS and compiler version -->

@@ -11,6 +11,11 @@ __pycache__/
 /rea-ghidra-*/
 # Per-machine settings and artefacts
 /.claude/settings.local.json
+/CMakeUserPresets.json
+/.vs/
+/.vscode/
+/.idea/
+.DS_Store
 *.orig
 *.log
 /.mcp.json
