@@ -198,12 +198,22 @@ TEST_SUITE("TScheduler")
 		CHECK(Toshi::TFileManager::GetFileManager()->FindFileSystem("mem") != nullptr);
 		kernel->DumpInfo(); // only queries the system (debug run-time checks catch buffer overruns)
 
+		// A system library and one of its exports on each OS.
+#if defined(_WIN32)
 		const Toshi::TCString name("version.dll");
+		const char* const symbol = "GetFileVersionInfoA";
+#elif defined(__APPLE__)
+		const Toshi::TCString name("/usr/lib/libSystem.B.dylib");
+		const char* const symbol = "malloc";
+#else
+		const Toshi::TCString name("libc.so.6");
+		const char* const symbol = "malloc";
+#endif
 		Toshi::TKernelInterfaceDLL* module = kernel->LoadInterface(name);
 		REQUIRE(module != nullptr);
 		CHECK(kernel->LoadInterface(name) == module);
 		CHECK(kernel->FindInterface(name) == module);
-		CHECK(module->GetAddress("GetFileVersionInfoA") != nullptr);
+		CHECK(module->GetAddress(symbol) != nullptr);
 		CHECK(kernel->LoadInterface("no_such_module.dll") == nullptr);
 		kernel->UnloadInterface(name);
 		CHECK(kernel->FindInterface(name) == nullptr);
