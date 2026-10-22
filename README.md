@@ -218,6 +218,6 @@ The project's own code, tools and documentation are licensed under the
 *Jurassic Park*, *Jurassic Park: Operation Genesis* and their logos are trademarks of Universal
 City Studios and Amblin Entertainment; the game and the Toshi engine belong to their respective
 rights holders. This is an unofficial, non-commercial fan project, not affiliated with or
-endorsed by them, and the license above does not cover the game, its assets, names or logos
-(including `docs/jpog_decomp.png`). The repository contains only original code, tools and
-documentation, plus symbol names extracted from the binaries for interoperability.
+endorsed by them, and the license above does not cover the game, its assets, names or logos.
+The repository contains only original code, tools and documentation, plus symbol names
+extracted from the binaries for interoperability.
