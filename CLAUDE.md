@@ -45,7 +45,7 @@ trademarks, or vendored third-party code. New deps must be GPLv3-compatible (MIT
 Apache-2.0, LGPL linked dynamically).
 
 ## Version control and issues
-- Remote `git@github.com:Voikanaa/jpog-decomp.git` (private), branch `main`.
+- Remote `git@github.com:Voikanaa/jpog-decomp.git` (public), branch `main`.
 - **Never commit** game files (`JPOG/`, `game/`, ISO, any `.exe`/`.dll`/assets), `.venv/`,
   `.cache/`, `build/`, `analysis/`, `rea-ghidra-*/`, `.claude/settings.local.json`, `.mcp.json`.
   Check with `git add -A --dry-run` before larger commits.
@@ -53,15 +53,15 @@ Apache-2.0, LGPL linked dynamically).
   tools, layout, setup) and this file in the same commit when they change. The README status
   table (per-module counts, milestones) is hand-written; only its badge is generated.
   No studio logos, game artwork or film stills/GIFs in the repo or README (legal; the user's call).
-- **Pull requests are always merged with squash and merge** (`gh pr merge --squash`), never a
-  merge commit or rebase.
+- **PRs are always merged with squash and merge** (`gh pr merge --squash`), never merge/rebase.
 - **Issues:** `gh -R Voikanaa/jpog-decomp`. Every work item has an issue;
   reference it (`Refs #n` / `Fixes #n`), tick checklists, open issues for new work, close finished
   ones with the hash. Milestones M0b–M6 mirror `docs/plan.md`.
 - LF line endings except `.bat` (`.gitattributes`). Pre-commit hook (`.githooks/`, enabled) runs
   `check_repo.py --staged`, `format.py --check` and `ruff check tools`. CI: `ci.yml` builds every
   preset with `JPOG_WERROR=ON` (keep code warning-free), skipping docs-only changes; `checks.yml`
-  runs the hook's checks on every change. Don't trigger extra runs: the PR run is enough.
+  runs the hook's checks on every change. Don't trigger extra runs: the PR run is enough. Actions
+  are pinned to commit hashes (`# vX` comment; Dependabot bumps them monthly). `SECURITY.md`.
 
 ## Layout
 - `JPOG/` original install (read-only reference): `SimJP.exe`, engine DLLs (`T*Interface.dll`,

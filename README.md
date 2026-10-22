@@ -190,6 +190,7 @@ third_party/         pinned, vendored dependencies
 | [File formats](docs/formats/README.md) | Every file type in `Data/`: structure, status and sources |
 | [Contributing](CONTRIBUTING.md) | Ground rules, workflow, commits and code style |
 | [Credits](CREDITS.md) | The community research this project builds on |
+| [Security](SECURITY.md) | How to report a vulnerability privately |
 
 ## Credits
 

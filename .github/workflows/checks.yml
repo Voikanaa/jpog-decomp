@@ -20,12 +20,12 @@ jobs:
     name: Repository checks
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
       - name: No game binaries or oversized files
         run: python3 tools/check_repo.py
       - name: Python tools compile
         run: python3 -m compileall -q tools
-      - uses: astral-sh/setup-uv@v10.3.0
+      - uses: astral-sh/setup-uv@1c37ad07a6a961277cf70c0d37d6f313000f5884 # v10.3.0
       - name: Install pinned dev tools
         run: uv sync --locked
       - name: C++ formatting
