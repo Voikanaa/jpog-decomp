@@ -13,10 +13,10 @@ TEST_SUITE("PPropertyReader")
 {
 	TEST_CASE("property sets, values and comments")
 	{
-		auto* file = new TStringFile("// first\n"
-		                             "a = 12; b[2] = \"s\"; c.d = 2.5; e;\n"
-		                             "list = { 1, 4u, { true }, }; ref = n[x];\n"
-		                             "set { f = false; g = ident; }\n");
+		auto* file = NewStringFile("// first\n"
+		                           "a = 12; b[2] = \"s\"; c.d = 2.5; e;\n"
+		                           "list = { 1, 4u, { true }, }; ref = n[x];\n"
+		                           "set { f = false; g = ident; }\n");
 		PPropertyReader reader;
 		reader.SetLoadComments(true);
 		REQUIRE(reader.Open(TCString("test.ini"), file));
@@ -32,7 +32,7 @@ TEST_SUITE("PPropertyReader")
 	TEST_CASE("errors and blocks")
 	{
 		PPropertyReader reader;
-		REQUIRE(reader.Open(TCString("test.ini"), new TStringFile("x = 1\ny = 2;")));
+		REQUIRE(reader.Open(TCString("test.ini"), NewStringFile("x = 1\ny = 2;")));
 		EventLog log(reader.GetParseErrorEmitter());
 		PProperties properties;
 		CHECK_FALSE(reader.LoadPropertyBlock(properties));
@@ -42,7 +42,7 @@ TEST_SUITE("PPropertyReader")
 
 		// The original crashes here.
 		PPropertyReader scalar;
-		REQUIRE(scalar.Open(TCString("test.ini"), new TStringFile("a = 1; a.b = 2;")));
+		REQUIRE(scalar.Open(TCString("test.ini"), NewStringFile("a = 1; a.b = 2;")));
 		EventLog scalarLog(scalar.GetParseErrorEmitter());
 		PProperties scalarProperties;
 		CHECK_FALSE(scalar.LoadPropertyBlock(scalarProperties));
@@ -59,7 +59,7 @@ TEST_SUITE("PPropertyReader")
 		                                                       }));
 		PPropertyReader blocks;
 		blocks.AddDefinitionBlock(block);
-		REQUIRE(blocks.Open(TCString("test.ini"), new TStringFile("[A] a = 1; [C] b { c = 2; } d; [A] e = 3;")));
+		REQUIRE(blocks.Open(TCString("test.ini"), NewStringFile("[A] a = 1; [C] b { c = 2; } d; [A] e = 3;")));
 		EventLog blockLog(blocks.GetParseErrorEmitter());
 		CHECK(blocks.Load());
 		CHECK(loaded == std::vector<std::string>{"a[]=i1; ", "e[]=i3; "});
@@ -88,11 +88,11 @@ TEST_SUITE("PPropertyReader differential" * doctest::skip(PPropertyParserMissing
 			const bool comments = round % 2 == 0;
 
 			alignas(void*) unsigned char reader[0x58];
-			original.Open(reader, new TStringFile(text), comments);
+			original.Open(reader, NewStringFile(text), comments);
 			EventLog originalLog(reader + 0x38);
 			PPropertyReader ours;
 			ours.SetLoadComments(comments);
-			REQUIRE(ours.Open(TCString("test.ini"), new TStringFile(text)));
+			REQUIRE(ours.Open(TCString("test.ini"), NewStringFile(text)));
 			EventLog ourLog(ours.GetParseErrorEmitter());
 
 			// Repeated loads also cover reading on after a set ends at an unexpected token.
@@ -119,7 +119,7 @@ TEST_SUITE("PPropertyReader differential" * doctest::skip(PPropertyParserMissing
 		PPropertyReader ours;
 		void* const* vtable = *reinterpret_cast<void* const* const*>(&ours);
 		const TCString name("test.ini");
-		CHECK((Method<bool, const TCString*, TFile*>{vtable[3]}(&ours, &name, new TStringFile("a = 1;"))));
+		CHECK((Method<bool, const TCString*, TFile*>{vtable[3]}(&ours, &name, NewStringFile("a = 1;"))));
 		CHECK(ours.GetLexer() != nullptr);
 	}
 
@@ -153,7 +153,7 @@ TEST_SUITE("PPropertyReader differential" * doctest::skip(PPropertyParserMissing
 			}
 
 			alignas(void*) unsigned char reader[0x58];
-			original.Open(reader, new TStringFile(text), false);
+			original.Open(reader, NewStringFile(text), false);
 			for (auto& block : originalBlocks)
 			{
 				// The callee releases its by-value TManagedPtr.
@@ -164,7 +164,7 @@ TEST_SUITE("PPropertyReader differential" * doctest::skip(PPropertyParserMissing
 			PPropertyReader ours;
 			for (auto& block : ourBlocks)
 				ours.AddDefinitionBlock(block);
-			REQUIRE(ours.Open(TCString("test.ini"), new TStringFile(text)));
+			REQUIRE(ours.Open(TCString("test.ini"), NewStringFile(text)));
 			EventLog ourLog(ours.GetParseErrorEmitter());
 
 			CHECK(original.load(reader) == ours.Load());

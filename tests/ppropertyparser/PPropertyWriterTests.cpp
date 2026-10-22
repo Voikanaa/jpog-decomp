@@ -12,7 +12,7 @@ namespace
 void Read(const std::string& text, PProperties& properties)
 {
 	PPropertyReader reader;
-	REQUIRE(reader.Open(TCString("test.ini"), new TStringFile(text)));
+	REQUIRE(reader.Open(TCString("test.ini"), NewStringFile(text)));
 	reader.LoadPropertyBlock(properties);
 }
 
@@ -159,7 +159,7 @@ TEST_SUITE("PPropertyWriter differential" * doctest::skip(PPropertyParserMissing
 			const bool hex = round % 3 != 0;
 
 			alignas(void*) unsigned char originalReader[0x58];
-			reader.Open(originalReader, new TStringFile(text), false);
+			reader.Open(originalReader, NewStringFile(text), false);
 			alignas(void*) unsigned char originalSet[0x18];
 			reader.constructProperties(originalSet);
 			reader.loadBlock(originalReader, originalSet);

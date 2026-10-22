@@ -44,3 +44,5 @@ if(NOT JPOG_X86 AND NOT MSVC)
 endif()
 
 add_test(NAME jpog_tests COMMAND jpog_tests)
+# Leaks the original has on purpose (linux-asan); ignored by other builds.
+set_tests_properties(jpog_tests PROPERTIES ENVIRONMENT "LSAN_OPTIONS=suppressions=${CMAKE_CURRENT_SOURCE_DIR}/lsan.supp")
