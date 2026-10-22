@@ -3,7 +3,8 @@
 All modules are 32-bit PE files built with MSVC 6 (linker 6.0). Every engine/game module exports
 its C++ API by mangled name. Full tables, regenerated with `python tools/dump_exports.py`, are in
 `symbols/<module>.exports.csv` / `.imports.csv`, and the per-class summary is in
-`symbols/classes.csv` (923 classes).
+`symbols/classes.csv` (923 classes). Reimplementation status per module is in
+[progress.md](progress.md), the game's data files in [formats/](formats/README.md).
 
 | Module | Exports | Role | Depends on |
 |---|---:|---|---|
