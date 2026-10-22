@@ -39,6 +39,14 @@ inputs. Float results must match bit for bit unless a comment justifies a tolera
 gap is #42.
 
 ## Log
+- 2026-10-22: **Portable shell** (#37): `src/shell/` builds the standalone `jpog` on Windows x64,
+  Linux and macOS. SDL3 window and events; bgfx on the native window (D3D11 by default on
+  Windows, Metal on macOS, Vulkan/OpenGL on Linux; `--renderer`); the developer menu (F1) on
+  Dear ImGui with our own bgfx renderer backend, shaders compiled by shaderc at build time (DXBC,
+  SPIR-V, GLSL 4.30, Metal); miniaudio output; a run-time FFmpeg probe; the kernel's scheduler
+  ticks every frame. `--screenshot` writes PNGs (stb_image_write). D3D11, D3D12 (with DXBC),
+  Vulkan and OpenGL draw the menu on Windows; `jpog --smoke` (dummy video, Noop renderer, null
+  audio) passes on every CI OS, including ASan/UBSan/LSan.
 - 2026-10-22: **Portable foundation P1** (#34, #35): kernel, PPropertyParser and the unit tests
   build and pass on Windows x64, Linux (GCC, Clang, ASan/UBSan/LSan) and macOS (universal), with
   clang-tidy, in CI. Every kernel OS call goes through `src/platform/` (Win32, POSIX), with own

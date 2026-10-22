@@ -9,10 +9,9 @@ runs the original `Data/`. Full plan: `docs/plan.md`.
   at a time, verified in the x86 Windows build; the same source builds the portable `jpog`.
 - Order: TKernelInterface → file formats → other engine modules → SimJP game code → platform swap;
   the portable foundation (phase P: multi-OS CI, `src/platform/`, shell) runs in parallel.
-- **Current state:** kernel and PPropertyParser 100% (drop-in DLLs, 9.1% overall); M2 needs the
-  game to boot to the front end on our kernel (L2, options/display work in #21). Phase P: kernel,
-  PPropertyParser and tests build and pass on Windows, Linux (GCC, Clang, ASan/UBSan) and macOS
-  in CI; deps vendored (#36); next the SDL3 + bgfx shell (#37).
+- **Current state:** kernel and PPropertyParser 100% (drop-in DLLs, 9.1%); M2 needs the game to
+  boot to the front end on our kernel (L2, #21). Phase P: kernel, tests and the portable shell
+  `jpog` (#37) pass on Windows, Linux (GCC, Clang, ASan/UBSan) and macOS in CI.
 - Portable stack: SDL3 (window/input/paths), bgfx (+ `shaderc`), miniaudio (for FMOD 3), FFmpeg
   loaded at run time (Bink), Dear ImGui (dev menu), Tracy (`JPOG_TRACY`), stb_image_write,
   doctest. All vendored in `third_party/` (pinned, unmodified); ask before downloading each. The
@@ -80,16 +79,17 @@ Apache-2.0, LGPL linked dynamically).
   jpog.exe); `ppropertyparser/` (lib `ppropertyparser` + drop-in DLL, complete); declarations only:
   `toshi/application/`, `toshi/render/`, `toshi/renderd3d/`, `toshi/gui/`; `game/` (**jpog.exe**: WinMain, `AApplication` with the
   original task tree, `ARootTask`/`ARenderer` skeletons, `AOptions`/`AOptionLogic` (`Options.ini`,
-  display mode), `ALocale`, `CrashHandler`). No hook DLL yet (deferred, #2).
+  display mode), `ALocale`, `CrashHandler`). No hook DLL yet (deferred, #2). `shell/` (portable
+  **jpog**, not x86: SDL3, bgfx (D3D11 default; shaders via shaderc), ImGui F1 menu, miniaudio,
+  FFmpeg probe; `--smoke`/`--renderer`/`--screenshot`).
 - `tests/` doctest suite `jpog_tests` (ctest; `kernel/ ppropertyparser/ game/ support/`; `lsan.supp`: leaks the original has). `support/OriginalModule` loads the original
   DLLs from `JPOG_ORIGINAL_DIR` (default `<root>/JPOG`) for differential tests (x86 only, skipped
   without the game). `support/Differential.h`: `Same`, `Original<Fn>`/`OriginalPP<Fn>`, `KernelMissing`.
   `support/FloatCompare.h`: ULP compare + `InputGenerator`. Call `__thiscall` originals via
   `Method<R, Args...>`; by-value class returns pass the hidden result pointer first.
-- `third_party/` vendored pinned deps (README: versions/licenses/hashes). Nested upstream
-  `.gitignore`s can hide files: check `git status --ignored third_party`, `git add -f`.
+- `third_party/` vendored pinned deps (README: versions/licenses/hashes). Nested upstream `.gitignore`s can hide files: check `git status --ignored third_party`, `git add -f`.
 - `CMakePresets.json`: `x86-debug`, `x64-debug`, `x64-release`, `linux-debug`/`-release`/`-asan`,
-  `macos-debug`/`-release` → `build/<preset>/`. Vendored libs are `EXCLUDE_FROM_ALL` until used.
+  `macos-debug`/`-release` → `build/<preset>/`. Vendored code drops our warnings and sanitizers.
 - **Hybrid launch (x86):** `jpog.exe` links the engine DLLs via import libs generated from
   `symbols/` (`tools/make_import_lib.py`, `cmake/OriginalModules.cmake`,
   `jpog_original_module(Name)`). Declarations in `src/toshi/` must match original signatures and
