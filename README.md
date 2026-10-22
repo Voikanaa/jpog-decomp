@@ -35,10 +35,10 @@ Linux and macOS that plays the original game data unchanged.**
 
 ## Highlights
 
-- **Bit-exact by construction.** Every reimplemented function is checked against its original
-  DLL export on the same inputs, down to the last floating-point bit. The suite runs over
-  3 million differential assertions.
-- **Original names and ABI.** More than 23,000 exported symbols give us the original class and
+- **Verified against the original.** Differential tests call the original DLL exports with the
+  same inputs as ours and require identical results, down to the last floating-point bit. The
+  suite runs over 3 million assertions.
+- **Original names and ABI.** Nearly 23,000 exported symbols give us the original class and
   method names, signatures and virtual method order. Our code exports the same mangled names, so
   it drops straight into the original game.
 - **Running from day one.** Our own `jpog.exe` already starts the game on our Toshi kernel and
@@ -56,8 +56,8 @@ Linux and macOS that plays the original game data unchanged.**
   </picture>
 </a>
 
-<sub>Generated from the x86 build by <code>tools/coverage.py</code>: a function counts once our code exports
-it under the original mangled name and its differential tests pass.</sub>
+<sub>Generated from the x86 build by <code>tools/coverage.py</code>: a function counts once our build defines
+it under the original mangled name, which guarantees the same signature and calling convention.</sub>
 
 ### Roadmap
 
@@ -188,7 +188,7 @@ re-verified against the original binaries and data, and credited in full in [CRE
 
 | | |
 |---|---|
-| **Decompilation** | [OpenJPOG](https://github.com/InfiniteC0re/OpenJPOG) and [OpenBarnyard](https://github.com/InfiniteC0re/OpenBarnyard) by InfiniteC0re · [OpenToshi](https://github.com/AdventureT/OpenToshi) by AdventureT |
+| **Decompilation** | [OpenJPOG](https://github.com/AdventureT/OpenJPOG) by AdventureT and InfiniteC0re · [OpenBarnyard](https://github.com/InfiniteC0re/OpenBarnyard) by InfiniteC0re · [OpenToshi](https://github.com/AdventureT/OpenToshi) by AdventureT |
 | **File formats** | [The first JPOG format spec](https://www.trescom.org/hosted/andres_james/jpog/jpog_formats.html) by Andres James (2003) · [ojpog.io](https://github.com/OpenJPOG/org.equinoxscripts.ojpog.io) by equinox- · [jpog-blender](https://github.com/HENDRIX-ZT2/jpog-blender) and [convert-ppm](https://github.com/HENDRIX-ZT2/convert-ppm) by HENDRIX-ZT2 |
 | **Modernisation** | [JPOG-Modernize](https://github.com/Newbie1337x/JPOG-Modernize) by Newbie1337x |
 | **Community** | [Jurassic Mainframe](https://jurassicmainframe.forumotion.com/f17-jp-operation-genesis) · [Jurassic Mods](https://jurassicmods.darkbb.com) · [ModDB](https://www.moddb.com/games/jurassic-park-operation-genesis) · [Nexus Mods](https://www.nexusmods.com/jurassicparkopgen) · [JPOG Wiki](https://jpog.fandom.com) |

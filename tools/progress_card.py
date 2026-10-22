@@ -50,7 +50,7 @@ def render(stats, theme):
         f'<text x="{PAD}" y="100" class="big">{percent:.1f}%</text>',
         f'<text x="{WIDTH - PAD}" y="74" class="stat" text-anchor="end">{done:,} / {total:,}</text>',
         f'<text x="{WIDTH - PAD}" y="96" class="muted" text-anchor="end">'
-        "original functions, verified bit for bit</text>",
+        "original functions reimplemented</text>",
         f'<text x="{WIDTH - PAD}" y="116" class="muted" text-anchor="end">'
         f'{complete} of {len(stats)} modules complete</text>',
         bar(PAD, 134, WIDTH - 2 * PAD, 12, done / total, "url(#green)"),
