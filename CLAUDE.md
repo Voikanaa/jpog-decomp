@@ -52,6 +52,7 @@ Apache-2.0, LGPL linked dynamically).
 - **Commit frequently** in small logical units once verified, then push. Update README.md (status,
   tools, layout, setup) and this file in the same commit when they change. The README status
   table (per-module counts, milestones) is hand-written; only its badge is generated.
+  Never change the README's logo and Dennis Nedry GIF blocks (the user's own).
 - **Pull requests are always merged with squash and merge** (`gh pr merge --squash`), never a
   merge commit or rebase.
 - **Issues:** `gh -R Voikanaa/jpog-decomp`. Every work item has an issue;
