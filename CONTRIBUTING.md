@@ -34,8 +34,9 @@ Put your game install in `JPOG/` and a working copy in `game/`. See the README f
    evaluation order of float code from `tools/x87_expr.py`, not from Ghidra, which does not
    preserve the association of x87 sums.
 4. Build and test `x86-debug` and `x64-debug` (`tools\build.bat <preset>`).
-5. Run `python tools/coverage.py`, which regenerates the coverage table in `docs/progress.md`
-   and the README badge (CI checks both are current).
+5. Run `python tools/coverage.py`, which regenerates the coverage table in `docs/progress.md`,
+   the README badge and the README progress cards `docs/progress-{light,dark}.svg` (CI checks they
+   are current).
 6. Keep the docs current in the same commit: the log in `docs/progress.md`, `docs/plan.md` if a
    phase or decision changed, the format catalogue and `CREDITS.md` for new findings and sources,
    `README.md` (status, tools, layout, setup) and `CLAUDE.md` if the structure, tools or workflow

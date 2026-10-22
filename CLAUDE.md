@@ -97,7 +97,8 @@ Apache-2.0, LGPL linked dynamically).
 - `tools/build.bat <preset> ["-DOPT=VAL"...]`: finds VS via vswhere, CMake + Ninja + ctest.
 - `tools/format.py [--check]`: pinned clang-format over `src/`, `tests/`. **Run before committing.**
 - `tools/coverage.py [--check]`: original exports ∩ our x86 symbols; regenerates the
-  `docs/progress.md` table and README badge; `--check` (CI) also fails on unmatched `Toshi::`
+  `docs/progress.md` table, README badge and the README progress cards
+  `docs/progress-{light,dark}.svg` (drawn by `tools/progress_card.py`); `--check` (CI) also fails on unmatched `Toshi::`
   symbols (signature drift). Map new libs in its `MODULES` list; exports our design replaces go
   in its `SUPERSEDED` list (excluded from the percentage).
 - `tools/ghidra_export.py <dll>|--all` (script `tools/ghidra/ExportDecompilation.java`): headless decompilation to `analysis/decomp/<Module>.c`/`.tsv`.
