@@ -90,7 +90,7 @@ flowchart TB
 | ✅ | Foundations | Symbols, build system, CI, analysis tooling |
 | ✅ | Launch 1 | Our `jpog.exe` opens the game window on our kernel and `PPropertyParser.dll` |
 | 🚧 | **M2** | Kernel replaced: the game boots to the front end on our `TKernelInterface.dll` |
-| 🚧 | **P** | Portable foundation: kernel and tests on Windows, Linux and macOS (done, CI on all three); SDL3 + bgfx shell (next, #37) |
+| 🚧 | **P** | Portable foundation: kernel and tests on Windows, Linux and macOS (done); portable `jpog` on SDL3 + bgfx with the developer menu (#37) |
 | ⏳ | M3 | A mission loads through our renderer and resource code |
 | ⏳ | M4 | The full game is playable on our code |
 | ⏳ | M5 | The portable build reaches the main menu on Windows, Linux and macOS |
@@ -103,8 +103,10 @@ flowchart TB
 
 ## Getting started
 
-The kernel, PPropertyParser and their tests build on Windows, Linux and macOS. The game itself
-(`jpog.exe` on the original engine DLLs) is the 32-bit Windows build.
+Two builds come from the same source. The 32-bit Windows build runs `jpog.exe` on the original
+engine DLLs and verifies our code against them. The portable build (Windows x64, Linux, macOS)
+produces the standalone `jpog`: today an SDL3 window rendered with bgfx, with the developer menu
+(F1) showing the renderer, audio device and kernel state.
 
 | Requirement | |
 |---|---|
@@ -121,7 +123,8 @@ uv sync                               :: .venv with the pinned clang-format and 
 :: without uv: python -m venv .venv && .venv\Scripts\pip install -r requirements-dev.txt
 
 tools\build.bat x86-debug             :: 32-bit jpog.exe, our drop-in DLLs, all tests
-tools\build.bat x64-debug             :: x64 kernel and PPropertyParser, portable tests
+tools\build.bat x64-debug             :: portable jpog, x64 libraries, portable tests
+build\x64-debug\src\shell\jpog.exe    :: --renderer d3d11|d3d12|vulkan|opengl, --smoke, --help
 ```
 
 On Linux and macOS: `python3 tools/build.py linux-debug` (or `linux-release`, `linux-asan`,
@@ -146,6 +149,7 @@ src/
   toshi/…            declarations of the other engine DLLs (application, render, renderd3d, gui)
   ppropertyparser/   PPropertyParser.dll
   game/              jpog.exe: WinMain, application task tree, options, crash handler
+  shell/             portable jpog: SDL3 window, bgfx, Dear ImGui developer menu, miniaudio
 tests/               doctest suite: unit and differential tests, original-DLL loader
 symbols/             exports, imports, classes and vtables of every original module
 docs/                roadmap, progress log, binary map, file-format catalogue
@@ -214,6 +218,6 @@ The project's own code, tools and documentation are licensed under the
 *Jurassic Park*, *Jurassic Park: Operation Genesis* and their logos are trademarks of Universal
 City Studios and Amblin Entertainment; the game and the Toshi engine belong to their respective
 rights holders. This is an unofficial, non-commercial fan project, not affiliated with or
-endorsed by them, and the license above does not cover the game, its assets, names or logos
-(including `docs/jpog_decomp.png`). The repository contains only original code, tools and
-documentation, plus symbol names extracted from the binaries for interoperability.
+endorsed by them, and the license above does not cover the game, its assets, names or logos.
+The repository contains only original code, tools and documentation, plus symbol names
+extracted from the binaries for interoperability.

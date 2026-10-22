@@ -12,7 +12,8 @@ Apache-2.0, LGPL linked dynamically).
   document or distribute a way around it, and never use a cracked or no-CD executable.
 - **New third-party dependencies need explicit approval.** This covers libraries, tools and
   GitHub Actions beyond `actions/checkout`. Approved libraries are vendored pinned and unmodified
-  in `third_party/`, with version, license, upstream and hash in its README.
+  in `third_party/`, with version, license, upstream and hash in its README. Build tools whose
+  license forbids redistribution (the DirectX Shader Compiler) are downloaded by CMake instead.
 - **Other projects: facts only.** Cite and verify findings from OpenJPOG, modding tools etc.,
   but never copy, translate or port their code. Credit new sources in [CREDITS.md](CREDITS.md).
 

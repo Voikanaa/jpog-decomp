@@ -1,0 +1,34 @@
+name: Checks
+
+# Repository hygiene on every change, docs included: no game files or binaries, formatting and
+# Python lint. Builds and tests are in ci.yml, which skips docs-only changes.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
+
+jobs:
+  checks:
+    name: Repository checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: No game binaries or oversized files
+        run: python3 tools/check_repo.py
+      - name: Python tools compile
+        run: python3 -m compileall -q tools
+      - uses: astral-sh/setup-uv@v10.3.0
+      - name: Install pinned dev tools
+        run: uv sync --locked
+      - name: C++ formatting
+        run: uv run tools/format.py --check
+      - name: Python lint
+        run: uv run ruff check tools
