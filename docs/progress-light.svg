@@ -6,7 +6,7 @@
 <text x="28" y="46" class="label">REIMPLEMENTATION PROGRESS</text>
 <text x="28" y="100" class="big">9.1%</text>
 <text x="852" y="74" class="stat" text-anchor="end">1,849 / 20,414</text>
-<text x="852" y="96" class="muted" text-anchor="end">original functions, verified bit for bit</text>
+<text x="852" y="96" class="muted" text-anchor="end">original functions reimplemented</text>
 <text x="852" y="116" class="muted" text-anchor="end">2 of 19 modules complete</text>
 <rect x="28" y="134" width="824" height="12" rx="6" fill="#e1e6eb"/><rect x="28" y="134" width="74.6" height="12" rx="6" fill="url(#green)"/>
 <text x="28" y="186" class="label">TOSHI ENGINE</text>
