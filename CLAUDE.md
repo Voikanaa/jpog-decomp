@@ -80,7 +80,7 @@ Apache-2.0, LGPL linked dynamically).
   `toshi/application/`, `toshi/render/`, `toshi/renderd3d/`, `toshi/gui/`; `game/` (**jpog.exe**: WinMain, `AApplication` with the
   original task tree, `ARootTask`/`ARenderer` skeletons, `AOptions`/`AOptionLogic` (`Options.ini`,
   display mode), `ALocale`, `CrashHandler`). No hook DLL yet (deferred, #2). `shell/` (portable
-  **jpog**, not x86: SDL3, bgfx (D3D11 default; shaders via shaderc), ImGui F1 menu, miniaudio,
+  **jpog**, not x86: SDL3, bgfx (D3D12/Vulkan/Metal default; shaderc), ImGui F1 menu, miniaudio,
   FFmpeg probe; `--smoke`/`--renderer`/`--screenshot`).
 - `tests/` doctest suite `jpog_tests` (ctest; `kernel/ ppropertyparser/ game/ support/`; `lsan.supp`: leaks the original has). `support/OriginalModule` loads the original
   DLLs from `JPOG_ORIGINAL_DIR` (default `<root>/JPOG`) for differential tests (x86 only, skipped

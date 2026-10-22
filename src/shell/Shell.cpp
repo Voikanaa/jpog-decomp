@@ -48,16 +48,17 @@ bool ParseRenderer(const std::string& name, bgfx::RendererType::Enum& type)
 	return false;
 }
 
-// The platform default: Direct3D 11 on Windows (as bgfx picks it), Metal on macOS, and bgfx's
-// choice (Vulkan, else OpenGL) on Linux.
+// The platform default is each platform's current API: Direct3D 12 on Windows, Metal on macOS,
+// Vulkan on Linux. Where it fails to start, bgfx falls back to the next renderer it supports
+// (bgfx::Init::fallback), such as Direct3D 11 or OpenGL.
 bgfx::RendererType::Enum DefaultRenderer()
 {
 #if defined(_WIN32)
-	return bgfx::RendererType::Direct3D11;
+	return bgfx::RendererType::Direct3D12;
 #elif defined(__APPLE__)
 	return bgfx::RendererType::Metal;
 #else
-	return bgfx::RendererType::Count;
+	return bgfx::RendererType::Vulkan;
 #endif
 }
 

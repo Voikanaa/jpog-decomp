@@ -40,8 +40,8 @@ gap is #42.
 
 ## Log
 - 2026-10-22: **Portable shell** (#37): `src/shell/` builds the standalone `jpog` on Windows x64,
-  Linux and macOS. SDL3 window and events; bgfx on the native window (D3D11 by default on
-  Windows, Metal on macOS, Vulkan/OpenGL on Linux; `--renderer`); the developer menu (F1) on
+  Linux and macOS. SDL3 window and events; bgfx on the native window (Direct3D 12 by default
+  on Windows, Vulkan on Linux, Metal on macOS, falling back to D3D11/OpenGL; `--renderer`); the developer menu (F1) on
   Dear ImGui with our own bgfx renderer backend, shaders compiled by shaderc at build time (DXBC,
   SPIR-V, GLSL 4.30, Metal); miniaudio output; a run-time FFmpeg probe; the kernel's scheduler
   ticks every frame. `--screenshot` writes PNGs (stb_image_write). D3D11, D3D12 (with DXBC),
