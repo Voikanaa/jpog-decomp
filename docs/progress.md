@@ -39,6 +39,17 @@ inputs. Float results must match bit for bit unless a comment justifies a tolera
 gap is #42.
 
 ## Log
+- 2026-10-22: **Portable foundation P1** (#34, #35): kernel, PPropertyParser and the unit tests
+  build and pass on Windows x64, Linux (GCC, Clang, ASan/UBSan/LSan) and macOS (universal), with
+  clang-tidy, in CI. Every kernel OS call goes through `src/platform/` (Win32, POSIX), with own
+  UTF-16 routines and case-insensitive `\` paths on POSIX. The sanitizers found places where the
+  original's layout tricks were undefined in C++: `TDList` cast its root to the item type (now
+  `nullptr` past the ends); the module list wrote through its fake head (now writes the kernel's
+  first/last fields); empty enums held values outside their range (fixed `: int` type). `TNodeTree`
+  keeps the original's root pointer, which the original DLLs inline, and is exempt from the vptr
+  check. Leaks the original also has (kernel file systems, `TLocaleInfo`s) are listed in
+  `tests/lsan.supp`. x86 mangled names and results unchanged, bit-exact. Vendored SDL3, bgfx
+  (+ shaderc), ImGui, miniaudio, Tracy and stb (#36) build on Windows x64.
 - 2026-10-21: Retargeted to a cross-platform build (Windows x64, Linux x64, macOS arm64/x64) on
   SDL3, bgfx, miniaudio, FFmpeg and Dear ImGui, all vendored; new phase P (#34-#37). The x86
   verification build stays.
