@@ -53,15 +53,15 @@ Apache-2.0, LGPL linked dynamically).
   table (per-module counts, milestones) is hand-written; only its badge is generated.
   No studio logos, game artwork or film stills/GIFs in the repo or README (legal; the user's call).
 - **`main` only changes through PRs** (ruleset "Protect main", no bypass, admins included):
-  squash merge only (`gh pr merge --squash`), `Repository checks` must pass, no force-push.
+  squash merge only (`gh pr merge --squash`), `CI` + `Repository checks` must pass, no force-push.
 - **Issues:** `gh -R Voikanaa/jpog-decomp`. Every work item has an issue;
   reference it (`Refs #n` / `Fixes #n`), tick checklists, open issues for new work, close finished
   ones with the hash. Milestones M0b–M6 mirror `docs/plan.md`.
 - LF line endings except `.bat` (`.gitattributes`). Pre-commit hook (`.githooks/`, enabled) runs
-  `check_repo.py --staged`, `format.py --check` and `ruff check tools`. CI: `ci.yml` builds every
-  preset with `JPOG_WERROR=ON` (keep code warning-free), skipping docs-only changes; `checks.yml`
-  runs the hook's checks on every change. Don't trigger extra runs: the PR run is enough. Actions
-  are pinned to commit hashes (`# vX` comment; Dependabot bumps them monthly). `SECURITY.md`.
+  `check_repo.py --staged`, `format.py --check`, `ruff check tools`. CI: `ci.yml` builds every preset
+  with `JPOG_WERROR=ON` (keep code warning-free); docs-only changes skip the builds but its `CI` gate
+  job still reports. `checks.yml` runs the hook's checks on every change. Don't trigger extra runs:
+  the PR run is enough. Actions are pinned to commit hashes (`# vX`; Dependabot bumps them monthly).
 
 ## Layout
 - `JPOG/` original install (read-only reference): `SimJP.exe`, engine DLLs (`T*Interface.dll`,
