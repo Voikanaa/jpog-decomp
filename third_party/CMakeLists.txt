@@ -119,6 +119,11 @@ elseif(UNIX)
   target_link_libraries(miniaudio PUBLIC Threads::Threads ${CMAKE_DL_LIBS} m)
 endif()
 
+# --- FFmpeg 9.0 headers (LGPL-2.1): Bink video, loaded at run time ---------------------------
+# Headers only: jpog loads the shared libraries itself (src/shell/FFmpeg.cpp), so nothing links.
+add_library(ffmpeg INTERFACE)
+target_include_directories(ffmpeg SYSTEM INTERFACE ffmpeg/include)
+
 # --- Tracy (BSD-3): profiler client, compiled in only with JPOG_TRACY ---------------------------
 option(JPOG_TRACY "Build with the Tracy profiler client" OFF)
 if(JPOG_TRACY)

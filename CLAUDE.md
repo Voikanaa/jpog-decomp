@@ -10,8 +10,8 @@ runs the original `Data/`. Full plan: `docs/plan.md`.
 - Order: TKernelInterface → file formats → other engine modules → SimJP game code → platform swap;
   the portable foundation (phase P: multi-OS CI, `src/platform/`, shell) runs in parallel.
 - **Current state:** kernel and PPropertyParser 100% (drop-in DLLs, 9.1%); M2 needs the game to
-  boot to the front end on our kernel (L2, #21). Phase P: kernel, tests and the portable shell
-  `jpog` (#37) pass on Windows, Linux (GCC, Clang, ASan/UBSan) and macOS in CI.
+  boot to the front end on our kernel (L2, #21). Phase P done: kernel, tests and the portable shell
+  `jpog` pass on Windows, Linux (GCC, Clang, ASan/UBSan) and macOS in CI.
 - Portable stack: SDL3 (window/input/paths), bgfx (+ `shaderc`), miniaudio (for FMOD 3), FFmpeg
   loaded at run time (Bink), Dear ImGui (dev menu), Tracy (`JPOG_TRACY`), stb_image_write,
   doctest. All vendored in `third_party/` (pinned, unmodified); ask before downloading each. The
@@ -81,7 +81,7 @@ Apache-2.0, LGPL linked dynamically).
   original task tree, `ARootTask`/`ARenderer` skeletons, `AOptions`/`AOptionLogic` (`Options.ini`,
   display mode), `ALocale`, `CrashHandler`). No hook DLL yet (deferred, #2). `shell/` (portable
   **jpog**, not x86: SDL3, bgfx (D3D12/Vulkan/Metal; shaderc, DXC fetched to `.cache/` for DXIL),
-  ImGui F1 menu, miniaudio, FFmpeg probe; `--smoke`/`--renderer`/`--screenshot`).
+  ImGui F1 menu, miniaudio, `FFmpeg.cpp` (FFmpeg 9 loaded at run time, `fetch_ffmpeg.py`); `--smoke` etc.).
 - `tests/` doctest suite `jpog_tests` (ctest; `kernel/ ppropertyparser/ game/ support/`; `lsan.supp`: leaks the original has). `support/OriginalModule` loads the original
   DLLs from `JPOG_ORIGINAL_DIR` (default `<root>/JPOG`) for differential tests (x86 only, skipped
   without the game). `support/Differential.h`: `Same`, `Original<Fn>`/`OriginalPP<Fn>`, `KernelMissing`.
@@ -109,7 +109,7 @@ Apache-2.0, LGPL linked dynamically).
   **Prefer grepping these over REA for bulk work**; `tools/decomp_show.py <Module> <regex>` prints
   functions. `tools/resolve_imports.py` writes `SimJP.resolved.c` (IAT calls named; use it for
   game code; `--slots ADDR...` names IAT slots seen in disassembly). `tools/dump_vtables.py` → `symbols/vtables.csv` (**class declarations must follow
-  it**). Also `dump_exports.py`, `check_repo.py`, `msvc.py`, `setup_mcp.py`.
+  it**). Also `dump_exports.py`, `check_repo.py`, `msvc.py`, `setup_mcp.py`, `fetch_ffmpeg.py`.
 - `tools/x87_expr.py <Module> <func|addr> [--args this,a] [--matrix] [--follow ADDR]`: symbolic
   x87 execution of an original function; prints each store as a fully parenthesised expression
   (spills become `tN`). **Use it for all float code**; Ghidra's sums are not reliable.

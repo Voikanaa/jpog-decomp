@@ -36,14 +36,14 @@ add_executable(jpog
   Audio.h
   BgfxCallback.cpp
   BgfxCallback.h
+  FFmpeg.cpp
+  FFmpeg.h
   ImGuiRenderer.cpp
   ImGuiRenderer.h
   Shaders.cpp
   Shaders.h
   Shell.cpp
   Shell.h
-  VideoProbe.cpp
-  VideoProbe.h
   ${vertex_shaders}
   ${fragment_shaders}
 )
@@ -51,7 +51,7 @@ target_include_directories(jpog PRIVATE "${PROJECT_SOURCE_DIR}/src" "${shader_di
 if(JPOG_DXC)
   target_compile_definitions(jpog PRIVATE JPOG_SHADERS_DXIL)
 endif()
-target_link_libraries(jpog PRIVATE toshi_kernel jpog_platform SDL3::SDL3-static bgfx bx imgui miniaudio stb tracy)
+target_link_libraries(jpog PRIVATE toshi_kernel jpog_platform SDL3::SDL3-static bgfx bx imgui miniaudio ffmpeg stb tracy)
 
 if(JPOG_BUILD_TESTS)
   # Headless start-up and 60 frames on every OS (CI has no display or audio device).

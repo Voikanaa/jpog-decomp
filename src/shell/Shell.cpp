@@ -2,8 +2,8 @@
 
 #include "shell/Audio.h"
 #include "shell/BgfxCallback.h"
+#include "shell/FFmpeg.h"
 #include "shell/ImGuiRenderer.h"
-#include "shell/VideoProbe.h"
 #include "toshi/kernel/TKernelInterface.h"
 #include "toshi/kernel/TScheduler.h"
 
@@ -118,7 +118,7 @@ void DrawDeveloperMenu(DeveloperMenu& menu, Toshi::TKernelInterface& kernel, int
 		            static_cast<double>(io.Framerate));
 		ImGui::Text("Kernel frames: %d", kernel.GetScheduler()->GetFrameCount());
 		ImGui::Text("Audio: %s", menu.audio.c_str());
-		ImGui::Text("FFmpeg: %s", menu.ffmpeg.empty() ? "not found (videos are skipped)" : menu.ffmpeg.c_str());
+		ImGui::Text("FFmpeg: %s", menu.ffmpeg.c_str());
 		ImGui::Checkbox("Dear ImGui demo", &menu.showDemo);
 	}
 	ImGui::End();
@@ -207,9 +207,12 @@ int Run(const Options& options)
 	if (!audio.Init(options.smoke))
 		std::fprintf(stderr, "jpog: no audio device; continuing without sound\n");
 	menu.audio = audio.Describe();
-	menu.ffmpeg = ProbeFFmpeg();
+	FFmpeg ffmpeg;
+	const char* basePath = SDL_GetBasePath();
+	ffmpeg.Load(basePath != nullptr ? basePath : "");
+	menu.ffmpeg = ffmpeg.Describe();
 	std::printf("jpog: renderer %s, %d x %d, audio: %s, FFmpeg: %s\n", bgfx::getRendererName(bgfx::getRendererType()),
-	            width, height, menu.audio.c_str(), menu.ffmpeg.empty() ? "not found" : menu.ffmpeg.c_str());
+	            width, height, menu.audio.c_str(), menu.ffmpeg.c_str());
 
 	int frame = 0;
 	bool running = true;

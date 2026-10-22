@@ -39,6 +39,15 @@ inputs. Float results must match bit for bit unless a comment justifies a tolera
 gap is #42.
 
 ## Log
+- 2026-10-23: **FFmpeg for Bink videos** (#36, closes phase P): the public headers of FFmpeg 9.0.2
+  (libavutil, libavcodec, libavformat, libswscale, libswresample; LGPL-2.1, release signature
+  checked) are vendored in `third_party/ffmpeg`. `src/shell/FFmpeg.cpp` replaces the probe: it
+  loads the five libraries at run time with the major versions of those headers (avutil 61,
+  swresample 7, avcodec 63, avformat 63, swscale 10), first from `jpog`'s directory, then from the
+  system and Homebrew, takes every function type from the headers, and checks for the Bink video
+  and audio decoders. `tools/fetch_ffmpeg.py` downloads a pinned LGPL shared build (BtbN month-end
+  release, SHA-256 checked) for Windows x64 and Linux and installs it next to `jpog`; on Windows the
+  developer menu then reports `n9.0.2`, Bink video and audio.
 - 2026-10-22: **Portable shell** (#37): `src/shell/` builds the standalone `jpog` on Windows x64,
   Linux and macOS. SDL3 window and events; bgfx on the native window (Direct3D 12 by default
   on Windows, Vulkan on Linux, Metal on macOS, falling back to D3D11/OpenGL; `--renderer`); the developer menu (F1) on

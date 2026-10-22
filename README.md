@@ -69,14 +69,14 @@ flowchart TB
     end
     subgraph PORT["Portable build"]
         direction LR
-        P["🚧 P<br/>portable foundation"] --> M5["M5<br/>main menu on all three"] --> M6["M6<br/>full mission + saves"]
+        P["✅ P<br/>portable foundation"] --> M5["M5<br/>main menu on all three"] --> M6["M6<br/>full mission + saves"]
     end
     X86 --> PORT
     classDef done fill:#1f883d,stroke:#116329,color:#ffffff
     classDef wip fill:#bf8700,stroke:#7d4e00,color:#ffffff
     classDef todo fill:#57606a,stroke:#424a53,color:#ffffff
-    class F,L1 done
-    class M2,P wip
+    class F,L1,P done
+    class M2 wip
     class M3,M4,M5,M6 todo
     style X86 fill:transparent,stroke:#8c959f,stroke-dasharray:4 3
     style PORT fill:transparent,stroke:#8c959f,stroke-dasharray:4 3
@@ -90,7 +90,7 @@ flowchart TB
 | ✅ | Foundations | Symbols, build system, CI, analysis tooling |
 | ✅ | Launch 1 | Our `jpog.exe` opens the game window on our kernel and `PPropertyParser.dll` |
 | 🚧 | **M2** | Kernel replaced: the game boots to the front end on our `TKernelInterface.dll` |
-| 🚧 | **P** | Portable foundation: kernel, tests and the portable `jpog` (SDL3 + bgfx, developer menu) on Windows, Linux and macOS (done); FFmpeg video (#36) |
+| ✅ | P | Portable foundation: kernel, tests and the portable `jpog` (SDL3 + bgfx, developer menu, FFmpeg loaded at run time) on Windows, Linux and macOS |
 | ⏳ | M3 | A mission loads through our renderer and resource code |
 | ⏳ | M4 | The full game is playable on our code |
 | ⏳ | M5 | The portable build reaches the main menu on Windows, Linux and macOS |
@@ -140,6 +140,8 @@ headers for the vendored SDL3 and bgfx; the list is `LINUX_DEV_PACKAGES` in
 - The portable `jpog` renders with Direct3D 12 on Windows, Vulkan on Linux and Metal on macOS by
   default. Windows x64 builds download the pinned DirectX Shader Compiler into `.cache/` for the
   Direct3D 12 shaders; `"-DJPOG_DXC=OFF"` builds offline with DXBC shaders instead.
+- Videos need FFmpeg 9: `python tools/fetch_ffmpeg.py --install build/x64-debug/src/shell` (Windows
+  x64, Linux) or Homebrew's `ffmpeg` on macOS. Without it, `jpog` runs and skips the videos.
 - CI builds with `"-DJPOG_WERROR=ON"`; pass it locally to match.
 
 ## Repository layout
@@ -173,6 +175,7 @@ third_party/         pinned, vendored dependencies
 | `tools/x87_expr.py` | Recover the exact floating-point evaluation order of an original function |
 | `tools/dump_exports.py` | Regenerate `symbols/` from the original binaries |
 | `tools/dump_vtables.py` | Recover the virtual method order of every exported class |
+| `tools/fetch_ffmpeg.py` | Download the pinned FFmpeg 9.0 libraries for Bink videos and install them next to `jpog` (Windows x64, Linux) |
 | `tools/coverage.py` | Measure coverage; regenerates [docs/progress.md](docs/progress.md), the badge and the progress card |
 | `tools/make_import_lib.py` | Import libraries for the original engine DLLs (used by CMake) |
 | `tools/make_module_def.py` | Export tables (`.def`) for our drop-in DLLs (used by CMake) |
