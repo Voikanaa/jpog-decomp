@@ -20,6 +20,7 @@ public:
 		template <typename T, int C> friend class TDList;
 
 	public:
+		TNode(const TNode& other) = default; // implicit in the original, not exported
 		TNode& operator=(const TNode& other);
 
 	protected:

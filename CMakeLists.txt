@@ -3,6 +3,8 @@ project(JPOG LANGUAGES C CXX)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+# No C++20 modules: skip the dependency scan (its .modmap files also confuse clang-tidy).
+set(CMAKE_CXX_SCAN_FOR_MODULES OFF)
 
 # The x86 build is the Windows verification build: it runs on and tests against the original
 # 32-bit DLLs. Every other build is a portable one (Windows x64, Linux, macOS).

@@ -52,7 +52,7 @@ jobs:
           # sccache cannot cache MSVC's separate PDBs; embed the debug info instead.
           extra=""
           if [ "$RUNNER_OS" = "Windows" ]; then extra="-DCMAKE_MSVC_DEBUG_INFORMATION_FORMAT=Embedded"; fi
-          python tools/build.py ${{ matrix.preset }} -DJPOG_WERROR=ON $extra
+          python tools/build.py ${{ matrix.preset }} --keep-going -DJPOG_WERROR=ON $extra
       - name: Coverage table is up to date
         if: matrix.preset == 'x86-debug'
         run: python tools/coverage.py --check

@@ -242,27 +242,27 @@ void TProfiler::Report(int indent)
 	const double self =
 	    100.0 * static_cast<double>(m_iTotalTime - m_iChildTime) * (1.0 / static_cast<double>(m_sProgramTime));
 	if (self == total)
-		std::sprintf(line, m_sSortBy == TProfiler_SortByTotal ? "|      |%6.2f" : "|%6.2f|      ", self);
+		std::snprintf(line, sizeof(line), m_sSortBy == TProfiler_SortByTotal ? "|      |%6.2f" : "|%6.2f|      ", self);
 	else
-		std::sprintf(line, "|%6.2f|%6.2f", self, total);
+		std::snprintf(line, sizeof(line), "|%6.2f|%6.2f", self, total);
 	if (m_szFile == nullptr)
-		std::sprintf(location, " ");
+		std::snprintf(location, sizeof(location), " ");
 	else
-		std::sprintf(location, "%-*.*s(%3d) :", 0x50, 0x50, m_szFile, m_iLine);
+		std::snprintf(location, sizeof(location), "%-*.*s(%3d) :", 0x50, 0x50, m_szFile, m_iLine);
 	Out(line, location);
 	if ((m_sOutputFilter & 1) == 0)
 	{
-		std::sprintf(line, "|%10.2f", milliseconds);
+		std::snprintf(line, sizeof(line), "|%10.2f", milliseconds);
 		Out(line, nullptr);
 	}
 	if ((m_sOutputFilter & 8) == 0)
 	{
-		std::sprintf(line, "|%8lld", m_iHits);
+		std::snprintf(line, sizeof(line), "|%8lld", m_iHits);
 		Out(line, nullptr);
 	}
 	if ((m_sOutputFilter & 4) == 0)
 	{
-		std::sprintf(line, "|%10.3f", m_iHits == 0 ? 0.0 : milliseconds / static_cast<double>(m_iHits));
+		std::snprintf(line, sizeof(line), "|%10.3f", m_iHits == 0 ? 0.0 : milliseconds / static_cast<double>(m_iHits));
 		Out(line, nullptr);
 	}
 	Out(const_cast<char*>("|"), nullptr);
@@ -270,11 +270,11 @@ void TProfiler::Report(int indent)
 		m_iMinTime = 0;
 	const float minimum = static_cast<float>(m_iMinTime) * (1.0f / static_cast<float>(m_sFrequency)) * 1000.0f;
 	const float maximum = 1000.0f * static_cast<float>(m_iMaxTime) * (1.0f / static_cast<float>(m_sFrequency));
-	std::sprintf(line, "%9.3f|%9.3f|", static_cast<double>(minimum), static_cast<double>(maximum));
+	std::snprintf(line, sizeof(line), "%9.3f|%9.3f|", static_cast<double>(minimum), static_cast<double>(maximum));
 	Out(line, nullptr);
 	for (int i = 0; i < indent; ++i)
 		Out(const_cast<char*>("  "), nullptr);
-	std::sprintf(line, "ID:(%d):", m_iID);
+	std::snprintf(line, sizeof(line), "ID:(%d):", m_iID);
 	Out(line, nullptr);
 	Out(m_szName, nullptr);
 	if (IsRealParent(m_pParent))
@@ -283,7 +283,7 @@ void TProfiler::Report(int indent)
 		    m_pParent->m_iTotalTime <= 0
 		        ? 0.0
 		        : (static_cast<double>(m_iTotalTime) / static_cast<double>(m_pParent->m_iTotalTime)) * 100.0;
-		std::sprintf(line, "(%3.1f%%) PID:%d", share, m_pParent->m_iID);
+		std::snprintf(line, sizeof(line), "(%3.1f%%) PID:%d", share, m_pParent->m_iID);
 		Out(line, nullptr);
 	}
 	Out(const_cast<char*>("\n"), nullptr);

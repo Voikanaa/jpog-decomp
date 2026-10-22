@@ -1,11 +1,12 @@
 """Configure, build and test a CMake preset.
 
-Usage: python tools/build.py [preset] [-DOPTION=VALUE ...]
+Usage: python tools/build.py [preset] [--keep-going] [-DOPTION=VALUE ...]
 
 Presets (CMakePresets.json): x86-debug, x64-debug, x64-release on Windows; linux-debug,
 linux-release, linux-asan on Linux; macos-debug, macos-release on macOS. The default is
 x86-debug on Windows and <os>-debug elsewhere. On Windows the MSVC environment is set up from
 the newest Visual Studio 2022+ install (found with vswhere), so no developer prompt is needed.
+--keep-going builds every target it can after an error, to report all failures at once (CI).
 """
 import functools
 import os
@@ -52,12 +53,14 @@ def run(args, env):
 def main(argv):
     preset = argv[0] if argv and not argv[0].startswith("-") else default_preset()
     options = argv[1:] if argv and not argv[0].startswith("-") else argv
+    keep_going = "--keep-going" in options
+    options = [o for o in options if o != "--keep-going"]
     env = None
     if platform.system() == "Windows":
         env = msvc_environment("x64_x86" if preset.startswith("x86") else "x64")
     try:
         run(["cmake", "--preset", preset, *options], env)
-        run(["cmake", "--build", "--preset", preset], env)
+        run(["cmake", "--build", "--preset", preset, *(["--", "-k", "0"] if keep_going else [])], env)
         run(["ctest", "--test-dir", os.path.join("build", preset), "--output-on-failure"], env)
     except subprocess.CalledProcessError as error:
         return error.returncode
