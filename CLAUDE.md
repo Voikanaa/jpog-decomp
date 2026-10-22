@@ -46,14 +46,14 @@ Apache-2.0, LGPL linked dynamically).
 
 ## Version control and issues
 - Remote `git@github.com:Voikanaa/jpog-decomp.git` (public), branch `main`.
-- **Never commit** game files (`JPOG/`, `game/`, ISO, any `.exe`/`.dll`/assets), `.venv/`,
-  `.cache/`, `build/`, `analysis/`, `rea-ghidra-*/`, `.claude/settings.local.json`, `.mcp.json`.
-  Check with `git add -A --dry-run` before larger commits.
-- **Commit frequently** in small logical units once verified, then push. Update README.md (status,
+- **Never commit** game files (`JPOG/`, `game/`, ISO, any `.exe`/`.dll`/assets), `.venv/`, `.cache/`,
+  `build/`, `analysis/`, `rea-ghidra-*/`, `.claude/settings.local.json`, `.mcp.json` (`git add -A --dry-run`).
+- **Commit frequently** in small logical units once verified, push the branch. Update README (status,
   tools, layout, setup) and this file in the same commit when they change. The README status
   table (per-module counts, milestones) is hand-written; only its badge is generated.
   No studio logos, game artwork or film stills/GIFs in the repo or README (legal; the user's call).
-- **PRs are always merged with squash and merge** (`gh pr merge --squash`), never merge/rebase.
+- **`main` only changes through PRs** (ruleset "Protect main", no bypass, admins included):
+  squash merge only (`gh pr merge --squash`), `Repository checks` must pass, no force-push.
 - **Issues:** `gh -R Voikanaa/jpog-decomp`. Every work item has an issue;
   reference it (`Refs #n` / `Fixes #n`), tick checklists, open issues for new work, close finished
   ones with the hash. Milestones M0b–M6 mirror `docs/plan.md`.
