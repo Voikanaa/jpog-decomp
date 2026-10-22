@@ -47,26 +47,6 @@ Linux and macOS that plays the original game data unchanged.**
   assumptions, explicit file parsing, UTF-16 strings, case-insensitive paths) so the same source
   becomes a standalone game on SDL3, bgfx, miniaudio and FFmpeg.
 
-## How it works
-
-```mermaid
-flowchart LR
-    A["Original game<br/>32-bit SimJP.exe + Toshi DLLs"] -->|"Ghidra + exported symbols"| B["Portable C++20<br/>src/"]
-    B -->|"x86 build"| T["Differential tests<br/>vs. original exports"]
-    T -.->|"0-ULP match"| B
-    B -->|"x86 build"| C["jpog.exe + our drop-in DLLs<br/>on the remaining original DLLs"]
-    C -->|"replace module by module"| D["Native game<br/>Windows · Linux · macOS"]
-```
-
-1. **Analyse.** Headless Ghidra decompiles every module; symbolic x87 execution recovers the
-   exact evaluation order of float code.
-2. **Reimplement.** Readable C++ that mirrors the original API (`Toshi::TMath`,
-   `Toshi::TQuaternion`, `AOptions`, …), not a transliteration of decompiler output.
-3. **Verify.** Differential tests load the original DLLs and compare each function with its
-   export under the game's own FPU settings. Results must match exactly.
-4. **Replace.** Finished modules ship as drop-in DLLs, and the game keeps running on the mix.
-   Once nothing original is left, the same source builds the portable game.
-
 ## Progress
 
 <a href="docs/progress.md">
