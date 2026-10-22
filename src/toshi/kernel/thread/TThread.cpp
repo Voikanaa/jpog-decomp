@@ -107,8 +107,7 @@ void TSTDCALL TThread::Exit()
 unsigned int TSTDCALL TThread::Entry(void* thread)
 {
 	static_cast<TThread*>(thread)->Main();
-	Exit(static_cast<TThread*>(thread));
-	return 0;
+	Exit(static_cast<TThread*>(thread)); // never returns
 }
 
 void TSTDCALL TThread::Exit(TThread* thread)

@@ -50,8 +50,10 @@ set(JPOG_SKIP_DXCOMPILER_COPY ON)
 add_subdirectory(bgfx EXCLUDE_FROM_ALL SYSTEM)
 set(JPOG_SKIP_DXCOMPILER_COPY OFF)
 
+find_package(Threads REQUIRED) # miniaudio and Tracy on Linux/macOS
+
 # --- Dear ImGui (MIT): development menu -------------------------------------------------------
-add_library(imgui STATIC
+add_library(imgui STATIC EXCLUDE_FROM_ALL
   imgui/imgui.cpp
   imgui/imgui_demo.cpp
   imgui/imgui_draw.cpp
@@ -63,21 +65,20 @@ target_include_directories(imgui SYSTEM PUBLIC imgui imgui/backends)
 target_link_libraries(imgui PUBLIC SDL3::SDL3-static)
 
 # --- miniaudio (MIT-0 / public domain): audio output ------------------------------------------
-add_library(miniaudio STATIC miniaudio/miniaudio.c)
+add_library(miniaudio STATIC EXCLUDE_FROM_ALL miniaudio/miniaudio.c)
 target_include_directories(miniaudio SYSTEM PUBLIC miniaudio)
 if(APPLE)
   # Link the audio frameworks instead of loading them at run time.
   target_compile_definitions(miniaudio PUBLIC MA_NO_RUNTIME_LINKING)
   target_link_libraries(miniaudio PUBLIC "-framework CoreFoundation" "-framework CoreAudio" "-framework AudioToolbox")
 elseif(UNIX)
-  find_package(Threads REQUIRED)
   target_link_libraries(miniaudio PUBLIC Threads::Threads ${CMAKE_DL_LIBS} m)
 endif()
 
 # --- Tracy (BSD-3): profiler client, compiled in only with JPOG_TRACY ---------------------------
 option(JPOG_TRACY "Build with the Tracy profiler client" OFF)
 if(JPOG_TRACY)
-  add_library(tracy STATIC tracy/public/TracyClient.cpp)
+  add_library(tracy STATIC EXCLUDE_FROM_ALL tracy/public/TracyClient.cpp)
   target_compile_definitions(tracy PUBLIC TRACY_ENABLE)
   if(UNIX)
     target_link_libraries(tracy PUBLIC Threads::Threads ${CMAKE_DL_LIBS})

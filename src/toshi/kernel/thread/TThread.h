@@ -50,11 +50,11 @@ public:
 	static bool TSTDCALL SetCurrentPriority(PRIORITY priority);
 	static bool TSTDCALL Yield();
 	// Ends the calling thread (which must be a TThread).
-	static void TSTDCALL Exit();
+	[[noreturn]] static void TSTDCALL Exit();
 
 private:
 	static unsigned int TSTDCALL Entry(void* thread);
-	static void TSTDCALL Exit(TThread* thread);
+	[[noreturn]] static void TSTDCALL Exit(TThread* thread);
 	static bool TSTDCALL GetPriority(void* handle, PRIORITY& priority);
 	static bool TSTDCALL SetPriority(void* handle, PRIORITY priority);
 
