@@ -90,7 +90,7 @@ flowchart TB
 | ✅ | Foundations | Symbols, build system, CI, analysis tooling |
 | ✅ | Launch 1 | Our `jpog.exe` opens the game window on our kernel and `PPropertyParser.dll` |
 | 🚧 | **M2** | Kernel replaced: the game boots to the front end on our `TKernelInterface.dll` |
-| 🚧 | **P** | Portable foundation: kernel and tests on Windows, Linux and macOS (done); portable `jpog` on SDL3 + bgfx with the developer menu (#37) |
+| 🚧 | **P** | Portable foundation: kernel, tests and the portable `jpog` (SDL3 + bgfx, developer menu) on Windows, Linux and macOS (done); FFmpeg video (#36) |
 | ⏳ | M3 | A mission loads through our renderer and resource code |
 | ⏳ | M4 | The full game is playable on our code |
 | ⏳ | M5 | The portable build reaches the main menu on Windows, Linux and macOS |
@@ -124,7 +124,7 @@ uv sync                               :: .venv with the pinned clang-format and 
 
 tools\build.bat x86-debug             :: 32-bit jpog.exe, our drop-in DLLs, all tests
 tools\build.bat x64-debug             :: portable jpog, x64 libraries, portable tests
-build\x64-debug\src\shell\jpog.exe    :: --renderer d3d11|d3d12|vulkan|opengl, --smoke, --help
+build\x64-debug\src\shell\jpog.exe    :: --renderer d3d12|d3d11|vulkan|opengl, --smoke, --help
 ```
 
 On Linux and macOS: `python3 tools/build.py linux-debug` (or `linux-release`, `linux-asan`,
@@ -137,6 +137,9 @@ headers for the vendored SDL3 and bgfx; the list is `LINUX_DEV_PACKAGES` in
   `"-DJPOG_REPLACE_KERNEL=OFF"` or `"-DJPOG_REPLACE_PPROPERTYPARSER=OFF"` restores an original DLL.
 - Differential tests load the original DLLs from `JPOG\` (or `JPOG_ORIGINAL_DIR`) and are skipped
   without the game, as in CI.
+- The portable `jpog` renders with Direct3D 12 on Windows, Vulkan on Linux and Metal on macOS by
+  default. Windows x64 builds download the pinned DirectX Shader Compiler into `.cache/` for the
+  Direct3D 12 shaders; `"-DJPOG_DXC=OFF"` builds offline with DXBC shaders instead.
 - CI builds with `"-DJPOG_WERROR=ON"`; pass it locally to match.
 
 ## Repository layout
@@ -190,6 +193,7 @@ third_party/         pinned, vendored dependencies
 | [File formats](docs/formats/README.md) | Every file type in `Data/`: structure, status and sources |
 | [Contributing](CONTRIBUTING.md) | Ground rules, workflow, commits and code style |
 | [Credits](CREDITS.md) | The community research this project builds on |
+| [Security](SECURITY.md) | How to report a vulnerability privately |
 
 ## Credits
 

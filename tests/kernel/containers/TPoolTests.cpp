@@ -1,3 +1,4 @@
+#include "platform/Thread.h"
 #include "support/Differential.h"
 #include "support/FloatCompare.h"
 #include "support/OriginalModule.h"
@@ -112,16 +113,20 @@ TEST_SUITE("TPool")
 		{
 			Toshi::TSemaphore* done = nullptr;
 			int runs = 0;
+			unsigned int id = 0;
 			void Main() override
 			{
 				++runs;
+				id = jpog::platform::ThreadCurrentId();
 				done->Signal();
 			}
 		};
 		Toshi::TSemaphore done;
 		done.Create(0, 1);
 		CHECK_FALSE(done.Poll());
-		TCounter thread;
+		// The thread leaves the manager and writes to itself after Main() returns, so the object
+		// outlives this test and the manager is only destroyed once the thread has left it.
+		static TCounter thread;
 		thread.done = &done;
 		CHECK(thread.Create(Toshi::TThread::STACKSIZE_DEFAULT, Toshi::TThread::PRIORITY_NORMAL, 1));
 		Toshi::TThread::PRIORITY priority;
@@ -131,6 +136,8 @@ TEST_SUITE("TPool")
 		CHECK(done.Wait());
 		CHECK(thread.runs == 1);
 		CHECK(Toshi::TThread::Yield());
+		while (manager.FindThread(thread.id) != nullptr)
+			Toshi::TThread::Yield();
 		done.Destroy();
 	}
 
