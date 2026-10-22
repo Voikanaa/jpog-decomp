@@ -1,0 +1,64 @@
+name: CodeQL
+
+# Security analysis of our own code. Vendored code in third_party/ is not ours to fix: it is
+# excluded from the scan and, since C/C++ extraction still reads it through the includes, any
+# result located there is dropped before the upload.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: '17 4 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
+
+jobs:
+  analyze:
+    name: Analyze (${{ matrix.language }})
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [c-cpp, java-kotlin, python, actions]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - uses: github/codeql-action/init@9b3254085494b55a0f7c4c2b3d2d52cc712ce370 # v4.39.1
+        with:
+          languages: ${{ matrix.language }}
+          build-mode: none
+          config: |
+            paths-ignore:
+              - third_party
+      - uses: github/codeql-action/analyze@9b3254085494b55a0f7c4c2b3d2d52cc712ce370 # v4.39.1
+        with:
+          category: /language:${{ matrix.language }}
+          output: sarif
+          upload: never
+      - name: Drop results in third_party/
+        shell: python
+        run: |
+          import json, pathlib
+          for path in pathlib.Path("sarif").glob("*.sarif"):
+              sarif = json.loads(path.read_text(encoding="utf-8"))
+              for run in sarif["runs"]:
+                  def ours(result):
+                      locations = result.get("locations") or [{}]
+                      uri = locations[0].get("physicalLocation", {}).get("artifactLocation", {}).get("uri", "")
+                      return not uri.startswith("third_party/")
+                  before = len(run.get("results", []))
+                  run["results"] = [r for r in run.get("results", []) if ours(r)]
+                  print(f"{path.name}: kept {len(run['results'])} of {before} results")
+              path.write_text(json.dumps(sarif), encoding="utf-8")
+      - uses: github/codeql-action/upload-sarif@9b3254085494b55a0f7c4c2b3d2d52cc712ce370 # v4.39.1
+        with:
+          sarif_file: sarif
+          category: /language:${{ matrix.language }}

@@ -49,9 +49,8 @@ Apache-2.0, LGPL linked dynamically).
 - **Never commit** game files (`JPOG/`, `game/`, ISO, any `.exe`/`.dll`/assets), `.venv/`, `.cache/`,
   `build/`, `analysis/`, `rea-ghidra-*/`, `.claude/settings.local.json`, `.mcp.json` (`git add -A --dry-run`).
 - **Commit frequently** in small logical units once verified, push the branch. Update README (status,
-  tools, layout, setup) and this file in the same commit when they change. The README status
-  table (per-module counts, milestones) is hand-written; only its badge is generated.
-  No studio logos, game artwork or film stills/GIFs in the repo or README (legal; the user's call).
+  tools, layout, setup) and this file in the same commit when they change. README milestones are
+  hand-written; its badge and progress cards are generated. No studio logos, game artwork or film stills/GIFs in the repo or README (legal; the user's call).
 - **`main` only changes through PRs** (ruleset "Protect main", no bypass, admins included):
   squash merge only (`gh pr merge --squash`), `CI` + `Repository checks` must pass, no force-push.
 - **Issues:** `gh -R Voikanaa/jpog-decomp`. Every work item has an issue;
@@ -60,8 +59,9 @@ Apache-2.0, LGPL linked dynamically).
 - LF line endings except `.bat` (`.gitattributes`). Pre-commit hook (`.githooks/`, enabled) runs
   `check_repo.py --staged`, `format.py --check`, `ruff check tools`. CI: `ci.yml` builds every preset
   with `JPOG_WERROR=ON` (keep code warning-free); docs-only changes skip the builds but its `CI` gate
-  job still reports. `checks.yml` runs the hook's checks on every change. Don't trigger extra runs:
-  the PR run is enough. Actions are pinned to commit hashes (`# vX`; Dependabot bumps them monthly).
+  job still reports. `checks.yml` runs the hook's checks on every change; `codeql.yml` scans our code
+  (results in `third_party/` dropped). Don't trigger extra runs: the PR run is enough. Actions must be
+  pinned to commit hashes (`# vX`; Dependabot bumps them monthly).
 
 ## Layout
 - `JPOG/` original install (read-only reference): `SimJP.exe`, engine DLLs (`T*Interface.dll`,
