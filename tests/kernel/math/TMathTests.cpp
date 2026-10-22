@@ -122,12 +122,12 @@ std::vector<int> IntInputs(int min, int max, int randomCount = 2000)
 	return values;
 }
 
-using FloatToFloat = float(__stdcall*)(float);
-using FloatToInt = int(__stdcall*)(float);
-using IntToInt = int(__stdcall*)(int);
-using IntToFloatFn = float(__stdcall*)(int);
-using Float2ToFloat = float(__stdcall*)(float, float);
-using Float3ToFloat = float(__stdcall*)(float, float, float);
+using FloatToFloat = float(TSTDCALL*)(float);
+using FloatToInt = int(TSTDCALL*)(float);
+using IntToInt = int(TSTDCALL*)(int);
+using IntToFloatFn = float(TSTDCALL*)(int);
+using Float2ToFloat = float(TSTDCALL*)(float, float);
+using Float3ToFloat = float(TSTDCALL*)(float, float, float);
 
 void CompareUnary(const char* name, FloatToFloat original, float(TSTDCALL* ours)(float),
                   const std::vector<float>& inputs, int64_t maxUlps)
@@ -168,8 +168,8 @@ TEST_SUITE("TMath differential" * doctest::skip(KernelMissing()))
 
 	TEST_CASE("FPU control word round-trips with the original")
 	{
-		using GetFn = unsigned short(__stdcall*)();
-		using SetFn = void(__stdcall*)(unsigned short);
+		using GetFn = unsigned short(TSTDCALL*)();
+		using SetFn = void(TSTDCALL*)(unsigned short);
 		const auto get = Original<GetFn>("?GetFPUControlWord@TMath@Toshi@@SGGXZ");
 		const auto set = Original<SetFn>("?SetFPUControlWord@TMath@Toshi@@SGXG@Z");
 		const unsigned short saved = TMath::GetFPUControlWord();
@@ -256,8 +256,8 @@ TEST_SUITE("TMath differential" * doctest::skip(KernelMissing()))
 			}
 		}
 
-		const auto fastMod = Original<int(__stdcall*)(int, int)>("?FastMod@TMath@Toshi@@SGHHH@Z");
-		const auto bitShiftMod = Original<int(__stdcall*)(int, int)>("?BitShiftMod@TMath@Toshi@@SGHHH@Z");
+		const auto fastMod = Original<int(TSTDCALL*)(int, int)>("?FastMod@TMath@Toshi@@SGHHH@Z");
+		const auto bitShiftMod = Original<int(TSTDCALL*)(int, int)>("?BitShiftMod@TMath@Toshi@@SGHHH@Z");
 		InputGenerator gen;
 		for (int i = 0; i < 2000; ++i)
 		{
@@ -279,8 +279,8 @@ TEST_SUITE("TMath differential" * doctest::skip(KernelMissing()))
 	TEST_CASE("clip, lerp and increments")
 	{
 		GamePrecisionScope precision;
-		const auto clipInt = Original<void(__stdcall*)(int&, int, int)>("?Clip@TMath@Toshi@@SGXAAHHH@Z");
-		const auto clipFloat = Original<void(__stdcall*)(float&, float, float)>("?Clip@TMath@Toshi@@SGXAAMMM@Z");
+		const auto clipInt = Original<void(TSTDCALL*)(int&, int, int)>("?Clip@TMath@Toshi@@SGXAAHHH@Z");
+		const auto clipFloat = Original<void(TSTDCALL*)(float&, float, float)>("?Clip@TMath@Toshi@@SGXAAMMM@Z");
 		const auto lerp = Original<Float3ToFloat>("?LERP@TMath@Toshi@@SGMMMM@Z");
 		const auto decrMinf = Original<Float3ToFloat>("?DecrMinf@TMath@Toshi@@SGMMMM@Z");
 		const auto incrMaxf = Original<Float3ToFloat>("?IncrMaxf@TMath@Toshi@@SGMMMM@Z");
@@ -339,7 +339,7 @@ TEST_SUITE("TMath differential" * doctest::skip(KernelMissing()))
 		CompareUnary("Gain075", Original<FloatToFloat>("?Gain075@TMath@Toshi@@SGMM@Z"), &TMath::Gain075,
 		             FloatInputs(0.0f, 1.0f), 0);
 
-		const auto sinCos = Original<void(__stdcall*)(float, float&, float&)>("?SinCos@TMath@Toshi@@SGXMAAM0@Z");
+		const auto sinCos = Original<void(TSTDCALL*)(float, float&, float&)>("?SinCos@TMath@Toshi@@SGXMAAM0@Z");
 		for (float x : angles)
 		{
 			float sinOriginal, cosOriginal, sinOurs, cosOurs;
@@ -375,10 +375,10 @@ TEST_SUITE("TMath differential" * doctest::skip(KernelMissing()))
 	TEST_CASE("angle helpers")
 	{
 		GamePrecisionScope precision;
-		const auto normalise = Original<void(__stdcall*)(float&)>("?NormaliseAngle@TMath@Toshi@@SGXAAM@Z");
+		const auto normalise = Original<void(TSTDCALL*)(float&)>("?NormaliseAngle@TMath@Toshi@@SGXAAM@Z");
 		const auto difference = Original<Float2ToFloat>("?GetAngleDifference@TMath@Toshi@@SGMMM@Z");
 		const auto directed =
-		    Original<float(__stdcall*)(float, float, bool)>("?GetDirectedAngleDifference@TMath@Toshi@@SGMMM_N@Z");
+		    Original<float(TSTDCALL*)(float, float, bool)>("?GetDirectedAngleDifference@TMath@Toshi@@SGMMM_N@Z");
 		const auto lerpAngle = Original<Float3ToFloat>("?LERPAngle@TMath@Toshi@@SGMMMM@Z");
 
 		InputGenerator gen;
@@ -405,8 +405,8 @@ TEST_SUITE("TMath differential" * doctest::skip(KernelMissing()))
 	TEST_CASE("classification")
 	{
 		GamePrecisionScope precision;
-		const auto isNaN = Original<bool(__stdcall*)(float)>("?IsNaN@TMath@Toshi@@SG_NM@Z");
-		const auto isFinite = Original<bool(__stdcall*)(float)>("?IsFinite@TMath@Toshi@@SG_NM@Z");
+		const auto isNaN = Original<bool(TSTDCALL*)(float)>("?IsNaN@TMath@Toshi@@SG_NM@Z");
+		const auto isFinite = Original<bool(TSTDCALL*)(float)>("?IsFinite@TMath@Toshi@@SG_NM@Z");
 		const float values[] = {0.0f,
 		                        1.0f,
 		                        -1.0f,

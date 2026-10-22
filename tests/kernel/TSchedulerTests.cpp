@@ -237,7 +237,7 @@ namespace
 void* s_originalVtable[13];
 Method<void*, unsigned int> s_originalDeletingDestructor;
 Method<void> s_originalTaskConstructor;
-using Allocate = void*(__stdcall*)(int, char*, int);
+using Allocate = void*(TSTDCALL*)(int, char*, int);
 Allocate s_originalAllocate;
 
 void* __fastcall StubDelete(void* self, void*, unsigned int flags)

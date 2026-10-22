@@ -151,7 +151,7 @@ TEST_SUITE("TMemory differential" * doctest::skip(KernelMissing()))
 {
 	TEST_CASE("TMemory failure cases")
 	{
-		using GetManager = TMemory*(__stdcall*)();
+		using GetManager = TMemory*(TSTDCALL*)();
 		auto* original = Original<GetManager>("?GetMemManager@TMemory@Toshi@@SGAAV12@XZ")();
 		const auto free = Original<Method<bool, void*>>("?Free@TMemory@Toshi@@QAE_NPAX@Z");
 		const auto realloc = Original<Method<void*, void*, unsigned int, TMemory::MemBlock*>>(
@@ -161,16 +161,16 @@ TEST_SUITE("TMemory differential" * doctest::skip(KernelMissing()))
 		CHECK(free(original, buffer + 1) == TMemory::GetMemManager().Free(buffer + 1));
 		CHECK(realloc(original, buffer, 64, nullptr) == TMemory::GetMemManager().Realloc(buffer, 64, nullptr));
 
-		using HalFn = void(__stdcall*)(TMemory::HALMemInfo*);
+		using HalFn = void(TSTDCALL*)(TMemory::HALMemInfo*);
 		TMemory::HALMemInfo originalHal, ourHal;
 		std::memset(&originalHal, 0xCD, sizeof(originalHal));
 		std::memset(&ourHal, 0xCD, sizeof(ourHal));
 		Original<HalFn>("?GetHALMemInfo@TMemory@Toshi@@SGXAAUHALMemInfo@12@@Z")(&originalHal);
 		TMemory::GetHALMemInfo(ourHal);
 		CHECK(std::memcmp(&originalHal, &ourHal, sizeof(ourHal)) == 0);
-		CHECK(Original<unsigned int(__stdcall*)()>("?GetMarkedHALPhysical@TMemory@Toshi@@SGIXZ")() ==
+		CHECK(Original<unsigned int(TSTDCALL*)()>("?GetMarkedHALPhysical@TMemory@Toshi@@SGIXZ")() ==
 		      TMemory::GetMarkedHALPhysical());
-		CHECK(Original<bool(__stdcall*)(TMemory::MemBlock*)>("?TestMemIntegrity@TMemory@Toshi@@SG_NPAVMemBlock@12@@Z")(
+		CHECK(Original<bool(TSTDCALL*)(TMemory::MemBlock*)>("?TestMemIntegrity@TMemory@Toshi@@SG_NPAVMemBlock@12@@Z")(
 		          nullptr) == TMemory::TestMemIntegrity(nullptr));
 	}
 

@@ -38,5 +38,9 @@ add_executable(jpog_tests
 target_include_directories(jpog_tests PRIVATE .)
 target_link_libraries(jpog_tests PRIVATE toshi_kernel ppropertyparser doctest)
 target_compile_definitions(jpog_tests PRIVATE JPOG_ORIGINAL_DIR="${JPOG_ORIGINAL_DIR}")
+if(NOT JPOG_X86 AND NOT MSVC)
+  # Helpers that only the x86 differential tests use are unused in portable builds.
+  target_compile_options(jpog_tests PRIVATE -Wno-unused-function -Wno-unused-const-variable)
+endif()
 
 add_test(NAME jpog_tests COMMAND jpog_tests)

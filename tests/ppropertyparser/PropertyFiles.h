@@ -1,5 +1,7 @@
 #pragma once
 
+#include "common/abi.h"
+
 // Shared helpers for the PPropertyParser reader and writer tests.
 
 #include "ppropertyparser/PProperties.h"
@@ -65,14 +67,14 @@ public:
 	int GetWChar() override { return GetCChar(); }
 	int PutCChar(char) override { return -1; }
 	int PutWChar(unsigned short) override { return -1; }
-	int VCPrintf(const char* format, char* args) override
+	int VCPrintf(const char* format, va_list args) override
 	{
 		char text[1024];
 		const int length = std::vsnprintf(text, sizeof(text), format, args);
 		m_written += text;
 		return length;
 	}
-	int VWPrintf(const unsigned short*, char*) override { return 0; }
+	int VWPrintf(const unsigned short*, va_list) override { return 0; }
 
 private:
 	std::string m_text;

@@ -148,16 +148,16 @@ TEST_SUITE("TString differential" * doctest::skip(KernelMissing()))
 {
 	TEST_CASE("TSystem string helpers")
 	{
-		using LenC = int(__stdcall*)(const char*);
-		using LenW = int(__stdcall*)(const U16*);
-		using CmpC = int(__stdcall*)(const char*, const char*, int);
-		using CmpW = int(__stdcall*)(const U16*, const U16*, int);
-		using HashC = unsigned int(__stdcall*)(const char*);
-		using HashW = unsigned int(__stdcall*)(const U16*);
-		using ToW = const U16*(__stdcall*)(U16*, const char*, int);
-		using ToC = const char*(__stdcall*)(char*, const U16*, int);
-		using FindC = const char*(__stdcall*)(const char*, char);
-		using IntToStr = const char*(__stdcall*)(int, char*, int);
+		using LenC = int(TSTDCALL*)(const char*);
+		using LenW = int(TSTDCALL*)(const U16*);
+		using CmpC = int(TSTDCALL*)(const char*, const char*, int);
+		using CmpW = int(TSTDCALL*)(const U16*, const U16*, int);
+		using HashC = unsigned int(TSTDCALL*)(const char*);
+		using HashW = unsigned int(TSTDCALL*)(const U16*);
+		using ToW = const U16*(TSTDCALL*)(U16*, const char*, int);
+		using ToC = const char*(TSTDCALL*)(char*, const U16*, int);
+		using FindC = const char*(TSTDCALL*)(const char*, char);
+		using IntToStr = const char*(TSTDCALL*)(int, char*, int);
 		const auto lenC = Original<LenC>("?StringLength@TSystem@Toshi@@SGHPBD@Z");
 		const auto lenW = Original<LenW>("?StringLength@TSystem@Toshi@@SGHPBG@Z");
 		const auto cmpC = Original<CmpC>("?StringCompare@TSystem@Toshi@@SGHPBD0H@Z");
@@ -170,7 +170,7 @@ TEST_SUITE("TString differential" * doctest::skip(KernelMissing()))
 		const auto toC = Original<ToC>("?StringUnicodeToChar@TSystem@Toshi@@SGPBDPADPBGH@Z");
 		const auto findC = Original<FindC>("?StringFindChar@TSystem@Toshi@@SGPBDPBDD@Z");
 		const auto intToStr = Original<IntToStr>("?StringIntToString@TSystem@Toshi@@SGPBDHPADH@Z");
-		const auto bcd = Original<unsigned int(__stdcall*)(unsigned int)>("?BCDToInteger@TSystem@Toshi@@SGII@Z");
+		const auto bcd = Original<unsigned int(TSTDCALL*)(unsigned int)>("?BCDToInteger@TSystem@Toshi@@SGII@Z");
 
 		InputGenerator gen;
 		for (int i = 0; i < 2000; ++i)
@@ -422,8 +422,8 @@ TEST_SUITE("TString differential" * doctest::skip(KernelMissing()))
 
 	TEST_CASE("free comparison operators match the original")
 	{
-		using Op = bool(__stdcall*)(const char*, const TCString*);
-		using WideOp = bool(__stdcall*)(const U16*, const TWString*);
+		using Op = bool(TSTDCALL*)(const char*, const TCString*);
+		using WideOp = bool(TSTDCALL*)(const U16*, const TWString*);
 		const char* codes[] = {"8", "9", "M", "N", "O", "P"};
 		const char* texts[] = {"", "a", "b", "ab", "B", "abc"};
 		const U16 wide[][4] = {{0}, {'a', 0}, {'b', 0}, {'a', 'b', 0}, {'B', 0}, {'a', 'b', 'c', 0}};

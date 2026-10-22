@@ -1,5 +1,6 @@
 #pragma once
 
+#include "common/abi.h"
 #include "toshi/kernel/TEvent.h"
 #include "toshi/kernel/strings/TCString.h"
 #include "toshi/kernel/strings/TCStringPool.h"
@@ -94,7 +95,7 @@ public:
 	Toshi::TEmitter<AOptions, AOptionChangeEvent>* GetOptionChangeEmitter();
 	Toshi::TEmitter<AOptions, AOptionLoadEvent>* GetOptionLoadEmitter();
 
-	static AOptions* __stdcall GetOptions();
+	static AOptions* TSTDCALL GetOptions();
 
 protected:
 	// `port` and `slot` are unused (console memory card leftovers). The file is "dir/name.ini".

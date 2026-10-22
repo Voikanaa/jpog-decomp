@@ -122,7 +122,7 @@ using RefWithQuat = Method<TQuaternion*, const TQuaternion*>;
 using RefWithFloat = Method<TQuaternion*, float>;
 using ValueWithQuat = Method<TQuaternion*, TQuaternion*, const TQuaternion*>;
 using ValueWithFloat = Method<TQuaternion*, TQuaternion*, float>;
-using StaticTernary = void(__stdcall*)(TQuaternion*, const TQuaternion*, const TQuaternion*);
+using StaticTernary = void(TSTDCALL*)(TQuaternion*, const TQuaternion*, const TQuaternion*);
 
 // Runs `original` and `ours` on identical copies of a random quaternion and checks that the
 // results match bit for bit.
@@ -435,8 +435,8 @@ TEST_SUITE("TQuaternion differential" * doctest::skip(KernelMissing()))
 		const auto notEqual = Original<Method<bool, const TQuaternion*>>("??9TQuaternion@Toshi@@QBE_NABV01@@Z");
 		const auto direction =
 		    Original<Method<void, TVector3*>>("?GetVectorDirection@TQuaternion@Toshi@@QBEXAAVTVector3@2@@Z");
-		using Rotate3 = void(__stdcall*)(TVector3*, const TQuaternion*, const TVector3*);
-		using Rotate4 = void(__stdcall*)(TVector4*, const TQuaternion*, const TVector4*);
+		using Rotate3 = void(TSTDCALL*)(TVector3*, const TQuaternion*, const TVector3*);
+		using Rotate4 = void(TSTDCALL*)(TVector4*, const TQuaternion*, const TVector4*);
 		const auto rotate3 = Original<Rotate3>("?RotateVector@TQuaternion@Toshi@@SGXAAVTVector3@2@ABV12@ABV32@@Z");
 		const auto rotate4 = Original<Rotate4>("?RotateVector@TQuaternion@Toshi@@SGXAAVTVector4@2@ABV12@ABV32@@Z");
 		InputGenerator gen;

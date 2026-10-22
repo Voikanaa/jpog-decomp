@@ -85,6 +85,7 @@ public:
 	{
 	public:
 		ISO9660PVD();
+		ISO9660PVD(const ISO9660PVD& other) = default; // implicit in the original, not exported
 		ISO9660PVD& operator=(const ISO9660PVD& other);
 
 		void ReadInFromISO(TFile* file);

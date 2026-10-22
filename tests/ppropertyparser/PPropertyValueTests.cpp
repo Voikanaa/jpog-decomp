@@ -133,7 +133,7 @@ TEST_SUITE("PPropertyValue differential" * doctest::skip(PPropertyParserMissing(
 		const auto canBe = OriginalPP<Method<bool, const void*>>("?CanBeType@PPropertyValue@@QBE_NPBVTClass@Toshi@@@Z");
 		const auto isEmpty = OriginalPP<Method<bool>>("?IsEmpty@PPropertyValue@@QBE_NXZ");
 		const auto toString =
-		    OriginalPP<const char*(__stdcall*)(const void*)>("?ToString@PPropertyValue@@SGPBDPBVTClass@Toshi@@@Z");
+		    OriginalPP<const char*(TSTDCALL*)(const void*)>("?ToString@PPropertyValue@@SGPBDPBVTClass@Toshi@@@Z");
 
 		const char* const typeNames[] = {"INT", "UINT32", "FLOAT", "BOOL", "TPCSTRING"};
 		const void* originalTypes[5];
@@ -216,7 +216,7 @@ TEST_SUITE("PProperties differential" * doctest::skip(PPropertyParserMissing()))
 	TEST_CASE("puts, lookups and sorting match the original")
 	{
 		using P = void*;
-		const auto pool = Original<P(__stdcall*)()>("?GetCStringPool@TSystem@Toshi@@SGPAVTCStringPool@2@XZ");
+		const auto pool = Original<P(TSTDCALL*)()>("?GetCStringPool@TSystem@Toshi@@SGPAVTCStringPool@2@XZ");
 		const auto get = Original<Method<P*, P*, const char*>>("?Get@TCStringPool@Toshi@@QAE?AVTPCString@2@PBD@Z");
 		const auto construct = OriginalPP<Method<void>>("??0PProperties@@QAE@XZ");
 		const auto destruct = OriginalPP<Method<void>>("??1PProperties@@UAE@XZ");

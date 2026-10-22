@@ -302,11 +302,11 @@ TEST_SUITE("TContainers differential" * doctest::skip(KernelMissing()))
 		    Original<Method<void, P, P>>("?InsertSegmentAtHead@TGenericDList@Toshi@@IAEXPAVTNode@12@0@Z");
 		const auto atTail =
 		    Original<Method<void, P, P>>("?InsertSegmentAtTail@TGenericDList@Toshi@@IAEXPAVTNode@12@0@Z");
-		using Segment3 = void(__stdcall*)(P, P, P);
+		using Segment3 = void(TSTDCALL*)(P, P, P);
 		const auto after = Original<Segment3>("?InsertSegmentAfter@TGenericDList@Toshi@@KGXPAVTNode@12@00@Z");
 		const auto before = Original<Segment3>("?InsertSegmentBefore@TGenericDList@Toshi@@KGXPAVTNode@12@00@Z");
 		const auto removeSegment =
-		    Original<void(__stdcall*)(P, P)>("?RemoveSegment@TGenericDList@Toshi@@KGXPAVTNode@12@0@Z");
+		    Original<void(TSTDCALL*)(P, P)>("?RemoveSegment@TGenericDList@Toshi@@KGXPAVTNode@12@0@Z");
 
 		constexpr int kNodes = 10;
 		// Index i < kNodes is a node, kNodes is the list sentinel.

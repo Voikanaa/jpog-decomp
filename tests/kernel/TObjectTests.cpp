@@ -79,21 +79,21 @@ struct Recorder
 	}
 };
 
-bool __stdcall RecordEnter(TClass* cls, void* data)
+bool TSTDCALL RecordEnter(TClass* cls, void* data)
 {
 	auto* recorder = static_cast<Recorder*>(data);
 	recorder->events.push_back({'>', recorder->IndexOf(cls)});
 	return true;
 }
 
-bool __stdcall RecordLeave(TClass* cls, void* data)
+bool TSTDCALL RecordLeave(TClass* cls, void* data)
 {
 	auto* recorder = static_cast<Recorder*>(data);
 	recorder->events.push_back({'<', recorder->IndexOf(cls)});
 	return true;
 }
 
-bool __stdcall RecordEach(TClass* cls, void* data)
+bool TSTDCALL RecordEach(TClass* cls, void* data)
 {
 	auto* recorder = static_cast<Recorder*>(data);
 	recorder->events.push_back({'.', recorder->IndexOf(cls)});
@@ -125,11 +125,11 @@ TEST_SUITE("TObject differential" * doctest::skip(KernelMissing()))
 		const auto isAttached = Original<Method<bool>>("?IsAttached@TClass@Toshi@@QBE_NXZ");
 		const auto minor = Original<Method<unsigned short>>("?GetVersionMinor@TClass@Toshi@@QBEGXZ");
 		const auto major = Original<Method<unsigned short>>("?GetVersionMajor@TClass@Toshi@@QBEGXZ");
-		using CommonFn = const void*(__stdcall*)(const void*, const void*);
+		using CommonFn = const void*(TSTDCALL*)(const void*, const void*);
 		const auto common = Original<CommonFn>("?FindCommonBaseClass@TClass@Toshi@@SGPBV12@ABV12@0@Z");
-		using FindFn = const void*(__stdcall*)(const char*, const void*);
+		using FindFn = const void*(TSTDCALL*)(const char*, const void*);
 		const auto find = Original<FindFn>("?Find@TClass@Toshi@@SGPBV12@PBDPBV12@@Z");
-		using Callback = bool(__stdcall*)(TClass*, void*);
+		using Callback = bool(TSTDCALL*)(TClass*, void*);
 		const auto recurse = Original<Method<void, Callback, Callback, Callback, void*>>(
 		    "?RecurseTree@TClass@Toshi@@QAEXP6G_NPAV12@PAX@Z221@Z");
 
