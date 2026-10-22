@@ -16,11 +16,7 @@ else()
 endif()
 
 # x86 builds produce jpog.exe linked against the original engine DLLs (hybrid), plus the
-# differential tests. JPOG_HOOK additionally builds the (deferred) hook DLL for the original exe.
-option(JPOG_HOOK "Also build the x86 hook DLL for the original game" OFF)
-if(JPOG_HOOK AND NOT JPOG_X86)
-  message(FATAL_ERROR "JPOG_HOOK requires an x86 (32-bit) build")
-endif()
+# differential tests. The hook DLL for the original exe is deferred (#2).
 
 option(JPOG_BUILD_TESTS "Build the unit and differential tests" ON)
 # x86: install our TKernelInterface.dll into the game copy instead of the original (issue #24);
@@ -78,10 +74,6 @@ if(JPOG_X86)
   jpog_original_module(TGuiInterface)
   jpog_original_module(PPropertyParser)
   add_subdirectory(src/game)
-endif()
-
-if(JPOG_HOOK)
-  add_subdirectory(src/hook)
 endif()
 
 if(JPOG_BUILD_TESTS)

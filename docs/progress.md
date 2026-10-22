@@ -31,9 +31,12 @@ an x86 build); do not edit it by hand.
 <!-- coverage:end -->
 
 ## Verification
-Every reimplemented function has a differential test in `tests/` that compares it with the
-original export on the same inputs. Float results must match bit for bit unless a comment
-justifies a tolerance.
+Differential tests in `tests/` compare our functions with the original exports on the same
+inputs. Float results must match bit for bit unless a comment justifies a tolerance. As of
+2026-10-22 the suite has 135 test cases with 3,098,200 assertions, all passing. The tests call
+520 of the 1,849 counted functions directly through their original export (TKernelInterface
+475, PPropertyParser 45); the rest are covered by unit tests, indirectly, or not yet. Closing that
+gap is #42.
 
 ## Log
 - 2026-10-21: Retargeted to a cross-platform build (Windows x64, Linux x64, macOS arm64/x64) on

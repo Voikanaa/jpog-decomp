@@ -9,6 +9,9 @@ runs the original `Data/`. Full plan: `docs/plan.md`.
   at a time, verified in the x86 Windows build; the same source builds the portable `jpog`.
 - Order: TKernelInterface → file formats → other engine modules → SimJP game code → platform swap;
   the portable foundation (phase P: multi-OS CI, `src/platform/`, shell) runs in parallel.
+- **Current state:** kernel and PPropertyParser 100% (drop-in DLLs, 9.1% overall); M2 needs the
+  game to boot to the front end on our kernel (L2, options/display work in #21). Phase P is WIP on
+  branch `portable-p1` (platform layer, multi-OS CI, vendored deps; next steps in #36), not merged.
 - Portable stack: SDL3 (window/input/paths), bgfx (+ `shaderc`), miniaudio (for FMOD 3), FFmpeg
   loaded at run time (Bink), Dear ImGui (dev menu), Tracy (`JPOG_TRACY`), stb_image_write,
   doctest. All vendored in `third_party/` (pinned, unmodified); ask before downloading each. The
@@ -19,6 +22,8 @@ runs the original `Data/`. Full plan: `docs/plan.md`.
   paths, no fast-math or FMA contraction. x86: `static_assert` layouts (`src/common/layout.h`).
 - Names come from the exported mangled symbols (`symbols/`). Notes go in `docs/` (REA cannot
   rename items in the Ghidra database on Windows).
+- Other JPOG/Toshi projects (OpenJPOG etc.): **facts only, never copy/port code** (licenses are
+  non-commercial or absent). Credit every source in `CREDITS.md`.
 
 ## Ground rules (from the user — always follow)
 1. **Never modify the system.** Only touch files inside this repo. No global installs, registry,
@@ -45,7 +50,11 @@ Apache-2.0, LGPL linked dynamically).
   `.cache/`, `build/`, `analysis/`, `rea-ghidra-*/`, `.claude/settings.local.json`, `.mcp.json`.
   Check with `git add -A --dry-run` before larger commits.
 - **Commit frequently** in small logical units once verified, then push. Update README.md (status,
-  tools, layout, setup) and this file in the same commit when they change.
+  tools, layout, setup) and this file in the same commit when they change. The README status
+  table (per-module counts, milestones) is hand-written; only its badge is generated.
+  Never change the README's logo and Dennis Nedry GIF blocks (the user's own).
+- **Pull requests are always merged with squash and merge** (`gh pr merge --squash`), never a
+  merge commit or rebase.
 - **Issues:** `gh -R Voikanaa/jpog-decomp`. Every work item has an issue;
   reference it (`Refs #n` / `Fixes #n`), tick checklists, open issues for new work, close finished
   ones with the hash. Milestones M0b–M6 mirror `docs/plan.md`.
@@ -59,20 +68,24 @@ Apache-2.0, LGPL linked dynamically).
   `TApplication.dll`), game DLLs (`Units`, `SimJPTerrain`, `PGUI*`, `PPropertyParser`), third-party
   (`binkw32`, `fmod`, `libmmd`), `Data/`, `Shaders/D3D/`, ISO. `game/` = working copy (gitignored).
 - `symbols/` per-module exports/imports CSV, `classes.csv`, `vtables.csv` (generated).
-- `docs/` `plan.md` (roadmap), `modules.md` (binary map), `progress.md` (coverage + log).
+- `docs/` `plan.md` (roadmap), `modules.md` (binary map), `progress.md` (coverage + log),
+  `formats/README.md` (catalogue of every `Data/` format: magic, status, sources, issue).
 - `src/` `common/` (`abi.h` TSTDCALL, `TIMPORT_DATA` for data jpog.exe imports; `layout.h`);
   `toshi/kernel/` (lib `toshi_kernel`: every TKernelInterface export except the superseded heap
   internals; core classes at its root, the rest in `math/ containers/ strings/ file/ memory/
   thread/ time/`, mirrored by `tests/kernel/`); global `operator new`/`delete` route to `tmalloc`/`tfree` (as the original, also in
   jpog.exe); `ppropertyparser/` (lib `ppropertyparser` + drop-in DLL, complete); declarations only:
   `toshi/application/`, `toshi/render/`, `toshi/renderd3d/`, `toshi/gui/`; `game/` (**jpog.exe**: WinMain, `AApplication` with the
-  original task tree, `ARootTask`/`ARenderer` skeletons, `CrashHandler`); `hook/` (deferred).
-- `tests/` doctest suite `jpog_tests` (run by ctest). `support/OriginalModule` loads the original
+  original task tree, `ARootTask`/`ARenderer` skeletons, `AOptions`/`AOptionLogic` (`Options.ini`,
+  display mode), `ALocale`, `CrashHandler`). No hook DLL yet (deferred, #2).
+- `tests/` doctest suite `jpog_tests` (run by ctest; `kernel/ ppropertyparser/ game/ support/`). `support/OriginalModule` loads the original
   DLLs from `JPOG_ORIGINAL_DIR` (default `<root>/JPOG`) for differential tests (x86 only, skipped
   without the game). `support/Differential.h`: `Same`, `Original<Fn>`/`OriginalPP<Fn>`, `KernelMissing`.
   `support/FloatCompare.h`: ULP compare + `InputGenerator`. Call `__thiscall` originals via
   `Method<R, Args...>`; by-value class returns pass the hidden result pointer first.
-- `third_party/` vendored pinned deps (versions/licenses/hashes in its README).
+- `third_party/` vendored pinned deps (versions/licenses/hashes in its README). Upstream trees can
+  carry nested `.gitignore`s that hide files: check `git status --ignored third_party` and
+  `git add -f` so the copy stays complete.
 - `CMakePresets.json`: `x86-debug`, `x64-debug`, `x64-release` → `build/<preset>/`.
 - **Hybrid launch (x86):** `jpog.exe` links the engine DLLs via import libs generated from
   `symbols/` (`tools/make_import_lib.py`, `cmake/OriginalModules.cmake`,
@@ -84,10 +97,11 @@ Apache-2.0, LGPL linked dynamically).
 - `tools/build.bat <preset> ["-DOPT=VAL"...]`: finds VS via vswhere, CMake + Ninja + ctest.
 - `tools/format.py [--check]`: pinned clang-format over `src/`, `tests/`. **Run before committing.**
 - `tools/coverage.py [--check]`: original exports ∩ our x86 symbols; regenerates the
-  `docs/progress.md` table and README badge; `--check` (CI) also fails on unmatched `Toshi::`
+  `docs/progress.md` table, README badge and the README progress cards
+  `docs/progress-{light,dark}.svg` (drawn by `tools/progress_card.py`); `--check` (CI) also fails on unmatched `Toshi::`
   symbols (signature drift). Map new libs in its `MODULES` list; exports our design replaces go
   in its `SUPERSEDED` list (excluded from the percentage).
-- `tools/ghidra_export.py <dll>|--all`: headless decompilation to `analysis/decomp/<Module>.c`/`.tsv`.
+- `tools/ghidra_export.py <dll>|--all` (script `tools/ghidra/ExportDecompilation.java`): headless decompilation to `analysis/decomp/<Module>.c`/`.tsv`.
   **Prefer grepping these over REA for bulk work**; `tools/decomp_show.py <Module> <regex>` prints
   functions. `tools/resolve_imports.py` writes `SimJP.resolved.c` (IAT calls named; use it for
   game code; `--slots ADDR...` names IAT slots seen in disassembly). `tools/dump_vtables.py` → `symbols/vtables.csv` (**class declarations must follow

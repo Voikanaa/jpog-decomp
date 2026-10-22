@@ -1,6 +1,6 @@
 ---
 name: Research / reverse engineering
-about: Investigate a file format, binary behaviour or protection mechanism
+about: Investigate a file format or the behaviour of an original binary
 labels: ["type: research"]
 ---
 
@@ -10,4 +10,4 @@ labels: ["type: research"]
 <!-- Link docs/, addresses, sample files -->
 
 **Done when**
-- [ ] Findings documented in `docs/`
+- [ ] Findings documented in `docs/` (formats in `docs/formats/`), sources credited in `CREDITS.md`
