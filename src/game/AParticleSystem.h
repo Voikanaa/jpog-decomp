@@ -1,12 +1,17 @@
 #pragma once
 
 #include "common/abi.h"
+#include "toshi/kernel/TScheduler.h"
 
-// The particle system (SimJP.exe). So far only the detail level and the budgets it sets; the
-// task itself (created by ARootTask in the original) is not reimplemented yet (issue #21).
-class AParticleSystem
+// The particle system (SimJP.exe), a task under ARootTask. So far only the detail level and the
+// budgets it sets; the task itself has no behaviour yet (issue #21; TClass version assumed, see
+// ASystemTasks.h).
+class AParticleSystem : public Toshi::TTask
 {
 public:
+	Toshi::TClass& GetClass() const override;
+	static Toshi::TClass m_sClass;
+
 	// Any value can be passed (above medium is high), hence the fixed type.
 	enum PARTICLEDETAIL : int
 	{
@@ -31,6 +36,11 @@ public:
 	static int GetNumSystems(int type) { return m_aiNumSystems[type]; }
 
 private:
+	static Toshi::TObject* TSTDCALL CreateObject();
+	static Toshi::TObject* TSTDCALL CreateObjectInPlace(void* memory);
+	static void TSTDCALL InitialiseStatic();
+	static void TSTDCALL DeinitialiseStatic();
+
 	static PARTICLEDETAIL m_eDetail;
 	static float m_fFarDistModifier;
 	static int m_iMaxVerts;

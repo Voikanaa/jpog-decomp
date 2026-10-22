@@ -22,6 +22,8 @@ add_executable(jpog WIN32
   ARenderer.h
   ARootTask.cpp
   ARootTask.h
+  ASystemTasks.cpp
+  ASystemTasks.h
   AUnitFactoryUnitType.cpp
   AUnitFactoryUnitType.h
   AWeatherManager.cpp

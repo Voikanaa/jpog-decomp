@@ -8,6 +8,7 @@
 #include "game/AOptions.h"
 #include "game/AParticleSystem.h"
 #include "game/ARenderer.h"
+#include "game/ASystemTasks.h"
 #include "game/AWeatherManager.h"
 #include "toshi/kernel/TKernelInterface.h"
 #include "toshi/kernel/strings/TCString.h"
@@ -34,7 +35,18 @@ ARootTask::ARootTask()
 {
 	m_pOptions = new AOptions();
 	AllocateRenderInterface();
+	AllocateCameraManager();
+	AllocateGUISystem();
 	AllocateARenderer();
+	AllocateAnimationSystem();
+	AllocateInputSystem();
+	AllocateGameStateController();
+	AllocateMissionController();
+	AllocateSoundSystem();
+	m_pParticleSystem = static_cast<AParticleSystem*>(
+	    g_oTheApp.GetKernel()->GetScheduler()->CreateTask(AParticleSystem::m_sClass, this));
+	// TODO(#21): the original also allocates AFeatureInfo and loads the Units interface, which
+	// imports from SimJP.exe and so needs jpog.exe's exports first.
 }
 
 // The original only drops its renderer reference. Deviation: deleting the renderer cannot work
@@ -74,8 +86,17 @@ bool ARootTask::OnCreate()
 	if (!CreateRenderInterface())
 		return false;
 	CreateARenderer();
-	// The original saves after creating the other systems and loading the material libraries,
-	// then creates the movie player before applying the options.
+	CreateAnimationSystem();
+	CreateInputSystem();
+	CreateGUISystem();
+	CreateGameStateController();
+	CreateMissionController();
+	CreateSoundSystem();
+	CreateCameraManager();
+	// TODO(#21): the material libraries (7, 11 and 8) load here.
+	m_pParticleSystem->Create();
+	// The original then creates the tac map textures and the terrain shader, saves the options,
+	// creates the movie player and applies the options.
 	m_pOptions->SaveOptions();
 	ResetOptions();
 	return TTask::OnCreate();
@@ -288,6 +309,45 @@ void ARootTask::AllocateARenderer()
 	    g_oTheApp.GetKernel()->GetScheduler()->CreateTask(ARenderer::m_sClass, g_oTheApp.GetRenderRootTask()));
 }
 
+void ARootTask::AllocateCameraManager()
+{
+	m_pCameraManager =
+	    g_oTheApp.GetKernel()->GetScheduler()->CreateTask(ACameraManager::m_sClass, g_oTheApp.GetUpdate3RootTask());
+}
+
+void ARootTask::AllocateGUISystem()
+{
+	m_pGUISystem =
+	    g_oTheApp.GetKernel()->GetScheduler()->CreateTask(AGUISystem::m_sClass, g_oTheApp.GetUpdate3RootTask());
+}
+
+void ARootTask::AllocateAnimationSystem()
+{
+	m_pAnimationSystem = g_oTheApp.GetKernel()->GetScheduler()->CreateTask(AToshiAnimationSystem::m_sClass, this);
+}
+
+void ARootTask::AllocateInputSystem()
+{
+	TScheduler* scheduler = g_oTheApp.GetKernel()->GetScheduler();
+	m_pInputHandler = scheduler->CreateTask(AInputHandler::m_sClass, g_oTheApp.GetInputRootTask());
+	m_pVibrationManager = scheduler->CreateTask(AVibrationManager::m_sClass, g_oTheApp.GetInputRootTask());
+}
+
+void ARootTask::AllocateGameStateController()
+{
+	m_pRootStateController = g_oTheApp.GetKernel()->GetScheduler()->CreateTask(ARootStateController::m_sClass, this);
+}
+
+void ARootTask::AllocateMissionController()
+{
+	m_pMissionController = g_oTheApp.GetKernel()->GetScheduler()->CreateTask(AMissionController::m_sClass, this);
+}
+
+void ARootTask::AllocateSoundSystem()
+{
+	m_pSoundManager = g_oTheApp.GetKernel()->GetScheduler()->CreateTask(ASoundManager::m_sClass, this);
+}
+
 bool ARootTask::CreateRenderInterface()
 {
 	int width = 640;
@@ -388,6 +448,44 @@ void ARootTask::CreateARenderer()
 {
 	if (m_pARenderer == nullptr || !m_pARenderer->Create())
 		m_pARenderer = nullptr;
+}
+
+void ARootTask::CreateAnimationSystem()
+{
+	m_pAnimationSystem->Create();
+}
+
+void ARootTask::CreateInputSystem()
+{
+	m_pInputHandler->Create();
+	m_pVibrationManager->Create();
+	m_pVibrationManager->Activate(false);
+}
+
+void ARootTask::CreateGUISystem()
+{
+	if (m_pGUISystem == nullptr || !m_pGUISystem->Create())
+		m_pGUISystem = nullptr;
+}
+
+void ARootTask::CreateGameStateController()
+{
+	m_pRootStateController->Create();
+}
+
+void ARootTask::CreateMissionController()
+{
+	m_pMissionController->Create();
+}
+
+void ARootTask::CreateSoundSystem()
+{
+	m_pSoundManager->Create();
+}
+
+void ARootTask::CreateCameraManager()
+{
+	m_pCameraManager->Create();
 }
 
 TObject* TSTDCALL ARootTask::CreateObject()

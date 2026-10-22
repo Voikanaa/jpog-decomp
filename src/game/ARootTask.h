@@ -7,14 +7,15 @@
 
 class AOptions;
 class ARenderer;
+class AParticleSystem;
 
 // The game's root task (SimJP.exe), a child of AApplication's Update2 task. Its constructor
 // allocates the game's systems and OnCreate brings them up.
 //
-// So far the options, the constants, the renderer (with its material library manager) and
-// ARenderer: the original OnCreate also initialises the APrim statics, creates the animation,
-// input, GUI, game state, mission, sound and camera systems, loads the material libraries, the
-// movie player and the front end (issue #21). The layout is not the original's.
+// So far the options, the constants, the renderer (with its material library manager), ARenderer
+// and the subsystem tasks in the original order (placeholders, ASystemTasks.h): the original
+// OnCreate also initialises the APrim statics, loads the material libraries, the movie player
+// and the front end (issue #21). The layout is not the original's.
 class ARootTask : public Toshi::TTask
 {
 public:
@@ -51,6 +52,13 @@ protected:
 private:
 	void AllocateRenderInterface();
 	void AllocateARenderer();
+	void AllocateCameraManager();
+	void AllocateGUISystem();
+	void AllocateAnimationSystem();
+	void AllocateInputSystem();
+	void AllocateGameStateController();
+	void AllocateMissionController();
+	void AllocateSoundSystem();
 	// Opens the display in the options' mode (640x480x32 fullscreen by default), falling back to
 	// 16-bit colour.
 	bool CreateRenderInterface();
@@ -62,6 +70,15 @@ private:
 	// scattering off when the terrain shader is not the high-end one.
 	void InitTerrain();
 	void CreateARenderer();
+	void CreateAnimationSystem();
+	// Creates the input handler and the vibration manager, which then starts inactive.
+	void CreateInputSystem();
+	// Drops the GUI system if it cannot be created.
+	void CreateGUISystem();
+	void CreateGameStateController();
+	void CreateMissionController();
+	void CreateSoundSystem();
+	void CreateCameraManager();
 
 	static Toshi::TObject* TSTDCALL CreateObject();
 	static Toshi::TObject* TSTDCALL CreateObjectInPlace(void* memory);
@@ -78,4 +95,13 @@ private:
 	AOptions* m_pOptions = nullptr;                                 // original +0x24
 	Toshi::TManagedPtr<Toshi::TRenderInterface> m_pRenderInterface; // original +0xD0
 	ARenderer* m_pARenderer = nullptr;                              // original +0xD4
+	Toshi::TTask* m_pAnimationSystem = nullptr;                     // original +0x30
+	Toshi::TTask* m_pGUISystem = nullptr;                           // original +0x34
+	Toshi::TTask* m_pInputHandler = nullptr;                        // original +0x38
+	Toshi::TTask* m_pRootStateController = nullptr;                 // original +0xD8
+	Toshi::TTask* m_pSoundManager = nullptr;                        // original +0xDC
+	Toshi::TTask* m_pMissionController = nullptr;                   // original +0xE0
+	Toshi::TTask* m_pVibrationManager = nullptr;                    // original +0xE8
+	Toshi::TTask* m_pCameraManager = nullptr;                       // original +0xEC
+	AParticleSystem* m_pParticleSystem = nullptr;                   // original +0xF4
 };

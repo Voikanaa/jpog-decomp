@@ -1,5 +1,12 @@
 #include "game/AParticleSystem.h"
 
+#include <new>
+
+using namespace Toshi;
+
+TClass AParticleSystem::m_sClass("AParticleSystem", &TTask::m_sClass, CreateObject, CreateObjectInPlace,
+                                 InitialiseStatic, DeinitialiseStatic, 0x10000);
+
 // The original's initial values: no detail set yet, high budgets.
 AParticleSystem::PARTICLEDETAIL AParticleSystem::m_eDetail = PARTICLEDETAIL_NONE;
 float AParticleSystem::m_fFarDistModifier = 0.7f;
@@ -56,4 +63,27 @@ void TSTDCALL AParticleSystem::SetDetail(PARTICLEDETAIL detail)
 	for (int type = 11; type <= 15; ++type)
 		m_aiNumMeshes[type] = 0;
 	m_aiNumMeshes[16] = other;
+}
+
+TClass& AParticleSystem::GetClass() const
+{
+	return m_sClass;
+}
+
+TObject* TSTDCALL AParticleSystem::CreateObject()
+{
+	return new AParticleSystem();
+}
+
+TObject* TSTDCALL AParticleSystem::CreateObjectInPlace(void* memory)
+{
+	return memory == nullptr ? nullptr : new (memory) AParticleSystem();
+}
+
+void TSTDCALL AParticleSystem::InitialiseStatic()
+{
+}
+
+void TSTDCALL AParticleSystem::DeinitialiseStatic()
+{
 }

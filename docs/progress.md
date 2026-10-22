@@ -39,6 +39,14 @@ inputs. Float results must match bit for bit unless a comment justifies a tolera
 gap is #42.
 
 ## Log
+- 2026-10-23: Game (#21): `ARootTask` now builds the original subsystem task tree. Allocated in the
+  constructor's order (camera and GUI under Update3, animation, input handler and vibration
+  manager under Input, root state controller, mission controller, sound, particle system) and
+  created in `OnCreate`'s order (vibration manager left inactive, a GUI system that fails to
+  create is dropped). They are placeholders (`ASystemTasks.h`) to be filled in one by one. TClass
+  versions are assumed and `AInputHandler`'s name is inferred: the game builds those TClass objects
+  in code we do not read. `APrim` statics deferred (#51); `AFeatureInfo` and the `Units`
+  interface (imports from SimJP.exe) wait. `jpog.exe` runs and exits cleanly.
 - 2026-10-23: Game (#21): `ARootTask::ResetOptions` (0x47BCE0, from the assembly; Ghidra mixes
   up which level drives the water) applies the graphics options after `OnCreate` saves them: far
   clip and `AFadeDist` fade distances from the draw distance (`LOW_`/`MEDIUM_`/`HIGH_` constant
