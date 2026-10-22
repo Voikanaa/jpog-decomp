@@ -25,6 +25,8 @@ public:
 
 	static Toshi::TClass m_sClass;
 
+	float m_fFarClip = 0.0f; // original +0x38, set by ARootTask::ResetOptions
+
 protected:
 	bool OnUpdate(float deltaTime) override;
 

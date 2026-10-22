@@ -5,8 +5,11 @@ add_executable(jpog_tests
   support/OriginalModule.cpp
   support/OriginalModule.h
   game/AConstantsTests.cpp
+  game/AGraphicsDetailTests.cpp
   game/AOptionsTests.cpp
   ../src/game/AConstants.cpp
+  ../src/game/AFadeDist.cpp
+  ../src/game/AParticleSystem.cpp
   ../src/game/AOptions.cpp
   ../src/game/AUnitFactoryUnitType.cpp
   kernel/TDebugTests.cpp

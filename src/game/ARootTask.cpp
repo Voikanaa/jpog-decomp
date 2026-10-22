@@ -3,12 +3,17 @@
 #include "game/AApplication.h"
 #include "game/AConstants.h"
 #include "game/ADummyTask.h"
+#include "game/AFadeDist.h"
 #include "game/AOptionLogic.h"
 #include "game/AOptions.h"
+#include "game/AParticleSystem.h"
 #include "game/ARenderer.h"
+#include "game/AWeatherManager.h"
 #include "toshi/kernel/TKernelInterface.h"
 #include "toshi/kernel/strings/TCString.h"
 #include "toshi/render/TMaterialLibraryManager.h"
+#include "toshi/render/TResource.h"
+#include "toshi/terrain/TTerrainInterface.h"
 
 #include <new>
 
@@ -16,6 +21,14 @@ using namespace Toshi;
 
 TClass ARootTask::m_sClass("ARootTask", &TTask::m_sClass, CreateObject, CreateObjectInPlace, InitialiseStatic,
                            DeinitialiseStatic, 0x20000);
+
+// The original's initial values (ResetOptions replaces them).
+float ARootTask::sm_fFarClip = 0x1.541f9ap+8f; // 340.12344
+int ARootTask::sm_iSkySegs = 20;
+int ARootTask::sm_iSkySlices = 20;
+float ARootTask::sm_fSkyHeight = 100.0f;
+int ARootTask::sm_iWaterSegs = 24;
+int ARootTask::sm_iWaterRings = 24;
 
 ARootTask::ARootTask()
 {
@@ -61,8 +74,10 @@ bool ARootTask::OnCreate()
 	if (!CreateRenderInterface())
 		return false;
 	CreateARenderer();
-	// The original saves after creating the other systems and loading the material libraries.
+	// The original saves after creating the other systems and loading the material libraries,
+	// then creates the movie player before applying the options.
 	m_pOptions->SaveOptions();
+	ResetOptions();
 	return TTask::OnCreate();
 }
 
@@ -164,6 +179,95 @@ void TSTDCALL ARootTask::SerialiseOptions()
 	options->PutOption("ScreenGamma", value);
 }
 
+void TSTDCALL ARootTask::ResetOptions()
+{
+	using C = AConstantTypes;
+	AOptions* options = g_oTheApp.GetRootTask()->m_pOptions;
+
+	int drawDistance = 2;
+	options->GetOption("DrawDistance", drawDistance);
+	sm_fFarClip = AConstants::GetFloatConstant(drawDistance == 0   ? C::LOW_TerrainDrawDistance
+	                                           : drawDistance == 1 ? C::MEDIUM_TerrainDrawDistance
+	                                                               : C::HIGH_TerrainDrawDistance);
+	AFadeDist::LoadFadeData(drawDistance);
+	g_oTheApp.GetRootTask()->m_pARenderer->m_fFarClip = sm_fFarClip;
+
+	int terrainDetail = 2;
+	options->GetOption("TerrainDetail", terrainDetail);
+	TTerrainInterface::SetLODDetail(terrainDetail == 0   ? TTerrainInterface::TERRAINLOD_LOW
+	                                : terrainDetail == 1 ? TTerrainInterface::TERRAINLOD_MEDIUM
+	                                                     : TTerrainInterface::TERRAINLOD_HIGH);
+
+	// Water reflections take the high water settings; low and medium share the low ones. The
+	// conversions truncate.
+	bool reflection = false;
+	options->GetOption("WaterReflection", reflection);
+	const int water = reflection ? 2 : terrainDetail;
+	if (water == 0 || water == 1)
+		SetWaterSettings(static_cast<int>(AConstants::GetFloatConstant(C::LOW_WaterSegs)),
+		                 static_cast<int>(AConstants::GetFloatConstant(C::LOW_WaterRings)));
+	else
+		SetWaterSettings(static_cast<int>(AConstants::GetFloatConstant(C::HIGH_WaterSegs)),
+		                 static_cast<int>(AConstants::GetFloatConstant(C::HIGH_WaterRings)));
+
+	int terrainQuality = 0;
+	options->GetOption("TerrainQuality", terrainQuality);
+	if (terrainQuality == 0 || terrainQuality == 1)
+		SetSkySettings(static_cast<int>(AConstants::GetFloatConstant(C::LOW_SkySegs)),
+		               static_cast<int>(AConstants::GetFloatConstant(C::LOW_SkySlices)),
+		               AConstants::GetFloatConstant(C::LOW_SkyHeight));
+	else
+		SetSkySettings(static_cast<int>(AConstants::GetFloatConstant(C::HIGH_SkySegs)),
+		               static_cast<int>(AConstants::GetFloatConstant(C::HIGH_SkySlices)),
+		               AConstants::GetFloatConstant(C::HIGH_SkyHeight));
+	g_oTheApp.GetRootTask()->InitTerrain();
+
+	int effects = 2;
+	options->GetOption("Effects", effects);
+	AParticleSystem::SetDetail(effects == 0   ? AParticleSystem::PARTICLEDETAIL_LOW
+	                           : effects == 1 ? AParticleSystem::PARTICLEDETAIL_MEDIUM
+	                                          : AParticleSystem::PARTICLEDETAIL_HIGH);
+
+	// Quirk: the low offset compares the low to the medium draw distance whatever they are.
+	if (drawDistance == 0)
+	{
+		const float ratio = -(AConstants::GetFloatConstant(C::LOW_TerrainDrawDistance) /
+		                      AConstants::GetFloatConstant(C::MEDIUM_TerrainDrawDistance)) +
+		                    1.0f;
+		AWeatherManager::SetScatteringNearFarOffset(ratio * 0.6f);
+	}
+	else
+		AWeatherManager::SetScatteringNearFarOffset(0.0f);
+	// TODO(#21): with a created game controller, the original also re-initialises the weather
+	// and the tree and wall fade distances.
+}
+
+void TSTDCALL ARootTask::GetWaterSettings(int& segments, int& rings)
+{
+	segments = sm_iWaterSegs;
+	rings = sm_iWaterRings;
+}
+
+void TSTDCALL ARootTask::SetWaterSettings(int segments, int rings)
+{
+	sm_iWaterSegs = segments;
+	sm_iWaterRings = rings;
+}
+
+void TSTDCALL ARootTask::GetSkySettings(int& segments, int& slices, float& height)
+{
+	segments = sm_iSkySegs;
+	slices = sm_iSkySlices;
+	height = sm_fSkyHeight;
+}
+
+void TSTDCALL ARootTask::SetSkySettings(int segments, int slices, float height)
+{
+	sm_iSkySegs = segments;
+	sm_iSkySlices = slices;
+	sm_fSkyHeight = height;
+}
+
 bool ARootTask::OnUpdate(float)
 {
 	return true;
@@ -258,6 +362,26 @@ const TRenderAdapter::Mode::Device* ARootTask::CreateDisplayDevice(TRenderInterf
 void ARootTask::InitialiseConstants()
 {
 	AConstants::Initialise();
+}
+
+void ARootTask::InitTerrain()
+{
+	// TODO(#21): with a created game controller, the original first passes the sky, water,
+	// terrain fade and grass settings to the park's terrain.
+	TRenderInterface* renderer = TRenderInterface::GetInterface();
+	auto* terrain = static_cast<TTerrainShader*>(renderer->FindOrphanedResource("SHTERRAIN", nullptr));
+	if (terrain == nullptr || terrain->IsHighEndTerrain())
+		return;
+	auto* skin = static_cast<TSkinShader*>(renderer->GetSystemResource(static_cast<TRenderInterface::SYSRESOURCES>(9)));
+	auto* system =
+	    static_cast<TSysShader*>(renderer->GetSystemResource(static_cast<TRenderInterface::SYSRESOURCES>(8)));
+	auto* grass = static_cast<TGrassShader*>(renderer->FindOrphanedResource("SHGRASS", nullptr));
+	if (skin != nullptr)
+		skin->SetLightScattering(false);
+	if (system != nullptr)
+		system->SetLightScattering(false);
+	if (grass != nullptr)
+		grass->SetLightScattering(false);
 }
 
 void ARootTask::CreateARenderer()

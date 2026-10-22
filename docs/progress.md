@@ -39,6 +39,16 @@ inputs. Float results must match bit for bit unless a comment justifies a tolera
 gap is #42.
 
 ## Log
+- 2026-10-23: Game (#21): `ARootTask::ResetOptions` (0x47BCE0, from the assembly; Ghidra mixes
+  up which level drives the water) applies the graphics options after `OnCreate` saves them: far
+  clip and `AFadeDist` fade distances from the draw distance (`LOW_`/`MEDIUM_`/`HIGH_` constant
+  blocks), `TTerrainInterface::SetLODDetail`, water settings (high with reflections, truncated),
+  sky settings, `AParticleSystem::SetDetail` (vertex and mesh budgets) and the weather's
+  scattering offset (`(1 - low/medium draw distance) * 0.6` at low draw distance). `InitTerrain`
+  turns light scattering off on the skin, system and grass shaders without a high-end terrain
+  shader. Not yet: the park terrain, weather, tree and wall re-initialisation (no game controller
+  yet) and rebuilding particle meshes (no particle system task yet). New declarations:
+  `TTerrainInterface` (LOD), `TSysShader`. Unit-tested; `jpog.exe` still runs on our kernel.
 - 2026-10-23: Game (#21): `AConstants` (SimJP.exe 0x46E7D0) reads `Data/Constant.ini` into 708
   float, 154 int and 42 vector constants; the names come from the exe's `AConstantTypes` tables
   (`src/game/AConstantNames.inl`, also the enumerators), read through the
