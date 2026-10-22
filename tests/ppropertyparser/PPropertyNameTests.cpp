@@ -98,7 +98,7 @@ TEST_SUITE("PPropertyName differential" * doctest::skip(PPropertyParserMissing()
 	TEST_CASE("names match the original")
 	{
 		using P = void*;
-		const auto pool = Original<P(__stdcall*)()>("?GetCStringPool@TSystem@Toshi@@SGPAVTCStringPool@2@XZ");
+		const auto pool = Original<P(TSTDCALL*)()>("?GetCStringPool@TSystem@Toshi@@SGPAVTCStringPool@2@XZ");
 		const auto get = Original<Method<P*, P*, const char*>>("?Get@TCStringPool@Toshi@@QAE?AVTPCString@2@PBD@Z");
 		const auto construct = OriginalPP<Method<void, P*>>("??0PPropertyName@@QAE@ABVTPCString@Toshi@@@Z");
 		const auto getString = OriginalPP<Method<P*, P*>>("?GetString@PPropertyName@@QBE?AVTPCString@Toshi@@XZ");
@@ -108,7 +108,7 @@ TEST_SUITE("PPropertyName differential" * doctest::skip(PPropertyParserMissing()
 		const auto greater = OriginalPP<Method<bool, const RawName*>>("??OPPropertyName@@QBE_NABV0@@Z");
 		const auto constructString = Original<Method<void, const char*>>("??0TCString@Toshi@@QAE@PBD@Z");
 		const auto destructString = Original<Method<void>>("??1TCString@Toshi@@QAE@XZ");
-		const auto append = OriginalPP<void*(__stdcall*)(void*, const void*, const RawName*)>(
+		const auto append = OriginalPP<void*(TSTDCALL*)(void*, const void*, const RawName*)>(
 		    "??H@YG?AVTCString@Toshi@@ABV01@ABVPPropertyName@@@Z");
 
 		// The original names are leaked: their handles belong to the original kernel's pool.

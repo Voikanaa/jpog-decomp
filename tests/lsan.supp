@@ -1,0 +1,7 @@
+# LeakSanitizer suppressions (linux-asan): allocations the original also never frees.
+# TLocale's destructor frees its tables but not the TLocaleInfo objects LoadInfo creates
+# (TKernelInterface.dll 0x10015520).
+leak:Toshi::TLocale::LoadInfo
+# The kernel creates the file manager and its file systems ("local", "abs", "null", "mem") and
+# never deletes them: the original destructor (0x10014b40) only destroys its timer and TObject.
+leak:Toshi::TKernelInterface::TKernelInterface

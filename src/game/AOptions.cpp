@@ -357,7 +357,7 @@ TEmitter<AOptions, AOptionLoadEvent>* AOptions::GetOptionLoadEmitter()
 	return &m_oLoadEmitter;
 }
 
-AOptions* __stdcall AOptions::GetOptions()
+AOptions* TSTDCALL AOptions::GetOptions()
 {
 	return ms_pSingleton;
 }

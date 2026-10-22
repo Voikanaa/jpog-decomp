@@ -6,7 +6,6 @@
 
 #include <bit>
 #include <cstdio>
-#include <cwchar>
 #include <cwctype>
 #include <new>
 
@@ -94,10 +93,16 @@ template <typename T> void Scan(const char* text, const char* format, T* value)
 {
 	std::sscanf(text, format, value);
 }
+// Number tokens are ASCII, so the wide text is narrowed (anything else stops the scan, as it
+// would swscanf's).
 template <typename T> void Scan(const unsigned short* text, const char* format, T* value)
 {
-	const wchar_t wide[3] = {static_cast<wchar_t>(format[0]), static_cast<wchar_t>(format[1]), 0};
-	std::swscanf(reinterpret_cast<const wchar_t*>(text), wide, value);
+	char narrow[0x100];
+	std::size_t i = 0;
+	for (; i + 1 < sizeof(narrow) && text[i] != 0; ++i)
+		narrow[i] = text[i] < 0x80 ? static_cast<char>(text[i]) : '?';
+	narrow[i] = '\0';
+	std::sscanf(narrow, format, value);
 }
 template <typename Char> bool Equals(const Char* text, const char* ascii)
 {

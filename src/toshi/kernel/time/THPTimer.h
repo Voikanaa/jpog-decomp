@@ -20,13 +20,13 @@ public:
 	// Seconds since the counter's origin at the last update.
 	float GetCurrent();
 	unsigned int GetRaw32();
-	unsigned __int64 GetRaw64();
+	unsigned long long GetRaw64();
 
 private:
-	__int64 m_iFrequency;
+	long long m_iFrequency;
 	float m_fCurrent;
-	__int64 m_iPrevious;
-	__int64 m_iNow;
+	long long m_iPrevious;
+	long long m_iNow;
 	float m_fDelta;
 };
 

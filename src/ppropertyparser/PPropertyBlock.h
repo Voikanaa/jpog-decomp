@@ -15,8 +15,10 @@ class PPropertyWriter;
 class PPropertyBlock : public Toshi::TObject, public Toshi::TRefCounted
 {
 public:
-	// The engine passes 1 and 3; the names of the values are not exported.
-	enum Priority
+	// The engine passes 1 and 3; the names of the values are not exported. The fixed underlying
+	// type makes every int a valid value (an empty enum otherwise only holds 0 and 1); MSVC
+	// mangles it as before (W4).
+	enum Priority : int
 	{
 	};
 

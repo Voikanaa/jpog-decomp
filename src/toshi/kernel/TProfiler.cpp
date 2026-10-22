@@ -1,9 +1,9 @@
 #include "toshi/kernel/TProfiler.h"
 
+#include "platform/System.h"
 #include "toshi/kernel/file/TFile.h"
 #include "toshi/kernel/strings/TCString.h"
 
-#include <windows.h>
 #include <cstdio>
 #include <cstring>
 
@@ -19,8 +19,8 @@ int TProfiler::m_sOutFileMaxSize = 20000;
 bool TProfiler::m_sStartImmediately = false;
 TProfiler_Sorting TProfiler::m_sSortBy = TProfiler_SortNone;
 TProfiler* TProfiler::m_sChainHead = nullptr;
-__int64 TProfiler::m_sFrequency = 0;
-__int64 TProfiler::m_sProgramTime = 0;
+long long TProfiler::m_sFrequency = 0;
+long long TProfiler::m_sProgramTime = 0;
 bool TProfiler::m_sProfilerStopped = true;
 TProfilerStarter* TProfilerStarter::m_sLastActive = nullptr;
 
@@ -35,18 +35,14 @@ TProfiler* FirstParentMarker()
 	return reinterpret_cast<TProfiler*>(&s_firstParentMarker);
 }
 
-__int64 Counter()
+long long Counter()
 {
-	LARGE_INTEGER value;
-	QueryPerformanceCounter(&value);
-	return value.QuadPart;
+	return jpog::platform::PerformanceCounter();
 }
 
-__int64 Frequency()
+long long Frequency()
 {
-	LARGE_INTEGER value;
-	QueryPerformanceFrequency(&value);
-	return value.QuadPart;
+	return jpog::platform::PerformanceFrequency();
 }
 
 bool IsRealParent(const TProfiler* parent)
@@ -54,7 +50,7 @@ bool IsRealParent(const TProfiler* parent)
 	return parent != nullptr && parent != FirstParentMarker();
 }
 
-constexpr __int64 kNoMinimum = 0x7FFFFFFFFFFFFFFF;
+constexpr long long kNoMinimum = 0x7FFFFFFFFFFFFFFF;
 
 } // namespace
 
@@ -120,7 +116,7 @@ bool TProfiler::IsRunning()
 	return !m_sProfilerStopped;
 }
 
-void TProfiler::Add(__int64& time, __int64& childTime)
+void TProfiler::Add(long long& time, long long& childTime)
 {
 	m_iTotalTime += time;
 	m_iChildTime += childTime;
@@ -246,27 +242,27 @@ void TProfiler::Report(int indent)
 	const double self =
 	    100.0 * static_cast<double>(m_iTotalTime - m_iChildTime) * (1.0 / static_cast<double>(m_sProgramTime));
 	if (self == total)
-		std::sprintf(line, m_sSortBy == TProfiler_SortByTotal ? "|      |%6.2f" : "|%6.2f|      ", self);
+		std::snprintf(line, sizeof(line), m_sSortBy == TProfiler_SortByTotal ? "|      |%6.2f" : "|%6.2f|      ", self);
 	else
-		std::sprintf(line, "|%6.2f|%6.2f", self, total);
+		std::snprintf(line, sizeof(line), "|%6.2f|%6.2f", self, total);
 	if (m_szFile == nullptr)
-		std::sprintf(location, " ");
+		std::snprintf(location, sizeof(location), " ");
 	else
-		std::sprintf(location, "%-*.*s(%3d) :", 0x50, 0x50, m_szFile, m_iLine);
+		std::snprintf(location, sizeof(location), "%-*.*s(%3d) :", 0x50, 0x50, m_szFile, m_iLine);
 	Out(line, location);
 	if ((m_sOutputFilter & 1) == 0)
 	{
-		std::sprintf(line, "|%10.2f", milliseconds);
+		std::snprintf(line, sizeof(line), "|%10.2f", milliseconds);
 		Out(line, nullptr);
 	}
 	if ((m_sOutputFilter & 8) == 0)
 	{
-		std::sprintf(line, "|%8I64d", m_iHits);
+		std::snprintf(line, sizeof(line), "|%8lld", m_iHits);
 		Out(line, nullptr);
 	}
 	if ((m_sOutputFilter & 4) == 0)
 	{
-		std::sprintf(line, "|%10.3f", m_iHits == 0 ? 0.0 : milliseconds / static_cast<double>(m_iHits));
+		std::snprintf(line, sizeof(line), "|%10.3f", m_iHits == 0 ? 0.0 : milliseconds / static_cast<double>(m_iHits));
 		Out(line, nullptr);
 	}
 	Out(const_cast<char*>("|"), nullptr);
@@ -274,11 +270,11 @@ void TProfiler::Report(int indent)
 		m_iMinTime = 0;
 	const float minimum = static_cast<float>(m_iMinTime) * (1.0f / static_cast<float>(m_sFrequency)) * 1000.0f;
 	const float maximum = 1000.0f * static_cast<float>(m_iMaxTime) * (1.0f / static_cast<float>(m_sFrequency));
-	std::sprintf(line, "%9.3f|%9.3f|", static_cast<double>(minimum), static_cast<double>(maximum));
+	std::snprintf(line, sizeof(line), "%9.3f|%9.3f|", static_cast<double>(minimum), static_cast<double>(maximum));
 	Out(line, nullptr);
 	for (int i = 0; i < indent; ++i)
 		Out(const_cast<char*>("  "), nullptr);
-	std::sprintf(line, "ID:(%d):", m_iID);
+	std::snprintf(line, sizeof(line), "ID:(%d):", m_iID);
 	Out(line, nullptr);
 	Out(m_szName, nullptr);
 	if (IsRealParent(m_pParent))
@@ -287,7 +283,7 @@ void TProfiler::Report(int indent)
 		    m_pParent->m_iTotalTime <= 0
 		        ? 0.0
 		        : (static_cast<double>(m_iTotalTime) / static_cast<double>(m_pParent->m_iTotalTime)) * 100.0;
-		std::sprintf(line, "(%3.1f%%) PID:%d", share, m_pParent->m_iID);
+		std::snprintf(line, sizeof(line), "(%3.1f%%) PID:%d", share, m_pParent->m_iID);
 		Out(line, nullptr);
 	}
 	Out(const_cast<char*>("\n"), nullptr);
@@ -343,7 +339,7 @@ TProfilerStarter::~TProfilerStarter()
 		return;
 	COUNTER_STRUCT now = {};
 	TProfiler::GetHardwareCounterValues(now);
-	const __int64 elapsed = now.m_iPerformanceCounter - m_oStart.m_iPerformanceCounter;
+	const long long elapsed = now.m_iPerformanceCounter - m_oStart.m_iPerformanceCounter;
 	COUNTER_STRUCT counters = {0, now.m_iCounter0 - m_oStart.m_iCounter0, now.m_iCounter1 - m_oStart.m_iCounter1};
 	m_sLastActive = m_pPrevious;
 	TProfiler& profiler = *m_pProfiler;
@@ -364,7 +360,7 @@ TProfilerStarter::~TProfilerStarter()
 		profiler.m_oChildCounters.m_iCounter0 += m_oChildCounters.m_iCounter0;
 		profiler.m_oChildCounters.m_iCounter1 += m_oChildCounters.m_iCounter1;
 	};
-	auto addChild = [](TProfilerStarter& to, __int64 time, const COUNTER_STRUCT& values)
+	auto addChild = [](TProfilerStarter& to, long long time, const COUNTER_STRUCT& values)
 	{
 		to.m_iChildTime += time;
 		to.m_oChildCounters.m_iCounter0 += values.m_iCounter0;

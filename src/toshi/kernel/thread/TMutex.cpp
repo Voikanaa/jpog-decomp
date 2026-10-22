@@ -1,6 +1,6 @@
 #include "toshi/kernel/thread/TMutex.h"
 
-#include <windows.h>
+#include "platform/Thread.h"
 
 namespace Toshi
 {
@@ -13,25 +13,25 @@ TMutex& TMutex::operator=(const TMutex& other)
 
 bool TMutex::Create()
 {
-	m_hMutex = CreateMutexA(nullptr, FALSE, nullptr);
+	m_hMutex = jpog::platform::MutexCreate();
 	return true;
 }
 
 bool TMutex::Destroy()
 {
-	const BOOL closed = CloseHandle(m_hMutex);
+	const bool closed = jpog::platform::MutexDestroy(m_hMutex);
 	m_hMutex = nullptr;
-	return closed != FALSE;
+	return closed;
 }
 
 bool TMutex::Lock(unsigned int flags)
 {
-	return WaitForSingleObject(m_hMutex, (flags & 1) ? 0 : INFINITE) == WAIT_OBJECT_0;
+	return jpog::platform::MutexLock(m_hMutex, (flags & 1) != 0);
 }
 
 bool TMutex::Unlock()
 {
-	return ReleaseMutex(m_hMutex) != FALSE;
+	return jpog::platform::MutexUnlock(m_hMutex);
 }
 
 TMutexLock::TMutexLock() : m_pMutex(nullptr)

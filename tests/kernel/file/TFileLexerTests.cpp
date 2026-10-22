@@ -4,6 +4,7 @@
 #include "toshi/kernel/file/TFile.h"
 #include "toshi/kernel/file/TFileLexer.h"
 
+#include <cstdarg>
 #include <cstring>
 #include <doctest/doctest.h>
 #include <string>
@@ -35,8 +36,8 @@ public:
 	int GetWChar() override { return m_position < m_text.size() ? m_text[m_position++] : -1; }
 	int PutCChar(char) override { return -1; }
 	int PutWChar(unsigned short) override { return -1; }
-	int VCPrintf(const char*, char*) override { return 0; }
-	int VWPrintf(const unsigned short*, char*) override { return 0; }
+	int VCPrintf(const char*, va_list) override { return 0; }
+	int VWPrintf(const unsigned short*, va_list) override { return 0; }
 
 private:
 	std::u16string m_text;

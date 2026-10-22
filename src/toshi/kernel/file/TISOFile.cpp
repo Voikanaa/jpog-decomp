@@ -277,12 +277,12 @@ int TISOFile::PutWChar(unsigned short)
 	return 0;
 }
 
-int TISOFile::VCPrintf(const char*, char*)
+int TISOFile::VCPrintf(const char*, va_list)
 {
 	return 0;
 }
 
-int TISOFile::VWPrintf(const unsigned short*, char*)
+int TISOFile::VWPrintf(const unsigned short*, va_list)
 {
 	return 0;
 }

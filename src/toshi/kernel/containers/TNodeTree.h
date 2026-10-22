@@ -1,5 +1,7 @@
 #pragma once
 
+#include "common/layout.h"
+
 namespace Toshi
 {
 
@@ -26,7 +28,8 @@ public:
 		T* Attached() const { return m_pAttached; }
 
 	private:
-		T* Self() { return static_cast<T*>(this); }
+		// Also called while the T is still being constructed (the links start at the node itself).
+		JPOG_NO_SANITIZE_VPTR T* Self() { return static_cast<T*>(this); }
 
 		TNodeTree* m_pTree;
 		T* m_pNext;
@@ -42,7 +45,7 @@ public:
 	}
 
 	// The root as the T pointer the nodes store (it does not point at a real T).
-	T* Root() { return static_cast<T*>(&m_oRoot); }
+	JPOG_NO_SANITIZE_VPTR T* Root() { return static_cast<T*>(&m_oRoot); }
 	static TNode* Node(T* node) { return static_cast<TNode*>(node); }
 	// The first top-level node.
 	T* Attached() const { return m_oRoot.m_pAttached; }

@@ -13,9 +13,9 @@ class TProfilerStarter;
 // read in the shipped build).
 struct COUNTER_STRUCT
 {
-	__int64 m_iPerformanceCounter;
-	__int64 m_iCounter0;
-	__int64 m_iCounter1;
+	long long m_iPerformanceCounter;
+	long long m_iCounter0;
+	long long m_iCounter1;
 };
 
 enum TProfiler_Sorting
@@ -69,27 +69,27 @@ protected:
 
 private:
 	bool operator>(TProfiler& other);
-	void Add(__int64& time, __int64& childTime);
+	void Add(long long& time, long long& childTime);
 	void AddCounterStructs(COUNTER_STRUCT& counters, COUNTER_STRUCT& childCounters);
 	// The original divides by frequency * 1000.
 	double ElapsedInMS();
 
 	static TProfiler* m_sChainHead;
-	static __int64 m_sFrequency;
-	static __int64 m_sProgramTime;
+	static long long m_sFrequency;
+	static long long m_sProgramTime;
 	static bool m_sProfilerStopped;
 
 	char m_szName[0x50];
 	int m_iID;
 	bool m_bUnused;
-	__int64 m_iTotalTime;
-	__int64 m_iChildTime;
+	long long m_iTotalTime;
+	long long m_iChildTime;
 	COUNTER_STRUCT m_oStart;
 	COUNTER_STRUCT m_oCounters;
 	COUNTER_STRUCT m_oChildCounters;
-	__int64 m_iMaxTime;
-	__int64 m_iMinTime;
-	__int64 m_iHits;
+	long long m_iMaxTime;
+	long long m_iMinTime;
+	long long m_iHits;
 	int m_iUnused;
 	TProfiler* m_pNext;
 	int m_iDepth; // active starters
@@ -122,7 +122,7 @@ private:
 	TProfiler* m_pProfiler;
 	TProfilerStarter* m_pPrevious;
 	COUNTER_STRUCT m_oStart;
-	__int64 m_iChildTime;
+	long long m_iChildTime;
 	COUNTER_STRUCT m_oChildCounters;
 };
 

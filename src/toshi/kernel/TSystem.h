@@ -60,8 +60,8 @@ struct TSystem
 	static const char* TSTDCALL StringUnicodeToChar(char* destination, const unsigned short* source, int count);
 	// Radix 8, 10 or 16; any other radix leaves `buffer` untouched.
 	static const char* TSTDCALL StringIntToString(int value, char* buffer, int radix);
-	static int __cdecl StringFormat(char* buffer, const char* format, ...);
-	static int __cdecl StringFormat(unsigned short* buffer, const unsigned short* format, ...);
+	static int StringFormat(char* buffer, const char* format, ...);
+	static int StringFormat(unsigned short* buffer, const unsigned short* format, ...);
 
 	// hash = hash * 5 + character (narrow characters are signed).
 	static unsigned int TSTDCALL HashString(const char* string);

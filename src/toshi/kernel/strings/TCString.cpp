@@ -12,7 +12,9 @@
 namespace Toshi
 {
 
-static_assert(std::is_same_v<va_list, char*>, "VFormat takes the argument list as char*");
+#if defined(_MSC_VER)
+static_assert(std::is_same_v<va_list, char*>, "the original passes argument lists as char* (MSVC's va_list)");
+#endif
 
 char* TCString::m_aNull = nullptr;
 
@@ -200,7 +202,7 @@ TCString& TCString::Concat(const char* string, int count)
 	return *this;
 }
 
-TCString& __cdecl TCString::Format(const char* format, ...)
+TCString& TCString::Format(const char* format, ...)
 {
 	va_list args;
 	va_start(args, format);
@@ -209,7 +211,7 @@ TCString& __cdecl TCString::Format(const char* format, ...)
 	return *this;
 }
 
-TCString& TCString::VFormat(const char* format, char* args)
+TCString& TCString::VFormat(const char* format, va_list args)
 {
 	char buffer[0x400];
 	std::vsnprintf(buffer, sizeof(buffer), format, args);

@@ -172,9 +172,9 @@ TEST_SUITE("TFile differential" * doctest::skip(KernelMissing()))
 {
 	TEST_CASE("path helpers match the original")
 	{
-		using Unary = TCString*(__stdcall*)(TCString*, const TCString*);
-		using Binary = TCString*(__stdcall*)(TCString*, const TCString*, const TCString*);
-		using Split = void(__stdcall*)(const TCString*, TCString*, TCString*);
+		using Unary = TCString*(TSTDCALL*)(TCString*, const TCString*);
+		using Binary = TCString*(TSTDCALL*)(TCString*, const TCString*, const TCString*);
+		using Split = void(TSTDCALL*)(const TCString*, TCString*, TCString*);
 		const auto simplify = Original<Unary>("?SimplifyPath@TFile@Toshi@@SG?AVTCString@2@ABV32@@Z");
 		const auto concat = Original<Binary>("?ConcatPath@TFile@Toshi@@SG?AVTCString@2@ABV32@0@Z");
 		const auto split = Original<Split>("?SplitPath@TFile@Toshi@@SGXABVTCString@2@AAV32@1@Z");

@@ -10,12 +10,12 @@ MeasurementSystem s_eMeasurementSystem = MeasurementSystem_Metric;
 
 } // namespace
 
-MeasurementSystem __stdcall GetMeasurementSystem()
+MeasurementSystem TSTDCALL GetMeasurementSystem()
 {
 	return s_eMeasurementSystem;
 }
 
-void __stdcall SetMeasurementSystem(MeasurementSystem system)
+void TSTDCALL SetMeasurementSystem(MeasurementSystem system)
 {
 	s_eMeasurementSystem = system;
 }

@@ -1,6 +1,6 @@
 #include "toshi/kernel/time/THPTimer.h"
 
-#include <windows.h>
+#include "platform/System.h"
 
 namespace Toshi
 {
@@ -8,11 +8,9 @@ namespace Toshi
 namespace
 {
 
-__int64 Counter()
+long long Counter()
 {
-	LARGE_INTEGER value;
-	QueryPerformanceCounter(&value);
-	return value.QuadPart;
+	return jpog::platform::PerformanceCounter();
 }
 
 } // namespace
@@ -31,9 +29,7 @@ THPTimer::~THPTimer()
 void THPTimer::Reset()
 {
 	m_iNow = Counter();
-	LARGE_INTEGER frequency;
-	QueryPerformanceFrequency(&frequency);
-	m_iFrequency = frequency.QuadPart;
+	m_iFrequency = jpog::platform::PerformanceFrequency();
 	m_iPrevious = m_iNow;
 	m_fDelta = 0.0f;
 }
@@ -64,9 +60,9 @@ unsigned int THPTimer::GetRaw32()
 	return static_cast<unsigned int>(Counter());
 }
 
-unsigned __int64 THPTimer::GetRaw64()
+unsigned long long THPTimer::GetRaw64()
 {
-	return static_cast<unsigned __int64>(Counter());
+	return static_cast<unsigned long long>(Counter());
 }
 
 } // namespace Toshi

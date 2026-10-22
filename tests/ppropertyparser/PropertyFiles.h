@@ -1,5 +1,7 @@
 #pragma once
 
+#include "common/abi.h"
+
 // Shared helpers for the PPropertyParser reader and writer tests.
 
 #include "ppropertyparser/PProperties.h"
@@ -41,11 +43,24 @@ public:
 
 inline TNullFileSystem g_oFileSystem;
 
+// Deletes the files it is asked to destroy: for heap files handed to a reader, which destroys
+// them through their file system.
+class TOwningFileSystem : public TNullFileSystem
+{
+public:
+	void DestroyFile(TFile* file) override; // after TStringFile, the only files it holds
+};
+
+inline TOwningFileSystem g_oOwningFileSystem;
+
 // Reads from a string; writes are collected in Written().
 class TStringFile : public TFile
 {
 public:
-	explicit TStringFile(std::string text = {}) : TFile(&g_oFileSystem), m_text(std::move(text)) {}
+	explicit TStringFile(std::string text = {}, Toshi::TFileSystem* fileSystem = &g_oFileSystem)
+	    : TFile(fileSystem), m_text(std::move(text))
+	{
+	}
 
 	const std::string& Written() const { return m_written; }
 
@@ -65,20 +80,31 @@ public:
 	int GetWChar() override { return GetCChar(); }
 	int PutCChar(char) override { return -1; }
 	int PutWChar(unsigned short) override { return -1; }
-	int VCPrintf(const char* format, char* args) override
+	int VCPrintf(const char* format, va_list args) override
 	{
 		char text[1024];
 		const int length = std::vsnprintf(text, sizeof(text), format, args);
 		m_written += text;
 		return length;
 	}
-	int VWPrintf(const unsigned short*, char*) override { return 0; }
+	int VWPrintf(const unsigned short*, va_list) override { return 0; }
 
 private:
 	std::string m_text;
 	std::string m_written;
 	std::size_t m_position = 0;
 };
+
+inline void TOwningFileSystem::DestroyFile(TFile* file)
+{
+	delete static_cast<TStringFile*>(file);
+}
+
+// A heap TStringFile that is deleted when its reader destroys it.
+inline TStringFile* NewStringFile(std::string text)
+{
+	return new TStringFile(std::move(text), &g_oOwningFileSystem);
+}
 
 // The text of a pooled string handle (either kernel's layout: refcount, TCString buffer).
 inline std::string HandleText(const void* handle)

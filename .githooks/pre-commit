@@ -1,8 +1,10 @@
 #!/bin/sh
 # Blocks commits containing game binaries/assets or oversized files, badly formatted C++ and
 # Python lint errors. Enable once per clone: git config core.hooksPath .githooks
-python tools/check_repo.py --staged || exit 1
-python tools/format.py --check || {
+python=python
+command -v python >/dev/null 2>&1 || python=python3 # Linux/macOS often ship only python3
+"$python" tools/check_repo.py --staged || exit 1
+"$python" tools/format.py --check || {
 	echo "pre-commit: run 'python tools/format.py' to fix formatting" >&2
 	exit 1
 }

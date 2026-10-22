@@ -134,7 +134,7 @@ template <typename V> using QueryFloat = Method<float>;
 template <typename V> using QueryFloatVec = Method<float, const V*>;
 template <typename V> using QueryBoolVec = Method<bool, const V*>;
 template <typename V> using QueryBoolFloat = Method<bool, float>;
-template <typename V> using StaticFloatVecVec = float(__stdcall*)(const V*, const V*);
+template <typename V> using StaticFloatVecVec = float(TSTDCALL*)(const V*, const V*);
 
 // Runs `original` and `ours` on identical copies of a random `self` (plus arguments produced by
 // `call`) and checks that the resulting vectors match bit for bit.
@@ -565,7 +565,7 @@ TEST_SUITE("TVector differential" * doctest::skip(KernelMissing()))
 		using ToV3 = Method<TVector3*, TVector3*>;
 		const auto getXY = Original<ToV3>("?GetVector3XY@TVector2@Toshi@@QBE?AVTVector3@2@XZ");
 		const auto getXZ = Original<ToV3>("?GetVector3XZ@TVector2@Toshi@@QBE?AVTVector3@2@XZ");
-		using XZFn = void(__stdcall*)(TVector3*, const TVector3*, const TVector2*);
+		using XZFn = void(TSTDCALL*)(TVector3*, const TVector3*, const TVector2*);
 		const auto addXZ = Original<XZFn>("?AddXZ@TVector2@Toshi@@SGXAAVTVector3@2@ABV32@ABV12@@Z");
 		const auto subXZ = Original<XZFn>("?SubXZ@TVector2@Toshi@@SGXAAVTVector3@2@ABV32@ABV12@@Z");
 		InputGenerator gen;

@@ -99,7 +99,7 @@ add_library(toshi_kernel STATIC
   time/TTimer.cpp
   time/TTimer.h
 )
-target_link_libraries(toshi_kernel PUBLIC jpog_common)
+target_link_libraries(toshi_kernel PUBLIC jpog_common jpog_platform)
 # The original relies on strncpy/wcsncpy semantics (zero padding, no forced terminator).
 target_compile_definitions(toshi_kernel PRIVATE _CRT_SECURE_NO_WARNINGS)
 

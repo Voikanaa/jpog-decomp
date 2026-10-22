@@ -1,6 +1,7 @@
 #pragma once
 
 #include "common/layout.h"
+#include "platform/Thread.h"
 
 namespace Toshi
 {
@@ -18,8 +19,8 @@ public:
 	bool Pop(void* item, unsigned int flags);
 
 private:
-	// A CRITICAL_SECTION (kept opaque so the header needs no windows.h).
-	alignas(void*) unsigned char m_aLock[sizeof(void*) == 4 ? 24 : 40];
+	// A CRITICAL_SECTION on Windows (kept opaque so the header needs no windows.h).
+	alignas(void*) unsigned char m_aLock[jpog::platform::kLockStorageSize];
 	void* m_hFreeSlots;
 	void* m_hFilledSlots;
 	int m_iItemSize;

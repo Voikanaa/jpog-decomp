@@ -3,6 +3,7 @@
 #include "common/abi.h"
 #include "common/layout.h"
 
+#include <cstdarg>
 #include <cstdint>
 
 namespace Toshi
@@ -36,8 +37,8 @@ public:
 	void Copy(const unsigned short* string, int count);
 	TWString& Concat(const TWString& other, int count);
 	TWString& Concat(const unsigned short* string, int count);
-	TWString& __cdecl Format(const unsigned short* format, ...);
-	TWString& VFormat(const unsigned short* format, char* args);
+	TWString& Format(const unsigned short* format, ...);
+	TWString& VFormat(const unsigned short* format, va_list args);
 	void Truncate(int length);
 	TWString Mid(int start, int count) const;
 	TWString& MakeLower();

@@ -26,20 +26,20 @@ bool ADummyTask::OnUpdate(float deltaTime)
 	return TTask::OnUpdate(deltaTime);
 }
 
-TObject* __stdcall ADummyTask::CreateObject()
+TObject* TSTDCALL ADummyTask::CreateObject()
 {
 	return new ADummyTask();
 }
 
-TObject* __stdcall ADummyTask::CreateObjectInPlace(void* memory)
+TObject* TSTDCALL ADummyTask::CreateObjectInPlace(void* memory)
 {
 	return memory == nullptr ? nullptr : new (memory) ADummyTask();
 }
 
-void __stdcall ADummyTask::InitialiseStatic()
+void TSTDCALL ADummyTask::InitialiseStatic()
 {
 }
 
-void __stdcall ADummyTask::DeinitialiseStatic()
+void TSTDCALL ADummyTask::DeinitialiseStatic()
 {
 }

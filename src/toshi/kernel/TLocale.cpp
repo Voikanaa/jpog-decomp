@@ -5,7 +5,9 @@
 #include "toshi/kernel/file/TFileLexer.h"
 
 #include <cstdarg>
+#if defined(_MSC_VER)
 #include <intrin.h>
+#endif
 #include <type_traits>
 
 namespace Toshi
@@ -539,16 +541,28 @@ TLString FormatTemporary(TLocale& locale, const TLString& format, va_list args)
 
 } // namespace
 
-TLString __cdecl TLocale::Format(const TPCString& name, ...)
+TLString TLocale::Format(const TPCString& name, ...)
 {
 	const TLString format = Get(name);
-	// va_start cannot take a reference parameter. The variadic arguments follow the return
+#if defined(_MSC_VER)
+	// MSVC's va_start rejects a reference parameter. The variadic arguments follow the return
 	// address, `this` and `name` (x86 __cdecl passes them on the stack; x64 homes them).
 	auto* args = static_cast<char*>(_AddressOfReturnAddress()) + 3 * sizeof(void*);
 	return FormatTemporary(*this, format, args);
+#else
+	// GCC and Clang accept a reference before the ellipsis (formally undefined, hence the warning).
+	va_list args;
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wvarargs"
+	va_start(args, name);
+#pragma GCC diagnostic pop
+	TLString result = FormatTemporary(*this, format, args);
+	va_end(args);
+	return result;
+#endif
 }
 
-TLString __cdecl TLocale::Format(const char* name, ...)
+TLString TLocale::Format(const char* name, ...)
 {
 	const TLString format = Get(name);
 	va_list args;
@@ -558,7 +572,7 @@ TLString __cdecl TLocale::Format(const char* name, ...)
 	return result;
 }
 
-TLString __cdecl TLocale::Format(int id, ...)
+TLString TLocale::Format(int id, ...)
 {
 	const TLString format = Get(id);
 	va_list args;

@@ -1,12 +1,12 @@
 #include "toshi/kernel/strings/TWString.h"
 
+#include "platform/CRuntime.h"
 #include "toshi/kernel/TSystem.h"
 #include "toshi/kernel/memory/TMemory.h"
 #include "toshi/kernel/strings/TCString.h"
 
 #include <cstdarg>
 #include <cstdio>
-#include <cwchar>
 
 namespace Toshi
 {
@@ -29,16 +29,6 @@ void SetLength(uint32_t& lengthAndExcess, int length)
 void SetExcess(uint32_t& lengthAndExcess, int excess)
 {
 	lengthAndExcess = (lengthAndExcess & 0x00FFFFFF) | (static_cast<uint32_t>(excess) << 24);
-}
-
-wchar_t* Wide(unsigned short* string)
-{
-	return reinterpret_cast<wchar_t*>(string);
-}
-
-const wchar_t* Wide(const unsigned short* string)
-{
-	return reinterpret_cast<const wchar_t*>(string);
 }
 
 // _wcslwr/_wcsupr in the "C" locale: only ASCII letters change.
@@ -130,7 +120,7 @@ void TWString::Copy(const TWString& other, int count)
 	if (count < 0 || static_cast<unsigned int>(other.Length()) < static_cast<unsigned int>(count))
 		count = other.Length();
 	AllocBuffer(count, true);
-	std::wcsncpy(Wide(m_pBuffer), Wide(other.m_pBuffer), static_cast<size_t>(count));
+	jpog::platform::WcsNCpy(m_pBuffer, other.m_pBuffer, static_cast<size_t>(count));
 	m_pBuffer[count] = 0;
 }
 
@@ -146,11 +136,11 @@ void TWString::Copy(const char* string, int count)
 
 void TWString::Copy(const unsigned short* string, int count)
 {
-	const int length = string == nullptr ? 0 : static_cast<int>(std::wcslen(Wide(string)));
+	const int length = string == nullptr ? 0 : static_cast<int>(jpog::platform::WcsLen(string));
 	if (length < count || count == -1)
 		count = length;
 	AllocBuffer(count, true);
-	std::wcsncpy(Wide(m_pBuffer), Wide(string), static_cast<size_t>(count));
+	jpog::platform::WcsNCpy(m_pBuffer, string, static_cast<size_t>(count));
 	m_pBuffer[count] = 0;
 }
 
@@ -187,7 +177,7 @@ TWString& TWString::Concat(const unsigned short* string, int count)
 	return *this;
 }
 
-TWString& __cdecl TWString::Format(const unsigned short* format, ...)
+TWString& TWString::Format(const unsigned short* format, ...)
 {
 	va_list args;
 	va_start(args, format);
@@ -196,11 +186,11 @@ TWString& __cdecl TWString::Format(const unsigned short* format, ...)
 	return *this;
 }
 
-TWString& TWString::VFormat(const unsigned short* format, char* args)
+TWString& TWString::VFormat(const unsigned short* format, va_list args)
 {
-	wchar_t buffer[0x400];
-	std::vswprintf(buffer, 0x400, Wide(format), args);
-	Copy(reinterpret_cast<const unsigned short*>(buffer), -1);
+	unsigned short buffer[0x400];
+	jpog::platform::VSWPrintf(buffer, 0x400, format, args);
+	Copy(buffer, -1);
 	return *this;
 }
 
@@ -228,7 +218,7 @@ TWString TWString::Mid(int start, int count) const
 	if (count < 0 || length < count + start)
 		count = length - start;
 	TWString part(count);
-	std::wcsncpy(Wide(part.m_pBuffer), Wide(m_pBuffer + start), static_cast<size_t>(count));
+	jpog::platform::WcsNCpy(part.m_pBuffer, m_pBuffer + start, static_cast<size_t>(count));
 	part.m_pBuffer[count] = 0;
 	return TWString(part);
 }
@@ -261,16 +251,16 @@ int TWString::Find(unsigned short character, int start) const
 {
 	if (!IsIndexValid(start))
 		return -1;
-	const wchar_t* found = std::wcschr(Wide(GetString(0) + start), static_cast<wchar_t>(character));
-	return found == nullptr ? -1 : static_cast<int>(found - Wide(GetString(0)));
+	const unsigned short* found = jpog::platform::WcsChr(GetString(0) + start, character);
+	return found == nullptr ? -1 : static_cast<int>(found - GetString(0));
 }
 
 int TWString::Find(const unsigned short* string, int start) const
 {
 	if (!IsIndexValid(start))
 		return -1;
-	const wchar_t* found = std::wcsstr(Wide(GetString(0) + start), Wide(string));
-	return found == nullptr ? -1 : static_cast<int>(found - Wide(GetString(0)));
+	const unsigned short* found = jpog::platform::WcsStr(GetString(0) + start, string);
+	return found == nullptr ? -1 : static_cast<int>(found - GetString(0));
 }
 
 int TWString::FindReverse(unsigned short character, int start) const

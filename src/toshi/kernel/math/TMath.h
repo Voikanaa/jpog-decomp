@@ -2,7 +2,13 @@
 
 #include "common/abi.h"
 
+#include <cmath>
 #include <cstdint>
+
+// <math.h> on glibc and macOS defines MAXFLOAT (XSI), which is also the name of an original export.
+#ifdef MAXFLOAT
+#undef MAXFLOAT
+#endif
 
 namespace Toshi
 {
