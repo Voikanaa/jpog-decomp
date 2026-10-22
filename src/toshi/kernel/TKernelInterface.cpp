@@ -79,12 +79,18 @@ TKernelInterface::~TKernelInterface()
 {
 	m_pScheduler->DestroyAllTasks();
 	SetScheduler(m_pScheduler, nullptr);
+	// The head's links are m_pFirstModule/m_pLastModule: write them directly, not through the head
+	// pointer (it does not point at a module).
+	const auto nextSlot = [this](TKernelInterfaceDLL* node) -> TKernelInterfaceDLL*&
+	{ return node == ModuleListHead(&m_pModuleList) ? m_pFirstModule : node->m_pNext; };
+	const auto prevSlot = [this](TKernelInterfaceDLL* node) -> TKernelInterfaceDLL*&
+	{ return node == ModuleListHead(&m_pModuleList) ? m_pLastModule : node->m_pPrev; };
 	for (TKernelInterfaceDLL* module = m_pFirstModule; module != ModuleListHead(&m_pModuleList);
 	     module = m_pFirstModule)
 	{
 		module->m_pList = nullptr;
-		module->m_pPrev->m_pNext = module->m_pNext;
-		module->m_pNext->m_pPrev = module->m_pPrev;
+		nextSlot(module->m_pPrev) = module->m_pNext;
+		prevSlot(module->m_pNext) = module->m_pPrev;
 		module->m_pNext = module;
 		module->m_pPrev = module;
 		--m_iModuleCount;
@@ -143,10 +149,13 @@ TKernelInterfaceDLL* TKernelInterface::LoadInterface(const TCString& name)
 		delete module;
 		return nullptr;
 	}
+	// The head's previous link is m_pLastModule (the head pointer does not point at a module).
+	const auto prevSlot = [this](TKernelInterfaceDLL* node) -> TKernelInterfaceDLL*&
+	{ return node == ModuleListHead(&m_pModuleList) ? m_pLastModule : node->m_pPrev; };
 	module->m_pList = &m_pModuleList;
 	module->m_pNext = m_pFirstModule;
 	module->m_pPrev = ModuleListHead(&m_pModuleList);
-	m_pFirstModule->m_pPrev = module;
+	prevSlot(m_pFirstModule) = module;
 	m_pFirstModule = module;
 	++m_iModuleCount;
 	return module;
@@ -164,9 +173,15 @@ TKernelInterfaceDLL* TKernelInterface::FindInterface(const TCString& name)
 void TKernelInterface::UnloadInterface(TKernelInterfaceDLL& module)
 {
 	module.Unload();
+	// The head's links are m_pFirstModule/m_pLastModule: write them directly, not through the head
+	// pointer (it does not point at a module).
+	const auto nextSlot = [this](TKernelInterfaceDLL* node) -> TKernelInterfaceDLL*&
+	{ return node == ModuleListHead(&m_pModuleList) ? m_pFirstModule : node->m_pNext; };
+	const auto prevSlot = [this](TKernelInterfaceDLL* node) -> TKernelInterfaceDLL*&
+	{ return node == ModuleListHead(&m_pModuleList) ? m_pLastModule : node->m_pPrev; };
 	module.m_pList = nullptr;
-	module.m_pPrev->m_pNext = module.m_pNext;
-	module.m_pNext->m_pPrev = module.m_pPrev;
+	nextSlot(module.m_pPrev) = module.m_pNext;
+	prevSlot(module.m_pNext) = module.m_pPrev;
 	module.m_pNext = &module;
 	module.m_pPrev = &module;
 	--m_iModuleCount;
