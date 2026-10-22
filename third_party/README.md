@@ -14,3 +14,12 @@ Every vendored dependency is pinned, unmodified and approved by the project owne
 
 Hashes are of the upstream archives (GitHub tag/commit tarballs or the named release asset).
 FFmpeg headers are not vendored yet: they come with the video work (#36).
+
+## Downloaded build tools
+
+Not in git and never distributed with the game; CMake downloads them, checks the hash and keeps
+them in `.cache/` (gitignored).
+
+| Tool | Version | License | Used for | Source | SHA-256 |
+|---|---|---|---|---|---|
+| DirectX Shader Compiler (`dxcompiler.dll`, `dxil.dll`) | 1.9.2609 | LLVM (Apache-2.0 with LLVM exception), MIT; `dxil.dll` under Microsoft's license (use on Windows, no redistribution) | DXIL shaders for Direct3D 12 (`JPOG_DXC`, Windows only) | https://github.com/microsoft/DirectXShaderCompiler/releases/tag/v1.9.2609 (`dxc_2026_09_29.zip`) | `ad31b1fc8443175d204f77a611fdb3ef2ec42759bdc2f1167368de24a4a7e7f1` |

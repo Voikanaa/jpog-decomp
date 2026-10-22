@@ -46,7 +46,9 @@ gap is #42.
   SPIR-V, GLSL 4.30, Metal); miniaudio output; a run-time FFmpeg probe; the kernel's scheduler
   ticks every frame. `--screenshot` writes PNGs (stb_image_write). D3D11, D3D12 (with DXBC),
   Vulkan and OpenGL draw the menu on Windows; `jpog --smoke` (dummy video, Noop renderer, null
-  audio) passes on every CI OS, including ASan/UBSan/LSan.
+  audio) passes on every CI OS, including ASan/UBSan/LSan. Direct3D 12 uses DXIL (Shader Model 6)
+  from Microsoft's DirectX Shader Compiler 1.9.2609, which Windows builds download (pinned,
+  SHA-256; its license forbids redistribution); without it (`JPOG_DXC=OFF`) D3D12 loads DXBC.
 - 2026-10-22: **Portable foundation P1** (#34, #35): kernel, PPropertyParser and the unit tests
   build and pass on Windows x64, Linux (GCC, Clang, ASan/UBSan/LSan) and macOS (universal), with
   clang-tidy, in CI. Every kernel OS call goes through `src/platform/` (Win32, POSIX), with own

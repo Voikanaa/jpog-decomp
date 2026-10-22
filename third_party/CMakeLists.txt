@@ -43,9 +43,9 @@ set(BGFX_BUILD_TOOLS_TEXTURE OFF CACHE BOOL "" FORCE)
 set(BGFX_INSTALL OFF CACHE BOOL "" FORCE)
 set(BGFX_CUSTOM_TARGETS OFF CACHE BOOL "" FORCE)
 set(BGFX_CONFIG_VIDEO OFF CACHE BOOL "" FORCE) # videos go through FFmpeg
-# shaderc copies the prebuilt DirectX Shader Compiler next to itself after linking. We vendor no
-# binaries and need no DXIL (D3D12) shaders, so that one step is dropped while bgfx is configured;
-# shaderc loads the compiler only on demand. Every other call passes through unchanged.
+# shaderc copies a prebuilt DirectX Shader Compiler from bgfx's tree next to itself after linking.
+# We vendor no binaries (JPOG_DXC below fetches it instead), so that one step is dropped while bgfx
+# is configured; shaderc loads the compiler only on demand. Every other call passes through.
 function(add_custom_command)
   if(JPOG_SKIP_DXCOMPILER_COPY AND ARGV MATCHES "dxcompiler" AND NOT EXISTS "${DXCOMPILER_RUNTIME}")
     return()
@@ -55,6 +55,41 @@ endfunction()
 set(JPOG_SKIP_DXCOMPILER_COPY ON)
 add_subdirectory(bgfx EXCLUDE_FROM_ALL SYSTEM)
 set(JPOG_SKIP_DXCOMPILER_COPY OFF)
+# --- DirectX Shader Compiler (build tool, Windows only): DXIL shaders for Direct3D 12 ------------
+# Not vendored or distributed: Microsoft's license allows using dxil.dll on Windows but not
+# sharing it, so each Windows build downloads the pinned release (checked by SHA-256) from
+# Microsoft's GitHub into .cache/. With JPOG_DXC=OFF (e.g. offline), Direct3D 12 uses DXBC.
+if(WIN32)
+  option(JPOG_DXC "Compile DXIL shaders for Direct3D 12 (downloads the DirectX Shader Compiler)" ON)
+else()
+  set(JPOG_DXC OFF)
+endif()
+if(JPOG_DXC)
+  set(dxc_version 1.9.2609)
+  set(dxc_dir "${PROJECT_SOURCE_DIR}/.cache/dxc/${dxc_version}")
+  if(NOT EXISTS "${dxc_dir}/bin/x64/dxil.dll")
+    message(STATUS "Downloading the DirectX Shader Compiler ${dxc_version}")
+    file(DOWNLOAD
+      "https://github.com/microsoft/DirectXShaderCompiler/releases/download/v${dxc_version}/dxc_2026_09_29.zip"
+      "${dxc_dir}.zip"
+      EXPECTED_HASH SHA256=ad31b1fc8443175d204f77a611fdb3ef2ec42759bdc2f1167368de24a4a7e7f1
+      TLS_VERIFY ON
+      STATUS status)
+    list(GET status 0 code)
+    if(code)
+      file(REMOVE "${dxc_dir}.zip")
+      message(FATAL_ERROR "DirectX Shader Compiler download failed (${status}); configure with -DJPOG_DXC=OFF to build without DXIL")
+    endif()
+    file(ARCHIVE_EXTRACT INPUT "${dxc_dir}.zip" DESTINATION "${dxc_dir}"
+      PATTERNS bin/x64/dxcompiler.dll bin/x64/dxil.dll LICENSE-MS.txt LICENSE-LLVM.txt LICENCE-MIT.txt)
+    file(REMOVE "${dxc_dir}.zip")
+  endif()
+  # shaderc loads dxcompiler.dll, which loads dxil.dll to sign the shaders, from its own directory.
+  set(shaderc_dir "${CMAKE_BINARY_DIR}/tools")
+  set_target_properties(shaderc PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${shaderc_dir}")
+  file(COPY "${dxc_dir}/bin/x64/dxcompiler.dll" "${dxc_dir}/bin/x64/dxil.dll" DESTINATION "${shaderc_dir}")
+endif()
+
 # bgfx_compile_shaders() (only loaded by bgfx.cmake's examples) and the bgfx_shader.sh includes.
 include(bgfx/cmake/bgfxToolUtils.cmake)
 set(JPOG_BGFX_SHADER_INCLUDE "${CMAKE_CURRENT_SOURCE_DIR}/bgfx/bgfx/src" CACHE INTERNAL "")

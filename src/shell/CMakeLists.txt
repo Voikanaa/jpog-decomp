@@ -1,11 +1,14 @@
 # The portable game shell `jpog` (Windows x64, Linux, macOS). The x86 build has its own jpog.exe
 # (src/game) on the original engine DLLs.
 
-# Shaders, compiled by bgfx's shaderc into headers. Profiles per platform: Direct3D 11 (DXBC; DXIL
-# would need the DirectX Shader Compiler, not vendored), Vulkan (SPIR-V), OpenGL (GLSL 4.30: bgfx
+# Shaders, compiled by bgfx's shaderc into headers. Profiles per platform: Direct3D 12 (DXIL,
+# Shader Model 6, with JPOG_DXC), Direct3D 11 (DXBC), Vulkan (SPIR-V), OpenGL (GLSL 4.30: bgfx
 # needs OpenGL 4.3) and Metal.
 if(WIN32)
   set(profiles s_5_0 spirv 430)
+  if(JPOG_DXC)
+    list(APPEND profiles s_6_0)
+  endif()
 elseif(APPLE)
   set(profiles metal)
 else()
@@ -45,6 +48,9 @@ add_executable(jpog
   ${fragment_shaders}
 )
 target_include_directories(jpog PRIVATE "${PROJECT_SOURCE_DIR}/src" "${shader_dir}")
+if(JPOG_DXC)
+  target_compile_definitions(jpog PRIVATE JPOG_SHADERS_DXIL)
+endif()
 target_link_libraries(jpog PRIVATE toshi_kernel jpog_platform SDL3::SDL3-static bgfx bx imgui miniaudio stb tracy)
 
 if(JPOG_BUILD_TESTS)
