@@ -7,8 +7,10 @@
 class AParticleSystem
 {
 public:
-	enum PARTICLEDETAIL
+	// Any value can be passed (above medium is high), hence the fixed type.
+	enum PARTICLEDETAIL : int
 	{
+		PARTICLEDETAIL_NONE = -1, // before the first SetDetail
 		PARTICLEDETAIL_LOW,
 		PARTICLEDETAIL_MEDIUM,
 		PARTICLEDETAIL_HIGH,

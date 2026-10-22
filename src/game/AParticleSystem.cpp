@@ -1,7 +1,7 @@
 #include "game/AParticleSystem.h"
 
 // The original's initial values: no detail set yet, high budgets.
-AParticleSystem::PARTICLEDETAIL AParticleSystem::m_eDetail = static_cast<PARTICLEDETAIL>(-1);
+AParticleSystem::PARTICLEDETAIL AParticleSystem::m_eDetail = PARTICLEDETAIL_NONE;
 float AParticleSystem::m_fFarDistModifier = 0.7f;
 int AParticleSystem::m_iMaxVerts = 2000;
 int AParticleSystem::m_iMaxNumMeshes = 20;
