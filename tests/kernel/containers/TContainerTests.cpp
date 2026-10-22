@@ -269,6 +269,31 @@ TEST_SUITE("TContainers differential" * doctest::skip(KernelMissing()))
 		}
 	}
 
+	TEST_CASE("TDList yields nullptr past either end")
+	{
+		struct Item : Toshi::TGenericDList::TNode
+		{
+			int value = 0;
+		};
+		Toshi::TDList<Item> list;
+		CHECK(list.Head() == nullptr);
+		CHECK(list.Tail() == nullptr);
+		Item a, b;
+		a.value = 1;
+		b.value = 2;
+		list.InsertTail(&a);
+		list.InsertTail(&b);
+		int sum = 0;
+		for (Item* item = list.Head(); item; item = list.Next(item))
+			sum += item->value;
+		CHECK(sum == 3);
+		CHECK(list.Next(&b) == nullptr);
+		CHECK(list.Prev(&a) == nullptr);
+		CHECK(list.Tail() == &b);
+		list.RemoveAll();
+		CHECK(list.Head() == nullptr);
+	}
+
 	TEST_CASE("TGenericDList matches the original")
 	{
 		// Exposes the protected interface of the list and its nodes.

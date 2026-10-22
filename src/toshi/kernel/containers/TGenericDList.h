@@ -89,18 +89,23 @@ template <typename T, int C = 0> class TDList : public TGenericDList
 public:
 	using Node = TGenericDList::TNode;
 
-	static T* FromNode(Node* node) { return static_cast<T*>(node); }
-
+	// The items, or nullptr past either end: the root node is not a T, so it is never cast to one
+	// (the original's inlined loops compare the cast root with End(), which is undefined in C++).
 	T* Head() const { return FromNode(TGenericDList::Head()); }
 	T* Tail() const { return FromNode(TGenericDList::Tail()); }
-	bool IsEnd(const Node* node) const { return node == TGenericDList::End(); }
-	static T* NextOf(T* item) { return FromNode(static_cast<Node*>(item)->m_pNext); }
-	static T* PrevOf(T* item) { return FromNode(static_cast<Node*>(item)->m_pPrev); }
+	T* Next(T* item) const { return FromNode(static_cast<Node*>(item)->m_pNext); }
+	T* Prev(T* item) const { return FromNode(static_cast<Node*>(item)->m_pPrev); }
 	bool IsEmpty() const { return TGenericDList::IsEmpty(); }
 	void InsertHead(T* item) { TGenericDList::InsertHead(item); }
 	void InsertTail(T* item) { TGenericDList::InsertTail(item); }
 	void RemoveAll() { TGenericDList::RemoveAll(); }
 	static void Remove(T* item) { static_cast<Node*>(item)->Remove(); }
+
+private:
+	T* FromNode(const Node* node) const
+	{
+		return node == TGenericDList::End() ? nullptr : static_cast<T*>(const_cast<Node*>(node));
+	}
 };
 
 } // namespace Toshi

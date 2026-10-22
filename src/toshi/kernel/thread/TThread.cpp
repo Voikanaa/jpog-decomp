@@ -169,7 +169,7 @@ TThread* TThreadManager::FindThread(unsigned int threadID)
 {
 	LockEnter(m_aLock);
 	TThread* found = nullptr;
-	for (TThread* thread = m_oThreads.Head(); !m_oThreads.IsEnd(thread); thread = TDList<TThread>::NextOf(thread))
+	for (TThread* thread = m_oThreads.Head(); thread; thread = m_oThreads.Next(thread))
 		if (thread->m_uiThreadID == threadID)
 		{
 			found = thread;

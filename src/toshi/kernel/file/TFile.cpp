@@ -329,8 +329,7 @@ TFile* TFileManager::CreateFile(const TCString& path, unsigned int flags)
 		if (TFileSystem* fileSystem = FindFileSystem(systemName))
 			return fileSystem->CreateFile(rest, flags);
 	}
-	for (TFileSystem* fileSystem = m_oValidated.Head(); !m_oValidated.IsEnd(fileSystem);
-	     fileSystem = TDList<TFileSystem, 0>::NextOf(fileSystem))
+	for (TFileSystem* fileSystem = m_oValidated.Head(); fileSystem; fileSystem = m_oValidated.Next(fileSystem))
 	{
 		if (TFile* file = fileSystem->CreateFile(path, flags))
 			return file;
@@ -364,8 +363,7 @@ TFileSystem* TFileManager::FindFileSystem(const TCString& name)
 
 TFileSystem* TSTDCALL TFileManager::FindFileSystem(TDList<TFileSystem, 0>& list, const TCString& name)
 {
-	for (TFileSystem* fileSystem = list.Head(); !list.IsEnd(fileSystem);
-	     fileSystem = TDList<TFileSystem, 0>::NextOf(fileSystem))
+	for (TFileSystem* fileSystem = list.Head(); fileSystem; fileSystem = list.Next(fileSystem))
 		if (name == fileSystem->GetName())
 			return fileSystem;
 	return nullptr;
