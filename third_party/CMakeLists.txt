@@ -1,6 +1,8 @@
-# Vendored dependencies (versions, licenses and hashes in README.md). Their own warnings are not
-# ours to fix: the project's warning flags are dropped for this directory.
+# Vendored dependencies (versions, licenses and hashes in README.md). They build with their own
+# settings: the project's warning flags and definitions (WIN32_LEAN_AND_MEAN hides the COM headers
+# shaderc needs) are dropped for this directory, and their own warnings are not ours to fix.
 set_property(DIRECTORY PROPERTY COMPILE_OPTIONS "")
+set_property(DIRECTORY PROPERTY COMPILE_DEFINITIONS "")
 if(MSVC)
   add_compile_options(/W0 /utf-8)
 else()
@@ -35,7 +37,18 @@ set(BGFX_BUILD_TOOLS_TEXTURE OFF CACHE BOOL "" FORCE)
 set(BGFX_INSTALL OFF CACHE BOOL "" FORCE)
 set(BGFX_CUSTOM_TARGETS OFF CACHE BOOL "" FORCE)
 set(BGFX_CONFIG_VIDEO OFF CACHE BOOL "" FORCE) # videos go through FFmpeg
+# shaderc copies the prebuilt DirectX Shader Compiler next to itself after linking. We vendor no
+# binaries and need no DXIL (D3D12) shaders, so that one step is dropped while bgfx is configured;
+# shaderc loads the compiler only on demand. Every other call passes through unchanged.
+function(add_custom_command)
+  if(JPOG_SKIP_DXCOMPILER_COPY AND ARGV MATCHES "dxcompiler" AND NOT EXISTS "${DXCOMPILER_RUNTIME}")
+    return()
+  endif()
+  _add_custom_command(${ARGV})
+endfunction()
+set(JPOG_SKIP_DXCOMPILER_COPY ON)
 add_subdirectory(bgfx EXCLUDE_FROM_ALL SYSTEM)
+set(JPOG_SKIP_DXCOMPILER_COPY OFF)
 
 # --- Dear ImGui (MIT): development menu -------------------------------------------------------
 add_library(imgui STATIC

@@ -9,6 +9,13 @@ on:
 permissions:
   contents: read
 
+env:
+  # Headers the vendored SDL3 (X11, Wayland, audio) and bgfx (OpenGL/EGL) build against on Linux.
+  LINUX_DEV_PACKAGES: >-
+    libx11-dev libxext-dev libxrandr-dev libxcursor-dev libxfixes-dev libxi-dev libxss-dev
+    libxtst-dev libxkbcommon-dev libwayland-dev wayland-protocols libdecor-0-dev libegl1-mesa-dev
+    libgl1-mesa-dev libasound2-dev libpulse-dev libdbus-1-dev libudev-dev
+
 jobs:
   build:
     name: Build (${{ matrix.preset }}${{ matrix.cc && format(', {0}', matrix.cc) || '' }})
@@ -33,9 +40,9 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - uses: mozilla-actions/sccache-action@v0.0.9
-      - name: Install Ninja (Linux)
+      - name: Install Ninja and platform headers (Linux)
         if: runner.os == 'Linux'
-        run: sudo apt-get update && sudo apt-get install -y ninja-build
+        run: sudo apt-get update && sudo apt-get install -y ninja-build ${{ env.LINUX_DEV_PACKAGES }}
       - name: Install Ninja (macOS)
         if: runner.os == 'macOS'
         run: brew install ninja
@@ -59,7 +66,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - name: Install tools
-        run: sudo apt-get update && sudo apt-get install -y ninja-build clang-tidy
+        run: sudo apt-get update && sudo apt-get install -y ninja-build clang-tidy ${{ env.LINUX_DEV_PACKAGES }}
       - name: Configure
         run: cmake --preset linux-debug -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
       - name: clang-tidy
