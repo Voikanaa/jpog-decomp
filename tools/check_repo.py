@@ -13,6 +13,8 @@ FORBIDDEN_EXTENSIONS = {
     ".exe", ".dll", ".iso", ".bik", ".mpg", ".dds", ".tga", ".ppm", ".wav", ".ogg",
     ".tmd", ".tml", ".tkl", ".fsm", ".inx", ".nwt", ".ttx", ".tto", ".mis", ".sav",
     ".s00", ".s01", ".s02", ".raw", ".hm", ".pdb", ".obj", ".lib",
+    # Build outputs on Linux/macOS: vendored code in third_party/ is source only.
+    ".so", ".dylib", ".a", ".o",
 }
 FORBIDDEN_PREFIXES = ("JPOG/", "game/", "build/", "analysis/", ".venv/", ".cache/")
 
