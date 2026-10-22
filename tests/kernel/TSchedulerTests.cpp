@@ -159,13 +159,14 @@ TEST_SUITE("TScheduler")
 {
 	TEST_CASE("task tree and updates")
 	{
-		alignas(TKernelInterface) unsigned char kernel[sizeof(TKernelInterface)] = {};
+		// A real kernel: Update reads its system timer.
+		auto* kernel = new TKernelInterface(0, nullptr, false);
 		// Classes join the global class tree, so they live until exit.
 		static TClass recordClass("TRecordTask", &TTask::m_sClass, TRecordTask::CreateRecord, nullptr, nullptr, nullptr,
 		                          1);
 		s_side = 1;
 		s_log.clear();
-		auto* scheduler = new TScheduler(reinterpret_cast<TKernelInterface*>(kernel));
+		auto* scheduler = new TScheduler(kernel);
 		scheduler->IncRefCount(nullptr); // our own reference
 		TTask* parent = scheduler->CreateTask(recordClass, nullptr);
 		TTask* child = scheduler->CreateTask(recordClass, parent);
@@ -181,6 +182,7 @@ TEST_SUITE("TScheduler")
 		CHECK(scheduler->GetTree()->Count() == 0);
 		CHECK(s_log.back() == std::to_string(IdOf(parent)) + ":deleted");
 		delete scheduler;
+		delete kernel;
 	}
 
 	TEST_CASE("kernel interface")
