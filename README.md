@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="docs/jpog_decomp.png" alt="Jurassic Park: Operation Genesis" width="600">
+# jpog-decomp
 
 ### A native, cross-platform reimplementation of *Jurassic Park: Operation Genesis* (2003)
 
@@ -221,12 +221,3 @@ rights holders. This is an unofficial, non-commercial fan project, not affiliate
 endorsed by them, and the license above does not cover the game, its assets, names or logos
 (including `docs/jpog_decomp.png`). The repository contains only original code, tools and
 documentation, plus symbol names extracted from the binaries for interoperability.
-
-##
-
-<div align="center">
-<br>
-<img src="https://media.tenor.com/1SastyjoZWoAAAAi/dennis-nedry.gif" alt="Dennis Nedry: ah ah ah, you didn't say the magic word" width="auto" height="auto">
-<br>
-<sub><i>Ah ah ah, you didn't say the magic word.</i></sub>
-</div>
