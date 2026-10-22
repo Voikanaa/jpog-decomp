@@ -1,5 +1,6 @@
 #include "toshi/kernel/TKernelInterface.h"
 
+#include "platform/System.h"
 #include "toshi/kernel/TDLL.h"
 #include "toshi/kernel/TScheduler.h"
 #include "toshi/kernel/TUser.h"
@@ -7,9 +8,6 @@
 #include "toshi/kernel/file/TMemFile.h"
 #include "toshi/kernel/file/TNativeFile.h"
 #include "toshi/kernel/file/TNullFile.h"
-
-#include <windows.h>
-#include <direct.h>
 
 namespace Toshi
 {
@@ -64,7 +62,7 @@ TKernelInterface::TKernelInterface(int, char** const, bool verbose)
 
 	TCString workingDirectory;
 	char buffer[0x104];
-	if (_getcwd(buffer, sizeof(buffer)) != nullptr)
+	if (jpog::platform::WorkingDirectory(buffer, sizeof(buffer)))
 		workingDirectory = buffer;
 	auto* manager = new TFileManager();
 	(new TNativeFileSystem("local"))->SetPrefix(workingDirectory);
@@ -81,12 +79,18 @@ TKernelInterface::~TKernelInterface()
 {
 	m_pScheduler->DestroyAllTasks();
 	SetScheduler(m_pScheduler, nullptr);
+	// The head's links are m_pFirstModule/m_pLastModule: write them directly, not through the head
+	// pointer (it does not point at a module).
+	const auto nextSlot = [this](TKernelInterfaceDLL* node) -> TKernelInterfaceDLL*&
+	{ return node == ModuleListHead(&m_pModuleList) ? m_pFirstModule : node->m_pNext; };
+	const auto prevSlot = [this](TKernelInterfaceDLL* node) -> TKernelInterfaceDLL*&
+	{ return node == ModuleListHead(&m_pModuleList) ? m_pLastModule : node->m_pPrev; };
 	for (TKernelInterfaceDLL* module = m_pFirstModule; module != ModuleListHead(&m_pModuleList);
 	     module = m_pFirstModule)
 	{
 		module->m_pList = nullptr;
-		module->m_pPrev->m_pNext = module->m_pNext;
-		module->m_pNext->m_pPrev = module->m_pPrev;
+		nextSlot(module->m_pPrev) = module->m_pNext;
+		prevSlot(module->m_pNext) = module->m_pPrev;
 		module->m_pNext = module;
 		module->m_pPrev = module;
 		--m_iModuleCount;
@@ -145,10 +149,13 @@ TKernelInterfaceDLL* TKernelInterface::LoadInterface(const TCString& name)
 		delete module;
 		return nullptr;
 	}
+	// The head's previous link is m_pLastModule (the head pointer does not point at a module).
+	const auto prevSlot = [this](TKernelInterfaceDLL* node) -> TKernelInterfaceDLL*&
+	{ return node == ModuleListHead(&m_pModuleList) ? m_pLastModule : node->m_pPrev; };
 	module->m_pList = &m_pModuleList;
 	module->m_pNext = m_pFirstModule;
 	module->m_pPrev = ModuleListHead(&m_pModuleList);
-	m_pFirstModule->m_pPrev = module;
+	prevSlot(m_pFirstModule) = module;
 	m_pFirstModule = module;
 	++m_iModuleCount;
 	return module;
@@ -166,9 +173,15 @@ TKernelInterfaceDLL* TKernelInterface::FindInterface(const TCString& name)
 void TKernelInterface::UnloadInterface(TKernelInterfaceDLL& module)
 {
 	module.Unload();
+	// The head's links are m_pFirstModule/m_pLastModule: write them directly, not through the head
+	// pointer (it does not point at a module).
+	const auto nextSlot = [this](TKernelInterfaceDLL* node) -> TKernelInterfaceDLL*&
+	{ return node == ModuleListHead(&m_pModuleList) ? m_pFirstModule : node->m_pNext; };
+	const auto prevSlot = [this](TKernelInterfaceDLL* node) -> TKernelInterfaceDLL*&
+	{ return node == ModuleListHead(&m_pModuleList) ? m_pLastModule : node->m_pPrev; };
 	module.m_pList = nullptr;
-	module.m_pPrev->m_pNext = module.m_pNext;
-	module.m_pNext->m_pPrev = module.m_pPrev;
+	nextSlot(module.m_pPrev) = module.m_pNext;
+	prevSlot(module.m_pNext) = module.m_pPrev;
 	module.m_pNext = &module;
 	module.m_pPrev = &module;
 	--m_iModuleCount;
@@ -183,32 +196,7 @@ void TKernelInterface::UnloadInterface(const TCString& name)
 
 void TKernelInterface::DumpInfo()
 {
-	// The extended structure first, then the basic one (the buffer must hold the larger).
-	OSVERSIONINFOEXA version = {};
-	version.dwOSVersionInfoSize = sizeof(OSVERSIONINFOEXA);
-	auto* basic = reinterpret_cast<OSVERSIONINFOA*>(&version);
-#pragma warning(suppress : 4996) // GetVersionExA is what the original calls
-	if (!GetVersionExA(basic))
-	{
-		version.dwOSVersionInfoSize = sizeof(OSVERSIONINFOA);
-#pragma warning(suppress : 4996)
-		GetVersionExA(basic);
-	}
-	char windowsDirectory[0x104];
-	GetWindowsDirectoryA(windowsDirectory, sizeof(windowsDirectory));
-	char systemDirectory[0x104];
-	GetSystemDirectoryA(systemDirectory, sizeof(systemDirectory));
-	char computerName[0x10];
-	DWORD computerNameLength = sizeof(computerName);
-	GetComputerNameA(computerName, &computerNameLength);
-	char userName[0x100];
-	DWORD userNameLength = sizeof(userName);
-	GetUserNameA(userName, &userNameLength);
-	SYSTEM_INFO systemInfo;
-	GetSystemInfo(&systemInfo);
-	MEMORYSTATUS memory = {};
-	memory.dwLength = sizeof(memory);
-	GlobalMemoryStatus(&memory);
+	jpog::platform::QuerySystemInfo();
 }
 
 THPTimer* TKernelInterface::GetSystemTimer()

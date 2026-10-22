@@ -10,6 +10,8 @@ namespace Toshi
 class TMutex
 {
 public:
+	TMutex() = default;
+	TMutex(const TMutex& other) = default; // implicit in the original, not exported
 	TMutex& operator=(const TMutex& other);
 
 	bool Create();

@@ -41,7 +41,7 @@ struct TDebug
 };
 
 // Prints to stdout when `level` is at least the message level.
-void __cdecl TDebug_Message(TDebug::MSGLEVEL level, const char* format, ...);
+void TDebug_Message(TDebug::MSGLEVEL level, const char* format, ...);
 
 // Stubs in the shipped build.
 void TSTDCALL GetCallStack(int depth, int* addresses);

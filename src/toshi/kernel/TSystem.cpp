@@ -1,5 +1,6 @@
 #include "toshi/kernel/TSystem.h"
 
+#include "platform/CRuntime.h"
 #include "toshi/kernel/TLocale.h"
 #include "toshi/kernel/strings/TCString.h"
 #include "toshi/kernel/strings/TCStringPool.h"
@@ -10,29 +11,11 @@
 #include <cstdio>
 #include <cstring>
 #include <ctime>
-#include <cwchar>
-#include <string.h> // _stricmp, _strnicmp
-#include <wchar.h>  // _wcsicmp, _wcsnicmp
 
 namespace Toshi
 {
 
-static_assert(sizeof(wchar_t) == sizeof(unsigned short), "wide strings are UTF-16 on Windows");
-
-namespace
-{
-
-const wchar_t* Wide(const unsigned short* string)
-{
-	return reinterpret_cast<const wchar_t*>(string);
-}
-
-wchar_t* Wide(unsigned short* string)
-{
-	return reinterpret_cast<wchar_t*>(string);
-}
-
-} // namespace
+using namespace jpog::platform;
 
 void* TSTDCALL TSystem::MemCopy(void* destination, const void* source, unsigned int size)
 {
@@ -61,7 +44,7 @@ int TSTDCALL TSystem::StringLength(const char* string)
 
 int TSTDCALL TSystem::StringLength(const unsigned short* string)
 {
-	return static_cast<int>(std::wcslen(Wide(string)));
+	return static_cast<int>(WcsLen(string));
 }
 
 const char* TSTDCALL TSystem::StringCopy(char* destination, const char* source, int count)
@@ -78,9 +61,9 @@ const char* TSTDCALL TSystem::StringCopy(char* destination, const char* source, 
 const unsigned short* TSTDCALL TSystem::StringCopy(unsigned short* destination, const unsigned short* source, int count)
 {
 	if (count != -1)
-		std::wcsncpy(Wide(destination), Wide(source), static_cast<size_t>(count));
+		WcsNCpy(destination, source, static_cast<size_t>(count));
 	else
-		std::wcscpy(Wide(destination), Wide(source));
+		WcsCpy(destination, source);
 	return destination;
 }
 
@@ -102,22 +85,22 @@ int TSTDCALL TSystem::StringCompare(const char* a, const char* b, int count)
 int TSTDCALL TSystem::StringCompare(const unsigned short* a, const unsigned short* b, int count)
 {
 	if (count != -1)
-		return std::wcsncmp(Wide(a), Wide(b), static_cast<size_t>(count));
-	return std::wcscmp(Wide(a), Wide(b));
+		return WcsNCmp(a, b, static_cast<size_t>(count));
+	return WcsCmp(a, b);
 }
 
 int TSTDCALL TSystem::StringCompareNoCase(const char* a, const char* b, int count)
 {
 	if (count != -1)
-		return _strnicmp(a, b, static_cast<size_t>(count));
-	return _stricmp(a, b);
+		return StrNICmp(a, b, static_cast<size_t>(count));
+	return StrICmp(a, b);
 }
 
 int TSTDCALL TSystem::StringCompareNoCase(const unsigned short* a, const unsigned short* b, int count)
 {
 	if (count != -1)
-		return _wcsnicmp(Wide(a), Wide(b), static_cast<size_t>(count));
-	return _wcsicmp(Wide(a), Wide(b));
+		return WcsNICmp(a, b, static_cast<size_t>(count));
+	return WcsICmp(a, b);
 }
 
 const char* TSTDCALL TSystem::StringFindChar(const char* string, char character)
@@ -169,7 +152,7 @@ const char* TSTDCALL TSystem::StringIntToString(int value, char* buffer, int rad
 }
 
 // Unbounded, like the original's vsprintf/vswprintf: the caller provides a large enough buffer.
-int __cdecl TSystem::StringFormat(char* buffer, const char* format, ...)
+int TSystem::StringFormat(char* buffer, const char* format, ...)
 {
 	va_list args;
 	va_start(args, format);
@@ -178,11 +161,11 @@ int __cdecl TSystem::StringFormat(char* buffer, const char* format, ...)
 	return result;
 }
 
-int __cdecl TSystem::StringFormat(unsigned short* buffer, const unsigned short* format, ...)
+int TSystem::StringFormat(unsigned short* buffer, const unsigned short* format, ...)
 {
 	va_list args;
 	va_start(args, format);
-	const int result = std::vswprintf(Wide(buffer), INT_MAX, Wide(format), args);
+	const int result = VSWPrintf(buffer, INT_MAX, format, args);
 	va_end(args);
 	return result;
 }

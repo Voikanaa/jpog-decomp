@@ -3,8 +3,15 @@ project(JPOG LANGUAGES C CXX)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+# No C++20 modules: skip the dependency scan (its .modmap files also confuse clang-tidy).
+set(CMAKE_CXX_SCAN_FOR_MODULES OFF)
 
+# The x86 build is the Windows verification build: it runs on and tests against the original
+# 32-bit DLLs. Every other build is a portable one (Windows x64, Linux, macOS).
 if(CMAKE_SIZEOF_VOID_P EQUAL 4)
+  if(NOT WIN32 OR NOT MSVC)
+    message(FATAL_ERROR "32-bit builds are only supported on Windows with MSVC")
+  endif()
   set(JPOG_X86 ON)
 else()
   set(JPOG_X86 OFF)
@@ -27,8 +34,19 @@ set(JPOG_ORIGINAL_DIR "${CMAKE_SOURCE_DIR}/JPOG" CACHE PATH "Original game insta
 # Local working copy of the game; jpog.exe is copied here after each build (x86).
 set(JPOG_GAME_DIR "${CMAKE_SOURCE_DIR}/game" CACHE PATH "Local game working directory")
 
-add_compile_options(/W4 /permissive- /utf-8 /Zc:__cplusplus)
-add_compile_definitions(WIN32_LEAN_AND_MEAN NOMINMAX)
+if(MSVC)
+  add_compile_options(/W4 /permissive- /utf-8 /Zc:__cplusplus)
+else()
+  # No FMA contraction or fast-math: float results must match the original's (docs/plan.md).
+  add_compile_options(-Wall -Wextra -ffp-contract=off -fno-fast-math)
+  # Fields kept only for the original layout are often unused.
+  if(CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+    add_compile_options(-Wno-unused-private-field)
+  endif()
+endif()
+if(WIN32)
+  add_compile_definitions(WIN32_LEAN_AND_MEAN NOMINMAX)
+endif()
 
 add_library(jpog_common INTERFACE)
 target_include_directories(jpog_common INTERFACE src)
@@ -38,9 +56,14 @@ add_subdirectory(third_party)
 # Treat warnings as errors in our own code (CI turns this on); vendored code above is exempt.
 option(JPOG_WERROR "Treat compiler warnings as errors" OFF)
 if(JPOG_WERROR)
-  add_compile_options(/WX)
+  if(MSVC)
+    add_compile_options(/WX)
+  else()
+    add_compile_options(-Werror)
+  endif()
 endif()
 
+add_subdirectory(src/platform)
 add_subdirectory(src/toshi/kernel)
 add_subdirectory(src/ppropertyparser)
 

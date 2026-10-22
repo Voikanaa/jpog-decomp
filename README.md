@@ -90,7 +90,7 @@ flowchart TB
 | ✅ | Foundations | Symbols, build system, CI, analysis tooling |
 | ✅ | Launch 1 | Our `jpog.exe` opens the game window on our kernel and `PPropertyParser.dll` |
 | 🚧 | **M2** | Kernel replaced: the game boots to the front end on our `TKernelInterface.dll` |
-| 🚧 | **P** | Portable foundation: kernel and tests on Windows, Linux and macOS; SDL3 + bgfx shell (branch `portable-p1`) |
+| 🚧 | **P** | Portable foundation: kernel and tests on Windows, Linux and macOS (done, CI on all three); SDL3 + bgfx shell (next, #37) |
 | ⏳ | M3 | A mission loads through our renderer and resource code |
 | ⏳ | M4 | The full game is playable on our code |
 | ⏳ | M5 | The portable build reaches the main menu on Windows, Linux and macOS |
@@ -103,11 +103,12 @@ flowchart TB
 
 ## Getting started
 
-Today the build runs on Windows; Linux and macOS arrive with the portable foundation.
+The kernel, PPropertyParser and their tests build on Windows, Linux and macOS. The game itself
+(`jpog.exe` on the original engine DLLs) is the 32-bit Windows build.
 
 | Requirement | |
 |---|---|
-| Compiler | Visual Studio 2022+ or Build Tools with the C++ x86/x64 tools (found via `vswhere`) |
+| Compiler | **Windows:** Visual Studio 2022+ or Build Tools with the C++ x86/x64 tools (found via `vswhere`). **Linux:** GCC or Clang with C++20, CMake 3.28+, Ninja. **macOS:** Xcode command line tools, CMake 3.28+, Ninja |
 | Tools | Python 3.10+, Git, [uv](https://docs.astral.sh/uv/) (recommended) |
 | Game | Your own PC copy of *Jurassic Park: Operation Genesis*, installed in `JPOG\` |
 | Analysis (optional) | Ghidra 12.1.4 and JDK 21+ |
@@ -123,6 +124,11 @@ tools\build.bat x86-debug             :: 32-bit jpog.exe, our drop-in DLLs, all 
 tools\build.bat x64-debug             :: x64 kernel and PPropertyParser, portable tests
 ```
 
+On Linux and macOS: `python3 tools/build.py linux-debug` (or `linux-release`, `linux-asan`,
+`macos-debug`, `macos-release`). Linux needs the X11, Wayland, OpenGL and audio development
+headers for the vendored SDL3 and bgfx; the list is `LINUX_DEV_PACKAGES` in
+[`.github/workflows/ci.yml`](.github/workflows/ci.yml).
+
 - Copy the installed game to `game\` as a working copy. The x86 build installs `jpog.exe`,
   `TKernelInterface.dll` and `PPropertyParser.dll` there, and the game runs from that folder.
   `"-DJPOG_REPLACE_KERNEL=OFF"` or `"-DJPOG_REPLACE_PPROPERTYPARSER=OFF"` restores an original DLL.
@@ -135,6 +141,7 @@ tools\build.bat x64-debug             :: x64 kernel and PPropertyParser, portabl
 ```
 src/
   common/            ABI macros, layout checks
+  platform/          OS layer under the kernel: threads, files, libraries, C runtime (Win32, POSIX)
   toshi/kernel/      TKernelInterface.dll (math, containers, strings, file, memory, thread, time)
   toshi/…            declarations of the other engine DLLs (application, render, renderd3d, gui)
   ppropertyparser/   PPropertyParser.dll
@@ -152,7 +159,7 @@ third_party/         pinned, vendored dependencies
 
 | Script | Purpose |
 |---|---|
-| `tools/build.bat` | Configure, build and test a CMake preset (`"-DOPTION=VALUE"` arguments allowed) |
+| `tools/build.py` | Configure, build and test a CMake preset on any OS (`-DOPTION=VALUE` arguments allowed; `tools\build.bat` wraps it) |
 | `tools/ghidra_export.py` | Headless Ghidra decompilation of the original modules into `analysis/` (gitignored) |
 | `tools/decomp_show.py` | Look up decompiled functions by name or address |
 | `tools/resolve_imports.py` | Name the engine calls in the game's decompilation |

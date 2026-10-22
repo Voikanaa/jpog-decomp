@@ -83,7 +83,7 @@ bool TTask::CreateFailed()
 void TTask::Activate(bool active)
 {
 	const unsigned int old = m_uiFlags;
-	m_uiFlags = (old & ~FLAG_ACTIVE) | (active ? FLAG_ACTIVE : 0);
+	m_uiFlags = (old & ~FLAG_ACTIVE) | (active ? static_cast<unsigned int>(FLAG_ACTIVE) : 0u);
 	if (old == m_uiFlags)
 		return;
 	if (active)

@@ -101,30 +101,30 @@ TEST_SUITE("TMath geometry differential" * doctest::skip(KernelMissing()))
 	TEST_CASE("points, planes and lines match the original")
 	{
 		const auto pointVsPlane2D =
-		    Original<bool(__stdcall*)(V2, V2, V2)>("?PointVsPlane2D@TMath@Toshi@@SG_NABVTVector2@2@00@Z");
+		    Original<bool(TSTDCALL*)(V2, V2, V2)>("?PointVsPlane2D@TMath@Toshi@@SG_NABVTVector2@2@00@Z");
 		const auto pointVsPlane2DF =
-		    Original<float(__stdcall*)(V2, V2, V2)>("?PointVsPlane2DF@TMath@Toshi@@SGMABVTVector2@2@00@Z");
+		    Original<float(TSTDCALL*)(V2, V2, V2)>("?PointVsPlane2DF@TMath@Toshi@@SGMABVTVector2@2@00@Z");
 		const auto pointVsPlane3D =
-		    Original<bool(__stdcall*)(V3, V3, V3)>("?PointVsPlane3D@TMath@Toshi@@SG_NABVTVector3@2@00@Z");
+		    Original<bool(TSTDCALL*)(V3, V3, V3)>("?PointVsPlane3D@TMath@Toshi@@SG_NABVTVector3@2@00@Z");
 		const auto closest =
-		    Original<float(__stdcall*)(V2, V2, V2)>("?ClosestPointOnLine2D@TMath@Toshi@@SGMABVTVector2@2@00@Z");
+		    Original<float(TSTDCALL*)(V2, V2, V2)>("?ClosestPointOnLine2D@TMath@Toshi@@SGMABVTVector2@2@00@Z");
 		const auto distanceSq =
-		    Original<float(__stdcall*)(V2, V2, V2)>("?DistancePointToLineSq@TMath@Toshi@@SGMABVTVector2@2@00@Z");
+		    Original<float(TSTDCALL*)(V2, V2, V2)>("?DistancePointToLineSq@TMath@Toshi@@SGMABVTVector2@2@00@Z");
 		const auto distance =
-		    Original<float(__stdcall*)(V2, V2, V2)>("?DistancePointToLine@TMath@Toshi@@SGMABVTVector2@2@00@Z");
-		const auto overTime = Original<float(__stdcall*)(V2, V2, V2, V2, float)>(
+		    Original<float(TSTDCALL*)(V2, V2, V2)>("?DistancePointToLine@TMath@Toshi@@SGMABVTVector2@2@00@Z");
+		const auto overTime = Original<float(TSTDCALL*)(V2, V2, V2, V2, float)>(
 		    "?ClosestPointOnLineOverTime2D@TMath@Toshi@@SGMABVTVector2@2@000M@Z");
 		const auto lineT =
-		    Original<bool(__stdcall*)(V2, V2, V2, V2, float&)>("?LineVsLine2D@TMath@Toshi@@SG_NABVTVector2@2@000AAM@Z");
-		const auto lineTU = Original<bool(__stdcall*)(V2, V2, V2, V2, float&, float&)>(
+		    Original<bool(TSTDCALL*)(V2, V2, V2, V2, float&)>("?LineVsLine2D@TMath@Toshi@@SG_NABVTVector2@2@000AAM@Z");
+		const auto lineTU = Original<bool(TSTDCALL*)(V2, V2, V2, V2, float&, float&)>(
 		    "?LineVsLine2D@TMath@Toshi@@SG_NABVTVector2@2@000AAM1@Z");
-		const auto linePoint = Original<bool(__stdcall*)(V2, V2, V2, V2, TVector2&)>(
+		const auto linePoint = Original<bool(TSTDCALL*)(V2, V2, V2, V2, TVector2&)>(
 		    "?LineVsLine2D@TMath@Toshi@@SG_NABVTVector2@2@000AAV32@@Z");
-		const auto segments = Original<bool(__stdcall*)(V2, V2, V2, V2, TVector2&)>(
+		const auto segments = Original<bool(TSTDCALL*)(V2, V2, V2, V2, TVector2&)>(
 		    "?LineSegmentVsLineSegment2D@TMath@Toshi@@SG_NABVTVector2@2@000AAV32@@Z");
-		const auto segmentLine = Original<bool(__stdcall*)(V2, V2, V2, V2, TVector2&)>(
+		const auto segmentLine = Original<bool(TSTDCALL*)(V2, V2, V2, V2, TVector2&)>(
 		    "?LineSegmentVsLine2D@TMath@Toshi@@SG_NABVTVector2@2@000AAV32@@Z");
-		const auto ray = Original<bool(__stdcall*)(V2, V2, V2, V2, float&)>(
+		const auto ray = Original<bool(TSTDCALL*)(V2, V2, V2, V2, float&)>(
 		    "?RaySegmentVsLine2D@TMath@Toshi@@SG_NABVTVector2@2@000AAM@Z");
 
 		GeometryInputs in;
@@ -164,25 +164,25 @@ TEST_SUITE("TMath geometry differential" * doctest::skip(KernelMissing()))
 
 	TEST_CASE("circles, spheres and capsules match the original")
 	{
-		using Circle2D = int(__stdcall*)(V2, V2, V2, float, float&, float&);
-		using Circle3D = int(__stdcall*)(V3, V3, V3, float, float&, float&);
-		using Spheres = bool(__stdcall*)(V3, float, V3, float, float*, TVector3*, float*);
+		using Circle2D = int(TSTDCALL*)(V2, V2, V2, float, float&, float&);
+		using Circle3D = int(TSTDCALL*)(V3, V3, V3, float, float&, float&);
+		using Spheres = bool(TSTDCALL*)(V3, float, V3, float, float*, TVector3*, float*);
 		const auto circle2D = Original<Circle2D>("?RayVsCircle2D@TMath@Toshi@@SGHABVTVector2@2@00MAAM1@Z");
 		const auto circle3D = Original<Circle3D>("?RayVsCircle3D@TMath@Toshi@@SGHABVTVector3@2@00MAAM1@Z");
 		const auto spheres = Original<Spheres>("?SphereIntersection@TMath@Toshi@@SG_NABVTVector3@2@M0MPAMPAV32@1@Z");
 		const auto planar =
 		    Original<Spheres>("?SphereIntersectionPlanar@TMath@Toshi@@SG_NABVTVector3@2@M0MPAMPAV32@1@Z");
-		const auto dynamic = Original<float(__stdcall*)(V3, float, V3, V3, float, V3)>(
+		const auto dynamic = Original<float(TSTDCALL*)(V3, float, V3, V3, float, V3)>(
 		    "?SphereIntersectionDynamic@TMath@Toshi@@SGMABVTVector3@2@M00M0@Z");
-		const auto capsuleNormal = Original<void(__stdcall*)(V2, V2, V2, TVector2&)>(
+		const auto capsuleNormal = Original<void(TSTDCALL*)(V2, V2, V2, TVector2&)>(
 		    "?CalculateCapsuleNormal2D@TMath@Toshi@@SGXABVTVector2@2@00AAV32@@Z");
 		const auto insideCapsule =
-		    Original<bool(__stdcall*)(V2, V2, float, V2)>("?PointInsideCapsule2D@TMath@Toshi@@SG_NABVTVector2@2@0M0@Z");
-		const auto rayCapsule = Original<bool(__stdcall*)(V2, V2, float&, V2, V2, float)>(
+		    Original<bool(TSTDCALL*)(V2, V2, float, V2)>("?PointInsideCapsule2D@TMath@Toshi@@SG_NABVTVector2@2@0M0@Z");
+		const auto rayCapsule = Original<bool(TSTDCALL*)(V2, V2, float&, V2, V2, float)>(
 		    "?RayVsCapsule2D@TMath@Toshi@@SG_NABVTVector2@2@0AAM00M@Z");
-		const auto pushOut = Original<float(__stdcall*)(V2, V2, float, V2, V2, TVector2&, float&)>(
+		const auto pushOut = Original<float(TSTDCALL*)(V2, V2, float, V2, V2, TVector2&, float&)>(
 		    "?PushPointOutOfCapsule2D@TMath@Toshi@@SGMABVTVector2@2@0M00AAV32@AAM@Z");
-		const auto axisLimit = Original<void(__stdcall*)(V3, V3, V3, float, TVector3&)>(
+		const auto axisLimit = Original<void(TSTDCALL*)(V3, V3, V3, float, TVector3&)>(
 		    "?GetAxisChangeLimit3D@TMath@Toshi@@SGXABVTVector3@2@00MAAV32@@Z");
 
 		GeometryInputs in;

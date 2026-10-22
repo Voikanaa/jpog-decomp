@@ -1,0 +1,13 @@
+# Static checks for our code (src/), run in CI on Linux. Portability first, plus a few bug
+# patterns that matter for a reimplementation; style is left to clang-format.
+Checks: >
+  -*,
+  portability-*,
+  bugprone-dangling-handle,
+  bugprone-sizeof-expression,
+  bugprone-undefined-memory-manipulation,
+  bugprone-use-after-move,
+  bugprone-unused-return-value,
+  -portability-template-virtual-member-function
+WarningsAsErrors: '*'
+HeaderFilterRegex: '.*/src/.*'

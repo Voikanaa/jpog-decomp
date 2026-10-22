@@ -33,7 +33,8 @@ Put your game install in `JPOG/` and a working copy in `game/`. See the README f
    the same inputs. Floats must match exactly unless a comment justifies a tolerance. Take the
    evaluation order of float code from `tools/x87_expr.py`, not from Ghidra, which does not
    preserve the association of x87 sums.
-4. Build and test `x86-debug` and `x64-debug` (`tools\build.bat <preset>`).
+4. Build and test `x86-debug` and `x64-debug` (`python tools/build.py <preset>`). Changes to
+   portable code must also pass `linux-*` and `macos-*`; CI runs them on every pull request.
 5. Run `python tools/coverage.py`, which regenerates the coverage table in `docs/progress.md`,
    the README badge and the README progress cards `docs/progress-{light,dark}.svg` (CI checks they
    are current).

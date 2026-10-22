@@ -1,5 +1,6 @@
 #pragma once
 
+#include "common/abi.h"
 #include "toshi/kernel/TScheduler.h"
 #include "toshi/kernel/containers/TManagedPtr.h"
 #include "toshi/render/TRenderInterface.h"
@@ -25,8 +26,8 @@ public:
 	// Copy the graphics settings from the options to AOptionLogic and back. Quirk: the brightness
 	// is read as "ScreenBrightess" and written as "ScreenBrightness", and the windowed flag is
 	// only read, as in the original.
-	static void __stdcall DeserialiseOptions();
-	static void __stdcall SerialiseOptions();
+	static void TSTDCALL DeserialiseOptions();
+	static void TSTDCALL SerialiseOptions();
 
 	static Toshi::TClass m_sClass;
 
@@ -45,10 +46,10 @@ private:
 	                                                               bool bestDepth);
 	void CreateARenderer();
 
-	static Toshi::TObject* __stdcall CreateObject();
-	static Toshi::TObject* __stdcall CreateObjectInPlace(void* memory);
-	static void __stdcall InitialiseStatic();
-	static void __stdcall DeinitialiseStatic();
+	static Toshi::TObject* TSTDCALL CreateObject();
+	static Toshi::TObject* TSTDCALL CreateObjectInPlace(void* memory);
+	static void TSTDCALL InitialiseStatic();
+	static void TSTDCALL DeinitialiseStatic();
 
 	AOptions* m_pOptions = nullptr;                                 // original +0x24
 	Toshi::TManagedPtr<Toshi::TRenderInterface> m_pRenderInterface; // original +0xD0

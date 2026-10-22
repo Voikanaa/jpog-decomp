@@ -28,20 +28,20 @@ bool ARenderer::OnUpdate(float deltaTime)
 	return true;
 }
 
-TObject* __stdcall ARenderer::CreateObject()
+TObject* TSTDCALL ARenderer::CreateObject()
 {
 	return new ARenderer();
 }
 
-TObject* __stdcall ARenderer::CreateObjectInPlace(void* memory)
+TObject* TSTDCALL ARenderer::CreateObjectInPlace(void* memory)
 {
 	return memory == nullptr ? nullptr : new (memory) ARenderer();
 }
 
-void __stdcall ARenderer::InitialiseStatic()
+void TSTDCALL ARenderer::InitialiseStatic()
 {
 }
 
-void __stdcall ARenderer::DeinitialiseStatic()
+void TSTDCALL ARenderer::DeinitialiseStatic()
 {
 }

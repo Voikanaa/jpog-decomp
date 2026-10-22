@@ -1,5 +1,6 @@
 #pragma once
 
+#include "common/abi.h"
 #include "toshi/kernel/TScheduler.h"
 #include "toshi/kernel/strings/TCString.h"
 
@@ -19,10 +20,10 @@ protected:
 	bool OnUpdate(float deltaTime) override;
 
 private:
-	static Toshi::TObject* __stdcall CreateObject();
-	static Toshi::TObject* __stdcall CreateObjectInPlace(void* memory);
-	static void __stdcall InitialiseStatic();
-	static void __stdcall DeinitialiseStatic();
+	static Toshi::TObject* TSTDCALL CreateObject();
+	static Toshi::TObject* TSTDCALL CreateObjectInPlace(void* memory);
+	static void TSTDCALL InitialiseStatic();
+	static void TSTDCALL DeinitialiseStatic();
 
 	Toshi::TCString m_oName;
 };

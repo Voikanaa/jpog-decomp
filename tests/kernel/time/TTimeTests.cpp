@@ -5,6 +5,7 @@
 #include "toshi/kernel/strings/TCString.h"
 #include "toshi/kernel/time/THPTimer.h"
 
+#include <cstdint>
 #include <cstring>
 #include <doctest/doctest.h>
 #include <string>
@@ -43,7 +44,7 @@ TEST_SUITE("TTime")
 	{
 		THPTimer timer;
 		CHECK(timer.GetDelta() == 0.0f);
-		const unsigned __int64 before = timer.GetRaw64();
+		const std::uint64_t before = timer.GetRaw64();
 		timer.Update();
 		CHECK(timer.GetDelta() >= 0.0f);
 		CHECK(timer.GetCurrent() > 0.0f);
@@ -63,9 +64,9 @@ TEST_SUITE("TTime differential" * doctest::skip(KernelMissing()))
 	{
 		const auto pack = Original<Method<void, unsigned int*, unsigned int*>>("?Pack@TDateTime@Toshi@@QAEXAAI0@Z");
 		const auto unpack = Original<Method<void, unsigned int*, unsigned int*>>("?UnPack@TDateTime@Toshi@@QAEXAAI0@Z");
-		using Format = void(__stdcall*)(const TDateTime*, TCString*);
+		using Format = void(TSTDCALL*)(const TDateTime*, TCString*);
 		const auto format = Original<Format>("?StringFormatDateTime@TSystem@Toshi@@SGXABUTDateTime@2@AAVTCString@2@@Z");
-		using LocalTime = bool(__stdcall*)(TDateTime*);
+		using LocalTime = bool(TSTDCALL*)(TDateTime*);
 		const auto localTime = Original<LocalTime>("?GetLocalTime@TSystem@Toshi@@SG_NAAUTDateTime@2@@Z");
 		const auto destroy = Original<Method<void>>("??1TCString@Toshi@@QAE@XZ");
 		const auto construct = Original<Method<void>>("??0TCString@Toshi@@QAE@XZ");

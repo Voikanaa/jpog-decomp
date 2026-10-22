@@ -79,7 +79,7 @@ protected:
 	// The character's value, or the flush result when the buffer was full. Quirk: characters
 	// from 0x80 are negative, which the callers take for a failure.
 	int BufferCChar(const char& character);
-	int __cdecl BufferCPrintf(const char* format, ...);
+	int BufferCPrintf(const char* format, ...);
 	// The file's Write result, or -1 when the buffer is empty.
 	int FlushWriteBuffer();
 	// `length` -1 means NUL-terminated.

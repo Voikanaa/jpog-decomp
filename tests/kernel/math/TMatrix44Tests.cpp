@@ -504,9 +504,9 @@ TEST_SUITE("TMatrix44 differential" * doctest::skip(KernelMissing()))
 		const auto isOrthogonal = Original<Method<bool>>("?IsOrthogonal@TMatrix44@Toshi@@QBE_NXZ");
 		const auto isOrthonormal = Original<Method<bool>>("?IsOrthonormal@TMatrix44@Toshi@@QBE_NXZ");
 		const auto isReflected = Original<Method<bool>>("?IsReflected@TMatrix44@Toshi@@QBE_NXZ");
-		using V3Fn = void(__stdcall*)(TVector3*, M, const TVector3*);
-		using V4Fn = void(__stdcall*)(TVector4*, M, const TVector4*);
-		using PlaneFn = void(__stdcall*)(TPlane*, M, const TPlane*);
+		using V3Fn = void(TSTDCALL*)(TVector3*, M, const TVector3*);
+		using V4Fn = void(TSTDCALL*)(TVector4*, M, const TVector4*);
+		using PlaneFn = void(TSTDCALL*)(TPlane*, M, const TPlane*);
 		const auto transform3 = Original<V3Fn>("?TransformVector@TMatrix44@Toshi@@SGXAAVTVector3@2@ABV12@ABV32@@Z");
 		const auto transform4 = Original<V4Fn>("?TransformVector@TMatrix44@Toshi@@SGXAAVTVector4@2@ABV12@ABV32@@Z");
 		const auto rotate3 = Original<V3Fn>("?RotateVector@TMatrix44@Toshi@@SGXAAVTVector3@2@ABV12@ABV32@@Z");
@@ -515,7 +515,7 @@ TEST_SUITE("TMatrix44 differential" * doctest::skip(KernelMissing()))
 		const auto planeOrtho =
 		    Original<PlaneFn>("?TransformPlaneOrthogonal@TMatrix44@Toshi@@SGXAAVTPlane@2@ABV12@ABV32@@Z");
 		const auto matToQuat =
-		    Original<void(__stdcall*)(TQuaternion*, M)>("?MatToQuat@TMatrix44@Toshi@@SGXAAVTQuaternion@2@ABV12@@Z");
+		    Original<void(TSTDCALL*)(TQuaternion*, M)>("?MatToQuat@TMatrix44@Toshi@@SGXAAVTQuaternion@2@ABV12@@Z");
 		const auto euler = Original<Method<void, float*>>("?GetEulerXYZ@TQuaternion@Toshi@@QBEXPAM@Z");
 		const auto mulV3 =
 		    Original<Method<TVector3*, TVector3*, const TVector3*>>("??DTMatrix44@Toshi@@QBE?AVTVector3@1@ABV21@@Z");

@@ -10,8 +10,9 @@ runs the original `Data/`. Full plan: `docs/plan.md`.
 - Order: TKernelInterface → file formats → other engine modules → SimJP game code → platform swap;
   the portable foundation (phase P: multi-OS CI, `src/platform/`, shell) runs in parallel.
 - **Current state:** kernel and PPropertyParser 100% (drop-in DLLs, 9.1% overall); M2 needs the
-  game to boot to the front end on our kernel (L2, options/display work in #21). Phase P is WIP on
-  branch `portable-p1` (platform layer, multi-OS CI, vendored deps; next steps in #36), not merged.
+  game to boot to the front end on our kernel (L2, options/display work in #21). Phase P: kernel,
+  PPropertyParser and tests build and pass on Windows, Linux (GCC, Clang, ASan/UBSan) and macOS
+  in CI; deps vendored (#36); next the SDL3 + bgfx shell (#37).
 - Portable stack: SDL3 (window/input/paths), bgfx (+ `shaderc`), miniaudio (for FMOD 3), FFmpeg
   loaded at run time (Bink), Dear ImGui (dev menu), Tracy (`JPOG_TRACY`), stb_image_write,
   doctest. All vendored in `third_party/` (pinned, unmodified); ask before downloading each. The
@@ -70,7 +71,9 @@ Apache-2.0, LGPL linked dynamically).
 - `symbols/` per-module exports/imports CSV, `classes.csv`, `vtables.csv` (generated).
 - `docs/` `plan.md` (roadmap), `modules.md` (binary map), `progress.md` (coverage + log),
   `formats/README.md` (catalogue of every `Data/` format: magic, status, sources, issue).
-- `src/` `common/` (`abi.h` TSTDCALL, `TIMPORT_DATA` for data jpog.exe imports; `layout.h`);
+- `src/` `common/` (`abi.h` TSTDCALL, `TIMPORT_DATA` for data jpog.exe imports; `layout.h`,
+  `JPOG_NO_SANITIZE_VPTR` for original layout tricks); `platform/` (every kernel OS call: `Thread.h`,
+  `System.h`, `CRuntime.h` UTF-16/MSVC-compatible CRT; `win32/`, `posix/` backends);
   `toshi/kernel/` (lib `toshi_kernel`: every TKernelInterface export except the superseded heap
   internals; core classes at its root, the rest in `math/ containers/ strings/ file/ memory/
   thread/ time/`, mirrored by `tests/kernel/`); global `operator new`/`delete` route to `tmalloc`/`tfree` (as the original, also in
@@ -78,15 +81,15 @@ Apache-2.0, LGPL linked dynamically).
   `toshi/application/`, `toshi/render/`, `toshi/renderd3d/`, `toshi/gui/`; `game/` (**jpog.exe**: WinMain, `AApplication` with the
   original task tree, `ARootTask`/`ARenderer` skeletons, `AOptions`/`AOptionLogic` (`Options.ini`,
   display mode), `ALocale`, `CrashHandler`). No hook DLL yet (deferred, #2).
-- `tests/` doctest suite `jpog_tests` (run by ctest; `kernel/ ppropertyparser/ game/ support/`). `support/OriginalModule` loads the original
+- `tests/` doctest suite `jpog_tests` (ctest; `kernel/ ppropertyparser/ game/ support/`; `lsan.supp`: leaks the original has). `support/OriginalModule` loads the original
   DLLs from `JPOG_ORIGINAL_DIR` (default `<root>/JPOG`) for differential tests (x86 only, skipped
   without the game). `support/Differential.h`: `Same`, `Original<Fn>`/`OriginalPP<Fn>`, `KernelMissing`.
   `support/FloatCompare.h`: ULP compare + `InputGenerator`. Call `__thiscall` originals via
   `Method<R, Args...>`; by-value class returns pass the hidden result pointer first.
-- `third_party/` vendored pinned deps (versions/licenses/hashes in its README). Upstream trees can
-  carry nested `.gitignore`s that hide files: check `git status --ignored third_party` and
-  `git add -f` so the copy stays complete.
-- `CMakePresets.json`: `x86-debug`, `x64-debug`, `x64-release` → `build/<preset>/`.
+- `third_party/` vendored pinned deps (README: versions/licenses/hashes). Nested upstream
+  `.gitignore`s can hide files: check `git status --ignored third_party`, `git add -f`.
+- `CMakePresets.json`: `x86-debug`, `x64-debug`, `x64-release`, `linux-debug`/`-release`/`-asan`,
+  `macos-debug`/`-release` → `build/<preset>/`. Vendored libs are `EXCLUDE_FROM_ALL` until used.
 - **Hybrid launch (x86):** `jpog.exe` links the engine DLLs via import libs generated from
   `symbols/` (`tools/make_import_lib.py`, `cmake/OriginalModules.cmake`,
   `jpog_original_module(Name)`). Declarations in `src/toshi/` must match original signatures and
@@ -94,7 +97,8 @@ Apache-2.0, LGPL linked dynamically).
   `game/jpog_crash.log`.
 
 ## Tools
-- `tools/build.bat <preset> ["-DOPT=VAL"...]`: finds VS via vswhere, CMake + Ninja + ctest.
+- `tools/build.py <preset> [--keep-going] [-DOPT=VAL...]` (any OS; `build.bat` wraps it): VS env
+  via vswhere on Windows, CMake + Ninja + ctest.
 - `tools/format.py [--check]`: pinned clang-format over `src/`, `tests/`. **Run before committing.**
 - `tools/coverage.py [--check]`: original exports ∩ our x86 symbols; regenerates the
   `docs/progress.md` table, README badge and the README progress cards

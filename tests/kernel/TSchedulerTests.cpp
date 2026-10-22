@@ -159,13 +159,14 @@ TEST_SUITE("TScheduler")
 {
 	TEST_CASE("task tree and updates")
 	{
-		alignas(TKernelInterface) unsigned char kernel[sizeof(TKernelInterface)] = {};
+		// A real kernel: Update reads its system timer.
+		auto* kernel = new TKernelInterface(0, nullptr, false);
 		// Classes join the global class tree, so they live until exit.
 		static TClass recordClass("TRecordTask", &TTask::m_sClass, TRecordTask::CreateRecord, nullptr, nullptr, nullptr,
 		                          1);
 		s_side = 1;
 		s_log.clear();
-		auto* scheduler = new TScheduler(reinterpret_cast<TKernelInterface*>(kernel));
+		auto* scheduler = new TScheduler(kernel);
 		scheduler->IncRefCount(nullptr); // our own reference
 		TTask* parent = scheduler->CreateTask(recordClass, nullptr);
 		TTask* child = scheduler->CreateTask(recordClass, parent);
@@ -181,6 +182,7 @@ TEST_SUITE("TScheduler")
 		CHECK(scheduler->GetTree()->Count() == 0);
 		CHECK(s_log.back() == std::to_string(IdOf(parent)) + ":deleted");
 		delete scheduler;
+		delete kernel;
 	}
 
 	TEST_CASE("kernel interface")
@@ -198,12 +200,22 @@ TEST_SUITE("TScheduler")
 		CHECK(Toshi::TFileManager::GetFileManager()->FindFileSystem("mem") != nullptr);
 		kernel->DumpInfo(); // only queries the system (debug run-time checks catch buffer overruns)
 
+		// A system library and one of its exports on each OS.
+#if defined(_WIN32)
 		const Toshi::TCString name("version.dll");
+		const char* const symbol = "GetFileVersionInfoA";
+#elif defined(__APPLE__)
+		const Toshi::TCString name("/usr/lib/libSystem.B.dylib");
+		const char* const symbol = "malloc";
+#else
+		const Toshi::TCString name("libc.so.6");
+		const char* const symbol = "malloc";
+#endif
 		Toshi::TKernelInterfaceDLL* module = kernel->LoadInterface(name);
 		REQUIRE(module != nullptr);
 		CHECK(kernel->LoadInterface(name) == module);
 		CHECK(kernel->FindInterface(name) == module);
-		CHECK(module->GetAddress("GetFileVersionInfoA") != nullptr);
+		CHECK(module->GetAddress(symbol) != nullptr);
 		CHECK(kernel->LoadInterface("no_such_module.dll") == nullptr);
 		kernel->UnloadInterface(name);
 		CHECK(kernel->FindInterface(name) == nullptr);
@@ -237,7 +249,7 @@ namespace
 void* s_originalVtable[13];
 Method<void*, unsigned int> s_originalDeletingDestructor;
 Method<void> s_originalTaskConstructor;
-using Allocate = void*(__stdcall*)(int, char*, int);
+using Allocate = void*(TSTDCALL*)(int, char*, int);
 Allocate s_originalAllocate;
 
 void* __fastcall StubDelete(void* self, void*, unsigned int flags)

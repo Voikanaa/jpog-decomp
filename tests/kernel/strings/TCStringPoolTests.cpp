@@ -374,9 +374,9 @@ TEST_SUITE("TCStringPool differential" * doctest::skip(KernelMissing()))
 
 	TEST_CASE("string concatenation operators match the original")
 	{
-		using Narrow = TCString*(__stdcall*)(TCString*, const char*, const TCString*);
-		using NarrowPooled = TCString*(__stdcall*)(TCString*, const TCString*, const Toshi::TPCString*);
-		using Wide = Toshi::TWString*(__stdcall*)(Toshi::TWString*, const unsigned short*, const Toshi::TWString*);
+		using Narrow = TCString*(TSTDCALL*)(TCString*, const char*, const TCString*);
+		using NarrowPooled = TCString*(TSTDCALL*)(TCString*, const TCString*, const Toshi::TPCString*);
+		using Wide = Toshi::TWString*(TSTDCALL*)(Toshi::TWString*, const unsigned short*, const Toshi::TWString*);
 		const auto narrow = Original<Narrow>("??HToshi@@YG?AVTCString@0@PBDABV10@@Z");
 		const auto narrowPooled = Original<NarrowPooled>("??HToshi@@YG?AVTCString@0@ABV10@ABVTPCString@0@@Z");
 		const auto wide = Original<Wide>("??HToshi@@YG?AVTWString@0@PBGABV10@@Z");

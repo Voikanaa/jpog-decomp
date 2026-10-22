@@ -379,20 +379,20 @@ bool AOptionLogic::GetOption(OPTION option, bool& value)
 	return setting.bValid;
 }
 
-TObject* __stdcall AOptionLogic::CreateObject()
+TObject* TSTDCALL AOptionLogic::CreateObject()
 {
 	return new AOptionLogic();
 }
 
-TObject* __stdcall AOptionLogic::CreateObjectInPlace(void* memory)
+TObject* TSTDCALL AOptionLogic::CreateObjectInPlace(void* memory)
 {
 	return memory == nullptr ? nullptr : new (memory) AOptionLogic();
 }
 
-void __stdcall AOptionLogic::InitialiseStatic()
+void TSTDCALL AOptionLogic::InitialiseStatic()
 {
 }
 
-void __stdcall AOptionLogic::DeinitialiseStatic()
+void TSTDCALL AOptionLogic::DeinitialiseStatic()
 {
 }

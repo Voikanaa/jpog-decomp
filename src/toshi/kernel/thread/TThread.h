@@ -2,6 +2,7 @@
 
 #include "common/abi.h"
 #include "common/layout.h"
+#include "platform/Thread.h"
 #include "toshi/kernel/containers/TGenericDList.h"
 
 namespace Toshi
@@ -49,11 +50,11 @@ public:
 	static bool TSTDCALL SetCurrentPriority(PRIORITY priority);
 	static bool TSTDCALL Yield();
 	// Ends the calling thread (which must be a TThread).
-	static void TSTDCALL Exit();
+	[[noreturn]] static void TSTDCALL Exit();
 
 private:
 	static unsigned int TSTDCALL Entry(void* thread);
-	static void TSTDCALL Exit(TThread* thread);
+	[[noreturn]] static void TSTDCALL Exit(TThread* thread);
 	static bool TSTDCALL GetPriority(void* handle, PRIORITY& priority);
 	static bool TSTDCALL SetPriority(void* handle, PRIORITY priority);
 
@@ -82,8 +83,8 @@ public:
 private:
 	static TThreadManager* s_pThreadManager;
 
-	// A CRITICAL_SECTION (kept opaque so the header needs no windows.h).
-	alignas(void*) unsigned char m_aLock[sizeof(void*) == 4 ? 24 : 40];
+	// A CRITICAL_SECTION on Windows (kept opaque so the header needs no windows.h).
+	alignas(void*) unsigned char m_aLock[jpog::platform::kLockStorageSize];
 	TDList<TThread> m_oThreads;
 };
 

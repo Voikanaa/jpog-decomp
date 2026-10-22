@@ -83,7 +83,7 @@ const QualityOption kQualityOptions[] = {
 
 } // namespace
 
-void __stdcall ARootTask::DeserialiseOptions()
+void TSTDCALL ARootTask::DeserialiseOptions()
 {
 	ARootTask* root = g_oTheApp.GetRootTask();
 	// The original asks for the display parameters and ignores them.
@@ -126,7 +126,7 @@ void __stdcall ARootTask::DeserialiseOptions()
 		logic.SetOption(AOptionLogic::OPTION_GAMMA, value);
 }
 
-void __stdcall ARootTask::SerialiseOptions()
+void TSTDCALL ARootTask::SerialiseOptions()
 {
 	ARootTask* root = g_oTheApp.GetRootTask();
 	root->GetRenderInterface()->GetCurrentDisplayParams();
@@ -258,20 +258,20 @@ void ARootTask::CreateARenderer()
 		m_pARenderer = nullptr;
 }
 
-TObject* __stdcall ARootTask::CreateObject()
+TObject* TSTDCALL ARootTask::CreateObject()
 {
 	return new ARootTask();
 }
 
-TObject* __stdcall ARootTask::CreateObjectInPlace(void* memory)
+TObject* TSTDCALL ARootTask::CreateObjectInPlace(void* memory)
 {
 	return memory == nullptr ? nullptr : new (memory) ARootTask();
 }
 
-void __stdcall ARootTask::InitialiseStatic()
+void TSTDCALL ARootTask::InitialiseStatic()
 {
 }
 
-void __stdcall ARootTask::DeinitialiseStatic()
+void TSTDCALL ARootTask::DeinitialiseStatic()
 {
 }
