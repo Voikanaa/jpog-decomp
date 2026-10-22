@@ -12,6 +12,7 @@ namespace Toshi
 {
 
 class TKernelInterface;
+class TMaterialLibraryManager;
 class TMatrix44;
 class TModel;
 class TRenderCapture;
@@ -85,6 +86,8 @@ public:
 	TResource* GetSystemResource(SYSRESOURCES resource);
 	TResource* CreateResource(const TClass* type, const char* name, TResource* parent);
 	TNodeTree<TResource>* GetResourceTree();
+	// The original game reads the member (+0x128) inline.
+	TMaterialLibraryManager* GetMaterialLibraryManager();
 
 	// The renderer; the original reads the private static inline.
 	static TRenderInterface* GetInterface() { return s_Interface; }

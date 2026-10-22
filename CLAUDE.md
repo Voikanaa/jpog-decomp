@@ -79,7 +79,7 @@ Apache-2.0, LGPL linked dynamically).
   jpog.exe); `ppropertyparser/` (lib `ppropertyparser` + drop-in DLL, complete); declarations only:
   `toshi/application/`, `toshi/render/`, `toshi/renderd3d/`, `toshi/gui/`; `game/` (**jpog.exe**: WinMain, `AApplication` with the
   original task tree, `ARootTask`/`ARenderer` skeletons, `AOptions`/`AOptionLogic` (`Options.ini`,
-  display mode), `ALocale`, `CrashHandler`). No hook DLL yet (deferred, #2). `shell/` (portable
+  display mode), `AConstants` (`Constant.ini`), `ALocale`, `CrashHandler`). No hook DLL yet (deferred, #2). `shell/` (portable
   **jpog**, not x86: SDL3, bgfx (D3D12/Vulkan/Metal; shaderc, DXC fetched to `.cache/` for DXIL),
   ImGui F1 menu, miniaudio, `FFmpeg.cpp` (FFmpeg 9 loaded at run time, `fetch_ffmpeg.py`); `--smoke` etc.).
 - `tests/` doctest suite `jpog_tests` (ctest; `kernel/ ppropertyparser/ game/ support/`; `lsan.supp`: leaks the original has). `support/OriginalModule` loads the original
