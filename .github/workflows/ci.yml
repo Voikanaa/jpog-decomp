@@ -1,13 +1,30 @@
 name: CI
 
+# Build and test. Changes that only touch documentation skip this workflow (checks.yml still runs
+# on them); a newer push to a PR branch cancels the run it supersedes, while every push to main
+# runs to completion.
 on:
   push:
     branches: [main]
+    paths-ignore:
+      - '**.md'
+      - 'docs/**'
+      - 'LICENSE'
+      - '.github/ISSUE_TEMPLATE/**'
   pull_request:
+    paths-ignore:
+      - '**.md'
+      - 'docs/**'
+      - 'LICENSE'
+      - '.github/ISSUE_TEMPLATE/**'
   workflow_dispatch:
 
 permissions:
   contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
 
 env:
   # Headers the vendored SDL3 (X11, Wayland, audio) and bgfx (OpenGL/EGL) build against on Linux.
@@ -72,20 +89,3 @@ jobs:
       - name: clang-tidy
         # Shaders.cpp includes headers generated at build time; this job only configures.
         run: run-clang-tidy -quiet -p build/linux-debug "$PWD/src/(?!shell/Shaders\.cpp)"
-
-  checks:
-    name: Repository checks
-    runs-on: windows-latest
-    steps:
-      - uses: actions/checkout@v7
-      - name: No game binaries or oversized files
-        run: python tools/check_repo.py
-      - name: Python tools compile
-        run: python -m compileall -q tools
-      - uses: astral-sh/setup-uv@v10.3.0
-      - name: Install pinned dev tools
-        run: uv sync --locked
-      - name: C++ formatting
-        run: uv run tools/format.py --check
-      - name: Python lint
-        run: uv run ruff check tools

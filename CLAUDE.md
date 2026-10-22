@@ -59,9 +59,9 @@ Apache-2.0, LGPL linked dynamically).
   reference it (`Refs #n` / `Fixes #n`), tick checklists, open issues for new work, close finished
   ones with the hash. Milestones M0b–M6 mirror `docs/plan.md`.
 - LF line endings except `.bat` (`.gitattributes`). Pre-commit hook (`.githooks/`, enabled) runs
-  `check_repo.py --staged`, `format.py --check` and `ruff check tools`. CI
-  (`.github/workflows/ci.yml`) builds every preset with `JPOG_WERROR=ON` (`/WX`; keep code
-  warning-free) and runs the same checks.
+  `check_repo.py --staged`, `format.py --check` and `ruff check tools`. CI: `ci.yml` builds every
+  preset with `JPOG_WERROR=ON` (keep code warning-free), skipping docs-only changes; `checks.yml`
+  runs the hook's checks on every change. Don't trigger extra runs: the PR run is enough.
 
 ## Layout
 - `JPOG/` original install (read-only reference): `SimJP.exe`, engine DLLs (`T*Interface.dll`,
