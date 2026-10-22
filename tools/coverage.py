@@ -1,4 +1,5 @@
-"""Measure reimplementation coverage and update docs/progress.md and the README badge.
+"""Measure reimplementation coverage and update docs/progress.md, the README badge and the
+README progress cards (docs/progress-light.svg, docs/progress-dark.svg).
 
 Usage: python tools/coverage.py [--build build/x86-debug] [--check]
 
@@ -12,7 +13,7 @@ It also reports "unmatched" symbols: Toshi:: symbols we define that match no ori
 These usually mean a signature drifted from the original (e.g. `const float*` vs
 `const float* const`, which MSVC mangles differently); --check fails on them.
 
---check exits non-zero if either file is out of date or a symbol is unmatched (used in CI).
+--check exits non-zero if a generated file is out of date or a symbol is unmatched (used in CI).
 """
 import argparse
 import csv
@@ -22,12 +23,14 @@ import subprocess
 import sys
 
 import msvc
+import progress_card
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROGRESS = os.path.join(ROOT, "docs", "progress.md")
 README = os.path.join(ROOT, "README.md")
 TABLE_MARKERS = ("<!-- coverage:begin -->", "<!-- coverage:end -->")
 BADGE_MARKERS = ("<!-- coverage-badge:begin -->", "<!-- coverage-badge:end -->")
+CARDS = {theme: os.path.join(ROOT, "docs", f"progress-{theme}.svg") for theme in progress_card.THEMES}
 
 # Original module -> our static library (relative to the build directory). Modules without a
 # library yet report 0%.
@@ -142,10 +145,12 @@ def total_skipped(modules):
 
 
 def measure(build_dir):
-    """Returns the markdown table, the overall percentage and the unmatched symbols."""
+    """Returns the markdown table, the overall percentage, the unmatched symbols and the
+    (reimplemented, counted) functions per module."""
     rows = ["| Module | Functions | Superseded | Reimplemented | Coverage |", "|---|---:|---:|---:|---:|"]
     total = done = 0
     unmatched = []
+    stats = {}
     for module, lib in MODULES:
         functions = original_functions(module)
         skipped = {f for f in functions if superseded(module, f)}
@@ -168,13 +173,14 @@ def measure(build_dir):
                           and not s.startswith(COMPILER_GENERATED)
                           and not any(c in s for c in HEADER_ONLY_CLASSES)
                           and "@jpog@@" not in s]  # our own helpers (namespace jpog)
+        stats[module] = (implemented, len(counted))
         total += len(counted)
         done += implemented
         rows.append(f"| {module} | {len(functions)} | {len(skipped)} | {implemented} | "
                     f"{implemented / len(counted):.1%} |")
     rows.append(f"| **Total** | **{total + total_skipped(MODULES)}** | **{total_skipped(MODULES)}** | **{done}** | "
                 f"**{done / total:.1%}** |")
-    return "\n".join(rows), 100.0 * done / total, unmatched
+    return "\n".join(rows), 100.0 * done / total, unmatched, stats
 
 
 def badge(percent):
@@ -196,19 +202,22 @@ def main():
     parser.add_argument("--check", action="store_true", help="fail if the generated sections are out of date")
     args = parser.parse_args()
 
-    table, percent, unmatched = measure(args.build)
+    table, percent, unmatched, stats = measure(args.build)
     for symbol in unmatched:
         print(f"unmatched: {symbol}", file=sys.stderr)
+    # (path, function from the current text to the generated text)
     targets = [
-        (PROGRESS, TABLE_MARKERS, "\n" + table + "\n"),
-        (README, BADGE_MARKERS, badge(percent)),
-    ]
+        (PROGRESS, lambda text: replace_between(text, TABLE_MARKERS, "\n" + table + "\n")),
+        (README, lambda text: replace_between(text, BADGE_MARKERS, badge(percent))),
+    ] + [(path, lambda _, theme=theme: progress_card.render(stats, theme)) for theme, path in CARDS.items()]
 
     stale = []
-    for path, markers, content in targets:
-        with open(path, encoding="utf-8") as f:
-            text = f.read()
-        updated = replace_between(text, markers, content)
+    for path, generate in targets:
+        text = ""
+        if os.path.exists(path):
+            with open(path, encoding="utf-8") as f:
+                text = f.read()
+        updated = generate(text)
         if updated == text:
             continue
         stale.append(os.path.relpath(path, ROOT))

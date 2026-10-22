@@ -67,31 +67,59 @@ flowchart LR
 4. **Replace.** Finished modules ship as drop-in DLLs, and the game keeps running on the mix.
    Once nothing original is left, the same source builds the portable game.
 
-## Status
+## Progress
 
-| Module | Functions | Reimplemented |
-|---|---:|---:|
-| `TKernelInterface.dll`: memory, strings, math, RTTI, containers, files, events, threads | 1,627 | **100%** ✅ |
-| `PPropertyParser.dll`: property files and values | 245 | **100%** ✅ |
-| Renderer, input, GUI, terrain, shaders and game code | 18,580 | 0% |
-| **Total** | **20,452** | **9.1%** |
+<a href="docs/progress.md">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/progress-dark.svg">
+    <img alt="Reimplementation progress per module" src="docs/progress-light.svg" width="100%">
+  </picture>
+</a>
 
-| Milestone | Goal | |
-|---|---|:-:|
-| Foundations | Symbols, build system, CI, analysis tooling | ✅ |
-| Launch 1 | Our `jpog.exe` opens the game window on our kernel and `PPropertyParser.dll` | ✅ |
-| **M2** | Kernel replaced: the game boots to the front end on our `TKernelInterface.dll` | 🚧 |
-| **P** | Portable foundation: kernel and tests on Windows, Linux and macOS; SDL3 + bgfx shell | 🚧 |
-| M3 | A mission loads through our renderer and resource code | ⏳ |
-| M4 | The full game is playable on our code | ⏳ |
-| M5 | The portable build reaches the main menu on Windows, Linux and macOS | ⏳ |
-| M6 | The portable build plays a full mission with original saves | ⏳ |
-| M1 | In-game A/B testing through a hook DLL (deferred: needs a runnable original) | ⏸️ |
+<sub>Generated from the x86 build by <code>tools/coverage.py</code>: a function counts once our code exports
+it under the original mangled name and its differential tests pass.</sub>
 
-Details: [progress log](docs/progress.md) · [roadmap](docs/plan.md) ·
-[GitHub milestones](https://github.com/Voikanaa/jpog-decomp/milestones). The portable foundation
-(platform layer, Linux/macOS CI, vendored dependencies) is in progress on the `portable-p1`
-branch.
+### Roadmap
+
+```mermaid
+flowchart TB
+    subgraph X86["Hybrid x86 build"]
+        direction LR
+        F["✅ Foundations<br/>symbols · build · CI"] --> L1["✅ Launch 1<br/>jpog.exe on our kernel"] --> M2["🚧 M2<br/>kernel replaced"] --> M3["M3<br/>a mission loads"] --> M4["M4<br/>playable on our code"]
+    end
+    subgraph PORT["Portable build"]
+        direction LR
+        P["🚧 P<br/>portable foundation"] --> M5["M5<br/>main menu on all three"] --> M6["M6<br/>full mission + saves"]
+    end
+    X86 --> PORT
+    classDef done fill:#1f883d,stroke:#116329,color:#ffffff
+    classDef wip fill:#bf8700,stroke:#7d4e00,color:#ffffff
+    classDef todo fill:#57606a,stroke:#424a53,color:#ffffff
+    class F,L1 done
+    class M2,P wip
+    class M3,M4,M5,M6 todo
+    style X86 fill:transparent,stroke:#8c959f,stroke-dasharray:4 3
+    style PORT fill:transparent,stroke:#8c959f,stroke-dasharray:4 3
+```
+
+<details>
+<summary><b>Milestone details</b></summary>
+
+| | Milestone | Goal |
+|:-:|---|---|
+| ✅ | Foundations | Symbols, build system, CI, analysis tooling |
+| ✅ | Launch 1 | Our `jpog.exe` opens the game window on our kernel and `PPropertyParser.dll` |
+| 🚧 | **M2** | Kernel replaced: the game boots to the front end on our `TKernelInterface.dll` |
+| 🚧 | **P** | Portable foundation: kernel and tests on Windows, Linux and macOS; SDL3 + bgfx shell (branch `portable-p1`) |
+| ⏳ | M3 | A mission loads through our renderer and resource code |
+| ⏳ | M4 | The full game is playable on our code |
+| ⏳ | M5 | The portable build reaches the main menu on Windows, Linux and macOS |
+| ⏳ | M6 | The portable build plays a full mission with original saves |
+| ⏸️ | M1 | In-game A/B testing through a hook DLL (deferred: needs a runnable original) |
+
+[Progress log](docs/progress.md) · [Roadmap](docs/plan.md) · [GitHub milestones](https://github.com/Voikanaa/jpog-decomp/milestones)
+
+</details>
 
 ## Getting started
 
@@ -151,7 +179,7 @@ third_party/         pinned, vendored dependencies
 | `tools/x87_expr.py` | Recover the exact floating-point evaluation order of an original function |
 | `tools/dump_exports.py` | Regenerate `symbols/` from the original binaries |
 | `tools/dump_vtables.py` | Recover the virtual method order of every exported class |
-| `tools/coverage.py` | Measure coverage; regenerates [docs/progress.md](docs/progress.md) and the badge |
+| `tools/coverage.py` | Measure coverage; regenerates [docs/progress.md](docs/progress.md), the badge and the progress card |
 | `tools/make_import_lib.py` | Import libraries for the original engine DLLs (used by CMake) |
 | `tools/make_module_def.py` | Export tables (`.def`) for our drop-in DLLs (used by CMake) |
 | `tools/format.py` | Format all C++ with the pinned clang-format 20.1.8 |
@@ -166,7 +194,7 @@ third_party/         pinned, vendored dependencies
 | | |
 |---|---|
 | [Roadmap](docs/plan.md) | Goal, technical decisions, code rules, phases and verification strategy |
-| [Progress](docs/progress.md) | Per-module coverage and the development log |
+| [Progress](docs/progress.md) | Per-module coverage table and the development log |
 | [Binary map](docs/modules.md) | The original modules, their exports and dependencies |
 | [File formats](docs/formats/README.md) | Every file type in `Data/`: structure, status and sources |
 | [Contributing](CONTRIBUTING.md) | Ground rules, workflow, commits and code style |
