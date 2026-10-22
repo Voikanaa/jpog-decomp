@@ -23,9 +23,9 @@
 
 ---
 
-*Jurassic Park: Operation Genesis* was built by Blue Tongue Entertainment on their in-house **Toshi**
-engine and shipped as a 32-bit Windows game on Direct3D 8, FMOD 3, Bink video and SecuROM, a
-stack that is increasingly hard to run today. **jpog-decomp** rebuilds the game and its engine in
+*Jurassic Park: Operation Genesis* was built by Blue Tongue Entertainment on their in-house
+**Toshi** engine; its PC version shipped as a 32-bit Windows game on Direct3D 8, FMOD 3, Bink
+video and SecuROM, a stack that is increasingly hard to run today. **jpog-decomp** rebuilds the game and its engine in
 modern, portable C++20, function by function, with the goal of a **native build for Windows,
 Linux and macOS that plays the original game data unchanged.**
 
@@ -41,11 +41,11 @@ Linux and macOS that plays the original game data unchanged.**
 - **Original names and ABI.** Nearly 23,000 exported symbols give us the original class and
   method names, signatures and virtual method order. Our code exports the same mangled names, so
   it drops straight into the original game.
-- **Running from day one.** Our own `jpog.exe` already starts the game on our Toshi kernel and
-  `PPropertyParser.dll`, with the rest of the original engine DLLs still in place.
+- **Running from day one.** Our own `jpog.exe` already opens the game window on our Toshi kernel
+  and `PPropertyParser.dll`, with the rest of the original engine DLLs still in place.
 - **Built to outlive the original.** Portable code rules from the start (no 32-bit pointer
-  assumptions, explicit file parsing, UTF-16 strings, case-insensitive paths) so the same source
-  becomes a standalone game on SDL3, bgfx, miniaudio and FFmpeg.
+  assumptions, explicit file parsing, UTF-16 strings, case-insensitive paths), so the same source
+  can become a standalone game on SDL3, bgfx, miniaudio and FFmpeg.
 
 ## Progress
 
@@ -120,7 +120,7 @@ uv sync                               :: .venv with the pinned clang-format and 
 :: without uv: python -m venv .venv && .venv\Scripts\pip install -r requirements-dev.txt
 
 tools\build.bat x86-debug             :: 32-bit jpog.exe, our drop-in DLLs, all tests
-tools\build.bat x64-debug             :: native x64 build and the portable tests
+tools\build.bat x64-debug             :: x64 kernel and PPropertyParser, portable tests
 ```
 
 - Copy the installed game to `game\` as a working copy. The x86 build installs `jpog.exe`,
@@ -183,8 +183,9 @@ third_party/         pinned, vendored dependencies
 ## Credits
 
 This project stands on more than twenty years of community research into *Operation Genesis* and
-the Toshi engine. **We build on published facts, never on code:** every finding we use is cited,
-re-verified against the original binaries and data, and credited in full in [CREDITS.md](CREDITS.md).
+the Toshi engine. **We build on published facts, never on code:** findings are cited, checked
+against the original binaries and data before we rely on them, and credited in full in
+[CREDITS.md](CREDITS.md).
 
 | | |
 |---|---|
