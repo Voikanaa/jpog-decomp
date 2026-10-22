@@ -6,13 +6,15 @@
 #include "toshi/render/TRenderInterface.h"
 
 class AOptions;
+class ARenderer;
 
 // The game's root task (SimJP.exe), a child of AApplication's Update2 task. Its constructor
 // allocates the game's systems and OnCreate brings them up.
 //
-// So far the options, the renderer and ARenderer: the original OnCreate also creates the
-// animation, input, GUI, game state, mission, sound and camera systems, loads the material
-// libraries, the movie player and the front end (issue #21). The layout is not the original's.
+// So far the options, the constants, the renderer (with its material library manager) and
+// ARenderer: the original OnCreate also initialises the APrim statics, creates the animation,
+// input, GUI, game state, mission, sound and camera systems, loads the material libraries, the
+// movie player and the front end (issue #21). The layout is not the original's.
 class ARootTask : public Toshi::TTask
 {
 public:
@@ -44,6 +46,7 @@ private:
 	// The best device for the mode, trying the depth/stencil formats in the game's order.
 	const Toshi::TRenderAdapter::Mode::Device* CreateDisplayDevice(Toshi::TRenderInterface::DisplayParams& params,
 	                                                               bool bestDepth);
+	void InitialiseConstants();
 	void CreateARenderer();
 
 	static Toshi::TObject* TSTDCALL CreateObject();
@@ -53,5 +56,5 @@ private:
 
 	AOptions* m_pOptions = nullptr;                                 // original +0x24
 	Toshi::TManagedPtr<Toshi::TRenderInterface> m_pRenderInterface; // original +0xD0
-	Toshi::TTask* m_pARenderer = nullptr;                           // original +0xD4
+	ARenderer* m_pARenderer = nullptr;                              // original +0xD4
 };

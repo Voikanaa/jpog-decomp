@@ -1,12 +1,14 @@
 #include "game/ARootTask.h"
 
 #include "game/AApplication.h"
+#include "game/AConstants.h"
 #include "game/ADummyTask.h"
 #include "game/AOptionLogic.h"
 #include "game/AOptions.h"
 #include "game/ARenderer.h"
 #include "toshi/kernel/TKernelInterface.h"
 #include "toshi/kernel/strings/TCString.h"
+#include "toshi/render/TMaterialLibraryManager.h"
 
 #include <new>
 
@@ -55,6 +57,7 @@ bool ARootTask::OnCreate()
 	m_pOptions->LoadOptions();
 	DeserialiseOptions();
 	SerialiseOptions();
+	InitialiseConstants();
 	if (!CreateRenderInterface())
 		return false;
 	CreateARenderer();
@@ -177,8 +180,8 @@ void ARootTask::AllocateRenderInterface()
 
 void ARootTask::AllocateARenderer()
 {
-	m_pARenderer =
-	    g_oTheApp.GetKernel()->GetScheduler()->CreateTask(ARenderer::m_sClass, g_oTheApp.GetRenderRootTask());
+	m_pARenderer = static_cast<ARenderer*>(
+	    g_oTheApp.GetKernel()->GetScheduler()->CreateTask(ARenderer::m_sClass, g_oTheApp.GetRenderRootTask()));
 }
 
 bool ARootTask::CreateRenderInterface()
@@ -231,8 +234,8 @@ bool ARootTask::CreateRenderInterface()
 		    .Print();
 		text.Format("--------------\n").Print();
 	}
-	// TODO(#21): the original continues with TMaterialLibraryManager::Create and
-	// ARenderer::DeserialiseOptions.
+	m_pRenderInterface->GetMaterialLibraryManager()->Create();
+	m_pARenderer->DeserialiseOptions(*m_pOptions);
 	return true;
 }
 
@@ -250,6 +253,11 @@ const TRenderAdapter::Mode::Device* ARootTask::CreateDisplayDevice(TRenderInterf
 			return device;
 	}
 	return nullptr;
+}
+
+void ARootTask::InitialiseConstants()
+{
+	AConstants::Initialise();
 }
 
 void ARootTask::CreateARenderer()

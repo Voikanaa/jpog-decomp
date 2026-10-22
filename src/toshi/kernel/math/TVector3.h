@@ -81,13 +81,13 @@ public:
 	static float TSTDCALL Distance(const TVector3& a, const TVector3& b);
 	static float TSTDCALL DistanceSq(const TVector3& a, const TVector3& b);
 
-	static const TVector3 VEC_ZERO;
-	static const TVector3 VEC_POSX;
-	static const TVector3 VEC_POSY;
-	static const TVector3 VEC_POSZ;
-	static const TVector3 VEC_NEGX;
-	static const TVector3 VEC_NEGY;
-	static const TVector3 VEC_NEGZ;
+	TIMPORT_DATA static const TVector3 VEC_ZERO;
+	TIMPORT_DATA static const TVector3 VEC_POSX;
+	TIMPORT_DATA static const TVector3 VEC_POSY;
+	TIMPORT_DATA static const TVector3 VEC_POSZ;
+	TIMPORT_DATA static const TVector3 VEC_NEGX;
+	TIMPORT_DATA static const TVector3 VEC_NEGY;
+	TIMPORT_DATA static const TVector3 VEC_NEGZ;
 	static const TVector3 VEC_POSXPOSZ;
 	static const TVector3 VEC_POSXNEGZ;
 	static const TVector3 VEC_NEGXPOSZ;

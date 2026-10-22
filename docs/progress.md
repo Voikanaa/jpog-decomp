@@ -39,6 +39,15 @@ inputs. Float results must match bit for bit unless a comment justifies a tolera
 gap is #42.
 
 ## Log
+- 2026-10-23: Game (#21): `AConstants` (SimJP.exe 0x46E7D0) reads `Data/Constant.ini` into 708
+  float, 154 int and 42 vector constants; the names come from the exe's `AConstantTypes` tables
+  (`src/game/AConstantNames.inl`, also the enumerators), read through the
+  `AUnitFactoryUnitType::GetUnitAttribute` getters (missing or mistyped keys stay 0 / zero vector).
+  `CreateRenderInterface` now ends like the original: `TMaterialLibraryManager::Create` (the
+  member at +0x128, from the assembly) and `ARenderer::DeserialiseOptions`; `ARenderer` also
+  serialises. Quirk kept: "ScreenResolution" goes through AOptionLogic as a quality level, so only
+  the width is stored. Deviation: a missing constants group leaves zeros (the original crashes).
+  Unit-tested, also against the original `Constant.ini`; `jpog.exe` still runs on our kernel.
 - 2026-10-23: **FFmpeg for Bink videos** (#36, closes phase P): the public headers of FFmpeg 9.0.2
   (libavutil, libavcodec, libavformat, libswscale, libswresample; LGPL-2.1, release signature
   checked) are vendored in `third_party/ffmpeg`. `src/shell/FFmpeg.cpp` replaces the probe: it

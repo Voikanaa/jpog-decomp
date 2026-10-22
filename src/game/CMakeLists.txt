@@ -3,6 +3,9 @@
 add_executable(jpog WIN32
   AApplication.cpp
   AApplication.h
+  AConstantNames.inl
+  AConstants.cpp
+  AConstants.h
   ADummyTask.cpp
   ADummyTask.h
   ALocale.cpp
@@ -15,6 +18,8 @@ add_executable(jpog WIN32
   ARenderer.h
   ARootTask.cpp
   ARootTask.h
+  AUnitFactoryUnitType.cpp
+  AUnitFactoryUnitType.h
   CrashHandler.cpp
   CrashHandler.h
   main.cpp
