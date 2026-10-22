@@ -182,10 +182,35 @@ third_party/         pinned, vendored dependencies
 
 ## Credits
 
-This project stands on more than twenty years of community work: Andres James' 2003 format notes,
-equinox-'s and HENDRIX-ZT2's JPOG tools, the OpenJPOG and OpenBarnyard decompilations by
-InfiniteC0re and AdventureT, and many modders. We use their published facts, never their code.
-See [CREDITS.md](CREDITS.md).
+This project stands on more than twenty years of community research into *Operation Genesis* and
+the Toshi engine. **We build on published facts, never on code:** every finding we use is cited,
+re-verified against the original binaries and data, and credited in [CREDITS.md](CREDITS.md).
+
+<div align="center">
+<table>
+  <tr>
+    <td align="center" width="150"><a href="https://github.com/InfiniteC0re"><img src="https://github.com/InfiniteC0re.png?size=120" width="64" alt=""><br><b>InfiniteC0re</b></a><br><sub>OpenJPOG · OpenBarnyard</sub></td>
+    <td align="center" width="150"><a href="https://github.com/AdventureT"><img src="https://github.com/AdventureT.png?size=120" width="64" alt=""><br><b>AdventureT</b></a><br><sub>OpenJPOG · OpenToshi</sub></td>
+    <td align="center" width="150"><a href="https://github.com/OpenJPOG"><img src="https://github.com/OpenJPOG.png?size=120" width="64" alt=""><br><b>equinox-</b></a><br><sub>.tmd .tml .tkl .s00 readers</sub></td>
+    <td align="center" width="150"><a href="https://github.com/HENDRIX-ZT2"><img src="https://github.com/HENDRIX-ZT2.png?size=120" width="64" alt=""><br><b>HENDRIX-ZT2</b></a><br><sub>jpog-blender · convert-ppm</sub></td>
+    <td align="center" width="150"><a href="https://github.com/Newbie1337x"><img src="https://github.com/Newbie1337x.png?size=120" width="64" alt=""><br><b>Newbie1337x</b></a><br><sub>JPOG-Modernize</sub></td>
+  </tr>
+</table>
+</div>
+
+- **Andres James** published the first JPOG format specification in 2003 (`.tml`, `.tmd`).
+- **The modding community** at Jurassic Mainframe, Jurassic Mods, Jurassic-Pedia, ModDB and
+  Nexus Mods documented FSMs, missions, string pools and much more.
+- **Blue Tongue Entertainment** made the game and the Toshi engine; Universal Interactive
+  published it in 2003.
+- **Tools and libraries:** analysis with [Ghidra](https://github.com/NationalSecurityAgency/ghidra),
+  tests with [doctest](https://github.com/doctest/doctest); the portable build adds
+  [SDL3](https://github.com/libsdl-org/SDL), [bgfx](https://github.com/bkaradzic/bgfx),
+  [miniaudio](https://github.com/mackron/miniaudio), [Dear ImGui](https://github.com/ocornut/imgui),
+  [Tracy](https://github.com/wolfpld/tracy), [stb](https://github.com/nothings/stb) and
+  [FFmpeg](https://ffmpeg.org) (versions and licenses in [third_party/](third_party/README.md)).
+
+Missing from the list, or got a detail wrong? Please [open an issue](https://github.com/Voikanaa/jpog-decomp/issues).
 
 ## License and legal
 
