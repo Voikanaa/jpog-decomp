@@ -184,33 +184,18 @@ third_party/         pinned, vendored dependencies
 
 This project stands on more than twenty years of community research into *Operation Genesis* and
 the Toshi engine. **We build on published facts, never on code:** every finding we use is cited,
-re-verified against the original binaries and data, and credited in [CREDITS.md](CREDITS.md).
+re-verified against the original binaries and data, and credited in full in [CREDITS.md](CREDITS.md).
 
-<div align="center">
-<table>
-  <tr>
-    <td align="center" width="150"><a href="https://github.com/InfiniteC0re"><img src="https://github.com/InfiniteC0re.png?size=120" width="64" alt=""><br><b>InfiniteC0re</b></a><br><sub>OpenJPOG · OpenBarnyard</sub></td>
-    <td align="center" width="150"><a href="https://github.com/AdventureT"><img src="https://github.com/AdventureT.png?size=120" width="64" alt=""><br><b>AdventureT</b></a><br><sub>OpenJPOG · OpenToshi</sub></td>
-    <td align="center" width="150"><a href="https://github.com/OpenJPOG"><img src="https://github.com/OpenJPOG.png?size=120" width="64" alt=""><br><b>equinox-</b></a><br><sub>.tmd .tml .tkl .s00 readers</sub></td>
-    <td align="center" width="150"><a href="https://github.com/HENDRIX-ZT2"><img src="https://github.com/HENDRIX-ZT2.png?size=120" width="64" alt=""><br><b>HENDRIX-ZT2</b></a><br><sub>jpog-blender · convert-ppm</sub></td>
-    <td align="center" width="150"><a href="https://github.com/Newbie1337x"><img src="https://github.com/Newbie1337x.png?size=120" width="64" alt=""><br><b>Newbie1337x</b></a><br><sub>JPOG-Modernize</sub></td>
-  </tr>
-</table>
-</div>
+| | |
+|---|---|
+| **Decompilation** | [OpenJPOG](https://github.com/InfiniteC0re/OpenJPOG) and [OpenBarnyard](https://github.com/InfiniteC0re/OpenBarnyard) by InfiniteC0re · [OpenToshi](https://github.com/AdventureT/OpenToshi) by AdventureT |
+| **File formats** | [The first JPOG format spec](https://www.trescom.org/hosted/andres_james/jpog/jpog_formats.html) by Andres James (2003) · [ojpog.io](https://github.com/OpenJPOG/org.equinoxscripts.ojpog.io) by equinox- · [jpog-blender](https://github.com/HENDRIX-ZT2/jpog-blender) and [convert-ppm](https://github.com/HENDRIX-ZT2/convert-ppm) by HENDRIX-ZT2 |
+| **Modernisation** | [JPOG-Modernize](https://github.com/Newbie1337x/JPOG-Modernize) by Newbie1337x |
+| **Community** | [Jurassic Mainframe](https://jurassicmainframe.forumotion.com/f17-jp-operation-genesis) · [Jurassic Mods](https://jurassicmods.darkbb.com) · [ModDB](https://www.moddb.com/games/jurassic-park-operation-genesis) · [Nexus Mods](https://www.nexusmods.com/jurassicparkopgen) · [JPOG Wiki](https://jpog.fandom.com) |
+| **Original game** | Blue Tongue Entertainment, published by Universal Interactive (2003) |
+| **Tools** | [Ghidra](https://github.com/NationalSecurityAgency/ghidra) · [doctest](https://github.com/doctest/doctest) · libraries of the portable build in [third_party/](third_party/README.md) |
 
-- **Andres James** published the first JPOG format specification in 2003 (`.tml`, `.tmd`).
-- **The modding community** at Jurassic Mainframe, Jurassic Mods, Jurassic-Pedia, ModDB and
-  Nexus Mods documented FSMs, missions, string pools and much more.
-- **Blue Tongue Entertainment** made the game and the Toshi engine; Universal Interactive
-  published it in 2003.
-- **Tools and libraries:** analysis with [Ghidra](https://github.com/NationalSecurityAgency/ghidra),
-  tests with [doctest](https://github.com/doctest/doctest); the portable build adds
-  [SDL3](https://github.com/libsdl-org/SDL), [bgfx](https://github.com/bkaradzic/bgfx),
-  [miniaudio](https://github.com/mackron/miniaudio), [Dear ImGui](https://github.com/ocornut/imgui),
-  [Tracy](https://github.com/wolfpld/tracy), [stb](https://github.com/nothings/stb) and
-  [FFmpeg](https://ffmpeg.org) (versions and licenses in [third_party/](third_party/README.md)).
-
-Missing from the list, or got a detail wrong? Please [open an issue](https://github.com/Voikanaa/jpog-decomp/issues).
+<sub>Missing from the list, or got a detail wrong? Please [open an issue](https://github.com/Voikanaa/jpog-decomp/issues).</sub>
 
 ## License and legal
 
