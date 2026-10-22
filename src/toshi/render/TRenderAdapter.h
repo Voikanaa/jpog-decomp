@@ -20,7 +20,7 @@ public:
 		class Device
 		{
 		public:
-			enum DEPTHSTENCILFORMAT
+			enum DEPTHSTENCILFORMAT : int
 			{
 			};
 

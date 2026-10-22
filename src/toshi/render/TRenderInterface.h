@@ -37,13 +37,13 @@ public:
 		bool bWindowed;
 	};
 
-	enum PRIMITIVETYPE
+	enum PRIMITIVETYPE : int
 	{
 	};
 
 	// The renderer's built-in resources; the game uses 7 (shader parent), 8 and 9 (skin shader).
 	// The names of the values are not exported.
-	enum SYSRESOURCES
+	enum SYSRESOURCES : int
 	{
 	};
 
