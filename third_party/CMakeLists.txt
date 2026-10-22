@@ -18,6 +18,12 @@ if(JPOG_X86)
   return()
 endif()
 
+# Sanitizer builds (linux-asan) instrument our code only: shaderc runs during the build, and
+# reports from upstream code would fail it.
+foreach(flags CMAKE_C_FLAGS CMAKE_CXX_FLAGS CMAKE_EXE_LINKER_FLAGS)
+  string(REGEX REPLACE "-fsanitize[^ ]*|-fno-sanitize[^ ]*" "" ${flags} "${${flags}}")
+endforeach()
+
 # --- SDL3 (zlib): window, input, events -------------------------------------------------------
 set(SDL_SHARED OFF CACHE BOOL "" FORCE)
 set(SDL_STATIC ON CACHE BOOL "" FORCE)
@@ -49,6 +55,9 @@ endfunction()
 set(JPOG_SKIP_DXCOMPILER_COPY ON)
 add_subdirectory(bgfx EXCLUDE_FROM_ALL SYSTEM)
 set(JPOG_SKIP_DXCOMPILER_COPY OFF)
+# bgfx_compile_shaders() (only loaded by bgfx.cmake's examples) and the bgfx_shader.sh includes.
+include(bgfx/cmake/bgfxToolUtils.cmake)
+set(JPOG_BGFX_SHADER_INCLUDE "${CMAKE_CURRENT_SOURCE_DIR}/bgfx/bgfx/src" CACHE INTERNAL "")
 
 find_package(Threads REQUIRED) # miniaudio and Tracy on Linux/macOS
 

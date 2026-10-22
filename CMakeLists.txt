@@ -80,5 +80,12 @@ endif()
 
 if(JPOG_BUILD_TESTS)
   enable_testing()
+endif()
+
+if(NOT JPOG_X86)
+  add_subdirectory(src/shell)
+endif()
+
+if(JPOG_BUILD_TESTS)
   add_subdirectory(tests)
 endif()

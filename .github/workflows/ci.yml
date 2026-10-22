@@ -70,7 +70,8 @@ jobs:
       - name: Configure
         run: cmake --preset linux-debug -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
       - name: clang-tidy
-        run: run-clang-tidy -quiet -p build/linux-debug "$PWD/src/"
+        # Shaders.cpp includes headers generated at build time; this job only configures.
+        run: run-clang-tidy -quiet -p build/linux-debug "$PWD/src/(?!shell/Shaders\.cpp)"
 
   checks:
     name: Repository checks
