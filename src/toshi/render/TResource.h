@@ -129,6 +129,16 @@ public:
 	using TResource::Create;
 };
 
+// The system shader (TSysShaderHAL in TSysShaderD3D.dll); slots as TSysShaderHAL's.
+class TSysShader : public TShader
+{
+public:
+	virtual bool IsLightScattering() = 0;
+	virtual void SetLightScattering(bool enable) = 0;
+	virtual class TSysMaterial* CreateMaterial(const char* name) = 0;
+	virtual class TSysMesh* CreateMesh(const char* name) = 0;
+};
+
 // The skin shader (TSkinShaderHAL in TSkinShaderD3D.dll); slots as TSkinShaderHAL's.
 class TSkinShader : public TShader
 {

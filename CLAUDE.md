@@ -77,7 +77,7 @@ Apache-2.0, LGPL linked dynamically).
   internals; core classes at its root, the rest in `math/ containers/ strings/ file/ memory/
   thread/ time/`, mirrored by `tests/kernel/`); global `operator new`/`delete` route to `tmalloc`/`tfree` (as the original, also in
   jpog.exe); `ppropertyparser/` (lib `ppropertyparser` + drop-in DLL, complete); declarations only:
-  `toshi/application/`, `toshi/render/`, `toshi/renderd3d/`, `toshi/gui/`; `game/` (**jpog.exe**: WinMain, `AApplication` with the
+  `toshi/application/`, `toshi/render/`, `toshi/renderd3d/`, `toshi/gui/`, `toshi/terrain/`; `game/` (**jpog.exe**: WinMain, `AApplication` with the
   original task tree, `ARootTask`/`ARenderer` skeletons, `AOptions`/`AOptionLogic` (`Options.ini`,
   display mode), `AConstants` (`Constant.ini`), `ALocale`, `CrashHandler`). No hook DLL yet (deferred, #2). `shell/` (portable
   **jpog**, not x86: SDL3, bgfx (D3D12/Vulkan/Metal; shaderc, DXC fetched to `.cache/` for DXIL),

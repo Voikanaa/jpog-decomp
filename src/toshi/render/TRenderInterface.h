@@ -42,7 +42,8 @@ public:
 	{
 	};
 
-	// The renderer's built-in resources; the game uses 7 (shader parent), 8 and 9 (skin shader).
+	// The renderer's built-in resources; the game uses 7 (shader parent), 8 (system shader) and 9
+	// (skin shader).
 	// The names of the values are not exported.
 	enum SYSRESOURCES : int
 	{
