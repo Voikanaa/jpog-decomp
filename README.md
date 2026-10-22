@@ -192,9 +192,11 @@ endorsed by them, and the license above does not cover the game, its assets, nam
 (including `docs/jpog_decomp.png`). The repository contains only original code, tools and
 documentation, plus symbol names extracted from the binaries for interoperability.
 
+##
+
 <div align="center">
 <br>
-<img src="docs/dennis_nedry.gif" alt="Dennis Nedry: ah ah ah, you didn't say the magic word" width="320">
+<img src="https://media.tenor.com/1SastyjoZWoAAAAi/dennis-nedry.gif" alt="Dennis Nedry: ah ah ah, you didn't say the magic word" width="auto" height="auto">
 <br>
-<sub><i>Ah ah ah, you didn't say the magic word.</i> No game files in here.</sub>
+<sub><i>Ah ah ah, you didn't say the magic word.</i></sub>
 </div>
