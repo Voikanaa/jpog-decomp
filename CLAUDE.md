@@ -120,7 +120,7 @@ Apache-2.0, LGPL linked dynamically).
   `uv sync` (`pyproject.toml`/`uv.lock`; this machine needs `--system-certs`): clang-format
   20.1.8, ruff 0.17.1 (config in `pyproject.toml`). After dep changes: `uv lock` and regenerate
   the pip fallback with `uv export --only-group dev --no-hashes --no-header -o requirements-dev.txt`.
-- **REA MCP** (`rea-agents@6.5.0`, skill `reverse-engineer-anything`) for targeted queries
+- **REA MCP** (`rea-agents@6.9.0`, skill `reverse-engineer-anything`) for targeted queries
   (xrefs, bytes, single functions). `.mcp.json` from `.mcp.json.example` via
   `python tools/setup_mcp.py --ghidra <dir>` (remembered; `ghidra_export.py` reads it too), then
   fully restart Claude Code. It sets `GHIDRA_INSTALL_DIR` and TEMP/npm cache at `.cache\rea\`.

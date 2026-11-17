@@ -2,7 +2,7 @@
   "mcpServers": {
     "rea": {
       "command": "cmd.exe",
-      "args": ["/d", "/c", "npx", "-y", "rea-agents@6.5.0", "mcp"],
+      "args": ["/d", "/c", "npx", "-y", "rea-agents@6.9.0", "mcp"],
       "env": {
         "GHIDRA_INSTALL_DIR": "${GHIDRA_DIR}",
         "TEMP": "${PROJECT_DIR}\\.cache\\rea",
