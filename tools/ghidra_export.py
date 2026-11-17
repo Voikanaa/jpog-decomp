@@ -12,11 +12,10 @@ analysis/ is derived from copyrighted binaries and is therefore gitignored.
 """
 import argparse
 import glob
+import json
 import os
 import subprocess
 import sys
-
-import setup_mcp
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 GAME = os.path.join(ROOT, "JPOG")
@@ -25,12 +24,21 @@ PROJECTS = os.path.join(ROOT, "analysis", "ghidra")
 OUTPUT = os.path.join(ROOT, "analysis", "decomp")
 
 
-def ghidra_dir():
-    # $GHIDRA_INSTALL_DIR, then the install configured by tools/setup_mcp.py.
-    for candidate in (os.environ.get("GHIDRA_INSTALL_DIR"), setup_mcp.configured_ghidra()):
-        if setup_mcp.is_ghidra(candidate):
+def user_rea_ghidra():
+    """GHIDRA_INSTALL_DIR of the user-scope REA MCP server in ~/.claude.json, or None (read only)."""
+    try:
+        with open(os.path.join(os.path.expanduser("~"), ".claude.json"), encoding="utf-8") as f:
+            return json.load(f)["mcpServers"]["rea"]["env"]["GHIDRA_INSTALL_DIR"]
+    except (OSError, ValueError, KeyError, TypeError):
+        return None
+
+
+def ghidra_dir(override=None):
+    # --ghidra, then $GHIDRA_INSTALL_DIR, then the Ghidra of the user-scope REA MCP server.
+    for candidate in (override, os.environ.get("GHIDRA_INSTALL_DIR"), user_rea_ghidra()):
+        if candidate and os.path.exists(os.path.join(candidate, "support", "analyzeHeadless.bat")):
             return candidate
-    sys.exit("Ghidra not found: run tools/setup_mcp.py --ghidra <dir> or set GHIDRA_INSTALL_DIR")
+    sys.exit("Ghidra not found: pass --ghidra <dir>, set GHIDRA_INSTALL_DIR or configure the REA MCP server")
 
 
 def all_modules():
@@ -66,11 +74,12 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("modules", nargs="*", help="module file names, e.g. TKernelInterface.dll")
     parser.add_argument("--all", action="store_true", help="export every game/engine module")
+    parser.add_argument("--ghidra", help="Ghidra install directory (default: $GHIDRA_INSTALL_DIR or REA's)")
     args = parser.parse_args()
     if not args.modules and not args.all:
         parser.error("give module names or --all")
 
-    headless = os.path.join(ghidra_dir(), "support", "analyzeHeadless.bat")
+    headless = os.path.join(ghidra_dir(args.ghidra), "support", "analyzeHeadless.bat")
     for path in all_modules() if args.all else [resolve(m) for m in args.modules]:
         export(path, headless)
 
