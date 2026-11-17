@@ -48,6 +48,10 @@ if(NOT JPOG_X86 AND NOT MSVC)
   # Helpers that only the x86 differential tests use are unused in portable builds.
   target_compile_options(jpog_tests PRIVATE -Wno-unused-function -Wno-unused-const-variable)
 endif()
+if(CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+  # doctest includes <ciso646> on Clang, which libstdc++ 15 flags with a #warning in C++20.
+  target_compile_options(jpog_tests PRIVATE "-Wno-#warnings")
+endif()
 
 add_test(NAME jpog_tests COMMAND jpog_tests)
 # Leaks the original has on purpose (linux-asan); ignored by other builds.
