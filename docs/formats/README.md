@@ -17,9 +17,9 @@ structs) and load every matching file in `Data/`.
 ## ImHex patterns
 
 Structure notes can be backed by [ImHex](https://imhex.werwolv.net/) pattern files in
-[`patterns/`](patterns/), one `<ext>.hexpat` per format, written from our own research (other
-projects' patterns: facts only, never copied). Open a game file in ImHex with the pattern, or
-run it headless; the output is JSON:
+`docs/formats/patterns/` (created with the first pattern), one `<ext>.hexpat` per format, written
+from our own research (other projects' patterns: facts only, never copied). Open a game file in
+ImHex with the pattern, or run it headless; the output is JSON:
 
 ```
 "C:\Program Files\ImHex\imhex.exe" --pl format -i JPOG/Data/<file> -p docs/formats/patterns/<ext>.hexpat -o out.json
