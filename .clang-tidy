@@ -8,6 +8,7 @@ Checks: >
   bugprone-undefined-memory-manipulation,
   bugprone-use-after-move,
   bugprone-unused-return-value,
-  -portability-template-virtual-member-function
+  -portability-template-virtual-member-function,
+  -portability-avoid-pragma-once
 WarningsAsErrors: '*'
 HeaderFilterRegex: '.*/src/.*'
