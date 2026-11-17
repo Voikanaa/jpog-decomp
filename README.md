@@ -182,7 +182,6 @@ third_party/         pinned, vendored dependencies
 | `tools/format.py` | Format all C++ with the pinned clang-format 20.1.8 |
 | `tools/check_repo.py` | Hygiene check: no game files, nothing over 5 MB |
 | `tools/msvc.py` | Locate the MSVC tools without hardcoded paths |
-| `tools/setup_mcp.py` | Configure the REA/Ghidra MCP server for Claude Code |
 
 </details>
 

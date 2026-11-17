@@ -109,21 +109,20 @@ Apache-2.0, LGPL linked dynamically).
   **Prefer grepping these over REA for bulk work**; `tools/decomp_show.py <Module> <regex>` prints
   functions. `tools/resolve_imports.py` writes `SimJP.resolved.c` (IAT calls named; use it for
   game code; `--slots ADDR...` names IAT slots seen in disassembly). `tools/dump_vtables.py` → `symbols/vtables.csv` (**class declarations must follow
-  it**). Also `dump_exports.py`, `check_repo.py`, `msvc.py`, `setup_mcp.py`, `fetch_ffmpeg.py`.
+  it**). Also `dump_exports.py`, `check_repo.py`, `msvc.py`, `fetch_ffmpeg.py`.
 - `tools/x87_expr.py <Module> <func|addr> [--args this,a] [--matrix] [--follow ADDR]`: symbolic
   x87 execution of an original function; prints each store as a fully parenthesised expression
   (spills become `tN`). **Use it for all float code**; Ghidra's sums are not reliable.
 - Installed system-wide: VS Build Tools 2026 (MSVC 14.51, SDK 10.0.26100, CMake/Ninja), git,
   Python 3.15, JDK 25, gh 2.102.0 (global; user logs in once with `gh auth login`). Ghidra 12.1.4
-  outside the repo (path set once via `setup_mcp.py --ghidra`). User-installed: uv 0.12, ImHex
+  outside the repo (`ghidra_export.py` takes `--ghidra`, else `GHIDRA_INSTALL_DIR`, else REA's). User-installed: uv 0.12, ImHex
   1.38.1 (`C:\Program Files\ImHex`, patterns in `docs/formats/patterns/`). Project `.venv/` from
   `uv sync` (`pyproject.toml`/`uv.lock`; this machine needs `--system-certs`): clang-format
   20.1.8, ruff 0.17.1 (config in `pyproject.toml`). After dep changes: `uv lock` and regenerate
   the pip fallback with `uv export --only-group dev --no-hashes --no-header -o requirements-dev.txt`.
-- **REA MCP** (`rea-agents@6.5.0`, skill `reverse-engineer-anything`) for targeted queries
-  (xrefs, bytes, single functions). `.mcp.json` from `.mcp.json.example` via
-  `python tools/setup_mcp.py --ghidra <dir>` (remembered; `ghidra_export.py` reads it too), then
-  fully restart Claude Code. It sets `GHIDRA_INSTALL_DIR` and TEMP/npm cache at `.cache\rea\`.
+- **REA MCP** (`rea-agents` 6.8.0, skill `reverse-engineer-anything`) for targeted queries
+  (xrefs, bytes, single functions). User-installed globally (npm) and registered at **user scope**
+  in Claude Code with `GHIDRA_INSTALL_DIR`/`JAVA_HOME`; no project `.mcp.json` (it would shadow it).
   Usage: `open_binary` (absolute path) → `binary_overview`/`search_procedures`/`procedure_pseudo_code` → `close_binary`.
 
 ## Key findings
